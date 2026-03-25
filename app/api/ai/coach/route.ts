@@ -1,45 +1,71 @@
 import { NextRequest, NextResponse } from 'next/server';
+import OpenAI from 'openai';
+
+const openai = new OpenAI();
 
 // POST /api/ai/coach
-// Claude coaching endpoint — provides specific, actionable feedback on job aid fields
-// When Claude API is configured, this will call claude-sonnet-4-20250514
+// Provides specific, actionable feedback on job aid and ceremony fields
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { field_name, field_value, aid_type } = body;
+    const { field_name, field_value, aid_type, context } = body;
 
     if (!field_value?.trim()) {
       return NextResponse.json({ error: 'Field value is required' }, { status: 400 });
     }
 
-    // TODO: Replace with actual Claude API call
-    // const anthropic = new Anthropic();
-    // const message = await anthropic.messages.create({
-    //   model: 'claude-sonnet-4-20250514',
-    //   max_tokens: 200,
-    //   system: `You are a Meridian Method coaching assistant...`,
-    //   messages: [{ role: 'user', content: `Field: ${field_name}\nValue: ${field_value}\nContext: ${aid_type} - ${context}` }],
-    // });
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      max_tokens: 500,
+      temperature: 0.7,
+      response_format: { type: 'json_object' },
+      messages: [
+        {
+          role: 'system',
+          content: `You are a Meridian Method coaching assistant embedded in the Meridian Compass tool.
 
-    // Mock coaching response based on field context
-    const feedback = generateMockCoaching(field_name, field_value, aid_type);
+The Meridian Method is a calibration-first delivery methodology for LLM projects. It replaces Agile ceremonies with structured calibration practices: Baseline Sessions, Hypothesis Framing, Calibration Standups, Eval Reviews, Meridian Gates, and Drift Watch.
 
-    return NextResponse.json({ feedback });
+Key concepts:
+- A "meridian baseline" is the documented human standard (acceptable vs. unacceptable examples) that LLM outputs are scored against.
+- A "behavioral hypothesis" replaces a user story: it states what the LLM should do, for which inputs, at what confidence threshold.
+- "Eval" means scoring LLM outputs against the meridian baseline using human judges.
+- A "gate" is a binary decision: the system meets the confidence threshold or it doesn't.
+- "Drift" is behavioral regression caused by model/data/embedding changes — not code changes.
+
+Your role:
+1. Give specific, actionable feedback on the field the practitioner is filling in. Be direct. 2-3 sentences.
+2. Provide a suggested improved version of the field content that addresses your feedback.
+
+Respond with JSON in this exact format:
+{
+  "feedback": "Your coaching feedback here (2-3 sentences).",
+  "suggestion": "The improved version of the field content. Keep the practitioner's intent and voice, but strengthen it based on your feedback. If the original is already strong, make only minor refinements."
+}`
+        },
+        {
+          role: 'user',
+          content: `Job aid type: ${aid_type || 'general'}
+Field: ${field_name?.replace(/_/g, ' ')}
+${context ? `Project context: ${context}` : ''}
+
+Content to review:
+${field_value}`
+        }
+      ],
+    });
+
+    const raw = completion.choices[0]?.message?.content || '';
+    const result = JSON.parse(raw);
+    return NextResponse.json({
+      feedback: result.feedback || 'Unable to generate coaching feedback.',
+      suggestion: result.suggestion || null,
+    });
   } catch (error) {
     console.error('Coach API error:', error);
-    return NextResponse.json({ feedback: 'AI coaching temporarily unavailable — your work has been saved.' }, { status: 200 });
+    // Fallback to basic feedback on API failure
+    return NextResponse.json({
+      feedback: 'AI coaching temporarily unavailable — your work has been saved. Tip: ensure your content is specific enough that two independent judges would interpret it the same way.'
+    }, { status: 200 });
   }
-}
-
-function generateMockCoaching(fieldName: string, value: string, aidType: string): string {
-  if (value.length < 20) {
-    return `Your ${fieldName.replace(/_/g, ' ')} is too brief. The Meridian Method requires specificity — vague definitions lead to ambiguous eval results. Add concrete examples or measurable criteria.`;
-  }
-  if (aidType === 'hypothesis' && fieldName.includes('threshold') && parseInt(value) < 70) {
-    return `A confidence threshold below 70% is unusually low. Even for LOW risk features, thresholds below 70% suggest the hypothesis may not be well-defined. Reconsider whether the input class is too broad.`;
-  }
-  if (fieldName.includes('input_class') && !value.includes('edge')) {
-    return `Your input class definition doesn't mention edge cases. Consider: what happens with very short inputs? Very long ones? Malformed data? Splitting into sub-classes often produces clearer hypotheses.`;
-  }
-  return `Your ${fieldName.replace(/_/g, ' ')} addresses the core requirement. To strengthen it: add a specific example that illustrates the boundary between acceptable and unacceptable for this dimension.`;
 }

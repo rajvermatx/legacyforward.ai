@@ -3,15 +3,14 @@ import { useParams, useRouter } from 'next/navigation';
 import { useCompassStore } from '@/lib/compass-store';
 import { DIAGNOSTIC_DIMENSIONS, getSeverity, getSeverityColor } from '@/lib/compass-constants';
 import Link from 'next/link';
-import { Target, FlaskConical, Wrench, BarChart3 } from 'lucide-react';
+import { Target, FileDown, BarChart3 } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 const RadarDisplay = dynamic(() => import('@/components/compass/diagnostic/RadarDisplay'), { ssr: false });
 
 const moduleCards = [
-  { href: 'diagnostic', label: 'Readiness Diagnostic', description: 'Score your LLM delivery readiness', icon: Target, color: 'bg-purple' },
-  { href: 'ceremonies', label: 'Ceremony Facilitator', description: 'Run Meridian ceremonies step by step', icon: FlaskConical, color: 'bg-teal' },
-  { href: 'workbench', label: 'Practitioner Workbench', description: 'Build job aids with AI coaching', icon: Wrench, color: 'bg-blue' },
+  { href: 'diagnostic', label: 'Readiness Diagnostic', description: 'Score your LLM delivery readiness in 10 minutes', icon: Target, color: 'bg-purple' },
+  { href: 'templates', label: 'Templates & Resources', description: 'Download ceremony guides and job aid templates', icon: FileDown, color: 'bg-teal' },
   { href: 'eval', label: 'Eval Scorer', description: 'Score LLM outputs against your meridian', icon: BarChart3, color: 'bg-gold' },
 ];
 
@@ -75,8 +74,7 @@ export default function ProjectOverviewPage() {
       )}
 
       {/* Module cards */}
-      <h2 className="text-lg font-bold text-navy mb-4">Modules</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {moduleCards.map((mod) => {
           const Icon = mod.icon;
           return (
@@ -85,15 +83,11 @@ export default function ProjectOverviewPage() {
               href={`/compass/projects/${projectId}/${mod.href}`}
               className="bg-white rounded-lg border border-light p-6 hover:shadow-md hover:border-mid transition-all group"
             >
-              <div className="flex items-start gap-4">
-                <div className={`w-12 h-12 rounded-lg ${mod.color} flex items-center justify-center flex-shrink-0`}>
-                  <Icon size={24} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-navy group-hover:text-mid transition-colors">{mod.label}</h3>
-                  <p className="text-sm text-gray mt-1">{mod.description}</p>
-                </div>
+              <div className={`w-12 h-12 rounded-lg ${mod.color} flex items-center justify-center mb-4`}>
+                <Icon size={24} className="text-white" />
               </div>
+              <h3 className="font-bold text-navy group-hover:text-mid transition-colors">{mod.label}</h3>
+              <p className="text-sm text-gray mt-1">{mod.description}</p>
             </Link>
           );
         })}

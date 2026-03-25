@@ -1,23 +1,22 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { BarChart3, FlaskConical, Wrench, Target } from 'lucide-react';
+import { BarChart3, FileDown, Target } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Meridian Compass — Run the Meridian Method. Starting today.',
-  description: 'Free tools for BAs, QAs, PMs, and product owners working on LLM projects. Readiness Diagnostic, Ceremony Facilitator, Practitioner Workbench, and Eval Scorer.',
+  description: 'Free tools for BAs, QAs, PMs, and product owners working on LLM projects. Readiness Diagnostic, Templates, and Eval Scorer.',
 };
 
 const modules = [
-  { name: 'Readiness Diagnostic', description: 'Score your team\'s LLM delivery readiness in 10 minutes', icon: Target, color: 'bg-purple' },
-  { name: 'Ceremony Facilitator', description: 'Run all 6 Meridian ceremonies with step-by-step guidance', icon: FlaskConical, color: 'bg-teal' },
-  { name: 'Practitioner Workbench', description: 'Build job aids with AI coaching on every field', icon: Wrench, color: 'bg-blue' },
-  { name: 'Eval Scorer', description: 'Score LLM outputs against your human meridian baseline', icon: BarChart3, color: 'bg-gold' },
+  { name: 'Readiness Diagnostic', description: 'Score your team\'s LLM delivery readiness in 10 minutes. Radar chart, gap analysis, and prioritised next steps.', icon: Target, color: 'bg-purple' },
+  { name: 'Templates & Resources', description: 'Download ceremony guides and job aid templates for your team. Ready to use — no app required.', icon: FileDown, color: 'bg-teal' },
+  { name: 'Eval Scorer', description: 'Score LLM outputs against your human meridian baseline. Get confidence scores and gate recommendations.', icon: BarChart3, color: 'bg-gold' },
 ];
 
 const steps = [
-  { number: '1', title: 'Run the Readiness Diagnostic', description: 'Find your gaps in 10 minutes' },
-  { number: '2', title: 'Use the Ceremony Facilitator', description: 'Run Meridian ceremonies on live projects' },
-  { number: '3', title: 'Score your LLM outputs', description: 'Know if you are above the threshold' },
+  { number: '1', title: 'Run the Diagnostic', description: 'Find your gaps in 10 minutes' },
+  { number: '2', title: 'Grab the templates', description: 'Ceremony guides and job aids for your team' },
+  { number: '3', title: 'Score your outputs', description: 'Know if you\'re above the threshold' },
 ];
 
 export default function CompassLandingPage() {
@@ -63,7 +62,7 @@ export default function CompassLandingPage() {
       {/* Module cards */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {modules.map((mod) => {
               const Icon = mod.icon;
               return (

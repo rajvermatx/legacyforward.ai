@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LayoutDashboard, Compass, FlaskConical, Wrench, BarChart3, ChevronLeft } from 'lucide-react';
+import { LayoutDashboard, Compass, FileDown, BarChart3, ChevronLeft, Target } from 'lucide-react';
 
 interface SidebarProps {
   projectId?: string;
@@ -14,8 +14,7 @@ const LINK_DESCRIPTIONS: Record<string, string> = {
   'Dashboard': 'View and manage all your LLM delivery projects. Create new projects or continue existing ones.',
   'Overview': 'Your project hub — readiness scores, module access, and progress at a glance.',
   'Readiness Diagnostic': 'Score your team across 5 dimensions in 10 minutes. Surface gaps and get prioritised recommendations.',
-  'Ceremony Facilitator': 'Run all 6 Meridian ceremonies step by step. Each produces a structured, exportable artifact.',
-  'Practitioner Workbench': 'Build job aids with AI coaching on every field. Hypothesis, test plan, sprint planner, and RAG readiness.',
+  'Templates': 'Download ceremony guides and job aid templates for your team. Ready to use in your next meeting.',
   'Eval Scorer': 'Score LLM outputs against your human meridian baseline. Get confidence scores and gate recommendations.',
 };
 
@@ -27,9 +26,8 @@ function getProjectLinks(projectId: string) {
   const base = `/compass/projects/${projectId}`;
   return [
     { href: base, label: 'Overview', icon: Compass },
-    { href: `${base}/diagnostic`, label: 'Readiness Diagnostic', icon: BarChart3 },
-    { href: `${base}/ceremonies`, label: 'Ceremony Facilitator', icon: FlaskConical },
-    { href: `${base}/workbench`, label: 'Practitioner Workbench', icon: Wrench },
+    { href: `${base}/diagnostic`, label: 'Readiness Diagnostic', icon: Target },
+    { href: `${base}/templates`, label: 'Templates', icon: FileDown },
     { href: `${base}/eval`, label: 'Eval Scorer', icon: BarChart3 },
   ];
 }
