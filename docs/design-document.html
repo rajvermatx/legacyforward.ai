@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LegacyForward &amp; Meridian Compass — Design Document</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+  body { font-family: Inter, Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.7; color: #1a1a2e; max-width: 860px; margin: 0 auto; padding: 40px 60px; background: #fff; }
+  h1 { color: #0D2B4E; border-bottom: 3px solid #C8972A; padding-bottom: 10px; font-size: 26pt; margin-top: 60px; page-break-before: always; }
+  h1:first-of-type { page-break-before: avoid; margin-top: 0; }
+  h2 { color: #0D2B4E; border-bottom: 1px solid #D6E4F0; padding-bottom: 6px; margin-top: 40px; font-size: 18pt; }
+  h3 { color: #1B4F8C; font-size: 14pt; margin-top: 28px; }
+  h4 { color: #2E75B6; font-size: 12pt; }
+  code { font-family: 'JetBrains Mono', 'Courier New', monospace; background: #F0F6FB; padding: 2px 6px; border-radius: 4px; font-size: 10pt; }
+  pre { background: #0D2B4E; color: #D6E4F0; padding: 20px; border-radius: 8px; font-size: 9.5pt; line-height: 1.5; overflow-x: auto; white-space: pre; }
+  pre code { background: none; color: inherit; padding: 0; font-size: 9.5pt; }
+  table { border-collapse: collapse; width: 100%; margin: 1.2em 0; font-size: 10.5pt; }
+  th { background: #0D2B4E; color: white; padding: 10px 14px; text-align: left; font-weight: 600; }
+  td { padding: 10px 14px; border-bottom: 1px solid #D6E4F0; }
+  tr:nth-child(even) { background: #F8FAFC; }
+  hr { border: none; border-top: 2px solid #D6E4F0; margin: 2.5em 0; }
+  strong { color: #0D2B4E; }
+  a { color: #2E75B6; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  #TOC { background: #F0F6FB; padding: 20px 30px; border-radius: 8px; margin-bottom: 40px; }
+  #TOC ul { list-style: none; padding-left: 0; }
+  #TOC li { margin-bottom: 6px; }
+  #TOC a { color: #1B4F8C; font-weight: 500; }
+  @media print {
+    body { padding: 0; font-size: 10pt; }
+    pre { font-size: 8.5pt; }
+    h1 { page-break-before: always; }
+    h1:first-of-type { page-break-before: avoid; }
+    table, pre { page-break-inside: avoid; }
+    @page { size: A4; margin: 20mm; }
+  }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">LegacyForward &amp; Meridian Compass — Design
+Document</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#legacyforward-meridian-compass-design-document"
+id="toc-legacyforward-meridian-compass-design-document">LegacyForward
+&amp; Meridian Compass — Design Document</a>
+<ul>
+<li><a href="#table-of-contents" id="toc-table-of-contents">Table of
+Contents</a></li>
+<li><a href="#executive-summary" id="toc-executive-summary">1. Executive
+Summary</a></li>
+<li><a href="#what-this-product-does" id="toc-what-this-product-does">2.
+What This Product Does</a>
+<ul>
+<li><a href="#in-plain-language" id="toc-in-plain-language">In Plain
+Language</a></li>
+</ul></li>
+<li><a href="#site-architecture-overview"
+id="toc-site-architecture-overview">3. Site Architecture
+Overview</a></li>
+<li><a href="#the-marketing-site" id="toc-the-marketing-site">4. The
+Marketing Site</a>
+<ul>
+<li><a href="#purpose" id="toc-purpose">4.1 Purpose</a></li>
+<li><a href="#pages" id="toc-pages">4.2 Pages</a></li>
+<li><a href="#page-layout" id="toc-page-layout">4.3 Page Layout</a></li>
+<li><a href="#the-meridian-method-conceptual-model"
+id="toc-the-meridian-method-conceptual-model">4.4 The Meridian Method —
+Conceptual Model</a></li>
+<li><a href="#six-ceremonies" id="toc-six-ceremonies">4.5 Six
+Ceremonies</a></li>
+<li><a href="#six-practitioner-roles"
+id="toc-six-practitioner-roles">4.6 Six Practitioner Roles</a></li>
+</ul></li>
+<li><a href="#the-compass-tool" id="toc-the-compass-tool">5. The Compass
+Tool</a>
+<ul>
+<li><a href="#purpose-1" id="toc-purpose-1">5.1 Purpose</a></li>
+<li><a href="#application-layout" id="toc-application-layout">5.2
+Application Layout</a></li>
+<li><a href="#five-modules" id="toc-five-modules">5.3 Five
+Modules</a></li>
+<li><a href="#sample-project-new-user-onboarding"
+id="toc-sample-project-new-user-onboarding">5.4 Sample Project (New User
+Onboarding)</a></li>
+</ul></li>
+<li><a href="#user-journeys" id="toc-user-journeys">6. User Journeys</a>
+<ul>
+<li><a href="#journey-1-first-time-visitor-tool-user"
+id="toc-journey-1-first-time-visitor-tool-user">Journey 1: First-Time
+Visitor → Tool User</a></li>
+<li><a href="#journey-2-practitioner-running-a-cycle"
+id="toc-journey-2-practitioner-running-a-cycle">Journey 2: Practitioner
+Running a Cycle</a></li>
+</ul></li>
+<li><a href="#technical-architecture" id="toc-technical-architecture">7.
+Technical Architecture</a>
+<ul>
+<li><a href="#technology-stack" id="toc-technology-stack">7.1 Technology
+Stack</a></li>
+<li><a href="#directory-structure" id="toc-directory-structure">7.2
+Directory Structure</a></li>
+<li><a href="#rendering-strategy" id="toc-rendering-strategy">7.3
+Rendering Strategy</a></li>
+<li><a href="#layout-hierarchy" id="toc-layout-hierarchy">7.4 Layout
+Hierarchy</a></li>
+<li><a href="#client-side-navigation-flow"
+id="toc-client-side-navigation-flow">7.5 Client-Side Navigation
+Flow</a></li>
+</ul></li>
+<li><a href="#data-model" id="toc-data-model">8. Data Model</a>
+<ul>
+<li><a href="#entity-relationship-diagram"
+id="toc-entity-relationship-diagram">8.1 Entity Relationship
+Diagram</a></li>
+<li><a href="#type-definitions" id="toc-type-definitions">8.2 Type
+Definitions</a></li>
+<li><a href="#storage-architecture" id="toc-storage-architecture">8.3
+Storage Architecture</a></li>
+</ul></li>
+<li><a href="#component-library" id="toc-component-library">9. Component
+Library</a>
+<ul>
+<li><a href="#marketing-site-components"
+id="toc-marketing-site-components">9.1 Marketing Site
+Components</a></li>
+<li><a href="#compass-components" id="toc-compass-components">9.2
+Compass Components</a></li>
+<li><a href="#key-component-interactions"
+id="toc-key-component-interactions">9.3 Key Component
+Interactions</a></li>
+</ul></li>
+<li><a href="#api-layer" id="toc-api-layer">10. API Layer</a>
+<ul>
+<li><a href="#endpoints" id="toc-endpoints">10.1 Endpoints</a></li>
+<li><a href="#future-api-architecture-with-claude"
+id="toc-future-api-architecture-with-claude">10.2 Future API
+Architecture (with Claude)</a></li>
+</ul></li>
+<li><a href="#styling-brand-system" id="toc-styling-brand-system">11.
+Styling &amp; Brand System</a>
+<ul>
+<li><a href="#color-palette" id="toc-color-palette">11.1 Color
+Palette</a></li>
+<li><a href="#typography" id="toc-typography">11.2 Typography</a></li>
+<li><a href="#component-styling-patterns"
+id="toc-component-styling-patterns">11.3 Component Styling
+Patterns</a></li>
+</ul></li>
+<li><a href="#security-storage" id="toc-security-storage">12. Security
+&amp; Storage</a>
+<ul>
+<li><a href="#current-architecture" id="toc-current-architecture">12.1
+Current Architecture</a></li>
+<li><a href="#supabase-migration-path"
+id="toc-supabase-migration-path">12.2 Supabase Migration Path</a></li>
+</ul></li>
+<li><a href="#future-roadmap" id="toc-future-roadmap">13. Future
+Roadmap</a>
+<ul>
+<li><a href="#phase-1-ai-integration"
+id="toc-phase-1-ai-integration">Phase 1: AI Integration</a></li>
+<li><a href="#phase-2-persistence-collaboration"
+id="toc-phase-2-persistence-collaboration">Phase 2: Persistence &amp;
+Collaboration</a></li>
+<li><a href="#phase-3-export-reporting"
+id="toc-phase-3-export-reporting">Phase 3: Export &amp;
+Reporting</a></li>
+<li><a href="#phase-4-enterprise-features"
+id="toc-phase-4-enterprise-features">Phase 4: Enterprise
+Features</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="legacyforward-meridian-compass-design-document">LegacyForward
+&amp; Meridian Compass — Design Document</h1>
+<p><strong>Version:</strong> 1.0 <strong>Date:</strong> 24 March 2026
+<strong>Platform:</strong> legacyforward.ai</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol type="1">
+<li><a href="#1-executive-summary">Executive Summary</a></li>
+<li><a href="#2-what-this-product-does">What This Product Does (Plain
+Language)</a></li>
+<li><a href="#3-site-architecture-overview">Site Architecture
+Overview</a></li>
+<li><a href="#4-the-marketing-site">The Marketing Site —
+legacyforward.ai</a></li>
+<li><a href="#5-the-compass-tool">The Compass Tool — /compass</a></li>
+<li><a href="#6-user-journeys">User Journeys</a></li>
+<li><a href="#7-technical-architecture">Technical Architecture</a></li>
+<li><a href="#8-data-model">Data Model</a></li>
+<li><a href="#9-component-library">Component Library</a></li>
+<li><a href="#10-api-layer">API Layer</a></li>
+<li><a href="#11-styling--brand-system">Styling &amp; Brand
+System</a></li>
+<li><a href="#12-security--storage">Security &amp; Storage</a></li>
+<li><a href="#13-future-roadmap">Future Roadmap</a></li>
+</ol>
+<hr />
+<h2 id="executive-summary">1. Executive Summary</h2>
+<p>LegacyForward is a two-part web platform:</p>
+<ol type="1">
+<li><p><strong>Marketing Site</strong> — Educates enterprise teams about
+why traditional Agile practices fail for LLM (Large Language Model)
+projects, and introduces the Meridian Method™ as a purpose-built
+alternative.</p></li>
+<li><p><strong>Meridian Compass™</strong> — A free, browser-based
+operational tool that lets practitioners (Business Analysts, QA leads,
+Project Managers, Product Owners, Data Stewards, and Change Managers)
+actually <em>run</em> the Meridian Method on their LLM
+projects.</p></li>
+</ol>
+<p>Both parts live in a single Next.js application and share the same
+brand palette, but the Compass tool has its own layout, navigation, and
+authentication flow.</p>
+<hr />
+<h2 id="what-this-product-does">2. What This Product Does</h2>
+<h3 id="in-plain-language">In Plain Language</h3>
+<p><strong>The Problem:</strong> When companies add AI/LLM features to
+their existing software, the non-engineering roles — the BAs writing
+requirements, the QAs writing test plans, the PMs tracking progress —
+discover that their traditional tools and practices don’t work.
+Requirements can’t be fully specified upfront because LLM outputs are
+probabilistic. “Done” isn’t binary anymore. Test automation that checks
+for exact matches fails. Sprint velocity is meaningless when progress
+follows an S-curve.</p>
+<p><strong>The Solution:</strong> LegacyForward teaches these
+practitioners a new methodology called the Meridian Method. Instead of
+user stories, teams write <em>behavioral hypotheses</em>. Instead of
+sprint reviews, they hold <em>eval reviews</em> where human judges score
+LLM outputs. Instead of a release gate, they hold a <em>Meridian
+Gate</em> — a formal calibration check.</p>
+<p><strong>The Tool:</strong> Meridian Compass is the hands-on
+companion. A new user signs up, gets a pre-populated sample project to
+explore, and can immediately:</p>
+<ul>
+<li><strong>Diagnose</strong> their team’s readiness across 5 dimensions
+(20 questions, radar chart output)</li>
+<li><strong>Facilitate ceremonies</strong> — 6 structured meetings that
+replace Agile ceremonies</li>
+<li><strong>Build job aids</strong> — 4 practitioner templates
+(hypothesis builder, test playbook, sprint planner, RAG readiness
+assessment) with AI coaching on every field</li>
+<li><strong>Score LLM outputs</strong> — submit LLM responses, score
+them against a human baseline, and get a gate recommendation (advance /
+reset / retire)</li>
+</ul>
+<p>Everything is stored in the user’s browser. No backend database, no
+API keys needed.</p>
+<hr />
+<h2 id="site-architecture-overview">3. Site Architecture Overview</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                     legacyforward.ai                         │
+│                                                              │
+│  ┌──────────────────────┐    ┌───────────────────────────┐  │
+│  │   MARKETING SITE     │    │    MERIDIAN COMPASS™      │  │
+│  │                      │    │                           │  │
+│  │  /                   │    │  /compass          (land) │  │
+│  │  /meridian-method    │    │  /compass/login    (auth) │  │
+│  │  /meridian-cycle     │    │  /compass/dashboard       │  │
+│  │  /allied-skills      │    │  /compass/projects/[id]   │  │
+│  │  /resources          │    │    ├── /diagnostic        │  │
+│  │  /about              │    │    ├── /ceremonies/[type]  │  │
+│  │  /contact            │    │    ├── /workbench/[aid]    │  │
+│  │                      │    │    └── /eval               │  │
+│  │  Nav + Footer wrap   │    │                           │  │
+│  │  every page          │    │  AppShell (Sidebar +      │  │
+│  │                      │    │  Topbar) wraps every page  │  │
+│  └──────────────────────┘    └───────────────────────────┘  │
+│                                                              │
+│  Shared: Tailwind theme · Brand palette · /lib/constants     │
+└─────────────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Key design decision:</strong> The marketing site and Compass
+tool share the same Next.js app and Tailwind config, but have completely
+separate layouts. The marketing site shows the global Nav and Footer.
+The Compass tool shows its own Sidebar and Topbar — no marketing
+chrome.</p>
+<hr />
+<h2 id="the-marketing-site">4. The Marketing Site</h2>
+<h3 id="purpose">4.1 Purpose</h3>
+<p>Convert visitors into training program enquiries and Compass tool
+users.</p>
+<h3 id="pages">4.2 Pages</h3>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 23%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Route</th>
+<th>Page</th>
+<th>What It Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code></td>
+<td>Home</td>
+<td>Hero, problem statement, MERIDIAN acronym, role cards, CTAs</td>
+</tr>
+<tr>
+<td><code>/meridian-method</code></td>
+<td>Method</td>
+<td>Deep dive: 5 broken assumptions, Waterfall vs Agile vs Meridian
+comparison, licensing tiers</td>
+</tr>
+<tr>
+<td><code>/meridian-cycle</code></td>
+<td>Cycle</td>
+<td>Visual diagram of the ANCHOR → PROBE → SIGNAL → GATE → ADVANCE/RESET
+cycle, 6 ceremony descriptions</td>
+</tr>
+<tr>
+<td><code>/allied-skills</code></td>
+<td>Training</td>
+<td>6-session program overview, job aids, delivery model, pricing (USA
+&amp; India)</td>
+</tr>
+<tr>
+<td><code>/resources</code></td>
+<td>Resources</td>
+<td>Downloadable white paper, program overview, sample job aid;
+email-gated premium content</td>
+</tr>
+<tr>
+<td><code>/about</code></td>
+<td>About</td>
+<td>Founder story, credentials (GCP, AWS, NIST AI RMF, FinOps)</td>
+</tr>
+<tr>
+<td><code>/contact</code></td>
+<td>Contact</td>
+<td>Lead capture form with Zod validation, Formspree submission</td>
+</tr>
+</tbody>
+</table>
+<h3 id="page-layout">4.3 Page Layout</h3>
+<pre><code>┌──────────────────────────────────────────┐
+│  Nav (sticky)                            │
+│  Logo · Method · Cycle · Skills · ...    │
+├──────────────────────────────────────────┤
+│                                          │
+│  Page Content                            │
+│  (hero sections, content blocks,         │
+│   cards, tables, diagrams)               │
+│                                          │
+├──────────────────────────────────────────┤
+│  Footer                                  │
+│  4-column: Brand · Method · Program ·    │
+│  Company                                 │
+└──────────────────────────────────────────┘</code></pre>
+<h3 id="the-meridian-method-conceptual-model">4.4 The Meridian Method —
+Conceptual Model</h3>
+<p>The Meridian Method replaces Agile ceremonies with a
+calibration-first approach:</p>
+<pre><code>                    ┌─────────┐
+                    │ ANCHOR  │  Establish human baseline
+                    │ (Day 0) │  (&quot;What does good look like?&quot;)
+                    └────┬────┘
+                         │
+                         ▼
+                    ┌─────────┐
+                    │  PROBE  │  Run a hypothesis sprint
+                    │(1-2 wk) │  (&quot;Can the LLM do X at Y% confidence?&quot;)
+                    └────┬────┘
+                         │
+                         ▼
+                    ┌─────────┐
+                    │ SIGNAL  │  Score outputs vs. baseline
+                    │         │  (&quot;How close are we?&quot;)
+                    └────┬────┘
+                         │
+                         ▼
+                    ┌──────────────┐
+                    │  GATE        │
+                    │  Threshold   │──── Met? ───▶  ADVANCE
+                    │  Check       │                (ship it)
+                    └──────┬───────┘
+                           │
+                       Not met
+                           │
+                           ▼
+                    ┌─────────┐
+                    │  RESET  │  Re-frame hypothesis,
+                    │         │  try again
+                    └────┬────┘
+                         │
+                         └──────▶ Back to PROBE
+
+        ═══════════════════════════════════
+        ║  DRIFT WATCH (continuous)       ║
+        ║  Monitor for behavioral drift   ║
+        ║  after deployment               ║
+        ═══════════════════════════════════</code></pre>
+<h3 id="six-ceremonies">4.5 Six Ceremonies</h3>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 14%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Ceremony</th>
+<th>Replaces</th>
+<th>Who</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Meridian Baseline Session</strong></td>
+<td>Sprint 0 / Kickoff</td>
+<td>BA, PO, QA, SMEs, Judges</td>
+<td>Once per initiative</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Hypothesis Framing</strong></td>
+<td>Sprint Planning</td>
+<td>BA, PO, Tech Lead, QA</td>
+<td>Start of each cycle</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Calibration Standup</strong></td>
+<td>Daily Standup</td>
+<td>Full team + judges</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Eval Review</strong></td>
+<td>Sprint Review</td>
+<td>Full team + stakeholders</td>
+<td>End of each cycle</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Meridian Gate</strong></td>
+<td>Release Gate</td>
+<td>PO, QA, judges, risk owner</td>
+<td>At confidence threshold</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Drift Watch</strong></td>
+<td><em>(no Agile equivalent)</em></td>
+<td>QA, MLOps, Data Steward</td>
+<td>Continuous</td>
+</tr>
+</tbody>
+</table>
+<h3 id="six-practitioner-roles">4.6 Six Practitioner Roles</h3>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 37%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr>
+<th>Role</th>
+<th>Primary Gap</th>
+<th>Key Ceremony</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Analyst</strong></td>
+<td>Writing acceptance criteria for probabilistic outputs</td>
+<td>Hypothesis Framing</td>
+</tr>
+<tr>
+<td><strong>Quality Analyst</strong></td>
+<td>Eval design and behavioral regression monitoring</td>
+<td>Signal + Drift Watch</td>
+</tr>
+<tr>
+<td><strong>Product Owner</strong></td>
+<td>Embedded human judgment, not end-of-sprint</td>
+<td>Meridian Gate</td>
+</tr>
+<tr>
+<td><strong>Project Manager</strong></td>
+<td>Calibration cadence, not story points</td>
+<td>Calibration Standup</td>
+</tr>
+<tr>
+<td><strong>Data Steward</strong></td>
+<td>Retrieval quality is upstream of model quality</td>
+<td>Anchor phase</td>
+</tr>
+<tr>
+<td><strong>Change Manager</strong></td>
+<td>Communicating probabilistic behavior to users</td>
+<td>Drift Watch comms</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-compass-tool">5. The Compass Tool</h2>
+<h3 id="purpose-1">5.1 Purpose</h3>
+<p>Give practitioners a hands-on operational environment to apply the
+Meridian Method to their LLM projects.</p>
+<h3 id="application-layout">5.2 Application Layout</h3>
+<pre><code>┌───────────────────────────────────────────────────────┐
+│ ┌──────────┐ ┌──────────────────────────────────────┐ │
+│ │          │ │  Topbar                        👤 AK  │ │
+│ │ SIDEBAR  │ ├──────────────────────────────────────┤ │
+│ │          │ │                                      │ │
+│ │ ◈ Logo   │ │                                      │ │
+│ │          │ │                                      │ │
+│ │ ← All    │ │        MAIN CONTENT AREA             │ │
+│ │ projects │ │                                      │ │
+│ │          │ │   (Diagnostic / Ceremonies /          │ │
+│ │ Overview │ │    Workbench / Eval pages)            │ │
+│ │ Diag.    │ │                                      │ │
+│ │ Ceremony │ │                                      │ │
+│ │ Workbenc │ │                                      │ │
+│ │ Eval     │ │                                      │ │
+│ │          │ │                                      │ │
+│ │ ┌──────┐ │ │                                      │ │
+│ │ │Desc │ │ │                                      │ │
+│ │ │ box  │ │ │                                      │ │
+│ │ └──────┘ │ │                                      │ │
+│ │          │ │                                      │ │
+│ │ ← site  │ │                                      │ │
+│ └──────────┘ └──────────────────────────────────────┘ │
+└───────────────────────────────────────────────────────┘</code></pre>
+<p><strong>Sidebar features:</strong> - Meridian Compass logo - “All
+projects” back link - Current project name - 5 navigation links
+(Overview, Diagnostic, Ceremonies, Workbench, Eval) - Contextual
+description panel — shows 3-4 lines describing the currently active page
+- “legacyforward.ai” back link</p>
+<h3 id="five-modules">5.3 Five Modules</h3>
+<h4 id="module-1-readiness-diagnostic">Module 1: Readiness
+Diagnostic</h4>
+<p><strong>What it does:</strong> Scores your team across 5 dimensions
+in ~10 minutes. Surfaces gaps and gives prioritised recommendations.</p>
+<p><strong>How it works:</strong></p>
+<pre><code>┌──────────┐     ┌──────────────┐     ┌──────────────┐
+│ CONTEXT  │────▶│  20 QUESTIONS │────▶│   RESULTS    │
+│          │     │  (5 dims ×4) │     │              │
+│ LLM type │     │              │     │ Radar chart  │
+│ Status   │     │ 4 response   │     │ Dim scores   │
+│ Legacy   │     │ options each │     │ Gap list     │
+│ complex. │     │              │     │ AI summary   │
+└──────────┘     └──────────────┘     └──────────────┘</code></pre>
+<p><strong>5 Dimensions assessed:</strong> 1. Specification Practice
+(BA, PO focus) 2. Testing Practice (QA focus) 3. Delivery Practice (PM,
+PO focus) 4. Data &amp; Retrieval (Data Steward focus) 5. Change &amp;
+Governance (Change Manager focus)</p>
+<p><strong>Scoring:</strong> - “Fully in place” = 100 - “Partially” = 60
+- “Aware but not practising” = 25 - “Not on our radar” = 0</p>
+<p><strong>Severity thresholds:</strong> &lt;30 Critical · &lt;60 Gap ·
+&lt;80 Developing · ≥80 Strong</p>
+<h4 id="module-2-ceremony-facilitator">Module 2: Ceremony
+Facilitator</h4>
+<p><strong>What it does:</strong> Run all 6 Meridian ceremonies step by
+step. Each produces a structured, exportable artifact.</p>
+<p><strong>How it works:</strong></p>
+<pre><code>┌─────────────────┐     ┌──────────────────────┐
+│  CEREMONY LIST  │     │  CEREMONY DETAIL      │
+│                 │     │                       │
+│  ◼ Baseline     │────▶│  Past sessions        │
+│  ◼ Hypothesis   │     │  (expandable cards)   │
+│  ◼ Standup      │     │                       │
+│  ◼ Eval Review  │     │  ┌─────────────────┐  │
+│  ◼ Gate         │     │  │  Step Wizard    │  │
+│  ◼ Drift Watch  │     │  │  Step 1 → 2 → 3 │  │
+│                 │     │  │  [AI coaching]   │  │
+│                 │     │  │  [Save artifact] │  │
+│                 │     │  └─────────────────┘  │
+└─────────────────┘     └──────────────────────┘</code></pre>
+<p>Each ceremony type has custom steps and fields. For example:</p>
+<p><strong>Baseline Session steps:</strong> 1. Feature name, risk class,
+human judges 2. Acceptable examples with explanations 3. Unacceptable
+examples with explanations 4. Boundary cases and notes</p>
+<p><strong>Hypothesis Framing steps:</strong> 1. Feature intent and
+behavioral hypothesis 2. Input class, confidence threshold, calibrators
+3. Risk class, completeness checklist</p>
+<h4 id="module-3-practitioner-workbench">Module 3: Practitioner
+Workbench</h4>
+<p><strong>What it does:</strong> Build job aids with AI coaching on
+every field.</p>
+<p><strong>4 Job Aid Templates:</strong></p>
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 19%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr>
+<th>Template</th>
+<th>For</th>
+<th>Key Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LLM Acceptance Criteria</strong></td>
+<td>BAs, POs</td>
+<td>Behavioral hypothesis, input class, threshold, edge cases, eval
+criteria</td>
+</tr>
+<tr>
+<td><strong>Test Design Playbook</strong></td>
+<td>QAs</td>
+<td>Coverage checklist, hallucination tests, regression checks, eval
+framework</td>
+</tr>
+<tr>
+<td><strong>Meridian Sprint Planner</strong></td>
+<td>PMs</td>
+<td>Cycle dates, hypothesis, scores, probe approach,
+advance/reset/retire definitions</td>
+</tr>
+<tr>
+<td><strong>RAG Readiness Assessment</strong></td>
+<td>Data Stewards</td>
+<td>Source quality, chunking strategy, retrieval metrics, governance
+checklist</td>
+</tr>
+</tbody>
+</table>
+<p><strong>AI Coaching pattern:</strong></p>
+<pre><code>┌─────────────────────────────────────┐
+│  Behavioral Hypothesis              │
+│  ┌─────────────────────────────┐    │
+│  │ The RAG system will...      │    │
+│  └─────────────────────────────┘    │
+│         [💡 Get AI coaching]        │
+│  ┌─────────────────────────────┐    │
+│  │ ✓ Good structure. Consider  │    │
+│  │   adding edge cases for     │    │
+│  │   multi-language inputs...  │    │
+│  └─────────────────────────────┘    │
+└─────────────────────────────────────┘</code></pre>
+<h4 id="module-4-eval-scorer">Module 4: Eval Scorer</h4>
+<p><strong>What it does:</strong> Score LLM outputs against your human
+baseline. Get confidence scores and gate recommendations.</p>
+<p><strong>How it works:</strong></p>
+<pre><code>┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────────┐
+│ MERIDIAN │──▶│ CRITERIA │──▶│ OUTPUTS  │──▶│   RESULTS    │
+│          │   │          │   │          │   │              │
+│ Good     │   │ ☑ Accur. │   │ Output 1 │   │ Overall: 81% │
+│ examples │   │ ☑ Ground │   │ Output 2 │   │ Gate: RESET  │
+│          │   │ ☑ Coher. │   │ Output 3 │   │              │
+│ Bad      │   │ ☐ Relev. │   │ ...      │   │ Per-output   │
+│ examples │   │ ☑ Compl. │   │          │   │ breakdowns   │
+│          │   │ ☑ Safety │   │          │   │              │
+│ Risk +   │   │          │   │          │   │ AI rationale │
+│ Threshold│   │          │   │          │   │              │
+└──────────┘   └──────────┘   └──────────┘   └──────────────┘</code></pre>
+<p><strong>Gate recommendation logic:</strong> - Confidence ≥ threshold
+→ ADVANCE - Confidence within 10 points of threshold → RESET (try again)
+- Confidence far below → RETIRE (abandon hypothesis)</p>
+<p><strong>Risk-class thresholds:</strong> - LOW risk: 70% confidence
+required - MEDIUM: 80% - HIGH: 90% - CRITICAL: 95%</p>
+<h3 id="sample-project-new-user-onboarding">5.4 Sample Project (New User
+Onboarding)</h3>
+<p>When a new user signs up, the system seeds a fully populated
+“Customer Support RAG” project so they can explore every module
+immediately.</p>
+<pre><code>SAMPLE PROJECT: &quot;Customer Support RAG&quot;
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Team: Sarah Chen, Marcus Webb, Priya Sharma, Ravi Patel
+
+Timeline:       2 weeks ago ──────────── 1 week ago ──────────── Today
+                     │                       │                     │
+Diagnostic:     [Baseline: 27%]              │                     │
+                                             │                     │
+Ceremonies:     [Baseline]  [Hypothesis]  [Standup 1]  [Standup 2]
+                                          [Eval Review] [Gate]
+                                                       [Drift Watch]
+                                             │                     │
+Job Aids:       [Hypothesis 100%]            │                     │
+                [Sprint Plan 100%]           │                     │
+                [Test Plan 47%]              │                     │
+                [RAG Ready 26%]              │                     │
+                                             │                     │
+Eval:                                   [Cycle 1: 71%]  [Cycle 2: 81%]
+                                         gate: reset     gate: reset
+                                                        (+10 improvement)</code></pre>
+<p>This gives new users: - A radar chart with real scores on the
+Overview page - Past ceremony artifacts on every ceremony detail page -
+In-progress and completed job aids in the Workbench - Eval history
+showing iterative improvement</p>
+<hr />
+<h2 id="user-journeys">6. User Journeys</h2>
+<h3 id="journey-1-first-time-visitor-tool-user">Journey 1: First-Time
+Visitor → Tool User</h3>
+<pre><code>legacyforward.ai          /compass               /compass/login
+┌──────────┐          ┌──────────────┐        ┌──────────────┐
+│ Reads    │          │ Sees 4       │        │ Enters email │
+│ about    │─ clicks ─▶│ module       │─ CTA ─▶│ Sets profile │
+│ method   │  Compass  │ descriptions │        │ (name, role) │
+└──────────┘          └──────────────┘        └──────┬───────┘
+                                                      │
+         Seeds sample project automatically           │
+                                                      ▼
+                                              ┌──────────────┐
+                                              │ Lands on     │
+                                              │ populated    │
+                                              │ project      │
+                                              │ overview     │
+                                              └──────────────┘</code></pre>
+<h3 id="journey-2-practitioner-running-a-cycle">Journey 2: Practitioner
+Running a Cycle</h3>
+<pre><code>Dashboard              Project Overview         Diagnostic
+┌──────────┐          ┌──────────────┐        ┌──────────────┐
+│ Create   │          │ See radar    │        │ Answer 20    │
+│ new      │────────▶ │ chart (if    │───────▶│ questions    │
+│ project  │          │ diagnostic   │        │ View scores  │
+└──────────┘          │ done)        │        │ + gaps       │
+                      └──────────────┘        └──────┬───────┘
+                                                      │
+    ┌─────────────────────────────────────────────────┘
+    ▼
+Ceremonies              Workbench                Eval
+┌──────────────┐      ┌──────────────┐        ┌──────────────┐
+│ 1. Baseline  │      │ Build        │        │ Submit LLM   │
+│ 2. Hypothesis│─────▶│ hypothesis   │───────▶│ outputs      │
+│ 3. Standups  │      │ + test plan  │        │ Score vs     │
+│ 4. Eval Rev. │      │ with AI help │        │ baseline     │
+│ 5. Gate      │      │              │        │ Gate: go/no  │
+│ 6. Drift     │      └──────────────┘        └──────────────┘
+└──────────────┘</code></pre>
+<hr />
+<h2 id="technical-architecture">7. Technical Architecture</h2>
+<h3 id="technology-stack">7.1 Technology Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Framework</strong></td>
+<td>Next.js (App Router)</td>
+<td>14.2.35</td>
+</tr>
+<tr>
+<td><strong>UI Library</strong></td>
+<td>React</td>
+<td>18.x</td>
+</tr>
+<tr>
+<td><strong>Language</strong></td>
+<td>TypeScript</td>
+<td>5.x</td>
+</tr>
+<tr>
+<td><strong>Styling</strong></td>
+<td>Tailwind CSS</td>
+<td>3.4.1</td>
+</tr>
+<tr>
+<td><strong>State Management</strong></td>
+<td>Zustand + persist middleware</td>
+<td>5.0.12</td>
+</tr>
+<tr>
+<td><strong>Charts</strong></td>
+<td>Recharts</td>
+<td>3.8.0</td>
+</tr>
+<tr>
+<td><strong>Icons</strong></td>
+<td>Lucide React</td>
+<td>1.0.1</td>
+</tr>
+<tr>
+<td><strong>Forms</strong></td>
+<td>React Hook Form + Zod</td>
+<td>7.72 / 4.3.6</td>
+</tr>
+<tr>
+<td><strong>Bundler</strong></td>
+<td>Webpack (via Next.js)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="directory-structure">7.2 Directory Structure</h3>
+<pre><code>legacyforward/
+├── app/                              # Next.js App Router pages
+│   ├── layout.tsx                    # Root layout (Nav + Footer)
+│   ├── page.tsx                      # Home page
+│   ├── globals.css                   # Tailwind base + custom styles
+│   ├── sitemap.ts                    # SEO sitemap generator
+│   ├── fonts/                        # Self-hosted font files
+│   ├── about/page.tsx
+│   ├── meridian-method/page.tsx
+│   ├── meridian-cycle/page.tsx
+│   ├── allied-skills/page.tsx
+│   ├── resources/page.tsx
+│   ├── contact/page.tsx
+│   │
+│   ├── api/ai/                       # API routes (mock AI endpoints)
+│   │   ├── coach/route.ts            # Field-level coaching
+│   │   ├── eval/route.ts             # Output scoring
+│   │   └── feedback/route.ts         # Ceremony feedback
+│   │
+│   └── compass/                      # Compass tool (separate layout)
+│       ├── layout.tsx                # Compass metadata
+│       ├── page.tsx                  # Landing page (public)
+│       ├── login/page.tsx            # Auth + onboarding
+│       └── (app)/                    # Route group — authenticated shell
+│           ├── layout.tsx            # AppShell wrapper
+│           ├── dashboard/page.tsx
+│           └── projects/[id]/
+│               ├── page.tsx          # Project overview
+│               ├── diagnostic/page.tsx
+│               ├── eval/page.tsx
+│               ├── ceremonies/
+│               │   ├── page.tsx      # List all 6 types
+│               │   └── [type]/page.tsx
+│               └── workbench/
+│                   ├── page.tsx      # List all 4 aids
+│                   └── [aid_type]/page.tsx
+│
+├── components/
+│   ├── Nav.tsx                       # Global navigation
+│   ├── Footer.tsx                    # Global footer
+│   ├── Button.tsx                    # Primary/secondary/ghost variants
+│   ├── SectionHeader.tsx             # Section titles with gold underline
+│   ├── CalloutBox.tsx                # Highlighted content boxes
+│   ├── MeridianBadge.tsx             # MERIDIAN acronym display
+│   ├── MeridianCycleDiagram.tsx      # Interactive cycle flowchart
+│   ├── ComparisonTable.tsx           # Waterfall vs Agile vs Meridian
+│   ├── PhaseCard.tsx                 # Cycle phase cards
+│   ├── RoleCard.tsx                  # Practitioner role cards
+│   ├── SessionCard.tsx               # Training session cards
+│   ├── JobAidCard.tsx                # Job aid template cards
+│   ├── ContactForm.tsx               # Contact form (react-hook-form)
+│   ├── EmailCaptureModal.tsx         # Gated resource modal
+│   │
+│   └── compass/
+│       ├── layout/
+│       │   ├── AppShell.tsx          # Sidebar + Topbar + content
+│       │   ├── Sidebar.tsx           # Project nav + descriptions
+│       │   └── Topbar.tsx            # User avatar + logout
+│       ├── ui/
+│       │   ├── FieldWithCoach.tsx    # Input + AI coaching button
+│       │   ├── StepWizard.tsx        # Multi-step form navigation
+│       │   ├── ScoreBadge.tsx        # Color-coded score pill
+│       │   ├── ScoreBar.tsx          # Horizontal progress bar
+│       │   ├── ProgressRing.tsx      # Circular progress indicator
+│       │   └── CompassCard.tsx       # Generic card container
+│       └── diagnostic/
+│           └── RadarDisplay.tsx      # Recharts radar chart
+│
+├── lib/
+│   ├── constants.ts                  # Marketing site content &amp; config
+│   ├── compass-constants.ts          # Scoring, dimensions, types
+│   ├── compass-store.ts              # Zustand store definition
+│   └── compass-seed.ts              # Sample project data generator
+│
+├── tailwind.config.ts                # Custom theme &amp; colors
+├── next.config.mjs                   # Next.js config
+├── tsconfig.json                     # TypeScript config
+└── package.json                      # Dependencies &amp; scripts</code></pre>
+<h3 id="rendering-strategy">7.3 Rendering Strategy</h3>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│                    RENDERING MODES                          │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
+│  STATIC (○)              DYNAMIC (ƒ)                       │
+│  Pre-rendered at build   Server-rendered on demand          │
+│                                                            │
+│  /                       /compass/projects/[id]            │
+│  /about                  /compass/projects/[id]/diagnostic │
+│  /meridian-method        /compass/projects/[id]/ceremonies │
+│  /meridian-cycle         /compass/projects/[id]/eval       │
+│  /allied-skills          /compass/projects/[id]/workbench  │
+│  /resources              /api/ai/*                         │
+│  /contact                                                  │
+│  /compass                                                  │
+│  /compass/login                                            │
+│  /compass/dashboard                                        │
+│                                                            │
+│  All Compass interactive pages use &#39;use client&#39;            │
+│  for Zustand state access and browser APIs                 │
+└────────────────────────────────────────────────────────────┘</code></pre>
+<h3 id="layout-hierarchy">7.4 Layout Hierarchy</h3>
+<pre><code>RootLayout (app/layout.tsx)
+│   Fonts: Inter + JetBrains Mono
+│   Includes: Nav + Footer
+│
+├── Marketing Pages (/, /about, /meridian-method, etc.)
+│   Each page is a standalone component
+│
+└── CompassLayout (app/compass/layout.tsx)
+    │   Sets Compass-specific metadata
+    │   NO Nav or Footer from main site
+    │
+    ├── Landing Page (/compass)
+    │   Public, no auth required
+    │
+    ├── Login Page (/compass/login)
+    │   Public, handles authentication
+    │
+    └── AppLayout (app/compass/(app)/layout.tsx)
+        │   Wraps content in AppShell
+        │   Extracts projectId from URL
+        │   Passes project context to Sidebar
+        │
+        ├── Dashboard (/compass/dashboard)
+        └── Project pages (/compass/projects/[id]/*)</code></pre>
+<h3 id="client-side-navigation-flow">7.5 Client-Side Navigation
+Flow</h3>
+<pre><code>                        ┌─────────────┐
+                        │   /compass  │ Public landing
+                        └──────┬──────┘
+                               │
+                        ┌──────▼──────┐
+                        │   /login    │ Email → Profile → setUser()
+                        └──────┬──────┘
+                               │ seedSampleProject()
+                               │ router.push(/projects/{id})
+                        ┌──────▼──────┐
+                        │  /projects  │
+                        │   /[id]     │ Project Overview
+                        └──────┬──────┘
+                               │
+              ┌────────┬───────┼────────┬─────────┐
+              ▼        ▼       ▼        ▼         ▼
+         /diagnostic  /ceremonies  /workbench    /eval
+                       │              │
+                       ▼              ▼
+                  /[type]        /[aid_type]</code></pre>
+<hr />
+<h2 id="data-model">8. Data Model</h2>
+<h3 id="entity-relationship-diagram">8.1 Entity Relationship
+Diagram</h3>
+<pre><code>┌─────────┐
+│  USER   │
+│─────────│
+│ id      │
+│ email   │
+│ name    │
+│ role    │──────────────────────────────────────────┐
+│ org?    │                                          │
+└─────────┘                                          │
+                                                     │
+┌─────────────────────┐        ┌──────────────────┐  │
+│      PROJECT        │        │   DIAGNOSTIC     │  │
+│─────────────────────│        │──────────────────│  │
+│ id                  │◄───────│ id               │  │
+│ name                │  1:N   │ projectId        │  │
+│ description         │        │ responses {}     │  │
+│ mode (solo/team)    │        │ scores {}        │  │
+│ createdAt           │        │ gaps []          │  │
+│ updatedAt           │        │ aiSummary?       │  │
+└─────────┬───────────┘        │ createdAt        │  │
+          │                    └──────────────────┘  │
+          │                                          │
+          │ 1:N                                      │
+          ├──────────────┐                           │
+          │              │                           │
+          ▼              ▼                           │
+┌──────────────┐  ┌──────────────┐                   │
+│  CEREMONY    │  │   JOB AID    │                   │
+│──────────────│  │──────────────│                   │
+│ id           │  │ id           │                   │
+│ projectId    │  │ projectId    │                   │
+│ ceremonyType │  │ aidType      │                   │
+│ status       │  │ fields {}    │                   │
+│ artifact {}  │  │ aiFeedback?  │                   │
+│ notes?       │  │ completeness │                   │
+│ createdAt    │  │ createdAt    │                   │
+│ updatedAt    │  │ updatedAt    │                   │
+└──────────────┘  └──────────────┘                   │
+                                                     │
+          ┌──────────────┐                           │
+          │ EVAL SESSION │                           │
+          │──────────────│                           │
+          │ id           │                           │
+          │ projectId    │◄──────────────────────────┘
+          │ hypothesisId?│      (User creates projects,
+          │ meridian {}  │       projects contain all
+          │ outputs []   │       other entities)
+          │ overallScore?│
+          │ gateDecision │
+          │ aiRationale? │
+          │ createdAt    │
+          └──────────────┘</code></pre>
+<h3 id="type-definitions">8.2 Type Definitions</h3>
+<pre><code>Role:               BA | QA | PO | PM | DataSteward | ChangeManager | Other
+ProjectMode:        solo | team
+RiskClass:          LOW | MEDIUM | HIGH | CRITICAL
+CeremonyType:       baseline | hypothesis | standup | eval_review | gate | drift_watch
+AidType:            hypothesis | test_plan | sprint_planner | rag_readiness
+GateDecision:       advance | reset | retire | pending
+DiagnosticResponse: Fully in place | Partially | Aware but not practising | Not on our radar
+Severity:           Critical | Gap | Developing | Strong</code></pre>
+<h3 id="storage-architecture">8.3 Storage Architecture</h3>
+<pre><code>┌─────────────────────────────────────────────────┐
+│                  BROWSER                         │
+│                                                  │
+│  ┌────────────────────────────────────────────┐  │
+│  │              localStorage                  │  │
+│  │                                            │  │
+│  │  key: &#39;compass-store&#39;                      │  │
+│  │  value: {                                  │  │
+│  │    user: User | null,                      │  │
+│  │    projects: Project[],                    │  │
+│  │    activeProjectId: string | null,         │  │
+│  │    diagnostics: DiagnosticResult[],        │  │
+│  │    ceremonies: CeremonySession[],          │  │
+│  │    jobAids: JobAid[],                      │  │
+│  │    evalSessions: EvalSession[]             │  │
+│  │  }                                         │  │
+│  └────────────────────────────────────────────┘  │
+│            ▲                                     │
+│            │  Zustand persist middleware          │
+│            │  (auto-sync on every state change)   │
+│  ┌─────────┴──────────────────────────────────┐  │
+│  │         Zustand Store (in-memory)          │  │
+│  │                                            │  │
+│  │  Actions: setUser, addProject, addCeremony │  │
+│  │  Selectors: getProjectDiagnostics, etc.    │  │
+│  └────────────────────────────────────────────┘  │
+│            ▲                                     │
+│            │  React hooks                        │
+│  ┌─────────┴──────────────────────────────────┐  │
+│  │         React Components                   │  │
+│  │  useCompassStore((s) =&gt; s.projects)        │  │
+│  └────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────┘</code></pre>
+<p><strong>Why localStorage, not a database?</strong> - Zero setup for
+users (no account creation, no API keys) - Instant availability (no
+network latency) - Privacy-first (data never leaves the browser) -
+Supabase-ready: The store interface mirrors a relational schema, making
+migration straightforward</p>
+<hr />
+<h2 id="component-library">9. Component Library</h2>
+<h3 id="marketing-site-components">9.1 Marketing Site Components</h3>
+<pre><code>LAYOUT
+├── Nav                    Sticky header, desktop + mobile menu, 6 links
+└── Footer                 4-column footer with brand + methodology + program + company
+
+CONTENT
+├── SectionHeader          Title + optional subtitle + gold underline
+├── Button                 primary (gold) | secondary (outline) | ghost (transparent)
+├── CalloutBox             Colored left-border highlight box with label
+├── MeridianBadge          8-letter MERIDIAN acronym grid
+├── MeridianCycleDiagram   Interactive SVG flowchart of calibration cycle
+├── ComparisonTable        3-column: Waterfall × Agile × Meridian
+├── PhaseCard              Phase name + color bar + description
+└── RoleCard               Role + gap + ceremony + color accent
+
+TRAINING
+├── SessionCard            Session # + title + duration + question + job aid
+└── JobAidCard             Icon + title + audience + description
+
+FORMS
+├── ContactForm            react-hook-form + Zod validation + Formspree
+└── EmailCaptureModal      Modal overlay for gated resource downloads</code></pre>
+<h3 id="compass-components">9.2 Compass Components</h3>
+<pre><code>LAYOUT
+├── AppShell               Sidebar + Topbar + main content area
+├── Sidebar                Project nav, active page description, back links
+└── Topbar                 User initials avatar, name, logout
+
+UI PRIMITIVES
+├── FieldWithCoach         Input + &quot;Get AI coaching&quot; button + feedback panel
+├── StepWizard             Step indicators + prev/next + completion handler
+├── ScoreBadge             Circular percentage badge (green/amber/red)
+├── ScoreBar               Horizontal bar with optional threshold marker
+├── ProgressRing           SVG circular progress indicator
+└── CompassCard            Generic card container (button variant available)
+
+DATA VISUALIZATION
+└── RadarDisplay           Recharts RadarChart — actual scores vs. benchmark overlay</code></pre>
+<h3 id="key-component-interactions">9.3 Key Component Interactions</h3>
+<pre><code>FieldWithCoach ──POST──▶ /api/ai/coach
+                          │
+                          ▼
+                    Returns coaching
+                    feedback string
+                          │
+                          ▼
+                    Displays in teal
+                    feedback panel
+
+StepWizard ────▶ Manages step state
+                 │
+                 ├── Step 1: [FieldWithCoach fields]
+                 ├── Step 2: [FieldWithCoach fields]
+                 └── Step N: [FieldWithCoach fields]
+                              │
+                              ▼ onComplete()
+                         Store.addCeremony() or
+                         Store.addJobAid()
+
+RadarDisplay ◄── scores: Record&lt;string, number&gt;
+                 Overlays team scores (blue fill)
+                 against MERIDIAN_BENCHMARK (gold dashed line)</code></pre>
+<hr />
+<h2 id="api-layer">10. API Layer</h2>
+<h3 id="endpoints">10.1 Endpoints</h3>
+<p>All three endpoints are currently <strong>mock
+implementations</strong> with rule-based responses. They are designed to
+be replaced with Claude API calls when ready.</p>
+<pre><code>POST /api/ai/coach
+├── Input:  { field_name, field_value, aid_type, context? }
+├── Output: { feedback: string }
+├── Used by: FieldWithCoach component
+└── Mock logic: Length checks, pattern matching, context-specific tips
+
+POST /api/ai/eval
+├── Input:  { criteria: [{name, weight}], output: string }
+├── Output: { scores: {}, overall: number, flag: string, rationale: string }
+├── Used by: Eval Scorer page
+└── Mock logic: Random scores (60-90), flag based on overall threshold
+
+POST /api/ai/feedback
+├── Input:  { ceremony_type, step, content }
+├── Output: { feedback: string }
+├── Used by: Ceremony Facilitator pages
+└── Mock logic: Ceremony-type-specific encouragement</code></pre>
+<h3 id="future-api-architecture-with-claude">10.2 Future API
+Architecture (with Claude)</h3>
+<pre><code>┌─────────────┐     ┌─────────────────┐     ┌──────────────┐
+│   Browser    │     │   Next.js API   │     │  Claude API  │
+│   (Client)   │────▶│   Route Handler │────▶│  (Anthropic) │
+│              │     │                 │     │              │
+│ FieldWith   │     │ /api/ai/coach   │     │ claude-sonnet│
+│  Coach      │     │  - System prompt│     │  -4-20250514 │
+│              │     │  - Field context│     │              │
+│ Eval page   │     │ /api/ai/eval    │     │ Claude-as-   │
+│              │     │  - Meridian     │     │  judge eval  │
+│              │     │  - Criteria     │     │              │
+└─────────────┘     └─────────────────┘     └──────────────┘</code></pre>
+<hr />
+<h2 id="styling-brand-system">11. Styling &amp; Brand System</h2>
+<h3 id="color-palette">11.1 Color Palette</h3>
+<pre><code>BRAND COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Navy        ██████  #0D2B4E     Primary dark, headers, sidebar
+Blue        ██████  #1B4F8C     Secondary dark
+Mid         ██████  #2E75B6     Interactive elements
+Steel       ██████  #4A90C4     Muted text on dark
+Light       ██████  #D6E4F0     Borders, dividers
+Pale        ██████  #F0F6FB     Background tint
+
+Gold        ██████  #C8972A     Primary accent, CTAs, focus states
+Teal        ██████  #0F6E56     Success, coaching feedback
+Coral       ██████  #993C1D     Warnings, critical severity
+Purple      ██████  #3C3489     Phases, roles
+Amber       ██████  #854F0B     Mid-range scores
+
+SCORE COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Score High  ██████  Green       ≥85 — &quot;Strong&quot;
+Score Med   ██████  Amber       ≥70 — &quot;Developing&quot;
+Score Low   ██████  Red         &lt;70  — &quot;Gap&quot; or &quot;Critical&quot;
+
+BACKGROUNDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+White       ██████  #FFFFFF     Cards, content areas
+Lt Gray     ██████  #F8FAFC     Page backgrounds (Compass)
+Dark        ██████  #1A1A2E     Text on light backgrounds
+Gray        ██████  #6B7280     Body text, descriptions</code></pre>
+<h3 id="typography">11.2 Typography</h3>
+<pre><code>FONTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Inter (sans-serif)          Body text, headings, UI
+  Weights: 400, 500, 600, 700
+
+JetBrains Mono (monospace)  Code snippets, technical labels
+
+SCALE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+text-xs     11px    Captions, sidebar descriptions
+text-sm     14px    Body text, form labels
+text-base   16px    Standard paragraph
+text-lg     18px    Subheadings
+text-xl     20px    Section titles
+text-2xl    24px    Page titles
+text-3xl+   30px+   Hero headings</code></pre>
+<h3 id="component-styling-patterns">11.3 Component Styling Patterns</h3>
+<pre><code>CARDS
+┌──────────────────────────────┐
+│  bg-white                    │
+│  rounded-lg                  │
+│  border border-light         │
+│  shadow-sm                   │
+│  hover:shadow-md             │
+│  hover:border-mid            │
+│  p-5 or p-6                  │
+└──────────────────────────────┘
+
+BUTTONS
+┌──────────────────────────────┐
+│  Primary:   bg-gold text-white font-bold rounded-lg
+│  Secondary: border-white text-white bg-transparent
+│  Ghost:     text-navy hover:bg-pale
+│  Disabled:  opacity-50 cursor-not-allowed
+└──────────────────────────────┘
+
+FORMS
+┌──────────────────────────────┐
+│  rounded-lg border-light     │
+│  px-4 py-2.5                 │
+│  focus:ring-2 ring-gold/50   │
+│  focus:border-gold           │
+└──────────────────────────────┘</code></pre>
+<hr />
+<h2 id="security-storage">12. Security &amp; Storage</h2>
+<h3 id="current-architecture">12.1 Current Architecture</h3>
+<table>
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Approach</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>Browser-local only. User profile stored in Zustand/localStorage. No
+server-side sessions.</td>
+</tr>
+<tr>
+<td><strong>Data storage</strong></td>
+<td>100% client-side via localStorage. No data transmitted to any server
+(except mock AI endpoints).</td>
+</tr>
+<tr>
+<td><strong>Form submission</strong></td>
+<td>Contact form uses Formspree (third-party). No other external data
+transmission.</td>
+</tr>
+<tr>
+<td><strong>API routes</strong></td>
+<td>Mock endpoints return deterministic responses. No API keys stored or
+used.</td>
+</tr>
+<tr>
+<td><strong>XSS prevention</strong></td>
+<td>React’s default escaping. No <code>dangerouslySetInnerHTML</code>
+usage.</td>
+</tr>
+<tr>
+<td><strong>CSRF</strong></td>
+<td>Not applicable (no server-side state to protect).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="supabase-migration-path">12.2 Supabase Migration Path</h3>
+<p>The data model is designed for straightforward migration to
+Supabase:</p>
+<pre><code>localStorage (current)          Supabase (future)
+━━━━━━━━━━━━━━━━━━━━           ━━━━━━━━━━━━━━━━━━
+compass-store key     ──▶      PostgreSQL tables
+├── user              ──▶      auth.users + profiles
+├── projects[]        ──▶      projects table
+├── diagnostics[]     ──▶      diagnostics table
+├── ceremonies[]      ──▶      ceremonies table
+├── jobAids[]         ──▶      job_aids table
+└── evalSessions[]    ──▶      eval_sessions table
+
+Zustand actions       ──▶      Supabase client queries
+  addProject()        ──▶      supabase.from(&#39;projects&#39;).insert()
+  getProjectCeremonies() ──▶   supabase.from(&#39;ceremonies&#39;).select().eq(&#39;project_id&#39;, id)</code></pre>
+<hr />
+<h2 id="future-roadmap">13. Future Roadmap</h2>
+<h3 id="phase-1-ai-integration">Phase 1: AI Integration</h3>
+<ul>
+<li>Replace mock <code>/api/ai/coach</code> with Claude Sonnet for
+real-time field coaching</li>
+<li>Replace mock <code>/api/ai/eval</code> with Claude-as-judge
+evaluation</li>
+<li>Add streaming responses for better UX</li>
+</ul>
+<h3 id="phase-2-persistence-collaboration">Phase 2: Persistence &amp;
+Collaboration</h3>
+<ul>
+<li>Migrate from localStorage to Supabase</li>
+<li>Add proper authentication (email/password, OAuth)</li>
+<li>Enable team mode with shared projects and real-time
+collaboration</li>
+</ul>
+<h3 id="phase-3-export-reporting">Phase 3: Export &amp; Reporting</h3>
+<ul>
+<li>PDF export for ceremony artifacts</li>
+<li>CSV/JSON export for eval results</li>
+<li>Project health dashboards with trend lines</li>
+<li>Shareable diagnostic results</li>
+</ul>
+<h3 id="phase-4-enterprise-features">Phase 4: Enterprise Features</h3>
+<ul>
+<li>Organization accounts with role-based access</li>
+<li>Audit trail for gate decisions</li>
+<li>Integration with existing project management tools (Jira,
+Linear)</li>
+<li>Custom ceremony templates</li>
+</ul>
+<hr />
+<p><em>Document generated for legacyforward.ai — Meridian Compass™</em>
+<em>All content © LegacyForward 2026</em></p>
+</body>
+</html>
