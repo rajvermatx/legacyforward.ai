@@ -189,8 +189,8 @@ function Footer() {
   return (
     <View style={s.footer} fixed>
       <Text style={s.footerText}>legacyforward.ai</Text>
-      <Text style={s.footerText}>
-        A practitioner&apos;s framework for enterprise AI transformation
+      <Text style={{ fontSize: 5.5, color: C.slate400, maxWidth: 420, textAlign: "center" }}>
+        For informational purposes only. No warranty expressed or implied. All opinions are the author&apos;s own. legacyforward.ai/about
       </Text>
       <Text
         style={s.footerText}
