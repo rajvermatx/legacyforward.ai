@@ -6,14 +6,14 @@ Five workstreams to take LegacyForward from concept to market. Start with framew
 
 - Define the actual stages, phases, and decision gates within each pillar
 - Build the scoring models — how does an enterprise assess where they are and what to prioritize?
-- Start with Pillar 2 (Post-Agile Delivery) — it's the most novel, most provocative, and most publishable
+- Start with Pillar 2 (Grounded Delivery) — it's the most novel, most provocative, and most publishable
 - This is what gets patented and what makes the thought leadership credible. Everything else builds on top of it.
 
 ## 2. Thought Leadership — Start Publishing Now
 
 - Don't wait for a finished platform to establish credibility
 - LinkedIn articles hitting each problem bullet individually
-- "Post-Agile" as a concept is a lightning rod — write that piece first
+- "Grounded Delivery" as a concept is a lightning rod — write that piece first
 - The vibe coding / AI IDE take would get strong traction on its own
 - Build an audience before the platform launches so there are day-one users
 - Writing the content also forces clarity on the framework itself — the two workstreams reinforce each other

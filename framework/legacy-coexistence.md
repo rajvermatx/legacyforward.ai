@@ -58,7 +58,7 @@ Legacy Coexistence is not a single architectural pattern. It is a catalog of pat
 
 **Constraints:** Latency is bounded by the extraction schedule. Not suitable for real-time use cases. Data format translation is required — the AI pipeline must handle whatever format the legacy system exports (flat files, fixed-width records, EBCDIC encoding).
 
-**Value Capture connection:** Some of the highest-value AI opportunities are Data Exhaust patterns — decades of transactional data that has never been analyzed holistically because no human could process it at scale. This is where transformation lives. *(Cross-reference: Value Capture, "Where AI Creates Net New Value.")*
+**Signal Capture connection:** Some of the highest-value AI opportunities are Data Exhaust patterns — decades of transactional data that has never been analyzed holistically because no human could process it at scale. This is where transformation lives. *(Cross-reference: Signal Capture, "Where AI Creates Net New Value.")*
 
 ### Pattern 2: The Sidecar Pattern
 
@@ -90,7 +90,7 @@ Legacy Coexistence is not a single architectural pattern. It is a catalog of pat
 
 **Constraints:** Requires running two systems simultaneously, which has cost and operational implications. The comparison logic must be sophisticated enough to distinguish meaningful disagreements from acceptable variance. Timeline to cutover is typically longer than leadership expects.
 
-**Post-Agile connection:** The Shadow Pipeline is where Post-Agile probabilistic quality gates are essential. "99.7% agreement" is a probabilistic target, not a binary pass/fail. *(Cross-reference: Post-Agile Delivery, Harden phase.)*
+**Grounded Delivery connection:** The Shadow Pipeline is where Grounded Delivery probabilistic quality gates are essential. "99.7% agreement" is a probabilistic target, not a binary pass/fail. *(Cross-reference: Grounded Delivery, Harden phase.)*
 
 ### Pattern 5: The Legacy-Aware Agent Pattern
 
@@ -140,7 +140,7 @@ Legacy and AI systems fail differently. Legacy systems fail deterministically �
 
 ### Change Management
 
-Changes to the AI system can affect how it interacts with legacy systems in unpredictable ways. A model update that improves accuracy overall might degrade performance on legacy data formats. Change management must include regression testing against legacy integration points — using the probabilistic quality gates from Post-Agile, not binary pass/fail.
+Changes to the AI system can affect how it interacts with legacy systems in unpredictable ways. A model update that improves accuracy overall might degrade performance on legacy data formats. Change management must include regression testing against legacy integration points — using the probabilistic quality gates from Grounded Delivery, not binary pass/fail.
 
 ### Trust Boundaries
 
@@ -156,7 +156,7 @@ Where does the organization trust AI output versus requiring legacy system verif
 
 > **The Strangler Fig Misconception.** The Strangler Fig pattern — gradually replacing legacy system functionality — is valid for deterministic modernization. It is dangerous for AI integration because AI does not replace legacy function-for-function. AI creates net new capabilities around legacy systems. Applying Strangler Fig to AI integration conflates modernization with transformation.
 
-> **The Integration Afterthought.** "We will figure out legacy integration later." No. Legacy integration determines whether the value hypothesis is feasible. An AI initiative that requires real-time access to data locked in a batch-processing mainframe has a fundamentally different feasibility profile than one that can work with nightly extracts. Integration must be assessed during Value Capture, not after development begins.
+> **The Integration Afterthought.** "We will figure out legacy integration later." No. Legacy integration determines whether the value hypothesis is feasible. An AI initiative that requires real-time access to data locked in a batch-processing mainframe has a fundamentally different feasibility profile than one that can work with nightly extracts. Integration must be assessed during Signal Capture, not after development begins.
 
 > **The Screen Scraping Default.** When all else fails, teams resort to screen scraping — automating terminal interactions to extract data from legacy systems. This works for demos. It breaks in production. Screen layouts change. Response timing varies. Error screens are not handled. Screen scraping is a last resort, not a pattern — and it must be engineered with the same rigor as any other integration, including error handling, retry logic, and monitoring.
 
@@ -164,17 +164,17 @@ Where does the organization trust AI output versus requiring legacy system verif
 
 ## Cross-Pillar Connections
 
-### Legacy Coexistence → Value Capture
+### Legacy Coexistence → Signal Capture
 The highest-value AI opportunities often exist precisely because legacy systems contain decades of data that has never been analyzed holistically. Legacy Coexistence patterns determine what data is accessible, at what latency, and in what format — directly informing whether a value hypothesis is feasible.
 
 Data validation in the Value Assessment Framework must account for legacy constraints. A value hypothesis that assumes real-time access to mainframe data is a different proposition than one that works with nightly batch extracts.
 
-### Legacy Coexistence → Post-Agile Delivery
+### Legacy Coexistence → Grounded Delivery
 The Explore phase must include legacy integration discovery. Teams that defer integration testing to the Harden phase discover too late that the legacy system cannot support the required access patterns.
 
-The Shadow Pipeline pattern maps directly to the Post-Agile Harden phase — probabilistic quality gates evaluate AI output against legacy system baselines.
+The Shadow Pipeline pattern maps directly to the Grounded Delivery Harden phase — probabilistic quality gates evaluate AI output against legacy system baselines.
 
-Dual-track governance in Post-Agile extends to hybrid architectures: deterministic components (including legacy integrations) use conventional engineering rigor; non-deterministic components use probabilistic evaluation.
+Dual-track governance in Grounded Delivery extends to hybrid architectures: deterministic components (including legacy integrations) use conventional engineering rigor; non-deterministic components use probabilistic evaluation.
 
 ---
 
@@ -196,4 +196,4 @@ Dual-track governance in Post-Agile extends to hybrid architectures: determinist
 
 ---
 
-*Legacy Coexistence is the third pillar of the LegacyForward framework. It connects back to [Value Capture](value-capture.md) (where value lives in legacy data) and [Post-Agile Delivery](post-agile-delivery.md) (how to deliver AI systems that coexist with legacy in production).*
+*Legacy Coexistence is the third pillar of the LegacyForward framework. It connects back to [Signal Capture](signal-capture.md) (where value lives in legacy data) and [Grounded Delivery](grounded-delivery.md) (how to deliver AI systems that coexist with legacy in production).*

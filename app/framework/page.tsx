@@ -6,7 +6,7 @@ import SubscribeCTA from "@/components/SubscribeCTA";
 export const metadata: Metadata = {
   title: "Framework",
   description:
-    "The LegacyForward framework: Value Capture, Post-Agile Delivery, and Legacy Coexistence — three pillars for enterprise AI transformation.",
+    "The LegacyForward framework: Signal Capture, Grounded Delivery, and Legacy Coexistence — three pillars for enterprise AI transformation.",
 };
 
 export default function FrameworkPage() {

@@ -1,6 +1,6 @@
 # LegacyForward
 
-The enterprise world is failing at AI adoption — not because of technology, but because organizations are chasing hype instead of value, forcing non-deterministic AI projects into delivery methods designed for deterministic systems, pretending legacy systems can be replaced when they can't, and confusing faster code production with faster value delivery. LegacyForward is a three-pillar framework — Value Capture, Post-Agile Delivery, and Legacy Coexistence — that gives enterprises a practitioner-proven path to extract real operational value from AI/LLM initiatives at scale, without burning down the systems that keep the lights on. It is delivered through an AI-powered platform at legacyforward.ai and built from extensive and broad experience of leading enterprise digital transformations, cloud and AI adoption across multiple industry segments.
+The enterprise world is failing at AI adoption — not because of technology, but because organizations are chasing hype instead of value, forcing non-deterministic AI projects into delivery methods designed for deterministic systems, pretending legacy systems can be replaced when they can't, and confusing faster code production with faster value delivery. LegacyForward is a three-pillar framework — Signal Capture, Grounded Delivery, and Legacy Coexistence — that gives enterprises a practitioner-proven path to extract real operational value from AI/LLM initiatives at scale, without burning down the systems that keep the lights on. It is delivered through an AI-powered platform at legacyforward.ai and built from extensive and broad experience of leading enterprise digital transformations, cloud and AI adoption across multiple industry segments.
 
 ## The Problem
 
@@ -20,7 +20,7 @@ LegacyForward is a framework for enterprise AI adoption that bridges the gap bet
 
 It is built on three pillars:
 
-### Pillar 1: Value Capture
+### Pillar 1: Signal Capture
 
 Most organizations chase AI adoption. LegacyForward starts with value.
 
@@ -29,9 +29,9 @@ The question is not "how do we use AI?" but "where does AI create net new value 
 - Distinguish between transformation and automation — AI that makes a broken process faster is not transformation
 - Identify value opportunities that are unique to AI/LLM capabilities, not just task acceleration
 - Define measurable value outcomes before building anything
-- Kill initiatives that cannot articulate clear value capture, regardless of how exciting the technology is
+- Kill initiatives that cannot articulate clear signal capture, regardless of how exciting the technology is
 
-### Pillar 2: Post-Agile Delivery for Non-Deterministic Systems
+### Pillar 2: Grounded Delivery for Non-Deterministic Systems
 
 The software industry spent two decades perfecting delivery methods for deterministic systems. Those methods break down when applied to AI/LLM projects:
 

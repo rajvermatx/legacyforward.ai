@@ -5,17 +5,17 @@ import SubscribeCTA from "@/components/SubscribeCTA";
 const pillars = [
   {
     number: 1,
-    title: "Value Capture",
-    slug: "value-capture",
+    title: "Signal Capture",
+    slug: "signal-capture",
     description:
-      "Most AI initiatives are expensive automation. Value Capture identifies where AI creates net new value that is impossible by any other means.",
+      "Most AI initiatives are expensive automation. Signal Capture identifies where AI creates outcomes that are impossible by any other means.",
   },
   {
     number: 2,
-    title: "Post-Agile Delivery",
-    slug: "post-agile-delivery",
+    title: "Grounded Delivery",
+    slug: "grounded-delivery",
     description:
-      "Agile was built for deterministic systems. AI is not one. Post-Agile defines delivery methodology for non-deterministic systems.",
+      "Agile was built for predictable software. AI is not predictable. Grounded Delivery defines how to deliver systems whose outputs vary every time.",
   },
   {
     number: 3,

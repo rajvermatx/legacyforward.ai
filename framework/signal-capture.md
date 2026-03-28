@@ -1,13 +1,13 @@
 ---
-title: "Value Capture"
-slug: "value-capture"
-description: "Most enterprise AI initiatives capture zero operational value. Value Capture is the discipline of identifying where AI creates outcomes impossible by any other means."
+title: "Signal Capture"
+slug: "signal-capture"
+description: "Most enterprise AI initiatives capture zero operational signal. Signal Capture is the discipline of identifying where AI creates outcomes impossible by any other means."
 pillar: 1
 ---
 
-# Value Capture — Pillar 1
+# Signal Capture — Pillar 1
 
-Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Value Capture is a discipline for identifying where AI creates outcomes impossible by any other means, validating the value hypothesis before writing a line of code, and killing initiatives that cannot articulate clear value capture — regardless of how impressive the demo is. It is the first pillar of the LegacyForward framework because without a valid value target, delivery methodology and legacy integration are solving a problem that should not exist.
+Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Signal Capture is a discipline for identifying where AI creates outcomes impossible by any other means, validating the value hypothesis before writing a line of code, and killing initiatives that cannot articulate clear value capture — regardless of how impressive the demo is. It is the first pillar of the LegacyForward framework because without a valid value target, delivery methodology and legacy integration are solving a problem that should not exist.
 
 ---
 
@@ -27,9 +27,9 @@ The enterprise AI failure pattern is consistent and predictable:
 
 ---
 
-## The Value Capture Discipline
+## The Signal Capture Discipline
 
-Value Capture is not a one-time assessment. It is a continuous discipline applied across the lifecycle of every AI initiative.
+Signal Capture is not a one-time assessment. It is a continuous discipline applied across the lifecycle of every AI initiative.
 
 ### The Core Question
 
@@ -41,7 +41,7 @@ Not "how does this make an existing process faster?" Not "how does this reduce h
 
 ### Transformation vs. Automation
 
-The distinction between transformation and automation is the foundation of Value Capture:
+The distinction between transformation and automation is the foundation of Signal Capture:
 
 #### Automation
 
@@ -93,7 +93,7 @@ Value validation occurs before significant investment. It answers: is the value 
 
 **Data validation.** Does the data required to deliver the value actually exist, and is it accessible? Many value hypotheses assume data availability that does not hold. The most common failure mode is an initiative that requires data from a legacy system that cannot export it in a usable format. *(Cross-reference: Legacy Coexistence pillar for integration patterns.)*
 
-**Feasibility validation.** Can current AI capabilities actually deliver the claimed value? Not in a demo — in production, against real data, with real edge cases. This is where the Post-Agile Explore phase does its work. *(Cross-reference: Post-Agile Delivery, Explore phase.)*
+**Feasibility validation.** Can current AI capabilities actually deliver the claimed value? Not in a demo — in production, against real data, with real edge cases. This is where the Grounded Delivery Explore phase does its work. *(Cross-reference: Grounded Delivery, Explore phase.)*
 
 **Organizational validation.** Will the organization actually use the output? A perfectly valid value hypothesis fails if the humans who need to act on the AI's output do not trust it, cannot interpret it, or have no process for incorporating it into their decisions.
 
@@ -109,9 +109,9 @@ Value must be measured continuously, not just projected at funding time.
 
 ---
 
-## Portfolio-Level Value Capture
+## Portfolio-Level Signal Capture
 
-Individual initiative assessment is necessary but insufficient. Enterprises must apply Value Capture at the portfolio level.
+Individual initiative assessment is necessary but insufficient. Enterprises must apply Signal Capture at the portfolio level.
 
 ### Portfolio Composition
 
@@ -145,12 +145,12 @@ A healthy AI portfolio has explicit ratios:
 
 ## Cross-Pillar Connections
 
-### Value Capture → Post-Agile Delivery
-The Value Hypothesis produced in Value Capture becomes the primary input to the **Frame phase** of Post-Agile Delivery. The Frame phase does not define what to build — it defines what value to pursue and how to validate it. Without a validated value hypothesis, the Frame phase has nothing to frame.
+### Signal Capture → Grounded Delivery
+The Value Hypothesis produced in Signal Capture becomes the primary input to the **Frame phase** of Grounded Delivery. The Frame phase does not define what to build — it defines what value to pursue and how to validate it. Without a validated value hypothesis, the Frame phase has nothing to frame.
 
-Value Tracking feeds the **probabilistic quality gates** in Post-Agile Delivery. Quality is not measured by feature completion — it is measured by progress toward value capture.
+Value Tracking feeds the **probabilistic quality gates** in Grounded Delivery. Quality is not measured by feature completion — it is measured by progress toward value capture.
 
-### Value Capture → Legacy Coexistence
+### Signal Capture → Legacy Coexistence
 Many of the highest-value AI opportunities exist precisely because legacy systems contain decades of data that has never been analyzed holistically. The data validation step in Value Assessment must account for legacy system constraints — data formats, access patterns, extraction limitations.
 
 Legacy Coexistence patterns determine whether a value hypothesis is technically feasible. An initiative that requires real-time access to data locked in a batch-processing mainframe has a different feasibility profile than one that can work with nightly extracts.
@@ -159,7 +159,7 @@ Legacy Coexistence patterns determine whether a value hypothesis is technically 
 
 ## Implementation Guidance
 
-### Starting Value Capture in Your Organization
+### Starting Signal Capture in Your Organization
 
 1. **Audit the current portfolio.** Apply the transformation test to every active AI initiative. Classify each as transformation, automation, or unclear. Most organizations discover that 80%+ of their portfolio is automation.
 
@@ -171,8 +171,8 @@ Legacy Coexistence patterns determine whether a value hypothesis is technically 
 
 5. **Build the value tracking muscle.** Most organizations have no mechanism for tracking AI value post-deployment. Build it. Start simple — even a quarterly manual review is better than nothing.
 
-6. **Protect the kill decision.** The hardest part of Value Capture is killing initiatives that executives are excited about. Create organizational cover for this decision — a value review board, explicit criteria, portfolio-level accountability.
+6. **Protect the kill decision.** The hardest part of Signal Capture is killing initiatives that executives are excited about. Create organizational cover for this decision — a value review board, explicit criteria, portfolio-level accountability.
 
 ---
 
-*Value Capture is the first pillar of the LegacyForward framework. It connects forward to [Post-Agile Delivery](post-agile-delivery.md) (how to deliver against a validated value target) and [Legacy Coexistence](legacy-coexistence.md) (how to access the data and systems where value lives).*
+*Signal Capture is the first pillar of the LegacyForward framework. It connects forward to [Grounded Delivery](grounded-delivery.md) (how to deliver against a validated value target) and [Legacy Coexistence](legacy-coexistence.md) (how to access the data and systems where value lives).*

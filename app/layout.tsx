@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | LegacyForward",
   },
   description:
-    "A practitioner's framework for capturing real value from enterprise AI — Value Capture, Post-Agile Delivery, and Legacy Coexistence.",
+    "A practitioner's framework for enterprise AI transformation — Signal Capture, Grounded Delivery, and Legacy Coexistence.",
   metadataBase: new URL("https://legacyforward.ai"),
   openGraph: {
     type: "website",

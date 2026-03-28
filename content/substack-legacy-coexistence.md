@@ -66,7 +66,7 @@ This is backwards.
 
 Legacy integration determines whether your value hypothesis is feasible. An AI initiative that requires real-time access to data locked in a batch-processing mainframe is a fundamentally different proposition than one that can work with nightly extracts. If you do not know which one you are dealing with before you start building, you will discover it at the worst possible time — when the demo works, the team is committed, and production integration reveals that the architecture cannot support the use case.
 
-In my [previous piece on Value Capture](https://legacyforward.substack.com), I argued that every AI initiative must answer the question: where does this create net new value we cannot achieve any other way? Legacy Coexistence adds a second question: can we actually access the data and systems where that value lives?
+In my [previous piece on Signal Capture](https://legacyforward.substack.com), I argued that every AI initiative must answer the question: where does this create net new value we cannot achieve any other way? Legacy Coexistence adds a second question: can we actually access the data and systems where that value lives?
 
 Both questions must be answered before a line of code is written.
 
@@ -90,7 +90,7 @@ The organizations that win at enterprise AI will not be the ones with the most i
 
 *Building the Legacy Coexistence framework at LegacyForward. More at legacyforward.ai.*
 
-**That wraps the three-part series — Value Capture, Post-Agile Delivery, and Legacy Coexistence. Subscribe to LegacyForward for what comes next: turning the framework into tools you can use Monday morning.**
+**That wraps the three-part series — Signal Capture, Grounded Delivery, and Legacy Coexistence. Subscribe to LegacyForward for what comes next: turning the framework into tools you can use Monday morning.**
 
 ---
 

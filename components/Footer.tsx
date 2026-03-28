@@ -16,11 +16,11 @@ export default function Footer() {
           <div>
             <p className="text-white text-sm font-semibold mb-3">Framework</p>
             <div className="flex flex-col gap-2 text-sm">
-              <Link href="/framework/value-capture" className="hover:text-teal-400 transition-colors">
-                Value Capture
+              <Link href="/framework/signal-capture" className="hover:text-teal-400 transition-colors">
+                Signal Capture
               </Link>
-              <Link href="/framework/post-agile-delivery" className="hover:text-teal-400 transition-colors">
-                Post-Agile Delivery
+              <Link href="/framework/grounded-delivery" className="hover:text-teal-400 transition-colors">
+                Grounded Delivery
               </Link>
               <Link href="/framework/legacy-coexistence" className="hover:text-teal-400 transition-colors">
                 Legacy Coexistence

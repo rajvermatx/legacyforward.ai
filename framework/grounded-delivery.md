@@ -1,13 +1,13 @@
 ---
-title: "Post-Agile Delivery"
-slug: "post-agile-delivery"
-description: "Agile is a category error for AI. Post-Agile defines five phases, probabilistic quality gates, and governance for non-deterministic systems."
+title: "Grounded Delivery"
+slug: "grounded-delivery"
+description: "Agile is a category error for AI. Grounded Delivery defines five phases, probabilistic quality gates, and governance for non-deterministic systems."
 pillar: 2
 ---
 
-# Pillar 2: Post-Agile Delivery for Non-Deterministic Systems
+# Pillar 2: Grounded Delivery for Non-Deterministic Systems
 
-Agile is a category error for AI. LegacyForward's Post-Agile Delivery methodology defines five phases — Frame, Explore, Shape, Harden, Operate — with explicit decision gates, probabilistic quality gates, and governance models for hybrid systems where deterministic and non-deterministic components coexist. It replaces the assumption of predictable outputs with a framework designed around experimentation, evaluation, and value validation. This is not a manifesto. It is a delivery methodology you can implement Monday morning.
+Agile is a category error for AI. LegacyForward's Grounded Delivery methodology defines five phases — Frame, Explore, Shape, Harden, Operate — with explicit decision gates, probabilistic quality gates, and governance models for hybrid systems where deterministic and non-deterministic components coexist. It replaces the assumption of predictable outputs with a framework designed around experimentation, evaluation, and value validation. This is not a manifesto. It is a delivery methodology you can implement Monday morning.
 
 ---
 
@@ -50,9 +50,9 @@ The answer is not to abandon structure. The answer is to replace the wrong struc
 
 ---
 
-## The Post-Agile Delivery Model: Five Phases
+## The Grounded Delivery Model: Five Phases
 
-Post-Agile delivery moves through five named phases. These are not sprints. They are not time-boxed iterations. They are phases of work with distinct objectives, activities, and exit criteria — and the exit criteria are probabilistic where the work demands it.
+Grounded Delivery moves through five named phases. These are not sprints. They are not time-boxed iterations. They are phases of work with distinct objectives, activities, and exit criteria — and the exit criteria are probabilistic where the work demands it.
 
 ### Phase 1: FRAME
 
@@ -262,7 +262,7 @@ Non-deterministic system quality is probabilistic. The system performs at a cert
 
 ### What Replaces Pass/Fail
 
-| Traditional (Deterministic) | Post-Agile (Non-Deterministic) |
+| Traditional (Deterministic) | Grounded Delivery (Non-Deterministic) |
 |---|---|
 | Test passes or fails | Evaluation produces a quality distribution |
 | 100% of tests must pass | Quality metric must exceed threshold with statistical confidence |
@@ -282,7 +282,7 @@ Invest in it from Explore onward. Expand it in Shape. Use it in Harden. Update i
 
 In Agile, experimentation is a "spike" — a time-boxed investigation grudgingly tolerated within a sprint because it does not produce shippable increments. Spikes are second-class citizens. They do not earn velocity. They are treated as overhead.
 
-In Post-Agile delivery, experimentation is the primary activity of an entire phase (Explore) and a permanent capability in Operate.
+In Grounded Delivery, experimentation is the primary activity of an entire phase (Explore) and a permanent capability in Operate.
 
 ### What This Means in Practice
 
@@ -308,7 +308,7 @@ The delivery pipeline must handle both.
 
 **Deterministic components** follow conventional engineering practices. Code review, unit testing, integration testing, CI/CD, version control, standard change management. Agile works fine here. Use it.
 
-**Non-deterministic components** follow Post-Agile practices. Experimentation, evaluation-driven development, probabilistic quality gates, continuous monitoring.
+**Non-deterministic components** follow Grounded Delivery practices. Experimentation, evaluation-driven development, probabilistic quality gates, continuous monitoring.
 
 **The integration layer** — where deterministic meets non-deterministic — requires specific attention:
 - Contract testing between AI components and their deterministic consumers. What format does the AI output come in? What happens when it does not conform?
@@ -358,7 +358,7 @@ AI IDEs generate code that works in isolation. Enterprise systems do not run in 
 
 **1. Architectural Context as Input**
 
-AI IDEs must be given architectural context — and the Post-Agile process must produce that context as an explicit artifact. The Hybrid System Architecture from Shape is not just documentation for humans; it is input for AI-assisted development. Organizations that skip Shape and go straight to coding (with or without AI assistance) will produce systems that do not fit their landscape.
+AI IDEs must be given architectural context — and the Grounded Delivery process must produce that context as an explicit artifact. The Hybrid System Architecture from Shape is not just documentation for humans; it is input for AI-assisted development. Organizations that skip Shape and go straight to coding (with or without AI assistance) will produce systems that do not fit their landscape.
 
 Practically: establish project-level configuration that encodes constraints — integration patterns, allowed dependencies, security requirements, naming conventions, error handling standards. AI IDEs that can consume these constraints produce dramatically better output than those operating in a vacuum.
 
@@ -383,7 +383,7 @@ For non-deterministic components, test strategy must be defined by humans in Sha
 
 AI-accelerated development can produce features faster than the organization can evaluate, integrate, test, and operate them. This is a new form of work-in-progress overload.
 
-Post-Agile delivery applies WIP limits not on stories, but on unevaluated components. If a team produces three AI features in a week but only evaluates one, the other two are inventory — not progress. Evaluation throughput, not code production throughput, is the bottleneck to manage.
+Grounded Delivery applies WIP limits not on stories, but on unevaluated components. If a team produces three AI features in a week but only evaluates one, the other two are inventory — not progress. Evaluation throughput, not code production throughput, is the bottleneck to manage.
 
 **5. Disposable Code Mentality**
 
@@ -395,7 +395,7 @@ Organizations conditioned to value code because it was expensive to produce will
 
 ## Scaling Across the Enterprise
 
-One team doing Post-Agile delivery is a pilot. Enterprise value requires scaling practices across dozens or hundreds of teams, most of whom are also doing deterministic work.
+One team doing Grounded Delivery is a pilot. Enterprise value requires scaling practices across dozens or hundreds of teams, most of whom are also doing deterministic work.
 
 ### The Scaling Model: Centers of Practice, Not Centers of Excellence
 
@@ -436,11 +436,11 @@ Portfolio managers track initiatives by phase, conversion rates at each gate, an
 
 ---
 
-## Artifact Crosswalk: Agile to Post-Agile
+## Artifact Crosswalk: Agile to Grounded Delivery
 
-For teams transitioning from Agile, this maps familiar artifacts to their Post-Agile equivalents:
+For teams transitioning from Agile, this maps familiar artifacts to their Grounded Delivery equivalents:
 
-| Agile Artifact | Post-Agile Equivalent | Key Difference |
+| Agile Artifact | Grounded Delivery Equivalent | Key Difference |
 |---|---|---|
 | User Story | Value Hypothesis | Describes expected business outcome, not user interaction |
 | Acceptance Criteria | Probabilistic Success Criteria | Thresholds with confidence intervals, not binary conditions |
@@ -451,7 +451,7 @@ For teams transitioning from Agile, this maps familiar artifacts to their Post-A
 | Velocity | Evaluation Throughput | Measures rate of quality validation, not code production |
 | Test Suite | Evaluation Suite | Probabilistic, continuous, and domain-expert informed |
 | Release Readiness | Go-Live Decision Package | Includes probabilistic quality assessment and operational readiness |
-| Product Backlog | Value Opportunity Pipeline | Prioritized by value capture potential, not feature requests |
+| Product Backlog | Value Opportunity Pipeline | Prioritized by signal capture potential, not feature requests |
 | Technical Spike | Explore Phase | Full phase with artifacts, not a time-boxed afterthought |
 | CI/CD Pipeline | Dual-Track Pipeline | Separate quality gates for deterministic and non-deterministic components |
 
@@ -459,7 +459,7 @@ For teams transitioning from Agile, this maps familiar artifacts to their Post-A
 
 ## Implementation Guidance
 
-### Starting Post-Agile Delivery on Your First Initiative
+### Starting Grounded Delivery on Your First Initiative
 
 1. **Pick the right first initiative.** Not the highest-value, not the most visible. Pick one that has a clear value hypothesis, a willing team, and a manageable blast radius. You will make mistakes. Make them where they are cheap.
 
@@ -471,7 +471,7 @@ For teams transitioning from Agile, this maps familiar artifacts to their Post-A
 
 5. **Enforce the decision gates.** The hardest gate is Explore-to-Shape. You will have a team that has spent weeks experimenting, produced something promising but not convincing, and wants to push forward. If the evidence does not meet the threshold, do not advance. The gate exists to prevent exactly this kind of sunk-cost reasoning.
 
-6. **Do not abandon Agile for deterministic work.** Post-Agile applies to non-deterministic components. Most of your engineering work is still deterministic. Use Agile where Agile works. Use Post-Agile where it does not.
+6. **Do not abandon Agile for deterministic work.** Grounded Delivery applies to non-deterministic components. Most of your engineering work is still deterministic. Use Agile where Agile works. Use Grounded Delivery where it does not.
 
 7. **Expect the first cycle to be slow.** The first time through the five phases will feel deliberate — slower than "just building it." By the second and third cycle, teams internalize the model and move faster because they make fewer wrong turns, kill failing approaches earlier, and invest in the right quality practices from the start.
 
@@ -479,11 +479,11 @@ For teams transitioning from Agile, this maps familiar artifacts to their Post-A
 
 ## How This Connects to the Other Pillars
 
-Post-Agile Delivery does not operate in isolation. It is one of three pillars in the LegacyForward Framework, and the pillars are designed to reinforce each other.
+Grounded Delivery does not operate in isolation. It is one of three pillars in the LegacyForward Framework, and the pillars are designed to reinforce each other.
 
-### Pillar 1: Value Capture feeds Frame
+### Pillar 1: Signal Capture feeds Frame
 
-The Frame phase depends entirely on Pillar 1 (Value Capture). The value hypothesis that initiates Frame is the output of the Value Capture process — the disciplined identification of where AI creates net new value, not just task acceleration. Without Value Capture, teams Frame the wrong problems. They build AI for problems that do not require AI, or they pursue automation disguised as transformation. Value Capture ensures that every initiative entering the Post-Agile pipeline has a defensible reason to exist.
+The Frame phase depends entirely on Pillar 1 (Signal Capture). The value hypothesis that initiates Frame is the output of the Signal Capture process — the disciplined identification of where AI creates net new value, not just task acceleration. Without Signal Capture, teams Frame the wrong problems. They build AI for problems that do not require AI, or they pursue automation disguised as transformation. Signal Capture ensures that every initiative entering the Grounded Delivery pipeline has a defensible reason to exist.
 
 ### Pillar 3: Legacy Coexistence shapes Shape and Harden
 
@@ -491,23 +491,23 @@ The Shape phase is where Pillar 3 (Legacy Coexistence) has the most direct impac
 
 ### The Feedback Loop
 
-Value Capture identifies what to build. Post-Agile Delivery defines how to build it. Legacy Coexistence ensures it works where it has to work. And the Operate phase feeds back into Value Capture — production data reveals whether the value hypothesis was correct, which informs the next round of value identification. The framework is a cycle, not a sequence.
+Signal Capture identifies what to build. Grounded Delivery defines how to build it. Legacy Coexistence ensures it works where it has to work. And the Operate phase feeds back into Signal Capture — production data reveals whether the value hypothesis was correct, which informs the next round of value identification. The framework is a cycle, not a sequence.
 
 ---
 
 ## Summary
 
-Post-Agile Delivery is not anti-Agile. It is post-Agile in the same way that Agile was post-Waterfall — a recognition that the work has changed, and the delivery method must change with it.
+Grounded Delivery is not anti-Agile. It moves beyond Agile in the same way that Agile moved beyond Waterfall — a recognition that the work has changed, and the delivery method must change with it.
 
 The work changed when software moved from manufacturing metaphor to knowledge work metaphor. Agile was the answer.
 
 The work has changed again. Non-deterministic systems do not behave like deterministic software. They require experimentation instead of estimation, evaluation instead of testing, probabilistic quality instead of binary pass/fail, and continuous investment instead of ship-and-stabilize.
 
-Post-Agile Delivery — Frame, Explore, Shape, Harden, Operate — provides the structure to deliver non-deterministic systems with the same rigor and governance that enterprises demand, without forcing that work into a process that was never designed for it.
+Grounded Delivery — Frame, Explore, Shape, Harden, Operate — provides the structure to deliver non-deterministic systems with the same rigor and governance that enterprises demand, without forcing that work into a process that was never designed for it.
 
 The organizations that figure this out first will ship AI that works in production. The rest will keep running sprints and wondering why their AI initiatives fail.
 
 ---
 
-*LegacyForward Pillar 2 -- Post-Agile Delivery for Non-Deterministic Systems*
+*LegacyForward Pillar 2 -- Grounded Delivery for Non-Deterministic Systems*
 *Part of the LegacyForward Framework: legacyforward.ai*

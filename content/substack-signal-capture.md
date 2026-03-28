@@ -1,9 +1,9 @@
 ---
 title: "Your AI Initiative Is Just Expensive Automation. Here's the Test."
-slug: "value-capture"
-description: "Most AI initiatives are just making bad processes faster. The real question is where AI creates value you cannot get any other way."
+slug: "signal-capture"
+description: "Most AI initiatives are just making bad processes faster. The real question is where AI creates signal you cannot get any other way."
 date: "2026-03-20"
-relatedPillar: "value-capture"
+relatedPillar: "signal-capture"
 ---
 
 # Your AI Initiative Is Just Expensive Automation. Here's the Test.
@@ -18,7 +18,7 @@ I know this because I keep watching the same pattern play out. A team builds an 
 
 The execution was fine. The value proposition was not.
 
-In my [previous piece on Post-Agile delivery](https://legacyforward.substack.com), I argued that Agile is a category error for non-deterministic AI systems. But even a perfect delivery methodology cannot save an initiative that never had a clear value target. Delivery is the second problem. Value is the first.
+In my [previous piece on Grounded Delivery](https://legacyforward.substack.com), I argued that Agile is a category error for non-deterministic AI systems. But even a perfect delivery methodology cannot save an initiative that never had a clear value target. Delivery is the second problem. Value is the first.
 
 ## The Adoption Trap
 
@@ -38,7 +38,7 @@ The enterprise AI landscape is littered with solutions looking for problems:
 
 **The "agents can do everything" executive.** This is perhaps the most dangerous pattern. A senior leader reads three articles, watches two demos, and concludes that AI agents will replace half the workforce by next quarter. This person sponsors initiatives with no value hypothesis, no integration plan, and no understanding of what it takes to deploy, govern, monitor, and trust autonomous systems in production. They measure success by how many agents are "deployed." They have no idea how many are producing value.
 
-## The Value Capture Question
+## The Signal Capture Question
 
 The fix is not complicated to articulate. It is hard to practice.
 
@@ -46,13 +46,13 @@ Every AI initiative must answer one question before it receives a dollar of fund
 
 Not "how does this make an existing process faster?" Not "how does this reduce headcount?" Not "how does this automate a manual task?" Those are automation questions, and automation has diminishing returns when the underlying process is broken.
 
-Value Capture means identifying outcomes that are impossible without AI. It means finding the places where non-deterministic capabilities — pattern recognition across unstructured data, natural language reasoning over complex documents, synthesis of information that no human could process at scale — create entirely new operational possibilities.
+Signal Capture means identifying outcomes that are impossible without AI. It means finding the places where non-deterministic capabilities — pattern recognition across unstructured data, natural language reasoning over complex documents, synthesis of information that no human could process at scale — create entirely new operational possibilities.
 
 Here is the distinction that matters:
 
 **Automation:** Using AI to read invoices and extract fields into a spreadsheet. You could hire temps to do this. AI does it faster. That is acceleration, not transformation.
 
-**Value Capture:** Using AI to analyze fifteen years of invoice data, contract terms, vendor communications, and payment patterns to identify that your organization has been systematically overcharged by 4% on a specific category of services — a pattern no human could detect because it spans too much data across too many systems. That is net new value. It did not exist before. No amount of manual effort could have produced it.
+**Signal Capture:** Using AI to analyze fifteen years of invoice data, contract terms, vendor communications, and payment patterns to identify that your organization has been systematically overcharged by 4% on a specific category of services — a pattern no human could detect because it spans too much data across too many systems. That is net new value. It did not exist before. No amount of manual effort could have produced it.
 
 The test is simple: if you removed the AI and threw enough humans at the problem, could you achieve the same outcome? If yes, you are automating. You might still choose to do it — automation has its place — but do not confuse it with transformation, and do not fund it like transformation.
 
@@ -70,7 +70,7 @@ Speed without a value hypothesis is just arriving at the wrong destination faste
 
 ## Killing the Sacred Cows
 
-Value Capture requires organizational courage. It means killing initiatives that executives are excited about. It means telling the board that the impressive demo is automation dressed up as transformation. It means saying no to use cases that have technical merit but no value thesis.
+Signal Capture requires organizational courage. It means killing initiatives that executives are excited about. It means telling the board that the impressive demo is automation dressed up as transformation. It means saying no to use cases that have technical merit but no value thesis.
 
 Most organizations cannot do this because AI initiatives have become identity projects. "We are an AI-first company" is a statement about brand, not value. It creates internal pressure to deploy AI everywhere regardless of whether it produces outcomes that justify the investment.
 
@@ -78,7 +78,7 @@ The organizations that will win are the ones disciplined enough to maintain a sm
 
 ## Where This Connects
 
-Value Capture is the first pillar of the LegacyForward framework for a reason. Without it, the other two pillars — Post-Agile delivery and Legacy Coexistence — are solving a problem that should not exist. There is no point perfecting your delivery methodology for an initiative that has no value target. There is no point designing elegant legacy integration for a system that nobody needs.
+Signal Capture is the first pillar of the LegacyForward framework for a reason. Without it, the other two pillars — Grounded Delivery and Legacy Coexistence — are solving a problem that should not exist. There is no point perfecting your delivery methodology for an initiative that has no value target. There is no point designing elegant legacy integration for a system that nobody needs.
 
 Start with value. Validate the value hypothesis before you write a line of code. Then worry about how to deliver it and how to make it coexist with the systems you already have.
 
@@ -86,12 +86,12 @@ This is what I am building at LegacyForward — a practitioner's framework and p
 
 ---
 
-*Building the Value Capture framework at LegacyForward. More at legacyforward.ai.*
+*Building the Signal Capture framework at LegacyForward. More at legacyforward.ai.*
 
 **If this hit a nerve, subscribe to LegacyForward. Next in the series: Legacy Coexistence — why every AI strategy that ignores your existing systems is a fantasy, and what to do about it.**
 
 ---
 
-Substack Tags: Value Capture, Enterprise AI, AI Transformation, AI Strategy, Legacy Modernization, Digital Transformation, Technology Leadership, Vibe Coding, Agentic AI, LLM
+Substack Tags: Signal Capture, Enterprise AI, AI Transformation, AI Strategy, Legacy Modernization, Digital Transformation, Technology Leadership, Vibe Coding, Agentic AI, LLM
 
 Substack Subtitle: Most AI initiatives are just making bad processes faster. The real question is where AI creates value you cannot get any other way.

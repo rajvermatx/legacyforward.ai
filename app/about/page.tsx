@@ -36,12 +36,12 @@ export default function AboutPage() {
               </p>
               <p>
                 It is built on three pillars:{" "}
-                <Link href="/framework/value-capture" className="text-teal-600 font-medium hover:underline">
-                  Value Capture
+                <Link href="/framework/signal-capture" className="text-teal-600 font-medium hover:underline">
+                  Signal Capture
                 </Link>
                 ,{" "}
-                <Link href="/framework/post-agile-delivery" className="text-teal-600 font-medium hover:underline">
-                  Post-Agile Delivery
+                <Link href="/framework/grounded-delivery" className="text-teal-600 font-medium hover:underline">
+                  Grounded Delivery
                 </Link>
                 , and{" "}
                 <Link href="/framework/legacy-coexistence" className="text-teal-600 font-medium hover:underline">

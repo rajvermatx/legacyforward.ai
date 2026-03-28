@@ -1,14 +1,14 @@
 ---
 title: "Agile Is Broken for AI. Stop Pretending Otherwise."
-slug: "post-agile-delivery"
+slug: "grounded-delivery"
 description: "Agile was built for deterministic systems. AI is not one. The industry needs a new delivery methodology."
 date: "2026-03-15"
-relatedPillar: "post-agile-delivery"
+relatedPillar: "grounded-delivery"
 ---
 
 # Agile Is Broken for AI. Stop Pretending Otherwise.
 
-Agile was designed for deterministic systems — software where the same input produces the same output every time. AI and LLM systems are non-deterministic by nature. The industry is forcing fundamentally different work into a methodology that assumes predictable, repeatable outcomes, and wondering why AI projects keep failing. This is not a process improvement problem. It is a category error. We need a Post-Agile delivery methodology built from the ground up for the reality of non-deterministic systems.
+Agile was designed for deterministic systems — software where the same input produces the same output every time. AI and LLM systems are non-deterministic by nature. The industry is forcing fundamentally different work into a methodology that assumes predictable, repeatable outcomes, and wondering why AI projects keep failing. This is not a process improvement problem. It is a category error. We need a Grounded Delivery delivery methodology built from the ground up for the reality of non-deterministic systems.
 
 ---
 
@@ -56,9 +56,9 @@ What vibe coding actually does is compress the time between "we had an idea" and
 
 Speed without architectural intent is just technical debt at scale. And Agile, as currently practiced, has no mechanism to govern this.
 
-## What Post-Agile Actually Means
+## What Grounded Delivery Actually Means
 
-Post-Agile is not anti-Agile. It is not a return to waterfall. It is an acknowledgment that non-deterministic systems require a fundamentally different delivery approach. Here is what that looks like in practice:
+Grounded Delivery is not anti-Agile. It is not a return to waterfall. It is an acknowledgment that non-deterministic systems require a fundamentally different delivery approach. Here is what that looks like in practice:
 
 **Experimentation as a first-class phase.** Not a spike buried in a sprint. Not a research ticket that gets deprioritized. A structured phase with its own governance, its own success criteria, and its own exit conditions. You do not commit to building until you have validated that the non-deterministic system can meet threshold performance within your constraints.
 
@@ -80,16 +80,16 @@ This is what I am building with LegacyForward — a practitioner's framework and
 
 The organizations that figure this out first will not just be better at AI. They will be better at capturing value from technology investments period. The ones that keep forcing non-deterministic work into deterministic processes will keep producing impressive demos that never make it to production.
 
-The future of enterprise AI delivery is Post-Agile. The only question is how many failed sprints it takes before your organization admits it.
+The future of enterprise AI delivery is Grounded Delivery. The only question is how many failed sprints it takes before your organization admits it.
 
 ---
 
-*Building the Post-Agile delivery framework at LegacyForward. More at legacyforward.ai.*
+*Building the Grounded Delivery delivery framework at LegacyForward. More at legacyforward.ai.*
 
 **If this resonated, subscribe to LegacyForward for the next piece in this series — where I break down why most enterprise AI initiatives capture zero operational value, and how to fix that.**
 
 ---
 
-Substack Tags: Post-Agile, Enterprise AI, AI Transformation, Legacy Modernization, AI Delivery, LLM, Digital Transformation, Technology Leadership, Vibe Coding, Non-Deterministic Systems
+Substack Tags: Grounded Delivery, Enterprise AI, AI Transformation, Legacy Modernization, AI Delivery, LLM, Digital Transformation, Technology Leadership, Vibe Coding, Non-Deterministic Systems
 
 Substack Subtitle: Agile was built for deterministic systems. AI is not one. The industry needs a new delivery methodology.
