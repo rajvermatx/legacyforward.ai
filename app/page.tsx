@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Framework — the answer */}
-      <section className="bg-slate-50">
+      <section className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
             A Framework That Addresses All Three

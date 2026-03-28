@@ -62,7 +62,7 @@ export default async function PillarPage({ params }: Props) {
 
       {/* Visual overview diagram */}
       {pillarDiagrams[slug] && (
-        <section className="bg-slate-50 border-b border-slate-200">
+        <section className="bg-white border-b border-slate-200">
           <div className="mx-auto max-w-7xl px-6 py-12">
             <p className="text-sm font-semibold text-slate-500 text-center mb-6 uppercase tracking-wider">
               Overview

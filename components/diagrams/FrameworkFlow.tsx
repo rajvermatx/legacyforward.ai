@@ -8,7 +8,6 @@ export default function FrameworkFlow() {
       slug: "signal-capture",
       subtitle: "Find the value",
       items: ["Value Hypothesis", "Value Validation", "Value Tracking"],
-      color: "teal",
     },
     {
       number: 2,
@@ -16,7 +15,6 @@ export default function FrameworkFlow() {
       slug: "grounded-delivery",
       subtitle: "Build it for reality",
       items: ["Frame", "Explore", "Shape", "Harden", "Operate"],
-      color: "teal",
     },
     {
       number: 3,
@@ -24,92 +22,64 @@ export default function FrameworkFlow() {
       slug: "legacy-coexistence",
       subtitle: "Work with what you have",
       items: ["Data Exhaust", "Sidecar", "Gateway", "Shadow Pipeline", "Legacy-Aware Agent"],
-      color: "teal",
     },
   ];
 
   return (
-    <div className="w-full">
-      {/* Desktop: horizontal flow */}
-      <div className="hidden md:flex items-stretch justify-center gap-0">
-        {pillars.map((pillar, i) => (
-          <div key={pillar.slug} className="flex items-stretch">
-            <Link
-              href={`/framework/${pillar.slug}`}
-              className="group relative bg-white border-2 border-slate-200 hover:border-teal-500 rounded-xl p-6 w-64 transition-all hover:shadow-lg"
-            >
-              {/* Pillar number badge */}
-              <div className="absolute -top-3 left-6 bg-teal-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">
-                Pillar {pillar.number}
-              </div>
-              <h3 className="text-lg font-bold text-navy-900 mt-1 mb-1 group-hover:text-teal-600 transition-colors">
-                {pillar.title}
-              </h3>
-              <p className="text-sm text-slate-500 mb-4">{pillar.subtitle}</p>
-              <div className="space-y-1.5">
-                {pillar.items.map((item) => (
-                  <div
-                    key={item}
-                    className="text-xs bg-slate-50 text-slate-600 rounded px-2.5 py-1.5 border border-slate-100"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </Link>
-            {/* Arrow connector */}
-            {i < pillars.length - 1 && (
-              <div className="flex items-center px-3">
-                <svg width="40" height="24" viewBox="0 0 40 24" fill="none" className="text-teal-400">
-                  <path d="M0 12H32" stroke="currentColor" strokeWidth="2" />
-                  <path d="M28 6L36 12L28 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-            )}
+    <div className="w-full bg-navy-900 rounded-2xl p-6 md:p-10 overflow-hidden">
+      {/* Top bar */}
+      <div className="bg-teal-500 rounded-xl px-5 py-3 text-center mb-2">
+        <p className="text-sm font-bold text-white uppercase tracking-wider">The LegacyForward Framework</p>
+        <p className="text-xs text-teal-100">Capture what matters &rarr; Deliver it through reality &rarr; Coexist with what you have</p>
+      </div>
+
+      {/* Dashed connectors */}
+      <div className="hidden md:flex justify-around px-12 py-1">
+        {pillars.map((p) => (
+          <div key={p.slug} className="flex flex-col items-center">
+            <div className="w-px h-6 border-l-2 border-dashed border-teal-400/50" />
           </div>
         ))}
       </div>
 
-      {/* Mobile: vertical flow */}
-      <div className="md:hidden space-y-3">
-        {pillars.map((pillar, i) => (
-          <div key={pillar.slug}>
-            <Link
-              href={`/framework/${pillar.slug}`}
-              className="group relative block bg-white border-2 border-slate-200 hover:border-teal-500 rounded-xl p-5 transition-all"
-            >
-              <div className="flex items-start gap-4">
-                <div className="bg-teal-500 text-white text-xs font-bold px-2.5 py-1 rounded-full shrink-0 mt-0.5">
-                  {pillar.number}
+      {/* Pillar cards — equal width grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {pillars.map((pillar) => (
+          <Link
+            key={pillar.slug}
+            href={`/framework/${pillar.slug}`}
+            className="group bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20 transition-all hover:scale-[1.02]"
+          >
+            <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
+              {pillar.number}
+            </div>
+            <p className="text-sm font-bold text-navy-900 mb-0.5 group-hover:text-teal-600 transition-colors">{pillar.title}</p>
+            <p className="text-xs text-slate-500 mb-3">{pillar.subtitle}</p>
+            <div className="space-y-1.5">
+              {pillar.items.map((item) => (
+                <div
+                  key={item}
+                  className="bg-slate-50 rounded-lg px-3 py-2 text-[11px] font-medium text-navy-900"
+                >
+                  {item}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-base font-bold text-navy-900 group-hover:text-teal-600 transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 mb-2">{pillar.subtitle}</p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {pillar.items.map((item) => (
-                      <span
-                        key={item}
-                        className="text-xs bg-slate-50 text-slate-600 rounded px-2 py-1 border border-slate-100"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Link>
-            {i < pillars.length - 1 && (
-              <div className="flex justify-center py-1">
-                <svg width="24" height="28" viewBox="0 0 24 28" fill="none" className="text-teal-400">
-                  <path d="M12 0V20" stroke="currentColor" strokeWidth="2" />
-                  <path d="M6 16L12 24L18 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </div>
-            )}
+              ))}
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Bottom bar */}
+      <div className="hidden md:flex justify-around px-12 pt-1 pb-2">
+        {pillars.map((p) => (
+          <div key={p.slug} className="flex flex-col items-center">
+            <div className="w-px h-6 border-l-2 border-dashed border-slate-500/50" />
           </div>
         ))}
+      </div>
+      <div className="bg-slate-700 rounded-xl px-5 py-3 text-center mt-2 md:mt-0">
+        <p className="text-sm font-bold text-white uppercase tracking-wider">Enterprise AI at Scale</p>
+        <p className="text-xs text-slate-300">Real value &middot; Grounded methodology &middot; Legacy-aware architecture</p>
       </div>
     </div>
   );
