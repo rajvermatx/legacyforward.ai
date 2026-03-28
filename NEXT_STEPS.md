@@ -1,7 +1,5 @@
 # LegacyForward — Next Steps
 
-## BLUF (Bottom Line Up Front)
-
 Five workstreams to take LegacyForward from concept to market. Start with framework development and thought leadership in parallel — the framework is the IP, and publishing builds the audience before the platform launches.
 
 ## 1. Flesh Out the Framework (The IP)

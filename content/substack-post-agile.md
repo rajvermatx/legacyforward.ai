@@ -8,8 +8,6 @@ relatedPillar: "post-agile-delivery"
 
 # Agile Is Broken for AI. Stop Pretending Otherwise.
 
-## BLUF
-
 Agile was designed for deterministic systems — software where the same input produces the same output every time. AI and LLM systems are non-deterministic by nature. The industry is forcing fundamentally different work into a methodology that assumes predictable, repeatable outcomes, and wondering why AI projects keep failing. This is not a process improvement problem. It is a category error. We need a Post-Agile delivery methodology built from the ground up for the reality of non-deterministic systems.
 
 ---

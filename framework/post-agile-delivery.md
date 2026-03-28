@@ -7,8 +7,6 @@ pillar: 2
 
 # Pillar 2: Post-Agile Delivery for Non-Deterministic Systems
 
-## BLUF (Bottom Line Up Front)
-
 Agile is a category error for AI. LegacyForward's Post-Agile Delivery methodology defines five phases — Frame, Explore, Shape, Harden, Operate — with explicit decision gates, probabilistic quality gates, and governance models for hybrid systems where deterministic and non-deterministic components coexist. It replaces the assumption of predictable outputs with a framework designed around experimentation, evaluation, and value validation. This is not a manifesto. It is a delivery methodology you can implement Monday morning.
 
 ---

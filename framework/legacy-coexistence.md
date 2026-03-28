@@ -7,8 +7,6 @@ pillar: 3
 
 # Legacy Coexistence — Pillar 3
 
-## BLUF
-
 Every enterprise AI strategy that ignores existing systems is a fantasy. Legacy systems are not technical debt waiting to be retired — they are load-bearing walls that process trillions in transactions, encode decades of business logic, and will outlive most AI initiatives. Legacy Coexistence defines architectural patterns, integration strategies, and governance models for making AI work alongside the systems an enterprise already has — not replacing them, not wrapping them, but deliberately designing for a hybrid landscape where deterministic legacy and non-deterministic AI coexist in production.
 
 ---

@@ -1,7 +1,5 @@
 # LegacyForward
 
-## BLUF (Bottom Line Up Front)
-
 The enterprise world is failing at AI adoption — not because of technology, but because organizations are chasing hype instead of value, forcing non-deterministic AI projects into delivery methods designed for deterministic systems, pretending legacy systems can be replaced when they can't, and confusing faster code production with faster value delivery. LegacyForward is a three-pillar framework — Value Capture, Post-Agile Delivery, and Legacy Coexistence — that gives enterprises a practitioner-proven path to extract real operational value from AI/LLM initiatives at scale, without burning down the systems that keep the lights on. It is delivered through an AI-powered platform at legacyforward.ai and built from extensive and broad experience of leading enterprise digital transformations, cloud and AI adoption across multiple industry segments.
 
 ## The Problem

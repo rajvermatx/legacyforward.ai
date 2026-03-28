@@ -7,8 +7,6 @@ pillar: 1
 
 # Value Capture — Pillar 1
 
-## BLUF
-
 Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Value Capture is a discipline for identifying where AI creates outcomes impossible by any other means, validating the value hypothesis before writing a line of code, and killing initiatives that cannot articulate clear value capture — regardless of how impressive the demo is. It is the first pillar of the LegacyForward framework because without a valid value target, delivery methodology and legacy integration are solving a problem that should not exist.
 
 ---

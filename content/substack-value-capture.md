@@ -8,8 +8,6 @@ relatedPillar: "value-capture"
 
 # Your AI Initiative Is Just Expensive Automation. Here's the Test.
 
-## BLUF
-
 Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Organizations are chasing AI adoption as an end in itself — deploying chatbots, building demos, and funding POCs that wow the board but die in production. The question that separates transformation from expensive automation is not "how do we use AI?" but "where does AI create value we cannot achieve any other way?" Until your organization can answer that question for every AI initiative in its portfolio, you are burning money.
 
 ---

@@ -8,8 +8,6 @@ relatedPillar: "legacy-coexistence"
 
 # Every AI Strategy That Ignores Your Existing Systems Is a Fantasy
 
-## BLUF
-
 Your enterprise runs on legacy systems — mainframes, COBOL, SOAP endpoints, batch jobs, and databases older than most of your engineers. Every AI vendor, conference demo, and agent framework assumes you do not. Until your AI strategy accounts for the systems that actually keep the lights on, it is a fantasy. Legacy is not the obstacle to AI transformation. It is the terrain.
 
 ---
