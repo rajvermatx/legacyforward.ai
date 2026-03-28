@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getFrameworkPillars, getFrameworkBySlug, extractHeadings } from "@/lib/content";
+import { getFrameworkPillars, getFrameworkBySlug, getBlogPosts, extractHeadings } from "@/lib/content";
 import Prose from "@/components/Prose";
 import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
@@ -33,6 +33,7 @@ export default async function PillarPage({ params }: Props) {
   const allPillars = getFrameworkPillars();
   const otherPillars = allPillars.filter((p) => p.meta.slug !== slug);
   const headings = extractHeadings(pillar.content);
+  const relatedArticle = getBlogPosts().find((p) => p.meta.relatedPillar === slug);
 
   return (
     <>
@@ -61,6 +62,21 @@ export default async function PillarPage({ params }: Props) {
         </div>
       </article>
 
+      {/* Related blog article */}
+      {relatedArticle && (
+        <section className="bg-white border-t border-slate-100">
+          <div className="mx-auto max-w-3xl px-6 py-8 text-center">
+            <p className="text-slate-500 text-sm mb-2">Want the short version?</p>
+            <Link
+              href={`/blog/${relatedArticle.meta.slug}`}
+              className="text-teal-600 font-semibold hover:underline"
+            >
+              Read the article: {relatedArticle.meta.title} &rarr;
+            </Link>
+          </div>
+        </section>
+      )}
+
       {/* Other pillars */}
       <section className="bg-slate-50">
         <div className="mx-auto max-w-4xl px-6 py-12">
@@ -84,7 +100,10 @@ export default async function PillarPage({ params }: Props) {
         </div>
       </section>
 
-      <SubscribeCTA />
+      <SubscribeCTA
+        headline="Go deeper on enterprise AI."
+        description="Get framework updates, new patterns, and practitioner insights as we build out each pillar."
+      />
     </>
   );
 }

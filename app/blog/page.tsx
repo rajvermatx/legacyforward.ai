@@ -34,6 +34,7 @@ export default function BlogPage() {
                 date={post.meta.date ?? ""}
                 slug={post.meta.slug}
                 readingTime={estimateReadingTime(post.content)}
+                relatedPillar={post.meta.relatedPillar}
               />
             ))}
           </div>

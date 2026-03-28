@@ -22,20 +22,25 @@ export default function AboutPage() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-6 py-16 space-y-12">
-          {/* What */}
+          {/* Why */}
           <div>
-            <h2 className="text-2xl font-bold text-navy-900 mb-4">
-              What LegacyForward Is
-            </h2>
+            <h2 className="text-2xl font-bold text-navy-900 mb-4">Why LegacyForward Exists</h2>
             <div className="text-slate-700 leading-relaxed space-y-4">
               <p>
-                LegacyForward is a framework for enterprise AI adoption that bridges
-                the gap between where organizations are — legacy systems, deterministic
-                processes, existing investments — and where they need to go: AI-driven
-                value creation at scale.
+                The enterprise world is failing at AI adoption — not because of
+                technology, but because organizations are chasing hype instead of value,
+                forcing non-deterministic AI projects into delivery methods designed for
+                deterministic systems, and pretending legacy systems can be replaced when
+                they cannot.
               </p>
               <p>
-                It is built on three pillars:{" "}
+                The consulting firms sell strategy decks. The cloud vendors sell their
+                platform. The blogs sell hype. Nobody has built a practitioner&apos;s
+                framework that connects value identification, delivery methodology, and
+                legacy reality into a single coherent approach.
+              </p>
+              <p>
+                LegacyForward is that framework. Three pillars —{" "}
                 <Link href="/framework/signal-capture" className="text-teal-600 font-medium hover:underline">
                   Signal Capture
                 </Link>
@@ -47,29 +52,8 @@ export default function AboutPage() {
                 <Link href="/framework/legacy-coexistence" className="text-teal-600 font-medium hover:underline">
                   Legacy Coexistence
                 </Link>
-                . Together, they connect value identification, delivery methodology for
-                non-deterministic systems, and legacy integration into a single coherent
-                approach.
-              </p>
-            </div>
-          </div>
-
-          {/* Why */}
-          <div>
-            <h2 className="text-2xl font-bold text-navy-900 mb-4">Why It Exists</h2>
-            <div className="text-slate-700 leading-relaxed space-y-4">
-              <p>
-                The enterprise world is failing at AI adoption — not because of
-                technology, but because organizations are chasing hype instead of value,
-                forcing non-deterministic AI projects into delivery methods designed for
-                deterministic systems, and pretending legacy systems can be replaced when
-                they cannot.
-              </p>
-              <p>
-                The consulting firms sell strategy decks. The cloud vendors sell their
-                platform. The blogs sell hype. None of them have built a practitioner&apos;s
-                framework that connects value identification, delivery methodology, and
-                legacy reality into a single coherent approach.
+                {" "} — designed from the ground up for how AI actually works in
+                enterprise environments.
               </p>
             </div>
           </div>
@@ -79,15 +63,16 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-navy-900 mb-4">Who Built This</h2>
             <div className="text-slate-700 leading-relaxed space-y-4">
               <p>
-                LegacyForward is built from extensive and broad experience leading
-                enterprise-scale digital transformations, cloud adoption, and AI
-                initiatives across multiple industry segments.
+                LegacyForward is built from extensive experience leading enterprise-scale
+                digital transformations, cloud adoption, and AI initiatives across
+                multiple industry segments — organizations that process millions of
+                transactions, serve millions of users, and run on systems built over
+                decades.
               </p>
               <p>
                 This is not academic theory. It is not vendor marketing. It is a
-                practitioner&apos;s framework built from the reality of what it takes to make
-                AI work in organizations that run on legacy systems, serve millions of
-                users, and cannot afford to fail.
+                practitioner&apos;s framework built from the hard-won reality of making
+                new technology work inside organizations that cannot afford to fail.
               </p>
             </div>
           </div>
@@ -97,9 +82,8 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-navy-900 mb-4">Mission</h2>
             <div className="text-slate-700 leading-relaxed space-y-4">
               <p>
-                LegacyForward exists to democratize enterprise AI transformation
-                knowledge. The insights required to successfully adopt AI at scale should
-                not be locked behind million-dollar consulting engagements.
+                The insights required to successfully adopt AI at scale should not be
+                locked behind million-dollar consulting engagements.
               </p>
               <p>
                 Every organization — regardless of size or budget — deserves access to a
@@ -111,7 +95,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <SubscribeCTA />
+      <SubscribeCTA
+        headline="Join the conversation."
+        description="Subscribe for framework updates, new articles, and practitioner insights on enterprise AI transformation."
+      />
     </>
   );
 }

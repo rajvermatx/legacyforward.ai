@@ -29,6 +29,21 @@ export default function FrameworkPage() {
 
       <section className="bg-slate-50">
         <div className="mx-auto max-w-7xl px-6 py-16">
+          {/* Flow line */}
+          <div className="hidden md:flex items-center justify-center gap-3 mb-12 text-sm font-medium text-navy-700">
+            <span className="bg-white border border-teal-300 rounded-full px-4 py-1.5">
+              Signal Capture
+            </span>
+            <span className="text-teal-500">&rarr;</span>
+            <span className="bg-white border border-teal-300 rounded-full px-4 py-1.5">
+              Grounded Delivery
+            </span>
+            <span className="text-teal-500">&rarr;</span>
+            <span className="bg-white border border-teal-300 rounded-full px-4 py-1.5">
+              Legacy Coexistence
+            </span>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((p) => (
               <PillarCard

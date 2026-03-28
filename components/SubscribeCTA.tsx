@@ -1,13 +1,20 @@
-export default function SubscribeCTA() {
+interface SubscribeCTAProps {
+  headline?: string;
+  description?: string;
+}
+
+export default function SubscribeCTA({
+  headline = "Stay ahead of enterprise AI.",
+  description = "Subscribe for practitioner-level insights on capturing real value from AI, delivering non-deterministic systems, and making it all work with the legacy you already have.",
+}: SubscribeCTAProps) {
   return (
     <section className="bg-navy-950 text-white">
       <div className="mx-auto max-w-3xl px-6 py-16 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-          Stay ahead of enterprise AI.
+          {headline}
         </h2>
         <p className="text-slate-300 mb-8 leading-relaxed">
-          Subscribe to LegacyForward for practitioner-level insights on value capture,
-          delivery methodology, and making AI work with the systems you already have.
+          {description}
         </p>
         <a
           href="https://legacyforwardai.substack.com"

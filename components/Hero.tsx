@@ -7,9 +7,12 @@ export default function Hero() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
           The future of AI runs through the systems you already have.
         </h1>
-        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-          A practitioner&apos;s framework for capturing real value from enterprise AI —
-          without burning down the legacy systems that keep the lights on.
+        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed">
+          Enterprise AI fails when organizations chase hype, force non-deterministic
+          systems into deterministic delivery methods, and pretend legacy can be replaced.
+        </p>
+        <p className="text-base text-teal-400 font-medium max-w-2xl mx-auto mb-10">
+          Capture what matters &rarr; Deliver it through reality &rarr; Coexist with what you have
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link

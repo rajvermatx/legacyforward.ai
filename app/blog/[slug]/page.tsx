@@ -79,7 +79,10 @@ export default async function BlogPostPage({ params }: Props) {
         </section>
       )}
 
-      <SubscribeCTA />
+      <SubscribeCTA
+        headline="Liked this? There's more."
+        description="Subscribe for new articles on enterprise AI transformation — no hype, no vendor marketing, just what works."
+      />
     </>
   );
 }
