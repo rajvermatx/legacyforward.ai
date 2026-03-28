@@ -1,10 +1,10 @@
 export default function GroundedDeliveryFlow() {
   const phases = [
-    { name: "FRAME", desc: "Define value hypothesis & boundaries" },
-    { name: "EXPLORE", desc: "Research & experiment" },
-    { name: "SHAPE", desc: "Converge on architecture" },
-    { name: "HARDEN", desc: "Probabilistic quality gates" },
-    { name: "OPERATE", desc: "Monitor & adapt in production" },
+    { name: "FRAME", desc: "Define value hypothesis & boundaries", anchor: "phase-1-frame" },
+    { name: "EXPLORE", desc: "Research & experiment", anchor: "phase-2-explore" },
+    { name: "SHAPE", desc: "Converge on architecture", anchor: "phase-3-shape" },
+    { name: "HARDEN", desc: "Probabilistic quality gates", anchor: "phase-4-harden" },
+    { name: "OPERATE", desc: "Monitor & adapt in production", anchor: "phase-5-operate" },
   ];
 
   const gates = [
@@ -16,7 +16,7 @@ export default function GroundedDeliveryFlow() {
 
   return (
     <div className="w-full max-w-5xl mx-auto bg-navy-900 rounded-2xl p-6 md:p-10 overflow-hidden">
-      {/* Top bar: Signal Capture feeds in */}
+      {/* Top bar */}
       <div className="bg-teal-500 rounded-xl px-5 py-3 text-center mb-2">
         <p className="text-sm font-bold text-white uppercase tracking-wider">Signal Captured</p>
         <p className="text-xs text-teal-100">Value hypothesis validated &mdash; ready to deliver</p>
@@ -34,9 +34,10 @@ export default function GroundedDeliveryFlow() {
       {/* Phase cards — equal width grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-2">
         {phases.map((phase, i) => (
-          <div
+          <a
             key={phase.name}
-            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20"
+            href={`#${phase.anchor}`}
+            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:ring-2 hover:ring-teal-400 cursor-pointer"
           >
             <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
               {i + 1}
@@ -50,7 +51,7 @@ export default function GroundedDeliveryFlow() {
                 </p>
               </div>
             )}
-          </div>
+          </a>
         ))}
       </div>
 
@@ -63,7 +64,7 @@ export default function GroundedDeliveryFlow() {
         ))}
       </div>
 
-      {/* Bottom bar: feeds into Legacy Coexistence */}
+      {/* Bottom bar */}
       <div className="bg-slate-700 rounded-xl px-5 py-3 text-center">
         <p className="text-sm font-bold text-white uppercase tracking-wider">Production Delivery</p>
         <p className="text-xs text-slate-300">Deployed into the legacy landscape via coexistence patterns</p>

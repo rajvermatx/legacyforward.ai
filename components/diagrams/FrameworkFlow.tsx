@@ -7,21 +7,37 @@ export default function FrameworkFlow() {
       title: "Signal Capture",
       slug: "signal-capture",
       subtitle: "Find the value",
-      items: ["Value Hypothesis", "Value Validation", "Value Tracking"],
+      items: [
+        { label: "Value Hypothesis", anchor: "stage-1-value-hypothesis" },
+        { label: "Value Validation", anchor: "stage-2-value-validation" },
+        { label: "Value Tracking", anchor: "stage-3-value-tracking" },
+      ],
     },
     {
       number: 2,
       title: "Grounded Delivery",
       slug: "grounded-delivery",
       subtitle: "Build it for reality",
-      items: ["Frame", "Explore", "Shape", "Harden", "Operate"],
+      items: [
+        { label: "Frame", anchor: "phase-1-frame" },
+        { label: "Explore", anchor: "phase-2-explore" },
+        { label: "Shape", anchor: "phase-3-shape" },
+        { label: "Harden", anchor: "phase-4-harden" },
+        { label: "Operate", anchor: "phase-5-operate" },
+      ],
     },
     {
       number: 3,
       title: "Legacy Coexistence",
       slug: "legacy-coexistence",
       subtitle: "Work with what you have",
-      items: ["Data Exhaust", "Sidecar", "Gateway", "Shadow Pipeline", "Legacy-Aware Agent"],
+      items: [
+        { label: "Data Exhaust", anchor: "pattern-1-the-data-exhaust-pattern" },
+        { label: "Sidecar", anchor: "pattern-2-the-sidecar-pattern" },
+        { label: "Gateway", anchor: "pattern-3-the-gateway-pattern" },
+        { label: "Shadow Pipeline", anchor: "pattern-4-the-shadow-pipeline-pattern" },
+        { label: "Legacy-Aware Agent", anchor: "pattern-5-the-legacy-aware-agent-pattern" },
+      ],
     },
   ];
 
@@ -45,31 +61,33 @@ export default function FrameworkFlow() {
       {/* Pillar cards — equal width grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {pillars.map((pillar) => (
-          <Link
+          <div
             key={pillar.slug}
-            href={`/framework/${pillar.slug}`}
-            className="group bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20 transition-all hover:scale-[1.02]"
+            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20"
           >
-            <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
-              {pillar.number}
-            </div>
-            <p className="text-sm font-bold text-navy-900 mb-0.5 group-hover:text-teal-600 transition-colors">{pillar.title}</p>
-            <p className="text-xs text-slate-500 mb-3">{pillar.subtitle}</p>
+            <Link href={`/framework/${pillar.slug}`} className="group">
+              <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
+                {pillar.number}
+              </div>
+              <p className="text-sm font-bold text-navy-900 mb-0.5 group-hover:text-teal-600 transition-colors">{pillar.title}</p>
+              <p className="text-xs text-slate-500 mb-3">{pillar.subtitle}</p>
+            </Link>
             <div className="space-y-1.5">
               {pillar.items.map((item) => (
-                <div
-                  key={item}
-                  className="bg-slate-50 rounded-lg px-3 py-2 text-[11px] font-medium text-navy-900"
+                <Link
+                  key={item.anchor}
+                  href={`/framework/${pillar.slug}#${item.anchor}`}
+                  className="block bg-slate-50 hover:bg-teal-50 hover:text-teal-700 rounded-lg px-3 py-2 text-[11px] font-medium text-navy-900 transition-colors"
                 >
-                  {item}
-                </div>
+                  {item.label}
+                </Link>
               ))}
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
-      {/* Bottom bar */}
+      {/* Bottom connectors + bar */}
       <div className="hidden md:flex justify-around px-12 pt-1 pb-2">
         {pillars.map((p) => (
           <div key={p.slug} className="flex flex-col items-center">

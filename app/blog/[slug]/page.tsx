@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getBlogPosts, getBlogBySlug, estimateReadingTime, extractHeadings } from "@/lib/content";
+import { getBlogPosts, getBlogBySlug, estimateReadingTime, extractHeadings, stripLeadingH1 } from "@/lib/content";
 import Prose from "@/components/Prose";
 import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
             <TableOfContents headings={headings} />
             <div className="max-w-3xl">
-              <Prose content={post.content} />
+              <Prose content={stripLeadingH1(post.content)} />
             </div>
           </div>
         </div>

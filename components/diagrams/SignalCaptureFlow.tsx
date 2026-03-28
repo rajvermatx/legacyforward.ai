@@ -4,18 +4,21 @@ export default function SignalCaptureFlow() {
       number: 1,
       title: "Value Hypothesis",
       description: "Define where AI creates net new value impossible by any other means",
+      anchor: "stage-1-value-hypothesis",
       gate: "Can you articulate the value? If no \u2192 kill.",
     },
     {
       number: 2,
       title: "Value Validation",
       description: "Prove the hypothesis with data before building at scale",
+      anchor: "stage-2-value-validation",
       gate: "Does the data support it? If no \u2192 pivot or kill.",
     },
     {
       number: 3,
       title: "Value Tracking",
       description: "Measure captured value continuously in production",
+      anchor: "stage-3-value-tracking",
       gate: null,
     },
   ];
@@ -40,9 +43,10 @@ export default function SignalCaptureFlow() {
       {/* Stage cards — equal width grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-2">
         {stages.map((stage) => (
-          <div
+          <a
             key={stage.number}
-            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20"
+            href={`#${stage.anchor}`}
+            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:ring-2 hover:ring-teal-400 cursor-pointer"
           >
             <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
               {stage.number}
@@ -56,7 +60,7 @@ export default function SignalCaptureFlow() {
                 </p>
               </div>
             )}
-          </div>
+          </a>
         ))}
       </div>
 

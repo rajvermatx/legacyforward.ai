@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getFrameworkPillars, getFrameworkBySlug, getBlogPosts, extractHeadings } from "@/lib/content";
+import { getFrameworkPillars, getFrameworkBySlug, getBlogPosts, extractHeadings, stripLeadingH1 } from "@/lib/content";
 import Prose from "@/components/Prose";
 import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
+import PillarNav from "@/components/PillarNav";
 import SignalCaptureFlow from "@/components/diagrams/SignalCaptureFlow";
 import GroundedDeliveryFlow from "@/components/diagrams/GroundedDeliveryFlow";
 import LegacyPatternsMap from "@/components/diagrams/LegacyPatternsMap";
@@ -60,6 +61,16 @@ export default async function PillarPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Pillar navigation tabs */}
+      <PillarNav
+        currentSlug={slug}
+        pillars={allPillars.map((p) => ({
+          slug: p.meta.slug,
+          title: p.meta.title,
+          pillar: p.meta.pillar ?? 0,
+        }))}
+      />
+
       {/* Visual overview diagram */}
       {pillarDiagrams[slug] && (
         <section className="bg-white border-b border-slate-200">
@@ -77,7 +88,7 @@ export default async function PillarPage({ params }: Props) {
           <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
             <TableOfContents headings={headings} />
             <div className="max-w-3xl">
-              <Prose content={pillar.content} />
+              <Prose content={stripLeadingH1(pillar.content)} />
             </div>
           </div>
         </div>

@@ -6,6 +6,7 @@ export default function LegacyPatternsMap() {
       desc: "Analyze data the legacy system already produces",
       touch: "None",
       latency: "Batch",
+      anchor: "pattern-1-the-data-exhaust-pattern",
     },
     {
       number: 2,
@@ -13,6 +14,7 @@ export default function LegacyPatternsMap() {
       desc: "Observe and augment without modifying",
       touch: "Read-only",
       latency: "Near real-time",
+      anchor: "pattern-2-the-sidecar-pattern",
     },
     {
       number: 3,
@@ -20,6 +22,7 @@ export default function LegacyPatternsMap() {
       desc: "Mediate via a new interface layer",
       touch: "Indirect",
       latency: "Real-time",
+      anchor: "pattern-3-the-gateway-pattern",
     },
     {
       number: 4,
@@ -27,6 +30,7 @@ export default function LegacyPatternsMap() {
       desc: "Run in parallel, compare before going live",
       touch: "Parallel",
       latency: "Real-time",
+      anchor: "pattern-4-the-shadow-pipeline-pattern",
     },
     {
       number: 5,
@@ -34,6 +38,7 @@ export default function LegacyPatternsMap() {
       desc: "Autonomous AI with legacy constraints built in",
       touch: "Direct",
       latency: "Real-time",
+      anchor: "pattern-5-the-legacy-aware-agent-pattern",
     },
   ];
 
@@ -46,9 +51,9 @@ export default function LegacyPatternsMap() {
       </div>
 
       {/* Connection lines — vertical dashes */}
-      <div className="flex justify-around px-8 py-1">
+      <div className="hidden lg:flex justify-around px-8 py-1">
         {patterns.map((p) => (
-          <div key={p.number} className="hidden lg:flex flex-col items-center">
+          <div key={p.number} className="flex flex-col items-center">
             <div className="w-px h-6 border-l-2 border-dashed border-teal-400/50" />
           </div>
         ))}
@@ -57,9 +62,10 @@ export default function LegacyPatternsMap() {
       {/* Pattern cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 mb-2">
         {patterns.map((pattern) => (
-          <div
+          <a
             key={pattern.number}
-            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20"
+            href={`#${pattern.anchor}`}
+            className="bg-white rounded-xl p-4 text-center shadow-lg shadow-black/20 transition-all hover:scale-[1.02] hover:ring-2 hover:ring-teal-400 cursor-pointer"
           >
             <div className="bg-navy-900 text-teal-400 text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center mx-auto mb-2 ring-2 ring-teal-400">
               {pattern.number}
@@ -76,14 +82,14 @@ export default function LegacyPatternsMap() {
                 <span className="font-semibold text-navy-900">{pattern.latency}</span>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
       {/* Connection lines — vertical dashes */}
-      <div className="flex justify-around px-8 py-1">
+      <div className="hidden lg:flex justify-around px-8 py-1">
         {patterns.map((p) => (
-          <div key={p.number} className="hidden lg:flex flex-col items-center">
+          <div key={p.number} className="flex flex-col items-center">
             <div className="w-px h-6 border-l-2 border-dashed border-slate-500/50" />
           </div>
         ))}

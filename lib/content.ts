@@ -54,6 +54,11 @@ export function getBlogBySlug(slug: string): ContentItem | undefined {
   return getBlogPosts().find((item) => item.meta.slug === slug);
 }
 
+/** Replace the first H1 heading with "## Overview" so the intro paragraph is kept but the title isn't duplicated */
+export function stripLeadingH1(content: string): string {
+  return content.replace(/^\s*#\s+.+\n/, "\n## Overview\n");
+}
+
 export function estimateReadingTime(content: string): number {
   const words = content.split(/\s+/).length;
   return Math.ceil(words / 250);
