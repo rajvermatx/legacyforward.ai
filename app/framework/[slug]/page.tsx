@@ -5,6 +5,15 @@ import { getFrameworkPillars, getFrameworkBySlug, getBlogPosts, extractHeadings 
 import Prose from "@/components/Prose";
 import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
+import SignalCaptureFlow from "@/components/diagrams/SignalCaptureFlow";
+import GroundedDeliveryFlow from "@/components/diagrams/GroundedDeliveryFlow";
+import LegacyPatternsMap from "@/components/diagrams/LegacyPatternsMap";
+
+const pillarDiagrams: Record<string, React.ReactNode> = {
+  "signal-capture": <SignalCaptureFlow />,
+  "grounded-delivery": <GroundedDeliveryFlow />,
+  "legacy-coexistence": <LegacyPatternsMap />,
+};
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -50,6 +59,18 @@ export default async function PillarPage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {/* Visual overview diagram */}
+      {pillarDiagrams[slug] && (
+        <section className="bg-slate-50 border-b border-slate-200">
+          <div className="mx-auto max-w-7xl px-6 py-12">
+            <p className="text-sm font-semibold text-slate-500 text-center mb-6 uppercase tracking-wider">
+              Overview
+            </p>
+            {pillarDiagrams[slug]}
+          </div>
+        </section>
+      )}
 
       <article className="bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16">
