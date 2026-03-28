@@ -47,13 +47,15 @@ export default function Footer() {
         </div>
         <div className="mt-10 pt-6 border-t border-navy-800 text-xs text-slate-500 space-y-3">
           <p className="leading-relaxed">
-            LegacyForward is an independent publication. All opinions are the author&rsquo;s own
-            and do not represent any employer or organization. Content is built with the
-            help of AI tools, reviewed and edited for accuracy. Third-party links are
-            provided for reference and do not imply endorsement.
+            LegacyForward.ai is an independent publication for general informational
+            purposes only. All opinions are the author&rsquo;s own and do not represent any
+            employer or organization. No warranty is expressed or implied; use of this
+            site and its framework is at your own risk. Content is created with the help
+            of AI tools, reviewed and edited for accuracy. Third-party links are provided
+            for reference and do not imply endorsement.
           </p>
           <p className="text-center">
-            &copy; {new Date().getFullYear()} LegacyForward. All rights reserved.
+            &copy; {new Date().getFullYear()} LegacyForward.ai. All rights reserved.
           </p>
         </div>
       </div>
