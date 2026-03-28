@@ -1,12 +1,16 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
+const PDFDownloadButton = dynamic(() => import("./PDFDownloadButton"), {
+  ssr: false,
+  loading: () => (
+    <span className="bg-teal-500 text-white px-8 py-3 rounded font-semibold text-lg opacity-60">
+      Preparing PDF&hellip;
+    </span>
+  ),
+});
+
 export default function PrintButton() {
-  return (
-    <button
-      onClick={() => window.print()}
-      className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded font-semibold text-lg transition-colors"
-    >
-      Download as PDF
-    </button>
-  );
+  return <PDFDownloadButton />;
 }
