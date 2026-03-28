@@ -152,20 +152,15 @@ Where does the organization trust AI output versus requiring legacy system verif
 
 ## Anti-Patterns
 
-### The Greenfield Fantasy
-"Once we modernize, we can deploy AI properly." This is a strategy for never deploying AI. Modernization takes years. AI value is needed now. Organizations that wait for greenfield will be outcompeted by organizations that learn to coexist.
+> **The Greenfield Fantasy.** "Once we modernize, we can deploy AI properly." This is a strategy for never deploying AI. Modernization takes years. AI value is needed now. Organizations that wait for greenfield will be outcompeted by organizations that learn to coexist.
 
-### The Wrapper Illusion
-"We will put an API wrapper around the legacy system." Wrappers hide complexity; they do not eliminate it. The wrapped system still has batch processing schedules, concurrency limitations, data format constraints, and failure modes that the wrapper does not surface. AI systems that interact through wrappers without understanding the underlying legacy behavior will fail in production.
+> **The Wrapper Illusion.** "We will put an API wrapper around the legacy system." Wrappers hide complexity; they do not eliminate it. The wrapped system still has batch processing schedules, concurrency limitations, data format constraints, and failure modes that the wrapper does not surface. AI systems that interact through wrappers without understanding the underlying legacy behavior will fail in production.
 
-### The Strangler Fig Misconception
-The Strangler Fig pattern — gradually replacing legacy system functionality — is valid for deterministic modernization. It is dangerous for AI integration because AI does not replace legacy function-for-function. AI creates net new capabilities around legacy systems. Applying Strangler Fig to AI integration conflates modernization with transformation.
+> **The Strangler Fig Misconception.** The Strangler Fig pattern — gradually replacing legacy system functionality — is valid for deterministic modernization. It is dangerous for AI integration because AI does not replace legacy function-for-function. AI creates net new capabilities around legacy systems. Applying Strangler Fig to AI integration conflates modernization with transformation.
 
-### The Integration Afterthought
-"We will figure out legacy integration later." No. Legacy integration determines whether the value hypothesis is feasible. An AI initiative that requires real-time access to data locked in a batch-processing mainframe has a fundamentally different feasibility profile than one that can work with nightly extracts. Integration must be assessed during Value Capture, not after development begins.
+> **The Integration Afterthought.** "We will figure out legacy integration later." No. Legacy integration determines whether the value hypothesis is feasible. An AI initiative that requires real-time access to data locked in a batch-processing mainframe has a fundamentally different feasibility profile than one that can work with nightly extracts. Integration must be assessed during Value Capture, not after development begins.
 
-### The Screen Scraping Default
-When all else fails, teams resort to screen scraping — automating terminal interactions to extract data from legacy systems. This works for demos. It breaks in production. Screen layouts change. Response timing varies. Error screens are not handled. Screen scraping is a last resort, not a pattern — and it must be engineered with the same rigor as any other integration, including error handling, retry logic, and monitoring.
+> **The Screen Scraping Default.** When all else fails, teams resort to screen scraping — automating terminal interactions to extract data from legacy systems. This works for demos. It breaks in production. Screen layouts change. Response timing varies. Error screens are not handled. Screen scraping is a last resort, not a pattern — and it must be engineered with the same rigor as any other integration, including error handling, retry logic, and monitoring.
 
 ---
 

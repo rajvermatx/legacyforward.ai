@@ -27,9 +27,9 @@ export default function FrameworkPage() {
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((p) => (
               <PillarCard
                 key={p.meta.slug}

@@ -45,13 +45,21 @@ Not "how does this make an existing process faster?" Not "how does this reduce h
 
 The distinction between transformation and automation is the foundation of Value Capture:
 
-| | Automation | Transformation |
-|---|---|---|
-| **Definition** | AI performs a task previously done by humans, faster or cheaper | AI produces an outcome that was previously impossible at any cost |
-| **Test** | Remove the AI. Could enough humans achieve the same result? | Remove the AI. The outcome ceases to exist entirely. |
-| **Example** | AI reads invoices and extracts fields into a spreadsheet | AI analyzes 15 years of invoice data, contracts, vendor communications, and payment patterns to identify systematic 4% overcharging — a pattern spanning too much data across too many systems for any human to detect |
-| **Value ceiling** | Bounded by the cost of the human labor it replaces | Unbounded — net new value that did not exist before |
-| **Funding model** | ROI based on labor cost reduction | ROI based on new value created or risk eliminated |
+#### Automation
+
+- **Definition:** AI performs a task previously done by humans, faster or cheaper.
+- **Test:** Remove the AI. Could enough humans achieve the same result?
+- **Example:** AI reads invoices and extracts fields into a spreadsheet.
+- **Value ceiling:** Bounded by the cost of the human labor it replaces.
+- **Funding model:** ROI based on labor cost reduction.
+
+#### Transformation
+
+- **Definition:** AI produces an outcome that was previously impossible at any cost.
+- **Test:** Remove the AI. The outcome ceases to exist entirely.
+- **Example:** AI analyzes 15 years of invoice data, contracts, vendor communications, and payment patterns to identify systematic 4% overcharging — a pattern spanning too much data across too many systems for any human to detect.
+- **Value ceiling:** Unbounded — net new value that did not exist before.
+- **Funding model:** ROI based on new value created or risk eliminated.
 
 **Automation is not bad.** It has a legitimate place in enterprise portfolios. But it must be funded, measured, and governed as automation — not dressed up as transformation to justify AI-scale investment.
 
@@ -125,20 +133,15 @@ A healthy AI portfolio has explicit ratios:
 
 ## Anti-Patterns
 
-### The Sunk Cost Spiral
-An initiative has consumed significant resources but has not demonstrated value. Leadership keeps funding it because killing it means admitting the investment was wasted. The correct response: the investment is already wasted. Additional funding does not recover it. Kill the initiative and reallocate.
+> **The Sunk Cost Spiral.** An initiative has consumed significant resources but has not demonstrated value. Leadership keeps funding it because killing it means admitting the investment was wasted. The correct response: the investment is already wasted. Additional funding does not recover it. Kill the initiative and reallocate.
 
-### The Technology-First Portfolio
-The AI portfolio is organized by technology (chatbots, agents, ML models) rather than by value. This guarantees duplication, misalignment, and inability to measure aggregate value. Organize by value outcome, not technology category.
+> **The Technology-First Portfolio.** The AI portfolio is organized by technology (chatbots, agents, ML models) rather than by value. This guarantees duplication, misalignment, and inability to measure aggregate value. Organize by value outcome, not technology category.
 
-### The Adoption-as-Value Metric
-User adoption is reported as evidence of value. It is not. High adoption of a low-value tool is worse than low adoption of a high-value tool — it consumes more organizational attention and creates dependency on something that does not justify its existence.
+> **The Adoption-as-Value Metric.** User adoption is reported as evidence of value. It is not. High adoption of a low-value tool is worse than low adoption of a high-value tool — it consumes more organizational attention and creates dependency on something that does not justify its existence.
 
-### The Perpetual Pilot
-Initiatives stay in "pilot" status indefinitely, avoiding the accountability of production deployment while continuing to consume resources. Every pilot must have a predefined end date with three possible outcomes: promote to production, pivot the value hypothesis, or kill.
+> **The Perpetual Pilot.** Initiatives stay in "pilot" status indefinitely, avoiding the accountability of production deployment while continuing to consume resources. Every pilot must have a predefined end date with three possible outcomes: promote to production, pivot the value hypothesis, or kill.
 
-### The Vibe-Coded Commitment
-A team uses AI-assisted development to build a compelling demo in days. The demo is shown to leadership. Leadership commits organizational resources. Nobody validated the value hypothesis — the speed of the demo created momentum that bypassed value discipline. Speed without a value hypothesis is just arriving at the wrong destination faster.
+> **The Vibe-Coded Commitment.** A team uses AI-assisted development to build a compelling demo in days. The demo is shown to leadership. Leadership commits organizational resources. Nobody validated the value hypothesis — the speed of the demo created momentum that bypassed value discipline. Speed without a value hypothesis is just arriving at the wrong destination faster.
 
 ---
 

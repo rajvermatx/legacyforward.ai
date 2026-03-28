@@ -44,8 +44,21 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10 pt-6 border-t border-navy-800 text-xs text-slate-500 text-center">
-          &copy; {new Date().getFullYear()} LegacyForward. All rights reserved.
+        <div className="mt-10 pt-6 border-t border-navy-800 text-xs text-slate-500 space-y-3">
+          <p className="leading-relaxed">
+            <span className="font-semibold text-slate-400">Disclaimer:</span> The
+            information on this website is for general informational purposes only. All
+            opinions expressed here are those of the author and do not purport to reflect
+            the views or positions of any organization the author is associated with.
+            LegacyForward makes no representation or warranty, express or implied. Your
+            use of this website and its framework is solely at your own risk. This website
+            may contain references or links to third-party content, which we do not
+            warrant, endorse, or assume liability for. Some content on this site was
+            created with the assistance of AI tools and reviewed and edited by the author.
+          </p>
+          <p className="text-center">
+            &copy; {new Date().getFullYear()} LegacyForward. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

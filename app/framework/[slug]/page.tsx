@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getFrameworkPillars, getFrameworkBySlug } from "@/lib/content";
+import { getFrameworkPillars, getFrameworkBySlug, extractHeadings } from "@/lib/content";
 import Prose from "@/components/Prose";
+import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
 
 interface Props {
@@ -31,6 +32,7 @@ export default async function PillarPage({ params }: Props) {
 
   const allPillars = getFrameworkPillars();
   const otherPillars = allPillars.filter((p) => p.meta.slug !== slug);
+  const headings = extractHeadings(pillar.content);
 
   return (
     <>
@@ -49,8 +51,13 @@ export default async function PillarPage({ params }: Props) {
       </section>
 
       <article className="bg-white">
-        <div className="mx-auto max-w-3xl px-6 py-16">
-          <Prose content={pillar.content} />
+        <div className="mx-auto max-w-7xl px-6 py-16">
+          <div className="lg:grid lg:grid-cols-[220px_1fr] lg:gap-12">
+            <TableOfContents headings={headings} />
+            <div className="max-w-3xl">
+              <Prose content={pillar.content} />
+            </div>
+          </div>
         </div>
       </article>
 

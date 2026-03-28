@@ -40,8 +40,8 @@ export default function Home() {
       <Hero />
 
       {/* Pillars */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-20">
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-7xl px-6 py-20">
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
             Three Pillars. One Framework.
           </h2>
@@ -49,7 +49,7 @@ export default function Home() {
             LegacyForward connects value identification, delivery methodology for
             non-deterministic systems, and legacy coexistence into a single coherent approach.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pillars.map((p) => (
               <PillarCard key={p.slug} {...p} />
             ))}
@@ -58,8 +58,8 @@ export default function Home() {
       </section>
 
       {/* Problem Statement */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-4xl px-6 py-20">
+      <section className="bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-20">
           <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
             The Enterprise AI Problem
           </h2>

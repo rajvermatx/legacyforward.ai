@@ -23,8 +23,8 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-6 py-16">
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-4xl px-6 py-16">
           <div className="space-y-6">
             {posts.map((post) => (
               <ArticleCard
