@@ -14,7 +14,7 @@ export function ArticleJsonLd({ title, description, url, datePublished }: Articl
     url,
     publisher: {
       "@type": "Organization",
-      name: "LegacyForward",
+      name: "LegacyForward.ai",
       url: "https://legacyforward.ai",
     },
     ...(datePublished && { datePublished }),
@@ -32,7 +32,7 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "LegacyForward",
+    name: "LegacyForward.ai",
     url: "https://legacyforward.ai",
     description:
       "A practitioner's framework for enterprise AI transformation — Signal Capture, Grounded Delivery, and Legacy Coexistence.",

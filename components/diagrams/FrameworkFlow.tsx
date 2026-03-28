@@ -45,7 +45,7 @@ export default function FrameworkFlow() {
     <div className="w-full bg-navy-900 rounded-2xl p-6 md:p-10 overflow-hidden">
       {/* Top bar */}
       <div className="bg-teal-500 rounded-xl px-5 py-3 text-center mb-2">
-        <p className="text-sm font-bold text-white uppercase tracking-wider">The LegacyForward Framework</p>
+        <p className="text-sm font-bold text-white uppercase tracking-wider">The LegacyForward.ai Framework</p>
         <p className="text-xs text-teal-100">Capture what matters &rarr; Deliver it through reality &rarr; Coexist with what you have</p>
       </div>
 

@@ -7,7 +7,7 @@ pillar: 2
 
 # Pillar 2: Grounded Delivery for Non-Deterministic Systems
 
-Agile is a category error for AI. LegacyForward's Grounded Delivery methodology defines five phases — Frame, Explore, Shape, Harden, Operate — with explicit decision gates, probabilistic quality gates, and governance models for hybrid systems where deterministic and non-deterministic components coexist. It replaces the assumption of predictable outputs with a framework designed around experimentation, evaluation, and value validation. This is not a manifesto. It is a delivery methodology you can implement Monday morning.
+Agile is a category error for AI. LegacyForward.ai's Grounded Delivery methodology defines five phases — Frame, Explore, Shape, Harden, Operate — with explicit decision gates, probabilistic quality gates, and governance models for hybrid systems where deterministic and non-deterministic components coexist. It replaces the assumption of predictable outputs with a framework designed around experimentation, evaluation, and value validation. This is not a manifesto. It is a delivery methodology you can implement Monday morning.
 
 ---
 
@@ -479,7 +479,7 @@ For teams transitioning from Agile, this maps familiar artifacts to their Ground
 
 ## How This Connects to the Other Pillars
 
-Grounded Delivery does not operate in isolation. It is one of three pillars in the LegacyForward Framework, and the pillars are designed to reinforce each other.
+Grounded Delivery does not operate in isolation. It is one of three pillars in the LegacyForward.ai Framework, and the pillars are designed to reinforce each other.
 
 ### Pillar 1: Signal Capture feeds Frame
 
@@ -509,5 +509,5 @@ The organizations that figure this out first will ship AI that works in producti
 
 ---
 
-*LegacyForward Pillar 2 -- Grounded Delivery for Non-Deterministic Systems*
-*Part of the LegacyForward Framework: legacyforward.ai*
+*LegacyForward.ai Pillar 2 -- Grounded Delivery for Non-Deterministic Systems*
+*Part of the LegacyForward.ai Framework: legacyforward.ai*

@@ -5,7 +5,7 @@ import PrintButton from "@/components/PrintButton";
 export const metadata: Metadata = {
   title: "Cheatsheet",
   description:
-    "The LegacyForward framework at a glance — Signal Capture, Grounded Delivery, and Legacy Coexistence condensed into a printable quick reference.",
+    "The LegacyForward.ai framework at a glance — Signal Capture, Grounded Delivery, and Legacy Coexistence condensed into a printable quick reference.",
 };
 
 export default function CheatsheetPage() {
@@ -18,7 +18,7 @@ export default function CheatsheetPage() {
             Framework Cheatsheet
           </h1>
           <p className="text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8">
-            The entire LegacyForward framework — stages, gates, anti-patterns,
+            The entire LegacyForward.ai framework — stages, gates, anti-patterns,
             key questions, and how the pillars connect. A practitioner&rsquo;s
             quick reference.
           </p>

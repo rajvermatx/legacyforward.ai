@@ -5,7 +5,7 @@ import SubscribeCTA from "@/components/SubscribeCTA";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "LegacyForward exists to democratize enterprise AI transformation knowledge. Built from extensive experience leading enterprise-scale digital transformations.",
+    "LegacyForward.ai exists to democratize enterprise AI transformation knowledge. Built from extensive experience leading enterprise-scale digital transformations.",
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-3xl px-6 py-16 space-y-12">
           {/* Why */}
           <div>
-            <h2 className="text-2xl font-bold text-navy-900 mb-4">Why LegacyForward Exists</h2>
+            <h2 className="text-2xl font-bold text-navy-900 mb-4">Why LegacyForward.ai Exists</h2>
             <div className="text-slate-700 leading-relaxed space-y-4">
               <p>
                 The enterprise world is failing at AI adoption — not because of
@@ -40,7 +40,7 @@ export default function AboutPage() {
                 legacy reality into a single coherent approach.
               </p>
               <p>
-                LegacyForward is that framework. Three pillars —{" "}
+                LegacyForward.ai is that framework. Three pillars —{" "}
                 <Link href="/framework/signal-capture" className="text-teal-600 font-medium hover:underline">
                   Signal Capture
                 </Link>
@@ -63,7 +63,7 @@ export default function AboutPage() {
             <h2 className="text-2xl font-bold text-navy-900 mb-4">Who Built This</h2>
             <div className="text-slate-700 leading-relaxed space-y-4">
               <p>
-                LegacyForward is built from extensive experience leading enterprise-scale
+                LegacyForward.ai is built from extensive experience leading enterprise-scale
                 digital transformations, cloud adoption, and AI initiatives across
                 multiple industry segments — organizations that process millions of
                 transactions, serve millions of users, and run on systems built over

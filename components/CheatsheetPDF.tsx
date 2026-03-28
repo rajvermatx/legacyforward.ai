@@ -244,7 +244,7 @@ function Q({ text, color }: { text: string; color: string }) {
 /* ═══════════════════════════════════════ */
 export default function CheatsheetPDF() {
   return (
-    <Document title="LegacyForward Framework Cheatsheet" author="LegacyForward">
+    <Document title="LegacyForward.ai Framework Cheatsheet" author="LegacyForward.ai">
 
       {/* ═══ PAGE 1: Decision Aid + Signal Capture ═══ */}
       <Page size="A4" orientation="landscape" style={s.page}>

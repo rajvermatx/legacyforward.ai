@@ -7,7 +7,7 @@ pillar: 1
 
 # Signal Capture — Pillar 1
 
-Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Signal Capture is a discipline for identifying where AI creates outcomes impossible by any other means, validating the value hypothesis before writing a line of code, and killing initiatives that cannot articulate clear value capture — regardless of how impressive the demo is. It is the first pillar of the LegacyForward framework because without a valid value target, delivery methodology and legacy integration are solving a problem that should not exist.
+Most enterprise AI initiatives capture zero operational value because they automate existing processes instead of creating net new value. Signal Capture is a discipline for identifying where AI creates outcomes impossible by any other means, validating the value hypothesis before writing a line of code, and killing initiatives that cannot articulate clear value capture — regardless of how impressive the demo is. It is the first pillar of the LegacyForward.ai framework because without a valid value target, delivery methodology and legacy integration are solving a problem that should not exist.
 
 ---
 
@@ -175,4 +175,4 @@ Legacy Coexistence patterns determine whether a value hypothesis is technically 
 
 ---
 
-*Signal Capture is the first pillar of the LegacyForward framework. It connects forward to [Grounded Delivery](grounded-delivery.md) (how to deliver against a validated value target) and [Legacy Coexistence](legacy-coexistence.md) (how to access the data and systems where value lives).*
+*Signal Capture is the first pillar of the LegacyForward.ai framework. It connects forward to [Grounded Delivery](grounded-delivery.md) (how to deliver against a validated value target) and [Legacy Coexistence](legacy-coexistence.md) (how to access the data and systems where value lives).*

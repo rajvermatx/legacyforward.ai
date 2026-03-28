@@ -6,7 +6,7 @@ import SubscribeCTA from "@/components/SubscribeCTA";
 export const metadata: Metadata = {
   title: "Framework",
   description:
-    "The LegacyForward framework: Signal Capture, Grounded Delivery, and Legacy Coexistence — three pillars for enterprise AI transformation.",
+    "The LegacyForward.ai framework: Signal Capture, Grounded Delivery, and Legacy Coexistence — three pillars for enterprise AI transformation.",
 };
 
 const pillars = [
@@ -65,7 +65,7 @@ export default function FrameworkPage() {
               Solving any one without the others fails. A brilliant value thesis dies in
               an Agile process that cannot handle non-deterministic outputs. A perfectly
               delivered AI system fails because it assumed greenfield when the enterprise
-              runs on mainframes. LegacyForward addresses all three together.
+              runs on mainframes. LegacyForward.ai addresses all three together.
             </p>
           </div>
         </div>

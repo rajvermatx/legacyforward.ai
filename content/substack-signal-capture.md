@@ -78,17 +78,17 @@ The organizations that will win are the ones disciplined enough to maintain a sm
 
 ## Where This Connects
 
-Signal Capture is the first pillar of the LegacyForward framework for a reason. Without it, the other two pillars — Grounded Delivery and Legacy Coexistence — are solving a problem that should not exist. There is no point perfecting your delivery methodology for an initiative that has no value target. There is no point designing elegant legacy integration for a system that nobody needs.
+Signal Capture is the first pillar of the LegacyForward.ai framework for a reason. Without it, the other two pillars — Grounded Delivery and Legacy Coexistence — are solving a problem that should not exist. There is no point perfecting your delivery methodology for an initiative that has no value target. There is no point designing elegant legacy integration for a system that nobody needs.
 
 Start with value. Validate the value hypothesis before you write a line of code. Then worry about how to deliver it and how to make it coexist with the systems you already have.
 
-This is what I am building at LegacyForward — a practitioner's framework and platform that forces value discipline before delivery begins. Not because it is fashionable, but because after years of leading enterprise transformations, I have learned that the most expensive mistake is not a failed project. It is a successful project that delivers no value.
+This is what I am building at LegacyForward.ai — a practitioner's framework and platform that forces value discipline before delivery begins. Not because it is fashionable, but because after years of leading enterprise transformations, I have learned that the most expensive mistake is not a failed project. It is a successful project that delivers no value.
 
 ---
 
-*Building the Signal Capture framework at LegacyForward. More at legacyforward.ai.*
+*Building the Signal Capture framework at LegacyForward.ai. More at legacyforward.ai.*
 
-**If this hit a nerve, subscribe to LegacyForward. Next in the series: Legacy Coexistence — why every AI strategy that ignores your existing systems is a fantasy, and what to do about it.**
+**If this hit a nerve, subscribe to LegacyForward.ai. Next in the series: Legacy Coexistence — why every AI strategy that ignores your existing systems is a fantasy, and what to do about it.**
 
 ---
 

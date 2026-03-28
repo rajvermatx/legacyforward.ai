@@ -76,7 +76,7 @@ The consulting firms will sell you an AI strategy deck. The cloud vendors will s
 
 Nobody is connecting value identification, delivery methodology for non-deterministic systems, and legacy coexistence into a single coherent approach. These are not three separate problems. They are one problem with three dimensions, and solving any one of them in isolation is why most enterprise AI initiatives stall.
 
-This is what I am building with LegacyForward — a practitioner's framework and AI-powered platform that addresses all three dimensions together. Not because I read about it in a research paper, but because I have led enough enterprise transformations to know that the current playbook does not work for what comes next.
+This is what I am building with LegacyForward.ai — a practitioner's framework and AI-powered platform that addresses all three dimensions together. Not because I read about it in a research paper, but because I have led enough enterprise transformations to know that the current playbook does not work for what comes next.
 
 The organizations that figure this out first will not just be better at AI. They will be better at capturing value from technology investments period. The ones that keep forcing non-deterministic work into deterministic processes will keep producing impressive demos that never make it to production.
 
@@ -84,9 +84,9 @@ The future of enterprise AI delivery is Grounded Delivery. The only question is 
 
 ---
 
-*Building the Grounded Delivery delivery framework at LegacyForward. More at legacyforward.ai.*
+*Building the Grounded Delivery delivery framework at LegacyForward.ai. More at legacyforward.ai.*
 
-**If this resonated, subscribe to LegacyForward for the next piece in this series — where I break down why most enterprise AI initiatives capture zero operational value, and how to fix that.**
+**If this resonated, subscribe to LegacyForward.ai for the next piece in this series — where I break down why most enterprise AI initiatives capture zero operational value, and how to fix that.**
 
 ---
 

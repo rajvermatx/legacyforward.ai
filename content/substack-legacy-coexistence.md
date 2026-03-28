@@ -88,12 +88,12 @@ The organizations that win at enterprise AI will not be the ones with the most i
 
 ---
 
-*Building the Legacy Coexistence framework at LegacyForward. More at legacyforward.ai.*
+*Building the Legacy Coexistence framework at LegacyForward.ai. More at legacyforward.ai.*
 
-**That wraps the three-part series — Signal Capture, Grounded Delivery, and Legacy Coexistence. Subscribe to LegacyForward for what comes next: turning the framework into tools you can use Monday morning.**
+**That wraps the three-part series — Signal Capture, Grounded Delivery, and Legacy Coexistence. Subscribe to LegacyForward.ai for what comes next: turning the framework into tools you can use Monday morning.**
 
 ---
 
-Substack Tags: Legacy Coexistence, Enterprise AI, Legacy Modernization, AI Transformation, Digital Transformation, Technology Leadership, Mainframe, Agentic AI, AI Strategy, LegacyForward
+Substack Tags: Legacy Coexistence, Enterprise AI, Legacy Modernization, AI Transformation, Digital Transformation, Technology Leadership, Mainframe, Agentic AI, AI Strategy, LegacyForward.ai
 
 Substack Subtitle: Your AI demo assumes greenfield. Your enterprise is brownfield. Until your strategy accounts for legacy systems, it is a fantasy.

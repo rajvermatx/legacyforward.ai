@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
       {post.meta.relatedPillar && (
         <section className="bg-slate-50 border-t border-slate-200">
           <div className="mx-auto max-w-3xl px-6 py-10 text-center">
-            <p className="text-slate-500 text-sm mb-1">This article is part of the LegacyForward framework.</p>
+            <p className="text-slate-500 text-sm mb-1">This article is part of the LegacyForward.ai framework.</p>
             <Link
               href={`/framework/${post.meta.relatedPillar}`}
               className="text-teal-600 font-semibold hover:underline"

@@ -9,8 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "LegacyForward — Enterprise AI Transformation Framework",
-    template: "%s | LegacyForward",
+    default: "LegacyForward.ai — Enterprise AI Transformation Framework",
+    template: "%s | LegacyForward.ai",
   },
   description:
     "A practitioner's framework for enterprise AI transformation — Signal Capture, Grounded Delivery, and Legacy Coexistence.",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "LegacyForward",
-    title: "LegacyForward — Enterprise AI Transformation Framework",
+    siteName: "LegacyForward.ai",
+    title: "LegacyForward.ai — Enterprise AI Transformation Framework",
     description:
       "A practitioner's framework for capturing real value from enterprise AI without burning down the systems that keep the lights on.",
   },

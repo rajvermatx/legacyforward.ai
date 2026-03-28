@@ -196,4 +196,4 @@ Dual-track governance in Grounded Delivery extends to hybrid architectures: dete
 
 ---
 
-*Legacy Coexistence is the third pillar of the LegacyForward framework. It connects back to [Signal Capture](signal-capture.md) (where value lives in legacy data) and [Grounded Delivery](grounded-delivery.md) (how to deliver AI systems that coexist with legacy in production).*
+*Legacy Coexistence is the third pillar of the LegacyForward.ai framework. It connects back to [Signal Capture](signal-capture.md) (where value lives in legacy data) and [Grounded Delivery](grounded-delivery.md) (how to deliver AI systems that coexist with legacy in production).*

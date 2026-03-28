@@ -20,7 +20,7 @@ export default function BlogPage() {
           <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Practitioner-level insights on enterprise AI transformation. Each article
             explores a specific angle from the{" "}
-            <a href="/framework" className="text-teal-400 hover:underline">LegacyForward framework</a>.
+            <a href="/framework" className="text-teal-400 hover:underline">LegacyForward.ai framework</a>.
           </p>
         </div>
       </section>
