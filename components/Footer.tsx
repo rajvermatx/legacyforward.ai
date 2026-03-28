@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogoWordmark } from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,9 +7,9 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <p className="text-white text-lg font-bold tracking-tight mb-2">
-              Legacy<span className="text-teal-400">Forward</span>
-            </p>
+            <div className="mb-2">
+              <LogoWordmark />
+            </div>
             <p className="text-sm leading-relaxed">
               The future of AI runs through the systems you already have.
             </p>

@@ -171,10 +171,15 @@ const s = StyleSheet.create({
 function Header({ pageLabel }: { pageLabel: string }) {
   return (
     <View style={s.header} fixed>
-      <Text style={s.headerBrand}>
-        Legacy<Text style={s.headerBrandAccent}>Forward</Text>{" "}
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 6 }}>
+        <Text style={s.headerBrand}>
+          Legacy<Text style={s.headerBrandAccent}>Forward</Text>
+        </Text>
+        <View style={{ backgroundColor: C.teal, borderRadius: 3, paddingHorizontal: 4, paddingVertical: 1.5 }}>
+          <Text style={{ fontSize: 7, fontWeight: 700, color: C.white }}>AI</Text>
+        </View>
         <Text style={{ fontWeight: 400, color: C.slate400, fontSize: 8 }}>Framework Cheatsheet</Text>
-      </Text>
+      </View>
       <Text style={s.headerRight}>{pageLabel}</Text>
     </View>
   );

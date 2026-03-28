@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description:
     "A practitioner's framework for enterprise AI transformation — Signal Capture, Grounded Delivery, and Legacy Coexistence.",
   metadataBase: new URL("https://legacyforward.ai"),
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { LogoWordmark } from "./Logo";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -9,8 +10,8 @@ export default function Nav() {
   return (
     <nav className="bg-navy-900 text-white">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tight">
-          Legacy<span className="text-teal-400">Forward</span>
+        <Link href="/">
+          <LogoWordmark />
         </Link>
 
         {/* Desktop */}
