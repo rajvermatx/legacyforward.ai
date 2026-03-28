@@ -131,6 +131,19 @@ export default function FrameworkPage() {
         </div>
       </section>
 
+      {/* Cheatsheet callout */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-12 text-center">
+          <p className="text-slate-500 text-sm mb-2">Want the quick reference?</p>
+          <Link
+            href="/cheatsheet"
+            className="text-teal-600 font-semibold hover:underline text-lg"
+          >
+            Download the Framework Cheatsheet &rarr;
+          </Link>
+        </div>
+      </section>
+
       <SubscribeCTA
         headline="Go deeper on enterprise AI."
         description="Get framework updates, new patterns, and practitioner insights as we build out each pillar."
