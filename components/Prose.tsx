@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import type { ReactNode } from "react";
 
 interface ProseProps {
@@ -112,7 +113,7 @@ const components = {
 export default function Prose({ content }: ProseProps) {
   return (
     <div className="prose prose-slate prose-lg max-w-none prose-headings:text-navy-900 prose-headings:font-bold prose-a:text-teal-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-navy-900 prose-headings:scroll-mt-20 prose-li:marker:text-teal-500">
-      <MDXRemote source={content} components={components} />
+      <MDXRemote source={content} components={components} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
     </div>
   );
 }
