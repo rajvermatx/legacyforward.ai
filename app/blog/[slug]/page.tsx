@@ -5,6 +5,7 @@ import { getBlogPosts, getBlogBySlug, estimateReadingTime, extractHeadings, stri
 import Prose from "@/components/Prose";
 import TableOfContents from "@/components/TableOfContents";
 import SubscribeCTA from "@/components/SubscribeCTA";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -35,16 +36,22 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <ArticleJsonLd
+        title={post.meta.title}
+        description={post.meta.description}
+        url={`https://legacyforward.ai/blog/${slug}`}
+        datePublished={post.meta.date}
+      />
       <section className="bg-navy-900 text-white">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
-          <p className="text-slate-400 text-sm mb-4">
+          <p className="text-slate-300 text-sm font-medium mb-4">
             {post.meta.date &&
               new Date(post.meta.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
-              })}{" "}
-            &middot; {readingTime} min read
+              })}
+            <span className="text-slate-400 ml-2">&middot; {readingTime} min read</span>
           </p>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             {post.meta.title}
@@ -66,14 +73,14 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Related pillar link */}
       {post.meta.relatedPillar && (
-        <section className="bg-slate-50">
+        <section className="bg-slate-50 border-t border-slate-200">
           <div className="mx-auto max-w-3xl px-6 py-10 text-center">
-            <p className="text-slate-500 text-sm mb-2">Dive deeper</p>
+            <p className="text-slate-500 text-sm mb-1">This article is part of the LegacyForward framework.</p>
             <Link
               href={`/framework/${post.meta.relatedPillar}`}
               className="text-teal-600 font-semibold hover:underline"
             >
-              Read the full framework: {post.meta.relatedPillar.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} &rarr;
+              Read the full pillar: {post.meta.relatedPillar.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} &rarr;
             </Link>
           </div>
         </section>

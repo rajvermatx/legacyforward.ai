@@ -78,8 +78,38 @@ export default function FrameworkPage() {
         </div>
       </section>
 
-      {/* Pillar summaries */}
+      {/* Decision aid — where to start */}
       <section className="bg-white">
+        <div className="mx-auto max-w-4xl px-6 py-16">
+          <h2 className="text-2xl font-bold text-navy-900 mb-8 text-center">Where Should You Start?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link
+              href="/framework/signal-capture"
+              className="border border-slate-200 rounded-lg p-6 hover:border-teal-500 transition-colors"
+            >
+              <p className="text-sm font-semibold text-teal-600 mb-2">&ldquo;We have AI ideas but don&rsquo;t know which ones are worth pursuing.&rdquo;</p>
+              <p className="text-navy-900 font-bold">Start with Signal Capture &rarr;</p>
+            </Link>
+            <Link
+              href="/framework/grounded-delivery"
+              className="border border-slate-200 rounded-lg p-6 hover:border-teal-500 transition-colors"
+            >
+              <p className="text-sm font-semibold text-teal-600 mb-2">&ldquo;Our AI projects keep stalling or delivering inconsistent results.&rdquo;</p>
+              <p className="text-navy-900 font-bold">Start with Grounded Delivery &rarr;</p>
+            </Link>
+            <Link
+              href="/framework/legacy-coexistence"
+              className="border border-slate-200 rounded-lg p-6 hover:border-teal-500 transition-colors"
+            >
+              <p className="text-sm font-semibold text-teal-600 mb-2">&ldquo;We can&rsquo;t replace our legacy systems but need AI to work with them.&rdquo;</p>
+              <p className="text-navy-900 font-bold">Start with Legacy Coexistence &rarr;</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Pillar summaries */}
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-3xl px-6 py-16 space-y-12">
           {pillars.map((pillar) => (
             <div key={pillar.slug}>

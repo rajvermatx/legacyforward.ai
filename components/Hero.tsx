@@ -8,11 +8,12 @@ export default function Hero() {
           The future of AI runs through the systems you already have.
         </h1>
         <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-4 leading-relaxed">
-          Enterprise AI fails when organizations chase hype, force non-deterministic
-          systems into deterministic delivery methods, and pretend legacy can be replaced.
+          LegacyForward is a practitioner&rsquo;s framework for identifying real AI value,
+          delivering through non-deterministic reality, and coexisting with the systems
+          that actually run your enterprise.
         </p>
         <p className="text-base text-teal-400 font-medium max-w-2xl mx-auto mb-10">
-          Capture what matters &rarr; Deliver it through reality &rarr; Coexist with what you have
+          Signal Capture &rarr; Grounded Delivery &rarr; Legacy Coexistence
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link

@@ -22,3 +22,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media print {
+  nav,
+  footer,
+  button,
+  .no-print {
+    display: none !important;
+  }
+  section {
+    background: white !important;
+    color: black !important;
+    break-inside: avoid;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: underline;
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+}
