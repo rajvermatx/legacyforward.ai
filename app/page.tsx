@@ -35,8 +35,8 @@ export default function Home() {
             From Chaos to Clarity
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
-            Your legacy systems aren&rsquo;t the problem.{" "}
-            <br className="sm:hidden" />
+            Your legacy systems aren&rsquo;t the problem.
+            <br />
             Your approach to AI is.
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
