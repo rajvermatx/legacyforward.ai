@@ -197,6 +197,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Jump-to shortcut strip ── */}
+      <section className="bg-white border-t border-slate-100 py-6">
+        <div className="mx-auto max-w-6xl px-6">
+          <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-3">Jump to</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              { label: "Books", href: "/library/books" },
+              { label: "Toolkit", href: "/library/toolkit" },
+              { label: "Learning Paths", href: "/library/learn" },
+              { label: "Quick Reference", href: "/library/cheatsheets" },
+              { label: "Signal Capture", href: "/framework/signal-capture" },
+              { label: "Grounded Delivery", href: "/framework/grounded-delivery" },
+              { label: "Legacy Coexistence", href: "/framework/legacy-coexistence" },
+              { label: "Framework Cheatsheet", href: "/cheatsheet" },
+            ].map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-teal-500 hover:text-teal-600 transition-colors"
+              >
+                {label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── ZONE 3: Problem + Solution side by side ── */}
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-7xl px-6">

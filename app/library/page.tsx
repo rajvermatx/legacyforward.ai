@@ -70,7 +70,7 @@ export default function LibraryPage() {
 
       <section className="bg-slate-50 py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" id="sections">
             {sections.map((section) => (
               <Link
                 key={section.href}
@@ -104,6 +104,37 @@ export default function LibraryPage() {
                     </svg>
                   </div>
                 </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-14">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-baseline justify-between mb-6">
+            <h2 className="text-lg font-bold text-navy-900">Practitioner Books</h2>
+            <Link href="/library/books" className="text-sm font-semibold text-teal-600 hover:text-teal-500 transition-colors">
+              View all →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {[
+              { slug: "ai-leaders", title: "AI for Business Leaders", audience: "Executives", color: "border-amber-500" },
+              { slug: "ai-pm", title: "AI Product Management", audience: "Product Managers", color: "border-blue-500" },
+              { slug: "ai-enterprise-architect", title: "The AI-First Enterprise", audience: "Architects", color: "border-purple-500" },
+              { slug: "agenticai", title: "Agentic AI: Build, Ship, Portfolio", audience: "Engineers", color: "border-teal-500" },
+              { slug: "llm-ba-qa", title: "The Analyst's AI Toolkit", audience: "BAs & QAs", color: "border-green-500" },
+              { slug: "graph-ai", title: "Graph Databases for AI", audience: "Data Practitioners", color: "border-rose-500" },
+              { slug: "enterprise-it-101", title: "The Stack Beneath the Signal", audience: "All Practitioners", color: "border-amber-400" },
+            ].map(({ slug, title, audience, color }) => (
+              <Link
+                key={slug}
+                href={`/library/books/${slug}`}
+                className={`group block bg-white border border-slate-200 border-l-4 ${color} rounded-lg p-4 hover:shadow-md hover:border-l-4 transition-all`}
+              >
+                <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide block mb-1">{audience}</span>
+                <p className="text-sm font-semibold text-navy-900 group-hover:text-teal-600 transition-colors leading-snug mb-2">{title}</p>
+                <span className="text-xs text-teal-600 font-medium">Read →</span>
               </Link>
             ))}
           </div>

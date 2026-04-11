@@ -26,9 +26,28 @@ export default function Nav() {
             <Link href="/framework" className="hover:text-teal-400 transition-colors">
               Framework
             </Link>
-            <Link href="/library" className="hover:text-teal-400 transition-colors">
-              Library
-            </Link>
+            <div className="relative group">
+              <Link href="/library" className="hover:text-teal-400 transition-colors flex items-center gap-1">
+                Library
+                <svg className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+              <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                <div className="bg-white rounded-lg shadow-lg border border-slate-100 py-2 w-44">
+                  {[
+                    { label: "Books", href: "/library/books" },
+                    { label: "Toolkit", href: "/library/toolkit" },
+                    { label: "Learning Paths", href: "/library/learn" },
+                    { label: "Quick Reference", href: "/library/cheatsheets" },
+                  ].map(({ label, href }) => (
+                    <Link key={href} href={href} className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link href="/app" className="hover:text-teal-400 transition-colors">
               Roadmap
             </Link>
