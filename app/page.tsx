@@ -119,7 +119,7 @@ export default function Home() {
                   The Library
                 </span>
                 <h2 className="text-xl font-bold text-navy-900 leading-snug mb-3">
-                  6 Books. 30 Patterns. 95+ Notebooks.
+                  Books. Patterns. Notebooks.
                 </h2>
                 <p className="text-sm text-slate-500 leading-relaxed">
                   Free practitioner resources — architecture blueprints, certification paths,
