@@ -31,14 +31,15 @@ export default function Home() {
           }}
         />
         <div className="mx-auto max-w-4xl px-6 pt-28 md:pt-36 pb-24 text-center relative">
-          <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-6">
-            Move from Chaos to Clarity
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-            The future of AI runs through the systems that keep the lights on.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            From Chaos to Clarity
           </h1>
-          <p className="text-base text-slate-400 font-medium mb-12">
-            Signal Capture → Grounded Delivery → Legacy Coexistence
+          <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Most people approach AI as a clean break from the past. In reality, AI succeeds
+            when it works with the systems already in place.
+          </p>
+          <p className="text-base text-teal-400 font-medium mb-12">
+            Learn to navigate it through Signal Capture → Grounded Delivery → Legacy Coexistence
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
