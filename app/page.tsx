@@ -13,16 +13,10 @@ const valueProps = [
   { num: "01", text: "Start with a framework, not a vendor pitch. Signal Capture gives you a disciplined way to find and validate real AI value before committing resources." },
   { num: "02", text: "Adopt a delivery model built for non-determinism. Grounded Delivery replaces Agile assumptions with phases designed for probabilistic outputs." },
   { num: "03", text: "Stop treating legacy as the enemy. Legacy Coexistence patterns let AI and existing systems work together without a rip-and-replace." },
-  { num: "04", text: "Build the skills your team actually needs — six free practitioner books, 30 architecture patterns, and 95+ hands-on notebooks, by role." },
+  { num: "04", text: "Build the skills you actually need — six free practitioner books, 30 architecture patterns, and 95+ hands-on notebooks, organized by your role." },
   { num: "05", text: "Know your AI exposure before it finds you. The AI Impact Analyzer scores your role and generates a personalized roadmap for navigating the shift." },
 ];
 
-const resources = [
-  { label: "6 Books", sub: "100+ chapters", href: "/library/books", color: "border-violet-500" },
-  { label: "30 Patterns", sub: "blueprints & designs", href: "/library/toolkit", color: "border-teal-500" },
-  { label: "15 Cheatsheets", sub: "PDF downloads", href: "/library/cheatsheets", color: "border-amber-500" },
-  { label: "6 Learning Paths", sub: "95+ notebooks", href: "/library/learn", color: "border-blue-500" },
-];
 
 export default function Home() {
   return (
@@ -250,21 +244,6 @@ export default function Home() {
             ))}
           </div>
 
-              {/* Resource mini-cards */}
-              <div className="grid grid-cols-2 gap-3 mt-8">
-                {resources.map((r) => (
-                  <Link
-                    key={r.href}
-                    href={r.href}
-                    className={`group block border-t-2 ${r.color} bg-white hover:bg-slate-50 border border-slate-200 rounded-xl p-4 hover:shadow-md transition-all`}
-                  >
-                    <p className="text-sm font-bold text-navy-900 group-hover:text-teal-600 transition-colors mb-1">
-                      {r.label}
-                    </p>
-                    <p className="text-xs text-slate-400">{r.sub}</p>
-                  </Link>
-                ))}
-              </div>
             </div>
 
           </div>
