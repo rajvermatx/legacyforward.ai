@@ -26,14 +26,11 @@ export default function Nav() {
             <Link href="/framework" className="hover:text-teal-400 transition-colors">
               Framework
             </Link>
-            <Link href="/cheatsheet" className="hover:text-teal-400 transition-colors">
-              Cheatsheet
-            </Link>
             <Link href="/library" className="hover:text-teal-400 transition-colors">
               Library
             </Link>
             <Link href="/app" className="hover:text-teal-400 transition-colors">
-              App
+              Roadmap
             </Link>
             <Link href="/blog" className="hover:text-teal-400 transition-colors">
               Blog
@@ -111,14 +108,11 @@ export default function Nav() {
             <Link href="/framework" onClick={() => setOpen(false)} className="hover:text-teal-400">
               Framework
             </Link>
-            <Link href="/cheatsheet" onClick={() => setOpen(false)} className="hover:text-teal-400">
-              Cheatsheet
-            </Link>
             <Link href="/library" onClick={() => setOpen(false)} className="hover:text-teal-400">
               Library
             </Link>
             <Link href="/app" onClick={() => setOpen(false)} className="hover:text-teal-400">
-              App
+              Roadmap
             </Link>
             <Link href="/blog" onClick={() => setOpen(false)} className="hover:text-teal-400">
               Blog
