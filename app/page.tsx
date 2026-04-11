@@ -31,8 +31,11 @@ export default function Home() {
           }}
         />
         <div className="mx-auto max-w-4xl px-6 pt-28 md:pt-36 pb-24 text-center relative">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-6">
             From Chaos to Clarity
+          </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            AI doesn&rsquo;t replace legacy systems — it runs through them.
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
             Most people approach AI as a clean break from the past. In reality, AI succeeds
