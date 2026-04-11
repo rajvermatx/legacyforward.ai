@@ -36,7 +36,7 @@ export default function Home() {
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Your legacy systems aren&rsquo;t the problem.{" "}
-            <br />
+            <br className="sm:hidden" />
             Your approach to AI is.
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
