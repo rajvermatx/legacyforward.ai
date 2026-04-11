@@ -82,7 +82,7 @@ export default function AppLandingPage() {
             Start with the free library. Come back for the roadmap.
           </h2>
           <p className="text-slate-500 mb-8 leading-relaxed">
-            The library — 6 books, 30 patterns, 95+ notebooks — is free forever.
+            The library — 7+ books, 30+ patterns, 95+ notebooks — is free forever.
             The app gives you the personalized layer on top.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

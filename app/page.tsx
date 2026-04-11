@@ -128,10 +128,10 @@ export default function Home() {
               </div>
               <ul className="space-y-2 mb-8 flex-1">
                 {[
-                  { label: "6 practitioner books", sub: "every role, from strategy to code" },
-                  { label: "30 toolkit patterns", sub: "blueprints, agents, GenAI architectures" },
+                  { label: "7+ practitioner books", sub: "every role, from strategy to code" },
+                  { label: "30+ toolkit patterns", sub: "blueprints, agents, GenAI architectures" },
                   { label: "quick reference guides", sub: "PDF downloads, prompt engineering to MCP" },
-                  { label: "6 learning paths", sub: "GCP certs and GenAI with notebooks" },
+                  { label: "6+ learning paths", sub: "GCP certs and GenAI with notebooks" },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-violet-500 shrink-0 mt-1.5" />
