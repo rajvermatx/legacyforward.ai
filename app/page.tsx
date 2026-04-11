@@ -130,7 +130,7 @@ export default function Home() {
                 {[
                   { label: "6 practitioner books", sub: "every role, from strategy to code" },
                   { label: "30 toolkit patterns", sub: "blueprints, agents, GenAI architectures" },
-                  { label: "15 cheatsheets", sub: "PDF downloads, prompt engineering to MCP" },
+                  { label: "quick reference guides", sub: "PDF downloads, prompt engineering to MCP" },
                   { label: "6 learning paths", sub: "GCP certs and GenAI with notebooks" },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-3">

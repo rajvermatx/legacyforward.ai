@@ -61,11 +61,11 @@ export default async function CheatsheetSlugPage({ params }: PageProps) {
           <div className="max-w-3xl">
             <Breadcrumb items={[
               { label: "Library", href: "/library" },
-              { label: "Cheatsheets", href: "/library/cheatsheets" },
+              { label: "Quick Reference", href: "/library/cheatsheets" },
               { label: item.meta.title },
             ]} />
             <p className="text-teal-400 font-semibold text-sm uppercase tracking-wider mb-3">
-              Cheatsheet {String(item.meta.order).padStart(2, "0")}
+              Quick Reference {String(item.meta.order).padStart(2, "0")}
             </p>
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
               {item.meta.title}
@@ -109,7 +109,7 @@ export default async function CheatsheetSlugPage({ params }: PageProps) {
               <PrevNext prev={prev} next={next} />
               <div className="mt-10 mb-4 text-center">
                 <Link href="/library/cheatsheets" className="text-sm text-teal-600 hover:text-teal-500 font-medium transition-colors">
-                  ← All Cheatsheets
+                  ← All Quick Reference Guides
                 </Link>
               </div>
             </article>

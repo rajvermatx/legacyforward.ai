@@ -5,7 +5,7 @@ import ContentCard from "@/components/ContentCard";
 export async function generateMetadata(): Promise<Metadata> {
   const meta = getSectionMeta("cheatsheets");
   return {
-    title: `${meta?.title ?? "Cheatsheets"} | LegacyForward.ai`,
+    title: `${meta?.title ?? "Quick Reference"} | LegacyForward.ai`,
     description:
       meta?.description ??
       "Concise, printable quick-reference guides for AI and ML topics.",
@@ -25,7 +25,7 @@ export default function CheatsheetsPage() {
             Quick Reference Guides
           </p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-            {meta?.title ?? "Cheatsheets"}
+            {meta?.title ?? "Quick Reference"}
           </h1>
           <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
             {meta?.description ?? "Concise, printable quick-reference guides for the most important AI and ML topics. Download as PDF or read online."}

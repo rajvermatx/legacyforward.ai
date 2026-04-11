@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/home/Documents/2026/legacyforward -maxdepth 3 -type f \\\\\\(-name README* -o -name CLAUDE.md -o -name package.json -o -name *.config.* -o -name .env* -o -name tsconfig.json \\\\\\))",
+      "Bash(git -C /Users/home/Documents/2026/legacyforward log --oneline -10)",
+      "Bash(git -C /Users/home/Documents/2026/legacyforward show a08dbf0 --stat)",
+      "Bash(git -C /Users/home/Documents/2026/legacyforward show 7a7ba33 --stat)",
+      "Bash(cp -r content /tmp/lf-content-backup)",
+      "Bash(cp -r framework /tmp/lf-framework-backup)",
+      "Bash(cp LEGACYFORWARD.md /tmp/lf-legacyforward-backup.md)",
+      "Bash(cp NEXT_STEPS.md /tmp/lf-nextsteps-backup.md)",
+      "Read(//tmp/**)",
+      "Bash(git clone:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/home/Documents/2026/legacyforward",
+      "/Users/home/Documents/2026/careeralign"
+    ]
+  }
+}

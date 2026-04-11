@@ -44,7 +44,7 @@ export default function Footer() {
                 Learning Paths
               </Link>
               <Link href="/library/cheatsheets" className="hover:text-teal-400 transition-colors">
-                Cheatsheets
+                Quick Reference
               </Link>
             </div>
           </div>

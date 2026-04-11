@@ -12,13 +12,13 @@ interface SearchEntry {
   tags?: string[];
 }
 
-type Category = "Toolkit" | "Learning Paths" | "Books" | "Cheatsheets" | "Framework" | "Pages";
+type Category = "Toolkit" | "Learning Paths" | "Books" | "Quick Reference" | "Framework" | "Pages";
 
 function categorize(href: string): Category {
   if (href.startsWith("/library/toolkit")) return "Toolkit";
   if (href.startsWith("/library/learn")) return "Learning Paths";
   if (href.startsWith("/library/books")) return "Books";
-  if (href.startsWith("/library/cheatsheets")) return "Cheatsheets";
+  if (href.startsWith("/library/cheatsheets")) return "Quick Reference";
   if (href.startsWith("/framework")) return "Framework";
   return "Pages";
 }
@@ -84,7 +84,7 @@ export default function SearchDialog() {
   const results = filtered();
 
   const grouped: { category: Category; items: SearchEntry[] }[] = [];
-  const categoryOrder: Category[] = ["Framework", "Toolkit", "Learning Paths", "Books", "Cheatsheets", "Pages"];
+  const categoryOrder: Category[] = ["Framework", "Toolkit", "Learning Paths", "Books", "Quick Reference", "Pages"];
   for (const cat of categoryOrder) {
     const items = results.filter((r) => categorize(r.href) === cat);
     if (items.length > 0) grouped.push({ category: cat, items });

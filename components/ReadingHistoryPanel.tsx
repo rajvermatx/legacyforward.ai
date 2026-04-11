@@ -49,7 +49,7 @@ function sectionLabel(path: string): string {
       books: "Books",
       toolkit: "Toolkit",
       learn: "Learn",
-      cheatsheets: "Cheatsheets",
+      cheatsheets: "Quick Reference",
     };
     return subLabels[sub] ?? sub;
   }
