@@ -36,8 +36,8 @@ const toolkit = [
 export default function Home() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-navy-900 py-28 md:py-36 relative overflow-hidden">
+      {/* ── ZONE 1: Framework (navy) ────────────────────────────────── */}
+      <section className="bg-navy-900 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -45,7 +45,9 @@ export default function Home() {
               "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
           }}
         />
-        <div className="mx-auto max-w-4xl px-6 text-center relative">
+
+        {/* Hero */}
+        <div className="mx-auto max-w-4xl px-6 pt-28 md:pt-36 pb-20 text-center relative">
           <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-6">
             Free &amp; Open Source
           </p>
@@ -72,8 +74,6 @@ export default function Home() {
               Browse the Library
             </Link>
           </div>
-
-          {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-xl mx-auto">
             {[
               { value: "6", label: "Books" },
@@ -88,50 +88,54 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Framework */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
-            Three Pillars. One Coherent Approach.
-          </h2>
-          <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
-            Value identification, delivery methodology for non-deterministic systems,
-            and legacy coexistence — connected into a single framework.
-          </p>
-          <FrameworkFlow />
+        {/* Framework — continues inside the same navy zone */}
+        <div className="border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-6 py-20">
+            <p className="text-xl font-semibold text-slate-300 text-center mb-2">
+              Three Pillars. One Coherent Approach.
+            </p>
+            <p className="text-slate-500 text-center max-w-2xl mx-auto mb-10">
+              Value identification, delivery methodology for non-deterministic systems,
+              and legacy coexistence — connected into a single framework.
+            </p>
+            <div className="bg-white/5 rounded-2xl p-6 md:p-10">
+              <FrameworkFlow />
+            </div>
+          </div>
         </div>
-      </section>
 
-      {/* Problem Statement */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-5xl px-6 py-20">
-          <h2 className="text-2xl font-bold text-navy-900 text-center mb-4">
-            Why Most Enterprise AI Fails
-          </h2>
-          <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
-            Not because of technology — because of how organizations approach it.
-          </p>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {problems.map((problem, i) => (
-              <div key={i} className="flex gap-4 items-start">
-                <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="text-slate-700 leading-relaxed">{problem}</p>
-              </div>
-            ))}
+        {/* Why AI Fails — supporting evidence, still in navy */}
+        <div className="border-t border-white/10">
+          <div className="mx-auto max-w-5xl px-6 py-20">
+            <p className="text-lg font-bold text-white text-center mb-2">
+              Why Most Enterprise AI Fails
+            </p>
+            <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
+              Not because of technology — because of how organizations approach it.
+            </p>
+            <div className="space-y-4 max-w-3xl mx-auto">
+              {problems.map((problem, i) => (
+                <div key={i} className="flex gap-4 items-start">
+                  <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-slate-300 leading-relaxed">{problem}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Library Value Props */}
+      {/* ── ZONE 2: Library (light) ─────────────────────────────────── */}
+
+      {/* Value Props entry */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-3xl font-bold text-navy-900 text-center mb-4">
+          <p className="text-teal-500 font-semibold text-sm uppercase tracking-widest text-center mb-3">
             The Practitioner Library
-          </h2>
+          </p>
           <p className="text-slate-500 text-center max-w-2xl mx-auto mb-14">
             Not another AI course. A complete practitioner library — from strategy to production.
           </p>
@@ -252,7 +256,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* App Teaser */}
+      {/* ── ZONE 3: App (navy) ──────────────────────────────────────── */}
       <section className="bg-navy-900">
         <div className="mx-auto max-w-5xl px-6 py-24">
           <div className="text-center mb-14">
@@ -268,9 +272,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Feature highlights */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {/* Career Book */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-7 hover:border-teal-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center text-lg">
@@ -296,7 +298,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bridge Builder */}
             <div className="bg-white/5 border border-white/10 rounded-xl p-7 hover:border-teal-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center text-lg">
@@ -323,7 +324,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Other agents list */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {["AI Career Coach", "AI Impact Analyzer", "Career Roadmap", "Wins Tracker", "Onboarding"].map((agent) => (
               <span key={agent} className="text-xs text-slate-400 border border-white/10 rounded-full px-4 py-1.5">
