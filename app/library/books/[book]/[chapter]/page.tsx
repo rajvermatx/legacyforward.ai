@@ -7,6 +7,7 @@ import { ReadingProgressTracker } from "@/components/ReadingProgress";
 import { ArticleJsonLd } from "@/components/JsonLd";
 import BookSidebar from "@/components/BookSidebar";
 import Prose from "@/components/Prose";
+import PrevNext from "@/components/PrevNext";
 import TextToSpeech from "@/components/TextToSpeech";
 import NotebookLink from "@/components/NotebookLink";
 import TableOfContents from "@/components/TableOfContents";
@@ -128,7 +129,9 @@ export default async function BookChapterPage({
               <TextToSpeech />
               <Prose content={content} />
 
-              <div className="mt-10 mb-4 text-center">
+              <PrevNext prev={prev} next={next} />
+
+              <div className="mt-8 mb-4 text-center">
                 <Link href={BASE_PATH} className="text-sm text-teal-600 hover:text-teal-500 font-medium transition-colors">
                   ← Back to {def.title}
                 </Link>
@@ -136,7 +139,38 @@ export default async function BookChapterPage({
             </main>
 
             <aside className="hidden xl:block w-56 shrink-0">
-              <TableOfContents headings={headings} />
+              <div className="sticky top-24 flex flex-col gap-6 max-h-[calc(100vh-8rem)]">
+                <div className="overflow-y-auto flex-1">
+                  <TableOfContents headings={headings} />
+                </div>
+                {(prev || next) && (
+                  <nav className="border-t border-slate-200 pt-4 space-y-2">
+                    <p className="text-xs font-semibold text-navy-900 uppercase tracking-wide mb-2">Navigate</p>
+                    {prev && (
+                      <Link
+                        href={prev.href}
+                        className="flex items-center gap-2 text-xs text-slate-600 hover:text-teal-600 transition-colors group"
+                      >
+                        <svg className="w-3.5 h-3.5 shrink-0 text-slate-400 group-hover:text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                        <span className="line-clamp-2 leading-snug">{prev.title}</span>
+                      </Link>
+                    )}
+                    {next && (
+                      <Link
+                        href={next.href}
+                        className="flex items-center gap-2 text-xs text-slate-600 hover:text-teal-600 transition-colors group"
+                      >
+                        <svg className="w-3.5 h-3.5 shrink-0 text-slate-400 group-hover:text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                        <span className="line-clamp-2 leading-snug">{next.title}</span>
+                      </Link>
+                    )}
+                  </nav>
+                )}
+              </div>
             </aside>
           </div>
 
