@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="#0f172a"/>
+
+  <!-- Top geometric accent: amber corner triangle -->
+  <polygon points="0,0 160,0 0,120" fill="#f59e0b" opacity="0.18"/>
+
+  <!-- Bottom geometric accent: amber corner triangle -->
+  <polygon points="600,800 440,800 600,680" fill="#f59e0b" opacity="0.18"/>
+
+  <!-- ── SERIES BRANDING ── -->
+  <text x="300" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.3em">THE LEGACYFORWARD.AI LIBRARY</text>
+  <line x1="260" y1="26" x2="340" y2="26" stroke="#f59e0b" stroke-width="2"/>
+
+  <!-- ── HEADER icon: stack layers ── -->
+  <g transform="translate(276,36)">
+    <rect width="48" height="48" rx="8" fill="#1e293b"/>
+    <!-- Three layer bars -->
+    <rect x="8" y="10" width="32" height="7" rx="3" fill="#f59e0b" opacity="0.9"/>
+    <rect x="8" y="21" width="32" height="7" rx="3" fill="#f59e0b" opacity="0.55"/>
+    <rect x="8" y="32" width="32" height="7" rx="3" fill="#f59e0b" opacity="0.25"/>
+  </g>
+
+  <!-- LegacyForward wordmark -->
+  <text x="300" y="116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="white" text-anchor="middle" opacity="0.9">LEGACYFORWARD.AI</text>
+
+  <!-- ── ACCENT STRIPE ── -->
+  <rect x="0" y="150" width="600" height="8" fill="#f59e0b"/>
+
+  <!-- ── MAIN CONTENT ── -->
+
+  <!-- Decorative left accent bar -->
+  <rect x="60" y="220" width="4" height="240" fill="#f59e0b" rx="2"/>
+
+  <!-- Title line 1 -->
+  <text x="88" y="272" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="white" letter-spacing="-1">The Stack</text>
+
+  <!-- Title line 2 -->
+  <text x="88" y="320" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="white" letter-spacing="-1">Beneath the</text>
+
+  <!-- Title line 3 -->
+  <text x="88" y="368" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="42" font-weight="800" fill="#f59e0b" letter-spacing="-1">Signal</text>
+
+  <!-- Divider dot row -->
+  <circle cx="88" cy="398" r="3" fill="#f59e0b"/>
+  <circle cx="104" cy="398" r="2" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="116" cy="398" r="2" fill="#f59e0b" opacity="0.3"/>
+
+  <!-- Subtitle -->
+  <text x="88" y="430" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#f59e0b" letter-spacing="0.5">Enterprise IT Explained</text>
+
+  <!-- Tagline -->
+  <text x="88" y="466" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8" letter-spacing="0.2">20 chapters · plain language · no jargon</text>
+
+  <!-- Layer decoration -->
+  <g opacity="0.10">
+    <rect x="88" y="492" width="380" height="14" rx="4" fill="#f59e0b"/>
+    <rect x="88" y="512" width="300" height="14" rx="4" fill="#f59e0b"/>
+    <rect x="88" y="532" width="220" height="14" rx="4" fill="#f59e0b"/>
+    <rect x="88" y="552" width="140" height="14" rx="4" fill="#f59e0b"/>
+  </g>
+
+  <!-- ── FOOTER ── -->
+  <rect x="0" y="640" width="600" height="1" fill="#f59e0b" opacity="0.4"/>
+  <rect x="0" y="641" width="600" height="1" fill="#f59e0b" opacity="0.15"/>
+
+  <!-- Author -->
+  <text x="300" y="680" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.85">LegacyForward.ai</text>
+
+  <!-- Series label -->
+  <text x="300" y="725" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.2em">THE PRACTITIONER LIBRARY · ENTERPRISE IT 101</text>
+
+  <!-- URL -->
+  <text x="300" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle" letter-spacing="1">legacyforward.ai</text>
+
+</svg>

@@ -6,7 +6,7 @@ import ContentCard from "@/components/ContentCard";
 interface BookDef {
   section: string;
   title: string;
-  accentColor: "violet" | "blue" | "purple" | "teal" | "green" | "rose";
+  accentColor: "violet" | "blue" | "purple" | "teal" | "green" | "rose" | "amber";
 }
 
 const bookDefs: Record<string, BookDef> = {
@@ -16,6 +16,7 @@ const bookDefs: Record<string, BookDef> = {
   "ai-enterprise-architect": { section: "ai-enterprise-architect", title: "The AI-First Enterprise", accentColor: "purple" },
   "llm-ba-qa": { section: "llm-ba-qa", title: "The Analyst's AI Toolkit", accentColor: "green" },
   "graph-ai": { section: "graph-ai", title: "Graph Databases for AI", accentColor: "rose" },
+  "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", accentColor: "amber" },
 };
 
 export async function generateStaticParams() {
