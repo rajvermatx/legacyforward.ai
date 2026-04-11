@@ -37,7 +37,10 @@ export default function Home() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
             Your legacy systems aren&rsquo;t the problem. Your approach to AI is.
           </h1>
-
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Most people approach AI as a clean break from the past. In reality, AI succeeds
+            when it works with the systems already in place.
+          </p>
           <p className="text-base text-teal-400 font-medium mb-12">
             Learn to navigate it through Signal Capture → Grounded Delivery → Legacy Coexistence
           </p>
