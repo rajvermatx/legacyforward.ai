@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Pricing Models</text>
+  <rect x="60" y="55" width="240" height="210" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="82" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">Included</text>
+  <text x="180" y="100" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Flat subscription</text>
+  <text x="180" y="117" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">AI bundled in plan</text>
+  <text x="180" y="145" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10" font-weight="400">Pros:</text>
+  <text x="180" y="160" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Low friction adoption</text>
+  <text x="180" y="175" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Simple to communicate</text>
+  <text x="180" y="203" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10" font-weight="400">Cons:</text>
+  <text x="180" y="218" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Subsidizes heavy users</text>
+  <text x="180" y="233" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Margin risk at scale</text>
+  <rect x="330" y="55" width="240" height="210" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="82" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Premium Tier</text>
+  <text x="450" y="100" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Upgrade to unlock AI</text>
+  <text x="450" y="117" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Feature-gated access</text>
+  <text x="450" y="145" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10" font-weight="400">Pros:</text>
+  <text x="450" y="160" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Clear value signal</text>
+  <text x="450" y="175" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Revenue uplift</text>
+  <text x="450" y="203" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10" font-weight="400">Cons:</text>
+  <text x="450" y="218" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Conversion friction</text>
+  <text x="450" y="233" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Adoption slower</text>
+  <rect x="600" y="55" width="240" height="210" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="720" y="82" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">Usage-Based</text>
+  <text x="720" y="100" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Pay per call / token</text>
+  <text x="720" y="117" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Metered consumption</text>
+  <text x="720" y="145" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10" font-weight="400">Pros:</text>
+  <text x="720" y="160" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Aligns cost to value</text>
+  <text x="720" y="175" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Scales with usage</text>
+  <text x="720" y="203" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10" font-weight="400">Cons:</text>
+  <text x="720" y="218" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Unpredictable bills</text>
+  <text x="720" y="233" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Chills experimentation</text>
+</svg>

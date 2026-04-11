@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="350" fill="#f8fafc"/>
+  <text x="450" y="35" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">Agile vs. Grounded Delivery</text>
+  <text x="450" y="55" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">How AI projects require a different delivery framework</text>
+  <rect x="50" y="75" width="340" height="240" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="50" y="75" width="340" height="36" rx="12" fill="#0f172a"/>
+  <rect x="50" y="97" width="340" height="14" fill="#0f172a"/>
+  <text x="220" y="99" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="15" font-weight="700">Agile</text>
+  <circle cx="78" cy="140" r="7" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="78" y="144" text-anchor="middle" fill="#64748b" font-family="Space Grotesk" font-size="9" font-weight="700">1</text>
+  <text x="200" y="136" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">User Stories</text>
+  <text x="200" y="152" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Feature-driven requirements</text>
+  <circle cx="78" cy="184" r="7" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="78" y="188" text-anchor="middle" fill="#64748b" font-family="Space Grotesk" font-size="9" font-weight="700">2</text>
+  <text x="200" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Binary Pass/Fail</text>
+  <text x="200" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Tests pass or they don't</text>
+  <circle cx="78" cy="228" r="7" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="78" y="232" text-anchor="middle" fill="#64748b" font-family="Space Grotesk" font-size="9" font-weight="700">3</text>
+  <text x="200" y="224" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Story Points</text>
+  <text x="200" y="240" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Velocity-based estimation</text>
+  <circle cx="78" cy="272" r="7" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="78" y="276" text-anchor="middle" fill="#64748b" font-family="Space Grotesk" font-size="9" font-weight="700">4</text>
+  <text x="200" y="268" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Regression Suites</text>
+  <text x="200" y="284" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Did we break anything?</text>
+  <line x1="405" y1="195" x2="495" y2="195" stroke="#06b6d4" stroke-width="2.5" marker-end="url(#arwT)"/>
+  <text x="450" y="183" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="11" font-weight="400">The shift</text>
+  <text x="450" y="212" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">to AI projects</text>
+  <rect x="510" y="75" width="340" height="240" rx="12" fill="#ffffff" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="510" y="75" width="340" height="36" rx="12" fill="#06b6d4"/>
+  <rect x="510" y="97" width="340" height="14" fill="#06b6d4"/>
+  <text x="680" y="99" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="15" font-weight="700">Grounded Delivery</text>
+  <circle cx="538" cy="140" r="7" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="538" y="144" text-anchor="middle" fill="#0891b2" font-family="Space Grotesk" font-size="9" font-weight="700">1</text>
+  <text x="660" y="136" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Value Hypothesis</text>
+  <text x="660" y="152" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">What outcome are we betting on?</text>
+  <circle cx="538" cy="184" r="7" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="538" y="188" text-anchor="middle" fill="#0891b2" font-family="Space Grotesk" font-size="9" font-weight="700">2</text>
+  <text x="660" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Probabilistic Thresholds</text>
+  <text x="660" y="196" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">92% accuracy +/-3%</text>
+  <circle cx="538" cy="228" r="7" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="538" y="232" text-anchor="middle" fill="#0891b2" font-family="Space Grotesk" font-size="9" font-weight="700">3</text>
+  <text x="660" y="224" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Time-boxed Research</text>
+  <text x="660" y="240" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Bounded exploration sprints</text>
+  <circle cx="538" cy="272" r="7" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="538" y="276" text-anchor="middle" fill="#0891b2" font-family="Space Grotesk" font-size="9" font-weight="700">4</text>
+  <text x="660" y="268" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Continuous Evaluation</text>
+  <text x="660" y="284" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Model drift and drift alerts</text>
+  <text x="450" y="332" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="11" font-weight="400">AI systems require probabilistic thinking, not deterministic pass/fail</text>
+</svg>

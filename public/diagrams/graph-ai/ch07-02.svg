@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Entity Resolution: Merging Duplicate Mentions</text>
+  <rect x="50" y="95" width="210" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="155" y="117" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="12" font-weight="400">IBM</text>
+  <rect x="50" y="148" width="210" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="155" y="170" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="12" font-weight="400">Intl Business Machines</text>
+  <rect x="50" y="200" width="210" height="36" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="155" y="222" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="12" font-weight="400">ibm.com</text>
+  <line x1="260" y1="113" x2="490" y2="150" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <line x1="260" y1="166" x2="490" y2="150" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <line x1="260" y1="218" x2="490" y2="150" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <circle cx="570" cy="148" r="50" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <text x="570" y="142" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">IBM</text>
+  <text x="570" y="160" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="10" font-weight="400">(merged)</text>
+  <text x="340" y="100" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">SAME_AS</text>
+  <text x="340" y="152" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">SAME_AS</text>
+  <text x="340" y="204" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">SAME_AS</text>
+  <text x="450" y="222" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Entity resolution deduplicates mentions using string similarity, embeddings, and graph heuristics</text>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="300" fill="#f8fafc"/>
+  <text x="450" y="32" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">Automation vs. Transformation</text>
+  <text x="450" y="52" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">What you put in determines what you get out</text>
+  <polygon points="80,70 360,70 310,180 130,180" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="220" y="95" text-anchor="middle" fill="#92400e" font-family="Space Grotesk" font-size="14" font-weight="700">Automation</text>
+  <rect x="100" y="115" width="240" height="32" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="220" y="135" text-anchor="middle" fill="#92400e" font-family="Nunito" font-size="11" font-weight="400">Broken Process</text>
+  <line x1="220" y1="180" x2="220" y2="215" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <circle cx="220" cy="232" r="22" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="220" y="237" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">AI</text>
+  <line x1="220" y1="254" x2="220" y2="270" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <rect x="100" y="270" width="240" height="22" rx="8" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+  <text x="220" y="285" text-anchor="middle" fill="#ffffff" font-family="Nunito" font-size="10" font-weight="400">Faster Broken Process</text>
+  <polygon points="540,70 820,70 770,180 590,180" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="680" y="95" text-anchor="middle" fill="#164e63" font-family="Space Grotesk" font-size="14" font-weight="700">Transformation</text>
+  <rect x="550" y="108" width="125" height="28" rx="6" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="612.5" y="125" text-anchor="middle" fill="#164e63" font-family="Nunito" font-size="9" font-weight="400">Signal Capture</text>
+  <rect x="685" y="108" width="125" height="28" rx="6" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="747.5" y="125" text-anchor="middle" fill="#164e63" font-family="Nunito" font-size="9" font-weight="400">Redesign</text>
+  <line x1="680" y1="180" x2="680" y2="215" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <circle cx="680" cy="232" r="22" fill="#06b6d4" stroke="#0891b2" stroke-width="2"/>
+  <text x="680" y="237" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">AI</text>
+  <line x1="680" y1="254" x2="680" y2="270" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <rect x="560" y="270" width="240" height="22" rx="8" fill="#06b6d4" stroke="#0891b2" stroke-width="2"/>
+  <text x="680" y="285" text-anchor="middle" fill="#ffffff" font-family="Nunito" font-size="10" font-weight="400">Net New Value</text>
+  <line x1="450" y1="70" x2="450" y2="292" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="450" y="182" text-anchor="middle" fill="#94a3b8" font-family="Space Grotesk" font-size="13" font-weight="700">VS</text>
+</svg>

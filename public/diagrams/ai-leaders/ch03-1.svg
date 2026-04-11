@@ -1,0 +1,48 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Strategy Canvas</text>
+  <rect x="40" y="45" width="820" height="280" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="60" y="60" width="780" height="45" rx="8" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="78" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="700">Vision</text>
+  <text x="450" y="94" text-anchor="middle" fill="#0e7490" font-family="Nunito" font-size="10" font-weight="400">What AI-enabled future are we building toward?</text>
+  <rect x="60" y="118" width="240" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="180" y="137" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="600">Opportunity 1</text>
+  <text x="180" y="154" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Highest value use case</text>
+  <rect x="320" y="118" width="240" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="440" y="137" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="600">Opportunity 2</text>
+  <text x="440" y="154" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Second priority</text>
+  <rect x="580" y="118" width="240" height="55" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="700" y="137" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="600">Opportunity 3</text>
+  <text x="700" y="154" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Third priority</text>
+  <rect x="60" y="186" width="490" height="45" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="305" y="205" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="700">Portfolio</text>
+  <text x="305" y="221" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Horizon 1 / Horizon 2 / Horizon 3 balance</text>
+  <rect x="565" y="186" width="275" height="45" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="702" y="205" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">Investment</text>
+  <text x="702" y="221" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Budget and resource plan</text>
+  <rect x="60" y="244" width="370" height="45" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="245" y="262" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="700">Governance</text>
+  <text x="245" y="278" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Oversight, risk, compliance</text>
+  <rect x="445" y="244" width="395" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="642" y="262" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="12" font-weight="700">Timeline</text>
+  <text x="642" y="278" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">12-month milestones</text>
+</svg>

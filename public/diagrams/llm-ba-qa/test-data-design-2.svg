@@ -1,0 +1,64 @@
+<svg viewBox="0 0 860 340" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;max-width:860px;">
+        <rect width="860" height="340" fill="#f5f5f5" rx="12"></rect>
+        <text x="430" y="30" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">Persona-Based Test Scenario Design</text>
+        
+        <rect x="20" y="55" width="190" height="260" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <rect x="20" y="55" width="190" height="40" rx="6" fill="#14b8a6"></rect>
+        <text x="115" y="80" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">New User</text>
+        <text x="35" y="115" fill="#334155" font-size="11" font-weight="600">Tech comfort: Low</text>
+        <text x="35" y="135" fill="#64748b" font-size="10">Device: Tablet</text>
+        <text x="35" y="155" fill="#64748b" font-size="10">Pattern: Infrequent, cautious</text>
+        <line x1="35" y1="170" x2="195" y2="170" stroke="#eee" stroke-width="1"></line>
+        <text x="35" y="190" fill="#334155" font-size="10" font-weight="600">Test scenarios:</text>
+        <text x="35" y="208" fill="#64748b" font-size="9">- Taps button multiple times</text>
+        <text x="35" y="224" fill="#64748b" font-size="9">- Confused by error messages</text>
+        <text x="35" y="240" fill="#64748b" font-size="9">- Slow form completion</text>
+        <text x="35" y="256" fill="#64748b" font-size="9">- Leaves mid-flow, returns</text>
+        <text x="35" y="272" fill="#64748b" font-size="9">- Large font / zoom enabled</text>
+        <text x="35" y="295" fill="#14b8a6" font-size="10" font-weight="600">Data: Simple accounts, few txns</text>
+        
+        <rect x="230" y="55" width="190" height="260" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <rect x="230" y="55" width="190" height="40" rx="6" fill="#14b8a6"></rect>
+        <text x="325" y="80" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Power User</text>
+        <text x="245" y="115" fill="#334155" font-size="11" font-weight="600">Tech comfort: High</text>
+        <text x="245" y="135" fill="#64748b" font-size="10">Device: Desktop + mobile</text>
+        <text x="245" y="155" fill="#64748b" font-size="10">Pattern: Daily, multitasking</text>
+        <line x1="245" y1="170" x2="405" y2="170" stroke="#eee" stroke-width="1"></line>
+        <text x="245" y="190" fill="#334155" font-size="10" font-weight="600">Test scenarios:</text>
+        <text x="245" y="208" fill="#64748b" font-size="9">- Multiple tabs / sessions</text>
+        <text x="245" y="224" fill="#64748b" font-size="9">- Keyboard shortcuts only</text>
+        <text x="245" y="240" fill="#64748b" font-size="9">- Bulk operations</text>
+        <text x="245" y="256" fill="#64748b" font-size="9">- API + UI simultaneously</text>
+        <text x="245" y="272" fill="#64748b" font-size="9">- Custom date formats</text>
+        <text x="245" y="295" fill="#14b8a6" font-size="10" font-weight="600">Data: Many accounts, high volume</text>
+        
+        <rect x="440" y="55" width="190" height="260" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <rect x="440" y="55" width="190" height="40" rx="6" fill="#14b8a6"></rect>
+        <text x="535" y="80" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Admin / Manager</text>
+        <text x="455" y="115" fill="#334155" font-size="11" font-weight="600">Tech comfort: Medium</text>
+        <text x="455" y="135" fill="#64748b" font-size="10">Device: Laptop</text>
+        <text x="455" y="155" fill="#64748b" font-size="10">Pattern: Periodic reviews</text>
+        <line x1="455" y1="170" x2="615" y2="170" stroke="#eee" stroke-width="1"></line>
+        <text x="455" y="190" fill="#334155" font-size="10" font-weight="600">Test scenarios:</text>
+        <text x="455" y="208" fill="#64748b" font-size="9">- Export large reports</text>
+        <text x="455" y="224" fill="#64748b" font-size="9">- Role-based access tests</text>
+        <text x="455" y="240" fill="#64748b" font-size="9">- Approval workflows</text>
+        <text x="455" y="256" fill="#64748b" font-size="9">- View other users' data</text>
+        <text x="455" y="272" fill="#64748b" font-size="9">- Audit trail verification</text>
+        <text x="455" y="295" fill="#14b8a6" font-size="10" font-weight="600">Data: Cross-team visibility</text>
+        
+        <rect x="650" y="55" width="190" height="260" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <rect x="650" y="55" width="190" height="40" rx="6" fill="#14b8a6"></rect>
+        <text x="745" y="80" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Edge Case User</text>
+        <text x="665" y="115" fill="#334155" font-size="11" font-weight="600">Accessibility: Screen reader</text>
+        <text x="665" y="135" fill="#64748b" font-size="10">Device: Mobile, slow network</text>
+        <text x="665" y="155" fill="#64748b" font-size="10">Pattern: Varies by need</text>
+        <line x1="665" y1="170" x2="825" y2="170" stroke="#eee" stroke-width="1"></line>
+        <text x="665" y="190" fill="#334155" font-size="10" font-weight="600">Test scenarios:</text>
+        <text x="665" y="208" fill="#64748b" font-size="9">- Screen reader navigation</text>
+        <text x="665" y="224" fill="#64748b" font-size="9">- Connection drop mid-upload</text>
+        <text x="665" y="240" fill="#64748b" font-size="9">- Locale: comma decimals</text>
+        <text x="665" y="256" fill="#64748b" font-size="9">- Unicode name characters</text>
+        <text x="665" y="272" fill="#64748b" font-size="9">- Leap day / timezone edge</text>
+        <text x="665" y="295" fill="#14b8a6" font-size="10" font-weight="600">Data: Non-Western, special chars</text>
+      </svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">The JOIN Wall: Relational Query Complexity</text>
+  <text x="450" y="50" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12" font-weight="400">As graph depth grows, SQL JOIN cost grows exponentially</text>
+  <rect x="80" y="110" width="180" height="120" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="170" y="142" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="15" font-weight="700">3 JOINs</text>
+  <text x="170" y="165" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12" font-weight="400">~12 ms</text>
+  <rect x="125" y="242" width="90" height="26" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="170" y="260" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="700">Fast</text>
+  <rect x="360" y="110" width="180" height="120" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="450" y="142" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="15" font-weight="700">7 JOINs</text>
+  <text x="450" y="165" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12" font-weight="400">~890 ms</text>
+  <rect x="405" y="242" width="90" height="26" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="260" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">Slow</text>
+  <rect x="640" y="110" width="180" height="120" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="730" y="142" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="700">12 JOINs</text>
+  <text x="730" y="165" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12" font-weight="400">Timeout</text>
+  <rect x="685" y="242" width="90" height="26" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="730" y="260" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="700">Timeout</text>
+  <line x1="260" y1="170" x2="358" y2="170" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <line x1="540" y1="170" x2="638" y2="170" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <text x="450" y="272" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Graph databases traverse relationships in O(1) per hop — no JOINs needed</text>
+</svg>

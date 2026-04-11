@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 390" width="900" height="390" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Embedded AI Engineers Model</text>
+  <rect x="40" y="65" width="180" height="200" rx="12" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="90" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Sales BU</text>
+  <rect x="55" y="105" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="130" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Domain Team</text>
+  <rect x="55" y="155" width="150" height="45" rx="10" fill="#f1f5f9" stroke="#3b82f6" stroke-width="2"/>
+  <text x="130" y="175" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="600">AI Engineer</text>
+  <text x="130" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Embedded in BU</text>
+  <rect x="55" y="215" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="130" y="238" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Product Team</text>
+  <rect x="250" y="65" width="180" height="200" rx="12" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="340" y="90" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Marketing BU</text>
+  <rect x="265" y="105" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="340" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Domain Team</text>
+  <rect x="265" y="155" width="150" height="45" rx="10" fill="#f1f5f9" stroke="#a855f7" stroke-width="2"/>
+  <text x="340" y="175" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">AI Engineer</text>
+  <text x="340" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Embedded in BU</text>
+  <rect x="265" y="215" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="340" y="238" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Product Team</text>
+  <rect x="460" y="65" width="180" height="200" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="550" y="90" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Operations BU</text>
+  <rect x="475" y="105" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="550" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Domain Team</text>
+  <rect x="475" y="155" width="150" height="45" rx="10" fill="#f1f5f9" stroke="#22c55e" stroke-width="2"/>
+  <text x="550" y="175" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="600">AI Engineer</text>
+  <text x="550" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Embedded in BU</text>
+  <rect x="475" y="215" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="550" y="238" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Product Team</text>
+  <rect x="670" y="65" width="180" height="200" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="760" y="90" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Finance BU</text>
+  <rect x="685" y="105" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="760" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Domain Team</text>
+  <rect x="685" y="155" width="150" height="45" rx="10" fill="#f1f5f9" stroke="#f59e0b" stroke-width="2"/>
+  <text x="760" y="175" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="600">AI Engineer</text>
+  <text x="760" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Embedded in BU</text>
+  <rect x="685" y="215" width="150" height="35" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="760" y="238" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Product Team</text>
+  <rect x="40" y="300" width="810" height="50" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="322" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="600">Shared AI Platform</text>
+  <text x="450" y="340" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Common tools · Model registry · Eval framework · Guardrails</text>
+</svg>

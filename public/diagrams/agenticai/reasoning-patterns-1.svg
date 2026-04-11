@@ -1,0 +1,68 @@
+<svg viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-1" viewBox="0 0 10 7" refX="10" refY="3.5"
+                  markerWidth="10" markerHeight="7" orient="auto-start-auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" ></polygon>
+          </marker>
+        </defs>
+        
+
+        
+        <text x="340" y="24" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">Direct Prompting vs Chain-of-Thought</text>
+
+        
+        <text x="155" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">DIRECT PROMPTING</text>
+
+        
+        <rect x="55" y="80" width="200" height="44" rx="8" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5" ></rect>
+        <text x="155" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">Prompt (question)</text>
+
+        
+        <line x1="155" y1="124" x2="155" y2="168" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="55" y="172" width="200" height="44" rx="8" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5" ></rect>
+        <text x="155" y="194" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Answer (often wrong)</text>
+
+        
+        <text x="155" y="240" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Single forward pass</text>
+        <text x="155" y="256" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">No intermediate steps</text>
+
+        
+        <line x1="340" y1="50" x2="340" y2="350" stroke="#D3D1C7" stroke-width="1" stroke-dasharray="6,4" fill="none" ></line>
+
+        
+        <text x="510" y="58" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">CHAIN-OF-THOUGHT</text>
+
+        
+        <rect x="410" y="80" width="200" height="44" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="510" y="102" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Prompt (question)</text>
+
+        
+        <line x1="510" y1="124" x2="510" y2="148" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="410" y="152" width="200" height="36" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="510" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Step 1: Identify knowns</text>
+
+        
+        <line x1="510" y1="188" x2="510" y2="204" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="410" y="208" width="200" height="36" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="510" y="226" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Step 2: Solve unknowns</text>
+
+        
+        <line x1="510" y1="244" x2="510" y2="260" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="410" y="264" width="200" height="36" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="510" y="282" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Step 3: Verify answer</text>
+
+        
+        <line x1="510" y1="300" x2="510" y2="316" stroke="#534AB7" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="410" y="320" width="200" height="36" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5" ></rect>
+        <text x="510" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Answer (grounded)</text>
+      </svg>

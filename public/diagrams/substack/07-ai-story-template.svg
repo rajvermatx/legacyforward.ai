@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="250" fill="#f8fafc"/>
+  <text x="450" y="30" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">The AI Story Template</text>
+  <text x="450" y="50" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">Replace vague requirements with testable AI stories</text>
+  <rect x="100" y="65" width="700" height="165" rx="12" fill="#ffffff" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="100" y="65" width="700" height="32" rx="12" fill="#0f172a"/>
+  <rect x="100" y="85" width="700" height="12" fill="#0f172a"/>
+  <text x="450" y="86" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="700">AI Story</text>
+  <rect x="115" y="102" width="670" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="120" text-anchor="end" fill="#06b6d4" font-family="JetBrains Mono" font-size="10" font-weight="400">Hypothesis:</text>
+  <text x="240" y="120" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">We believe [capability] will [outcome] for [user]</text>
+  <rect x="115" y="130" width="670" height="24" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="148" text-anchor="end" fill="#a855f7" font-family="JetBrains Mono" font-size="10" font-weight="400">Quality Threshold:</text>
+  <text x="240" y="148" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">92% accuracy +/-3% on [benchmark dataset]</text>
+  <rect x="115" y="158" width="670" height="24" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="176" text-anchor="end" fill="#22c55e" font-family="JetBrains Mono" font-size="10" font-weight="400">Success Metric:</text>
+  <text x="240" y="176" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">[Business KPI] improves by [X%] within [timeframe]</text>
+  <rect x="115" y="186" width="670" height="24" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="230" y="204" text-anchor="end" fill="#ef4444" font-family="JetBrains Mono" font-size="10" font-weight="400">Kill Criteria:</text>
+  <text x="240" y="204" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Stop if accuracy falls below 89% or cost exceeds $X/query</text>
+  <text x="450" y="242" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Every AI initiative should have a story card before any code is written</text>
+</svg>

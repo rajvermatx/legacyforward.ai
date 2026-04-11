@@ -1,0 +1,38 @@
+<svg viewBox="0 0 900 420" width="900" height="420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Technology Stack</text>
+  <rect x="100" y="99" width="700" height="50" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="120" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">Applications</text>
+  <text x="450" y="138" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Chat · Search · Copilots · Agents · Analytics</text>
+  <rect x="100" y="157" width="700" height="50" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="178" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="14" font-weight="600">Orchestration</text>
+  <text x="450" y="196" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">LangChain · Semantic Kernel · Custom Pipelines · Guardrails</text>
+  <rect x="100" y="215" width="700" height="50" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="236" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="14" font-weight="600">Models</text>
+  <text x="450" y="254" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Foundation Models · Fine-tuned · Custom Trained · Open Source</text>
+  <rect x="100" y="273" width="700" height="50" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="450" y="294" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="600">Data Platform</text>
+  <text x="450" y="312" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Feature Store · Vector DB · Data Lake · Labeling · Lineage</text>
+  <rect x="100" y="331" width="700" height="50" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="352" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="14" font-weight="600">Infrastructure</text>
+  <text x="450" y="370" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">GPU Clusters · Cloud APIs · Networking · Security · IAM</text>
+</svg>

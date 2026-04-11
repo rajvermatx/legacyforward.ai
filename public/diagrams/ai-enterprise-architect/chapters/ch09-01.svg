@@ -1,0 +1,51 @@
+<svg viewBox="0 0 900 370" width="900" height="370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Augmentation Pattern</text>
+  <rect x="40" y="60" width="820" height="280" rx="12" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="88" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="15" font-weight="600">Existing System (Modified Workflow)</text>
+  <rect x="80" y="120" width="130" height="70" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="145" y="150" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Step 1</text>
+  <text x="145" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Ingest</text>
+  <line x1="210" y1="155" x2="233" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="235" y="120" width="130" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="300" y="150" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">AI Step</text>
+  <text x="300" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Classify / Enrich</text>
+  <line x1="365" y1="155" x2="388" y2="155" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="390" y="120" width="130" height="70" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="455" y="150" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Step 2</text>
+  <text x="455" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Process</text>
+  <line x1="520" y1="155" x2="543" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="545" y="120" width="130" height="70" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="610" y="150" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Step 3</text>
+  <text x="610" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Validate</text>
+  <line x1="675" y1="155" x2="698" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="700" y="120" width="130" height="70" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="765" y="150" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Step 4</text>
+  <text x="765" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Store</text>
+  <rect x="220" y="210" width="160" height="50" rx="10" fill="#f1f5f9" stroke="#a855f7" stroke-width="2"/>
+  <text x="300" y="235" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">New AI capability</text>
+  <text x="300" y="250" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Inserted into existing flow</text>
+  <rect x="60" y="280" width="200" height="45" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="160" y="307" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Low risk · Incremental</text>
+  <rect x="620" y="280" width="220" height="45" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="730" y="307" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="10">Existing infra preserved</text>
+</svg>

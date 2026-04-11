@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Data Lineage for AI</text>
+  <rect x="40" y="65" width="200" height="60" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="140" y="90" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Training Lineage</text>
+  <text x="140" y="108" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">What data trained which model version</text>
+  <line x1="240" y1="95" x2="300" y2="95" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="305" y="70" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="375" y="100" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">dataset v2.3 → model v4</text>
+  <line x1="445" y1="95" x2="510" y2="95" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="515" y="70" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="585" y="100" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Audit Trail</text>
+  <rect x="40" y="145" width="200" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="140" y="170" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Runtime Lineage</text>
+  <text x="140" y="188" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Which data influenced each prediction</text>
+  <line x1="240" y1="175" x2="300" y2="175" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="305" y="150" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="375" y="180" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">doc_42 → chunk_7 → answer</text>
+  <line x1="445" y1="175" x2="510" y2="175" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="515" y="150" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="585" y="180" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Audit Trail</text>
+  <rect x="40" y="225" width="200" height="60" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="140" y="250" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="600">Privacy Lineage</text>
+  <text x="140" y="268" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Where PII flows and how it is masked</text>
+  <line x1="240" y1="255" x2="300" y2="255" stroke="#ef4444" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="305" y="230" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="375" y="260" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">user.email → masked → log</text>
+  <line x1="445" y1="255" x2="510" y2="255" stroke="#ef4444" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="515" y="230" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="585" y="260" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Audit Trail</text>
+  <rect x="40" y="305" width="200" height="60" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="330" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Impact Lineage</text>
+  <text x="140" y="348" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Which decisions were affected by model output</text>
+  <line x1="240" y1="335" x2="300" y2="335" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="305" y="310" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="375" y="340" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">prediction → approval → loan</text>
+  <line x1="445" y1="335" x2="510" y2="335" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="515" y="310" width="140" height="50" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="585" y="340" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Audit Trail</text>
+  <rect x="700" y="120" width="170" height="180" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="785" y="150" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">Lineage</text>
+  <text x="785" y="170" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">Registry</text>
+  <text x="785" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Centralized tracking</text>
+  <text x="785" y="215" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Graph-based store</text>
+  <text x="785" y="235" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Query interface</text>
+  <text x="785" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Compliance reports</text>
+  <line x1="655" y1="95" x2="698" y2="210" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <line x1="655" y1="175" x2="698" y2="210" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <line x1="655" y1="255" x2="698" y2="210" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <line x1="655" y1="335" x2="698" y2="210" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+</svg>

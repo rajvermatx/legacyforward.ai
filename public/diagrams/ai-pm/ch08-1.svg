@@ -1,0 +1,49 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Sidecar AI Integration Pattern</text>
+  <rect x="60" y="70" width="230" height="120" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="100" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">Existing Product</text>
+  <text x="175" y="120" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Core features unchanged</text>
+  <text x="175" y="136" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Stable UX maintained</text>
+  <text x="175" y="152" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Users unaffected</text>
+  <text x="175" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Existing data flows</text>
+  <rect x="440" y="70" width="230" height="120" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="555" y="100" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">AI Sidecar</text>
+  <text x="555" y="120" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Reads signals</text>
+  <text x="555" y="136" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Augments responses</text>
+  <text x="555" y="152" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Learns from usage</text>
+  <text x="555" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Isolated blast radius</text>
+  <line x1="290" y1="130" x2="440" y2="130" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="365" y="120" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">signals</text>
+  <line x1="440" y1="150" x2="290" y2="150" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="365" y="168" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">augments</text>
+  <rect x="720" y="60" width="150" height="140" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="795" y="82" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="11" font-weight="700">Rollout Stages</text>
+  <rect x="730" y="90" width="130" height="22" rx="4" fill="#fff" stroke="#94a3b8" stroke-width="2"/>
+  <text x="795" y="104" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="11" font-weight="400">Shadow</text>
+  <rect x="730" y="118" width="130" height="22" rx="4" fill="#fff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="795" y="132" text-anchor="middle" fill="#f59e0b" font-family="Nunito" font-size="11" font-weight="400">Canary</text>
+  <rect x="730" y="146" width="130" height="22" rx="4" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="795" y="160" text-anchor="middle" fill="#3b82f6" font-family="Nunito" font-size="11" font-weight="400">Gradual</text>
+  <rect x="730" y="174" width="130" height="22" rx="4" fill="#fff" stroke="#22c55e" stroke-width="2"/>
+  <text x="795" y="188" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">Full</text>
+</svg>

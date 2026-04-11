@@ -1,0 +1,50 @@
+<svg viewBox="0 0 950 300" width="950" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="475" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">RAG Architecture (Advanced)</text>
+  <rect x="30" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="85" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Query</text>
+  <text x="85" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">User question</text>
+  <line x1="140" y1="132.5" x2="158" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="160" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="215" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Embed</text>
+  <text x="215" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Vector encode</text>
+  <line x1="270" y1="132.5" x2="288" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="290" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="345" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Search</text>
+  <text x="345" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Vector + keyword</text>
+  <line x1="400" y1="132.5" x2="418" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="420" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="475" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Rerank</text>
+  <text x="475" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Cross-encoder</text>
+  <line x1="530" y1="132.5" x2="548" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="550" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="605" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Prompt</text>
+  <text x="605" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Context assembly</text>
+  <line x1="660" y1="132.5" x2="678" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="680" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="735" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">LLM</text>
+  <text x="735" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Generate</text>
+  <line x1="790" y1="132.5" x2="808" y2="132.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="810" y="100" width="110" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="865" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Citations</text>
+  <text x="865" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Source links</text>
+</svg>

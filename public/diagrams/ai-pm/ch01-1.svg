@@ -1,0 +1,45 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Does This Need AI?</text>
+  <rect x="360" y="60" width="180" height="50" rx="10" fill="#fefce8" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="90" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Complex patterns?</text>
+  <rect x="160" y="155" width="160" height="50" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="240" y="185" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Variable output?</text>
+  <rect x="580" y="155" width="160" height="50" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="660" y="185" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="12" font-weight="600">Rules-Based</text>
+  <text x="660" y="198" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Traditional Logic</text>
+  <rect x="60" y="250" width="140" height="42" rx="10" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="130" y="277" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="700">Use AI</text>
+  <rect x="290" y="250" width="140" height="42" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="360" y="277" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="11" font-weight="600">Rules/Traditional</text>
+  <line x1="450" y1="110" x2="280" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="340" y="143" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="10" font-weight="600">Yes</text>
+  <line x1="450" y1="110" x2="620" y2="155" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <text x="560" y="143" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="10" font-weight="600">No</text>
+  <line x1="240" y1="205" x2="170" y2="250" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="190" y="240" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="10" font-weight="400">Yes</text>
+  <line x1="240" y1="205" x2="330" y2="250" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <text x="305" y="240" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="10" font-weight="400">No</text>
+  <line x1="660" y1="205" x2="660" y2="230" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="580" y="232" width="160" height="42" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="660" y="258" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="11" font-weight="600">Traditional</text>
+</svg>

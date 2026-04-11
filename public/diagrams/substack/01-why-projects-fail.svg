@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="350" fill="#f8fafc"/>
+  <text x="450" y="38" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">6 Failure Patterns in AI Projects</text>
+  <text x="450" y="58" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">Why most enterprise AI initiatives collapse before creating value</text>
+  <line x1="40" y1="230" x2="860" y2="230" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,4"/>
+  <rect x="53" y="133" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="50" y="130" width="110" height="80" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <rect x="50" y="130" width="110" height="22" rx="8" fill="#ef4444"/>
+  <rect x="50" y="144" width="110" height="8" fill="#ef4444"/>
+  <text x="77" y="146" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="105" y="173" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">No Value</text>
+  <text x="105" y="189" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Hypothesis</text>
+  <line x1="162" y1="170" x2="186" y2="178" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arwR)"/>
+  <text x="105" y="253" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="11" font-weight="400">1</text>
+  <rect x="191" y="141" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="188" y="138" width="110" height="80" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <rect x="188" y="138" width="110" height="22" rx="8" fill="#ef4444"/>
+  <rect x="188" y="152" width="110" height="8" fill="#ef4444"/>
+  <text x="215" y="154" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="243" y="181" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Solution</text>
+  <text x="243" y="197" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Seeking Problem</text>
+  <line x1="300" y1="178" x2="324" y2="186" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arwR)"/>
+  <text x="243" y="253" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="11" font-weight="400">2</text>
+  <rect x="329" y="149" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="326" y="146" width="110" height="80" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="326" y="146" width="110" height="22" rx="8" fill="#f59e0b"/>
+  <rect x="326" y="160" width="110" height="8" fill="#f59e0b"/>
+  <text x="353" y="162" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="381" y="189" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Wrong</text>
+  <text x="381" y="205" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Metrics</text>
+  <line x1="438" y1="186" x2="462" y2="194" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arwO)"/>
+  <text x="381" y="253" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11" font-weight="400">3</text>
+  <rect x="467" y="157" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="464" y="154" width="110" height="80" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="464" y="154" width="110" height="22" rx="8" fill="#f59e0b"/>
+  <rect x="464" y="168" width="110" height="8" fill="#f59e0b"/>
+  <text x="491" y="170" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="519" y="197" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Data Not</text>
+  <text x="519" y="213" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Ready</text>
+  <line x1="576" y1="194" x2="600" y2="202" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arwO)"/>
+  <text x="519" y="253" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11" font-weight="400">4</text>
+  <rect x="605" y="165" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="602" y="162" width="110" height="80" rx="8" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <rect x="602" y="162" width="110" height="22" rx="8" fill="#a855f7"/>
+  <rect x="602" y="176" width="110" height="8" fill="#a855f7"/>
+  <text x="629" y="178" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="657" y="205" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Org Not</text>
+  <text x="657" y="221" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Ready</text>
+  <line x1="714" y1="202" x2="738" y2="210" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arwP)"/>
+  <text x="657" y="253" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="11" font-weight="400">5</text>
+  <rect x="743" y="173" width="110" height="80" rx="8" fill="#00000015"/>
+  <rect x="740" y="170" width="110" height="80" rx="8" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <rect x="740" y="170" width="110" height="22" rx="8" fill="#a855f7"/>
+  <rect x="740" y="184" width="110" height="8" fill="#a855f7"/>
+  <text x="767" y="186" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">!</text>
+  <text x="795" y="213" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Vendor</text>
+  <text x="795" y="229" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Exploitation</text>
+  <text x="795" y="253" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="11" font-weight="400">6</text>
+  <text x="105" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Miss the why</text>
+  <text x="243" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Build backwards</text>
+  <text x="381" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Optimize wrong</text>
+  <text x="519" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Foundation cracks</text>
+  <text x="657" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Culture rejects</text>
+  <text x="795" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="9" font-weight="400">Captured by hype</text>
+  <line x1="45" y1="90" x2="855" y2="90" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arw)"/>
+  <text x="450" y="107" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Each failure triggers the next</text>
+</svg>

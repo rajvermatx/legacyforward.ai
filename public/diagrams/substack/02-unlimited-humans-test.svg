@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="300" fill="#f8fafc"/>
+  <text x="450" y="35" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">The Unlimited Humans Test</text>
+  <text x="450" y="55" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">The fastest way to classify any AI initiative</text>
+  <polygon points="450,85 505,110 450,135 395,110" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="115" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="12" font-weight="700">AI Initiative</text>
+  <line x1="395" y1="110" x2="220" y2="110" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <rect x="60" y="85" width="160" height="50" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="140" y="113" text-anchor="middle" fill="#92400e" font-family="Space Grotesk" font-size="11" font-weight="600">Remove AI, add</text>
+  <text x="140" y="127" text-anchor="middle" fill="#92400e" font-family="Space Grotesk" font-size="11" font-weight="600">unlimited humans</text>
+  <line x1="140" y1="135" x2="140" y2="195" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <rect x="60" y="195" width="160" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="140" y="213" text-anchor="middle" fill="#92400e" font-family="Nunito" font-size="11" font-weight="400">Same result?</text>
+  <text x="140" y="227" text-anchor="middle" fill="#92400e" font-family="Nunito" font-size="11" font-weight="400">Yes</text>
+  <line x1="140" y1="235" x2="140" y2="265" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <rect x="55" y="263" width="170" height="28" rx="8" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="140" y="282" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">AUTOMATION</text>
+  <text x="140" y="296" text-anchor="middle" fill="#fffbeb" font-family="Nunito" font-size="10" font-weight="400">Bounded value</text>
+  <line x1="505" y1="110" x2="680" y2="110" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <rect x="680" y="85" width="160" height="50" rx="10" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="760" y="113" text-anchor="middle" fill="#164e63" font-family="Space Grotesk" font-size="11" font-weight="600">Remove AI</text>
+  <text x="760" y="127" text-anchor="middle" fill="#164e63" font-family="Space Grotesk" font-size="11" font-weight="600">entirely</text>
+  <line x1="760" y1="135" x2="760" y2="195" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <rect x="680" y="195" width="160" height="40" rx="8" fill="#cffafe" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="760" y="213" text-anchor="middle" fill="#164e63" font-family="Nunito" font-size="11" font-weight="400">Outcome impossible?</text>
+  <text x="760" y="227" text-anchor="middle" fill="#164e63" font-family="Nunito" font-size="11" font-weight="400">Yes</text>
+  <line x1="760" y1="235" x2="760" y2="265" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <rect x="675" y="263" width="170" height="28" rx="8" fill="#06b6d4" stroke="#0891b2" stroke-width="2"/>
+  <text x="760" y="282" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">TRANSFORMATION</text>
+  <text x="760" y="296" text-anchor="middle" fill="#ecfeff" font-family="Nunito" font-size="10" font-weight="400">Unbounded value</text>
+</svg>

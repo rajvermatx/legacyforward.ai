@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-navy-900 text-slate-400 border-t border-navy-800">
       <div className="mx-auto max-w-6xl px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="mb-2">
               <LogoWordmark />
@@ -26,6 +26,26 @@ export default function Footer() {
               <Link href="/framework/legacy-coexistence" className="hover:text-teal-400 transition-colors">
                 Legacy Coexistence
               </Link>
+              <Link href="/cheatsheet" className="hover:text-teal-400 transition-colors">
+                Cheatsheet
+              </Link>
+            </div>
+          </div>
+          <div>
+            <p className="text-white text-sm font-semibold mb-3">Library</p>
+            <div className="flex flex-col gap-2 text-sm">
+              <Link href="/library/books" className="hover:text-teal-400 transition-colors">
+                Books
+              </Link>
+              <Link href="/library/toolkit" className="hover:text-teal-400 transition-colors">
+                Toolkit
+              </Link>
+              <Link href="/library/learn" className="hover:text-teal-400 transition-colors">
+                Learning Paths
+              </Link>
+              <Link href="/library/cheatsheets" className="hover:text-teal-400 transition-colors">
+                Cheatsheets
+              </Link>
             </div>
           </div>
           <div>
@@ -39,6 +59,9 @@ export default function Footer() {
               >
                 Substack
               </a>
+              <Link href="/app" className="hover:text-teal-400 transition-colors">
+                App
+              </Link>
               <Link href="/about" className="hover:text-teal-400 transition-colors">
                 About
               </Link>

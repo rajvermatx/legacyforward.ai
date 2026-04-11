@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="300" fill="#f8fafc"/>
+  <text x="450" y="30" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">The AI Initiative Kill Framework</text>
+  <text x="450" y="50" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">Structured decision-making to cut losses or pivot — without emotion</text>
+  <rect x="345" y="62" width="210" height="38" rx="10" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="86" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="13" font-weight="700">AI Initiative Review</text>
+  <line x1="450" y1="100" x2="450" y2="123" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <polygon points="450,123 530,155 450,187 370,155" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="450" y="151" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Met kill</text>
+  <text x="450" y="165" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">criteria?</text>
+  <line x1="370" y1="155" x2="215" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="292" y="148" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">No</text>
+  <rect x="120" y="133" width="95" height="44" rx="10" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+  <text x="167" y="155" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="12" font-weight="700">CONTINUE</text>
+  <text x="167" y="170" text-anchor="middle" fill="#ecfdf5" font-family="Nunito" font-size="9" font-weight="400">Next sprint</text>
+  <line x1="450" y1="187" x2="450" y2="210" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <text x="462" y="202" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">Yes</text>
+  <polygon points="450,210 545,242 450,274 355,242" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="236" text-anchor="middle" fill="#7f1d1d" font-family="Space Grotesk" font-size="10" font-weight="700">Sunk cost &gt;</text>
+  <text x="450" y="250" text-anchor="middle" fill="#7f1d1d" font-family="Space Grotesk" font-size="10" font-weight="700">future value?</text>
+  <line x1="545" y1="242" x2="660" y2="242" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arwR)"/>
+  <text x="602" y="235" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">Yes</text>
+  <rect x="660" y="220" width="90" height="44" rx="10" fill="#ef4444" stroke="#dc2626" stroke-width="2"/>
+  <text x="705" y="240" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="16" font-weight="700">KILL</text>
+  <text x="705" y="256" text-anchor="middle" fill="#fee2e2" font-family="Nunito" font-size="9" font-weight="400">Cut losses</text>
+  <line x1="355" y1="242" x2="215" y2="242" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arwO)"/>
+  <text x="285" y="235" text-anchor="middle" fill="#f59e0b" font-family="Nunito" font-size="11" font-weight="400">No</text>
+  <rect x="120" y="220" width="95" height="44" rx="10" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="167" y="240" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="16" font-weight="700">PIVOT</text>
+  <text x="167" y="256" text-anchor="middle" fill="#fffbeb" font-family="Nunito" font-size="9" font-weight="400">Change approach</text>
+</svg>

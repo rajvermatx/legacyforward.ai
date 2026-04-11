@@ -1,0 +1,77 @@
+<svg viewBox="0 0 920 460" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow5" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"></polygon>
+            </marker>
+            <marker id="arrow5b" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="80" y="128" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Data Scientist</text>
+          <text x="80" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Notebook / IDE</text>
+
+          
+          <line x1="140" y1="135" x2="190" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="200" y="85" width="130" height="100" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="265" y="112" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="600">Experiment</text>
+          <text x="265" y="128" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="600">Tracking</text>
+          <text x="265" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Params, metrics,</text>
+          <text x="265" y="163" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">artifacts, data version</text>
+
+          
+          <line x1="330" y1="135" x2="380" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="390" y="85" width="130" height="100" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="455" y="112" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">Model</text>
+          <text x="455" y="128" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">Registry</text>
+          <text x="455" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Versioning, lineage,</text>
+          <text x="455" y="163" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">approval workflow</text>
+
+          
+          <line x1="520" y1="135" x2="570" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="580" y="70" width="140" height="130" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="650" y="97" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="600">CI/CD Pipeline</text>
+          <rect x="595" y="108" width="110" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="650" y="123" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Test &amp; Validate</text>
+          <rect x="595" y="136" width="110" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="650" y="151" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Package (Container)</text>
+          <rect x="595" y="164" width="110" height="22" rx="5" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="650" y="179" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Deploy (A/B, Canary)</text>
+
+          
+          <line x1="720" y1="135" x2="770" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="780" y="85" width="120" height="100" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="840" y="112" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="600">Model</text>
+          <text x="840" y="128" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="600">Serving</text>
+          <text x="840" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">A/B testing</text>
+          <text x="840" y="163" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Canary, Shadow</text>
+
+          
+          <line x1="840" y1="185" x2="840" y2="240" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="750" y="250" width="170" height="90" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="835" y="275" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="600">Production Monitoring</text>
+          <text x="835" y="295" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Data drift detection</text>
+          <text x="835" y="310" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Model performance</text>
+          <text x="835" y="325" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Cost per prediction</text>
+
+          
+          <path d="M 750 310 L 265 310 L 265 185" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow5b)"></path>
+          <text x="507" y="330" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">Drift detected → trigger retraining</text>
+
+          
+          <rect x="200" y="380" width="620" height="55" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="510" y="403" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="600">Shared Platform Layer</text>
+          <text x="510" y="422" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Feature Store · Data Catalog · Governance &amp; RBAC · Cost Tracking per Team</text>
+        </svg>

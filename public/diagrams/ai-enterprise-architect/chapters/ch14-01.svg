@@ -1,0 +1,46 @@
+<svg viewBox="0 0 950 300" width="950" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="475" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Healthcare AI Scribe</text>
+  <rect x="30" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="92.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Speech</text>
+  <text x="92.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Patient encounter</text>
+  <line x1="155" y1="135" x2="181" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="183" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="245.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Transcription</text>
+  <text x="245.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Speech-to-text</text>
+  <line x1="308" y1="135" x2="334" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="336" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="398.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Extraction</text>
+  <text x="398.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Entity recognition</text>
+  <line x1="461" y1="135" x2="487" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="489" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="551.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">LLM Notes</text>
+  <text x="551.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Structured output</text>
+  <line x1="614" y1="135" x2="640" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="642" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="704.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Physician</text>
+  <text x="704.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Review + sign</text>
+  <line x1="767" y1="135" x2="793" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="795" y="100" width="125" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="857.5" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">EHR</text>
+  <text x="857.5" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Record system</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 240" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="800" height="240" fill="#f8fafc" rx="12"></rect>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#22c55e" opacity="0.7"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="30" width="130" height="180" rx="10" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4,3"></rect>
+          <text x="85" y="55" text-anchor="middle" fill="#475569" font-size="11" font-weight="600">Data Sources</text>
+          <text x="85" y="80" text-anchor="middle" fill="#64748b" font-size="10">Cloud Storage</text>
+          <text x="85" y="98" text-anchor="middle" fill="#64748b" font-size="10">BigQuery</text>
+          <text x="85" y="116" text-anchor="middle" fill="#64748b" font-size="10">Pub/Sub (streaming)</text>
+          <text x="85" y="134" text-anchor="middle" fill="#64748b" font-size="10">Cloud SQL</text>
+          <text x="85" y="152" text-anchor="middle" fill="#64748b" font-size="10">External sources</text>
+
+          <line x1="152" y1="120" x2="185" y2="120" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          
+          <rect x="187" y="55" width="160" height="130" rx="10" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5"></rect>
+          <text x="267" y="82" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="600">Transform &amp; Clean</text>
+          <text x="267" y="105" text-anchor="middle" fill="#475569" font-size="10">Dataflow (Beam)</text>
+          <text x="267" y="122" text-anchor="middle" fill="#475569" font-size="10">Dataprep (visual)</text>
+          <text x="267" y="139" text-anchor="middle" fill="#475569" font-size="10">Dataproc (Spark)</text>
+          <text x="267" y="156" text-anchor="middle" fill="#475569" font-size="10">BigQuery SQL</text>
+
+          <line x1="349" y1="120" x2="382" y2="120" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          
+          <rect x="384" y="70" width="160" height="100" rx="10" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="464" y="97" text-anchor="middle" fill="#a855f7" font-size="12" font-weight="600">Feature Engineering</text>
+          <text x="464" y="118" text-anchor="middle" fill="#475569" font-size="10">Feature Store</text>
+          <text x="464" y="135" text-anchor="middle" fill="#475569" font-size="10">BigQuery transforms</text>
+          <text x="464" y="152" text-anchor="middle" fill="#475569" font-size="10">Dataflow pipelines</text>
+
+          <line x1="546" y1="120" x2="579" y2="120" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          
+          <rect x="581" y="80" width="180" height="80" rx="10" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="671" y="110" text-anchor="middle" fill="#22c55e" font-size="13" font-weight="700">ML-Ready Data</text>
+          <text x="671" y="130" text-anchor="middle" fill="#475569" font-size="10">Training / Serving / Evaluation</text>
+          <text x="671" y="147" text-anchor="middle" fill="#475569" font-size="10">Vertex AI · BigQuery ML</text>
+        </svg>

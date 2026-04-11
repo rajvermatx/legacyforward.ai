@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">SQL to Cypher: Conceptual Mapping</text>
+  <rect x="40" y="65" width="340" height="140" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="210" y="90" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="14" font-weight="700">SQL</text>
+  <text x="70" y="115" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">SELECT e.name, d.name</text>
+  <text x="70" y="133" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">FROM employees e</text>
+  <text x="70" y="151" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">JOIN departments d</text>
+  <text x="70" y="169" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">  ON e.dept_id = d.dept_id</text>
+  <text x="70" y="187" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">WHERE e.age &gt; 30</text>
+  <line x1="382" y1="135" x2="520" y2="135" stroke="#06b6d4" stroke-width="3" marker-end="url(#arw)"/>
+  <text x="451" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">equivalent</text>
+  <rect x="522" y="65" width="340" height="140" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="692" y="90" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="700">Cypher</text>
+  <text x="540" y="115" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">MATCH (e:Employee)-[:IN_DEPT]-&gt;(d:Department)</text>
+  <text x="540" y="137" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">WHERE e.age &gt; 30</text>
+  <text x="540" y="159" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">RETURN e.name, d.name</text>
+  <text x="450" y="228" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Cypher expresses graph patterns directly — relationships are first-class citizens</text>
+</svg>

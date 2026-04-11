@@ -1,0 +1,41 @@
+<svg viewBox="0 0 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI-Native Rebuild</text>
+  <rect x="40" y="60" width="820" height="300" rx="12" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="88" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="15" font-weight="600">New AI-First System</text>
+  <rect x="60" y="110" width="350" height="60" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="235" y="135" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="600">Conversational Interface</text>
+  <text x="235" y="155" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Natural language as primary input</text>
+  <rect x="60" y="185" width="350" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="235" y="210" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">AI Orchestration Layer</text>
+  <text x="235" y="230" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Agent-based workflow engine</text>
+  <rect x="60" y="260" width="350" height="60" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="235" y="285" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Knowledge Base + Vector Store</text>
+  <text x="235" y="305" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">RAG-native data architecture</text>
+  <rect x="460" y="110" width="380" height="220" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="650" y="140" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Characteristics</text>
+  <text x="650" y="170" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">• AI is core, not bolted on</text>
+  <text x="650" y="196" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">• Conversational-first UX</text>
+  <text x="650" y="222" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">• Adaptive workflows via agents</text>
+  <text x="650" y="248" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">• Continuous learning built-in</text>
+  <text x="650" y="274" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">• Highest investment, highest payoff</text>
+</svg>

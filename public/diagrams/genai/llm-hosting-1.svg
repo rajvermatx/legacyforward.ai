@@ -1,0 +1,62 @@
+<svg viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <rect x="340" y="10" width="220" height="50" rx="25" fill="#06b6d4" fill-opacity="0.15" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="450" y="40" text-anchor="middle" fill="#22d3ee" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="600">Need LLM in Production?</text>
+
+          
+          <line x1="450" y1="60" x2="450" y2="100" stroke="#2e3554" stroke-width="1.5" marker-end="url(#arrowCyan)"></line>
+
+          
+          <rect x="320" y="100" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="450" y="130" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="500">Data sensitive / regulated?</text>
+
+          
+          <line x1="580" y1="125" x2="680" y2="125" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrowGreen)"></line>
+          <text x="620" y="118" fill="#22c55e" font-family="JetBrains Mono, monospace" font-size="11">Yes</text>
+
+          
+          <rect x="680" y="100" width="180" height="50" rx="10" fill="rgba(6,182,212,0.2)" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="770" y="130" text-anchor="middle" fill="#22d3ee" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">SELF-HOST</text>
+
+          
+          <line x1="450" y1="150" x2="450" y2="200" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowRed)"></line>
+          <text x="462" y="180" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="11">No</text>
+
+          
+          <rect x="320" y="200" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="450" y="230" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="500">&gt;$5K/month API spend?</text>
+
+          
+          <line x1="580" y1="225" x2="680" y2="225" stroke="#22c55e" stroke-width="1.5"></line>
+          <line x1="770" y1="150" x2="770" y2="225" stroke="#2e3554" stroke-width="1" stroke-dasharray="4"></line>
+          <line x1="680" y1="225" x2="770" y2="225" stroke="#22c55e" stroke-width="1.5"></line>
+          <text x="620" y="218" fill="#22c55e" font-family="JetBrains Mono, monospace" font-size="11">Yes</text>
+
+          
+          <line x1="450" y1="250" x2="450" y2="300" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowRed)"></line>
+          <text x="462" y="280" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="11">No</text>
+
+          
+          <rect x="320" y="300" width="260" height="50" rx="10" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="450" y="330" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="500">Latency &lt;100ms TTFT needed?</text>
+
+          
+          <line x1="580" y1="325" x2="680" y2="325" stroke="#22c55e" stroke-width="1.5"></line>
+          <line x1="680" y1="325" x2="770" y2="325" stroke="#22c55e" stroke-width="1.5"></line>
+          <text x="620" y="318" fill="#22c55e" font-family="JetBrains Mono, monospace" font-size="11">Yes</text>
+
+          
+          <line x1="450" y1="350" x2="450" y2="385" stroke="#ef4444" stroke-width="1.5"></line>
+          <text x="462" y="375" fill="#ef4444" font-family="JetBrains Mono, monospace" font-size="11">No</text>
+
+          
+          <rect x="340" y="385" width="220" height="50" rx="10" fill="rgba(99,102,241,0.2)" stroke="#6366f1" stroke-width="2"></rect>
+          <text x="450" y="415" text-anchor="middle" fill="#6366f1" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700">USE COMMERCIAL API</text>
+
+          
+          <defs>
+            <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#06b6d4"></path></marker>
+            <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#22c55e"></path></marker>
+            <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#ef4444"></path></marker>
+          </defs>
+        </svg>

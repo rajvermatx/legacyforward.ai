@@ -1,0 +1,70 @@
+<svg viewBox="0 0 820 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="820" height="260" fill="#f8fafc" rx="12"></rect>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6" opacity="0.7"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="30" width="130" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="85" y="55" text-anchor="middle" fill="#475569" font-size="11">Batch (BigQuery)</text>
+          <rect x="20" y="80" width="130" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="85" y="105" text-anchor="middle" fill="#475569" font-size="11">Stream (Pub/Sub)</text>
+          <rect x="20" y="130" width="130" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="85" y="155" text-anchor="middle" fill="#475569" font-size="11">CSV / Avro / GCS</text>
+
+          <text x="85" y="195" text-anchor="middle" fill="#64748b" font-size="10">Data Sources</text>
+
+          
+          <line x1="152" y1="50" x2="238" y2="95" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+          <line x1="152" y1="100" x2="238" y2="100" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+          <line x1="152" y1="150" x2="238" y2="105" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+
+          
+          <rect x="240" y="40" width="200" height="140" rx="10" fill="#e2e8f0" stroke="#6366f1" stroke-width="2"></rect>
+          <text x="340" y="68" text-anchor="middle" fill="#a855f7" font-size="13" font-weight="600">Feature Store</text>
+
+          
+          <rect x="260" y="80" width="80" height="30" rx="4" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1"></rect>
+          <text x="300" y="100" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="500">User Entity</text>
+          <rect x="350" y="80" width="80" height="30" rx="4" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1"></rect>
+          <text x="390" y="100" text-anchor="middle" fill="#3b82f6" font-size="9" font-weight="500">Item Entity</text>
+
+          <rect x="260" y="118" width="80" height="30" rx="4" fill="#f1f5f9" stroke="#22d3ee" stroke-width="1"></rect>
+          <text x="300" y="137" text-anchor="middle" fill="#22d3ee" font-size="9">Features[]</text>
+          <rect x="350" y="118" width="80" height="30" rx="4" fill="#f1f5f9" stroke="#22d3ee" stroke-width="1"></rect>
+          <text x="390" y="137" text-anchor="middle" fill="#22d3ee" font-size="9">Features[]</text>
+
+          <text x="340" y="168" text-anchor="middle" fill="#64748b" font-size="9">Versioned + Time-stamped</text>
+
+          
+          <line x1="442" y1="80" x2="498" y2="60" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+          <line x1="442" y1="130" x2="498" y2="150" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+
+          
+          <rect x="500" y="30" width="150" height="60" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="575" y="55" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600">Online Serving</text>
+          <text x="575" y="72" text-anchor="middle" fill="#64748b" font-size="10">Low-latency lookups</text>
+
+          
+          <rect x="500" y="120" width="150" height="60" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="575" y="145" text-anchor="middle" fill="#f97316" font-size="11" font-weight="600">Offline Serving</text>
+          <text x="575" y="162" text-anchor="middle" fill="#64748b" font-size="10">Batch training data</text>
+
+          
+          <line x1="652" y1="60" x2="688" y2="60" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+          <line x1="652" y1="150" x2="688" y2="150" stroke="#3b82f6" stroke-width="1.2" marker-end="url(#arr)" opacity="0.6"></line>
+
+          <rect x="690" y="35" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="745" y="58" text-anchor="middle" fill="#475569" font-size="10">Prediction</text>
+          <text x="745" y="73" text-anchor="middle" fill="#475569" font-size="10">Endpoints</text>
+
+          <rect x="690" y="125" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="745" y="148" text-anchor="middle" fill="#475569" font-size="10">Training</text>
+          <text x="745" y="163" text-anchor="middle" fill="#475569" font-size="10">Pipelines</text>
+
+          
+          <rect x="280" y="210" width="260" height="30" rx="6" fill="none" stroke="#2e3554" stroke-width="1" stroke-dasharray="4,3"></rect>
+          <text x="410" y="230" text-anchor="middle" fill="#64748b" font-size="10">Shared across teams via Feature Registry</text>
+        </svg>

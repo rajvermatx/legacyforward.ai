@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Bank Data Journey</text>
+  <line x1="60" y1="200" x2="840" y2="200" stroke="#cbd5e1" stroke-width="3"/>
+  <circle cx="150" cy="200" r="10" fill="#3b82f6" stroke="white" stroke-width="2"/>
+  <rect x="60" y="80" width="180" height="90" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="105" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="14" font-weight="600">Discovery</text>
+  <text x="150" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Audit existing data</text>
+  <text x="150" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Month 1-2</text>
+  <line x1="150" y1="170" x2="150" y2="190" stroke="#3b82f6" stroke-width="2"/>
+  <text x="150" y="235" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">500+ data sources found</text>
+  <text x="150" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">30% duplicated data</text>
+  <text x="150" y="275" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Privacy gaps identified</text>
+  <circle cx="380" cy="200" r="10" fill="#a855f7" stroke="white" stroke-width="2"/>
+  <rect x="290" y="80" width="180" height="90" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="380" y="105" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="14" font-weight="600">Foundation</text>
+  <text x="380" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Clean + govern</text>
+  <text x="380" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Month 3-6</text>
+  <line x1="380" y1="170" x2="380" y2="190" stroke="#a855f7" stroke-width="2"/>
+  <text x="380" y="235" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Master data catalog</text>
+  <text x="380" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">PII classification</text>
+  <text x="380" y="275" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Quality dashboards</text>
+  <circle cx="630" cy="200" r="10" fill="#22c55e" stroke="white" stroke-width="2"/>
+  <rect x="540" y="80" width="180" height="90" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="630" y="105" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="600">AI Chatbot</text>
+  <text x="630" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">RAG deployment</text>
+  <text x="630" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Month 7-12</text>
+  <line x1="630" y1="170" x2="630" y2="190" stroke="#22c55e" stroke-width="2"/>
+  <text x="630" y="235" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Knowledge base built</text>
+  <text x="630" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Customer-facing bot</text>
+  <text x="630" y="275" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">80% query deflection</text>
+  <text x="150" y="320" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="10">Start</text>
+  <text x="630" y="320" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Production</text>
+</svg>

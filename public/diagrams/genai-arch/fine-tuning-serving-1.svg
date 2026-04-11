@@ -1,0 +1,84 @@
+<svg viewBox="0 0 800 400" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow8" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+            <marker id="arrow8r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="15" y="140" width="100" height="70" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="65" y="170" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Training</text>
+          <text x="65" y="188" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Data</text>
+
+          
+          <line x1="115" y1="175" x2="145" y2="175" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow8)"></line>
+
+          
+          <rect x="155" y="130" width="105" height="90" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="207" y="158" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Prepare</text>
+          <text x="207" y="176" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">format, filter</text>
+          <text x="207" y="190" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">validate, dedup</text>
+
+          
+          <line x1="260" y1="175" x2="290" y2="175" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow8)"></line>
+
+          
+          <rect x="300" y="115" width="130" height="120" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="365" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Fine-Tune</text>
+          <text x="365" y="158" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Engine</text>
+          <text x="365" y="180" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">Base Model</text>
+          <text x="365" y="196" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">+ LoRA Adapter</text>
+          <text x="365" y="214" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">epochs, lr, rank</text>
+
+          
+          <line x1="430" y1="175" x2="460" y2="175" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow8)"></line>
+
+          
+          <rect x="470" y="135" width="100" height="80" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="520" y="163" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Evaluate</text>
+          <text x="520" y="180" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">metrics, human</text>
+          <text x="520" y="194" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">eval, benchmarks</text>
+
+          
+          <line x1="570" y1="175" x2="600" y2="175" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow8)"></line>
+
+          
+          <rect x="610" y="90" width="170" height="170" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="695" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Deploy &amp; Serve</text>
+
+          
+          <rect x="625" y="125" width="140" height="30" rx="6" fill="#f8fafc" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="695" y="145" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">Model Registry</text>
+
+          
+          <rect x="625" y="165" width="62" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="656" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Model A</text>
+          <text x="656" y="193" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">90%</text>
+
+          
+          <rect x="703" y="165" width="62" height="35" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="734" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Model B</text>
+          <text x="734" y="193" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">10%</text>
+
+          
+          <text x="695" y="220" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">A/B Traffic Split</text>
+
+          
+          <line x1="695" y1="260" x2="695" y2="300" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow8)"></line>
+
+          
+          <rect x="635" y="310" width="120" height="55" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="695" y="335" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Monitor</text>
+          <text x="695" y="352" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">quality drift, latency</text>
+
+          
+          <path d="M 635 337 L 207 337 L 207 220" fill="none" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow8r)" stroke-dasharray="6,4"></path>
+          <text x="420" y="355" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">drift detected → retrain</text>
+
+          
+          <text x="400" y="30" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="16" font-weight="700">Fine-Tuning &amp; Serving Pipeline</text>
+          <text x="400" y="50" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">End-to-end: data prep → train → evaluate → deploy → monitor → retrain</text>
+        </svg>

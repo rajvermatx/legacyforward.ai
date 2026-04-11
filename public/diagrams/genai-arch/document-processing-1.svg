@@ -1,0 +1,71 @@
+<svg viewBox="0 0 800 400" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="140" width="110" height="100" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="75" y="170" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Documents</text>
+          <text x="75" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">PDF</text>
+          <text x="75" y="206" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Images</text>
+          <text x="75" y="220" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">TXT / DOCX</text>
+
+          
+          <line x1="130" y1="190" x2="170" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+
+          
+          <rect x="180" y="130" width="120" height="120" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="240" y="160" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Parser</text>
+          <text x="240" y="182" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">OCR / PyPDF</text>
+          <text x="240" y="198" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Unstructured</text>
+          <text x="240" y="214" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Document AI</text>
+          <text x="240" y="234" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9">layout detection</text>
+
+          
+          <line x1="300" y1="190" x2="340" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+
+          
+          <rect x="350" y="155" width="100" height="70" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="400" y="183" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Chunker</text>
+          <text x="400" y="203" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Section splitter</text>
+
+          
+          <line x1="450" y1="175" x2="510" y2="100" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+          <line x1="450" y1="190" x2="510" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+          <line x1="450" y1="205" x2="510" y2="280" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+
+          
+          <rect x="520" y="65" width="120" height="65" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="580" y="90" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Summarizer</text>
+          <text x="580" y="110" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">LLM summary</text>
+
+          
+          <rect x="520" y="157" width="120" height="65" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="580" y="182" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Classifier</text>
+          <text x="580" y="202" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">LLM categorize</text>
+
+          
+          <rect x="520" y="250" width="120" height="65" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="580" y="275" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Extractor</text>
+          <text x="580" y="295" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">LLM entities</text>
+
+          
+          <line x1="640" y1="100" x2="680" y2="175" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+          <line x1="640" y1="190" x2="680" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+          <line x1="640" y1="280" x2="680" y2="205" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+
+          
+          <rect x="690" y="155" width="90" height="70" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="735" y="183" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">JSON</text>
+          <text x="735" y="203" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Structured</text>
+
+          
+          <line x1="735" y1="225" x2="735" y2="310" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow4)"></line>
+
+          
+          <rect x="680" y="315" width="110" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="735" y="342" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Database</text>
+          <text x="735" y="362" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">SQL / NoSQL</text>
+        </svg>

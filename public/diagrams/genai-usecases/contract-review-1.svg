@@ -1,0 +1,87 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          
+          <defs>
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="10" cy="10" r="0.5" fill="#e2e8f0" ></circle>
+            </pattern>
+          </defs>
+          <rect width="900" height="320" fill="url(#grid)" ></rect>
+
+          
+          <rect x="20" y="110" width="110" height="70" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5" ></rect>
+          <text x="75" y="138" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">PDF Upload</text>
+          <text x="75" y="158" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">Contract files</text>
+
+          
+          <line x1="130" y1="145" x2="155" y2="145" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" ></line>
+
+          
+          <rect x="155" y="110" width="110" height="70" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5" ></rect>
+          <text x="210" y="134" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Text</text>
+          <text x="210" y="148" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Extraction</text>
+          <text x="210" y="166" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">PyMuPDF + OCR</text>
+
+          
+          <line x1="265" y1="145" x2="290" y2="145" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" ></line>
+
+          
+          <rect x="290" y="110" width="110" height="70" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5" ></rect>
+          <text x="345" y="134" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Clause</text>
+          <text x="345" y="148" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Segmentation</text>
+          <text x="345" y="166" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">Regex + LLM</text>
+
+          
+          <line x1="400" y1="145" x2="425" y2="145" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" ></line>
+
+          
+          <rect x="425" y="110" width="120" height="70" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5" ></rect>
+          <text x="485" y="134" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Embedding +</text>
+          <text x="485" y="148" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Classification</text>
+          <text x="485" y="166" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">ChromaDB</text>
+
+          
+          <line x1="545" y1="145" x2="570" y2="145" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" ></line>
+
+          
+          <rect x="570" y="100" width="130" height="90" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="2" ></rect>
+          <text x="635" y="128" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LLM Analysis</text>
+          <text x="635" y="148" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">Clause-by-clause</text>
+          <text x="635" y="162" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">risk assessment</text>
+          <text x="635" y="180" text-anchor="middle" fill="#67e8f9" font-family="JetBrains Mono, monospace" font-size="8">GPT-4 / Claude</text>
+
+          
+          <rect x="570" y="230" width="130" height="55" rx="10" fill="#e2e8f0" stroke="#a855f7" stroke-width="1.5" ></rect>
+          <text x="635" y="254" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Company Playbook</text>
+          <text x="635" y="272" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">RAG retrieval</text>
+
+          
+          <line x1="635" y1="230" x2="635" y2="190" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-purple)" ></line>
+          <text x="660" y="215" fill="#a855f7" font-family="JetBrains Mono, monospace" font-size="8">RAG</text>
+
+          
+          <line x1="700" y1="145" x2="730" y2="145" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" ></line>
+
+          
+          <rect x="730" y="110" width="140" height="70" rx="10" fill="#e2e8f0" stroke="#22c55e" stroke-width="1.5" ></rect>
+          <text x="800" y="134" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600">Risk Report</text>
+          <text x="800" y="152" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">Severity ratings +</text>
+          <text x="800" y="165" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">recommendations</text>
+
+          
+          <text x="75" y="95" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">STEP 1</text>
+          <text x="210" y="95" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">STEP 2</text>
+          <text x="345" y="95" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">STEP 3</text>
+          <text x="485" y="95" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">STEP 4</text>
+          <text x="635" y="85" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">STEP 5</text>
+          <text x="800" y="95" text-anchor="middle" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">OUTPUT</text>
+
+          
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8" fill="none" stroke="#94a3b8" stroke-width="1" ></path>
+            </marker>
+            <marker id="arrow-purple" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+              <path d="M0,8 L4,0 L8,8" fill="none" stroke="#a855f7" stroke-width="1" ></path>
+            </marker>
+          </defs>
+        </svg>

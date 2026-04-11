@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Roadmap — Four Horizons</text>
+  <rect x="60" y="50" width="175" height="210" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="147" y="75" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">Now</text>
+  <rect x="80" y="83" width="135" height="20" rx="4" fill="#22c55e" opacity="0.15"/>
+  <text x="147" y="97" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="10" font-weight="400">Shipped</text>
+  <text x="147" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Live in production</text>
+  <text x="147" y="147" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Monitoring active</text>
+  <text x="147" y="169" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Iterating on feedback</text>
+  <rect x="260" y="50" width="175" height="210" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="347" y="75" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="14" font-weight="700">Next</text>
+  <rect x="280" y="83" width="135" height="20" rx="4" fill="#3b82f6" opacity="0.15"/>
+  <text x="347" y="97" text-anchor="middle" fill="#3b82f6" font-family="Nunito" font-size="10" font-weight="400">Building</text>
+  <text x="347" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">In development</text>
+  <text x="347" y="147" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Eval dataset ready</text>
+  <text x="347" y="169" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Alpha testing</text>
+  <rect x="460" y="50" width="175" height="210" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="547" y="75" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="14" font-weight="700">Later</text>
+  <rect x="480" y="83" width="135" height="20" rx="4" fill="#f59e0b" opacity="0.15"/>
+  <text x="547" y="97" text-anchor="middle" fill="#f59e0b" font-family="Nunito" font-size="10" font-weight="400">Exploring</text>
+  <text x="547" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Discovery phase</text>
+  <text x="547" y="147" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Wizard of Oz tests</text>
+  <text x="547" y="169" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Value hypothesis</text>
+  <rect x="660" y="50" width="175" height="210" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="747" y="75" text-anchor="middle" fill="#94a3b8" font-family="Space Grotesk" font-size="14" font-weight="700">Future</text>
+  <rect x="680" y="83" width="135" height="20" rx="4" fill="#94a3b8" opacity="0.15"/>
+  <text x="747" y="97" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Watching</text>
+  <text x="747" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Market signals</text>
+  <text x="747" y="147" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Research tracking</text>
+  <text x="747" y="169" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">No commitment yet</text>
+  <line x1="60" y1="280" x2="840" y2="280" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="450" y="295" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Time horizon</text>
+</svg>

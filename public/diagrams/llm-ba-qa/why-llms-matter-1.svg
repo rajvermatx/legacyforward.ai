@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 210" width="100%" role="img" aria-label="The Augmentation Spectrum from Manual to Workflow Automated">
+
+
+        <rect x="10" y="30" width="175" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="97" y="60" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#475569">Level 0</text>
+        <text x="97" y="82" text-anchor="middle" font-size="20">&#9997;</text>
+        <text x="97" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Manual</text>
+        <text x="97" y="126" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">All work done by hand.</text>
+        <text x="97" y="142" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">Blank page every time.</text>
+
+        <polygon points="193,100 210,90 210,95 230,95 230,105 210,105 210,110" fill="#06b6d4"></polygon>
+
+        <rect x="218" y="30" width="175" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="305" y="60" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#475569">Level 1</text>
+        <text x="305" y="82" text-anchor="middle" font-size="20">&#128172;</text>
+        <text x="305" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Ad-hoc Assisted</text>
+        <text x="305" y="126" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">Occasional ChatGPT use.</text>
+        <text x="305" y="142" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">Copy-paste, one-off tasks.</text>
+
+        <polygon points="401,100 418,90 418,95 438,95 438,105 418,105 418,110" fill="#06b6d4"></polygon>
+
+        <rect x="426" y="30" width="175" height="140" rx="8" fill="#06b6d4" stroke="#06b6d4" stroke-width="1.5"></rect>
+        <text x="513" y="60" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#ffffff">Level 2 — Goal</text>
+        <text x="513" y="82" text-anchor="middle" font-size="20" fill="#ffffff">&#9881;</text>
+        <text x="513" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Augmented</text>
+        <text x="513" y="126" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#e0f7fa">Prompt templates &amp; repeatable</text>
+        <text x="513" y="142" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#e0f7fa">workflows in daily practice.</text>
+
+        <polygon points="609,100 626,90 626,95 646,95 646,105 626,105 626,110" fill="#06b6d4"></polygon>
+
+        <rect x="634" y="30" width="175" height="140" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="721" y="60" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" fill="#475569">Level 3</text>
+        <text x="721" y="82" text-anchor="middle" font-size="20">&#9889;</text>
+        <text x="721" y="108" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#0f172a">Automated</text>
+        <text x="721" y="126" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">LLMs embedded in CI/CD</text>
+        <text x="721" y="142" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10.5" fill="#475569">pipelines with human oversight.</text>
+
+        <text x="410" y="200" text-anchor="middle" font-family="Nunito, sans-serif" font-size="12" fill="#475569" font-style="italic">Most analysts are at Level 0-1. This book takes you to Level 2.</text>
+      </svg>

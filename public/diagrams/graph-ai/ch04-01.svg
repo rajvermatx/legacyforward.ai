@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Self-Referencing Table vs Graph: Hierarchies</text>
+  <line x1="450" y1="48" x2="450" y2="280" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="225" y="58" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">SQL: Self-Join</text>
+  <text x="675" y="58" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="700">Graph: REPORTS_TO</text>
+  <rect x="60" y="80" width="340" height="100" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="230" y="105" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">employees</text>
+  <text x="230" y="128" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10" font-weight="400">employee_id  |  name  |  manager_id</text>
+  <text x="230" y="148" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">1               Alice    NULL</text>
+  <text x="230" y="164" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">2               Bob      1</text>
+  <path d="M 400 130 Q 440 100 400 165" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <text x="420" y="150" text-anchor="middle" fill="#3b82f6" font-family="Nunito" font-size="9" font-weight="400">manager_id</text>
+  <circle cx="675" cy="120" r="32" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <circle cx="590" cy="220" r="32" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <circle cx="760" cy="220" r="32" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="675" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Alice</text>
+  <text x="590" y="225" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Bob</text>
+  <text x="760" y="225" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">Carol</text>
+  <line x1="661" y1="150" x2="598" y2="190" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="689" y1="150" x2="752" y2="190" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="590" y="168" width="64" height="14" rx="3" fill="white" stroke="#06b6d4" stroke-width="1"/>
+  <text x="622" y="178" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9" font-weight="400">REPORTS_TO</text>
+  <rect x="690" y="168" width="64" height="14" rx="3" fill="white" stroke="#06b6d4" stroke-width="1"/>
+  <text x="722" y="178" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9" font-weight="400">REPORTS_TO</text>
+</svg>

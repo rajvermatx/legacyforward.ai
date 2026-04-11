@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 380" width="900" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">GraphRAG: Combining Vector and Graph for Accuracy</text>
+  <rect x="375" y="55" width="150" height="44" rx="10" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="450" y="82" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="700">Query</text>
+  <line x1="450" y1="99" x2="450" y2="130" stroke="#0f172a" stroke-width="2" marker-end="url(#arwN)"/>
+  <rect x="375" y="130" width="150" height="44" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="157" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="700">Classify</text>
+  <line x1="375" y1="152" x2="230" y2="205" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <line x1="525" y1="152" x2="660" y2="205" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="120" y="205" width="160" height="50" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="200" y="235" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="700">Vector Search</text>
+  <rect x="620" y="205" width="160" height="50" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="700" y="235" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="700">Graph Traversal</text>
+  <line x1="200" y1="255" x2="360" y2="288" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <line x1="700" y1="255" x2="540" y2="288" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="330" y="288" width="240" height="50" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="318" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Merge Context</text>
+  <line x1="450" y1="338" x2="450" y2="365" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="375" y="345" width="150" height="25" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="310" y="345" width="280" height="25" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="362" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="700">LLM  →  Correct answer ✓</text>
+  <text x="450" y="390" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Hybrid retrieval lifts answer accuracy by 30-60% on multi-hop questions</text>
+</svg>

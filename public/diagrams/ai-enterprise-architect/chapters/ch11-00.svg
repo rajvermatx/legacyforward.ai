@@ -1,0 +1,36 @@
+<svg viewBox="0 0 900 420" width="900" height="420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Agent Core Loop</text>
+  <circle cx="450" cy="110" r="55" fill="#f8fafc" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="450" y="105" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="14" font-weight="600">Observe</text>
+  <text x="450" y="124" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Perceive environment</text>
+  <line x1="478.5" y1="159.363448015713" x2="525.4230484541326" y2="240.636551984287" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <circle cx="553.9230484541326" cy="290" r="55" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="553.9230484541326" y="285" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="14" font-weight="600">Think</text>
+  <text x="553.9230484541326" y="304" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Reason + plan</text>
+  <line x1="496.92304845413264" y1="290" x2="403.07695154586736" y2="290" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <circle cx="346.07695154586736" cy="290" r="55" fill="#f8fafc" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="346.07695154586736" y="285" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="600">Act</text>
+  <text x="346.07695154586736" y="304" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Execute action</text>
+  <line x1="374.57695154586736" y1="240.636551984287" x2="421.5" y2="159.363448015713" stroke="#22c55e" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="450" y="235" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Continuous</text>
+</svg>

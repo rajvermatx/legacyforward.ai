@@ -1,0 +1,54 @@
+<svg viewBox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"></polygon>
+            </marker>
+            <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <text x="350" y="26" text-anchor="middle" fill="#0f172a" font-size="14" font-weight="700">ReAct Loop: Thought → Action → Observation</text>
+
+          
+          <rect x="50"  y="55" width="160" height="70" rx="12" fill="#f1f5f9" stroke="#c084fc" stroke-width="2"></rect>
+          <text x="130" y="86"  text-anchor="middle" fill="#c084fc" font-size="13" font-weight="700">THOUGHT</text>
+          <text x="130" y="104" text-anchor="middle" fill="#475569" font-size="11">Model reasons about</text>
+          <text x="130" y="118" text-anchor="middle" fill="#475569" font-size="11">what to do next</text>
+
+          
+          <line x1="210" y1="90" x2="270" y2="90" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)"></line>
+          <text x="240" y="82" text-anchor="middle" fill="#f97316" font-size="10">decides</text>
+
+          
+          <rect x="270"  y="55" width="160" height="70" rx="12" fill="#f1f5f9" stroke="#f97316" stroke-width="2"></rect>
+          <text x="350" y="86"  text-anchor="middle" fill="#f97316" font-size="13" font-weight="700">ACTION</text>
+          <text x="350" y="104" text-anchor="middle" fill="#475569" font-size="11">Tool call: search,</text>
+          <text x="350" y="118" text-anchor="middle" fill="#475569" font-size="11">compute, lookup</text>
+
+          
+          <line x1="430" y1="90" x2="490" y2="90" stroke="#f97316" stroke-width="2" marker-end="url(#arrowhead)"></line>
+          <text x="460" y="82" text-anchor="middle" fill="#f97316" font-size="10">executes</text>
+
+          
+          <rect x="490"  y="55" width="160" height="70" rx="12" fill="#f1f5f9" stroke="#22d3ee" stroke-width="2"></rect>
+          <text x="570" y="86"  text-anchor="middle" fill="#22d3ee" font-size="13" font-weight="700">OBSERVATION</text>
+          <text x="570" y="104" text-anchor="middle" fill="#475569" font-size="11">Tool result injected</text>
+          <text x="570" y="118" text-anchor="middle" fill="#475569" font-size="11">into context</text>
+
+          
+          <path d="M 570 125 Q 570 200 350 230 Q 130 260 130 130"
+                fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6,3"
+                marker-end="url(#arrowhead-blue)"></path>
+          <text x="350" y="222" text-anchor="middle" fill="#22d3ee" font-size="11">loop until answer is ready</text>
+
+          
+          <rect x="250" y="255" width="200" height="44" rx="10" fill="rgba(249,115,22,0.15)" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="350" y="273" text-anchor="middle" fill="#f97316" font-size="12" font-weight="700">FINAL ANSWER</text>
+          <text x="350" y="290" text-anchor="middle" fill="#475569" font-size="11">Model has enough info to respond</text>
+
+          
+          <line x1="350" y1="232" x2="350" y2="253" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrowhead)"></line>
+          <text x="368" y="246" fill="#f97316" font-size="10">done</text>
+        </svg>

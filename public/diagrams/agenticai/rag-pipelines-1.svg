@@ -1,0 +1,116 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+        
+
+        
+        <text x="340" y="28" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" text-anchor="middle" dominant-baseline="central">RAG Pipeline — End-to-End Flow</text>
+
+        
+        <text x="340" y="62" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">INGESTION PIPELINE</text>
+
+        
+        <rect x="20" y="82" width="120" height="48" rx="6" fill="#F1EFE8" stroke="#94a3b8" stroke-width="1.5"></rect>
+        <text x="80" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle" dominant-baseline="central">Document</text>
+        <text x="80" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#64748b" text-anchor="middle" dominant-baseline="central">PDF, HTML, Markdown</text>
+
+        
+        <line x1="140" y1="106" x2="170" y2="106" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="178" y="82" width="120" height="48" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="238" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Chunk</text>
+        <text x="238" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Split into passages</text>
+
+        
+        <line x1="298" y1="106" x2="328" y2="106" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="336" y="82" width="120" height="48" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="396" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Embed</text>
+        <text x="396" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Text → vectors</text>
+
+        
+        <line x1="456" y1="106" x2="486" y2="106" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="494" y="82" width="140" height="48" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="564" y="100" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Vector Index</text>
+        <text x="564" y="118" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Store in vector DB</text>
+
+        
+        <line x1="20" y1="155" x2="660" y2="155" stroke="#ddd" stroke-width="1" stroke-dasharray="6,4" fill="none"></line>
+
+        
+        <text x="340" y="180" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">QUERY PIPELINE</text>
+
+        
+        <rect x="20" y="200" width="120" height="48" rx="6" fill="#F1EFE8" stroke="#94a3b8" stroke-width="1.5"></rect>
+        <text x="80" y="218" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle" dominant-baseline="central">User Query</text>
+        <text x="80" y="236" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#64748b" text-anchor="middle" dominant-baseline="central">Natural language</text>
+
+        
+        <line x1="140" y1="224" x2="170" y2="224" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="178" y="200" width="120" height="48" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="238" y="218" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Embed Query</text>
+        <text x="238" y="236" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Same model as docs</text>
+
+        
+        <line x1="298" y1="224" x2="328" y2="224" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="336" y="200" width="120" height="48" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="396" y="218" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Retrieve</text>
+        <text x="396" y="236" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Top-k nearest</text>
+
+        
+        <line x1="456" y1="224" x2="486" y2="224" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="494" y="200" width="140" height="48" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="564" y="218" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Re-rank</text>
+        <text x="564" y="236" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Score relevance</text>
+
+        
+        <line x1="564" y1="248" x2="564" y2="290" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="430" y="298" width="200" height="48" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+        <text x="530" y="316" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Augment Prompt</text>
+        <text x="530" y="334" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Inject context + instructions</text>
+
+        
+        <line x1="530" y1="346" x2="530" y2="388" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="430" y="396" width="200" height="48" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+        <text x="530" y="414" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Generate Answer</text>
+        <text x="530" y="432" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Grounded in retrieved docs</text>
+
+        
+        <line x1="530" y1="444" x2="530" y2="470" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="450" y="478" width="160" height="36" rx="6" fill="#F1EFE8" stroke="#94a3b8" stroke-width="1.5"></rect>
+        <text x="530" y="496" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#64748b" text-anchor="middle" dominant-baseline="central">Cited Response</text>
+
+        
+        <line x1="564" y1="130" x2="564" y2="155" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" fill="none"></line>
+        <line x1="564" y1="155" x2="456" y2="155" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" fill="none"></line>
+        <line x1="396" y1="155" x2="396" y2="200" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="20" y="468" width="12" height="12" rx="2" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"></rect>
+        <text x="38" y="474" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#64748b" dominant-baseline="central">Data processing</text>
+        <rect x="130" y="468" width="12" height="12" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"></rect>
+        <text x="148" y="474" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#64748b" dominant-baseline="central">Retrieval</text>
+        <rect x="210" y="468" width="12" height="12" rx="2" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"></rect>
+        <text x="228" y="474" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#64748b" dominant-baseline="central">Generation</text>
+        <rect x="300" y="468" width="12" height="12" rx="2" fill="#F1EFE8" stroke="#94a3b8" stroke-width="1"></rect>
+        <text x="318" y="474" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#64748b" dominant-baseline="central">Input / Output</text>
+      </svg>

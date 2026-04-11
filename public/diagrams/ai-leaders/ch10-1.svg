@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Future Trends: Signal vs Noise</text>
+  <rect x="55" y="50" width="250" height="160" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="180" y="74" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="700">Real — Now</text>
+  <circle cx="80" cy="102" r="4" fill="#22c55e" opacity="0.7"/>
+  <text x="95" y="106" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Multi-modal AI</text>
+  <circle cx="80" cy="130" r="4" fill="#22c55e" opacity="0.7"/>
+  <text x="95" y="134" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Agentic workflows</text>
+  <circle cx="80" cy="158" r="4" fill="#22c55e" opacity="0.7"/>
+  <text x="95" y="162" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Advanced reasoning</text>
+  <circle cx="80" cy="186" r="4" fill="#22c55e" opacity="0.7"/>
+  <text x="95" y="190" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Enterprise RAG</text>
+  <rect x="330" y="50" width="250" height="160" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="455" y="74" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="700">Emerging — Watch</text>
+  <circle cx="355" cy="102" r="4" fill="#3b82f6" opacity="0.7"/>
+  <text x="370" y="106" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Smaller / on-device models</text>
+  <circle cx="355" cy="130" r="4" fill="#3b82f6" opacity="0.7"/>
+  <text x="370" y="134" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Synthetic data training</text>
+  <circle cx="355" cy="158" r="4" fill="#3b82f6" opacity="0.7"/>
+  <text x="370" y="162" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Test-time compute</text>
+  <circle cx="355" cy="186" r="4" fill="#3b82f6" opacity="0.7"/>
+  <text x="370" y="190" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Model distillation</text>
+  <rect x="605" y="50" width="250" height="160" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="730" y="74" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">Overhyped — Skeptic</text>
+  <circle cx="630" cy="102" r="4" fill="#f59e0b" opacity="0.7"/>
+  <text x="645" y="106" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">AGI (any near term)</text>
+  <circle cx="630" cy="130" r="4" fill="#f59e0b" opacity="0.7"/>
+  <text x="645" y="134" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Full automation</text>
+  <circle cx="630" cy="158" r="4" fill="#f59e0b" opacity="0.7"/>
+  <text x="645" y="162" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Reliable self-coding</text>
+  <circle cx="630" cy="186" r="4" fill="#f59e0b" opacity="0.7"/>
+  <text x="645" y="190" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Sentient AI</text>
+</svg>

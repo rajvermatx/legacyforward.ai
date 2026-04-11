@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <defs>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-l" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Participants -->
+  <rect x="20" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="65" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Client</text>
+
+  <rect x="170" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="230" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Query Engine</text>
+
+  <rect x="350" y="10" width="130" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="415" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Embedding Model</text>
+
+  <rect x="540" y="10" width="110" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="595" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Vector DB</text>
+
+  <rect x="710" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="760" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Reranker</text>
+
+  <rect x="870" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="920" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">LLM</text>
+
+  <!-- Lifelines -->
+  <line x1="65" y1="46" x2="65" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="230" y1="46" x2="230" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="415" y1="46" x2="415" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="595" y1="46" x2="595" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="760" y1="46" x2="760" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="920" y1="46" x2="920" y2="495" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Activation bars -->
+  <rect x="60" y="70" width="10" height="40" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="225" y="85" width="10" height="330" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="410" y="115" width="10" height="40" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="590" y="175" width="10" height="50" fill="#f59e0b" opacity="0.2" rx="2"/>
+  <rect x="755" y="255" width="10" height="40" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="915" y="335" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+
+  <!-- 1. User query -->
+  <text x="12" y="82" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">1</text>
+  <line x1="70" y1="80" x2="220" y2="80" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="145" y="74" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">user query</text>
+
+  <!-- 2. Embed query -->
+  <text x="12" y="122" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">2</text>
+  <line x1="235" y1="120" x2="405" y2="120" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="320" y="114" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">embed query text</text>
+
+  <line x1="405" y1="145" x2="235" y2="145" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="320" y="139" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">query vector [1536d]</text>
+
+  <!-- 3. Vector search -->
+  <text x="12" y="182" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">3</text>
+  <line x1="235" y1="180" x2="585" y2="180" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="410" y="174" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">ANN similarity search (top-k=20)</text>
+
+  <line x1="585" y1="215" x2="235" y2="215" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="410" y="209" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">candidate chunks + scores</text>
+
+  <!-- 4. Rerank results -->
+  <text x="12" y="262" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">4</text>
+  <line x1="235" y1="260" x2="750" y2="260" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="490" y="254" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">rerank candidates with cross-encoder</text>
+
+  <line x1="750" y1="285" x2="235" y2="285" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="490" y="279" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">top-5 reranked chunks</text>
+
+  <!-- 5. Build prompt with context -->
+  <text x="12" y="317" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">5</text>
+  <rect x="210" y="305" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="230" y="319" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">build</text>
+  <text x="270" y="319" fill="#475569" font-family="Nunito, sans-serif" font-size="10">system prompt + retrieved context + query</text>
+
+  <!-- 6. LLM generates -->
+  <text x="12" y="347" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">6</text>
+  <line x1="235" y1="345" x2="910" y2="345" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="570" y="339" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">generate grounded response</text>
+
+  <line x1="910" y1="385" x2="235" y2="385" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="570" y="379" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">answer + inline citations</text>
+
+  <!-- 7. Return with citations -->
+  <text x="12" y="422" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">7</text>
+  <line x1="220" y1="420" x2="70" y2="420" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="145" y="414" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">response + source citations</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="480" x2="60" y2="480" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="68" y="484" fill="#475569" font-family="Nunito, sans-serif" font-size="9">request</text>
+  <line x1="160" y1="480" x2="130" y2="480" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="168" y="484" fill="#475569" font-family="Nunito, sans-serif" font-size="9">response</text>
+</svg>

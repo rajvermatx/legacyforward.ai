@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 370" width="100%" role="img" aria-label="Where LLMs Fit in the SDLC — showing BA and QA touchpoints across six phases">
+
+        <defs>
+          <marker id="sdlc-arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#06b6d4"></polygon>
+          </marker>
+        </defs>
+
+        <rect x="10" y="100" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="65" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Discovery</text>
+        <line x1="120" y1="125" x2="150" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#sdlc-arrowhead)"></line>
+
+        <rect x="150" y="100" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="205" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Requirements</text>
+        <line x1="260" y1="125" x2="290" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#sdlc-arrowhead)"></line>
+
+        <rect x="290" y="100" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="345" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Design</text>
+        <line x1="400" y1="125" x2="430" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#sdlc-arrowhead)"></line>
+
+        <rect x="430" y="100" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="485" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Build</text>
+        <line x1="540" y1="125" x2="570" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#sdlc-arrowhead)"></line>
+
+        <rect x="570" y="100" width="110" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="625" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Test</text>
+        <line x1="680" y1="125" x2="710" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#sdlc-arrowhead)"></line>
+
+        <rect x="710" y="100" width="60" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="740" y="130" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#0f172a">Deploy</text>
+
+
+        <text x="10" y="20" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#3b82f6">BA LLM Touchpoints</text>
+        <rect x="15" y="30" width="140" height="50" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="25" y="47" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">Stakeholder analysis,</text>
+        <text x="25" y="60" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">vision doc drafting</text>
+        <line x1="65" y1="80" x2="65" y2="100" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"></line>
+
+        <rect x="155" y="30" width="140" height="50" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="165" y="47" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">User stories, BRD,</text>
+        <text x="165" y="60" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">acceptance criteria</text>
+        <line x1="205" y1="80" x2="205" y2="100" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"></line>
+
+        <rect x="435" y="30" width="140" height="50" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="445" y="47" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">Change request analysis,</text>
+        <text x="445" y="60" font-family="Nunito, sans-serif" font-size="10" fill="#3b82f6">impact assessment</text>
+        <line x1="485" y1="80" x2="485" y2="100" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,3"></line>
+
+
+        <text x="10" y="190" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#f59e0b">QA LLM Touchpoints</text>
+        <rect x="155" y="195" width="140" height="50" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"></rect>
+        <text x="165" y="212" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">Testability review,</text>
+        <text x="165" y="225" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">ambiguity detection</text>
+        <line x1="205" y1="150" x2="205" y2="195" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"></line>
+
+        <rect x="295" y="195" width="140" height="50" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"></rect>
+        <text x="305" y="212" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">Test case design,</text>
+        <text x="305" y="225" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">test data generation</text>
+        <line x1="345" y1="150" x2="345" y2="195" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"></line>
+
+        <rect x="575" y="195" width="140" height="50" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"></rect>
+        <text x="585" y="212" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">Defect reporting,</text>
+        <text x="585" y="225" font-family="Nunito, sans-serif" font-size="10" fill="#92400e">regression analysis</text>
+        <line x1="625" y1="150" x2="625" y2="195" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3"></line>
+
+
+        <rect x="250" y="280" width="12" height="12" rx="2" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="270" y="291" font-family="Nunito, sans-serif" font-size="11" fill="#0f172a">= BA touchpoint</text>
+        <rect x="380" y="280" width="12" height="12" rx="2" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"></rect>
+        <text x="400" y="291" font-family="Nunito, sans-serif" font-size="11" fill="#0f172a">= QA touchpoint</text>
+
+        <text x="390" y="330" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#475569" font-style="italic">LLMs add the most value at phase boundaries where information is translated between formats.</text>
+      </svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Hybrid Architecture</text>
+  <rect x="30" y="80" width="180" height="240" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="120" y="108" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="600">Data Classifier</text>
+  <rect x="45" y="125" width="150" height="32" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"/>
+  <text x="120" y="145" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="11">Public data</text>
+  <rect x="45" y="170" width="150" height="32" rx="6" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1"/>
+  <text x="120" y="190" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="11">Internal data</text>
+  <rect x="45" y="215" width="150" height="32" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="120" y="235" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">Confidential</text>
+  <rect x="45" y="260" width="150" height="32" rx="6" fill="#f1f5f9" stroke="#ef4444" stroke-width="1"/>
+  <text x="120" y="280" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="11">Restricted</text>
+  <line x1="210" y1="140" x2="310" y2="100" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <line x1="210" y1="185" x2="310" y2="145" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <line x1="210" y1="230" x2="310" y2="280" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <line x1="210" y1="275" x2="310" y2="320" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="320" y="60" width="260" height="140" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="450" y="90" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Cloud (Public/Internal)</text>
+  <text x="450" y="115" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Cloud LLM APIs</text>
+  <text x="450" y="135" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Lower cost · Faster setup</text>
+  <text x="450" y="155" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Scalable · Managed</text>
+  <text x="450" y="180" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">OpenAI · Anthropic · Vertex</text>
+  <rect x="320" y="240" width="260" height="120" rx="12" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="268" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="600">On-Prem (Sensitive)</text>
+  <text x="450" y="293" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Self-hosted models</text>
+  <text x="450" y="313" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Full data control · Air-gapped</text>
+  <text x="450" y="340" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9">Llama · Mistral · vLLM</text>
+  <line x1="580" y1="130" x2="680" y2="200" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="580" y1="300" x2="680" y2="220" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="680" y="170" width="180" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="770" y="200" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Unified Response</text>
+  <text x="770" y="220" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Single API surface</text>
+</svg>

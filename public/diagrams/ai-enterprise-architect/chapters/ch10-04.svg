@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Multi-Model Router</text>
+  <rect x="30" y="150" width="120" height="60" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="90" y="175" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Request</text>
+  <text x="90" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Incoming task</text>
+  <line x1="150" y1="180" x2="225" y2="180" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <polygon points="310,130 390,180 310,230 230,180" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="310" y="175" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="600">Classify</text>
+  <text x="310" y="190" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Complexity</text>
+  <line x1="390" y1="155" x2="500" y2="85" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="445" y="108" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">Simple</text>
+  <rect x="500" y="55" width="180" height="60" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="590" y="78" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Fast Tier (70%)</text>
+  <text x="590" y="98" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">GPT-4o-mini / Haiku</text>
+  <line x1="390" y1="180" x2="500" y2="180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <text x="445" y="170" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="9">Medium</text>
+  <rect x="500" y="150" width="180" height="60" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="590" y="173" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Standard (25%)</text>
+  <text x="590" y="193" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">GPT-4o / Sonnet</text>
+  <line x1="390" y1="205" x2="500" y2="275" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <text x="445" y="252" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Complex</text>
+  <rect x="500" y="245" width="180" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="590" y="268" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Advanced (5%)</text>
+  <text x="590" y="288" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Opus / o1</text>
+  <line x1="680" y1="85" x2="760" y2="170" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <line x1="680" y1="180" x2="760" y2="180" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="680" y1="275" x2="760" y2="190" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="760" y="150" width="110" height="60" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="815" y="178" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="600">Response</text>
+</svg>

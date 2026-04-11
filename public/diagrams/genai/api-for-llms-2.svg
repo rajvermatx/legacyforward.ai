@@ -1,0 +1,49 @@
+<svg viewBox="0 0 900 270" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="LiteLLM Router: primary GPT-4o, fallback Claude, fallback Llama/Groq">
+    <defs>
+      <marker id="a2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#06b6d4"></polygon></marker>
+      <marker id="a-red" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#ef4444"></polygon></marker>
+      <marker id="a-amb" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#f59e0b"></polygon></marker>
+      <marker id="a-grn" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#22c55e"></polygon></marker>
+    </defs>
+    <rect x="10" y="95" width="140" height="58" rx="10" fill="#f1f5f9" stroke="#2e3554"></rect>
+    <text x="80" y="121" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Your App</text>
+    <text x="80" y="138" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">router.acompletion()</text>
+    <line x1="150" y1="124" x2="195" y2="124" stroke="#06b6d4" stroke-width="2" marker-end="url(#a2)"></line>
+    <rect x="199" y="75" width="155" height="98" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+    <text x="277" y="108" text-anchor="middle" fill="#06b6d4" font-family="'Space Grotesk',sans-serif" font-size="14" font-weight="700">LiteLLM Router</text>
+    <text x="277" y="126" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">fallbacks + balancing</text>
+    <text x="277" y="143" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">cost tracking</text>
+    <text x="277" y="162" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">retries: 2 | timeout: 30s</text>
+    
+    <line x1="354" y1="100" x2="468" y2="50" stroke="#06b6d4" stroke-width="2" marker-end="url(#a2)"></line>
+    <rect x="472" y="20" width="170" height="58" rx="10" fill="#f1f5f9" stroke="#22c55e"></rect>
+    <text x="557" y="42" text-anchor="middle" fill="#22c55e" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">PRIMARY</text>
+    <text x="557" y="59" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">GPT-4o (OpenAI)</text>
+    <text x="557" y="73" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">$2.50 / $10.00 per 1M</text>
+    
+    <line x1="354" y1="124" x2="468" y2="124" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#a-amb)"></line>
+    <rect x="472" y="95" width="170" height="58" rx="10" fill="#f1f5f9" stroke="#f59e0b"></rect>
+    <text x="557" y="117" text-anchor="middle" fill="#f59e0b" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">FALLBACK 1</text>
+    <text x="557" y="134" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Claude Sonnet</text>
+    <text x="557" y="148" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">$3.00 / $15.00 per 1M</text>
+    
+    <line x1="354" y1="148" x2="468" y2="200" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#a-red)"></line>
+    <rect x="472" y="172" width="170" height="58" rx="10" fill="#f1f5f9" stroke="#ef4444"></rect>
+    <text x="557" y="194" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">FALLBACK 2</text>
+    <text x="557" y="211" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Llama 3.1 70B (Groq)</text>
+    <text x="557" y="225" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">$0.59 / $0.79 per 1M</text>
+    
+    <text x="414" y="40" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="700">&#10005;</text>
+    <text x="424" y="52" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">429</text>
+    <text x="414" y="114" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="700">&#10005;</text>
+    <text x="424" y="126" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">503</text>
+    
+    <line x1="642" y1="49" x2="790" y2="49" stroke="#22c55e" stroke-width="1.5" marker-end="url(#a-grn)"></line>
+    <line x1="642" y1="124" x2="790" y2="124" stroke="#22c55e" stroke-width="1.5" marker-end="url(#a-grn)"></line>
+    <line x1="642" y1="201" x2="790" y2="201" stroke="#22c55e" stroke-width="1.5" marker-end="url(#a-grn)"></line>
+    
+    <rect x="794" y="92" width="72" height="58" rx="10" fill="#f8fafc" stroke="#22c55e"></rect>
+    <text x="830" y="121" text-anchor="middle" fill="#22c55e" font-family="'Space Grotesk',sans-serif" font-size="24" font-weight="700">&#10003;</text>
+    <text x="830" y="140" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="10">response</text>
+    <text x="10" y="260" fill="#64748b" font-family="'Nunito',sans-serif" font-size="11">LiteLLM Router: tries primary first, falls back through the chain on failure (429, 503, timeout)</text>
+  </svg>

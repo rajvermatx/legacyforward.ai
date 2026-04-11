@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Agentic Tool Use (Think-Act-Observe)</text>
+  <circle cx="300" cy="120" r="40" fill="#f8fafc" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="300" y="125" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Think</text>
+  <line x1="321" y1="156.37306695894642" x2="365.6025403784439" y2="233.62693304105358" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <circle cx="386.6025403784439" cy="270" r="40" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="386.6025403784439" y="275" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Act</text>
+  <line x1="344.6025403784439" y1="270" x2="255.39745962155612" y2="270" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <circle cx="213.39745962155612" cy="270" r="40" fill="#f8fafc" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="213.39745962155612" y="275" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Observe</text>
+  <line x1="234.39745962155612" y1="233.62693304105358" x2="279" y2="156.37306695894642" stroke="#22c55e" stroke-width="2" marker-end="url(#arw)"/>
+  <text x="300" y="223" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Agent</text>
+  <text x="300" y="238" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Loop</text>
+  <rect x="530" y="80" width="320" height="270" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="690" y="110" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="14" font-weight="600">Tool Registry</text>
+  <rect x="550" y="125" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="143" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">Web Search</text>
+  <rect x="550" y="160" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="178" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">Calculator</text>
+  <rect x="550" y="195" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="213" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">Database Query</text>
+  <rect x="550" y="230" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="248" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">File System</text>
+  <rect x="550" y="265" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="283" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">API Calls</text>
+  <rect x="550" y="300" width="140" height="28" rx="6" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1"/>
+  <text x="620" y="318" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="11">Code Execution</text>
+  <rect x="710" y="125" width="120" height="220" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="770" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Tool schemas</text>
+  <text x="770" y="170" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Input validation</text>
+  <text x="770" y="190" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Error handling</text>
+  <text x="770" y="210" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Result parsing</text>
+  <text x="770" y="230" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Timeout mgmt</text>
+  <text x="770" y="250" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Auth context</text>
+  <line x1="380" y1="260" x2="528" y2="230" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <text x="455" y="240" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">invoke tool</text>
+</svg>

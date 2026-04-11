@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Value Canvas</text>
+  <rect x="40" y="50" width="820" height="270" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="320" stroke="#cbd5e1" stroke-width="1.5"/>
+  <line x1="40" y1="185" x2="860" y2="185" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="245" y="80" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="700">Value Hypothesis</text>
+  <text x="245" y="100" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">What value will AI create?</text>
+  <text x="245" y="115" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">For whom? How much?</text>
+  <rect x="60" y="125" width="370" height="48" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="245" y="145" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Hypothesis statement goes here</text>
+  <text x="245" y="160" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">e.g. Reduce support tickets by 40%</text>
+  <text x="655" y="80" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="700">Validation Criteria</text>
+  <text x="655" y="100" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">How will we know it works?</text>
+  <text x="655" y="115" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">What experiments will we run?</text>
+  <rect x="470" y="125" width="370" height="48" rx="6" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="655" y="145" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Experiment design goes here</text>
+  <text x="655" y="160" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">e.g. Wizard of Oz for 2 weeks</text>
+  <text x="245" y="210" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="700">Kill Criteria</text>
+  <text x="245" y="230" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">When will we stop? What signals</text>
+  <text x="245" y="245" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">tell us this is not working?</text>
+  <rect x="60" y="260" width="370" height="44" rx="6" fill="#fff5f5" stroke="#fecaca" stroke-width="2"/>
+  <text x="245" y="280" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Kill trigger: e.g. accuracy below 70%</text>
+  <text x="245" y="293" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">or NPS drops more than 5 pts</text>
+  <text x="655" y="210" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">Success Metrics</text>
+  <text x="655" y="230" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">What does winning look like?</text>
+  <text x="655" y="245" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Leading and lagging indicators</text>
+  <rect x="470" y="260" width="370" height="44" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+  <text x="655" y="280" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Leading: deflection rate weekly</text>
+  <text x="655" y="293" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Lagging: CSAT at 90 days</text>
+</svg>

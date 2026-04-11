@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="100%" role="img" aria-label="Anatomy of a Good Prompt — showing six components stacked as labeled blocks">
+
+
+        <rect x="30" y="10" width="640" height="45" rx="6" fill="#a855f7" stroke="#a855f7"></rect>
+        <circle cx="55" cy="32" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="37" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
+        <text x="80" y="30" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Role / Persona</text>
+        <text x="80" y="44" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#f3e8ff">"You are a senior QA analyst specializing in financial systems."</text>
+
+
+        <rect x="30" y="62" width="640" height="45" rx="6" fill="#3b82f6" stroke="#3b82f6"></rect>
+        <circle cx="55" cy="84" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="89" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">2</text>
+        <text x="80" y="82" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Context</text>
+        <text x="80" y="96" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#dbeafe">"We are building a HIPAA-compliant patient portal for a hospital."</text>
+
+
+        <rect x="30" y="114" width="640" height="45" rx="6" fill="#06b6d4" stroke="#06b6d4"></rect>
+        <circle cx="55" cy="136" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="141" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">3</text>
+        <text x="80" y="134" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Task / Instruction</text>
+        <text x="80" y="148" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#cffafe">"Generate test cases for the login page covering all auth methods."</text>
+
+
+        <rect x="30" y="166" width="640" height="45" rx="6" fill="#22c55e" stroke="#22c55e"></rect>
+        <circle cx="55" cy="188" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="193" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">4</text>
+        <text x="80" y="186" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Input Data</text>
+        <text x="80" y="200" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#d1fae5">[The actual user story, requirement, or document to process]</text>
+
+
+        <rect x="30" y="218" width="640" height="45" rx="6" fill="#f59e0b" stroke="#f59e0b"></rect>
+        <circle cx="55" cy="240" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="245" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">5</text>
+        <text x="80" y="238" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Output Specification</text>
+        <text x="80" y="252" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#fef3c7">"Return a table with: Test ID, Category, Steps, Expected Result, Priority."</text>
+
+
+        <rect x="30" y="270" width="640" height="45" rx="6" fill="#ef4444" stroke="#ef4444"></rect>
+        <circle cx="55" cy="292" r="12" fill="#ffffff" opacity="0.3"></circle>
+        <text x="55" y="297" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" fill="#ffffff">6</text>
+        <text x="80" y="290" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">Constraints / Rules</text>
+        <text x="80" y="304" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#fef2f2">"Include at least 3 security tests. Do not include registration test cases."</text>
+
+
+        <text x="350" y="335" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#475569" font-style="italic">Not every prompt needs all six components, but knowing them lets you diagnose why a prompt underperforms.</text>
+      </svg>

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 920 380" width="920" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Governance Framework</text>
+  <rect x="80" y="65" width="740" height="75" rx="12" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="95" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="14" font-weight="600">Board / Executive</text>
+  <text x="450" y="117" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">AI Ethics Committee · Risk Appetite · Strategic Direction</text>
+  <rect x="80" y="165" width="740" height="75" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="195" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="14" font-weight="600">Policies &amp;amp; Standards</text>
+  <text x="450" y="217" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Model Risk Policy · Data Usage Standards · Responsible AI Principles</text>
+  <rect x="80" y="265" width="740" height="75" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="450" y="295" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="600">Operating Committees</text>
+  <text x="450" y="317" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Model Review Board · Data Governance Council · AI Ethics Review</text>
+  <line x1="450" y1="140" x2="450" y2="163" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <line x1="450" y1="240" x2="450" y2="263" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <path d="M 830 300 L 860 300 L 860 100 L 830 100" fill="none" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <text x="875" y="200" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">Feedback</text>
+</svg>

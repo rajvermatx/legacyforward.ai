@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 500" width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Center of Excellence (Hub-Spoke)</text>
+  <rect x="370" y="235" width="160" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="450" y="265" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">AI CoE</text>
+  <text x="450" y="285" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Central team</text>
+  <rect x="385" y="65" width="130" height="50" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="88" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Sales</text>
+  <text x="450" y="104" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Lead scoring</text>
+  <line x1="450" y1="233" x2="450" y2="117" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="540.884572681199" y="155" width="130" height="50" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="605.884572681199" y="178" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Marketing</text>
+  <text x="605.884572681199" y="194" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Content AI</text>
+  <line x1="521.014083110324" y1="251.5" x2="547.8608706276416" y2="193.5" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="540.884572681199" y="335" width="130" height="50" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="605.884572681199" y="358" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Operations</text>
+  <text x="605.884572681199" y="374" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Process automation</text>
+  <line x1="521.014083110324" y1="288.5" x2="547.8608706276416" y2="346.5" stroke="#22c55e" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="385" y="425" width="130" height="50" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="448" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Finance</text>
+  <text x="450" y="464" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Fraud detection</text>
+  <line x1="450" y1="307" x2="450" y2="423" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="229.11542731880104" y="335.00000000000006" width="130" height="50" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="294.11542731880104" y="358.00000000000006" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">HR</text>
+  <text x="294.11542731880104" y="374.00000000000006" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Talent matching</text>
+  <line x1="378.98591688967605" y1="288.5" x2="352.1391293723584" y2="346.50000000000006" stroke="#ef4444" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="229.11542731880104" y="155" width="130" height="50" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="294.11542731880104" y="178" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Support</text>
+  <text x="294.11542731880104" y="194" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Chatbots</text>
+  <line x1="378.985916889676" y1="251.5" x2="352.1391293723584" y2="193.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+</svg>

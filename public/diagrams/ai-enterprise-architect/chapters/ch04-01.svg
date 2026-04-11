@@ -1,0 +1,46 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Training Data Pipeline</text>
+  <rect x="30" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="90" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Data Sources</text>
+  <text x="90" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">APIs, DBs, Files</text>
+  <line x1="150" y1="135" x2="172" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="174" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="234" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Collection</text>
+  <text x="234" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Crawl, Extract</text>
+  <line x1="294" y1="135" x2="316" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="318" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="378" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Labeling</text>
+  <text x="378" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Annotate, Review</text>
+  <line x1="438" y1="135" x2="460" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="462" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="522" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Versioning</text>
+  <text x="522" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">DVC, Git LFS</text>
+  <line x1="582" y1="135" x2="604" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="606" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="666" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Validation</text>
+  <text x="666" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Quality checks</text>
+  <line x1="726" y1="135" x2="748" y2="135" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="750" y="100" width="120" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="810" y="125" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Storage</text>
+  <text x="810" y="143" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">S3, GCS, HDFS</text>
+</svg>

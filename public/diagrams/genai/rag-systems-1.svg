@@ -1,0 +1,86 @@
+<svg viewBox="0 0 920 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <text x="460" y="24" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">RAG Pipeline — Indexing &amp; Query Phases</text>
+
+          
+          <rect x="20" y="45" width="880" height="140" rx="12" fill="none" stroke="#f97316" stroke-width="1" stroke-dasharray="6"></rect>
+          <text x="40" y="68" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">INDEXING PHASE (OFFLINE)</text>
+
+          
+          <rect x="40" y="85" width="130" height="80" rx="8" fill="#f1f5f9" stroke="#8e94b5" stroke-width="1.5"></rect>
+          <text x="105" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Documents</text>
+          <text x="105" y="135" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">PDF, DOCX, HTML</text>
+          <text x="105" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Markdown, DB</text>
+
+          <line x1="170" y1="125" x2="210" y2="125" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="210" y="85" width="130" height="80" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="275" y="115" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Chunker</text>
+          <text x="275" y="135" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Split into</text>
+          <text x="275" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">512-1024 tokens</text>
+
+          <line x1="340" y1="125" x2="380" y2="125" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="380" y="85" width="150" height="80" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="455" y="115" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Embedding Model</text>
+          <text x="455" y="135" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">text → [0.12, -0.34,</text>
+          <text x="455" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">0.56, ...]  (1536d)</text>
+
+          <line x1="530" y1="125" x2="570" y2="125" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="570" y="85" width="150" height="80" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="645" y="115" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Vector Database</text>
+          <text x="645" y="135" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">ChromaDB, Pinecone</text>
+          <text x="645" y="150" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">pgvector, Qdrant</text>
+
+          
+          <rect x="20" y="210" width="880" height="155" rx="12" fill="none" stroke="#06b6d4" stroke-width="1" stroke-dasharray="6"></rect>
+          <text x="40" y="233" fill="#06b6d4" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">QUERY PHASE (REAL-TIME)</text>
+
+          
+          <rect x="40" y="250" width="130" height="80" rx="8" fill="#f1f5f9" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="105" y="280" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">User Query</text>
+          <text x="105" y="300" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">"How does RAG</text>
+          <text x="105" y="315" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">reduce hallucination?"</text>
+
+          <line x1="170" y1="290" x2="210" y2="290" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="210" y="250" width="130" height="80" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="275" y="280" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Embed Query</text>
+          <text x="275" y="300" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Same model as</text>
+          <text x="275" y="315" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">indexing phase</text>
+
+          <line x1="340" y1="290" x2="380" y2="290" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="380" y="250" width="150" height="80" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="455" y="280" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Similarity Search</text>
+          <text x="455" y="300" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Top-K nearest</text>
+          <text x="455" y="315" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">vectors (cosine)</text>
+
+          
+          <line x1="645" y1="165" x2="645" y2="210" stroke="#22c55e" stroke-width="1" stroke-dasharray="4"></line>
+          <line x1="645" y1="210" x2="530" y2="260" stroke="#22c55e" stroke-width="1" stroke-dasharray="4"></line>
+
+          <line x1="530" y1="290" x2="570" y2="290" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="570" y="250" width="150" height="80" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="645" y="275" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">LLM Synthesis</text>
+          <text x="645" y="295" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Query + Retrieved</text>
+          <text x="645" y="310" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Context → Answer</text>
+
+          <line x1="720" y1="290" x2="760" y2="290" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aR)"></line>
+
+          
+          <rect x="760" y="250" width="120" height="80" rx="8" fill="rgba(249,115,22,0.15)" stroke="#f97316" stroke-width="2"></rect>
+          <text x="820" y="280" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">Answer</text>
+          <text x="820" y="300" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Grounded in</text>
+          <text x="820" y="315" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">source docs</text>
+
+          <defs><marker id="aR" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#2e3554"></path></marker></defs>
+        </svg>

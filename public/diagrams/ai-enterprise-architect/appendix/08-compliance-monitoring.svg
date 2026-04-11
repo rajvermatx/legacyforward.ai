@@ -1,0 +1,51 @@
+<svg viewBox="0 0 900 340" width="900" height="340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Compliance Monitoring System</text>
+  <rect x="20" y="70" width="170" height="120" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="105" y="95" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="600">External Sources</text>
+  <text x="105" y="120" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Regulatory feeds</text>
+  <text x="105" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Legal updates</text>
+  <text x="105" y="160" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Industry news</text>
+  <rect x="20" y="210" width="170" height="100" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="105" y="235" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">Internal Monitor</text>
+  <text x="105" y="260" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Policy violations</text>
+  <text x="105" y="280" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Audit findings</text>
+  <line x1="190" y1="130" x2="280" y2="175" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="190" y1="260" x2="280" y2="195" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="285" y="140" width="180" height="80" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="375" y="170" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">LLM Analysis</text>
+  <text x="375" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Impact assessment</text>
+  <text x="375" y="208" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Gap identification</text>
+  <line x1="465" y1="180" x2="540" y2="140" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="545" y="110" width="140" height="60" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="615" y="135" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="600">Alerts</text>
+  <text x="615" y="155" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Priority + routing</text>
+  <line x1="465" y1="195" x2="540" y2="240" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="545" y="210" width="140" height="60" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="615" y="235" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Audit Trail</text>
+  <text x="615" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Full lineage</text>
+  <line x1="685" y1="140" x2="760" y2="175" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="685" y1="240" x2="760" y2="205" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="765" y="150" width="120" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="825" y="180" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Dashboard</text>
+  <text x="825" y="200" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Executive view</text>
+</svg>

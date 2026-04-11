@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Document to Knowledge Graph Pipeline</text>
+  <rect x="50" y="118" width="120" height="64" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="110" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">PDF / HTML</text>
+  <text x="110" y="164" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">raw docs</text>
+  <line x1="170" y1="150" x2="206" y2="150" stroke="#0f172a" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="208" y="118" width="120" height="64" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="268" y="142" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="700">Chunk</text>
+  <text x="268" y="164" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">~512 tokens</text>
+  <line x1="328" y1="150" x2="364" y2="150" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="366" y="118" width="120" height="64" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="426" y="142" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">LLM Extract</text>
+  <text x="426" y="164" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">entities + rels</text>
+  <line x1="486" y1="150" x2="522" y2="150" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="524" y="118" width="120" height="64" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="584" y="142" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="700">Entities</text>
+  <text x="584" y="164" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">nodes + edges</text>
+  <line x1="644" y1="150" x2="680" y2="150" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <circle cx="742" cy="150" r="38" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="742" y="146" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="700">Neo4j</text>
+  <text x="742" y="164" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">graph store</text>
+  <text x="450" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Each stage reduces unstructured text to structured graph triples (subject, predicate, object)</text>
+  <text x="450" y="272" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">LLM extraction identifies named entities and semantic relationships automatically</text>
+</svg>

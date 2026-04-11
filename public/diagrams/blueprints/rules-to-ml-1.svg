@@ -1,0 +1,88 @@
+<svg viewBox="0 0 900 480" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow6" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"></polygon>
+            </marker>
+            <marker id="arrow6c" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="140" width="130" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="85" y="170" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Incoming</text>
+          <text x="85" y="190" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12">Request</text>
+
+          
+          <line x1="150" y1="175" x2="220" y2="175" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow6)"></line>
+
+          
+          <rect x="225" y="120" width="140" height="110" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"></rect>
+          <text x="295" y="155" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Router</text>
+          <text x="295" y="175" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="11">shadow / live</text>
+          <text x="295" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">traffic split</text>
+          <text x="295" y="215" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">&#9881; toggle switch</text>
+
+          
+          <line x1="365" y1="155" x2="450" y2="80" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow6c)"></line>
+          <text x="395" y="105" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">live</text>
+
+          
+          <rect x="455" y="40" width="160" height="80" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="535" y="70" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Rules Engine</text>
+          <text x="535" y="90" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="11">(existing)</text>
+          <text x="535" y="108" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">production decisions</text>
+
+          
+          <line x1="615" y1="80" x2="710" y2="80" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow6c)"></line>
+
+          
+          <rect x="715" y="45" width="140" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="785" y="75" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Decision</text>
+          <text x="785" y="95" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">returned to caller</text>
+
+          
+          <line x1="365" y1="195" x2="450" y2="260" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow6)" stroke-dasharray="6,4"></line>
+          <text x="395" y="245" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">shadow</text>
+
+          
+          <rect x="455" y="225" width="160" height="80" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="535" y="255" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">ML Model</text>
+          <text x="535" y="275" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="11">(shadow mode)</text>
+          <text x="535" y="293" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">parallel predictions</text>
+
+          
+          <line x1="615" y1="265" x2="710" y2="265" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow6)"></line>
+
+          
+          <line x1="535" y1="120" x2="535" y2="170" stroke="#8e94b5" stroke-width="1.5" stroke-dasharray="4,3"></line>
+          <line x1="535" y1="170" x2="715" y2="230" stroke="#8e94b5" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow6c)"></line>
+
+          
+          <rect x="715" y="225" width="155" height="80" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="792" y="255" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Comparison</text>
+          <text x="792" y="273" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Engine</text>
+          <text x="792" y="293" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">agreement rate</text>
+
+          
+          <line x1="792" y1="305" x2="792" y2="355" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow6)"></line>
+
+          
+          <rect x="700" y="360" width="170" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="785" y="390" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Dashboard</text>
+          <text x="785" y="410" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">agree / disagree metrics</text>
+
+          
+          <rect x="20" y="445" width="850" height="30" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1.5"></rect>
+          <text x="445" y="465" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="12">&#128274; Audit Log — every decision from both systems recorded with timestamp, input, output, and source</text>
+
+          
+          <line x1="535" y1="120" x2="535" y2="445" stroke="#64748b" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"></line>
+          <line x1="785" y1="115" x2="785" y2="445" stroke="#64748b" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"></line>
+
+          
+          <rect x="30" y="280" width="170" height="55" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4,3"></rect>
+          <text x="115" y="300" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="11">&#9881; Toggle Switch</text>
+          <text x="115" y="318" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">shadow &#8594; canary &#8594; live</text>
+          <line x1="200" y1="305" x2="225" y2="210" stroke="#a855f7" stroke-width="1" stroke-dasharray="3,3"></line>
+        </svg>

@@ -1,0 +1,34 @@
+<svg viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <rect x="250" y="20" width="200" height="60" rx="10" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="350" y="48" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Supervisor Agent</text>
+          <text x="350" y="66" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Routes tasks to specialists</text>
+
+          
+          <rect x="30" y="140" width="170" height="70" rx="8" fill="#f1f5f9" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="115" y="168" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Researcher</text>
+          <text x="115" y="188" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Search, RAG, APIs</text>
+
+          
+          <rect x="265" y="140" width="170" height="70" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="350" y="168" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Coder</text>
+          <text x="350" y="188" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Write &amp; execute code</text>
+
+          
+          <rect x="500" y="140" width="170" height="70" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="585" y="168" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Reviewer</text>
+          <text x="585" y="188" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">Quality check &amp; tests</text>
+
+          
+          <line x1="290" y1="80" x2="115" y2="140" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aM)"></line>
+          <line x1="350" y1="80" x2="350" y2="140" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aM)"></line>
+          <line x1="410" y1="80" x2="585" y2="140" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aM)"></line>
+
+          
+          <path d="M115 210 L115 250 L350 250 L350 80" stroke="#a855f7" stroke-width="1" stroke-dasharray="4" marker-end="url(#aM)"></path>
+          <path d="M350 210 L350 240 L350 250" stroke="#a855f7" stroke-width="1" stroke-dasharray="4"></path>
+          <path d="M585 210 L585 250 L350 250" stroke="#a855f7" stroke-width="1" stroke-dasharray="4"></path>
+          <text x="350" y="268" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono,monospace" font-size="9">Results flow back to supervisor</text>
+
+          <defs><marker id="aM" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#2e3554"></path></marker></defs>
+        </svg>

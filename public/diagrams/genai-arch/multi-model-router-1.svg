@@ -1,0 +1,64 @@
+<svg viewBox="0 0 800 400" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow5" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="155" width="130" height="70" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="85" y="185" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">User Request</text>
+          <text x="85" y="205" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Any complexity</text>
+
+          
+          <line x1="150" y1="190" x2="210" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+          <rect x="220" y="145" width="140" height="90" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="290" y="175" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Complexity</text>
+          <text x="290" y="195" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Classifier</text>
+          <text x="290" y="218" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="10">keyword / LLM / embed</text>
+
+          
+          <polygon points="430,190 470,155 510,190 470,225" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></polygon>
+          <text x="470" y="194" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Route</text>
+
+          
+          <line x1="360" y1="190" x2="430" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow5)"></line>
+
+          
+
+          
+          <line x1="470" y1="155" x2="470" y2="75" stroke="#22d3ee" stroke-width="2"></line>
+          <line x1="470" y1="75" x2="590" y2="75" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow5)"></line>
+          <text x="528" y="65" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">SIMPLE</text>
+
+          <rect x="600" y="45" width="160" height="60" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="680" y="70" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Haiku / Flash</text>
+          <text x="680" y="90" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">$0.25/M · 80ms</text>
+
+          
+          <line x1="510" y1="190" x2="590" y2="190" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow5)"></line>
+          <text x="550" y="180" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="9">MEDIUM</text>
+
+          <rect x="600" y="160" width="160" height="60" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="680" y="185" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Sonnet / GPT-4o</text>
+          <text x="680" y="205" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">$3/M · 300ms</text>
+
+          
+          <line x1="470" y1="225" x2="470" y2="305" stroke="#22d3ee" stroke-width="2"></line>
+          <line x1="470" y1="305" x2="590" y2="305" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow5)"></line>
+          <text x="528" y="295" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9">COMPLEX</text>
+
+          <rect x="600" y="275" width="160" height="60" rx="8" fill="#f8fafc" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="680" y="300" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Opus / o1-Pro</text>
+          <text x="680" y="320" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">$15/M · 2000ms</text>
+
+          
+          <line x1="760" y1="75" x2="775" y2="75" stroke="#22d3ee" stroke-width="1"></line>
+          <line x1="775" y1="75" x2="775" y2="370" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="5,4"></line>
+          <line x1="760" y1="190" x2="775" y2="190" stroke="#22d3ee" stroke-width="1"></line>
+          <line x1="760" y1="305" x2="775" y2="305" stroke="#22d3ee" stroke-width="1"></line>
+
+          <text x="775" y="390" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Response</text>
+        </svg>

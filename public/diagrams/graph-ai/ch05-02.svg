@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Variable-Length Path: SQL vs Cypher</text>
+  <rect x="40" y="65" width="380" height="175" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="230" y="90" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="14" font-weight="700">SQL: Recursive CTE</text>
+  <text x="58" y="115" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">WITH RECURSIVE chain(id, depth) AS (</text>
+  <text x="58" y="131" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">  SELECT id, 0 FROM nodes WHERE id=1</text>
+  <text x="58" y="147" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">  UNION ALL</text>
+  <text x="58" y="163" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">  SELECT n.id, c.depth+1</text>
+  <text x="58" y="179" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">  FROM nodes n JOIN chain c ON ...</text>
+  <text x="58" y="195" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">  WHERE c.depth &lt; 5</text>
+  <text x="58" y="211" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">)</text>
+  <text x="58" y="227" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="9" font-weight="400">SELECT * FROM chain</text>
+  <text x="230" y="255" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">~15 lines</text>
+  <line x1="422" y1="152" x2="462" y2="152" stroke="#06b6d4" stroke-width="3" marker-end="url(#arw)"/>
+  <rect x="464" y="65" width="400" height="175" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="664" y="90" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">Cypher: Variable Path</text>
+  <text x="484" y="130" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="11" font-weight="400">MATCH (a:Node {id: 1})</text>
+  <text x="484" y="152" text-anchor="start" fill="#06b6d4" font-family="JetBrains Mono" font-size="11" font-weight="400">      -[:CONNECTS*1..5]-&gt;(b)</text>
+  <text x="484" y="174" text-anchor="start" fill="#475569" font-family="JetBrains Mono" font-size="11" font-weight="400">RETURN b</text>
+  <text x="664" y="215" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">1 line</text>
+  <rect x="574" y="245" width="180" height="34" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="664" y="267" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">95% less code</text>
+</svg>

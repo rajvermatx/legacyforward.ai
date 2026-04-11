@@ -1,0 +1,40 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Discovery Process</text>
+  <rect x="30" y="120" width="145" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="102.5" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Wizard of Oz</text>
+  <text x="102.5" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Manual simulation</text>
+  <line x1="175" y1="155" x2="259.6666666666667" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="261.6666666666667" y="120" width="145" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="334.1666666666667" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">User Research</text>
+  <text x="334.1666666666667" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Validate need</text>
+  <line x1="406.6666666666667" y1="155" x2="491.33333333333337" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="493.33333333333337" y="120" width="145" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="565.8333333333334" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Probabilistic</text>
+  <text x="565.8333333333334" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Requirements</text>
+  <line x1="638.3333333333334" y1="155" x2="723" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="725" y="120" width="145" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="797.5" y="142" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Evaluation</text>
+  <text x="797.5" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Dataset</text>
+  <text x="450" y="220" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Build confidence before committing to full AI development</text>
+  <text x="450" y="234" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Each stage gates the next — kill early if signals are weak</text>
+</svg>

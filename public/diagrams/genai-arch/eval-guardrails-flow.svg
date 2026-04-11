@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580">
+  <defs>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-l" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Participants -->
+  <rect x="30" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="75" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Client</text>
+
+  <rect x="210" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="270" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Input Guards</text>
+
+  <rect x="440" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="485" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">LLM</text>
+
+  <rect x="620" y="10" width="130" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="685" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Output Guards</text>
+
+  <rect x="810" y="10" width="80" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="850" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Logger</text>
+
+  <!-- Lifelines -->
+  <line x1="75" y1="46" x2="75" y2="550" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="270" y1="46" x2="270" y2="550" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="485" y1="46" x2="485" y2="550" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="685" y1="46" x2="685" y2="550" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="850" y1="46" x2="850" y2="550" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Activation bars -->
+  <rect x="70" y="70" width="10" height="40" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="265" y="90" width="10" height="140" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="480" y="260" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="680" y="345" width="10" height="130" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="845" y="495" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+
+  <!-- Input Guards group box -->
+  <rect x="185" y="82" width="215" height="160" rx="4" fill="#a855f7" opacity="0.04" stroke="#a855f7" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="195" y="96" fill="#a855f7" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="600">INPUT GUARDS</text>
+
+  <!-- 1. Client sends input -->
+  <text x="22" y="82" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">1</text>
+  <line x1="80" y1="80" x2="260" y2="80" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="170" y="74" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">user input</text>
+
+  <!-- 2. Injection check -->
+  <text x="22" y="117" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">2</text>
+  <rect x="250" y="105" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="270" y="119" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">check</text>
+  <text x="310" y="119" fill="#475569" font-family="Nunito, sans-serif" font-size="10">prompt injection detection</text>
+
+  <!-- 3. PII scrub -->
+  <text x="22" y="152" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">3</text>
+  <rect x="250" y="140" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="270" y="154" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">scrub</text>
+  <text x="310" y="154" fill="#475569" font-family="Nunito, sans-serif" font-size="10">PII detection and redaction</text>
+
+  <!-- 4. Topic filter -->
+  <text x="22" y="187" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">4</text>
+  <rect x="250" y="175" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="270" y="189" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">filter</text>
+  <text x="310" y="189" fill="#475569" font-family="Nunito, sans-serif" font-size="10">topic and content policy check</text>
+
+  <!-- 5. Forward to LLM -->
+  <text x="22" y="267" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">5</text>
+  <line x1="275" y1="260" x2="475" y2="260" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="375" y="254" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">sanitized input + system prompt</text>
+
+  <!-- 5b. LLM generates -->
+  <line x1="475" y1="310" x2="275" y2="310" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="375" y="304" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">raw LLM response</text>
+
+  <!-- Output Guards group box -->
+  <rect x="595" y="337" width="220" height="145" rx="4" fill="#a855f7" opacity="0.04" stroke="#a855f7" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="605" y="351" fill="#a855f7" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="600">OUTPUT GUARDS</text>
+
+  <!-- 6. Forward to output guards -->
+  <text x="22" y="352" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">6</text>
+  <line x1="275" y1="345" x2="675" y2="345" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="475" y="339" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">validate output</text>
+
+  <!-- 7. Safety check -->
+  <text x="22" y="382" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">7</text>
+  <rect x="665" y="370" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="685" y="384" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">safety</text>
+  <text x="720" y="384" fill="#475569" font-family="Nunito, sans-serif" font-size="10">toxicity + harm</text>
+
+  <!-- 8. Fact check -->
+  <text x="22" y="417" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">8</text>
+  <rect x="665" y="405" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="685" y="419" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">fact</text>
+  <text x="720" y="419" fill="#475569" font-family="Nunito, sans-serif" font-size="10">factuality check</text>
+
+  <!-- 9. Format validation -->
+  <text x="22" y="452" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">9</text>
+  <rect x="665" y="440" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="685" y="454" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">format</text>
+  <text x="720" y="454" fill="#475569" font-family="Nunito, sans-serif" font-size="10">schema + structure</text>
+
+  <!-- 10. Return validated response -->
+  <text x="17" y="497" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">10</text>
+  <line x1="675" y1="490" x2="80" y2="490" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="378" y="484" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">validated response (or blocked + fallback)</text>
+
+  <!-- 11. Async log -->
+  <text x="17" y="512" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">11</text>
+  <line x1="275" y1="505" x2="840" y2="505" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-r)"/>
+  <text x="558" y="499" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10">async: log guard results, scores, pass/fail</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="540" x2="60" y2="540" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="68" y="544" fill="#475569" font-family="Nunito, sans-serif" font-size="9">request</text>
+  <line x1="160" y1="540" x2="130" y2="540" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="168" y="544" fill="#475569" font-family="Nunito, sans-serif" font-size="9">response</text>
+  <line x1="240" y1="540" x2="270" y2="540" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="278" y="544" fill="#475569" font-family="Nunito, sans-serif" font-size="9">async</text>
+  <rect x="350" y="533" width="50" height="14" rx="3" fill="#a855f7" opacity="0.06" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="408" y="544" fill="#475569" font-family="Nunito, sans-serif" font-size="9">guard group</text>
+</svg>

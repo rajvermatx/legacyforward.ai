@@ -1,0 +1,43 @@
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Capstone: Pricing Decision Process</text>
+  <rect x="30" y="90" width="125" height="65" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="92.5" y="112" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Cost Analysis</text>
+  <text x="92.5" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">API + infra</text>
+  <line x1="155" y1="122.5" x2="206.75" y2="122.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="208.75" y="90" width="125" height="65" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="271.25" y="112" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Usage Model</text>
+  <text x="271.25" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Forecast demand</text>
+  <line x1="333.75" y1="122.5" x2="385.5" y2="122.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="387.5" y="90" width="125" height="65" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="450" y="112" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Tier Design</text>
+  <text x="450" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Package options</text>
+  <line x1="512.5" y1="122.5" x2="564.25" y2="122.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="566.25" y="90" width="125" height="65" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="628.75" y="112" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">A/B Test</text>
+  <text x="628.75" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Validate WTP</text>
+  <line x1="691.25" y1="122.5" x2="743" y2="122.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="745" y="90" width="125" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="807.5" y="112" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Decision</text>
+  <text x="807.5" y="128" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Choose model</text>
+  <text x="450" y="190" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Willingness to pay experiments must precede pricing commitments</text>
+</svg>

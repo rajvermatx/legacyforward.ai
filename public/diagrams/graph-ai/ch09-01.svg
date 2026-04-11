@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Knowledge Graph Quality Pipeline</text>
+  <rect x="42" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="96" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Orphans</text>
+  <text x="96" y="149" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">✓</text>
+  <line x1="150" y1="133" x2="168" y2="133" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="170" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="224" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Duplicates</text>
+  <text x="224" y="149" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">✓</text>
+  <line x1="278" y1="133" x2="296" y2="133" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="298" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="352" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Types</text>
+  <text x="352" y="149" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">✓</text>
+  <line x1="406" y1="133" x2="424" y2="133" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="426" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="480" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Properties</text>
+  <text x="480" y="149" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="14" font-weight="700">✗</text>
+  <line x1="534" y1="133" x2="552" y2="133" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="554" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="608" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Consistency</text>
+  <text x="608" y="149" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">✓</text>
+  <line x1="662" y1="133" x2="680" y2="133" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="682" y="105" width="108" height="56" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="736" y="129" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Coverage</text>
+  <text x="736" y="149" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="700">✓</text>
+  <text x="450" y="200" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Run quality checks on every graph ingestion batch before promoting to production</text>
+  <text x="450" y="218" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Failed checks (red) trigger quarantine and human review queues</text>
+</svg>

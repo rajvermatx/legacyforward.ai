@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="300" fill="#f8fafc"/>
+  <text x="450" y="32" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">Vendor Claims — Apply Critical Scrutiny</text>
+  <text x="450" y="52" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">Seven phrases that should trigger your architect's red-flag detector</text>
+  <rect x="39" y="93" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="55" y="124" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="108" y="125" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">Enterprise-Grade</text>
+  <rect x="199" y="71" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="215" y="102" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="268" y="103" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">95% Accuracy</text>
+  <rect x="369" y="88" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="385" y="119" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="438" y="120" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">6-Week Deploy</text>
+  <rect x="539" y="71" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="555" y="102" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="608" y="94" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">Learns From</text>
+  <text x="608" y="108" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">Your Data</text>
+  <rect x="709" y="93" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="725" y="124" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="778" y="125" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">State-of-the-Art</text>
+  <rect x="124" y="188" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="140" y="219" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="193" y="220" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">Explainable AI</text>
+  <rect x="439" y="188" width="122" height="54" rx="27" fill="#fff1f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="455" y="219" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="15" font-weight="900">!</text>
+  <text x="508" y="220" text-anchor="middle" fill="#9f1239" font-family="Space Grotesk" font-size="11" font-weight="700">3-5x ROI</text>
+  <text x="450" y="285" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Each claim requires documented evidence, benchmark context, and legal review</text>
+</svg>

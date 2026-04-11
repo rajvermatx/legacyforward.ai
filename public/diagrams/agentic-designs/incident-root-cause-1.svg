@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<defs>
+  <marker id="arr-irc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+  </marker>
+  <marker id="arr2-irc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6 Z" fill="#06b6d4"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="900" height="420" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<rect x="20" y="12" width="860" height="32" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="450" y="28" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="600" fill="#475569" text-anchor="middle" dominant-baseline="central">INCIDENT ROOT CAUSE AGENT</text>
+<rect x="25" y="60" width="145" height="165" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="97" y="80" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Log Sources</text>
+<rect x="40.25" y="95" width="113.5" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="97" y="108" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">App Logs (JSON)</text>
+<rect x="40.25" y="121" width="113.5" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="97" y="134" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Syslog / Apache</text>
+<rect x="46.75" y="147" width="100.5" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="97" y="160" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Infra Metrics</text>
+<rect x="43.5" y="173" width="107" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="97" y="186" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Deploy History</text>
+<line x1="170" y1="130" x2="210" y2="130" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="215" y="60" width="185" height="150" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="1.5"/>
+<text x="307" y="82" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#06b6d4" text-anchor="middle" dominant-baseline="central">Agent Core</text>
+<rect x="228" y="96" width="160" height="34" rx="6" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5"/>
+<text x="307" y="113" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#06b6d4" text-anchor="middle" dominant-baseline="central">Function-Calling LLM</text>
+<rect x="228" y="138" width="160" height="34" rx="6" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+<text x="307" y="155" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#a855f7" text-anchor="middle" dominant-baseline="central">Senior SRE Analyst</text>
+<text x="307" y="192" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Hypothesis-driven reasoning</text>
+<rect x="215" y="230" width="185" height="175" rx="10" fill="#ecfdf5" stroke="#22c55e" stroke-width="1.5"/>
+<text x="307" y="250" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#22c55e" text-anchor="middle" dominant-baseline="central">Tool Registry</text>
+<rect x="266.5" y="265" width="81" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="307" y="278" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">parse_logs</text>
+<rect x="247" y="291" width="120" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="307" y="304" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">correlate_events</text>
+<rect x="234" y="317" width="146" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="307" y="330" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">check_service_health</text>
+<rect x="250.25" y="343" width="113.5" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="307" y="356" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">form_hypothesis</text>
+<rect x="250.25" y="369" width="113.5" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="307" y="382" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">test_hypothesis</text>
+<line x1="307" y1="210" x2="307" y2="228" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<path d="M282,230 L282,210" stroke="#06b6d4" stroke-width="1.5" fill="none" marker-end="url(#arr2-irc)"/>
+<line x1="400" y1="100" x2="445" y2="100" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="450" y="60" width="175" height="55" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+<text x="537" y="78" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#a855f7" text-anchor="middle" dominant-baseline="central">1. Parse &amp; Filter</text>
+<text x="537" y="98" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Extract events, reduce noise</text>
+<line x1="537" y1="115" x2="537" y2="135" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="450" y="140" width="175" height="55" rx="10" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5"/>
+<text x="537" y="158" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#a855f7" text-anchor="middle" dominant-baseline="central">2. Correlate</text>
+<text x="537" y="178" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Temporal cross-service links</text>
+<line x1="537" y1="195" x2="537" y2="218" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="450" y="222" width="175" height="55" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="537" y="240" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#f59e0b" text-anchor="middle" dominant-baseline="central">3. Hypothesize</text>
+<text x="537" y="260" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">LLM generates root causes</text>
+<line x1="537" y1="277" x2="537" y2="298" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="450" y="302" width="175" height="55" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="537" y="320" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#ef4444" text-anchor="middle" dominant-baseline="central">4. Test Hypothesis</text>
+<text x="537" y="340" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Confirm or reject with data</text>
+<path d="M625,330 L650,330 L650,240 L627,240" stroke="#06b6d4" stroke-width="1.5" fill="none" marker-end="url(#arr2-irc)" stroke-dasharray="6,3"/>
+<text x="662" y="285" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#f59e0b" text-anchor="middle" dominant-baseline="central">refine</text>
+<line x1="537" y1="357" x2="537" y2="378" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="450" y="382" width="175" height="28" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="537" y="396" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#0f172a" text-anchor="middle" dominant-baseline="central">5. Build Timeline</text>
+<rect x="680" y="60" width="190" height="155" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="775" y="80" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle" dominant-baseline="central">Output</text>
+<rect x="711.75" y="95" width="126.5" height="26" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+<text x="775" y="108" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#ef4444" text-anchor="middle" dominant-baseline="central">Root Cause Report</text>
+<rect x="711.75" y="121" width="126.5" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="775" y="134" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Incident Timeline</text>
+<rect x="721.5" y="147" width="107" height="26" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+<text x="775" y="160" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#3b82f6" text-anchor="middle" dominant-baseline="central">Evidence Chain</text>
+<rect x="711.75" y="173" width="126.5" height="26" rx="6" fill="#ecfdf5" stroke="#22c55e" stroke-width="1"/>
+<text x="775" y="186" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#22c55e" text-anchor="middle" dominant-baseline="central">Remediation Steps</text>
+<line x1="627" y1="90" x2="678" y2="90" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arr2-irc)"/>
+<rect x="680" y="250" width="190" height="90" rx="10" fill="#ecfdf5" stroke="#22c55e" stroke-width="1.5"/>
+<text x="775" y="270" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#22c55e" text-anchor="middle" dominant-baseline="central">Service Graph</text>
+<text x="775" y="292" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Dependency topology</text>
+<text x="775" y="310" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Health + latency metrics</text>
+<text x="775" y="328" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="500" fill="#475569" text-anchor="middle" dominant-baseline="central">Recent deploy events</text>
+</svg>

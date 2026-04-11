@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Vector-Only Retrieval: Context Gap</text>
+  <rect x="15" y="145" width="130" height="60" rx="8" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="80" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Query</text>
+  <line x1="145" y1="175" x2="175" y2="175" stroke="#0f172a" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="175" y="145" width="130" height="60" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="180" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="700">Vector Search</text>
+  <line x1="305" y1="175" x2="365" y2="175" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="365" y="145" width="130" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="430" y="180" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="700">Similar Docs</text>
+  <line x1="495" y1="175" x2="555" y2="175" stroke="#0f172a" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="555" y="145" width="130" height="60" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="620" y="180" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="11" font-weight="700">LLM</text>
+  <line x1="685" y1="175" x2="745" y2="175" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="745" y="145" width="130" height="60" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="810" y="180" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="11" font-weight="700">Wrong answer ✗</text>
+  <path d="M 430 145 Q 430 70 430 65" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arwR)"/>
+  <rect x="310" y="40" width="240" height="34" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="430" y="62" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="10" font-weight="400">No relationship context! Chunks are isolated</text>
+  <text x="450" y="248" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Vector search finds semantically similar text but misses how entities connect</text>
+  <text x="450" y="266" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="10" font-weight="400">Multi-hop questions (ownership chains, compliance paths) fail without graph structure</text>
+</svg>

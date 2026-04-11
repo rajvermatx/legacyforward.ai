@@ -1,0 +1,148 @@
+<svg viewBox="0 0 800 500" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow10" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+            <marker id="arrow10p" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"></polygon>
+            </marker>
+          </defs>
+
+          
+
+          
+          <rect x="10" y="50" width="90" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="55" y="75" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Client</text>
+          <text x="55" y="92" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Apps</text>
+
+          
+          <line x1="100" y1="80" x2="130" y2="80" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="140" y="38" width="140" height="85" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="210" y="60" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">API Gateway</text>
+          <text x="210" y="78" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Auth / JWT</text>
+          <text x="210" y="92" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Rate Limit</text>
+          <text x="210" y="106" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Validation / Cache Check</text>
+
+          
+          <line x1="280" y1="80" x2="320" y2="80" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="330" y="48" width="110" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="385" y="72" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Request</text>
+          <text x="385" y="90" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Router</text>
+          <text x="385" y="106" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">feature flags</text>
+
+          
+
+          
+          <line x1="385" y1="113" x2="385" y2="148" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+          <line x1="350" y1="113" x2="250" y2="148" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+          <line x1="420" y1="113" x2="530" y2="148" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="195" y="155" width="110" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="250" y="178" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">RAG Pipeline</text>
+          <text x="250" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">embed, retrieve</text>
+          <text x="250" y="209" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">rerank, augment</text>
+
+          
+          <rect x="330" y="155" width="110" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="385" y="178" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Agent Pipeline</text>
+          <text x="385" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">plan, tools</text>
+          <text x="385" y="209" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">multi-agent</text>
+
+          
+          <rect x="475" y="155" width="110" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="530" y="178" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Direct LLM</text>
+          <text x="530" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">chat, completion</text>
+          <text x="530" y="209" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">fine-tuned models</text>
+
+          
+          <line x1="250" y1="220" x2="385" y2="250" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10)"></line>
+          <line x1="385" y1="220" x2="385" y2="250" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10)"></line>
+          <line x1="530" y1="220" x2="385" y2="250" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="310" y="255" width="150" height="70" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="385" y="278" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">LLM Pool</text>
+          <text x="345" y="298" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">GPT-4o</text>
+          <text x="385" y="298" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Claude</text>
+          <text x="425" y="298" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Llama</text>
+          <text x="385" y="314" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">fallback chains</text>
+
+          
+          <line x1="460" y1="290" x2="510" y2="290" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="520" y="260" width="95" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="567" y="283" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Guardrails</text>
+          <text x="567" y="298" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">PII, toxicity</text>
+          <text x="567" y="311" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">format check</text>
+
+          
+          <line x1="615" y1="290" x2="645" y2="290" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="655" y="260" width="95" height="60" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="702" y="283" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Response</text>
+          <text x="702" y="298" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Cache</text>
+          <text x="702" y="311" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">semantic match</text>
+
+          
+          <path d="M 702 260 L 702 30 L 55 30 L 55 50" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow10)" stroke-dasharray="6,4"></path>
+          <text x="380" y="22" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">response</text>
+
+          
+
+          
+          <rect x="50" y="380" width="95" height="50" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="97" y="402" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Vector DB</text>
+          <text x="97" y="418" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Pinecone / Qdrant</text>
+          
+          <line x1="145" y1="395" x2="220" y2="220" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+
+          
+          <rect x="170" y="380" width="95" height="50" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="217" y="402" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Tool Registry</text>
+          <text x="217" y="418" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">APIs, functions</text>
+          
+          <line x1="265" y1="395" x2="360" y2="220" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+
+          
+          <rect x="290" y="380" width="95" height="50" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="337" y="402" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Model Registry</text>
+          <text x="337" y="418" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">versions, adapters</text>
+          
+          <line x1="370" y1="380" x2="375" y2="325" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+
+          
+          <rect x="410" y="380" width="100" height="50" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="460" y="402" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Fine-Tune</text>
+          <text x="460" y="418" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">LoRA, eval, deploy</text>
+          
+          <line x1="420" y1="395" x2="385" y2="395" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+
+          
+
+          
+          <rect x="660" y="370" width="120" height="80" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="720" y="392" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Observability</text>
+          <text x="720" y="410" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Logs / Metrics</text>
+          <text x="720" y="424" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9">Traces / Alerts</text>
+          <text x="720" y="440" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">OpenTelemetry</text>
+
+          
+          <rect x="545" y="390" width="95" height="45" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="592" y="410" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Cost Tracker</text>
+          <text x="592" y="425" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">per team / project</text>
+
+          
+          <line x1="720" y1="370" x2="702" y2="320" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+          <line x1="690" y1="370" x2="567" y2="320" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,3"></line>
+
+          
+          <text x="400" y="360" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-style="italic">Infrastructure Layer</text>
+          <text x="400" y="145" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-style="italic">Pipeline Layer</text>
+        </svg>

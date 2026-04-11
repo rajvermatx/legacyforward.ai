@@ -1,0 +1,39 @@
+<svg viewBox="0 0 900 360" width="900" height="360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Supervisor Pattern</text>
+  <rect x="320" y="60" width="260" height="70" rx="12" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="450" y="88" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="14" font-weight="600">Supervisor Agent</text>
+  <text x="450" y="108" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Assign, monitor, redirect</text>
+  <rect x="100" y="200" width="150" height="60" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="175" y="228" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Worker A</text>
+  <line x1="450" y1="130" x2="175" y2="198" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M 175 260 L 175 300 L 450 300 L 450 135" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <rect x="350" y="200" width="150" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="425" y="228" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Worker B</text>
+  <line x1="450" y1="130" x2="425" y2="198" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M 425 260 L 425 300 L 450 300 L 450 135" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <rect x="600" y="200" width="150" height="60" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="675" y="228" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Worker C</text>
+  <line x1="450" y1="130" x2="675" y2="198" stroke="#22c55e" stroke-width="2" marker-end="url(#arw)"/>
+  <path d="M 675 260 L 675 300 L 450 300 L 450 135" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+  <text x="450" y="320" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">feedback loops</text>
+</svg>

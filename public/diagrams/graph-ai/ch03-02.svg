@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 380" width="900" height="380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">GraphRAG Architecture</text>
+  <rect x="30" y="90" width="150" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="105" y="122" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="700">Documents</text>
+  <rect x="200" y="90" width="150" height="54" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="275" y="122" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="700">Extraction</text>
+  <line x1="180" y1="117" x2="198" y2="117" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="350" y1="117" x2="410" y2="100" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="350" y1="117" x2="410" y2="180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <rect x="410" y="70" width="170" height="54" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="495" y="102" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="700">Knowledge Graph</text>
+  <rect x="410" y="155" width="170" height="54" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="495" y="187" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="700">Vector Index</text>
+  <line x1="580" y1="97" x2="630" y2="117" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="580" y1="182" x2="630" y2="162" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <rect x="630" y="95" width="150" height="64" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="705" y="123" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Hybrid</text>
+  <text x="705" y="141" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Retrieval</text>
+  <line x1="780" y1="127" x2="820" y2="127" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="820" y="97" width="65" height="60" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="852" y="127" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="700">LLM</text>
+  <line x1="852" y1="157" x2="852" y2="240" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <rect x="780" y="240" width="115" height="54" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="837" y="272" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">Answer</text>
+  <rect x="630" y="265" width="130" height="50" rx="10" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="695" y="295" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="700">User Query</text>
+  <line x1="695" y1="265" x2="695" y2="162" stroke="#0f172a" stroke-width="2" marker-end="url(#arwN)"/>
+  <text x="450" y="340" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">GraphRAG combines semantic similarity with structural context for higher-fidelity retrieval</text>
+  <text x="450" y="358" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Nodes, relationships, and properties enrich the context window beyond raw text chunks</text>
+</svg>

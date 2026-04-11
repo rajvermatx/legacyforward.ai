@@ -1,0 +1,62 @@
+<svg viewBox="0 0 680 500" xmlns="http://www.w3.org/2000/svg">
+        
+        <defs>
+          <marker id="arrow-2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" ></polygon>
+          </marker>
+        </defs>
+
+        
+        <text x="340" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">Agent Anatomy: The Core Loop</text>
+
+        
+        <rect x="250" y="190" width="180" height="80" rx="12" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="2" ></rect>
+        <text x="340" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">LLM Core</text>
+        <text x="340" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Reasoning engine</text>
+
+        
+        <rect x="235" y="56" width="210" height="72" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="340" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Perception</text>
+        <text x="340" y="106" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">User input, tool results, observations</text>
+
+        
+        <rect x="30" y="194" width="168" height="72" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" ></rect>
+        <text x="114" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Memory</text>
+        <text x="114" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Context, history, knowledge</text>
+
+        
+        <rect x="482" y="194" width="168" height="72" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="566" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Reasoning</text>
+        <text x="566" y="244" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Planning, evaluation, decisions</text>
+
+        
+        <rect x="235" y="332" width="210" height="72" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="2" ></rect>
+        <text x="340" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#993C1D" dominant-baseline="central" text-anchor="middle">Action</text>
+        <text x="340" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#993C1D" dominant-baseline="central" text-anchor="middle">Tool calls, API requests, outputs</text>
+
+        
+        <path d="M340,128 L340,190" fill="none" stroke="#0F6E56" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+
+        
+        <path d="M340,270 L340,332" fill="none" stroke="#993C1D" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+
+        
+        <path d="M198,218 L250,218" fill="none" stroke="#185FA5" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+        <path d="M250,242 L198,242" fill="none" stroke="#185FA5" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+
+        
+        <path d="M430,218 L482,218" fill="none" stroke="#534AB7" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+        <path d="M482,242 L430,242" fill="none" stroke="#534AB7" stroke-width="2" marker-end="url(#arrow-2)" ></path>
+
+        
+        <path d="M445,368 Q580,368 600,230 Q600,92 445,92" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6 3" marker-end="url(#arrow-2)" ></path>
+        <text x="624" y="230" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="start">Feedback</text>
+        <text x="624" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="start">loop</text>
+
+        
+        <text x="340" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="middle">Perceive  ->  Reason  ->  Act  ->  Observe  ->  Repeat</text>
+
+        
+        <rect x="120" y="465" width="440" height="28" rx="6" fill="none" stroke="#D3D1C7" stroke-width="1" stroke-dasharray="4 3" ></rect>
+        <text x="340" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="middle">External Environment: APIs, databases, file systems, users</text>
+      </svg>

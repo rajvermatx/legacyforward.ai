@@ -1,0 +1,47 @@
+<svg viewBox="0 0 820 200" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="820" height="200" fill="#f8fafc" rx="12"></rect>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#22c55e" opacity="0.8"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="60" width="100" height="80" rx="8" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5"></rect>
+          <text x="70" y="95" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">Model</text>
+          <text x="70" y="110" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="600">Selection</text>
+
+          <line x1="122" y1="100" x2="148" y2="100" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          <rect x="150" y="60" width="100" height="80" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="200" y="95" text-anchor="middle" fill="#a855f7" font-size="10" font-weight="600">Prompt</text>
+          <text x="200" y="110" text-anchor="middle" fill="#a855f7" font-size="10" font-weight="600">Engineering</text>
+
+          <line x1="252" y1="100" x2="278" y2="100" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          <rect x="280" y="60" width="100" height="80" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="330" y="95" text-anchor="middle" fill="#f97316" font-size="10" font-weight="600">Fine-Tuning</text>
+          <text x="330" y="110" text-anchor="middle" fill="#f97316" font-size="10" font-weight="600">(Optional)</text>
+
+          <line x1="382" y1="100" x2="408" y2="100" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          <rect x="410" y="60" width="100" height="80" rx="8" fill="#f1f5f9" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="460" y="95" text-anchor="middle" fill="#22d3ee" font-size="10" font-weight="600">Evaluation</text>
+          <text x="460" y="110" text-anchor="middle" fill="#22d3ee" font-size="10" font-weight="600">&amp; Testing</text>
+
+          <line x1="512" y1="100" x2="538" y2="100" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          <rect x="540" y="60" width="100" height="80" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="590" y="95" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">Deployment</text>
+          <text x="590" y="110" text-anchor="middle" fill="#22c55e" font-size="10" font-weight="600">&amp; Serving</text>
+
+          <line x1="642" y1="100" x2="668" y2="100" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)"></line>
+
+          <rect x="670" y="60" width="130" height="80" rx="8" fill="#f1f5f9" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="735" y="95" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="600">Monitoring</text>
+          <text x="735" y="110" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="600">&amp; Feedback</text>
+
+          
+          <path d="M735 142 L735 170 L200 170 L200 142" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr)"></path>
+          <text x="470" y="185" text-anchor="middle" fill="#64748b" font-size="9">Iterate: Adjust prompts, retune, update RAG pipeline</text>
+        </svg>

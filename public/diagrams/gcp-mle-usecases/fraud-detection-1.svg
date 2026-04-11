@@ -1,0 +1,89 @@
+<svg viewBox="0 0 920 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+          
+          <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="1" r="0.6" fill="#e2e8f0"></circle>
+          </pattern>
+          <rect width="920" height="340" fill="url(#dots)"></rect>
+
+          
+          <rect x="10" y="130" width="110" height="60" rx="10" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="65" y="155" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="600" fill="#0f172a">Transaction</text>
+          <text x="65" y="172" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="600" fill="#0f172a">Stream</text>
+
+          
+          <line x1="120" y1="160" x2="155" y2="160" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"></line>
+
+          
+          <rect x="160" y="130" width="110" height="60" rx="10" fill="rgba(245,158,11,0.12)" stroke="#f59e0b"></rect>
+          <text x="215" y="155" text-anchor="middle" font-family="Space Grotesk" font-size="12" font-weight="700" fill="#f59e0b">Pub/Sub</text>
+          <text x="215" y="172" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">Streaming Ingest</text>
+
+          
+          <line x1="270" y1="160" x2="305" y2="160" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"></line>
+
+          
+          <rect x="310" y="120" width="130" height="80" rx="10" fill="rgba(245,158,11,0.12)" stroke="#f59e0b"></rect>
+          <text x="375" y="148" text-anchor="middle" font-family="Space Grotesk" font-size="12" font-weight="700" fill="#f59e0b">Dataflow</text>
+          <text x="375" y="165" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">Feature</text>
+          <text x="375" y="180" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">Computation</text>
+
+          
+          <line x1="375" y1="120" x2="375" y2="70" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrowCyan)"></line>
+
+          
+          <rect x="310" y="10" width="130" height="55" rx="10" fill="rgba(34,211,238,0.1)" stroke="#22d3ee"></rect>
+          <text x="375" y="33" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#22d3ee">Feature Store</text>
+          <text x="375" y="50" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">User Profiles</text>
+
+          
+          <line x1="440" y1="37" x2="520" y2="37" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4 3"></line>
+          <line x1="520" y1="37" x2="520" y2="130" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="4 3"></line>
+
+          
+          <line x1="440" y1="160" x2="475" y2="160" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowhead)"></line>
+
+          
+          <rect x="480" y="120" width="140" height="80" rx="10" fill="rgba(99,102,241,0.12)" stroke="#6366f1"></rect>
+          <text x="550" y="148" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#6366f1">Online Prediction</text>
+          <text x="550" y="165" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">Vertex AI Endpoint</text>
+          <text x="550" y="180" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">&lt;50ms latency</text>
+
+          
+          <line x1="620" y1="160" x2="660" y2="160" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowIndigo)"></line>
+
+          
+          <rect x="665" y="120" width="120" height="80" rx="10" fill="rgba(34,197,94,0.1)" stroke="#22c55e"></rect>
+          <text x="725" y="145" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#22c55e">Decision</text>
+          <text x="725" y="162" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#22c55e">Engine</text>
+          <text x="725" y="185" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#475569">Approve / Decline / Review</text>
+
+          
+          <line x1="725" y1="200" x2="725" y2="260" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 3"></line>
+
+          
+          <rect x="650" y="265" width="150" height="55" rx="10" fill="rgba(168,85,247,0.1)" stroke="#a855f7"></rect>
+          <text x="725" y="288" text-anchor="middle" font-family="Space Grotesk" font-size="11" font-weight="700" fill="#a855f7">Monitoring</text>
+          <text x="725" y="305" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#475569">Drift &amp; Alerts</text>
+
+          
+          <line x1="650" y1="292" x2="550" y2="292" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 3"></line>
+          <line x1="550" y1="292" x2="550" y2="200" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="4 3"></line>
+
+          
+          <rect x="470" y="265" width="140" height="45" rx="8" fill="rgba(168,85,247,0.06)" stroke="#2e3554"></rect>
+          <text x="540" y="285" text-anchor="middle" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#a855f7">Cloud Functions</text>
+          <text x="540" y="299" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="#475569">Alert Pipeline</text>
+
+          
+          <defs>
+            <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#f59e0b"></polygon>
+            </marker>
+            <marker id="arrowCyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#22d3ee"></polygon>
+            </marker>
+            <marker id="arrowIndigo" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#6366f1"></polygon>
+            </marker>
+          </defs>
+        </svg>

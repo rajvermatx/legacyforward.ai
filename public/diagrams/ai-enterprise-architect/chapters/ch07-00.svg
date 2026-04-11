@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 400" width="900" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Model Hosting Decision Tree</text>
+  <polygon points="450,70 550,120 450,170 350,120" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="118" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10">Data</text>
+  <text x="450" y="130" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="10">Sensitivity?</text>
+  <line x1="550" y1="120" x2="680" y2="80" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="620" y="90" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Low</text>
+  <rect x="680" y="55" width="170" height="55" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="765" y="78" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Cloud API</text>
+  <text x="765" y="96" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">OpenAI, Anthropic, Google</text>
+  <line x1="450" y1="170" x2="450" y2="220" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <text x="470" y="200" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">Medium</text>
+  <rect x="365" y="225" width="170" height="55" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="450" y="248" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Hybrid</text>
+  <text x="450" y="266" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">VPC + Private endpoints</text>
+  <line x1="350" y1="120" x2="220" y2="80" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <text x="280" y="90" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">High</text>
+  <rect x="50" y="55" width="170" height="55" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="135" y="78" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="600">Self-hosted</text>
+  <text x="135" y="96" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">On-prem GPU / Private cloud</text>
+  <rect x="50" y="310" width="250" height="60" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="175" y="335" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Full control, highest cost</text>
+  <text x="175" y="352" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9">HIPAA, classified data</text>
+  <rect x="330" y="310" width="250" height="60" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="455" y="335" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Balanced security + cost</text>
+  <text x="455" y="352" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="9">Financial, healthcare</text>
+  <rect x="610" y="310" width="250" height="60" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="735" y="335" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">Fastest, lowest cost</text>
+  <text x="735" y="352" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">Marketing, general use</text>
+</svg>

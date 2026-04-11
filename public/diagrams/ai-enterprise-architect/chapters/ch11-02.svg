@@ -1,0 +1,38 @@
+<svg viewBox="0 0 900 280" width="900" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Sequential Agent Pipeline</text>
+  <rect x="35" y="90" width="170" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Research</text>
+  <text x="120" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Gather info</text>
+  <line x1="205" y1="125" x2="253" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="255" y="90" width="170" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="340" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Analysis</text>
+  <text x="340" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Process data</text>
+  <line x1="425" y1="125" x2="473" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="475" y="90" width="170" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="560" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Writing</text>
+  <text x="560" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Draft content</text>
+  <line x1="645" y1="125" x2="693" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="695" y="90" width="170" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="780" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Review</text>
+  <text x="780" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Quality check</text>
+</svg>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwT" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwDk" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="900" height="300" fill="#f8fafc"/>
+  <text x="450" y="30" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="17" font-weight="700">Legacy Coexistence Patterns</text>
+  <text x="450" y="50" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="12" font-weight="400">Integration depth increases left to right</text>
+  <line x1="69" y1="70" x2="831" y2="70" stroke="#06b6d4" stroke-width="2" marker-end="url(#arwT)"/>
+  <text x="450" y="65" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Increasing Integration Depth</text>
+  <rect x="69" y="88" width="138" height="90" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="69" y="88" width="138" height="26" rx="10" fill="#3b82f6"/>
+  <rect x="69" y="106" width="138" height="8" fill="#3b82f6"/>
+  <text x="138" y="105" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="11" font-weight="700">Data Exhaust</text>
+  <text x="138" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">Read-only logs</text>
+  <text x="138" y="153" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">from legacy</text>
+  <circle cx="195" cy="166" r="10" fill="#3b82f620" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="195" y="170" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="9" font-weight="400">1</text>
+  <line x1="209" y1="133" x2="223" y2="133" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="225" y="88" width="138" height="90" rx="10" fill="#ffffff" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="225" y="88" width="138" height="26" rx="10" fill="#06b6d4"/>
+  <rect x="225" y="106" width="138" height="8" fill="#06b6d4"/>
+  <text x="294" y="105" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="11" font-weight="700">Sidecar</text>
+  <text x="294" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">AI runs beside</text>
+  <text x="294" y="153" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">existing service</text>
+  <circle cx="351" cy="166" r="10" fill="#06b6d420" stroke="#06b6d4" stroke-width="1.5"/>
+  <text x="351" y="170" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9" font-weight="400">2</text>
+  <line x1="365" y1="133" x2="379" y2="133" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="381" y="88" width="138" height="90" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <rect x="381" y="88" width="138" height="26" rx="10" fill="#a855f7"/>
+  <rect x="381" y="106" width="138" height="8" fill="#a855f7"/>
+  <text x="450" y="105" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="11" font-weight="700">Gateway</text>
+  <text x="450" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">AI intercepts</text>
+  <text x="450" y="153" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">requests inline</text>
+  <circle cx="507" cy="166" r="10" fill="#a855f720" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="507" y="170" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9" font-weight="400">3</text>
+  <line x1="521" y1="133" x2="535" y2="133" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="537" y="88" width="138" height="90" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="537" y="88" width="138" height="26" rx="10" fill="#f59e0b"/>
+  <rect x="537" y="106" width="138" height="8" fill="#f59e0b"/>
+  <text x="606" y="100" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="10" font-weight="700">Shadow</text>
+  <text x="606" y="111" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="10" font-weight="700">Pipeline</text>
+  <text x="606" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">Parallel AI path,</text>
+  <text x="606" y="153" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">results compared</text>
+  <circle cx="663" cy="166" r="10" fill="#f59e0b20" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="663" y="170" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="9" font-weight="400">4</text>
+  <line x1="677" y1="133" x2="691" y2="133" stroke="#cbd5e1" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="693" y="88" width="138" height="90" rx="10" fill="#ffffff" stroke="#22c55e" stroke-width="2"/>
+  <rect x="693" y="88" width="138" height="26" rx="10" fill="#22c55e"/>
+  <rect x="693" y="106" width="138" height="8" fill="#22c55e"/>
+  <text x="762" y="100" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="10" font-weight="700">Legacy-Aware</text>
+  <text x="762" y="111" text-anchor="middle" fill="#ffffff" font-family="Space Grotesk" font-size="10" font-weight="700">Agent</text>
+  <text x="762" y="140" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">AI drives legacy</text>
+  <text x="762" y="153" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">via APIs/RPA</text>
+  <circle cx="819" cy="166" r="10" fill="#22c55e20" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="819" y="170" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9" font-weight="400">5</text>
+  <text x="69" y="215" text-anchor="start" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">Low risk</text>
+  <text x="831" y="215" text-anchor="end" fill="#64748b" font-family="Nunito" font-size="10" font-weight="400">High value</text>
+  <line x1="69" y1="220" x2="831" y2="220" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="69" y="218" width="762" height="4" rx="2" fill="url(#grad1)"/>
+  <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/><stop offset="100%" style="stop-color:#22c55e;stop-opacity:0.8"/></linearGradient></defs>
+  <text x="450" y="260" text-anchor="middle" fill="#64748b" font-family="Nunito" font-size="11" font-weight="400">Start with Data Exhaust (zero disruption) and evolve as confidence grows</text>
+  <text x="450" y="278" text-anchor="middle" fill="#94a3b8" font-family="Nunito" font-size="10" font-weight="400">Each pattern is independently deployable</text>
+</svg>

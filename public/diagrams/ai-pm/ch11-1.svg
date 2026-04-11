@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Operations Dashboard</text>
+  <rect x="40" y="50" width="390" height="130" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="235" y="74" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">Quality Metrics</text>
+  <line x1="60" y1="85" x2="410" y2="85" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+  <text x="70" y="110" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Accuracy: 94.2%</text>
+  <text x="70" y="135" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Hallucination: 0.8%</text>
+  <text x="70" y="160" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">User thumbs-up: 87%</text>
+  <rect x="470" y="50" width="390" height="130" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="665" y="74" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Cost Tracking</text>
+  <line x1="490" y1="85" x2="840" y2="85" stroke="#a855f7" stroke-width="1" opacity="0.4"/>
+  <text x="500" y="110" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Daily spend: $142</text>
+  <text x="500" y="135" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Cost per query: $0.003</text>
+  <text x="500" y="160" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Budget utilization: 68%</text>
+  <rect x="40" y="200" width="390" height="130" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="235" y="224" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="700">Latency Monitoring</text>
+  <line x1="60" y1="235" x2="410" y2="235" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+  <text x="70" y="260" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">p50: 320ms</text>
+  <text x="70" y="285" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">p95: 890ms</text>
+  <text x="70" y="310" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">p99: 1240ms</text>
+  <rect x="470" y="200" width="390" height="130" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="665" y="224" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">User Feedback</text>
+  <line x1="490" y1="235" x2="840" y2="235" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
+  <text x="500" y="260" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Satisfied: 82%</text>
+  <text x="500" y="285" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Neutral: 11%</text>
+  <text x="500" y="310" text-anchor="start" fill="#334155" font-family="Nunito" font-size="10" font-weight="400">Dissatisfied: 7%</text>
+</svg>

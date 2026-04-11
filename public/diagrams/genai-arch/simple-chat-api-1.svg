@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 300" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+          
+          <rect x="30" y="100" width="140" height="80" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="100" y="135" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="15" font-weight="600">User</text>
+          <text x="100" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12">Sends message</text>
+
+          
+          <line x1="170" y1="140" x2="270" y2="140" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow1)"></line>
+          <text x="220" y="130" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">prompt</text>
+
+          
+          <rect x="280" y="80" width="200" height="120" rx="12" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="380" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="15" font-weight="600">API Gateway</text>
+          <text x="380" y="138" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="11">+ system prompt</text>
+          <text x="380" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">temperature, max_tokens</text>
+          <text x="380" y="178" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">validation, rate limit</text>
+
+          
+          <line x1="480" y1="140" x2="580" y2="140" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow1)"></line>
+          <text x="530" y="130" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">API call</text>
+
+          
+          <rect x="590" y="100" width="160" height="80" rx="12" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="670" y="135" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="15" font-weight="600">LLM</text>
+          <text x="670" y="158" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="12">Generate response</text>
+
+          
+          <path d="M 590 190 L 590 240 L 170 240 L 170 190" fill="none" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow1)" stroke-dasharray="6,4"></path>
+          <text x="380" y="258" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">response (text or stream)</text>
+        </svg>

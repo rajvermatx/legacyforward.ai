@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 400" width="100%" role="img" aria-label="Cost vs Quality trade-off matrix showing where different LLM models fit">
+
+
+        <line x1="80" y1="340" x2="580" y2="340" stroke="#475569" stroke-width="1.5"></line>
+        <line x1="80" y1="340" x2="80" y2="40" stroke="#475569" stroke-width="1.5"></line>
+
+        <polygon points="580,340 570,335 570,345" fill="#475569"></polygon>
+        <polygon points="80,40 75,50 85,50" fill="#475569"></polygon>
+
+        <text x="330" y="380" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Cost per Request</text>
+        <text x="20" y="190" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90, 20, 190)">Output Quality</text>
+        <text x="100" y="360" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Low</text>
+        <text x="555" y="360" font-family="Nunito, sans-serif" font-size="10" fill="#475569">High</text>
+        <text x="60" y="330" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Low</text>
+        <text x="60" y="60" font-family="Nunito, sans-serif" font-size="10" fill="#475569">High</text>
+
+
+        <text x="220" y="80" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569" font-style="italic">Best value for most tasks</text>
+        <text x="450" y="80" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569" font-style="italic">Maximum quality</text>
+        <text x="220" y="310" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569" font-style="italic">Quick, simple tasks</text>
+        <text x="450" y="310" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569" font-style="italic">Diminishing returns</text>
+
+
+        <line x1="330" y1="50" x2="330" y2="335" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5,5"></line>
+        <line x1="85" y1="190" x2="575" y2="190" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="5,5"></line>
+
+
+        <rect x="130" y="145" width="150" height="65" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"></rect>
+        <text x="205" y="168" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#166534">GPT-4o-mini</text>
+        <text x="205" y="182" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#166534">Claude Haiku</text>
+        <text x="205" y="198" text-anchor="middle" font-family="Nunito, sans-serif" font-size="9" fill="#475569">~$0.15-0.25 / 1M tokens</text>
+
+
+        <rect x="370" y="65" width="150" height="65" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"></rect>
+        <text x="445" y="88" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#1e40af">GPT-4o</text>
+        <text x="445" y="102" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#1e40af">Claude Sonnet</text>
+        <text x="445" y="118" text-anchor="middle" font-family="Nunito, sans-serif" font-size="9" fill="#475569">~$2.50-3.00 / 1M tokens</text>
+
+
+        <rect x="110" y="230" width="140" height="65" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="180" y="253" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#475569">Llama / Mistral</text>
+        <text x="180" y="267" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#475569">(Self-hosted)</text>
+        <text x="180" y="283" text-anchor="middle" font-family="Nunito, sans-serif" font-size="9" fill="#475569">Free, but needs hardware</text>
+
+
+        <line x1="205" y1="145" x2="370" y2="125" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#cq-arr)"></line>
+        <text x="290" y="120" font-family="Nunito, sans-serif" font-size="9" fill="#06b6d4" text-anchor="middle">Prototype with frontier,</text>
+        <text x="290" y="132" font-family="Nunito, sans-serif" font-size="9" fill="#06b6d4" text-anchor="middle">then test if mini works</text>
+
+        <defs>
+          <marker id="cq-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#06b6d4"></polygon>
+          </marker>
+        </defs>
+      </svg>

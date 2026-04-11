@@ -1,0 +1,77 @@
+<svg viewBox="0 0 680 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flowchart showing task delegation and result aggregation, from initial request through task splitting, parallel execution, and merge into final output">
+        <defs>
+          <marker id="arrow-2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#3b82f6"></path>
+          </marker>
+        </defs>
+
+        <rect width="680" height="620" rx="8" fill="#f8fafc"></rect>
+
+        <text x="16" y="52" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">RECEIVE</text>
+        <text x="16" y="142" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">PLAN</text>
+        <text x="16" y="232" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">SPLIT</text>
+        <text x="16" y="342" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">EXECUTE</text>
+        <text x="16" y="452" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">COLLECT</text>
+        <text x="16" y="542" text-anchor="start" font-family="Space Grotesk, system-ui, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="0.08em">DELIVER</text>
+
+        <rect x="250" y="30" width="180" height="40" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"></rect>
+        <text x="340" y="55" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3b82f6">User Request</text>
+
+        <line x1="340" y1="70" x2="340" y2="110" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+
+        <rect x="220" y="110" width="240" height="48" rx="8" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"></rect>
+        <text x="340" y="133" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#8b5cf6">Supervisor: Decompose</text>
+        <text x="340" y="148" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#a855f7">Analyze → Plan → Task graph</text>
+
+        <line x1="340" y1="158" x2="340" y2="195" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+
+        <rect x="250" y="195" width="180" height="40" rx="8" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"></rect>
+        <text x="340" y="220" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#8b5cf6">Task Split</text>
+
+        <line x1="270" y1="235" x2="130" y2="305" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <line x1="340" y1="235" x2="340" y2="305" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <line x1="410" y1="235" x2="550" y2="305" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+
+        <rect x="65" y="305" width="130" height="55" rx="8" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="130" y="327" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0d9488">Worker A</text>
+        <text x="130" y="345" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#14b8a6">Task 1: Research</text>
+
+        <rect x="275" y="305" width="130" height="55" rx="8" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="340" y="327" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0d9488">Worker B</text>
+        <text x="340" y="345" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#14b8a6">Task 2: Analyze</text>
+
+        <rect x="485" y="305" width="130" height="55" rx="8" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="550" y="327" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0d9488">Worker C</text>
+        <text x="550" y="345" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#14b8a6">Task 3: Draft</text>
+
+        <line x1="85" y1="295" x2="600" y2="295" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="3,3"></line>
+        <text x="630" y="298" text-anchor="start" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#f59e0b">parallel</text>
+        <line x1="85" y1="370" x2="600" y2="370" stroke="#f59e0b" stroke-width="0.8" stroke-dasharray="3,3"></line>
+
+        <line x1="130" y1="360" x2="270" y2="420" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <line x1="340" y1="360" x2="340" y2="420" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <line x1="550" y1="360" x2="410" y2="420" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+
+        <polygon points="340,420 400,448 340,476 280,448" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"></polygon>
+        <text x="340" y="451" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#f59e0b">All OK?</text>
+
+        <line x1="340" y1="476" x2="340" y2="510" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <text x="350" y="497" text-anchor="start" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#22c55e">yes</text>
+
+        <line x1="400" y1="448" x2="530" y2="448" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+        <text x="460" y="442" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#ef4444">no</text>
+
+        <rect x="530" y="430" width="100" height="36" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"></rect>
+        <text x="580" y="453" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#ef4444">Retry / Skip</text>
+
+        <path d="M580,430 L580,280 L410,240" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow-2)" fill="none"></path>
+
+        <rect x="235" y="510" width="210" height="48" rx="8" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5"></rect>
+        <text x="340" y="533" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#8b5cf6">Supervisor: Aggregate</text>
+        <text x="340" y="548" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#a855f7">Synthesize &#x2022; Format &#x2022; Validate</text>
+
+        <line x1="340" y1="558" x2="340" y2="580" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-2)" fill="none"></line>
+
+        <rect x="260" y="580" width="160" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"></rect>
+        <text x="340" y="600" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3b82f6">Final Response</text>
+      </svg>

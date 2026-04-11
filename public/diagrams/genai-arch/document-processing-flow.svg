@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 560" width="1050" height="560">
+  <defs>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-l" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Participants -->
+  <rect x="20" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="70" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Ingestion</text>
+
+  <rect x="170" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="230" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Format Detector</text>
+
+  <rect x="350" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="410" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Text Extractor</text>
+
+  <rect x="530" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="575" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">LLM</text>
+
+  <rect x="680" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="730" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Validator</text>
+
+  <rect x="830" y="10" width="110" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="885" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Review Queue</text>
+
+  <rect x="950" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="995" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Database</text>
+
+  <!-- Lifelines -->
+  <line x1="70" y1="46" x2="70" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="230" y1="46" x2="230" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="410" y1="46" x2="410" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="575" y1="46" x2="575" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="730" y1="46" x2="730" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="885" y1="46" x2="885" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="995" y1="46" x2="995" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Activation bars -->
+  <rect x="65" y="70" width="10" height="40" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="225" y="90" width="10" height="210" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="405" y="165" width="10" height="50" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="570" y="245" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="725" y="335" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="880" y="420" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+  <rect x="990" y="420" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+
+  <!-- 1. Upload document -->
+  <text x="12" y="82" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">1</text>
+  <line x1="75" y1="80" x2="220" y2="80" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="148" y="74" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">upload document (PDF, image, text)</text>
+
+  <!-- 2. Detect format -->
+  <text x="12" y="107" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">2</text>
+  <rect x="210" y="100" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="230" y="114" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">detect</text>
+  <text x="270" y="114" fill="#475569" font-family="Nunito, sans-serif" font-size="10">identify format, select parser</text>
+
+  <!-- 3. Extract text -->
+  <text x="12" y="177" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">3</text>
+  <line x1="235" y1="170" x2="400" y2="170" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="318" y="164" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">extract text (OCR / parser)</text>
+
+  <line x1="400" y1="205" x2="235" y2="205" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="318" y="199" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">raw text + layout metadata</text>
+
+  <!-- 4. LLM structured extraction -->
+  <text x="12" y="252" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">4</text>
+  <line x1="235" y1="250" x2="565" y2="250" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="400" y="244" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">extract structured fields (JSON schema)</text>
+
+  <line x1="565" y1="295" x2="235" y2="295" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="400" y="289" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">typed JSON + confidence scores</text>
+
+  <!-- 5. Validate -->
+  <text x="12" y="342" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">5</text>
+  <line x1="235" y1="340" x2="720" y2="340" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="478" y="334" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">validate against business rules</text>
+
+  <line x1="720" y1="385" x2="235" y2="385" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="478" y="379" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">pass/fail + confidence level</text>
+
+  <!-- 6a. Route low confidence to review -->
+  <text x="12" y="427" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">6</text>
+  <line x1="735" y1="425" x2="875" y2="425" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-r)"/>
+  <text x="805" y="419" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10">low confidence: human review</text>
+
+  <!-- 6b. Route high confidence to DB -->
+  <line x1="735" y1="445" x2="985" y2="445" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="860" y="462" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">high confidence: store directly</text>
+
+  <!-- 7. Store -->
+  <text x="12" y="492" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">7</text>
+  <rect x="975" y="480" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="995" y="494" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">store</text>
+  <text x="920" y="494" text-anchor="end" fill="#475569" font-family="Nunito, sans-serif" font-size="10">persist structured records</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="520" x2="60" y2="520" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="68" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">request</text>
+  <line x1="160" y1="520" x2="130" y2="520" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="168" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">response</text>
+  <line x1="240" y1="520" x2="270" y2="520" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="278" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">async / low confidence</text>
+</svg>

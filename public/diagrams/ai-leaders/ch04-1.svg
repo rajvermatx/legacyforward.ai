@@ -1,0 +1,37 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Total Cost of Ownership — Iceberg</text>
+  <line x1="60" y1="145" x2="840" y2="145" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="870" y="148" text-anchor="start" fill="#3b82f6" font-family="Nunito" font-size="10" font-weight="400">Waterline</text>
+  <rect x="250" y="55" width="400" height="75" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="450" y="78" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">Visible Costs</text>
+  <text x="450" y="98" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">License fees, API costs, cloud compute</text>
+  <text x="450" y="113" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Hardware, consulting, initial build</text>
+  <rect x="120" y="155" width="660" height="115" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="178" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="700">Hidden Costs (90% of TCO)</text>
+  <text x="180" y="200" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Data preparation</text>
+  <text x="400" y="200" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Evaluation suites</text>
+  <text x="620" y="200" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Monitoring infra</text>
+  <text x="180" y="222" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Retraining cycles</text>
+  <text x="400" y="222" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Governance overhead</text>
+  <text x="620" y="222" text-anchor="start" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Team upskilling</text>
+</svg>

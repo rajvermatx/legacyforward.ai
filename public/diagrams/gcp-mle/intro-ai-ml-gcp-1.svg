@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="800" height="300" fill="#f8fafc" rx="12"></rect>
+          
+          <rect x="40" y="30" width="720" height="240" rx="16" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,3"></rect>
+          <text x="60" y="58" fill="#475569" font-size="14" font-weight="600">Artificial Intelligence</text>
+          
+          <rect x="100" y="75" width="600" height="180" rx="14" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6,3"></rect>
+          <text x="120" y="100" fill="#3b82f6" font-size="13" font-weight="600">Machine Learning</text>
+          
+          <rect x="170" y="115" width="460" height="125" rx="12" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="6,3"></rect>
+          <text x="190" y="138" fill="#a855f7" font-size="13" font-weight="600">Deep Learning</text>
+          
+          <rect x="250" y="152" width="280" height="72" rx="10" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="390" y="185" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="700">Generative AI</text>
+          <text x="390" y="205" text-anchor="middle" fill="#475569" font-size="11">Gemini, Imagen, PaLM, Codey</text>
+        </svg>

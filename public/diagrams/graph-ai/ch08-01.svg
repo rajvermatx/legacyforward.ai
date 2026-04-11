@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Knowledge Graph Ontology: Type Relationships</text>
+  <circle cx="225" cy="165" r="48" fill="#f8fafc" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="225" y="170" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">Person</text>
+  <circle cx="450" cy="100" r="48" fill="#f8fafc" stroke="#06b6d4" stroke-width="2.5"/>
+  <text x="450" y="105" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="700">Org</text>
+  <circle cx="675" cy="165" r="48" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"/>
+  <text x="675" y="170" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">Document</text>
+  <circle cx="450" cy="265" r="48" fill="#f8fafc" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="450" y="270" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="700">Regulation</text>
+  <line x1="273.0357091420571" y1="151.12301735896128" x2="401.9642908579429" y2="113.87698264103872" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="308.7" y="124.5" width="57.6" height="14" rx="3" fill="white" stroke="#06b6d4" stroke-width="1"/>
+  <text x="337.5" y="134.5" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9" font-weight="400">WORKS_FOR</text>
+  <line x1="498.0357091420571" y1="113.87698264103872" x2="626.9642908579428" y2="151.12301735896128" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="533.7" y="124.5" width="57.6" height="14" rx="3" fill="white" stroke="#a855f7" stroke-width="1"/>
+  <text x="562.5" y="134.5" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="9" font-weight="400">PUBLISHES</text>
+  <line x1="275" y1="165" x2="625" y2="165" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <rect x="424.4" y="157" width="51.2" height="14" rx="3" fill="white" stroke="#3b82f6" stroke-width="1"/>
+  <text x="450" y="167" text-anchor="middle" fill="#3b82f6" font-family="JetBrains Mono" font-size="9" font-weight="400">AUTHORED</text>
+  <line x1="629.3094225689872" y1="185.30692330267237" x2="495.69057743101285" y2="244.69307669732763" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="540.1" y="207" width="44.800000000000004" height="14" rx="3" fill="white" stroke="#ef4444" stroke-width="1"/>
+  <text x="562.5" y="217" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9" font-weight="400">GOVERNS</text>
+  <line x1="270.69057743101285" y1="185.30692330267237" x2="404.30942256898715" y2="244.69307669732763" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="311.9" y="207" width="51.2" height="14" rx="3" fill="white" stroke="#ef4444" stroke-width="1"/>
+  <text x="337.5" y="217" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9" font-weight="400">COMPLIES</text>
+  <line x1="450" y1="150" x2="450" y2="215" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <rect x="418" y="174.5" width="64" height="14" rx="3" fill="white" stroke="#f59e0b" stroke-width="1"/>
+  <text x="450" y="184.5" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="9" font-weight="400">SUBJECT_TO</text>
+</svg>

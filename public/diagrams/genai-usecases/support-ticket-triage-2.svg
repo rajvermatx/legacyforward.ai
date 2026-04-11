@@ -1,0 +1,54 @@
+<svg viewBox="0 0 820 260" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="820" height="260" fill="#f8fafc" rx="12"></rect>
+
+          
+          <text x="410" y="30" text-anchor="middle" fill="#475569" font-size="13" font-weight="500">Classification Performance Metrics</text>
+
+          
+          
+          <rect x="30" y="55" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#10b981" stroke-width="1.5"></rect>
+          <text x="117" y="80" text-anchor="middle" fill="#10b981" font-size="28" font-weight="700">92%</text>
+          <text x="117" y="100" text-anchor="middle" fill="#475569" font-size="11">Urgency Accuracy</text>
+          <text x="117" y="118" text-anchor="middle" fill="#64748b" font-size="9">(P1–P4 classification)</text>
+          <text x="117" y="133" text-anchor="middle" fill="#64748b" font-size="9">vs 78% human baseline</text>
+
+          
+          <rect x="225" y="55" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5"></rect>
+          <text x="312" y="80" text-anchor="middle" fill="#3b82f6" font-size="28" font-weight="700">94%</text>
+          <text x="312" y="100" text-anchor="middle" fill="#475569" font-size="11">Category Accuracy</text>
+          <text x="312" y="118" text-anchor="middle" fill="#64748b" font-size="9">(5-class classification)</text>
+          <text x="312" y="133" text-anchor="middle" fill="#64748b" font-size="9">vs 82% human baseline</text>
+
+          
+          <rect x="420" y="55" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1.5"></rect>
+          <text x="507" y="80" text-anchor="middle" fill="#f59e0b" font-size="28" font-weight="700">70%</text>
+          <text x="507" y="100" text-anchor="middle" fill="#475569" font-size="11">Triage Time Reduction</text>
+          <text x="507" y="118" text-anchor="middle" fill="#64748b" font-size="9">3–5 min → &lt;30 sec</text>
+          <text x="507" y="133" text-anchor="middle" fill="#64748b" font-size="9">(including human review)</text>
+
+          
+          <rect x="615" y="55" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="702" y="80" text-anchor="middle" fill="#a855f7" font-size="28" font-weight="700">40%</text>
+          <text x="702" y="100" text-anchor="middle" fill="#475569" font-size="11">Faster First Response</text>
+          <text x="702" y="118" text-anchor="middle" fill="#64748b" font-size="9">Median 4.2h → 2.5h</text>
+          <text x="702" y="133" text-anchor="middle" fill="#64748b" font-size="9">with RAG draft</text>
+
+          
+          <rect x="127" y="160" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="214" y="185" text-anchor="middle" fill="#22d3ee" font-size="28" font-weight="700">25%</text>
+          <text x="214" y="205" text-anchor="middle" fill="#475569" font-size="11">Fewer Misroutes</text>
+          <text x="214" y="223" text-anchor="middle" fill="#64748b" font-size="9">12% misroute → 9%</text>
+          <text x="214" y="238" text-anchor="middle" fill="#64748b" font-size="9">consistent classification</text>
+
+          <rect x="322" y="160" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="409" y="185" text-anchor="middle" fill="#ef4444" font-size="28" font-weight="700">$180K</text>
+          <text x="409" y="205" text-anchor="middle" fill="#475569" font-size="11">Annual Savings</text>
+          <text x="409" y="223" text-anchor="middle" fill="#64748b" font-size="9">Mid-size team (50 agents)</text>
+          <text x="409" y="238" text-anchor="middle" fill="#64748b" font-size="9">triage labor reclaimed</text>
+
+          <rect x="517" y="160" width="175" height="85" rx="8" fill="#f1f5f9" stroke="#10b981" stroke-width="1.5"></rect>
+          <text x="604" y="185" text-anchor="middle" fill="#10b981" font-size="28" font-weight="700">96%</text>
+          <text x="604" y="205" text-anchor="middle" fill="#475569" font-size="11">Escalation Recall</text>
+          <text x="604" y="223" text-anchor="middle" fill="#64748b" font-size="9">True escalation signals</text>
+          <text x="604" y="238" text-anchor="middle" fill="#64748b" font-size="9">caught by 3-layer system</text>
+        </svg>

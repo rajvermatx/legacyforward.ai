@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { WebsiteJsonLd } from "@/components/JsonLd";
+import SearchDialog from "@/components/SearchDialog";
+import { ContinueReadingBanner } from "@/components/ReadingProgress";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | LegacyForward.ai",
   },
   description:
-    "A practitioner's framework for enterprise AI transformation — Signal Capture, Grounded Delivery, and Legacy Coexistence.",
+    "The practitioner's platform for enterprise AI transformation — framework, library, and tools for Signal Capture, Grounded Delivery, and Legacy Coexistence.",
   metadataBase: new URL("https://legacyforward.ai"),
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
@@ -44,8 +46,10 @@ export default function RootLayout({
       <body className={`${inter.className} bg-white text-slate-800 antialiased`}>
         <WebsiteJsonLd />
         <Nav />
+        <ContinueReadingBanner />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <SearchDialog />
       </body>
     </html>
   );

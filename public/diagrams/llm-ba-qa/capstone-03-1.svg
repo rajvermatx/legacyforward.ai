@@ -1,0 +1,48 @@
+<svg viewBox="0 0 900 300" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;background:#fff;border-radius:8px;border:1px solid #e0e0e0">
+        <text x="450" y="28" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">Intelligent Test Suite Generator</text>
+        <defs>
+          <marker id="arrowC3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#14b8a6"></path>
+          </marker>
+        </defs>
+        
+        <rect x="30" y="55" width="150" height="50" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="105" y="77" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Git Diffs</text>
+        <text x="105" y="94" text-anchor="middle" fill="#64748b" font-size="10">Recent changes</text>
+        <rect x="30" y="120" width="150" height="50" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="105" y="142" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Defect History</text>
+        <text x="105" y="159" text-anchor="middle" fill="#64748b" font-size="10">CSV / JSON bugs</text>
+        <rect x="30" y="185" width="150" height="50" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="105" y="207" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Existing Tests</text>
+        <text x="105" y="224" text-anchor="middle" fill="#64748b" font-size="10">Current coverage</text>
+        
+        <line x1="180" y1="80" x2="260" y2="135" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        <line x1="180" y1="145" x2="260" y2="145" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        <line x1="180" y1="210" x2="260" y2="155" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        
+        <rect x="260" y="110" width="170" height="70" rx="6" fill="#14b8a6" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="345" y="138" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Risk Analysis</text>
+        <text x="345" y="158" text-anchor="middle" fill="#fff" font-size="11">Weighted scoring</text>
+        <text x="345" y="173" text-anchor="middle" fill="#fff" font-size="10">change + defect + coverage</text>
+        
+        <line x1="430" y1="145" x2="480" y2="145" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        
+        <rect x="480" y="55" width="160" height="50" rx="6" fill="#f5f5f5" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="560" y="77" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Generate Tests</text>
+        <text x="560" y="94" text-anchor="middle" fill="#64748b" font-size="10">Targeted by risk</text>
+        <rect x="480" y="120" width="160" height="50" rx="6" fill="#f5f5f5" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="560" y="142" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Generate Test Data</text>
+        <text x="560" y="159" text-anchor="middle" fill="#64748b" font-size="10">Faker + LLM</text>
+        <rect x="480" y="185" width="160" height="50" rx="6" fill="#f5f5f5" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="560" y="207" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Optimize Suite</text>
+        <text x="560" y="224" text-anchor="middle" fill="#64748b" font-size="10">Dedupe + prioritize</text>
+        
+        <line x1="640" y1="80" x2="700" y2="135" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        <line x1="640" y1="145" x2="700" y2="145" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        <line x1="640" y1="210" x2="700" y2="155" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowC3)"></line>
+        
+        <rect x="700" y="110" width="170" height="70" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="785" y="138" text-anchor="middle" fill="#334155" font-size="14" font-weight="700">Smart Test Suite</text>
+        <text x="785" y="158" text-anchor="middle" fill="#64748b" font-size="11">Ranked + traced</text>
+        <text x="785" y="173" text-anchor="middle" fill="#64748b" font-size="10">with test data</text>
+      </svg>

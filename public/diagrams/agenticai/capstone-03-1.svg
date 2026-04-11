@@ -1,0 +1,94 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Customer support system architecture showing the agent pipeline with RAG, memory, sentiment analysis, and escalation routing">
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+
+        <rect width="680" height="520" rx="8" fill="#f8fafc"></rect>
+        <text x="340" y="32" text-anchor="middle" font-family="Space Grotesk, system-ui, sans-serif" font-size="15" font-weight="700" fill="#0f172a">Customer Support Agent Pipeline</text>
+
+        <rect x="30" y="60" width="130" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+        <text x="95" y="82" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Customer</text>
+        <text x="95" y="96" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Message / Ticket</text>
+
+        <rect x="30" y="140" width="130" height="56" rx="6" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1"></rect>
+        <text x="95" y="163" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#8b5cf6">Intake Agent</text>
+        <text x="95" y="178" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#a855f7">Classify &amp; Extract</text>
+
+        <line x1="95" y1="110" x2="95" y2="140" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <rect x="210" y="60" width="150" height="56" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="285" y="83" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3b82f6">RAG Knowledge Base</text>
+        <text x="285" y="98" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#3b82f6">Embed &amp; Retrieve Docs</text>
+
+        <rect x="210" y="136" width="150" height="44" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="285" y="158" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3b82f6">Vector Store</text>
+        <text x="285" y="172" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#3b82f6">ChromaDB / Pinecone</text>
+
+        <line x1="285" y1="116" x2="285" y2="136" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <line x1="160" y1="158" x2="195" y2="100" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <rect x="30" y="230" width="150" height="56" rx="6" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1"></rect>
+        <text x="105" y="253" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#8b5cf6">Response Generator</text>
+        <text x="105" y="268" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#a855f7">Draft Grounded Reply</text>
+
+        <line x1="95" y1="196" x2="95" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <path d="M210,155 Q190,200 170,240" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></path>
+
+        <rect x="210" y="210" width="150" height="56" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="285" y="233" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#3b82f6">Conversation Memory</text>
+        <text x="285" y="248" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#3b82f6">Per-Customer Context</text>
+
+        <line x1="180" y1="252" x2="210" y2="242" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <rect x="410" y="60" width="150" height="56" rx="6" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="485" y="83" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0d9488">Sentiment Analyzer</text>
+        <text x="485" y="98" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#14b8a6">Score &amp; Classify Tone</text>
+
+        <path d="M160,85 L410,85" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></path>
+
+        <rect x="410" y="150" width="150" height="56" rx="6" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="485" y="173" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0d9488">Escalation Router</text>
+        <text x="485" y="188" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#14b8a6">Rules &amp; Confidence Check</text>
+
+        <line x1="485" y1="116" x2="485" y2="150" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <path d="M180,260 Q300,280 420,185" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></path>
+
+        <rect x="410" y="240" width="150" height="50" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+        <text x="485" y="262" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Auto-Reply</text>
+        <text x="485" y="276" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Send to Customer</text>
+
+        <line x1="485" y1="206" x2="485" y2="240" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+        <text x="500" y="225" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#14b8a6">confident</text>
+
+        <rect x="250" y="330" width="180" height="56" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1"></rect>
+        <text x="340" y="353" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#ef4444">Human Handoff</text>
+        <text x="340" y="368" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#ef4444">Context Transfer &amp; Queue</text>
+
+        <path d="M435,206 Q400,280 410,340" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></path>
+        <text x="395" y="280" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="500" fill="#ef4444">escalate</text>
+
+        <rect x="250" y="410" width="180" height="50" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1"></rect>
+        <text x="340" y="432" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="700" fill="#ef4444">Human Agent</text>
+        <text x="340" y="446" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#ef4444">Full Context Dashboard</text>
+
+        <line x1="340" y1="386" x2="340" y2="410" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        <rect x="30" y="480" width="620" height="30" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+        <text x="340" y="500" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Observability Layer — Traces &#x2022; Metrics &#x2022; CSAT Tracking &#x2022; Dashboards</text>
+
+        <rect x="560" y="330" width="10" height="10" rx="2" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1"></rect>
+        <text x="576" y="340" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Core Agents</text>
+        <rect x="560" y="348" width="10" height="10" rx="2" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"></rect>
+        <text x="576" y="358" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Knowledge / RAG</text>
+        <rect x="560" y="366" width="10" height="10" rx="2" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="576" y="376" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Sentiment / Routing</text>
+        <rect x="560" y="384" width="10" height="10" rx="2" fill="#fef2f2" stroke="#ef4444" stroke-width="1"></rect>
+        <text x="576" y="394" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Escalation / Human</text>
+        <rect x="560" y="402" width="10" height="10" rx="2" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"></rect>
+        <text x="576" y="412" font-family="Nunito, system-ui, sans-serif" font-size="10" font-weight="400" fill="#64748b">Structural</text>
+      </svg>

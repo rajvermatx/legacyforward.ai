@@ -1,0 +1,114 @@
+<svg viewBox="0 0 920 530" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow10" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"></polygon>
+            </marker>
+            <marker id="arrow10g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"></polygon>
+            </marker>
+            <marker id="arrow10c" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <text x="240" y="25" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="12" font-weight="600" opacity="0.7">INGESTION PIPELINE</text>
+
+          
+          <rect x="20" y="40" width="105" height="50" rx="8" fill="#f8fafc" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="72" y="62" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="600">SharePoint</text>
+          <text x="72" y="78" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">docs, policies</text>
+
+          <rect x="20" y="100" width="105" height="50" rx="8" fill="#f8fafc" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="72" y="122" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="600">Confluence</text>
+          <text x="72" y="138" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">wikis, runbooks</text>
+
+          <rect x="20" y="160" width="105" height="50" rx="8" fill="#f8fafc" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="72" y="182" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="600">S3 / GCS</text>
+          <text x="72" y="198" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">PDFs, reports</text>
+
+          <rect x="20" y="220" width="105" height="50" rx="8" fill="#f8fafc" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="72" y="242" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="600">Databases</text>
+          <text x="72" y="258" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">structured data</text>
+
+          
+          <line x1="125" y1="65" x2="185" y2="145" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10c)"></line>
+          <line x1="125" y1="125" x2="185" y2="145" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10c)"></line>
+          <line x1="125" y1="185" x2="185" y2="165" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10c)"></line>
+          <line x1="125" y1="245" x2="185" y2="175" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow10c)"></line>
+
+          
+          <rect x="190" y="110" width="160" height="100" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="270" y="138" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Ingestion Pipeline</text>
+          <text x="270" y="158" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">extract &#8594; chunk &#8594; embed</text>
+          <text x="270" y="178" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">PII scan, ACL inherit</text>
+          <text x="270" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">freshness tags</text>
+
+          
+          <line x1="350" y1="145" x2="420" y2="105" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow10)"></line>
+          <line x1="350" y1="175" x2="420" y2="195" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow10)"></line>
+
+          
+          <rect x="425" y="55" width="175" height="90" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"></rect>
+          <text x="512" y="83" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Vector Store</text>
+          <text x="512" y="103" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">embeddings + metadata</text>
+          <text x="512" y="120" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">ACL tags, source refs</text>
+          <text x="512" y="137" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">freshness timestamps</text>
+
+          
+          <rect x="425" y="170" width="175" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="512" y="198" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Metadata Store</text>
+          <text x="512" y="218" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">ACL, lineage, freshness</text>
+          <text x="512" y="233" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">chunk &#8594; source mapping</text>
+
+          
+          <text x="700" y="275" text-anchor="middle" fill="#475569" font-family="Space Grotesk" font-size="12" font-weight="600" opacity="0.7">QUERY PATH</text>
+
+          
+          <rect x="20" y="340" width="130" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="85" y="367" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">User Question</text>
+          <text x="85" y="387" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">+ user identity (ACL)</text>
+
+          
+          <line x1="150" y1="372" x2="210" y2="372" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow10g)"></line>
+
+          
+          <rect x="215" y="330" width="170" height="85" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="300" y="358" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Retrieval</text>
+          <text x="300" y="378" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">ACL-filtered search</text>
+          <text x="300" y="398" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">semantic + keyword hybrid</text>
+
+          
+          <line x1="512" y1="145" x2="370" y2="330" stroke="#8e94b5" stroke-width="1.5" stroke-dasharray="5,3"></line>
+          <text x="460" y="240" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">query</text>
+
+          
+          <line x1="385" y1="372" x2="470" y2="372" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow10g)"></line>
+          <text x="427" y="363" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">context</text>
+
+          
+          <rect x="475" y="330" width="170" height="85" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"></rect>
+          <text x="560" y="358" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">LLM Generation</text>
+          <text x="560" y="378" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">answer + citations</text>
+          <text x="560" y="398" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">grounded in retrieved docs</text>
+
+          
+          <line x1="645" y1="372" x2="720" y2="372" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow10g)"></line>
+
+          
+          <rect x="725" y="330" width="170" height="85" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2.5"></rect>
+          <text x="810" y="355" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Response</text>
+          <text x="810" y="375" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">with source citations</text>
+          <text x="810" y="393" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">&#128279; clickable links to docs</text>
+          <text x="810" y="408" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">freshness indicator</text>
+
+          
+          <rect x="20" y="460" width="875" height="50" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="457" y="482" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Data Lineage Tracker</text>
+          <text x="457" y="500" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">source document &#8594; chunk &#8594; embedding &#8594; retrieved context &#8594; generated answer (full traceability)</text>
+
+          
+          <line x1="270" y1="210" x2="270" y2="460" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"></line>
+          <line x1="512" y1="240" x2="512" y2="460" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"></line>
+          <line x1="810" y1="415" x2="810" y2="460" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"></line>
+        </svg>

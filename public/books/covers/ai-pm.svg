@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="#0f172a"/>
+
+  <!-- Geometric accent: blue product roadmap lines -->
+  <!-- Horizontal track lines -->
+  <line x1="60" y1="430" x2="540" y2="430" stroke="#3b82f6" stroke-width="1" opacity="0.10"/>
+  <line x1="60" y1="460" x2="540" y2="460" stroke="#3b82f6" stroke-width="1" opacity="0.08"/>
+  <line x1="60" y1="490" x2="540" y2="490" stroke="#3b82f6" stroke-width="1" opacity="0.06"/>
+
+  <!-- Top right accent -->
+  <polygon points="600,0 600,180 480,0" fill="#3b82f6" opacity="0.12"/>
+  <!-- Bottom left accent -->
+  <polygon points="0,800 0,620 120,800" fill="#3b82f6" opacity="0.12"/>
+
+  <!-- ── SERIES BRANDING ── -->
+  <text x="300" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.3em">THE LEGACYFORWARD.AI FRAMEWORK</text>
+  <line x1="260" y1="26" x2="340" y2="26" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- ── HEADER ── -->
+  <g transform="translate(276,36) scale(1.5)">
+    <rect width="32" height="32" rx="6" fill="#1e293b"/>
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <line x1="16" y1="5" x2="16" y2="7.5" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="24.5" x2="16" y2="27" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5" y1="16" x2="7.5" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24.5" y1="16" x2="27" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="19" x2="22" y2="10" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="22" cy="10" r="2" fill="#3b82f6"/>
+    <circle cx="16" cy="16" r="2" fill="white"/>
+    <circle cx="13" cy="19" r="1.5" fill="#475569"/>
+  </g>
+
+  <text x="300" y="116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="white" text-anchor="middle" opacity="0.9">CAREERALIGN</text>
+
+  <!-- ── ACCENT STRIPE ── -->
+  <rect x="0" y="150" width="600" height="8" fill="#3b82f6"/>
+
+  <!-- ── MAIN CONTENT ── -->
+
+  <rect x="60" y="210" width="4" height="240" fill="#3b82f6" rx="2"/>
+
+  <!-- Title line 1 -->
+  <text x="88" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="white" letter-spacing="-1">AI Product</text>
+  <!-- Title line 2 -->
+  <text x="88" y="322" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="white" letter-spacing="-1">Management</text>
+
+  <!-- Subtitle -->
+  <text x="88" y="362" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#3b82f6" letter-spacing="0.3">From Value Hypothesis to Production</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="384" x2="340" y2="384" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="88" y="406" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8" letter-spacing="0.3">16 chapters for shipping AI features</text>
+
+  <!-- Roadmap/sprint visual -->
+  <g opacity="0.22">
+    <!-- Sprint lanes -->
+    <text x="88" y="448" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" fill="#3b82f6" letter-spacing="1">DISCOVERY</text>
+    <rect x="88" y="452" width="100" height="16" rx="3" fill="#3b82f6"/>
+    <rect x="196" y="452" width="80" height="16" rx="3" fill="#3b82f6" opacity="0.6"/>
+
+    <text x="88" y="482" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" fill="#3b82f6" letter-spacing="1">BUILD</text>
+    <rect x="88" y="486" width="60" height="16" rx="3" fill="#3b82f6" opacity="0.7"/>
+    <rect x="156" y="486" width="120" height="16" rx="3" fill="#3b82f6"/>
+    <rect x="284" y="486" width="60" height="16" rx="3" fill="#3b82f6" opacity="0.5"/>
+
+    <text x="88" y="516" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" fill="#3b82f6" letter-spacing="1">SHIP</text>
+    <rect x="88" y="520" width="40" height="16" rx="3" fill="#3b82f6" opacity="0.5"/>
+    <rect x="136" y="520" width="40" height="16" rx="3" fill="#3b82f6" opacity="0.5"/>
+    <rect x="184" y="520" width="160" height="16" rx="3" fill="#3b82f6"/>
+  </g>
+
+  <!-- ── FOOTER ── -->
+  <rect x="0" y="640" width="600" height="1" fill="#3b82f6" opacity="0.4"/>
+  <rect x="0" y="641" width="600" height="1" fill="#3b82f6" opacity="0.15"/>
+
+  <text x="300" y="680" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.85">CareerAlign</text>
+  <text x="300" y="725" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.2em">THE CHAOS TO CLARITY AI SERIES · BOOK 2 OF 6</text>
+  <text x="300" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle" letter-spacing="1">careeralign.com</text>
+
+</svg>

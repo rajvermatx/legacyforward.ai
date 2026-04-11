@@ -1,0 +1,71 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="diagram-title-1 diagram-desc-1">
+        <title id="diagram-title-1">Human-in-the-Loop Interrupt Flow</title>
+        <desc id="diagram-desc-1">Flowchart showing how an agent pauses at an interrupt point, transfers control to a human reviewer, and resumes or rolls back based on the decision.</desc>
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"></path>
+          </marker>
+          <marker id="arrow-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#0d9488"></path>
+          </marker>
+          <marker id="arrow-coral" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#ef4444"></path>
+          </marker>
+        </defs>
+
+        <rect width="680" height="520" rx="8" fill="#f8fafc"></rect>
+
+        <circle cx="340" cy="30" r="16" fill="#475569" stroke="#64748b" stroke-width="1.5"></circle>
+        <text x="340" y="30" font-size="11" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" text-anchor="middle" dominant-baseline="central">START</text>
+
+        <rect x="240" y="70" width="200" height="44" rx="8" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="1.5"></rect>
+        <text x="340" y="92" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Agent Plans Action</text>
+
+        <rect x="220" y="144" width="240" height="44" rx="8" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="1.5"></rect>
+        <text x="340" y="166" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Assess Confidence Score</text>
+
+        <polygon points="340,218 420,254 340,290 260,254" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"></polygon>
+        <text x="340" y="250" font-size="11" fill="#ef4444" font-family="Nunito, system-ui, sans-serif" text-anchor="middle" dominant-baseline="central">Above</text>
+        <text x="340" y="264" font-size="11" fill="#ef4444" font-family="Nunito, system-ui, sans-serif" text-anchor="middle" dominant-baseline="central">Threshold?</text>
+
+        <rect x="60" y="310" width="180" height="44" rx="8" fill="#0d9488" stroke="#0d9488" stroke-width="1.5"></rect>
+        <text x="150" y="332" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Execute Autonomously</text>
+
+        <rect x="440" y="232" width="200" height="44" rx="8" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"></rect>
+        <text x="540" y="254" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">interrupt() — Pause</text>
+
+        <rect x="440" y="306" width="200" height="44" rx="8" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"></rect>
+        <text x="540" y="328" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Human Reviews Action</text>
+
+        <polygon points="540,380 610,410 540,440 470,410" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"></polygon>
+        <text x="540" y="410" font-size="11" fill="#ef4444" font-family="Nunito, system-ui, sans-serif" text-anchor="middle" dominant-baseline="central">Decision?</text>
+
+        <rect x="350" y="460" width="180" height="44" rx="8" fill="#0d9488" stroke="#0d9488" stroke-width="1.5"></rect>
+        <text x="440" y="482" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Resume &amp; Execute</text>
+
+        <rect x="560" y="460" width="110" height="44" rx="8" fill="#475569" stroke="#64748b" stroke-width="1.5"></rect>
+        <text x="615" y="482" fill="#ffffff" font-family="Nunito, system-ui, sans-serif" font-size="13" text-anchor="middle" dominant-baseline="central">Rollback</text>
+
+        <line x1="340" y1="46" x2="340" y2="70" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="340" y1="114" x2="340" y2="144" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="340" y1="188" x2="340" y2="218" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        <line x1="260" y1="254" x2="150" y2="254" stroke="#0d9488" stroke-width="1.5" fill="none"></line>
+        <line x1="150" y1="254" x2="150" y2="310" stroke="#0d9488" stroke-width="1.5" fill="none" marker-end="url(#arrow-teal)"></line>
+        <text x="200" y="244" fill="#0d9488" font-family="Nunito, system-ui, sans-serif" font-size="11" text-anchor="middle" dominant-baseline="central">Yes</text>
+
+        <line x1="420" y1="254" x2="440" y2="254" stroke="#ef4444" stroke-width="1.5" fill="none" marker-end="url(#arrow-coral)"></line>
+        <text x="432" y="244" fill="#ef4444" font-family="Nunito, system-ui, sans-serif" font-size="11" text-anchor="middle" dominant-baseline="central">No</text>
+
+        <line x1="540" y1="276" x2="540" y2="306" stroke="#ef4444" stroke-width="1.5" fill="none" marker-end="url(#arrow-coral)"></line>
+
+        <line x1="540" y1="350" x2="540" y2="380" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        <line x1="470" y1="410" x2="440" y2="410" stroke="#0d9488" stroke-width="1.5" fill="none"></line>
+        <line x1="440" y1="410" x2="440" y2="460" stroke="#0d9488" stroke-width="1.5" fill="none" marker-end="url(#arrow-teal)"></line>
+        <text x="442" y="448" fill="#0d9488" font-family="Nunito, system-ui, sans-serif" font-size="11" text-anchor="middle" dominant-baseline="central">Approve</text>
+
+        <line x1="610" y1="410" x2="615" y2="410" stroke="#94a3b8" stroke-width="1.5" fill="none"></line>
+        <line x1="615" y1="410" x2="615" y2="460" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <text x="628" y="448" fill="#94a3b8" font-family="Nunito, system-ui, sans-serif" font-size="11" text-anchor="middle" dominant-baseline="central">Reject</text>
+      </svg>

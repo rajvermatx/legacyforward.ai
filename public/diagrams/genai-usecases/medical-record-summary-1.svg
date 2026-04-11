@@ -1,0 +1,97 @@
+<svg viewBox="0 0 920 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <text x="460" y="24" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk,sans-serif" font-size="14" font-weight="700">Medical Record Summarization Pipeline</text>
+
+          
+          <rect x="20" y="45" width="880" height="100" rx="12" fill="none" stroke="#8e94b5" stroke-width="1" stroke-dasharray="6"></rect>
+          <text x="40" y="68" fill="#475569" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">INPUT: CLINICAL NOTES</text>
+
+          <rect x="40" y="80" width="120" height="50" rx="8" fill="#f1f5f9" stroke="#8e94b5" stroke-width="1.5"></rect>
+          <text x="100" y="102" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">ER Notes</text>
+          <text x="100" y="118" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Free text</text>
+
+          <rect x="180" y="80" width="120" height="50" rx="8" fill="#f1f5f9" stroke="#8e94b5" stroke-width="1.5"></rect>
+          <text x="240" y="102" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Discharge</text>
+          <text x="240" y="118" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Summaries</text>
+
+          <rect x="320" y="80" width="120" height="50" rx="8" fill="#f1f5f9" stroke="#8e94b5" stroke-width="1.5"></rect>
+          <text x="380" y="102" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Progress Notes</text>
+          <text x="380" y="118" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Daily SOAP</text>
+
+          <rect x="460" y="80" width="120" height="50" rx="8" fill="#f1f5f9" stroke="#8e94b5" stroke-width="1.5"></rect>
+          <text x="520" y="102" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Lab Results</text>
+          <text x="520" y="118" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Structured + text</text>
+
+          
+          <line x1="300" y1="145" x2="300" y2="170" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          
+          <rect x="20" y="170" width="880" height="140" rx="12" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="6"></rect>
+          <text x="40" y="193" fill="#f59e0b" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">PROCESSING PIPELINE</text>
+
+          
+          <rect x="40" y="205" width="140" height="85" rx="8" fill="#f1f5f9" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="110" y="228" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">NLP Preprocessing</text>
+          <text x="110" y="248" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">De-identification</text>
+          <text x="110" y="262" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Abbrev expansion</text>
+          <text x="110" y="276" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Section splitting</text>
+
+          <line x1="180" y1="248" x2="210" y2="248" stroke="#2e3554" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          
+          <rect x="210" y="205" width="140" height="85" rx="8" fill="#f1f5f9" stroke="#f59e0b" stroke-width="1.5"></rect>
+          <text x="280" y="228" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Entity Extraction</text>
+          <text x="280" y="248" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Medications</text>
+          <text x="280" y="262" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Diagnoses (ICD-10)</text>
+          <text x="280" y="276" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Labs, Allergies</text>
+
+          <line x1="350" y1="248" x2="380" y2="248" stroke="#2e3554" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          
+          <rect x="380" y="205" width="140" height="85" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="450" y="228" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">SOAP Structuring</text>
+          <text x="450" y="248" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Subjective</text>
+          <text x="450" y="262" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Objective</text>
+          <text x="450" y="276" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Assessment + Plan</text>
+
+          <line x1="520" y1="248" x2="550" y2="248" stroke="#2e3554" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          
+          <rect x="550" y="205" width="155" height="85" rx="8" fill="#f1f5f9" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="627" y="228" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Drug Interaction</text>
+          <text x="627" y="248" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Cross-reference DB</text>
+          <text x="627" y="262" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Flag dangerous</text>
+          <text x="627" y="276" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">combinations</text>
+
+          <line x1="705" y1="248" x2="735" y2="248" stroke="#2e3554" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          
+          <rect x="735" y="205" width="145" height="85" rx="8" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="807" y="228" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700">Summary Report</text>
+          <text x="807" y="248" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">SOAP notes</text>
+          <text x="807" y="262" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Timeline</text>
+          <text x="807" y="276" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="8">Handoff brief</text>
+
+          
+          <line x1="807" y1="310" x2="807" y2="340" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#mA)"></line>
+
+          <rect x="20" y="340" width="880" height="85" rx="12" fill="none" stroke="#22c55e" stroke-width="1" stroke-dasharray="6"></rect>
+          <text x="40" y="363" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em">OUTPUT: STRUCTURED DELIVERABLES</text>
+
+          <rect x="40" y="375" width="160" height="35" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"></rect>
+          <text x="120" y="397" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Structured SOAP Notes</text>
+
+          <rect x="220" y="375" width="160" height="35" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"></rect>
+          <text x="300" y="397" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Medication List + Flags</text>
+
+          <rect x="400" y="375" width="160" height="35" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"></rect>
+          <text x="480" y="397" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Patient Timeline</text>
+
+          <rect x="580" y="375" width="160" height="35" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"></rect>
+          <text x="660" y="397" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">Handoff Summary</text>
+
+          <rect x="760" y="375" width="120" height="35" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"></rect>
+          <text x="820" y="397" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="600">FHIR Bundle</text>
+
+          <defs><marker id="mA" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#f59e0b"></path></marker></defs>
+        </svg>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Project Failure Cascade</text>
+  <rect x="175" y="350" width="550" height="44" rx="8" fill="#f8fafc" stroke="Starting without a clear why" stroke-width="2"/>
+  <text x="450" y="368" text-anchor="middle" fill="Starting without a clear why" font-family="Space Grotesk" font-size="12" font-weight="600">55</text>
+  <text x="450" y="383" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">No Value Hypothesis</text>
+
+  <rect x="175" y="350" width="550" height="44" rx="8" fill="#f8fafc" stroke="Technology in search of a use case" stroke-width="2"/>
+  <text x="450" y="368" text-anchor="middle" fill="Technology in search of a use case" font-family="Space Grotesk" font-size="12" font-weight="600">115</text>
+  <text x="450" y="383" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Solution Seeking Problem</text>
+
+  <rect x="175" y="350" width="550" height="44" rx="8" fill="#f8fafc" stroke="Measuring accuracy not business impact" stroke-width="2"/>
+  <text x="450" y="368" text-anchor="middle" fill="Measuring accuracy not business impact" font-family="Space Grotesk" font-size="12" font-weight="600">175</text>
+  <text x="450" y="383" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Wrong Metrics</text>
+
+  <rect x="175" y="350" width="550" height="44" rx="8" fill="#f8fafc" stroke="Missing labels, poor quality, no pipeline" stroke-width="2"/>
+  <text x="450" y="368" text-anchor="middle" fill="Missing labels, poor quality, no pipeline" font-family="Space Grotesk" font-size="12" font-weight="600">235</text>
+  <text x="450" y="383" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Data Not Ready</text>
+
+  <rect x="175" y="350" width="550" height="44" rx="8" fill="#f8fafc" stroke="No ML skills, no process, no owner" stroke-width="2"/>
+  <text x="450" y="368" text-anchor="middle" fill="No ML skills, no process, no owner" font-family="Space Grotesk" font-size="12" font-weight="600">295</text>
+  <text x="450" y="383" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Org Not Ready</text>
+
+  <rect x="175" y="295" width="550" height="44" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="313" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="600">Org Not Ready</text>
+  <text x="450" y="328" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">No ML skills, no process, no owner</text>
+  <line x1="450" y1="339" x2="450" y2="355" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="175" y="355" width="550" height="44" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="373" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="700">Vendor Exploitation</text>
+  <text x="450" y="388" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Locked in, over-promised, under-delivered</text>
+</svg>

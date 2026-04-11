@@ -1,0 +1,72 @@
+<svg viewBox="0 0 860 360" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Evaluation-driven development loop">
+          <defs>
+            <marker id="arr-e" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+              <polygon points="0 0, 9 3.5, 0 7" fill="#ef4444"></polygon>
+            </marker>
+          </defs>
+
+          
+          <text x="430" y="28" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="15" font-weight="700">The Evaluation-Driven Development Loop</text>
+
+          
+          
+          <rect x="40" y="60" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="125" y="84" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">1. Define Criteria</text>
+          <text x="125" y="100" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">What does "good" look like?</text>
+          <text x="125" y="114" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Measurable, specific, agreed</text>
+          <text x="125" y="128" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ rubrics, pass/fail rules</text>
+
+          
+          <rect x="245" y="60" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="330" y="84" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">2. Build Eval Dataset</text>
+          <text x="330" y="100" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Golden + edge + adversarial</text>
+          <text x="330" y="114" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">50–2000 labelled examples</text>
+          <text x="330" y="128" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ your ground truth</text>
+
+          
+          <rect x="450" y="60" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#ef4444" stroke-width="1.5"></rect>
+          <text x="535" y="84" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">3. Implement Baseline</text>
+          <text x="535" y="100" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Simplest working system</text>
+          <text x="535" y="114" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Record baseline scores</text>
+          <text x="535" y="128" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ the floor to beat</text>
+
+          
+          <rect x="650" y="145" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="735" y="169" text-anchor="middle" fill="#22c55e" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">4. Measure</text>
+          <text x="735" y="185" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Run full eval suite</text>
+          <text x="735" y="199" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Per-category + overall scores</text>
+          <text x="735" y="213" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ inspect failures manually</text>
+
+          
+          <rect x="450" y="240" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="535" y="264" text-anchor="middle" fill="#6366f1" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">5. Improve</text>
+          <text x="535" y="280" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">One targeted change</text>
+          <text x="535" y="294" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Prompt / model / retrieval</text>
+          <text x="535" y="308" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ never multi-change at once</text>
+
+          
+          <rect x="245" y="240" width="170" height="72" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5"></rect>
+          <text x="330" y="264" text-anchor="middle" fill="#f59e0b" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">6. Commit or Roll Back</text>
+          <text x="330" y="280" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Re-measure after change</text>
+          <text x="330" y="294" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Ship only if no regression</text>
+          <text x="330" y="308" text-anchor="middle" fill="#64748b" font-family="'Nunito',sans-serif" font-size="9">→ explicit trade-off decision</text>
+
+          
+          <ellipse cx="430" cy="181" rx="60" ry="36" fill="#f1f5f9" stroke="#2e3554"></ellipse>
+          <text x="430" y="176" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="700">Continuous</text>
+          <text x="430" y="192" text-anchor="middle" fill="#475569" font-family="'Space Grotesk',sans-serif" font-size="10">Eval Loop</text>
+
+          
+          
+          <line x1="210" y1="96" x2="243" y2="96" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arr-e)"></line>
+          
+          <line x1="415" y1="96" x2="448" y2="96" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arr-e)"></line>
+          
+          <line x1="620" y1="115" x2="680" y2="148" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arr-e)"></line>
+          
+          <line x1="735" y1="217" x2="640" y2="256" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr-e)"></line>
+          
+          <line x1="448" y1="276" x2="415" y2="276" stroke="#6366f1" stroke-width="1.5" marker-end="url(#arr-e)"></line>
+          
+          <path d="M 330 240 Q 330 181 490 181" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#arr-e)"></path>
+        </svg>

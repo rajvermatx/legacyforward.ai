@@ -1,0 +1,49 @@
+<svg viewBox="0 0 780 200" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', monospace">
+          <rect width="780" height="200" fill="#f8fafc" rx="12"></rect>
+          <defs>
+            <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6" opacity="0.8"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="80" width="160" height="44" rx="8" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5"></rect>
+          <text x="100" y="97" text-anchor="middle" fill="#86efac" font-size="13">"Hello, world!"</text>
+          <text x="100" y="115" text-anchor="middle" fill="#64748b" font-size="10" font-family="'Nunito', sans-serif">Raw string</text>
+
+          
+          <line x1="182" y1="102" x2="214" y2="102" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr3)"></line>
+          <text x="198" y="94" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">BPE</text>
+
+          
+          <rect x="216" y="68" width="72" height="36" rx="6" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="252" y="86" text-anchor="middle" fill="#c084fc" font-size="13">"Hello"</text>
+          <text x="252" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">tok 1</text>
+
+          <rect x="296" y="68" width="36" height="36" rx="6" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="314" y="86" text-anchor="middle" fill="#c084fc" font-size="13">","</text>
+          <text x="314" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">tok 2</text>
+
+          <rect x="340" y="68" width="82" height="36" rx="6" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="381" y="86" text-anchor="middle" fill="#c084fc" font-size="13">" world"</text>
+          <text x="381" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">tok 3</text>
+
+          <rect x="430" y="68" width="36" height="36" rx="6" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="448" y="86" text-anchor="middle" fill="#c084fc" font-size="13">"!"</text>
+          <text x="448" y="100" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">tok 4</text>
+
+          
+          <text x="343" y="128" text-anchor="middle" fill="#64748b" font-size="10" font-family="'Nunito', sans-serif">Token strings</text>
+
+          
+          <line x1="469" y1="102" x2="501" y2="102" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr3)"></line>
+          <text x="485" y="94" text-anchor="middle" fill="#64748b" font-size="9" font-family="'Nunito', sans-serif">vocab</text>
+
+          
+          <rect x="503" y="72" width="250" height="52" rx="8" fill="#f1f5f9" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="628" y="95" text-anchor="middle" fill="#67e8f9" font-size="13">[ 15339, 11, 1917, 0 ]</text>
+          <text x="628" y="114" text-anchor="middle" fill="#64748b" font-size="10" font-family="'Nunito', sans-serif">Integer token IDs (GPT-2 vocab)</text>
+
+          
+          <text x="390" y="172" text-anchor="middle" fill="#64748b" font-size="11" font-family="'Nunito', sans-serif" font-style="italic">Tokenization: raw text → subword tokens → integer IDs the model actually sees</text>
+        </svg>

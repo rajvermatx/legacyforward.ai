@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 190" width="100%" role="img" aria-label="Your First LLM Workflow — end-to-end flow from input document to structured report">
+
+        <defs>
+          <marker id="wf-arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <polygon points="0 0, 8 3, 0 6" fill="#06b6d4"></polygon>
+          </marker>
+        </defs>
+
+
+        <rect x="5" y="30" width="130" height="110" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="70" y="60" text-anchor="middle" font-size="20">&#128196;</text>
+        <text x="70" y="86" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Input</text>
+        <text x="70" y="100" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Document</text>
+        <text x="70" y="118" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Requirements,</text>
+        <text x="70" y="130" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">meeting notes, etc.</text>
+        <line x1="135" y1="85" x2="165" y2="85" stroke="#06b6d4" stroke-width="2" marker-end="url(#wf-arr)"></line>
+
+
+        <rect x="165" y="40" width="120" height="90" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="225" y="68" text-anchor="middle" font-size="20">&#128221;</text>
+        <text x="225" y="92" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Prompt</text>
+        <text x="225" y="106" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Template</text>
+        <text x="225" y="122" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Role + task + format</text>
+        <line x1="285" y1="85" x2="315" y2="85" stroke="#06b6d4" stroke-width="2" marker-end="url(#wf-arr)"></line>
+
+
+        <rect x="315" y="30" width="130" height="110" rx="8" fill="#06b6d4" stroke="#06b6d4" stroke-width="1.5"></rect>
+        <text x="380" y="60" text-anchor="middle" font-size="20" fill="#ffffff">&#9881;</text>
+        <text x="380" y="86" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#ffffff">LLM API</text>
+        <text x="380" y="104" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#e0f7fa">GPT-4o, Claude,</text>
+        <text x="380" y="118" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#e0f7fa">Gemini, etc.</text>
+        <line x1="445" y1="85" x2="475" y2="85" stroke="#06b6d4" stroke-width="2" marker-end="url(#wf-arr)"></line>
+
+
+        <rect x="475" y="40" width="120" height="90" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="535" y="68" text-anchor="middle" font-size="20">&#128202;</text>
+        <text x="535" y="92" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Structured</text>
+        <text x="535" y="106" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Output</text>
+        <text x="535" y="122" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">JSON, tables, scores</text>
+        <line x1="595" y1="85" x2="625" y2="85" stroke="#06b6d4" stroke-width="2" marker-end="url(#wf-arr)"></line>
+
+
+        <rect x="625" y="30" width="145" height="110" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="697" y="60" text-anchor="middle" font-size="20">&#128200;</text>
+        <text x="697" y="86" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Report /</text>
+        <text x="697" y="100" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Dashboard</text>
+        <text x="697" y="118" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Human review &amp;</text>
+        <text x="697" y="130" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">decision-making</text>
+
+
+        <text x="390" y="175" text-anchor="middle" font-family="Nunito, sans-serif" font-size="11" fill="#475569" font-style="italic">You control the input and review the output. The LLM handles the heavy lifting in between.</text>
+      </svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="Context window explained — showing how prompt, document, and response must all fit within the model's token limit">
+
+
+        <text x="20" y="25" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Fits in context window (128K tokens)</text>
+        <rect x="20" y="35" width="660" height="90" rx="6" fill="none" stroke="#cbd5e1" stroke-width="1.5"></rect>
+        <text x="650" y="55" text-anchor="end" font-family="Nunito, sans-serif" font-size="10" fill="#475569" font-style="italic">128,000 tokens</text>
+
+        <rect x="30" y="45" width="120" height="65" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"></rect>
+        <text x="90" y="72" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Prompt</text>
+        <text x="90" y="88" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">~500 tokens</text>
+
+        <rect x="160" y="45" width="280" height="65" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"></rect>
+        <text x="300" y="72" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Document (20-page BRD)</text>
+        <text x="300" y="88" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">~13,000 tokens</text>
+
+        <rect x="450" y="45" width="130" height="65" rx="4" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"></rect>
+        <text x="515" y="72" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" fill="#0f172a">Response</text>
+        <text x="515" y="88" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">~2,000 tokens</text>
+
+        <rect x="590" y="45" width="80" height="65" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"></rect>
+        <text x="630" y="72" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">Unused</text>
+        <text x="630" y="86" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">capacity</text>
+
+
+        <text x="20" y="165" font-family="Space Grotesk, sans-serif" font-size="14" font-weight="700" fill="#ef4444">Overflows context window (8K model)</text>
+        <rect x="20" y="175" width="300" height="90" rx="6" fill="none" stroke="#ef4444" stroke-width="1.5"></rect>
+        <text x="290" y="195" text-anchor="end" font-family="Nunito, sans-serif" font-size="10" fill="#ef4444" font-style="italic">8,000 tokens</text>
+
+        <rect x="30" y="185" width="80" height="65" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"></rect>
+        <text x="70" y="215" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="700" fill="#0f172a">Prompt</text>
+        <text x="70" y="232" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">500</text>
+
+        <rect x="115" y="185" width="200" height="65" rx="4" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"></rect>
+        <text x="215" y="215" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="700" fill="#0f172a">Document</text>
+        <text x="215" y="232" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#475569">13,000 tokens</text>
+
+
+        <rect x="320" y="185" width="120" height="65" rx="4" fill="#fef2f2" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,3"></rect>
+        <text x="380" y="208" text-anchor="middle" font-size="18" fill="#ef4444">&#10060;</text>
+        <text x="380" y="232" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" fill="#ef4444">Overflow!</text>
+
+
+        <text x="470" y="195" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" fill="#0f172a">Solutions:</text>
+        <text x="470" y="215" font-family="Nunito, sans-serif" font-size="10" fill="#475569">1. Summarize the document first</text>
+        <text x="470" y="232" font-family="Nunito, sans-serif" font-size="10" fill="#475569">2. Use a model with a larger window</text>
+        <text x="470" y="249" font-family="Nunito, sans-serif" font-size="10" fill="#475569">3. Split into chunks and process separately</text>
+      </svg>

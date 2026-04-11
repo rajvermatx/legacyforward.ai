@@ -1,0 +1,57 @@
+<svg viewBox="0 0 860 380" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;max-width:860px;">
+        <rect width="860" height="380" fill="#f5f5f5" rx="12"></rect>
+        <text x="430" y="30" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">Defect Pattern Recognition</text>
+        <text x="430" y="50" text-anchor="middle" fill="#64748b" font-size="11">Clustered defect groups reveal systemic quality issues</text>
+        
+        <ellipse cx="180" cy="160" rx="140" ry="90" fill="#14b8a6" opacity="0.12" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4,3"></ellipse>
+        <text x="180" y="100" text-anchor="middle" fill="#14b8a6" font-size="13" font-weight="700">UI Regression Cluster</text>
+        <rect x="105" y="115" width="150" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="180" y="134" text-anchor="middle" fill="#334155" font-size="10">BUG-401 Button misaligned</text>
+        <rect x="105" y="148" width="150" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="180" y="167" text-anchor="middle" fill="#334155" font-size="10">BUG-415 Font rendering off</text>
+        <rect x="105" y="181" width="150" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="180" y="200" text-anchor="middle" fill="#334155" font-size="10">BUG-422 Modal overlap</text>
+        <text x="180" y="235" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">3 defects</text>
+        
+        <line x1="158" y1="248" x2="158" y2="262" stroke="#c00" stroke-width="2" marker-end="url(#arrowUpCh11)"></line>
+        <text x="200" y="260" fill="#c00" font-size="10" font-weight="600">Trending up</text>
+
+        
+        <ellipse cx="480" cy="165" rx="150" ry="100" fill="#14b8a6" opacity="0.12" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4,3"></ellipse>
+        <text x="480" y="95" text-anchor="middle" fill="#14b8a6" font-size="13" font-weight="700">API Timeout Pattern</text>
+        <rect x="395" y="110" width="170" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="480" y="129" text-anchor="middle" fill="#334155" font-size="10">BUG-521 Payment timeout</text>
+        <rect x="395" y="143" width="170" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="480" y="162" text-anchor="middle" fill="#334155" font-size="10">BUG-489 Receipt email delayed</text>
+        <rect x="395" y="176" width="170" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="480" y="195" text-anchor="middle" fill="#334155" font-size="10">BUG-455 Duplicate charge</text>
+        <rect x="395" y="209" width="170" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="480" y="228" text-anchor="middle" fill="#334155" font-size="10">BUG-401 Status stuck pending</text>
+        <text x="480" y="255" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">4 defects</text>
+        
+        <line x1="458" y1="265" x2="458" y2="279" stroke="#c00" stroke-width="2" marker-end="url(#arrowUpCh11)"></line>
+        <text x="505" y="277" fill="#c00" font-size="10" font-weight="600">Critical - trending up</text>
+
+        
+        <ellipse cx="740" cy="155" rx="100" ry="80" fill="#14b8a6" opacity="0.12" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="4,3"></ellipse>
+        <text x="740" y="100" text-anchor="middle" fill="#14b8a6" font-size="13" font-weight="700">Data Validation Gap</text>
+        <rect x="665" y="115" width="150" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="740" y="134" text-anchor="middle" fill="#334155" font-size="10">BUG-380 Currency rounding</text>
+        <rect x="665" y="148" width="150" height="28" rx="4" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="740" y="167" text-anchor="middle" fill="#334155" font-size="10">BUG-267 Report truncation</text>
+        <text x="740" y="210" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600">2 defects</text>
+        
+        <line x1="718" y1="222" x2="762" y2="222" stroke="#999" stroke-width="2" marker-end="url(#arrowCh11)"></line>
+        <text x="740" y="240" text-anchor="middle" fill="#999" font-size="10" font-weight="600">Stable</text>
+
+        
+        <rect x="60" y="310" width="740" height="50" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="100" y="338" fill="#334155" font-size="11" font-weight="600">Recommendation:</text>
+        <text x="200" y="338" fill="#64748b" font-size="11">Payment module needs dedicated code review + circuit breaker pattern. UI needs cross-browser test suite.</text>
+
+        <defs>
+          <marker id="arrowUpCh11" markerWidth="8" markerHeight="6" refX="4" refY="0" orient="auto">
+            <path d="M0,6 L4,0 L8,6" fill="#c00"></path>
+          </marker>
+        </defs>
+      </svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <rect x="20" y="90" width="100" height="50" rx="25" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="70" y="120" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">User Task</text>
+
+          <line x1="120" y1="115" x2="170" y2="115" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aA)"></line>
+
+          
+          <rect x="170" y="80" width="140" height="70" rx="10" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="240" y="107" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600">Reason</text>
+          <text x="240" y="128" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">"I need to search for..."</text>
+
+          <line x1="310" y1="115" x2="370" y2="115" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aA)"></line>
+
+          
+          <rect x="370" y="80" width="140" height="70" rx="10" fill="#f1f5f9" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="440" y="107" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600">Act</text>
+          <text x="440" y="128" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">web_search("query")</text>
+
+          <line x1="510" y1="115" x2="570" y2="115" stroke="#2e3554" stroke-width="1.5" marker-end="url(#aA)"></line>
+
+          
+          <rect x="570" y="80" width="140" height="70" rx="10" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="640" y="107" text-anchor="middle" fill="#f97316" font-family="Space Grotesk,sans-serif" font-size="13" font-weight="600">Observe</text>
+          <text x="640" y="128" text-anchor="middle" fill="#475569" font-family="JetBrains Mono,monospace" font-size="9">"Results: ..."</text>
+
+          
+          <path d="M640 150 L640 200 L240 200 L240 150" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#aA)" stroke-dasharray="6"></path>
+          <text x="440" y="218" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Loop until task complete</text>
+
+          
+          <line x1="240" y1="80" x2="240" y2="30" stroke="#22c55e" stroke-width="1.5" marker-end="url(#aA)"></line>
+          <rect x="180" y="0" width="120" height="30" rx="15" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="240" y="20" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">Final Answer</text>
+          <text x="305" y="55" fill="#22c55e" font-family="JetBrains Mono,monospace" font-size="9">No tools needed</text>
+
+          <defs><marker id="aA" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#2e3554"></path></marker></defs>
+        </svg>

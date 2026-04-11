@@ -1,0 +1,53 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LangGraph state machine diagram showing nodes, edges, and conditional routing">
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"></path>
+          </marker>
+        </defs>
+
+        <rect width="680" height="420" rx="12" fill="#f8fafc"></rect>
+        <text x="340" y="30" text-anchor="middle" font-family="Space Grotesk, system-ui, sans-serif" font-size="13" font-weight="700" fill="#0f172a">LangGraph State Machine — Nodes, Edges &amp; Conditional Routing</text>
+
+        <rect x="280" y="50" width="120" height="36" rx="10" ry="10" fill="#475569"></rect>
+        <text x="340" y="73" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">START</text>
+
+        <line x1="340" y1="86" x2="340" y2="120" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-1)"></line>
+
+        <rect x="260" y="120" width="160" height="40" rx="10" ry="10" fill="#8b5cf6"></rect>
+        <text x="340" y="145" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Analyze Input</text>
+
+        <line x1="340" y1="160" x2="340" y2="195" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-1)"></line>
+
+        <polygon points="340,195 385,225 340,255 295,225" fill="#0d9488"></polygon>
+        <text x="340" y="230" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Route?</text>
+
+        <line x1="295" y1="225" x2="140" y2="225" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-1)"></line>
+        <text x="215" y="218" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="11" fill="#64748b">simple</text>
+        <rect x="50" y="205" width="90" height="40" rx="10" ry="10" fill="#8b5cf6"></rect>
+        <text x="95" y="230" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Respond</text>
+
+        <line x1="385" y1="225" x2="530" y2="225" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-1)"></line>
+        <text x="455" y="218" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="11" fill="#64748b">needs_tools</text>
+        <rect x="530" y="205" width="110" height="40" rx="10" ry="10" fill="#8b5cf6"></rect>
+        <text x="585" y="230" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Use Tools</text>
+
+        <line x1="585" y1="245" x2="585" y2="295" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-1)"></line>
+        <rect x="520" y="295" width="130" height="40" rx="10" ry="10" fill="#8b5cf6"></rect>
+        <text x="585" y="320" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="12" font-weight="600" fill="#ffffff">Review Result</text>
+
+        <path d="M520,315 Q460,315 400,270 Q380,255 385,240" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-1)"></path>
+        <text x="435" y="285" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="10" fill="#64748b">re-evaluate</text>
+
+        <line x1="95" y1="245" x2="95" y2="360" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-1)"></line>
+
+        <line x1="340" y1="255" x2="340" y2="360" fill="none" stroke="#0d9488" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrow-1)"></line>
+        <text x="360" y="310" text-anchor="start" font-family="Nunito, system-ui, sans-serif" font-size="11" fill="#64748b">error</text>
+
+        <rect x="160" y="360" width="280" height="36" rx="10" ry="10" fill="#475569"></rect>
+        <text x="300" y="383" text-anchor="middle" font-family="Nunito, system-ui, sans-serif" font-size="13" font-weight="600" fill="#ffffff">END</text>
+
+        <rect x="490" y="365" width="14" height="14" rx="3" fill="#8b5cf6"></rect>
+        <text x="510" y="377" font-family="Nunito, system-ui, sans-serif" font-size="11" fill="#64748b">Agent Node</text>
+        <rect x="580" y="365" width="14" height="14" rx="2" fill="#0d9488"></rect>
+        <text x="600" y="377" font-family="Nunito, system-ui, sans-serif" font-size="11" fill="#64748b">Conditional</text>
+      </svg>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="#0f172a"/>
+
+  <!-- Geometric accent: amber upward arrow / growth chart feel -->
+  <!-- Rising line chart background -->
+  <polyline points="60,600 150,540 260,560 370,490 480,430 540,380" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.12"/>
+  <!-- Area fill under the line -->
+  <polygon points="60,600 150,540 260,560 370,490 480,430 540,380 540,640 60,640" fill="#f59e0b" opacity="0.05"/>
+
+  <!-- Corner accents -->
+  <polygon points="0,0 180,0 0,100" fill="#f59e0b" opacity="0.10"/>
+  <polygon points="600,800 600,700 500,800" fill="#f59e0b" opacity="0.10"/>
+
+  <!-- ── SERIES BRANDING ── -->
+  <text x="300" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.3em">THE LEGACYFORWARD.AI FRAMEWORK</text>
+  <line x1="260" y1="26" x2="340" y2="26" stroke="#f59e0b" stroke-width="2"/>
+
+  <!-- ── HEADER ── -->
+  <g transform="translate(276,36) scale(1.5)">
+    <rect width="32" height="32" rx="6" fill="#1e293b"/>
+    <circle cx="16" cy="16" r="10" fill="none" stroke="#334155" stroke-width="1.5"/>
+    <line x1="16" y1="5" x2="16" y2="7.5" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="24.5" x2="16" y2="27" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="5" y1="16" x2="7.5" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="24.5" y1="16" x2="27" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="13" y1="19" x2="22" y2="10" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="22" cy="10" r="2" fill="#f59e0b"/>
+    <circle cx="16" cy="16" r="2" fill="white"/>
+    <circle cx="13" cy="19" r="1.5" fill="#475569"/>
+  </g>
+
+  <text x="300" y="116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="white" text-anchor="middle" opacity="0.9">CAREERALIGN</text>
+
+  <!-- ── ACCENT STRIPE ── -->
+  <rect x="0" y="150" width="600" height="8" fill="#f59e0b"/>
+
+  <!-- ── MAIN CONTENT ── -->
+
+  <rect x="60" y="210" width="4" height="240" fill="#f59e0b" rx="2"/>
+
+  <!-- Title line 1 -->
+  <text x="88" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="white" letter-spacing="-1">AI for Business</text>
+  <!-- Title line 2 -->
+  <text x="88" y="326" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="white" letter-spacing="-1">Leaders</text>
+
+  <!-- Subtitle -->
+  <text x="88" y="366" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f59e0b" letter-spacing="0.3">What Every Executive Needs to Know</text>
+
+  <!-- Divider -->
+  <line x1="88" y1="388" x2="360" y2="388" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="88" y="410" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8" letter-spacing="0.3">14 chapters on strategy, investment &amp; governance</text>
+
+  <!-- Three-pillar visual (strategy, investment, governance) -->
+  <g opacity="0.20">
+    <!-- Pillar 1 -->
+    <rect x="88" y="480" width="100" height="80" rx="4" fill="#f59e0b"/>
+    <text x="138" y="540" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">STRATEGY</text>
+
+    <!-- Pillar 2 -->
+    <rect x="204" y="500" width="100" height="60" rx="4" fill="#f59e0b"/>
+    <text x="254" y="540" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">INVESTMENT</text>
+
+    <!-- Pillar 3 -->
+    <rect x="320" y="520" width="100" height="40" rx="4" fill="#f59e0b"/>
+    <text x="370" y="546" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5">GOVERNANCE</text>
+
+    <!-- Rising arrow overlay -->
+    <line x1="88" y1="575" x2="440" y2="460" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="440,455 450,465 435,468" fill="#f59e0b"/>
+  </g>
+
+  <!-- ── FOOTER ── -->
+  <rect x="0" y="640" width="600" height="1" fill="#f59e0b" opacity="0.4"/>
+  <rect x="0" y="641" width="600" height="1" fill="#f59e0b" opacity="0.15"/>
+
+  <text x="300" y="680" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.85">CareerAlign</text>
+  <text x="300" y="725" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.2em">THE CHAOS TO CLARITY AI SERIES · BOOK 1 OF 6</text>
+  <text x="300" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle" letter-spacing="1">careeralign.com</text>
+
+</svg>

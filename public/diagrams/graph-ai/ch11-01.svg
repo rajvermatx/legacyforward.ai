@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 350" width="900" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Graph-Aware LLM Agent: Tool Architecture</text>
+  <rect x="370" y="140" width="160" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2.5"/>
+  <text x="450" y="165" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="14" font-weight="700">LLM Agent</text>
+  <text x="450" y="185" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">plans + orchestrates</text>
+  <rect x="254.2563132923542" y="23.25631329235418" width="144" height="56" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="326.2563132923542" y="47.25631329235418" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="11" font-weight="700">Cypher Query</text>
+  <text x="326.2563132923542" y="65.25631329235418" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">MATCH patterns</text>
+  <line x1="392.0172439427031" y1="148.83704909609773" x2="378.5822151001587" y2="72.4695167279506" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="501.7436867076458" y="23.256313292354193" width="144" height="56" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="573.7436867076458" y="47.25631329235419" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="700">Path Finder</text>
+  <text x="573.7436867076458" y="65.25631329235419" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">shortestPath()</text>
+  <line x1="507.9827560572969" y1="148.83704909609773" x2="521.4177848998413" y2="72.46951672795062" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <rect x="501.7436867076458" y="270.7436867076458" width="144" height="56" rx="8" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="573.7436867076458" y="294.7436867076458" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="11" font-weight="700">Impact Analysis</text>
+  <text x="573.7436867076458" y="312.7436867076458" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">blast radius</text>
+  <line x1="507.9827560572969" y1="201.16295090390224" x2="521.4177848998413" y2="277.53048327204937" stroke="#ef4444" stroke-width="2" marker-end="url(#arwR)"/>
+  <rect x="254.2563132923542" y="270.7436867076458" width="144" height="56" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="326.2563132923542" y="294.7436867076458" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="11" font-weight="700">Subgraph Summary</text>
+  <text x="326.2563132923542" y="312.7436867076458" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9" font-weight="400">neighborhood</text>
+  <line x1="392.0172439427031" y1="201.16295090390224" x2="378.5822151001587" y2="277.53048327204937" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="375" y="308" width="150" height="34" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="330" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="700">Neo4j DB</text>
+  <line x1="450" y1="210" x2="450" y2="306" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arw)"/>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 620" role="img" aria-label="Flowchart showing the LLM request/response lifecycle with tool call branch">
+        <title>LLM Request/Response Lifecycle with Tool Call Branch</title>
+        
+        <defs>
+          <marker id="arrow-1" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 3.5 L 0 7 Z" fill="#64748b" ></path>
+          </marker>
+        </defs>
+
+        
+        <rect x="0" y="0" width="680" height="620" rx="4" fill="#F8F7F4" ></rect>
+
+        
+        <text x="340" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">LLM Request/Response Lifecycle</text>
+
+        
+        <rect x="135" y="44" width="12" height="12" rx="2" fill="#E6F1FB" stroke="#185FA5" stroke-width="1" ></rect>
+        <text x="152" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central">Data / Request</text>
+        <rect x="245" y="44" width="12" height="12" rx="2" fill="#EEEDFE" stroke="#534AB7" stroke-width="1" ></rect>
+        <text x="262" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central">Model</text>
+        <rect x="320" y="44" width="12" height="12" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1" ></rect>
+        <text x="337" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central">Tool Call Path</text>
+        <rect x="430" y="44" width="12" height="12" rx="2" fill="#F0EFEC" stroke="#9c9a92" stroke-width="1" ></rect>
+        <text x="447" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central">Decision / Structure</text>
+
+        
+        <rect x="268" y="72" width="144" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" ></rect>
+        <text x="340" y="92" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#185FA5" dominant-baseline="central" text-anchor="middle">User Message</text>
+
+        
+        <line x1="340" y1="112" x2="340" y2="138" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="248" y="140" width="184" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" ></rect>
+        <text x="340" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Build API Request</text>
+
+        
+        <line x1="340" y1="180" x2="340" y2="206" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="260" y="208" width="160" height="40" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="340" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Tokenize Input</text>
+
+        
+        <line x1="340" y1="248" x2="340" y2="274" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="256" y="276" width="168" height="40" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5" ></rect>
+        <text x="340" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Model Inference</text>
+
+        
+        <line x1="340" y1="316" x2="340" y2="346" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="308" y="348" width="64" height="40" rx="6" fill="#F0EFEC" stroke="#9c9a92" stroke-width="1.5" ></rect>
+        <text x="340" y="368" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Output?</text>
+
+        
+        
+        <path d="M 308 368 L 180 368 L 180 402" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></path>
+        <text x="240" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="middle">text</text>
+
+        
+        <rect x="104" y="404" width="152" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5" ></rect>
+        <text x="180" y="424" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Text Response</text>
+
+        
+        <line x1="180" y1="444" x2="180" y2="556" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        
+        <path d="M 372 368 L 500 368 L 500 402" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></path>
+        <text x="440" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">tool_call</text>
+
+        
+        <rect x="420" y="404" width="160" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5" ></rect>
+        <text x="500" y="424" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Emit Tool Call</text>
+
+        
+        <line x1="500" y1="444" x2="500" y2="470" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="428" y="472" width="144" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5" ></rect>
+        <text x="500" y="492" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Execute Tool</text>
+
+        
+        <line x1="500" y1="512" x2="500" y2="538" stroke="#0F6E56" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none" ></line>
+
+        
+        <rect x="388" y="540" width="224" height="40" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5" ></rect>
+        <text x="500" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Return Result to Model</text>
+
+        
+        <path d="M 612 560 L 640 560 L 640 296 L 424 296" stroke="#0F6E56" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-1)" fill="none" ></path>
+        <text x="650" y="428" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="start" transform="rotate(90, 650, 428)">re-infer</text>
+
+        
+        <rect x="120" y="558" width="224" height="40" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="2" ></rect>
+        <text x="232" y="578" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Final Response to User</text>
+      </svg>

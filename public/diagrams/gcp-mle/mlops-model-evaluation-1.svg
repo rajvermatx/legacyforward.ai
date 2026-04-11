@@ -1,0 +1,32 @@
+<svg viewBox="0 0 500 300" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="500" height="300" fill="#f8fafc" rx="12"></rect>
+
+          
+          <text x="300" y="30" text-anchor="middle" fill="#475569" font-size="13" font-weight="600">Predicted</text>
+          <text x="225" y="55" text-anchor="middle" fill="#22c55e" font-size="12">Positive</text>
+          <text x="375" y="55" text-anchor="middle" fill="#ef4444" font-size="12">Negative</text>
+
+          <text x="80" y="135" text-anchor="middle" fill="#475569" font-size="13" font-weight="600" transform="rotate(-90, 80, 135)">Actual</text>
+          <text x="120" y="120" text-anchor="middle" fill="#22c55e" font-size="12">Positive</text>
+          <text x="120" y="210" text-anchor="middle" fill="#ef4444" font-size="12">Negative</text>
+
+          
+          <rect x="155" y="70" width="140" height="80" rx="8" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="225" y="105" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="700">TP</text>
+          <text x="225" y="125" text-anchor="middle" fill="#22c55e" font-size="10">True Positive</text>
+
+          <rect x="305" y="70" width="140" height="80" rx="8" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="1"></rect>
+          <text x="375" y="105" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="700">FN</text>
+          <text x="375" y="125" text-anchor="middle" fill="#ef4444" font-size="10">False Negative</text>
+
+          <rect x="155" y="160" width="140" height="80" rx="8" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="1"></rect>
+          <text x="225" y="195" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="700">FP</text>
+          <text x="225" y="215" text-anchor="middle" fill="#ef4444" font-size="10">False Positive</text>
+
+          <rect x="305" y="160" width="140" height="80" rx="8" fill="rgba(34,197,94,0.15)" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="375" y="195" text-anchor="middle" fill="#22c55e" font-size="14" font-weight="700">TN</text>
+          <text x="375" y="215" text-anchor="middle" fill="#22c55e" font-size="10">True Negative</text>
+
+          
+          <text x="250" y="275" text-anchor="middle" fill="#64748b" font-size="10">TP + TN = Correct predictions | FP + FN = Errors</text>
+        </svg>

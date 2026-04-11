@@ -1,0 +1,92 @@
+<svg viewBox="0 0 900 500" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow7" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"></polygon>
+            </marker>
+            <marker id="arrow7g" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="10" y="10" width="880" height="480" rx="12" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.3"></rect>
+          <text x="455" y="35" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600" opacity="0.6">GOVERNANCE LAYER</text>
+
+          
+          <rect x="30" y="70" width="120" height="70" rx="10" fill="#f8fafc" stroke="#22d3ee" stroke-width="2"></rect>
+          <text x="90" y="100" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Data Sources</text>
+          <text x="90" y="118" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">databases, APIs, files</text>
+
+          
+          <line x1="150" y1="105" x2="210" y2="105" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="215" y="65" width="140" height="80" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="285" y="95" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Data Lineage</text>
+          <text x="285" y="113" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">provenance tracking</text>
+          <text x="285" y="130" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">source &#8594; transform &#8594; feature</text>
+
+          
+          <line x1="355" y1="105" x2="420" y2="105" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="425" y="65" width="140" height="80" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="495" y="95" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Model Training</text>
+          <text x="495" y="113" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">experiments, runs</text>
+          <text x="495" y="130" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">hyperparams, metrics</text>
+
+          
+          <line x1="565" y1="105" x2="630" y2="105" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="635" y="50" width="230" height="100" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2.5"></rect>
+          <text x="750" y="78" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Model Registry</text>
+          <text x="750" y="98" text-anchor="middle" fill="#a855f7" font-family="JetBrains Mono" font-size="10">owner | data | metrics | version</text>
+          <text x="750" y="116" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">model cards &amp; documentation</text>
+          <text x="750" y="134" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">approval status &amp; risk tier</text>
+
+          
+          <line x1="750" y1="150" x2="750" y2="195" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="620" y="200" width="260" height="85" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="750" y="228" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Approval Workflow</text>
+          <text x="750" y="248" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">model validator &#8594; risk committee</text>
+          <text x="750" y="268" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">multi-level sign-off before production</text>
+
+          
+          <line x1="750" y1="285" x2="750" y2="325" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow7g)"></line>
+          <text x="770" y="310" fill="#22c55e" font-family="JetBrains Mono" font-size="10">approved</text>
+
+          
+          <rect x="640" y="330" width="220" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="750" y="358" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Production</text>
+          <text x="750" y="378" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">deployed &amp; serving</text>
+
+          
+          <line x1="640" y1="362" x2="530" y2="362" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="300" y="320" width="225" height="90" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="412" y="348" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Monitoring</text>
+          <text x="412" y="368" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">drift | fairness | performance</text>
+          <text x="412" y="388" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">continuous evaluation &amp; alerting</text>
+          <text x="412" y="403" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">SLA tracking</text>
+
+          
+          <line x1="300" y1="365" x2="210" y2="365" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="30" y="325" width="175" height="80" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="117" y="353" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Incident Response</text>
+          <text x="117" y="373" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">alert &#8594; investigate &#8594; rollback</text>
+          <text x="117" y="390" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">playbooks &amp; escalation</text>
+
+          
+          <path d="M 30 365 L 15 365 L 15 105 L 30 105" fill="none" stroke="#8e94b5" stroke-width="1.5" stroke-dasharray="5,4"></path>
+          <text x="8" y="235" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9" transform="rotate(-90,8,235)">retrain loop</text>
+
+          
+          <path d="M 412 320 L 412 200 L 635 200" fill="none" stroke="#8e94b5" stroke-width="1.5" stroke-dasharray="5,4"></path>
+          <text x="520" y="193" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">status update</text>
+        </svg>

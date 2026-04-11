@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 370" width="900" height="370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Types of AI Classification</text>
+  <rect x="40" y="55" width="160" height="200" rx="12" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="120" y="80" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="600">Traditional ML</text>
+  <text x="120" y="105" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Classification, Regression</text>
+  <text x="120" y="125" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">XGBoost, Random Forest</text>
+  <rect x="50" y="145" width="140" height="95" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="120" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Fraud detection</text>
+  <text x="120" y="188" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Churn prediction</text>
+  <text x="120" y="208" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Credit scoring</text>
+  <rect x="260" y="55" width="160" height="200" rx="12" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="340" y="80" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Generative AI</text>
+  <text x="340" y="105" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Text, Image, Code</text>
+  <text x="340" y="125" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">GPT, Claude, Gemini</text>
+  <rect x="270" y="145" width="140" height="95" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="340" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Content creation</text>
+  <text x="340" y="188" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Code generation</text>
+  <text x="340" y="208" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Summarization</text>
+  <rect x="480" y="55" width="160" height="200" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="560" y="80" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="600">Computer Vision</text>
+  <text x="560" y="105" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Detection, Segmentation</text>
+  <text x="560" y="125" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">YOLO, ResNet, SAM</text>
+  <rect x="490" y="145" width="140" height="95" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="560" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Quality inspection</text>
+  <text x="560" y="188" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Medical imaging</text>
+  <text x="560" y="208" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Autonomous vehicles</text>
+  <rect x="700" y="55" width="160" height="200" rx="12" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="780" y="80" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Reinfortic. Learning</text>
+  <text x="780" y="105" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Decision, Optimization</text>
+  <text x="780" y="125" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">PPO, DQN, AlphaGo</text>
+  <rect x="710" y="145" width="140" height="95" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="780" y="168" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Game AI</text>
+  <text x="780" y="188" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Robotics</text>
+  <text x="780" y="208" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Resource allocation</text>
+  <rect x="40" y="290" width="820" height="40" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="450" y="315" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="12" font-weight="600">Enterprise AI Platform — Unified governance, deployment, and monitoring</text>
+</svg>

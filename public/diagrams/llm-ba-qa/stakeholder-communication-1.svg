@@ -1,0 +1,36 @@
+<svg viewBox="0 0 820 300" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;font-size:12px;">
+          <defs>
+            <marker id="ch8-arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"></path></marker>
+          </defs>
+
+          
+          <rect x="300" y="108" width="160" height="64" rx="8" fill="#14b8a6" stroke="#14b8a6" stroke-width="2"></rect>
+          <text x="380" y="134" text-anchor="middle" fill="#fff" font-weight="700" font-size="14">Technical</text>
+          <text x="380" y="152" text-anchor="middle" fill="#fff" font-size="14">Report</text>
+
+          
+          <line x1="310" y1="108" x2="140" y2="42" stroke="#333" stroke-width="1.5" marker-end="url(#ch8-arrow1)"></line>
+          <rect x="30" y="12" width="170" height="56" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+          <text x="115" y="34" text-anchor="middle" fill="#334155" font-weight="600">Executive</text>
+          <text x="115" y="50" text-anchor="middle" fill="#64748b" font-size="11">1-page brief, 300 words</text>
+
+          
+          <line x1="450" y1="108" x2="640" y2="42" stroke="#333" stroke-width="1.5" marker-end="url(#ch8-arrow1)"></line>
+          <rect x="540" y="12" width="170" height="56" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+          <text x="625" y="34" text-anchor="middle" fill="#334155" font-weight="600">Technical Lead</text>
+          <text x="625" y="50" text-anchor="middle" fill="#64748b" font-size="11">Full spec with APIs</text>
+
+          
+          <line x1="310" y1="172" x2="140" y2="238" stroke="#333" stroke-width="1.5" marker-end="url(#ch8-arrow1)"></line>
+          <rect x="30" y="212" width="170" height="56" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+          <text x="115" y="234" text-anchor="middle" fill="#334155" font-weight="600">Project Manager</text>
+          <text x="115" y="250" text-anchor="middle" fill="#64748b" font-size="11">Status + timeline + RAG</text>
+
+          
+          <line x1="450" y1="172" x2="640" y2="238" stroke="#333" stroke-width="1.5" marker-end="url(#ch8-arrow1)"></line>
+          <rect x="540" y="212" width="170" height="56" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+          <text x="625" y="234" text-anchor="middle" fill="#334155" font-weight="600">QA Team</text>
+          <text x="625" y="250" text-anchor="middle" fill="#64748b" font-size="11">Test impact + coverage</text>
+
+          <text x="410" y="295" text-anchor="middle" fill="#64748b" font-size="11" font-style="italic">Same source of truth, four audience-specific outputs with consistent facts</text>
+        </svg>

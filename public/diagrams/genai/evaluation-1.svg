@@ -1,0 +1,94 @@
+<svg viewBox="0 0 900 480" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="RAGAS metrics diagram">
+          <defs>
+            <marker id="arr-r" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#64748b"></polygon>
+            </marker>
+          </defs>
+
+          
+          <text x="450" y="30" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="16" font-weight="700">RAGAS: Four Metrics Covering the Entire RAG Pipeline</text>
+
+          
+          
+          <rect x="30" y="80" width="120" height="48" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="90" y="100" text-anchor="middle" fill="#475569" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">USER</text>
+          <text x="90" y="116" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">Question</text>
+
+          
+          <rect x="220" y="60" width="140" height="88" rx="8" fill="#e2e8f0" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="290" y="88" text-anchor="middle" fill="#f97316" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">Retriever</text>
+          <text x="290" y="106" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Vector search</text>
+          <text x="290" y="120" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">→ top-k chunks</text>
+          <text x="290" y="136" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Context [c1, c2 … ck]</text>
+
+          
+          <rect x="440" y="60" width="140" height="88" rx="8" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="510" y="88" text-anchor="middle" fill="#6366f1" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">Generator</text>
+          <text x="510" y="106" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">LLM synthesis</text>
+          <text x="510" y="120" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">question + context</text>
+          <text x="510" y="136" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">→ Answer</text>
+
+          
+          <rect x="660" y="80" width="120" height="48" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="720" y="100" text-anchor="middle" fill="#475569" font-family="'Space Grotesk',sans-serif" font-size="11" font-weight="600">OUTPUT</text>
+          <text x="720" y="116" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="12" font-weight="700">Answer</text>
+
+          
+          <line x1="150" y1="104" x2="218" y2="104" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-r)"></line>
+          <line x1="360" y1="104" x2="438" y2="104" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-r)"></line>
+          <line x1="580" y1="104" x2="658" y2="104" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr-r)"></line>
+
+          
+          <rect x="380" y="210" width="200" height="90" rx="10" fill="#1a0a0a" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="480" y="232" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="700">Faithfulness</text>
+          <text x="480" y="250" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Answer claims ⊆ Context?</text>
+          <text x="480" y="264" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Decompose answer → claims</text>
+          <text x="480" y="278" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Check each claim vs context</text>
+          <text x="480" y="292" text-anchor="middle" fill="#ef4444" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Hallucination detector</text>
+          
+          <line x1="680" y1="128" x2="520" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-r)"></line>
+
+          
+          <rect x="600" y="210" width="200" height="90" rx="10" fill="#0a0f1a" stroke="#6366f1" stroke-width="2"></rect>
+          <text x="700" y="232" text-anchor="middle" fill="#6366f1" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="700">Answer Relevance</text>
+          <text x="700" y="250" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Does answer address question?</text>
+          <text x="700" y="264" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Generate Qs from answer</text>
+          <text x="700" y="278" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Sim(generated Q, orig Q)</text>
+          <text x="700" y="292" text-anchor="middle" fill="#6366f1" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Off-topic detector</text>
+          
+          <line x1="740" y1="128" x2="720" y2="210" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-r)"></line>
+
+          
+          <rect x="100" y="210" width="200" height="90" rx="10" fill="#0a130a" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="200" y="232" text-anchor="middle" fill="#22c55e" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="700">Context Precision</text>
+          <text x="200" y="250" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Retrieved chunks useful?</text>
+          <text x="200" y="264" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Rank useful vs noise chunks</text>
+          <text x="200" y="278" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Precision@k over ranking</text>
+          <text x="200" y="292" text-anchor="middle" fill="#22c55e" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Retrieval noise detector</text>
+          
+          <line x1="260" y1="148" x2="220" y2="210" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-r)"></line>
+
+          
+          <rect x="320" y="210" width="200" height="90" rx="10" fill="#0d0a14" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="420" y="232" text-anchor="middle" fill="#a855f7" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="700">Context Recall</text>
+          <text x="420" y="250" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Retrieved everything needed?</text>
+          <text x="420" y="264" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Needs ground truth answer</text>
+          <text x="420" y="278" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="10">Claims in ref ⊆ context?</text>
+          <text x="420" y="292" text-anchor="middle" fill="#a855f7" font-family="'Space Grotesk',sans-serif" font-size="10" font-weight="600">Coverage gap detector</text>
+          
+          <line x1="310" y1="148" x2="380" y2="210" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-r)"></line>
+
+          
+          <rect x="300" y="360" width="300" height="60" rx="10" fill="#e2e8f0" stroke="#e6e8f4" stroke-width="1.5"></rect>
+          <text x="450" y="388" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="14" font-weight="700">RAGAS Score (Harmonic Mean)</text>
+          <text x="450" y="408" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">4F / (1/Faith + 1/AnsRel + 1/CtxPrec + 1/CtxRecall)</text>
+
+          
+          <line x1="200" y1="300" x2="360" y2="360" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arr-r)"></line>
+          <line x1="420" y1="300" x2="420" y2="360" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arr-r)"></line>
+          <line x1="480" y1="300" x2="460" y2="360" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arr-r)"></line>
+          <line x1="700" y1="300" x2="560" y2="360" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arr-r)"></line>
+
+          
+          <text x="30" y="455" fill="#64748b" font-family="'Nunito',sans-serif" font-size="11">Dashed arrows = metric measurement target. Ground truth required only for Context Recall.</text>
+        </svg>

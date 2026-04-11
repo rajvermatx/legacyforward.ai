@@ -1,0 +1,85 @@
+<svg viewBox="0 0 800 400" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow7" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+            <marker id="arrow7r" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="15" y="150" width="100" height="60" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="65" y="177" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">User Input</text>
+          <text x="65" y="197" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Raw message</text>
+
+          
+          <line x1="115" y1="180" x2="150" y2="180" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="160" y="90" width="160" height="180" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="240" y="115" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">INPUT GUARDS</text>
+
+          
+          <rect x="175" y="128" width="130" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="240" y="148" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">PII Detection</text>
+
+          <rect x="175" y="165" width="130" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="240" y="185" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">Prompt Injection</text>
+
+          <rect x="175" y="202" width="130" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="240" y="222" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">Topic Filter</text>
+
+          
+          <line x1="320" y1="180" x2="370" y2="180" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow7)"></line>
+          <text x="345" y="170" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">PASS</text>
+
+          
+          <rect x="380" y="145" width="110" height="70" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="435" y="175" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">LLM</text>
+          <text x="435" y="200" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Generate</text>
+
+          
+          <line x1="490" y1="180" x2="530" y2="180" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <rect x="540" y="75" width="150" height="210" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="615" y="100" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="12" font-weight="700">OUTPUT GUARDS</text>
+
+          
+          <rect x="555" y="113" width="120" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="615" y="133" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">Safety Classifier</text>
+
+          <rect x="555" y="150" width="120" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="615" y="170" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">Factuality Check</text>
+
+          <rect x="555" y="187" width="120" height="30" rx="5" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"></rect>
+          <text x="615" y="207" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="10">Format Validator</text>
+
+          
+          <polygon points="740,180 770,155 800,180 770,205" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></polygon>
+          <text x="770" y="184" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="9" font-weight="600">Gate</text>
+
+          
+          <line x1="690" y1="180" x2="740" y2="180" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow7)"></line>
+
+          
+          <line x1="770" y1="205" x2="770" y2="320" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow7)"></line>
+          <text x="758" y="265" text-anchor="end" fill="#22c55e" font-family="JetBrains Mono" font-size="9">PASS</text>
+
+          
+          <rect x="710" y="325" width="80" height="50" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="750" y="355" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Response</text>
+
+          
+          <line x1="770" y1="155" x2="770" y2="55" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow7r)"></line>
+          <text x="758" y="105" text-anchor="end" fill="#ef4444" font-family="JetBrains Mono" font-size="9">FAIL</text>
+
+          
+          <rect x="715" y="15" width="100" height="40" rx="8" fill="#f8fafc" stroke="#ef4444" stroke-width="2"></rect>
+          <text x="765" y="40" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Fallback</text>
+
+          
+          <path d="M 240 270 L 240 355 L 65 355 L 65 210" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow7r)"></path>
+          <text x="150" y="370" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9">BLOCKED (reject message)</text>
+        </svg>

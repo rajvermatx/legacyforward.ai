@@ -1,0 +1,44 @@
+<svg viewBox="0 0 820 200" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="820" height="200" fill="#f8fafc" rx="12"></rect>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6" opacity="0.7"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="70" width="100" height="60" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="70" y="95" text-anchor="middle" fill="#475569" font-size="11">Raw Data</text>
+          <text x="70" y="112" text-anchor="middle" fill="#64748b" font-size="10">GCS / Pub/Sub</text>
+
+          <line x1="122" y1="100" x2="158" y2="100" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+
+          
+          <rect x="160" y="70" width="120" height="60" rx="8" fill="#e2e8f0" stroke="#6366f1" stroke-width="1.5"></rect>
+          <text x="220" y="95" text-anchor="middle" fill="#a855f7" font-size="11" font-weight="600">Ingest &amp; Clean</text>
+          <text x="220" y="112" text-anchor="middle" fill="#64748b" font-size="10">Dataprep / Dataflow</text>
+
+          <line x1="282" y1="100" x2="318" y2="100" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+
+          
+          <rect x="320" y="70" width="120" height="60" rx="8" fill="#e2e8f0" stroke="#22d3ee" stroke-width="1.5"></rect>
+          <text x="380" y="95" text-anchor="middle" fill="#22d3ee" font-size="11" font-weight="600">Transform</text>
+          <text x="380" y="112" text-anchor="middle" fill="#64748b" font-size="10">Feature Eng / SQL</text>
+
+          <line x1="442" y1="100" x2="478" y2="100" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+
+          
+          <rect x="480" y="70" width="120" height="60" rx="8" fill="#e2e8f0" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="540" y="95" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600">Validate</text>
+          <text x="540" y="112" text-anchor="middle" fill="#64748b" font-size="10">Schema / Drift</text>
+
+          <line x1="602" y1="100" x2="638" y2="100" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+
+          
+          <rect x="640" y="60" width="160" height="80" rx="8" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5"></rect>
+          <text x="720" y="90" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="600">BigQuery</text>
+          <text x="720" y="108" text-anchor="middle" fill="#475569" font-size="10">Partitioned &amp; Clustered</text>
+          <text x="720" y="124" text-anchor="middle" fill="#64748b" font-size="10">BQML Training Ready</text>
+
+          <text x="410" y="185" text-anchor="middle" fill="#64748b" font-size="11" font-style="italic">End-to-end data transformation pipeline on GCP for ML workloads</text>
+        </svg>

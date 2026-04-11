@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 280" width="900" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Human-in-the-Loop Workflow</text>
+  <rect x="30" y="90" width="140" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="100" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">AI Analysis</text>
+  <text x="100" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Recommendation</text>
+  <line x1="170" y1="125" x2="203" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="205" y="90" width="140" height="70" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="275" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Confidence</text>
+  <text x="275" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Score threshold</text>
+  <line x1="345" y1="125" x2="378" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="380" y="90" width="140" height="70" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="450" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Review Queue</text>
+  <text x="450" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Low-confidence</text>
+  <line x1="520" y1="125" x2="553" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="555" y="90" width="140" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="625" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Human Review</text>
+  <text x="625" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Approve / Reject</text>
+  <line x1="695" y1="125" x2="728" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="730" y="90" width="140" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="800" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Execution</text>
+  <text x="800" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Final action</text>
+</svg>

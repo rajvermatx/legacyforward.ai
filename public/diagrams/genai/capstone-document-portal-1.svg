@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="ah" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#f59e0b"></path></marker>
+          </defs>
+          
+          <rect x="20" y="40" width="160" height="70" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5"></rect>
+          <text x="100" y="68" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Chat Frontend</text>
+          <text x="100" y="90" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">HTML / JS / Streamlit</text>
+          
+          <rect x="260" y="20" width="180" height="100" rx="10" fill="#e2e8f0" stroke="#f59e0b" stroke-width="1.5"></rect>
+          <text x="350" y="50" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">FastAPI Backend</text>
+          <text x="350" y="72" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">/upload  /query  /chat</text>
+          <text x="350" y="92" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">/documents  /health</text>
+          
+          <line x1="180" y1="75" x2="252" y2="70" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#ah)"></line>
+          
+          <rect x="260" y="170" width="180" height="80" rx="10" fill="#e2e8f0" stroke="#a855f7" stroke-width="1.5"></rect>
+          <text x="350" y="200" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Ingestion Worker</text>
+          <text x="350" y="222" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">Parse → Chunk → Embed → Store</text>
+          
+          <line x1="350" y1="120" x2="350" y2="162" stroke="#a855f7" stroke-width="1.5" marker-end="url(#ah)"></line>
+          <text x="370" y="148" fill="#64748b" font-family="Nunito" font-size="10">async task</text>
+          
+          <rect x="540" y="170" width="160" height="80" rx="10" fill="#e2e8f0" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="620" y="200" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Vector Store</text>
+          <text x="620" y="222" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">ChromaDB / pgvector</text>
+          
+          <line x1="440" y1="210" x2="532" y2="210" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ah)"></line>
+          
+          <rect x="540" y="40" width="160" height="70" rx="10" fill="#e2e8f0" stroke="#06b6d4" stroke-width="1.5"></rect>
+          <text x="620" y="68" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">LLM Provider</text>
+          <text x="620" y="90" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">OpenAI / Bedrock</text>
+          
+          <line x1="440" y1="60" x2="532" y2="68" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#ah)"></line>
+          
+          <line x1="440" y1="100" x2="540" y2="180" stroke="#22c55e" stroke-width="1.5" marker-end="url(#ah)"></line>
+          <text x="500" y="135" fill="#64748b" font-family="Nunito" font-size="10">retrieve</text>
+          
+          <rect x="50" y="180" width="140" height="60" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"></rect>
+          <text x="120" y="205" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">File Storage</text>
+          <text x="120" y="225" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">S3 / Local Disk</text>
+          
+          <line x1="280" y1="120" x2="170" y2="175" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"></line>
+          
+          <rect x="50" y="300" width="140" height="60" rx="10" fill="#e2e8f0" stroke="#64748b" stroke-width="1.5"></rect>
+          <text x="120" y="325" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Metadata DB</text>
+          <text x="120" y="345" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="11">PostgreSQL / SQLite</text>
+          
+          <line x1="280" y1="250" x2="170" y2="300" stroke="#64748b" stroke-width="1.5" marker-end="url(#ah)"></line>
+        </svg>

@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Chatbot Launch Plan</text>
+  <rect x="30" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="82.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Signal Capture</text>
+  <text x="82.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Identify pain</text>
+  <line x1="135" y1="142.5" x2="175" y2="142.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="177" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="229.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Frame</text>
+  <text x="229.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Value canvas</text>
+  <line x1="282" y1="142.5" x2="322" y2="142.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="324" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="376.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Explore</text>
+  <text x="376.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">WoZ + research</text>
+  <line x1="429" y1="142.5" x2="469" y2="142.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="471" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="523.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Harden</text>
+  <text x="523.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Eval + safety</text>
+  <line x1="576" y1="142.5" x2="616" y2="142.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="618" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="670.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Launch</text>
+  <text x="670.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Canary rollout</text>
+  <line x1="723" y1="142.5" x2="763" y2="142.5" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="765" y="110" width="105" height="65" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="817.5" y="132" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Monitor</text>
+  <text x="817.5" y="148" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Ops dashboard</text>
+  <text x="450" y="210" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Capstone: Applying Grounded Delivery to a real chatbot product launch</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg viewBox="0 0 900 280" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;background:#fff;border-radius:8px;border:1px solid #e0e0e0">
+        <text x="450" y="30" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">A/B Testing Workflow for LLM Outputs</text>
+        <defs>
+          <marker id="arrowAB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#14b8a6"></path>
+          </marker>
+        </defs>
+        
+        <rect x="30" y="100" width="100" height="60" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="80" y="126" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Test Inputs</text>
+        <text x="80" y="144" text-anchor="middle" fill="#64748b" font-size="10">50+ examples</text>
+        
+        <line x1="130" y1="130" x2="175" y2="130" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        
+        <rect x="175" y="105" width="90" height="50" rx="6" fill="#f5f5f5" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="220" y="126" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Random</text>
+        <text x="220" y="142" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Split</text>
+        
+        <line x1="265" y1="115" x2="320" y2="75" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="320" y="50" width="120" height="50" rx="6" fill="#14b8a6" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="380" y="72" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Prompt A</text>
+        <text x="380" y="90" text-anchor="middle" fill="#fff" font-size="10">Current version</text>
+        
+        <line x1="265" y1="145" x2="320" y2="180" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="320" y="160" width="120" height="50" rx="6" fill="#14b8a6" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="380" y="182" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Prompt B</text>
+        <text x="380" y="200" text-anchor="middle" fill="#fff" font-size="10">New version</text>
+        
+        <line x1="440" y1="75" x2="490" y2="75" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="490" y="50" width="100" height="50" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="540" y="72" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Output A</text>
+        <text x="540" y="88" text-anchor="middle" fill="#64748b" font-size="10">Score: 0.82</text>
+        <line x1="440" y1="185" x2="490" y2="185" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="490" y="160" width="100" height="50" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1"></rect>
+        <text x="540" y="182" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Output B</text>
+        <text x="540" y="198" text-anchor="middle" fill="#64748b" font-size="10">Score: 0.89</text>
+        
+        <line x1="590" y1="75" x2="630" y2="115" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <line x1="590" y1="185" x2="630" y2="145" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="630" y="100" width="110" height="60" rx="6" fill="#f5f5f5" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="685" y="124" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Statistical</text>
+        <text x="685" y="142" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Comparison</text>
+        
+        <line x1="740" y1="130" x2="780" y2="130" stroke="#14b8a6" stroke-width="2" marker-end="url(#arrowAB)"></line>
+        <rect x="780" y="100" width="100" height="60" rx="6" fill="#14b8a6" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="830" y="126" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Winner</text>
+        <text x="830" y="148" text-anchor="middle" fill="#fff" font-size="10">p &lt; 0.05</text>
+        
+        <text x="450" y="250" text-anchor="middle" fill="#64748b" font-size="11">Both prompts process the same inputs. Statistical comparison reveals which version produces higher-quality outputs.</text>
+      </svg>

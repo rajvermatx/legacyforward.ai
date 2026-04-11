@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" width="1020" height="600">
+  <defs>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-l" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Participants -->
+  <rect x="20" y="10" width="80" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="60" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">User</text>
+
+  <rect x="160" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="220" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Orchestrator</text>
+
+  <rect x="360" y="10" width="130" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="425" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Research Agent</text>
+
+  <rect x="560" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="620" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Code Agent</text>
+
+  <rect x="740" y="10" width="120" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="800" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Review Agent</text>
+
+  <rect x="910" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="960" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Shared Memory</text>
+
+  <!-- Lifelines -->
+  <line x1="60" y1="46" x2="60" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="220" y1="46" x2="220" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="425" y1="46" x2="425" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="620" y1="46" x2="620" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="800" y1="46" x2="800" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="960" y1="46" x2="960" y2="570" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Activation bars -->
+  <rect x="55" y="70" width="10" height="40" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="215" y="85" width="10" height="420" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="420" y="185" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="615" y="185" width="10" height="60" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="795" y="340" width="10" height="50" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="955" y="265" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+
+  <!-- 1. Submit task -->
+  <text x="12" y="82" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">1</text>
+  <line x1="65" y1="80" x2="210" y2="80" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="138" y="74" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">submit complex task</text>
+
+  <!-- 2. Plan/decompose -->
+  <text x="12" y="117" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">2</text>
+  <rect x="200" y="105" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="220" y="119" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">plan</text>
+  <text x="260" y="119" fill="#475569" font-family="Nunito, sans-serif" font-size="10">decompose into sub-tasks</text>
+
+  <!-- 3. Delegate to agents (parallel) -->
+  <text x="12" y="157" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">3</text>
+
+  <!-- Parallel execution box -->
+  <rect x="350" y="172" width="310" height="85" rx="4" fill="#a855f7" opacity="0.04" stroke="#a855f7" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="360" y="186" fill="#a855f7" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="600">PARALLEL</text>
+
+  <line x1="225" y1="195" x2="415" y2="195" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="320" y="189" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">research sub-task</text>
+
+  <line x1="225" y1="215" x2="610" y2="215" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="418" y="209" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">coding sub-task</text>
+
+  <!-- 4. Agents execute -->
+  <text x="12" y="232" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">4</text>
+  <rect x="405" y="225" width="40" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="425" y="236" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="8">search</text>
+  <rect x="600" y="225" width="40" height="16" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="620" y="236" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="8">code</text>
+
+  <!-- 5. Results back + write to shared memory -->
+  <text x="12" y="277" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">5</text>
+  <line x1="415" y1="270" x2="225" y2="270" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="320" y="264" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">research findings</text>
+
+  <line x1="425" y1="280" x2="950" y2="280" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-r)"/>
+  <text x="688" y="294" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10">write findings to shared memory</text>
+
+  <line x1="610" y1="310" x2="225" y2="310" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="418" y="304" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">code output</text>
+
+  <!-- 6. Delegate to review -->
+  <text x="12" y="352" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">6</text>
+  <line x1="225" y1="345" x2="790" y2="345" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="508" y="339" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">review code + research for correctness</text>
+
+  <line x1="790" y1="380" x2="225" y2="380" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="508" y="374" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">review: approved (or revision requests)</text>
+
+  <!-- 7. Iterate if needed -->
+  <text x="12" y="417" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">7</text>
+  <rect x="200" y="405" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="220" y="419" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">check</text>
+  <text x="260" y="419" fill="#475569" font-family="Nunito, sans-serif" font-size="10">iterate if revisions needed</text>
+
+  <!-- 8. Synthesize -->
+  <text x="12" y="452" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">8</text>
+  <rect x="200" y="440" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="220" y="454" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">merge</text>
+  <text x="260" y="454" fill="#475569" font-family="Nunito, sans-serif" font-size="10">synthesize final response from all agents</text>
+
+  <!-- 9. Return -->
+  <text x="12" y="492" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">9</text>
+  <line x1="210" y1="485" x2="65" y2="485" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="138" y="479" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">unified response</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="555" x2="60" y2="555" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="68" y="559" fill="#475569" font-family="Nunito, sans-serif" font-size="9">request</text>
+  <line x1="160" y1="555" x2="130" y2="555" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="168" y="559" fill="#475569" font-family="Nunito, sans-serif" font-size="9">response</text>
+  <line x1="240" y1="555" x2="270" y2="555" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="278" y="559" fill="#475569" font-family="Nunito, sans-serif" font-size="9">shared memory write</text>
+  <rect x="420" y="548" width="50" height="14" rx="3" fill="#a855f7" opacity="0.06" stroke="#a855f7" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="478" y="559" fill="#475569" font-family="Nunito, sans-serif" font-size="9">parallel execution</text>
+</svg>

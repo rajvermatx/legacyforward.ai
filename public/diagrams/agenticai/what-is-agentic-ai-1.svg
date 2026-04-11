@@ -1,0 +1,96 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+        
+        <defs>
+          <marker id="arrow-1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" ></polygon>
+          </marker>
+        </defs>
+
+        
+        <text x="340" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">The Autonomy Spectrum</text>
+
+        
+        <line x1="60" y1="70" x2="620" y2="70" stroke="#D3D1C7" stroke-width="2" marker-end="url(#arrow-1)" ></line>
+        <text x="60" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748b" dominant-baseline="central">No autonomy</text>
+        <text x="620" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748b" dominant-baseline="central" text-anchor="end">Full autonomy</text>
+
+        
+        <rect x="40" y="120" width="144" height="88" rx="10" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5" ></rect>
+        <text x="112" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Script</text>
+        <text x="112" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Deterministic</text>
+        <text x="112" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">No decisions</text>
+
+        
+        <rect x="218" y="120" width="144" height="88" rx="10" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5" ></rect>
+        <text x="290" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Chain</text>
+        <text x="290" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Sequential LLM calls</text>
+        <text x="290" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Fixed path</text>
+
+        
+        <rect x="396" y="120" width="144" height="88" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="468" y="148" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Agent</text>
+        <text x="468" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Dynamic decisions</text>
+        <text x="468" y="188" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Tool use + re-planning</text>
+
+        
+        <rect x="574" y="120" width="96" height="88" rx="10" fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="622" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Multi-</text>
+        <text x="622" y="163" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Agent</text>
+        <text x="622" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Delegation + coordination</text>
+
+        
+        <path d="M184,164 L218,164" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" ></path>
+        <path d="M362,164 L396,164" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" ></path>
+        <path d="M540,164 L574,164" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-1)" ></path>
+
+        
+        <text x="340" y="248" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">Characteristics at Each Level</text>
+
+        
+        <text x="112" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Script</text>
+        <text x="290" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle">Chain</text>
+        <text x="468" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Agent</text>
+        <text x="622" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Multi-Agent</text>
+
+        <line x1="60" y1="295" x2="660" y2="295" stroke="#D3D1C7" stroke-width="1" ></line>
+
+        
+        <text x="40" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a" dominant-baseline="central">Goal</text>
+        <text x="112" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Hardcoded</text>
+        <text x="290" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Implicit</text>
+        <text x="468" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Explicit, tracked</text>
+        <text x="622" y="318" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Distributed goals</text>
+
+        
+        <text x="40" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a" dominant-baseline="central">Decisions</text>
+        <text x="112" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">None</text>
+        <text x="290" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Per-step LLM</text>
+        <text x="468" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Dynamic routing</text>
+        <text x="622" y="348" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Negotiation</text>
+
+        
+        <text x="40" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a" dominant-baseline="central">Tools</text>
+        <text x="112" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">None</text>
+        <text x="290" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Pre-wired</text>
+        <text x="468" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Selected by agent</text>
+        <text x="622" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Shared tool pools</text>
+
+        
+        <text x="40" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a" dominant-baseline="central">Errors</text>
+        <text x="112" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Crash</text>
+        <text x="290" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Retry or fail</text>
+        <text x="468" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Re-plan</text>
+        <text x="622" y="408" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Delegate or escalate</text>
+
+        
+        <line x1="60" y1="430" x2="660" y2="430" stroke="#D3D1C7" stroke-width="1" ></line>
+        <text x="40" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#1a1a1a" dominant-baseline="central">Example</text>
+        <text x="112" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">cron job</text>
+        <text x="290" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Summarize + translate</text>
+        <text x="468" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Coding assistant</text>
+        <text x="622" y="455" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Research swarm</text>
+
+        
+        <line x1="396" y1="490" x2="670" y2="490" stroke="#534AB7" stroke-width="2" stroke-dasharray="6 3" ></line>
+        <text x="533" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#534AB7" dominant-baseline="central" text-anchor="middle">Agentic territory</text>
+      </svg>

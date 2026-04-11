@@ -1,0 +1,38 @@
+<svg viewBox="0 0 900 280" width="900" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="35" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Event-Driven AI</text>
+  <rect x="55" y="90" width="160" height="70" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="135" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Event Source</text>
+  <text x="135" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Webhook, IoT, DB</text>
+  <line x1="215" y1="125" x2="263" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="265" y="90" width="160" height="70" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="345" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Message Queue</text>
+  <text x="345" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Kafka / SQS</text>
+  <line x1="425" y1="125" x2="473" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="475" y="90" width="160" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="555" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">AI Consumer</text>
+  <text x="555" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Classify / Decide</text>
+  <line x1="635" y1="125" x2="683" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="685" y="90" width="160" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="765" y="115" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Action</text>
+  <text x="765" y="133" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Notify / Update</text>
+</svg>

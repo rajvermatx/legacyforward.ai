@@ -1,0 +1,81 @@
+<svg viewBox="0 0 920 400" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow3" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"></polygon>
+            </marker>
+            <marker id="arrow3b" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"></polygon>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="120" width="120" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="80" y="150" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Transaction</text>
+          <text x="80" y="168" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Stream</text>
+
+          
+          <line x1="140" y1="155" x2="195" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="205" y="100" width="140" height="110" rx="10" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"></rect>
+          <text x="275" y="130" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="600">Feature Store</text>
+          <text x="275" y="150" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Real-time features:</text>
+          <text x="275" y="165" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">velocity, avg amount,</text>
+          <text x="275" y="180" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">geo distance, time</text>
+          <text x="275" y="198" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">sub-10ms lookups</text>
+
+          
+          <line x1="345" y1="155" x2="400" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow3)"></line>
+          <text x="372" y="143" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">features</text>
+
+          
+          <rect x="410" y="110" width="130" height="90" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="475" y="140" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">ML Scoring</text>
+          <text x="475" y="158" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Engine</text>
+          <text x="475" y="178" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">XGBoost / Neural Net</text>
+          <text x="475" y="192" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">&lt;50ms inference</text>
+
+          
+          <line x1="540" y1="155" x2="595" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow3)"></line>
+          <text x="567" y="143" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">score</text>
+
+          
+          <rect x="605" y="100" width="130" height="110" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"></rect>
+          <text x="670" y="128" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Decision</text>
+          <text x="670" y="146" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="13" font-weight="600">Engine</text>
+          <text x="670" y="168" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">APPROVE</text>
+          <text x="670" y="183" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">REVIEW</text>
+          <text x="670" y="198" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">BLOCK</text>
+
+          
+          <line x1="670" y1="210" x2="670" y2="260" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow3b)"></line>
+
+          
+          <rect x="590" y="265" width="160" height="70" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="670" y="293" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="600">Explainability</text>
+          <text x="670" y="311" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">SHAP / LIME values</text>
+          <text x="670" y="326" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Per-feature contribution</text>
+
+          
+          <line x1="750" y1="300" x2="800" y2="300" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="810" y="120" width="95" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="857" y="148" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Case</text>
+          <text x="857" y="165" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Management</text>
+
+          
+          <rect x="810" y="265" width="95" height="70" rx="10" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="857" y="293" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Analyst</text>
+          <text x="857" y="310" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Queue</text>
+
+          
+          <line x1="735" y1="155" x2="810" y2="155" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <path d="M 857 190 L 857 230 L 857 250 L 857 265" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow3b)"></path>
+
+          
+          <path d="M 810 340 L 275 340 L 275 210" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow3b)"></path>
+          <text x="540" y="360" text-anchor="middle" fill="#f59e0b" font-family="JetBrains Mono" font-size="10">Feedback loop: analyst decisions → model retraining</text>
+        </svg>

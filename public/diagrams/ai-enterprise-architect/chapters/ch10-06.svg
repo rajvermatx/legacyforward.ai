@@ -1,0 +1,58 @@
+<svg viewBox="0 0 900 370" width="900" height="370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Evaluation and Guardrails</text>
+  <rect x="30" y="80" width="200" height="250" rx="12" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="130" y="108" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="14" font-weight="600">Input Guards</text>
+  <rect x="45" y="120" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#ef4444" stroke-width="1"/>
+  <text x="130" y="138" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">PII Masking</text>
+  <rect x="45" y="158" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#ef4444" stroke-width="1"/>
+  <text x="130" y="176" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">Injection Detection</text>
+  <rect x="45" y="196" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#ef4444" stroke-width="1"/>
+  <text x="130" y="214" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">Topic Blocklist</text>
+  <rect x="45" y="234" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#ef4444" stroke-width="1"/>
+  <text x="130" y="252" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="10">Schema Validation</text>
+  <text x="130" y="300" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="9">Block or sanitize</text>
+  <rect x="290" y="130" width="130" height="90" rx="12" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="355" y="168" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="16" font-weight="700">LLM</text>
+  <text x="355" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Generate</text>
+  <line x1="230" y1="205" x2="288" y2="175" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="420" y1="175" x2="478" y2="175" stroke="#a855f7" stroke-width="2" marker-end="url(#arwP)"/>
+  <rect x="480" y="80" width="200" height="250" rx="12" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="580" y="108" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="14" font-weight="600">Output Guards</text>
+  <rect x="495" y="120" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"/>
+  <text x="580" y="138" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Factuality Check</text>
+  <rect x="495" y="158" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"/>
+  <text x="580" y="176" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Toxicity Filter</text>
+  <rect x="495" y="196" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"/>
+  <text x="580" y="214" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Hallucination Detect</text>
+  <rect x="495" y="234" width="170" height="28" rx="6" fill="#f1f5f9" stroke="#22c55e" stroke-width="1"/>
+  <text x="580" y="252" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="10">Format Enforce</text>
+  <text x="580" y="300" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="9">Filter or regenerate</text>
+  <rect x="730" y="80" width="150" height="250" rx="12" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="805" y="108" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="12" font-weight="600">Eval Framework</text>
+  <text x="805" y="135" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">LLM-as-Judge</text>
+  <text x="805" y="165" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Human Eval</text>
+  <text x="805" y="195" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Automated Tests</text>
+  <text x="805" y="225" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Regression Suite</text>
+  <text x="805" y="255" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">A/B Testing</text>
+  <line x1="680" y1="205" x2="728" y2="205" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+</svg>

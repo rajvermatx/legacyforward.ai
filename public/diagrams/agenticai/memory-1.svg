@@ -1,0 +1,54 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+        
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#555"></path>
+          </marker>
+        </defs>
+
+        
+        <text x="340" y="30" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#003366" text-anchor="middle" dominant-baseline="central">Multi-Tier Memory Architecture</text>
+
+        
+        <rect x="250" y="55" width="180" height="44" rx="6" fill="#F0F4F8" stroke="#003366" stroke-width="2"></rect>
+        <text x="340" y="77" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#003366" text-anchor="middle" dominant-baseline="central">LLM Agent</text>
+
+        
+        <line x1="340" y1="99" x2="340" y2="135" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+
+        
+        <rect x="90" y="135" width="500" height="72" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+        <text x="340" y="157" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Conversation Buffer (Short-Term)</text>
+        <text x="340" y="178" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Last k messages in full detail • Sliding window or token-capped</text>
+        <text x="340" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#6B62C0" text-anchor="middle" dominant-baseline="central">Latency: ~0ms • Cost: included in prompt • Retention: session only</text>
+
+        
+        <line x1="340" y1="207" x2="340" y2="237" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+        <text x="355" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="400" fill="#888" dominant-baseline="central">overflow</text>
+
+        
+        <rect x="90" y="237" width="500" height="72" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="340" y="259" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Summary Memory (Compressed)</text>
+        <text x="340" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Running summary of past conversation • Preserves key facts and decisions</text>
+        <text x="340" y="297" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#2A8A6E" text-anchor="middle" dominant-baseline="central">Latency: ~200ms (LLM call) • Cost: low • Retention: session / persistent</text>
+
+        
+        <line x1="340" y1="309" x2="340" y2="339" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+        <text x="355" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="400" fill="#888" dominant-baseline="central">embed</text>
+
+        
+        <rect x="90" y="339" width="500" height="72" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="340" y="361" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Vector Store (Long-Term Semantic)</text>
+        <text x="340" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Embedded conversation chunks • Semantic similarity retrieval</text>
+        <text x="340" y="399" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#3A7CC6" text-anchor="middle" dominant-baseline="central">Latency: ~50ms (vector search) • Cost: storage + embedding • Retention: permanent</text>
+
+        
+        <line x1="340" y1="411" x2="340" y2="441" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-1)" fill="none"></line>
+        <text x="355" y="426" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="400" fill="#888" dominant-baseline="central">classify</text>
+
+        
+        <rect x="90" y="441" width="500" height="72" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="340" y="463" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Episodic Memory (Experiences)</text>
+        <text x="340" y="484" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Structured event records • "What happened when..." queries</text>
+        <text x="340" y="501" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#B5572F" text-anchor="middle" dominant-baseline="central">Latency: ~100ms (DB query) • Cost: storage • Retention: permanent</text>
+      </svg>

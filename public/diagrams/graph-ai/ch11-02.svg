@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Cypher Generation Flow</text>
+  <rect x="28" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="69" y="155" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Question</text>
+  <line x1="110" y1="151" x2="122" y2="151" stroke="#0f172a" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="124" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="155" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="10" font-weight="700">Schema Context</text>
+  <line x1="206" y1="151" x2="218" y2="151" stroke="#3b82f6" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="220" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="261" y="155" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="10" font-weight="700">Few-shot</text>
+  <line x1="302" y1="151" x2="314" y2="151" stroke="#a855f7" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="316" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="357" y="155" text-anchor="middle" fill="#f59e0b" font-family="Space Grotesk" font-size="10" font-weight="700">LLM</text>
+  <line x1="398" y1="151" x2="410" y2="151" stroke="#f59e0b" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="412" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="453" y="155" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="10" font-weight="700">Cypher</text>
+  <line x1="494" y1="151" x2="506" y2="151" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="508" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="549" y="155" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="10" font-weight="700">Execute</text>
+  <line x1="590" y1="151" x2="602" y2="151" stroke="#22c55e" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="604" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="645" y="155" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="10" font-weight="700">Results</text>
+  <line x1="686" y1="151" x2="698" y2="151" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="700" y="125" width="82" height="52" rx="8" fill="#f8fafc" stroke="#0f172a" stroke-width="2"/>
+  <text x="741" y="155" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Answer</text>
+  <text x="450" y="215" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Schema context tells the LLM what node labels, relationship types, and properties exist</text>
+  <text x="450" y="233" text-anchor="middle" fill="#06b6d4" font-family="Nunito" font-size="10" font-weight="400">Few-shot examples guide Cypher syntax and query patterns for the target graph</text>
+</svg>

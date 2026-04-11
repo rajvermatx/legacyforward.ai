@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 300" width="100%" xmlns="http://www.w3.org/2000/svg" style="font-family:system-ui,sans-serif;max-width:900px;">
+        <rect width="900" height="300" fill="#f5f5f5" rx="12"></rect>
+        
+        <rect x="20" y="110" width="120" height="60" rx="6" fill="#14b8a6" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="80" y="135" text-anchor="middle" fill="#fff" font-size="12" font-weight="600">Schema</text>
+        <text x="80" y="152" text-anchor="middle" fill="#fff" font-size="10">Definition</text>
+        
+        <line x1="140" y1="140" x2="170" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowCh10)"></line>
+        
+        <rect x="170" y="110" width="130" height="60" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="235" y="135" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">LLM Generation</text>
+        <text x="235" y="152" text-anchor="middle" fill="#64748b" font-size="10">Synthetic records</text>
+        
+        <line x1="300" y1="140" x2="330" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowCh10)"></line>
+        
+        <rect x="330" y="110" width="130" height="60" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="395" y="135" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Validation Rules</text>
+        <text x="395" y="152" text-anchor="middle" fill="#64748b" font-size="10">Format / range / logic</text>
+        
+        <line x1="460" y1="140" x2="490" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowCh10)"></line>
+        
+        <rect x="490" y="110" width="130" height="60" rx="6" fill="#ccfbf1" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="555" y="135" text-anchor="middle" fill="#334155" font-size="12" font-weight="600">Privacy Masking</text>
+        <text x="555" y="152" text-anchor="middle" fill="#64748b" font-size="10">PII replacement</text>
+        
+        <line x1="620" y1="140" x2="650" y2="140" stroke="#666" stroke-width="2" marker-end="url(#arrowCh10)"></line>
+        
+        <rect x="650" y="30" width="120" height="45" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="710" y="50" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Customer Data</text>
+        <text x="710" y="65" text-anchor="middle" fill="#64748b" font-size="9">JSON / CSV</text>
+        <rect x="650" y="90" width="120" height="45" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="710" y="110" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Transaction Data</text>
+        <text x="710" y="125" text-anchor="middle" fill="#64748b" font-size="9">Time-series</text>
+        <rect x="650" y="150" width="120" height="45" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="710" y="170" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Edge Case Data</text>
+        <text x="710" y="185" text-anchor="middle" fill="#64748b" font-size="9">Unicode / boundary</text>
+        <rect x="650" y="210" width="120" height="45" rx="6" fill="#fff" stroke="#14b8a6" stroke-width="1.5"></rect>
+        <text x="710" y="230" text-anchor="middle" fill="#334155" font-size="11" font-weight="600">Cross-System Data</text>
+        <text x="710" y="245" text-anchor="middle" fill="#64748b" font-size="9">Referential integrity</text>
+        
+        <line x1="650" y1="140" x2="650" y2="52" stroke="#666" stroke-width="1.5"></line>
+        <line x1="650" y1="140" x2="650" y2="112" stroke="#666" stroke-width="1.5"></line>
+        <line x1="650" y1="140" x2="650" y2="172" stroke="#666" stroke-width="1.5"></line>
+        <line x1="650" y1="140" x2="650" y2="232" stroke="#666" stroke-width="1.5"></line>
+        
+        <text x="400" y="282" text-anchor="middle" fill="#334155" font-size="16" font-weight="700">Test Data Factory Architecture</text>
+        
+        <defs>
+          <marker id="arrowCh10" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6" fill="#64748b"></path>
+          </marker>
+        </defs>
+      </svg>

@@ -1,0 +1,152 @@
+<svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg">
+        
+        <defs>
+          <marker id="arrow-1" viewBox="0 0 10 7" refX="10" refY="3.5"
+                  markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" ></polygon>
+          </marker>
+        </defs>
+
+        
+        <rect x="10" y="10" width="660" height="440" rx="20"
+              fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5" ></rect>
+        <text x="340" y="42" font-family="system-ui, sans-serif" font-size="14"
+              font-weight="700" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">Tool Registry Architecture</text>
+
+        
+        <rect x="40" y="70" width="200" height="160" rx="12"
+              fill="#E6F1FB" stroke="#185FA5" stroke-width="2" ></rect>
+        <text x="140" y="94" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">Tool Definitions</text>
+        <text x="140" y="116" font-family="system-ui, sans-serif" font-size="11"
+              font-weight="400" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">(JSON Schemas)</text>
+
+        
+        <rect x="56" y="134" width="168" height="28" rx="6"
+              fill="white" stroke="#185FA5" stroke-width="1" opacity="0.7" ></rect>
+        <text x="140" y="148" font-family="'SF Mono', monospace" font-size="11"
+              font-weight="500" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">get_order_status</text>
+
+        <rect x="56" y="168" width="168" height="28" rx="6"
+              fill="white" stroke="#185FA5" stroke-width="1" opacity="0.7" ></rect>
+        <text x="140" y="182" font-family="'SF Mono', monospace" font-size="11"
+              font-weight="500" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">search_products</text>
+
+        <rect x="56" y="202" width="168" height="20" rx="6"
+              fill="white" stroke="#185FA5" stroke-width="1" opacity="0.5" ></rect>
+        <text x="140" y="212" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">... more tools</text>
+
+        
+        <path d="M240 150 L290 150" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-1)" ></path>
+
+        
+        <rect x="300" y="70" width="200" height="160" rx="12"
+              fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="400" y="94" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Registry</text>
+
+        <rect x="316" y="114" width="168" height="28" rx="6"
+              fill="white" stroke="#534AB7" stroke-width="1" opacity="0.7" ></rect>
+        <text x="400" y="128" font-family="system-ui, sans-serif" font-size="11"
+              font-weight="500" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Validation Layer</text>
+
+        <rect x="316" y="150" width="168" height="28" rx="6"
+              fill="white" stroke="#534AB7" stroke-width="1" opacity="0.7" ></rect>
+        <text x="400" y="164" font-family="system-ui, sans-serif" font-size="11"
+              font-weight="500" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Tag Index</text>
+
+        <rect x="316" y="186" width="168" height="28" rx="6"
+              fill="white" stroke="#534AB7" stroke-width="1" opacity="0.7" ></rect>
+        <text x="400" y="200" font-family="system-ui, sans-serif" font-size="11"
+              font-weight="500" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Schema Exporter</text>
+
+        
+        <path d="M400 230 L400 280" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-1)" ></path>
+
+        
+        <rect x="300" y="290" width="200" height="60" rx="12"
+              fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="400" y="316" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Dispatcher</text>
+        <text x="400" y="336" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Route + Execute + Timeout</text>
+
+        
+        <rect x="540" y="70" width="120" height="160" rx="12"
+              fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="600" y="94" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Tool Impls</text>
+
+        <rect x="552" y="114" width="96" height="24" rx="6"
+              fill="white" stroke="#0F6E56" stroke-width="1" opacity="0.7" ></rect>
+        <text x="600" y="126" font-family="'SF Mono', monospace" font-size="10"
+              font-weight="500" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">fn: orders</text>
+
+        <rect x="552" y="146" width="96" height="24" rx="6"
+              fill="white" stroke="#0F6E56" stroke-width="1" opacity="0.7" ></rect>
+        <text x="600" y="158" font-family="'SF Mono', monospace" font-size="10"
+              font-weight="500" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">fn: search</text>
+
+        <rect x="552" y="178" width="96" height="24" rx="6"
+              fill="white" stroke="#0F6E56" stroke-width="1" opacity="0.7" ></rect>
+        <text x="600" y="190" font-family="'SF Mono', monospace" font-size="10"
+              font-weight="500" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">fn: email</text>
+
+        
+        <path d="M500 320 L540 320 L540 190 L540 150" fill="none"
+              stroke="#94a3b8" stroke-width="1.5"
+              marker-end="url(#arrow-1)" ></path>
+
+        
+        <rect x="140" y="290" width="140" height="60" rx="12"
+              fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="210" y="316" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Result Parser</text>
+        <text x="210" y="336" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Serialize + Truncate</text>
+
+        
+        <path d="M300 320 L280 320" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-1)" ></path>
+
+        
+        <path d="M210 350 L210 400" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-1)" ></path>
+
+        <rect x="130" y="400" width="160" height="36" rx="18"
+              fill="#E8E6DE" stroke="#94a3b8" stroke-width="1.5" ></rect>
+        <text x="210" y="418" font-family="system-ui, sans-serif" font-size="12"
+              font-weight="600" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">Back to LLM</text>
+
+        
+        <path d="M400 400 L400 350" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-1)" ></path>
+
+        <rect x="330" y="400" width="160" height="36" rx="18"
+              fill="#E8E6DE" stroke="#94a3b8" stroke-width="1.5" ></rect>
+        <text x="410" y="418" font-family="system-ui, sans-serif" font-size="12"
+              font-weight="600" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">LLM Tool Call</text>
+      </svg>

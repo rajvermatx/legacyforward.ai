@@ -1,0 +1,1591 @@
+[
+  {
+    "title": "Cyber Threat Intelligence Agent",
+    "slug": "cyber-threat-intel",
+    "section": "agentic-designs",
+    "description": "Security teams drown in thousands of CVE feeds daily. This agent correlates vulnerabilities from the National Vulnerability Database with your specific infrastructure, cross-references MITRE ATT&CK techniques, assesses exploitability using EPSS scores, and generates a prioritized, actionable report.",
+    "href": "/library/toolkit/agentic-designs/cyber-threat-intel"
+  },
+  {
+    "title": "Severe Weather Impact Agent",
+    "slug": "weather-impact",
+    "section": "agentic-designs",
+    "description": "Businesses lose billions annually to weather disruptions they could have anticipated. This agent monitors NOAA forecasts and NWS alerts in real-time, maps severe weather events to business assets (warehouses, routes, facilities), assesses operational risk severity, and decides whether to trigger aut",
+    "href": "/library/toolkit/agentic-designs/weather-impact"
+  },
+  {
+    "title": "Supply Chain Disruption Agent",
+    "slug": "supply-chain-disruption",
+    "section": "agentic-designs",
+    "description": "Global supply chains have thousands of nodes spanning dozens of countries. When a disruption hits — a port closure, a semiconductor shortage, a geopolitical event — the cascading effects are unpredictable. This agent monitors supplier health indicators, detects anomalies in lead times and delivery r",
+    "href": "/library/toolkit/agentic-designs/supply-chain-disruption"
+  },
+  {
+    "title": "School Teacher Assistant Agent",
+    "slug": "school-teacher",
+    "section": "agentic-designs",
+    "description": "Teachers spend up to 50% of their time on lesson preparation, grading, and administrative tasks instead of teaching. This agent understands curriculum standards (Common Core, state standards), generates age-appropriate lesson plans, creates varied assessments aligned to learning objectives, grades s",
+    "href": "/library/toolkit/agentic-designs/school-teacher"
+  },
+  {
+    "title": "Research Synthesis Agent",
+    "slug": "research-synthesis",
+    "section": "agentic-designs",
+    "description": "Researchers spend weeks conducting literature reviews across thousands of papers. This agent searches multiple academic databases (ArXiv, Semantic Scholar, CrossRef), fetches and analyzes abstracts, extracts key findings, detects contradictions between studies, and synthesizes everything into a cohe",
+    "href": "/library/toolkit/agentic-designs/research-synthesis"
+  },
+  {
+    "title": "Data Quality & Profiling Agent",
+    "slug": "data-quality",
+    "section": "agentic-designs",
+    "description": "An autonomous agent that profiles datasets, detects schema violations and outliers, suggests fixes, applies them iteratively, and validates the results. Every correction can reveal new issues that require re-analysis, making this a fundamentally iterative problem that static pipelines cannot solve. ",
+    "href": "/library/toolkit/agentic-designs/data-quality"
+  },
+  {
+    "title": "Regulatory Compliance Agent",
+    "slug": "regulatory-compliance",
+    "section": "agentic-designs",
+    "description": "An autonomous agent that parses regulatory texts (EU AI Act, NIST AI RMF, GDPR), extracts actionable requirements, maps them against organizational policies, identifies compliance gaps, and suggests remediation steps. Regulations overlap and contradict each other — the agent must cross-reference mul",
+    "href": "/library/toolkit/agentic-designs/regulatory-compliance"
+  },
+  {
+    "title": "Open Data Investigator Agent",
+    "slug": "open-data-investigator",
+    "section": "agentic-designs",
+    "description": "An autonomous agent that searches government data catalogs (data.gov, Census Bureau, BLS), downloads datasets, runs statistical analysis, detects anomalies, and generates narratives with visualizations. The exploratory workflow branches based on findings — discovering an anomaly in one dataset trigg",
+    "href": "/library/toolkit/agentic-designs/open-data-investigator"
+  },
+  {
+    "title": "Incident Root Cause Agent",
+    "slug": "incident-root-cause",
+    "section": "agentic-designs",
+    "description": "An autonomous agent that investigates production incidents by parsing structured and unstructured logs, correlating timestamps across services, checking dependent service health, forming hypotheses about root causes, and testing them against evidence. The agent follows the scientific method — observ",
+    "href": "/library/toolkit/agentic-designs/incident-root-cause"
+  },
+  {
+    "title": "Personal Finance Advisor Agent",
+    "slug": "personal-finance",
+    "section": "agentic-designs",
+    "description": "An autonomous agent that analyzes personal transaction data, categorizes spending, detects patterns and anomalies, compares against national benchmarks from the BLS Consumer Expenditure Survey, creates personalized budgets, projects savings trajectories, and generates actionable financial advice. Th",
+    "href": "/library/toolkit/agentic-designs/personal-finance"
+  },
+  {
+    "title": "Capstone 1: Research Assistant",
+    "slug": "capstone-01",
+    "section": "agenticai",
+    "description": "A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The",
+    "href": "/library/books/agenticai/capstone-01"
+  },
+  {
+    "title": "Code Review Agent",
+    "slug": "capstone-02",
+    "section": "agenticai",
+    "description": "Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interp",
+    "href": "/library/books/agenticai/capstone-02"
+  },
+  {
+    "title": "Customer Support System",
+    "slug": "capstone-03",
+    "section": "agenticai",
+    "description": "Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowled",
+    "href": "/library/books/agenticai/capstone-03"
+  },
+  {
+    "title": "Capstone 4: Data Pipeline Orchestrator",
+    "slug": "capstone-04",
+    "section": "agenticai",
+    "description": "Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today — each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that",
+    "href": "/library/books/agenticai/capstone-04"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "agenticai",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/agenticai/prologue"
+  },
+  {
+    "title": "What Is Agentic AI?",
+    "slug": "what-is-agentic-ai",
+    "section": "agenticai",
+    "description": "A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things — and the failure wasn't a bug. It was an architecture that was ",
+    "href": "/library/books/agenticai/what-is-agentic-ai"
+  },
+  {
+    "title": "LLM Primitives",
+    "slug": "llm-primitives",
+    "section": "agenticai",
+    "description": "A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never",
+    "href": "/library/books/agenticai/llm-primitives"
+  },
+  {
+    "title": "Agent Anatomy",
+    "slug": "agent-anatomy",
+    "section": "agenticai",
+    "description": "A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp; the architecture was hollow. This chapter opens the hood.",
+    "href": "/library/books/agenticai/agent-anatomy"
+  },
+  {
+    "title": "Your First Agent",
+    "slug": "first-agent",
+    "section": "agenticai",
+    "description": "An LLM that calls tools without thinking is just a random function caller with good grammar. In this chapter, you build the loop that turns a language model into something that actually reasons.",
+    "href": "/library/books/agenticai/first-agent"
+  },
+  {
+    "title": "Reasoning Patterns",
+    "slug": "reasoning-patterns",
+    "section": "agenticai",
+    "description": "Your agent from Chapter 4 can reason one step at a time. But ask it to plan a weekend trip involving flights, hotels, dietary restrictions, and a budget constraint, and it confidently books a hotel in the wrong city. The problem is not intelligence — it is the absence of structured thinking.",
+    "href": "/library/books/agenticai/reasoning-patterns"
+  },
+  {
+    "title": "Tool Use",
+    "slug": "tool-use",
+    "section": "agenticai",
+    "description": "An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist — all with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.",
+    "href": "/library/books/agenticai/tool-use"
+  },
+  {
+    "title": "Memory",
+    "slug": "memory",
+    "section": "agenticai",
+    "description": "An agent that forgets what you said three messages ago is not an assistant — it is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.",
+    "href": "/library/books/agenticai/memory"
+  },
+  {
+    "title": "RAG Pipelines",
+    "slug": "rag-pipelines",
+    "section": "agenticai",
+    "description": "A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundr",
+    "href": "/library/books/agenticai/rag-pipelines"
+  },
+  {
+    "title": "Orchestration",
+    "slug": "orchestration",
+    "section": "agenticai",
+    "description": "The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit ",
+    "href": "/library/books/agenticai/orchestration"
+  },
+  {
+    "title": "Supervisor-Worker Pattern",
+    "slug": "supervisor-worker",
+    "section": "agenticai",
+    "description": "The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the ",
+    "href": "/library/books/agenticai/supervisor-worker"
+  },
+  {
+    "title": "Human-in-the-Loop",
+    "slug": "human-in-the-loop",
+    "section": "agenticai",
+    "description": "It was 2:47 AM when the automated procurement agent placed a $2.3 million order for industrial solvents. The purchase order had passed the agent’s internal validation: the supplier was in the approved vendor list, the price-per-unit fell within historical ranges, and the requesting department had bu",
+    "href": "/library/books/agenticai/human-in-the-loop"
+  },
+  {
+    "title": "Agent Communication",
+    "slug": "agent-communication",
+    "section": "agenticai",
+    "description": "Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation",
+    "href": "/library/books/agenticai/agent-communication"
+  },
+  {
+    "title": "Observability",
+    "slug": "observability",
+    "section": "agenticai",
+    "description": "Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cit",
+    "href": "/library/books/agenticai/observability"
+  },
+  {
+    "title": "Security",
+    "slug": "security",
+    "section": "agenticai",
+    "description": "At 2:47 AM on a Tuesday, a customer service agent deployed three weeks earlier begins sending internal pricing spreadsheets to anyone who asks. The prompt injection is elegant: a user embeds an instruction inside a fake “customer complaint” that tells the agent to ignore its system prompt and instea",
+    "href": "/library/books/agenticai/security"
+  },
+  {
+    "title": "Deployment",
+    "slug": "deployment",
+    "section": "agenticai",
+    "description": "The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that st",
+    "href": "/library/books/agenticai/deployment"
+  },
+  {
+    "title": "Preface",
+    "slug": "preface",
+    "section": "ai-enterprise-architect",
+    "description": "If you are reading this, chances are you have spent the better part of your career doing something that most people outside of technology do not fully appreciate: you have been designing the...",
+    "href": "/library/books/ai-enterprise-architect/preface"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "ai-enterprise-architect",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/ai-enterprise-architect/prologue"
+  },
+  {
+    "title": "Why AI Changes Everything for Enterprise Architecture",
+    "slug": "why-ai-changes-everything",
+    "section": "ai-enterprise-architect",
+    "description": "If you’ve been working in enterprise architecture for any meaningful stretch of time, you’ve lived through several tectonic shifts. You were there when mainframes gave way to client-server models,...",
+    "href": "/library/books/ai-enterprise-architect/why-ai-changes-everything"
+  },
+  {
+    "title": "The AI Landscape — An Architect’s Map",
+    "slug": "ai-landscape-for-architects",
+    "section": "ai-enterprise-architect",
+    "description": "If you’ve been in enterprise architecture for any length of time, you’ve lived through waves of technology hype before. You saw it with cloud computing, with microservices, with blockchain, and now...",
+    "href": "/library/books/ai-enterprise-architect/ai-landscape-for-architects"
+  },
+  {
+    "title": "New Building Blocks — AI Components for Your Architecture",
+    "slug": "new-building-blocks",
+    "section": "ai-enterprise-architect",
+    "description": "Over the course of your career as an enterprise architect, you have built up a mental library of components that you instinctively reach for when designing systems. Databases, message queues, API...",
+    "href": "/library/books/ai-enterprise-architect/new-building-blocks"
+  },
+  {
+    "title": "Data Architecture for AI",
+    "slug": "data-architecture-for-ai",
+    "section": "ai-enterprise-architect",
+    "description": "If you’ve been working in enterprise architecture for any length of time, you already have a data architecture. You have data warehouses humming along, data lakes that may or may not be...",
+    "href": "/library/books/ai-enterprise-architect/data-architecture-for-ai"
+  },
+  {
+    "title": "AI Integration Patterns",
+    "slug": "ai-integration-patterns",
+    "section": "ai-enterprise-architect",
+    "description": "Let’s start with a reality check. Your enterprise already has hundreds of systems in production — ERPs, CRMs, data warehouses, customer portals, internal tools, and probably a few legacy monoliths...",
+    "href": "/library/books/ai-enterprise-architect/ai-integration-patterns"
+  },
+  {
+    "title": "MLOps and AI Governance",
+    "slug": "mlops-and-governance",
+    "section": "ai-enterprise-architect",
+    "description": "If you’ve spent any time in enterprise software, you already know the value of CI/CD. You wouldn’t dream of pushing code to production without automated builds, tests, and deployment pipelines. So...",
+    "href": "/library/books/ai-enterprise-architect/mlops-and-governance"
+  },
+  {
+    "title": "Responsible AI Architecture",
+    "slug": "responsible-ai-architecture",
+    "section": "ai-enterprise-architect",
+    "description": "Let me be direct about something that too many organizations get wrong: responsible AI is not a compliance checkbox, and it is not a slide deck you dust off when the board asks uncomfortable...",
+    "href": "/library/books/ai-enterprise-architect/responsible-ai-architecture"
+  },
+  {
+    "title": "Cloud Platforms for AI",
+    "slug": "cloud-platforms-for-ai",
+    "section": "ai-enterprise-architect",
+    "description": "Every enterprise architect eventually faces a question that carries more weight than it might first appear: which cloud platform should we build our AI strategy on? It is a decision that affects...",
+    "href": "/library/books/ai-enterprise-architect/cloud-platforms-for-ai"
+  },
+  {
+    "title": "Migration Strategies — AI-Enabling Your Existing Systems",
+    "slug": "migration-strategies",
+    "section": "ai-enterprise-architect",
+    "description": "Nobody gets to build an AI-native enterprise from a blank slate. You have legacy systems that were architected years ago under entirely different assumptions. You have technical debt that accumulated...",
+    "href": "/library/books/ai-enterprise-architect/migration-strategies"
+  },
+  {
+    "title": "GenAI Architecture Patterns — From Chat to Enterprise",
+    "slug": "genai-architectures",
+    "section": "ai-enterprise-architect",
+    "description": "When you first sit down to build something with a large language model, the sheer number of possible architectures can feel overwhelming. Should you just call an API? Do you need a vector database?...",
+    "href": "/library/books/ai-enterprise-architect/genai-architectures"
+  },
+  {
+    "title": "AI Agents and Orchestration — The Architect’s Guide",
+    "slug": "ai-agents-and-orchestration",
+    "section": "ai-enterprise-architect",
+    "description": "If you spent the last decade designing microservices, wrestling with API gateways, and untangling event-driven architectures, you already have the instincts you need for what comes next. Chapter 3...",
+    "href": "/library/books/ai-enterprise-architect/ai-agents-and-orchestration"
+  },
+  {
+    "title": "Cost and Performance Engineering for AI",
+    "slug": "cost-and-performance",
+    "section": "ai-enterprise-architect",
+    "description": "A fintech company launched a GenAI-powered feature, and it was an instant hit. Users loved the experience, adoption curves looked beautiful, and the product team was celebrating. Then the first...",
+    "href": "/library/books/ai-enterprise-architect/cost-and-performance"
+  },
+  {
+    "title": "Organizational Change — Leading the AI Transformation",
+    "slug": "organizational-change",
+    "section": "ai-enterprise-architect",
+    "description": "You can design the perfect AI architecture. You can pick the right models, build an elegant RAG pipeline, set up a gateway that routes requests with sub-second latency, and implement monitoring that...",
+    "href": "/library/books/ai-enterprise-architect/organizational-change"
+  },
+  {
+    "title": "Case Studies — AI Architecture in the Real World",
+    "slug": "case-studies",
+    "section": "ai-enterprise-architect",
+    "description": "There is no substitute for learning from other people’s mistakes — or their hard-won successes. The case studies in this chapter are composites, drawn from real enterprise AI transformations I have...",
+    "href": "/library/books/ai-enterprise-architect/case-studies"
+  },
+  {
+    "title": "Your Transition Roadmap — From EA to AI EA",
+    "slug": "your-transition-roadmap",
+    "section": "ai-enterprise-architect",
+    "description": "We have spent fourteen chapters talking about technology, architecture patterns, governance frameworks, and organizational design. All of that was about transforming your enterprise. This final...",
+    "href": "/library/books/ai-enterprise-architect/your-transition-roadmap"
+  },
+  {
+    "title": "Appendix: Reference Architectures",
+    "slug": "appendix-reference-architectures",
+    "section": "ai-enterprise-architect",
+    "description": "This appendix presents ten reference architectures for common enterprise AI use cases. Each diagram shows the key components, data flows, and integration points that an AI Enterprise Architect needs...",
+    "href": "/library/books/ai-enterprise-architect/appendix-reference-architectures"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "ai-leaders",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/ai-leaders/prologue"
+  },
+  {
+    "title": "What AI Actually Does (and What It Doesn't)",
+    "slug": "what-ai-actually-does",
+    "section": "ai-leaders",
+    "description": "Strip away the vendor hype and understand what AI can genuinely do for your business today — and where it will let you down if you trust it too much.",
+    "href": "/library/books/ai-leaders/what-ai-actually-does"
+  },
+  {
+    "title": "Why AI Projects Fail (and How Vendors Exploit It)",
+    "slug": "why-projects-fail-and-vendor-reality",
+    "section": "ai-leaders",
+    "description": "The six failure patterns that kill AI initiatives before they deliver value — and how to read vendor pitches critically so you stop funding the vendor's next round.",
+    "href": "/library/books/ai-leaders/why-projects-fail-and-vendor-reality"
+  },
+  {
+    "title": "AI Strategy That Actually Works",
+    "slug": "ai-strategy-that-works",
+    "section": "ai-leaders",
+    "description": "How to build an AI strategy grounded in business value rather than technology enthusiasm — including a one-page strategy canvas you can complete in a single session.",
+    "href": "/library/books/ai-leaders/ai-strategy-that-works"
+  },
+  {
+    "title": "Making AI Investment Decisions",
+    "slug": "investment-decisions",
+    "section": "ai-leaders",
+    "description": "How much to spend, what it really costs, how to calculate ROI without being misled, and how to build an AI investment portfolio that balances quick wins with strategic bets.",
+    "href": "/library/books/ai-leaders/investment-decisions"
+  },
+  {
+    "title": "Is Your Organization AI-Ready?",
+    "slug": "organizational-readiness",
+    "section": "ai-leaders",
+    "description": "Assess your organization's readiness across five dimensions — data, talent, culture, governance, and infrastructure — and know where to start even if the score is low.",
+    "href": "/library/books/ai-leaders/organizational-readiness"
+  },
+  {
+    "title": "AI Risk, Regulation & Responsible AI",
+    "slug": "risk-regulation-responsible-ai",
+    "section": "ai-leaders",
+    "description": "The six AI risks every board must understand, the regulatory landscape in plain English, and a practical responsible AI program — all connected into one governance framework.",
+    "href": "/library/books/ai-leaders/risk-regulation-responsible-ai"
+  },
+  {
+    "title": "Building & Leading AI Teams",
+    "slug": "building-and-leading-ai-teams",
+    "section": "ai-leaders",
+    "description": "The AI talent market is misunderstood, and managing AI projects requires a different language than traditional software. Here is how to hire right, upskill effectively, and run AI initiatives without being misled about their progress.",
+    "href": "/library/books/ai-leaders/building-and-leading-ai-teams"
+  },
+  {
+    "title": "Measuring AI Success",
+    "slug": "measuring-ai-success",
+    "section": "ai-leaders",
+    "description": "Vanity metrics will make your AI program look good in a slide deck and fail in a budget review. Here is how to track the numbers that actually matter — and how to run a quarterly review that earns continued investment.",
+    "href": "/library/books/ai-leaders/measuring-ai-success"
+  },
+  {
+    "title": "AI Agents & Your Workforce",
+    "slug": "agents-and-workforce",
+    "section": "ai-leaders",
+    "description": "AI agents are already taking autonomous action in your business — and your employees are already asking whether AI is coming for their jobs. Here is how to govern agents before they govern you, and how to lead your workforce through the transition honestly.",
+    "href": "/library/books/ai-leaders/agents-and-workforce"
+  },
+  {
+    "title": "What's Coming Next (and What to Ignore)",
+    "slug": "whats-coming-next",
+    "section": "ai-leaders",
+    "description": "The AI landscape produces a new breathless announcement every two weeks. Here is how to separate the trends that will materially affect your business from the ones that will not — and a 30-minute monthly ritual that keeps you informed without consuming your calendar.",
+    "href": "/library/books/ai-leaders/whats-coming-next"
+  },
+  {
+    "title": "Writing Your AI Strategy",
+    "slug": "capstone-writing-ai-strategy",
+    "section": "ai-leaders",
+    "description": "A complete, step-by-step walkthrough for creating an AI strategy document your board will fund and your organization will actually execute — from situation assessment through investment proposal and risk framework.",
+    "href": "/library/books/ai-leaders/capstone-writing-ai-strategy"
+  },
+  {
+    "title": "The Board AI Presentation",
+    "slug": "capstone-board-ai-presentation",
+    "section": "ai-leaders",
+    "description": "Build a credible, tight 30-minute board presentation on AI: current state, strategy, investment ask, and risk management — structured to earn the board's confidence and the funding you need.",
+    "href": "/library/books/ai-leaders/capstone-board-ai-presentation"
+  },
+  {
+    "title": "Evaluating an AI Vendor",
+    "slug": "capstone-evaluating-ai-vendor",
+    "section": "ai-leaders",
+    "description": "A structured process for selecting an AI vendor: define your requirements before you enter the market, run a rigorous three-vendor evaluation, conduct reference checks that actually reveal problems, and negotiate the contract terms that matter.",
+    "href": "/library/books/ai-leaders/capstone-evaluating-ai-vendor"
+  },
+  {
+    "title": "The Kill Decision",
+    "slug": "capstone-the-kill-decision",
+    "section": "ai-leaders",
+    "description": "How to evaluate a struggling AI initiative honestly — separating sunk cost from future value, analyzing three scenarios, recommending a course of action, and communicating it in a way that preserves organizational trust and builds learning.",
+    "href": "/library/books/ai-leaders/capstone-the-kill-decision"
+  },
+  {
+    "title": "Capstone: The AI Chatbot Launch",
+    "slug": "capstone-ai-chatbot-launch",
+    "section": "ai-pm",
+    "description": "A complete worked example: you're PM for a B2B SaaS product and the CEO wants an AI-powered support chatbot shipped in 90 days. Walk through every stage of the AI PM framework — from Signal Capture to monitoring — with templates and deliverables at each step.",
+    "href": "/library/books/ai-pm/capstone-ai-chatbot-launch"
+  },
+  {
+    "title": "Capstone: AI Feature Pricing Decision",
+    "slug": "capstone-ai-feature-pricing",
+    "section": "ai-pm",
+    "description": "A worked example in pricing under cost pressure: your AI-powered document analysis feature costs $0.50 per document in API calls. You charge customers $29/month for unlimited use. Walk through the cost analysis, usage modeling, tier design, stakeholder communication, and A/B test design needed to make the right call.",
+    "href": "/library/books/ai-pm/capstone-ai-feature-pricing"
+  },
+  {
+    "title": "Capstone: The Failed AI Pilot",
+    "slug": "capstone-failed-ai-pilot",
+    "section": "ai-pm",
+    "description": "A worked example in kill discipline: a 6-month AI pilot showed 'promising results' but the team wants another 6 months. Walk through the kill framework, sunk cost analysis, upward communication strategy, and how to redirect the team and salvage learnings.",
+    "href": "/library/books/ai-pm/capstone-failed-ai-pilot"
+  },
+  {
+    "title": "Capstone: Board Presentation — AI Strategy",
+    "slug": "capstone-board-ai-strategy",
+    "section": "ai-pm",
+    "description": "A worked example in executive communication: the board wants a 30-minute presentation on your AI product strategy. Walk through narrative structure, the metrics that matter to directors, handling the workforce replacement question, and a one-page AI strategy template.",
+    "href": "/library/books/ai-pm/capstone-board-ai-strategy"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "ai-pm",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/ai-pm/prologue"
+  },
+  {
+    "title": "Is This Worth Building?",
+    "slug": "is-this-worth-building",
+    "section": "ai-pm",
+    "description": "Before writing a single line of code or booking a discovery sprint, every AI feature idea must pass a rigorous first filter. This chapter gives product managers the mental models, decision tables, and Signal Capture tests to separate genuine AI opportunities from expensive distractions — and to ask the most important question in product development: does this actually need AI at all?",
+    "href": "/library/books/ai-pm/is-this-worth-building"
+  },
+  {
+    "title": "Value Hypothesis & Portfolio Prioritization",
+    "slug": "value-and-prioritization",
+    "section": "ai-pm",
+    "description": "A value hypothesis is the most important document you'll write before building an AI feature — and your backlog of AI ideas is only as useful as your ability to prioritize them ruthlessly. This chapter covers the one-sentence hypothesis template, four validation dimensions, the AI prioritization matrix, kill discipline, and a budget allocation model that balances exploration with delivery.",
+    "href": "/library/books/ai-pm/value-and-prioritization"
+  },
+  {
+    "title": "Discovery for AI Features",
+    "slug": "discovery-for-ai",
+    "section": "ai-pm",
+    "description": "Discovery for AI features requires techniques that traditional product research doesn't provide. This chapter covers Wizard-of-Oz testing, non-determinism tolerance research, probabilistic acceptance criteria, the user expectations gap — and how to translate all of that into AI story templates with edge case inventories and kill criteria that give your engineering team a real specification.",
+    "href": "/library/books/ai-pm/discovery-for-ai"
+  },
+  {
+    "title": "AI Competitive Positioning",
+    "slug": "competitive-positioning",
+    "section": "ai-pm",
+    "description": "When every company has access to the same foundation models and APIs, what actually differentiates your AI feature? This chapter walks product managers through the build-vs-buy-vs-integrate decision, how to evaluate vendor AI claims critically, where defensible moats exist in AI products, and why first-mover advantage is more nuanced in AI than in traditional software.",
+    "href": "/library/books/ai-pm/competitive-positioning"
+  },
+  {
+    "title": "Planning AI Development",
+    "slug": "planning-ai-sprints",
+    "section": "ai-pm",
+    "description": "Story points assume predictable effort. AI development is fundamentally exploratory — you often can't know how long an approach will take until you've tried it. This chapter introduces the Grounded Delivery framework as an AI planning model, explains how to time-box research phases, run Go/Pivot/Kill gates, and report honest progress when 'we tried three approaches and none worked yet' is genuinely meaningful information.",
+    "href": "/library/books/ai-pm/planning-ai-sprints"
+  },
+  {
+    "title": "Working with ML Engineering Teams",
+    "slug": "working-with-ml-teams",
+    "section": "ai-pm",
+    "description": "The PM-ML engineer collaboration gap is one of the most common sources of friction and failure in AI feature development. This chapter covers the translation layer between product and ML, what to ask for and how, why 'make it more accurate' is not actionable, how to navigate trade-off conversations, and what data scientists mean when they say 'it depends.'",
+    "href": "/library/books/ai-pm/working-with-ml-teams"
+  },
+  {
+    "title": "Evaluation-Driven Development",
+    "slug": "evaluation-driven-development",
+    "section": "ai-pm",
+    "description": "For AI features, the evaluation dataset is the product spec — it's the concrete, testable artifact that defines what quality means and gates every release. This chapter covers how to build and maintain evaluation sets, the trade-offs between automated evaluation and human judgment, A/B testing AI features in production, and regression testing practices that protect what works as your AI evolves.",
+    "href": "/library/books/ai-pm/evaluation-driven-development"
+  },
+  {
+    "title": "Adding AI to Existing Products",
+    "slug": "adding-ai-to-existing-products",
+    "section": "ai-pm",
+    "description": "Retrofitting AI into an established product is fundamentally different from building AI-native. This chapter gives product managers the patterns, rollout strategies, and integration frameworks to add AI without breaking what already works — including managing the users who don't want it.",
+    "href": "/library/books/ai-pm/adding-ai-to-existing-products"
+  },
+  {
+    "title": "Data Strategy for Product Managers",
+    "slug": "data-strategy-for-product-managers",
+    "section": "ai-pm",
+    "description": "You don't need to be a data engineer to own AI data strategy — but you do need to ask the right questions. This chapter gives product managers the checklists, frameworks, and decision models to evaluate data readiness, navigate privacy constraints, solve the cold start problem, and build a data moat that compounds over time.",
+    "href": "/library/books/ai-pm/data-strategy-for-product-managers"
+  },
+  {
+    "title": "Pricing and Packaging AI Features",
+    "slug": "pricing-and-packaging-ai-features",
+    "section": "ai-pm",
+    "description": "AI features have cost structures unlike anything else in a software product — and the wrong pricing decision can turn a successful feature into a margin disaster. This chapter gives product managers the frameworks to understand AI cost structures, design sustainable pricing models, manage the free tier trap, and run competitor pricing analysis.",
+    "href": "/library/books/ai-pm/pricing-and-packaging-ai-features"
+  },
+  {
+    "title": "Operating AI at Scale",
+    "slug": "operating-ai-at-scale",
+    "section": "ai-pm",
+    "description": "Shipping an AI feature is the beginning, not the end. This chapter gives product managers the monitoring frameworks, feedback loop designs, drift detection approaches, and incident response playbooks to keep AI features working — and the cost scaling models, rate limiting strategies, caching approaches, and international expansion considerations to keep them sustainable as they grow.",
+    "href": "/library/books/ai-pm/operating-ai-at-scale"
+  },
+  {
+    "title": "The AI Product Roadmap",
+    "slug": "the-ai-product-roadmap",
+    "section": "ai-pm",
+    "description": "AI features resist the commitments that traditional roadmaps demand. This chapter gives product managers the frameworks to plan non-deterministic features, communicate uncertainty to stakeholders without losing credibility, balance research with delivery, manage model vendor dependencies, and build a 12-month AI product roadmap that's honest and useful.",
+    "href": "/library/books/ai-pm/the-ai-product-roadmap"
+  },
+  {
+    "title": "AI Gateway & LLM Router",
+    "slug": "ai-gateway",
+    "section": "blueprints",
+    "description": "Centralize all LLM traffic through a single gateway with authentication, rate limiting, intelligent routing, guardrails, cost attribution, and observability — the front door for every AI request in your enterprise.",
+    "href": "/library/toolkit/blueprints/ai-gateway"
+  },
+  {
+    "title": "HIPAA-Compliant AI Pipeline",
+    "slug": "hipaa-ai-pipeline",
+    "section": "blueprints",
+    "description": "Process Protected Health Information safely through AI models with de-identification, BAA-compliant LLM access, private endpoints, and end-to-end audit trails — keeping patients safe and regulators satisfied.",
+    "href": "/library/toolkit/blueprints/hipaa-ai-pipeline"
+  },
+  {
+    "title": "Real-Time Fraud Detection with Explainable AI",
+    "slug": "fraud-detection",
+    "section": "blueprints",
+    "description": "Score transactions in under 100ms using ML models, explain every decision with SHAP values, and feed outcomes back into a continuous learning loop — the trifecta of speed, accuracy, and transparency.",
+    "href": "/library/toolkit/blueprints/fraud-detection"
+  },
+  {
+    "title": "Digital Twin + Predictive Maintenance",
+    "slug": "digital-twin",
+    "section": "blueprints",
+    "description": "Mirror physical equipment as virtual replicas, ingest real-time sensor data, predict remaining useful life with ML, and trigger maintenance before failures happen — reducing downtime by 30-50%.",
+    "href": "/library/toolkit/blueprints/digital-twin"
+  },
+  {
+    "title": "MLOps Self-Service Platform",
+    "slug": "mlops-platform",
+    "section": "blueprints",
+    "description": "Give every data science team a standardized, self-service path from experiment to production: version data, train models, evaluate automatically, deploy with one click, monitor in production, and retrain when drift strikes.",
+    "href": "/library/toolkit/blueprints/mlops-platform"
+  },
+  {
+    "title": "Rules Engine to ML Migration",
+    "slug": "rules-to-ml",
+    "section": "blueprints",
+    "description": "Migrate from brittle, hard-coded rules engines to machine learning models using a parallel-run architecture that builds organizational trust, enables gradual traffic shifting, and ensures instant rollback.",
+    "href": "/library/toolkit/blueprints/rules-to-ml"
+  },
+  {
+    "title": "Model Risk Management & Governance",
+    "slug": "model-governance",
+    "section": "blueprints",
+    "description": "A comprehensive governance architecture for managing model risk across the entire ML lifecycle — from data lineage and model registry through approval workflows, continuous monitoring, and incident response.",
+    "href": "/library/toolkit/blueprints/model-governance"
+  },
+  {
+    "title": "Multi-Cloud AI Strategy",
+    "slug": "multi-cloud",
+    "section": "blueprints",
+    "description": "A pragmatic architecture for managing AI workloads across multiple cloud providers — standardizing on open formats, portable orchestration, and strategic abstraction without sacrificing each provider's best features.",
+    "href": "/library/toolkit/blueprints/multi-cloud"
+  },
+  {
+    "title": "Build vs Buy vs Fine-Tune",
+    "slug": "build-buy-finetune",
+    "section": "blueprints",
+    "description": "A structured decision framework for the most consequential architecture choice in AI: whether to build a model from scratch, buy API access to a commercial model, or fine-tune an open-source model with your data.",
+    "href": "/library/toolkit/blueprints/build-buy-finetune"
+  },
+  {
+    "title": "Enterprise RAG with Data Lineage",
+    "slug": "enterprise-rag",
+    "section": "blueprints",
+    "description": "A production-grade Retrieval-Augmented Generation architecture with access controls, source citations, freshness guarantees, and end-to-end data lineage — everything a demo RAG leaves out.",
+    "href": "/library/toolkit/blueprints/enterprise-rag"
+  },
+  {
+    "title": "Prompt Engineering Cheatsheet",
+    "slug": "prompt-engineering",
+    "section": "cheatsheets",
+    "description": "Quick reference for prompt patterns, templates, system prompts, and parameter tuning.",
+    "href": "/library/cheatsheets/prompt-engineering"
+  },
+  {
+    "title": "RAG Systems Cheatsheet",
+    "slug": "rag-systems",
+    "section": "cheatsheets",
+    "description": "Quick reference for RAG pipeline design, chunking, embeddings, vector databases, and retrieval strategies.",
+    "href": "/library/cheatsheets/rag-systems"
+  },
+  {
+    "title": "LLM APIs Cheatsheet",
+    "slug": "llm-apis",
+    "section": "cheatsheets",
+    "description": "Quick reference for calling OpenAI, Anthropic, and Google LLM APIs with parameters, streaming, and function calling.",
+    "href": "/library/cheatsheets/llm-apis"
+  },
+  {
+    "title": "AI Agents Cheatsheet",
+    "slug": "ai-agents",
+    "section": "cheatsheets",
+    "description": "Quick reference for agent architecture, tool definitions, memory types, and orchestration patterns.",
+    "href": "/library/cheatsheets/ai-agents"
+  },
+  {
+    "title": "Fine-Tuning LLMs Cheatsheet",
+    "slug": "fine-tuning",
+    "section": "cheatsheets",
+    "description": "Quick reference for when to fine-tune, data prep, LoRA/QLoRA, training parameters, and evaluation.",
+    "href": "/library/cheatsheets/fine-tuning"
+  },
+  {
+    "title": "LLM Evaluation & Guardrails Cheatsheet",
+    "slug": "evaluation-guardrails",
+    "section": "cheatsheets",
+    "description": "Quick reference for LLM evaluation metrics, guardrail types, and safety patterns for input and output.",
+    "href": "/library/cheatsheets/evaluation-guardrails"
+  },
+  {
+    "title": "Model Context Protocol (MCP) Cheatsheet",
+    "slug": "mcp-protocol",
+    "section": "cheatsheets",
+    "description": "Quick reference for MCP architecture, primitives, transport, server implementation, and security.",
+    "href": "/library/cheatsheets/mcp-protocol"
+  },
+  {
+    "title": "Enterprise RAG Cheatsheet",
+    "slug": "enterprise-rag",
+    "section": "cheatsheets",
+    "description": "Quick reference for production RAG systems: ingestion, ACL filtering, hybrid search, citation, freshness, and scaling.",
+    "href": "/library/cheatsheets/enterprise-rag"
+  },
+  {
+    "title": "AI Gateway Cheatsheet",
+    "slug": "ai-gateway",
+    "section": "cheatsheets",
+    "description": "Quick reference for AI gateway architecture, routing, rate limiting, guardrails, cost tracking, and failover.",
+    "href": "/library/cheatsheets/ai-gateway"
+  },
+  {
+    "title": "Multi-Agent Systems Cheatsheet",
+    "slug": "multi-agent",
+    "section": "cheatsheets",
+    "description": "Quick reference for multi-agent patterns, shared memory, quality gates, and human-in-the-loop design.",
+    "href": "/library/cheatsheets/multi-agent"
+  },
+  {
+    "title": "Vertex AI & MLOps Cheatsheet",
+    "slug": "vertex-ai-mlops",
+    "section": "cheatsheets",
+    "description": "Quick reference for Vertex AI services, pipeline components, feature store, model registry, monitoring, and AutoML.",
+    "href": "/library/cheatsheets/vertex-ai-mlops"
+  },
+  {
+    "title": "BigQuery ML Cheatsheet",
+    "slug": "bigquery-ml",
+    "section": "cheatsheets",
+    "description": "Quick reference for BQML syntax, supported model types, feature engineering, evaluation, and export.",
+    "href": "/library/cheatsheets/bigquery-ml"
+  },
+  {
+    "title": "Responsible AI Cheatsheet",
+    "slug": "responsible-ai",
+    "section": "cheatsheets",
+    "description": "Quick reference for fairness metrics, bias detection, explainability, privacy techniques, model cards, and audit checklists.",
+    "href": "/library/cheatsheets/responsible-ai"
+  },
+  {
+    "title": "MLOps for GenAI Cheatsheet",
+    "slug": "mlops-genai",
+    "section": "cheatsheets",
+    "description": "Quick reference for CI/CD for ML, model versioning, A/B testing, canary deployment, drift detection, and monitoring.",
+    "href": "/library/cheatsheets/mlops-genai"
+  },
+  {
+    "title": "Transformer Foundations Cheatsheet",
+    "slug": "transformer-foundations",
+    "section": "cheatsheets",
+    "description": "Quick reference for transformer architecture, attention mechanism, positional encoding, tokenization, model sizes, and inference optimization.",
+    "href": "/library/cheatsheets/transformer-foundations"
+  },
+  {
+    "title": "Digital Transformation with Google Cloud",
+    "slug": "digital-transformation",
+    "section": "gcp-cdl",
+    "description": "Understand why organizations choose cloud computing, the different cloud service models, Google's global infrastructure, and how the shared responsibility model works. This section forms the conceptual foundation for every other exam domain.",
+    "href": "/library/learn/gcp-cdl/digital-transformation"
+  },
+  {
+    "title": "Exploring Data Transformation with Google Cloud",
+    "slug": "data-transformation",
+    "section": "gcp-cdl",
+    "description": "Learn how Google Cloud enables organizations to unlock the value of their data through managed data warehousing, real-time streaming, object storage, and business intelligence tools.",
+    "href": "/library/learn/gcp-cdl/data-transformation"
+  },
+  {
+    "title": "Innovating with Google Cloud AI",
+    "slug": "ai-ml",
+    "section": "gcp-cdl",
+    "description": "Explore the spectrum of AI and ML options on Google Cloud — from pre-trained APIs that require no ML expertise to custom model training with Vertex AI and TensorFlow on TPUs.",
+    "href": "/library/learn/gcp-cdl/ai-ml"
+  },
+  {
+    "title": "Modernize Infrastructure and Applications",
+    "slug": "infrastructure-apps",
+    "section": "gcp-cdl",
+    "description": "Learn about cloud migration strategies, compute options from VMs to serverless, container orchestration with GKE, API management, and hybrid/multicloud with Anthos.",
+    "href": "/library/learn/gcp-cdl/infrastructure-apps"
+  },
+  {
+    "title": "Trust and Security with Google Cloud",
+    "slug": "trust-security",
+    "section": "gcp-cdl",
+    "description": "Understand cybersecurity fundamentals, Google's defense-in-depth approach, encryption, identity and access management, network security, and compliance frameworks on Google Cloud.",
+    "href": "/library/learn/gcp-cdl/trust-security"
+  },
+  {
+    "title": "Scaling with Google Cloud Operations",
+    "slug": "scaling-operations",
+    "section": "gcp-cdl",
+    "description": "Understand financial governance, billing management, resource hierarchy, SRE principles, DevOps practices, monitoring and logging, and Google's sustainability commitments.",
+    "href": "/library/learn/gcp-cdl/scaling-operations"
+  },
+  {
+    "title": "Fundamentals of Generative AI",
+    "slug": "fundamentals-gen-ai",
+    "section": "gcp-gal",
+    "description": "Master the foundational concepts of artificial intelligence, machine learning, and generative AI. This section covers AI/ML core concepts, foundation models, LLMs, diffusion models, the ML lifecycle, choosing models, data types and quality, and Google's foundation model family including Gemi",
+    "href": "/library/learn/gcp-gal/fundamentals-gen-ai"
+  },
+  {
+    "title": "Google Cloud's Gen AI Offerings",
+    "slug": "gcp-gen-ai-offerings",
+    "section": "gcp-gal",
+    "description": "The largest exam section. Covers Google's AI-first approach, enterprise AI platform, AI infrastructure (TPUs, GPUs, Hypercomputer), prebuilt products (Gemini app, Workspace integrations), customer experience tools, and the full Vertex AI developer platform including Model Garden, RAG, and Ag",
+    "href": "/library/learn/gcp-gal/gcp-gen-ai-offerings"
+  },
+  {
+    "title": "Techniques to Improve Gen AI Output",
+    "slug": "improve-model-output",
+    "section": "gcp-gal",
+    "description": "Learn the key techniques for getting better results from generative AI models: prompt engineering (zero-shot, few-shot, chain-of-thought, ReAct), grounding, RAG, fine-tuning, human-in-the-loop review, monitoring, and sampling parameters (temperature, top-p, tokens).",
+    "href": "/library/learn/gcp-gal/improve-model-output"
+  },
+  {
+    "title": "Business Strategies for Generative AI",
+    "slug": "business-strategies",
+    "section": "gcp-gal",
+    "description": "Covers the strategic and governance aspects of deploying generative AI in enterprise settings: implementation steps, securing AI systems with Google's SAIF framework, IAM and Security Command Center, and responsible AI principles including transparency, privacy, bias, fairness, accountabilit",
+    "href": "/library/learn/gcp-gal/business-strategies"
+  },
+  {
+    "title": "AI and Machine Learning on Google Cloud",
+    "slug": "intro-ai-ml-gcp",
+    "section": "gcp-mle",
+    "description": "Your entry point to Google Cloud's AI ecosystem. Understand the hierarchy from AI to GenAI, navigate the full portfolio of GCP AI services, and learn when to use pre-trained APIs, AutoML, or custom training. Master Vertex AI as the unified platform that ties it all together.",
+    "href": "/library/learn/gcp-mle/intro-ai-ml-gcp"
+  },
+  {
+    "title": "Data Preparation and Pre-trained ML APIs",
+    "slug": "prepare-data-ml-apis",
+    "section": "gcp-mle",
+    "description": "Data is the fuel for machine learning. This course covers the GCP data preparation ecosystem — Dataflow, Dataprep, Dataproc — and takes a deep dive into Google's pre-trained ML APIs for vision, language, speech, translation, and video intelligence. Learn when to use each tool and how to call",
+    "href": "/library/learn/gcp-mle/prepare-data-ml-apis"
+  },
+  {
+    "title": "Notebook Environments for ML on GCP",
+    "slug": "vertex-ai-notebooks",
+    "section": "gcp-mle",
+    "description": "GCP offers multiple notebook environments — from serverless Colab Enterprise to fully customizable Vertex AI Workbench instances. This module helps you understand the trade-offs, configure runtimes, integrate with data services, and choose the right environment for every scenario on the MLE ",
+    "href": "/library/learn/gcp-mle/vertex-ai-notebooks"
+  },
+  {
+    "title": "Train ML Models with SQL in BigQuery",
+    "slug": "bigquery-ml",
+    "section": "gcp-mle",
+    "description": "BigQuery ML lets you create, evaluate, and predict with machine learning models using standard SQL — no data movement, no separate training infrastructure. This module covers every model type, the CREATE MODEL syntax, feature engineering, evaluation metrics, and how to export models to V",
+    "href": "/library/learn/gcp-mle/bigquery-ml"
+  },
+  {
+    "title": "Data Engineering for BigQuery ML",
+    "slug": "data-engineering-bqml",
+    "section": "gcp-mle",
+    "description": "Building accurate ML models starts long before training. This module covers the full data transformation pipeline on GCP — from raw ingestion through Cloud Dataprep and Dataflow, to clean, partitioned, feature-rich tables ready for BQML. Covers exam Sections 1 and 2: data engineering and fea",
+    "href": "/library/learn/gcp-mle/data-engineering-bqml"
+  },
+  {
+    "title": "Turning Raw Data into Powerful Features",
+    "slug": "feature-engineering",
+    "section": "gcp-mle",
+    "description": "Feature engineering is where domain knowledge meets data science. This module covers the complete feature engineering toolkit on GCP — from Vertex AI Feature Store for production serving, through tf.Transform for scalable preprocessing, to feature crosses, encodings, and selection techniques",
+    "href": "/library/learn/gcp-mle/feature-engineering"
+  },
+  {
+    "title": "Building & Scaling Models with TensorFlow",
+    "slug": "tensorflow-gcp",
+    "section": "gcp-mle",
+    "description": "This module covers the entire TensorFlow ecosystem on Google Cloud — from efficient data pipelines with tf.data to distributed training on Vertex AI. You will learn to build production-grade neural networks with Keras, optimize training with callbacks and custom loops, and scale to multi-GPU",
+    "href": "/library/learn/gcp-mle/tensorflow-gcp"
+  },
+  {
+    "title": "Designing Production-Grade ML Systems",
+    "slug": "production-ml-systems",
+    "section": "gcp-mle",
+    "description": "Building a model is only the beginning — running it reliably in production is where the real engineering challenge lives. This module covers the architecture decisions, failure modes, and optimization techniques that separate prototypes from production systems: training-serving skew, distrib",
+    "href": "/library/learn/gcp-mle/production-ml-systems"
+  },
+  {
+    "title": "MLOps: DevOps for Machine Learning",
+    "slug": "mlops-getting-started",
+    "section": "gcp-mle",
+    "description": "Training a model is only the beginning. MLOps is the discipline of deploying, monitoring, and continuously improving ML systems in production. This module covers MLOps maturity levels, the Vertex AI MLOps toolkit, experiment tracking, model registry, metadata lineage, continuous training tri",
+    "href": "/library/learn/gcp-mle/mlops-getting-started"
+  },
+  {
+    "title": "Vertex AI Feature Store",
+    "slug": "mlops-feature-store",
+    "section": "gcp-mle",
+    "description": "Features are the lifeblood of ML models. The Vertex AI Feature Store provides a centralized, managed repository for storing, serving, and monitoring features — ensuring consistency between training and serving, enabling feature sharing across teams, and solving the critical problem of point-",
+    "href": "/library/learn/gcp-mle/mlops-feature-store"
+  },
+  {
+    "title": "Introduction to Generative AI",
+    "slug": "intro-generative-ai",
+    "section": "gcp-mle",
+    "description": "Generative AI is reshaping how we build intelligent systems. This module covers the foundations of generative AI — what it is, how it differs from traditional ML, the models that power it, and how Google Cloud makes it accessible through Vertex AI. Essential knowledge for the GCP Machine",
+    "href": "/library/learn/gcp-mle/intro-generative-ai"
+  },
+  {
+    "title": "Introduction to Large Language Models",
+    "slug": "intro-llms",
+    "section": "gcp-mle",
+    "description": "Large Language Models are the engines behind modern generative AI. This module goes deep into how LLMs work — from pre-training objectives and emergent capabilities to fine-tuning strategies, evaluation metrics, and inference optimization. Master the concepts needed to select, tune, and ",
+    "href": "/library/learn/gcp-mle/intro-llms"
+  },
+  {
+    "title": "MLOps for Generative AI",
+    "slug": "mlops-generative-ai",
+    "section": "gcp-mle",
+    "description": "Traditional MLOps pipelines were designed for classical ML models — tabular data, fixed feature schemas, deterministic outputs. Generative AI upends every assumption. This module covers the end-to-end lifecycle for deploying, monitoring, and iterating on foundation models in production using",
+    "href": "/library/learn/gcp-mle/mlops-generative-ai"
+  },
+  {
+    "title": "MLOps with Vertex AI: Model Evaluation",
+    "slug": "mlops-model-evaluation",
+    "section": "gcp-mle",
+    "description": "Model evaluation is the gatekeeper between development and production. A model that scores well on training data can fail catastrophically in the real world. This module covers every metric, method, and tool you need for evaluating both classical ML and generative AI models on GCP — from con",
+    "href": "/library/learn/gcp-mle/mlops-model-evaluation"
+  },
+  {
+    "title": "ML Pipelines on Google Cloud",
+    "slug": "ml-pipelines-gcp",
+    "section": "gcp-mle",
+    "description": "Production ML is not a single model — it is an orchestrated system of data ingestion, validation, transformation, training, evaluation, and deployment. This module covers TFX, Kubeflow Pipelines, Vertex AI Pipelines, and Cloud Composer so you can build reproducible, auditable, and fully auto",
+    "href": "/library/learn/gcp-mle/ml-pipelines-gcp"
+  },
+  {
+    "title": "Build & Deploy ML Solutions on Vertex AI",
+    "slug": "build-deploy-vertex-ai",
+    "section": "gcp-mle",
+    "description": "From AutoML to custom training, from online endpoints to batch prediction — this module covers the full lifecycle of building, deploying, and monitoring ML models on Vertex AI. Learn when to use AutoML versus custom containers, how to configure endpoints for production traffic, and how to se",
+    "href": "/library/learn/gcp-mle/build-deploy-vertex-ai"
+  },
+  {
+    "title": "Build Generative AI Applications on Google Cloud",
+    "slug": "generative-ai-apps",
+    "section": "gcp-mle",
+    "description": "From prompt engineering to RAG pipelines, function calling, and multimodal apps — this module covers the full spectrum of building production generative AI applications on Google Cloud using Vertex AI, Agent Builder, and Gemini. Master the patterns that appear repeatedly on the MLE exam.",
+    "href": "/library/learn/gcp-mle/generative-ai-apps"
+  },
+  {
+    "title": "Responsible AI — Fairness and Bias",
+    "slug": "responsible-ai-fairness",
+    "section": "gcp-mle",
+    "description": "Building ML systems that are fair, unbiased, and accountable is not optional — it is a core competency tested on the MLE exam. This module covers bias detection, fairness metrics, mitigation strategies, and Google's responsible AI tooling on Vertex AI.",
+    "href": "/library/learn/gcp-mle/responsible-ai-fairness"
+  },
+  {
+    "title": "Responsible AI — Interpretability & Transparency",
+    "slug": "responsible-ai-interpretability",
+    "section": "gcp-mle",
+    "description": "A model that cannot be explained cannot be trusted. This module covers the full spectrum of interpretability techniques — from intrinsic methods like linear coefficients and decision-tree splits to post-hoc explainers like SHAP, LIME, and Partial Dependence Plots. You will learn how to use V",
+    "href": "/library/learn/gcp-mle/responsible-ai-interpretability"
+  },
+  {
+    "title": "Responsible AI — Privacy & Safety",
+    "slug": "responsible-ai-privacy",
+    "section": "gcp-mle",
+    "description": "Privacy and safety are the guardrails that make AI deployment viable in regulated industries and consumer-facing applications. This module covers the full stack: PII detection with Cloud DLP, differential privacy with TensorFlow Privacy, federated learning, encryption with Cloud KMS, AI ",
+    "href": "/library/learn/gcp-mle/responsible-ai-privacy"
+  },
+  {
+    "title": "E-commerce Demand Forecasting",
+    "slug": "demand-forecasting",
+    "section": "gcp-mle-usecases",
+    "description": "Predict product-level demand across 10,000+ SKUs using BigQuery ML ARIMA_PLUS and Vertex AI custom models. Reduce overstock by 23%, eliminate stockouts by 31%, and save millions annually with a fully automated, GCP-native forecasting pipeline.",
+    "href": "/library/learn/gcp-mle/usecases/demand-forecasting"
+  },
+  {
+    "title": "Real-Time Fraud Detection",
+    "slug": "fraud-detection",
+    "section": "gcp-mle-usecases",
+    "description": "Build a production-grade, real-time fraud detection system on Google Cloud Platform. From streaming ingestion with Pub/Sub through feature engineering in Dataflow to sub-50ms online predictions with Vertex AI — every component maps directly to the GCP Professional Machine Learning Engine",
+    "href": "/library/learn/gcp-mle/usecases/fraud-detection"
+  },
+  {
+    "title": "Customer Churn Prediction Pipeline",
+    "slug": "churn-prediction",
+    "section": "gcp-mle-usecases",
+    "description": "Build an end-to-end churn prediction system on Google Cloud that identifies at-risk SaaS customers before they cancel, enabling proactive retention campaigns that measurably reduce monthly churn and protect recurring revenue.",
+    "href": "/library/learn/gcp-mle/usecases/churn-prediction"
+  },
+  {
+    "title": "Manufacturing Defect Detection",
+    "slug": "defect-detection",
+    "section": "gcp-mle-usecases",
+    "description": "Build an end-to-end computer vision pipeline on Google Cloud that detects surface defects in real time on manufacturing production lines — from image capture at the edge to AutoML Vision training, custom CNN fine-tuning, and low-latency edge deployment with Vertex AI and Edge TPU.",
+    "href": "/library/learn/gcp-mle/usecases/defect-detection"
+  },
+  {
+    "title": "Product Recommendation Engine",
+    "slug": "recommendation-engine",
+    "section": "gcp-mle-usecases",
+    "description": "Build a production-grade hybrid recommendation system on Google Cloud Platform. Combine collaborative filtering via BigQuery ML Matrix Factorization with content-based embeddings, serve predictions through Vertex AI endpoints, and measure impact with A/B testing — turning generic product",
+    "href": "/library/learn/gcp-mle/usecases/recommendation-engine"
+  },
+  {
+    "title": "Designing and Planning a Cloud Solution Architecture",
+    "slug": "designing-cloud-solutions",
+    "section": "gcp-pca",
+    "description": "The highest-weighted exam section. Master business and technical requirements gathering, the Well-Architected Framework, compute/storage/network design, migration planning, and AI/ML solution architecture with Gemini, Agent Builder, and Model Garden.",
+    "href": "/library/learn/gcp-pca/designing-cloud-solutions"
+  },
+  {
+    "title": "Managing and Provisioning Cloud Infrastructure",
+    "slug": "provisioning-infrastructure",
+    "section": "gcp-pca",
+    "description": "Deep dive into network topologies, storage systems, compute platforms, Vertex AI ML workflows, and prebuilt AI solutions. Learn to configure and manage GCP infrastructure at scale.",
+    "href": "/library/learn/gcp-pca/provisioning-infrastructure"
+  },
+  {
+    "title": "Designing for Security and Compliance",
+    "slug": "security-compliance",
+    "section": "gcp-pca",
+    "description": "Master IAM, resource hierarchy, encryption strategies, VPC Service Controls, Model Armor, Identity-Aware Proxy, and compliance frameworks including HIPAA, SOC 2, and data sovereignty.",
+    "href": "/library/learn/gcp-pca/security-compliance"
+  },
+  {
+    "title": "Analyzing and Optimizing Processes",
+    "slug": "analyzing-optimizing",
+    "section": "gcp-pca",
+    "description": "Master SDLC best practices, CI/CD pipeline design, disaster recovery planning, stakeholder management, and cost optimization strategies for cloud architectures.",
+    "href": "/library/learn/gcp-pca/analyzing-optimizing"
+  },
+  {
+    "title": "Managing Implementation",
+    "slug": "managing-implementation",
+    "section": "gcp-pca",
+    "description": "Deployment strategies, API management with Apigee, testing frameworks, Gemini Cloud Assist, Cloud SDKs, and Infrastructure as Code with Terraform.",
+    "href": "/library/learn/gcp-pca/managing-implementation"
+  },
+  {
+    "title": "Ensuring Solution and Operations Excellence",
+    "slug": "operations-excellence",
+    "section": "gcp-pca",
+    "description": "Well-Architected Framework operational excellence, observability (monitoring, logging, alerting), deployment and release management, reliability engineering, chaos engineering, and load testing.",
+    "href": "/library/learn/gcp-pca/operations-excellence"
+  },
+  {
+    "title": "Designing Data Processing Systems",
+    "slug": "designing-data-systems",
+    "section": "gcp-pde",
+    "description": "Covers roughly 22% of the exam. Design for security and compliance, reliability and fidelity, flexibility and portability, and plan data migrations. Master IAM, encryption, Dataflow, Dataform, Cloud Data Fusion, and migration services.",
+    "href": "/library/learn/gcp-pde/designing-data-systems"
+  },
+  {
+    "title": "Ingesting and Processing Data",
+    "slug": "ingesting-processing-data",
+    "section": "gcp-pde",
+    "description": "Covers roughly 25% of the exam — the largest section. Plan and build data pipelines, understand batch vs streaming processing, windowing, late data handling, and deploy production pipelines with Cloud Composer and CI/CD.",
+    "href": "/library/learn/gcp-pde/ingesting-processing-data"
+  },
+  {
+    "title": "Storing the Data",
+    "slug": "storing-the-data",
+    "section": "gcp-pde",
+    "description": "Covers roughly 20% of the exam. Select the right storage system for each workload, design data warehouses and data lakes, understand BigQuery optimization, and build a unified data platform.",
+    "href": "/library/learn/gcp-pde/storing-the-data"
+  },
+  {
+    "title": "Preparing Data for Analysis and ML",
+    "slug": "preparing-using-data",
+    "section": "gcp-pde",
+    "description": "Covers roughly 15% of the exam. Data visualization with BI Engine, preparing data for AI/ML with BigQuery ML, embeddings and RAG patterns, data sharing with Analytics Hub, and protecting sensitive data with Cloud DLP and data masking.",
+    "href": "/library/learn/gcp-pde/preparing-using-data"
+  },
+  {
+    "title": "Maintaining and Automating Workloads",
+    "slug": "maintaining-data-workloads",
+    "section": "gcp-pde",
+    "description": "Covers roughly 18% of the exam. Optimize resources and costs, automate with Cloud Composer DAGs, manage BigQuery workloads with Editions and reservations, monitor and troubleshoot pipelines, and design for fault tolerance and data integrity.",
+    "href": "/library/learn/gcp-pde/maintaining-data-workloads"
+  },
+  {
+    "title": "Everything You Need Before Day One",
+    "slug": "prerequisites",
+    "section": "genai",
+    "description": "A practitioner's checklist for getting started with GenAI development — the Python patterns, API skills, terminal comfort, and tooling you need before writing your first LLM application. No math required.",
+    "href": "/library/learn/genai/prerequisites"
+  },
+  {
+    "title": "How Modern AI Actually Works",
+    "slug": "foundations-of-genai",
+    "section": "genai",
+    "description": "A practitioner's mental model of how LLMs work — what transformers do, why tokenization affects your costs, how embeddings power search, and what controls your model's behavior. No math required.",
+    "href": "/library/learn/genai/foundations-of-genai"
+  },
+  {
+    "title": "LLMs, SLMs & Multimodal Models",
+    "slug": "llms-slms-multimodal",
+    "section": "genai",
+    "description": "A practitioner's guide to choosing the right model — when to use large vs small, closed vs open, text-only vs multimodal. Includes cost comparisons, capability tradeoffs, and a decision framework for production model selection.",
+    "href": "/library/learn/genai/llms-slms-multimodal"
+  },
+  {
+    "title": "API for Accessing Large Language Models",
+    "slug": "api-for-llms",
+    "section": "genai",
+    "description": "A practitioner's guide to calling LLM APIs in production — the chat completions interface, provider SDK patterns, streaming, cost management, multi-provider routing with LiteLLM, and structured outputs with Pydantic.",
+    "href": "/library/learn/genai/api-for-llms"
+  },
+  {
+    "title": "Teaching Models New Behaviors",
+    "slug": "fine-tuning",
+    "section": "genai",
+    "description": "A practitioner's guide to fine-tuning LLMs — when to fine-tune vs RAG vs prompt, how LoRA and QLoRA work without the math, data preparation checklists, cost comparisons, and the OpenAI and HuggingFace workflows.",
+    "href": "/library/learn/genai/fine-tuning"
+  },
+  {
+    "title": "LLM Hosting & API Exposure",
+    "slug": "llm-hosting",
+    "section": "genai",
+    "description": "A practitioner's guide to self-hosting LLMs — when to self-host vs use APIs, how to choose between vLLM, TGI, and Ollama, GPU sizing, cost comparisons, and production deployment patterns with FastAPI, SageMaker, and Docker.",
+    "href": "/library/learn/genai/llm-hosting"
+  },
+  {
+    "title": "Talking to Models Precisely",
+    "slug": "prompt-engineering",
+    "section": "genai",
+    "description": "A practitioner's guide to production prompt engineering — system prompt design patterns, few-shot template libraries, chain-of-thought techniques, structured output extraction, and prompt security defenses. Patterns that work at scale, not theory.",
+    "href": "/library/learn/genai/prompt-engineering"
+  },
+  {
+    "title": "Retrieval-Augmented Generation",
+    "slug": "rag-systems",
+    "section": "genai",
+    "description": "A practitioner's guide to building RAG systems that work in production — when to use RAG, chunking strategy comparison, embedding model selection, vector database tradeoffs, retrieval quality tuning, and a production-readiness checklist.",
+    "href": "/library/learn/genai/rag-systems"
+  },
+  {
+    "title": "Advanced RAG & Multimodal",
+    "slug": "advanced-rag",
+    "section": "genai",
+    "description": "A practitioner's guide to upgrading basic RAG — hybrid search, reranking, query transformation, parent-child chunks, self-corrective loops, and when each technique is worth the added complexity. Decision frameworks, not algorithms.",
+    "href": "/library/learn/genai/advanced-rag"
+  },
+  {
+    "title": "Agents & Multi-Agent Systems",
+    "slug": "agents",
+    "section": "genai",
+    "description": "A practitioner's guide to LLM agents — ReAct patterns, tool definition best practices, when to use agents vs. chains, memory strategies, multi-agent architectures, human-in-the-loop gates, and production guardrails. Patterns that ship, not theory.",
+    "href": "/library/learn/genai/agents"
+  },
+  {
+    "title": "Evaluation Strategies for LLM Systems",
+    "slug": "evaluation",
+    "section": "genai",
+    "description": "A practitioner's guide to evaluating LLM applications — what to measure, LLM-as-judge patterns, RAGAS for RAG pipelines, regression testing, A/B testing, evaluation pipeline design, and when to invest in human eval. Decision frameworks for building eval infrastructure that earns trust.",
+    "href": "/library/learn/genai/evaluation"
+  },
+  {
+    "title": "LLM Guardrails",
+    "slug": "guardrails",
+    "section": "genai",
+    "description": "A practitioner's guide to building production guardrail systems — input validation, output filtering, prompt injection defense, PII detection, and framework selection. Defense in depth for every LLM application.",
+    "href": "/library/learn/genai/guardrails"
+  },
+  {
+    "title": "Model Context Protocol: Universal Tool Integration",
+    "slug": "mcp",
+    "section": "genai",
+    "description": "A practitioner's guide to MCP — what it solves, when to use it vs. direct tool calling, how to build servers with FastMCP, security considerations, and practical setup for Claude Desktop and agent workflows.",
+    "href": "/library/learn/genai/mcp"
+  },
+  {
+    "title": "AWS Cloud Services for GenAI",
+    "slug": "aws-cloud",
+    "section": "genai",
+    "description": "A practitioner's guide to deploying GenAI on AWS — Bedrock vs. SageMaker decision framework, serverless architectures, data service selection, security patterns, and cost optimization strategies.",
+    "href": "/library/learn/genai/aws-cloud"
+  },
+  {
+    "title": "No-Code Agents with n8n",
+    "slug": "n8n-no-code",
+    "section": "genai",
+    "description": "A practitioner's guide to building AI workflows without code — when no-code makes sense, n8n workflow patterns for LLMs, connecting AI to business tools, limitations vs. custom code, and production deployment.",
+    "href": "/library/learn/genai/n8n-no-code"
+  },
+  {
+    "title": "Capstone I: Document Portal",
+    "slug": "capstone-document-portal",
+    "section": "genai",
+    "description": "Build a production-grade document Q&A portal from scratch — document ingestion, chunking, embeddings, vector storage, RAG retrieval, FastAPI backend, and chat frontend. A practitioner's end-to-end project.",
+    "href": "/library/learn/genai/capstone-document-portal"
+  },
+  {
+    "title": "Capstone II: Autonomous Report Agent",
+    "slug": "capstone-report-agent",
+    "section": "genai",
+    "description": "Build an autonomous multi-agent system that researches a topic, gathers data from multiple sources, synthesizes findings, and produces a structured report — a practitioner's end-to-end agentic project.",
+    "href": "/library/learn/genai/capstone-report-agent"
+  },
+  {
+    "title": "Simple Chat API",
+    "slug": "simple-chat-api",
+    "section": "genai-arch",
+    "description": "The most fundamental GenAI pattern: a single stateless LLM call with a system prompt. Every generative AI application starts here. Understand request/response flow, prompt design, temperature tuning, token limits, streaming, and error handling.",
+    "href": "/library/toolkit/genai-arch/simple-chat-api"
+  },
+  {
+    "title": "Conversational Chatbot",
+    "slug": "conversational-chatbot",
+    "section": "genai-arch",
+    "description": "Multi-turn chat with memory and session management. The chatbot remembers previous messages, maintains context across turns, and manages conversation state — the backbone of every conversational AI product.",
+    "href": "/library/toolkit/genai-arch/conversational-chatbot"
+  },
+  {
+    "title": "RAG Pipeline",
+    "slug": "rag-pipeline",
+    "section": "genai-arch",
+    "description": "Retrieval-Augmented Generation grounds LLM responses in your own data. Instead of relying solely on the model's training knowledge, RAG retrieves relevant documents from a vector database and injects them as context — dramatically improving accuracy, reducing hallucination, and enabling real",
+    "href": "/library/toolkit/genai-arch/rag-pipeline"
+  },
+  {
+    "title": "Document Processing",
+    "slug": "document-processing",
+    "section": "genai-arch",
+    "description": "Automated document ingestion and structured extraction at scale. Parse PDFs, images, and raw text into clean data, then use LLMs to summarize, classify, and extract structured entities — producing reliable JSON output ready for downstream databases and APIs.",
+    "href": "/library/toolkit/genai-arch/document-processing"
+  },
+  {
+    "title": "Multi-Model Router",
+    "slug": "multi-model-router",
+    "section": "genai-arch",
+    "description": "Intelligently route requests to different LLMs based on task complexity, cost, and latency requirements. Use cheap, fast models for simple tasks and reserve expensive, capable models for complex reasoning — cutting costs by 60-80% without sacrificing quality where it matters.",
+    "href": "/library/toolkit/genai-arch/multi-model-router"
+  },
+  {
+    "title": "Agentic Tool Use",
+    "slug": "agentic-tool-use",
+    "section": "genai-arch",
+    "description": "A single LLM agent that reasons about a user request, selects from a set of registered tools via function calling, executes them in a loop, and synthesizes results into a final answer. This is the foundational pattern for giving LLMs the ability to take real actions in the world — searching the web,",
+    "href": "/library/toolkit/genai-arch/agentic-tool-use"
+  },
+  {
+    "title": "Eval & Guardrails",
+    "slug": "eval-guardrails",
+    "section": "genai-arch",
+    "description": "Protect your LLM application with input/output validation, safety filters, and automated quality evaluation. Guardrails catch prompt injection, PII leaks, toxic content, and malformed outputs before they reach users. LLM-as-judge evaluation enables continuous quality monitoring without manua",
+    "href": "/library/toolkit/genai-arch/eval-guardrails"
+  },
+  {
+    "title": "Fine-Tuning & Serving",
+    "slug": "fine-tuning-serving",
+    "section": "genai-arch",
+    "description": "Fine-tune and deploy custom models tailored to your domain. Learn when prompt engineering hits its ceiling and how to adapt a base model with your own data — from data preparation and LoRA training through evaluation, registry management, A/B deployment, and continuous quality monitoring.",
+    "href": "/library/toolkit/genai-arch/fine-tuning-serving"
+  },
+  {
+    "title": "Multi-Agent Systems",
+    "slug": "multi-agent",
+    "section": "genai-arch",
+    "description": "Orchestrate multiple specialized AI agents that collaborate to solve complex, multi-step problems. Each agent has a defined role, tool access, and communication protocol — coordinated by an orchestrator that plans, delegates, synthesizes results, and handles failures gracefully.",
+    "href": "/library/toolkit/genai-arch/multi-agent"
+  },
+  {
+    "title": "Production Platform",
+    "slug": "production-platform",
+    "section": "genai-arch",
+    "description": "The capstone architecture: an end-to-end enterprise GenAI platform that unifies every pattern from this series. API gateway with auth and rate limiting, intelligent request routing, RAG and agent pipelines, multi-model pool, guardrails, semantic caching, observability, cost tracking, and com",
+    "href": "/library/toolkit/genai-arch/production-platform"
+  },
+  {
+    "title": "Automated Contract Review",
+    "slug": "contract-review",
+    "section": "genai-usecases",
+    "description": "Legal teams spend up to 60% of their time manually reviewing contracts. Corporate legal departments process 20,000–40,000 contracts per year, at $200–$500/hour for experienced attorneys and 1–2 hours per contract. Missed clauses can expose companies to millions in liability. This use case bu",
+    "href": "/library/learn/genai/usecases/contract-review"
+  },
+  {
+    "title": "Customer Support Ticket Triage",
+    "slug": "support-ticket-triage",
+    "section": "genai-usecases",
+    "description": "Enterprise support teams drown in thousands of unstructured tickets every day. Manual triage is slow, error-prone, and burns agent time that should be spent solving problems. In this use case, we build an end-to-end LLM pipeline that automatically classifies urgency and category, drafts init",
+    "href": "/library/learn/genai/usecases/support-ticket-triage"
+  },
+  {
+    "title": "Medical Record Summarization",
+    "slug": "medical-record-summary",
+    "section": "genai-usecases",
+    "description": "Physicians spend over two hours per day on clinical documentation, and 70% of physician burnout is directly attributed to this documentation burden. Unstructured clinical notes contain critical patient information buried in free text — medications, diagnoses, allergies, lab results — scattered acros",
+    "href": "/library/learn/genai/usecases/medical-record-summary"
+  },
+  {
+    "title": "Financial Earnings Call Analyzer",
+    "slug": "earnings-call-analyzer",
+    "section": "genai-usecases",
+    "description": "Every quarter, S&P 500 companies hold approximately 2,000 earnings calls — each lasting 60 to 90 minutes. Analysts covering 15 to 30 companies must listen, take notes, extract key metrics, detect sentiment shifts, and produce actionable briefs within hours. Manual note-taking misses 20–30% of key st",
+    "href": "/library/learn/genai/usecases/earnings-call-analyzer"
+  },
+  {
+    "title": "Codebase Documentation Generator",
+    "slug": "codebase-documentation",
+    "section": "genai-usecases",
+    "description": "Developers spend 60% of their time reading and understanding existing code, not writing new code. Documentation goes stale within weeks. Knowledge walks out the door when engineers leave. This use case builds an LLM-powered pipeline that parses source code using Abstract Syntax Trees, extrac",
+    "href": "/library/learn/genai/usecases/codebase-documentation"
+  },
+  {
+    "title": "Capstone 1: Compliance Knowledge Graph",
+    "slug": "capstone-compliance-knowledge-graph",
+    "section": "graph-ai",
+    "description": "Build a regulatory compliance knowledge graph from real documents. Covers PDF ingestion, LLM-based entity and relationship extraction, Neo4j graph construction, and a GraphRAG query layer that answers questions like \"Which regulations affect our payment processing system?\"",
+    "href": "/library/books/graph-ai/capstone-compliance-knowledge-graph"
+  },
+  {
+    "title": "Capstone 2: Fraud Investigation Agent",
+    "slug": "capstone-fraud-investigation-agent",
+    "section": "graph-ai",
+    "description": "Build a graph-powered agent that traces transaction networks to investigate suspicious patterns. Covers graph modeling for financial transactions, agent architecture with Cypher traversal tools, multi-hop money flow tracing, and automated pattern detection for fraud rings, rapid movement, and structuring.",
+    "href": "/library/books/graph-ai/capstone-fraud-investigation-agent"
+  },
+  {
+    "title": "Capstone 3: IT Dependency Mapper",
+    "slug": "capstone-it-dependency-mapper",
+    "section": "graph-ai",
+    "description": "Build an application dependency graph for impact analysis. Covers ingesting CMDB and service catalog data, building a dependency graph, blast radius queries, an impact analysis agent that answers \"If the payment gateway goes down, what else breaks?\", and automated dependency report generation.",
+    "href": "/library/books/graph-ai/capstone-it-dependency-mapper"
+  },
+  {
+    "title": "Capstone 4: Customer 360 with GraphRAG",
+    "slug": "capstone-customer-360-graphrag",
+    "section": "graph-ai",
+    "description": "Build a unified customer view combining CRM, support tickets, and product data into a knowledge graph. Covers data modeling for multi-source customer data, ingestion from three systems, graph-based customer journey queries, and a GraphRAG layer that answers \"Tell me everything about this customer's journey.\"",
+    "href": "/library/books/graph-ai/capstone-customer-360-graphrag"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "graph-ai",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/graph-ai/prologue"
+  },
+  {
+    "title": "The JOIN Wall",
+    "slug": "the-join-wall",
+    "section": "graph-ai",
+    "description": "Your compliance query spans 12 tables and takes 4 hours. This chapter explains why deep JOINs hit a performance wall, what graph databases do differently with index-free adjacency, and how to decide whether your workload belongs in a relational database or a graph.",
+    "href": "/library/books/graph-ai/the-join-wall"
+  },
+  {
+    "title": "How Graphs Actually Work",
+    "slug": "how-graphs-work",
+    "section": "graph-ai",
+    "description": "A ground-up explanation of graph databases for people who already understand tables, rows, columns, and JOINs. Covers the property graph model, maps every concept to its relational equivalent, and compares Neo4j, Amazon Neptune, and FalkorDB.",
+    "href": "/library/books/graph-ai/how-graphs-work"
+  },
+  {
+    "title": "The AI Connection",
+    "slug": "the-ai-connection",
+    "section": "graph-ai",
+    "description": "Why vector search alone cannot answer relationship questions, how knowledge graphs give AI structured memory, and the three patterns for combining graphs with LLMs: graph-enhanced RAG, graph-aware agents, and graph-based memory.",
+    "href": "/library/books/graph-ai/the-ai-connection"
+  },
+  {
+    "title": "Translating Your Data Model",
+    "slug": "translating-data-models",
+    "section": "graph-ai",
+    "description": "A pattern-by-pattern guide to converting ERD structures into graph models. Covers five common relational patterns — self-referencing tables, many-to-many junctions, polymorphic associations, temporal data, and hierarchical categories — with SQL schemas, graph models, and clear guidance on when the graph version is better.",
+    "href": "/library/books/graph-ai/translating-data-models"
+  },
+  {
+    "title": "Cypher for SQL People",
+    "slug": "cypher-for-sql",
+    "section": "graph-ai",
+    "description": "A side-by-side translation of 20 common SQL query patterns into Cypher. Covers SELECT, JOIN, WHERE, GROUP BY, subqueries, INSERT, UPDATE, DELETE, and five queries that are painful in SQL but elegant in Cypher. Includes a complete cheatsheet table.",
+    "href": "/library/books/graph-ai/cypher-for-sql"
+  },
+  {
+    "title": "When to Use Graphs (and When Not To)",
+    "slug": "when-to-use-graphs",
+    "section": "graph-ai",
+    "description": "A decision framework for evaluating whether a graph database belongs in your architecture. Covers six diagnostic questions, five use cases where graphs shine, five where relational is better, hybrid architecture patterns, and a cost comparison of Neo4j Aura, Amazon Neptune, and self-hosted options.",
+    "href": "/library/books/graph-ai/when-to-use-graphs"
+  },
+  {
+    "title": "Knowledge Graphs from Documents",
+    "slug": "knowledge-graphs-from-docs",
+    "section": "graph-ai",
+    "description": "How to turn thousands of unstructured documents into a searchable knowledge graph. Covers the extraction pipeline from document to graph, LLM-based entity and relationship extraction with Pydantic schemas, entity resolution strategies, and quality challenges including hallucinated entities and duplicate nodes.",
+    "href": "/library/books/graph-ai/knowledge-graphs-from-docs"
+  },
+  {
+    "title": "Ontology Design Without a PhD",
+    "slug": "ontology-design",
+    "section": "graph-ai",
+    "description": "How to design a practical ontology for your knowledge graph without academic overhead. Covers iterative design starting with five node types and five relationship types, common ontology patterns by industry, using LLMs to suggest structure, schema validation, and anti-patterns to avoid.",
+    "href": "/library/books/graph-ai/ontology-design"
+  },
+  {
+    "title": "Data Quality for Knowledge Graphs",
+    "slug": "data-quality",
+    "section": "graph-ai",
+    "description": "How to test and validate a knowledge graph. Covers automated quality checks for orphan nodes, duplicate entities, type violations, and missing relationships. Includes consistency validation, coverage metrics, human review workflows, continuous monitoring, and a complete Python validation pipeline with Neo4j queries.",
+    "href": "/library/books/graph-ai/data-quality"
+  },
+  {
+    "title": "GraphRAG — Beyond Vector Search",
+    "slug": "graphrag",
+    "section": "graph-ai",
+    "description": "Why vector-only RAG fails for relationship questions, and how GraphRAG solves it. Covers the architecture of hybrid retrieval combining vector search with graph traversal, Microsoft's community summary approach, a step-by-step implementation with LangChain and Neo4j, and a comparison of vector-only vs GraphRAG across ten question types.",
+    "href": "/library/books/graph-ai/graphrag"
+  },
+  {
+    "title": "Graph-Aware Agents",
+    "slug": "graph-aware-agents",
+    "section": "graph-ai",
+    "description": "How to build AI agents that reason over knowledge graphs. Covers tool design for Cypher queries, path finding, impact analysis, and subgraph summarization. Includes agent architecture with LangChain and LangGraph, teaching agents to generate Cypher, guardrails for production safety, and three complete use case implementations.",
+    "href": "/library/books/graph-ai/graph-aware-agents"
+  },
+  {
+    "title": "Multi-Hop Reasoning",
+    "slug": "multi-hop-reasoning",
+    "section": "graph-ai",
+    "description": "How to answer questions that require traversing multiple relationships in a knowledge graph. Covers question decomposition, chain-of-traversal reasoning, combining graph paths with LLM synthesis, a complete multi-hop reasoning agent with step-by-step trace, and performance strategies for deep traversals.",
+    "href": "/library/books/graph-ai/multi-hop-reasoning"
+  },
+  {
+    "title": "Migration Strategy",
+    "slug": "migration-strategy",
+    "section": "graph-ai",
+    "description": "How to add a graph database alongside your existing relational systems without ripping anything out. Covers the sidecar pattern, CDC pipelines from PostgreSQL to Neo4j, phased migration timelines, dual-write vs CDC vs batch sync trade-offs, team structure, rollback strategies, and a complete CDC pipeline implementation with Debezium.",
+    "href": "/library/books/graph-ai/migration-strategy"
+  },
+  {
+    "title": "Testing Graph Systems",
+    "slug": "testing-graph-systems",
+    "section": "graph-ai",
+    "description": "How to test graph databases from unit tests through end-to-end validation. Covers the graph test pyramid, Cypher query unit tests with fixtures, integration tests for extraction pipelines, query regression testing, data quality automation in CI/CD, performance benchmarks, and a complete pytest test suite using testcontainers.",
+    "href": "/library/books/graph-ai/testing-graph-systems"
+  },
+  {
+    "title": "Monitoring and Operations",
+    "slug": "monitoring-ops",
+    "section": "graph-ai",
+    "description": "How to keep a graph database running in production. Covers the three things that will break at 3am, key metrics dashboards, alerting rules, backup and disaster recovery, scaling patterns including read replicas and connection pooling, cost management, and a runbook template for common operational issues.",
+    "href": "/library/books/graph-ai/monitoring-ops"
+  },
+  {
+    "title": "Capstone 1: Requirements-to-Test-Cases Pipeline",
+    "slug": "capstone-01",
+    "section": "llm-ba-qa",
+    "description": "You have learned how to craft prompts, parse requirements, generate test cases, and evaluate LLM outputs. Now you will wire all of those skills into one end-to-end pipeline that ingests a raw requirements document and produces a prioritized, fully traceable test suite — ready for review and executio",
+    "href": "/library/books/llm-ba-qa/capstone-01"
+  },
+  {
+    "title": "Capstone 2: Automated BRD Analyzer",
+    "slug": "capstone-02",
+    "section": "llm-ba-qa",
+    "description": "Business Requirements Documents are the foundation of every project, yet they are riddled with ambiguity, missing edge cases, and inconsistencies that only surface months later during UAT. In this capstone, you will build a tool that analyzes a BRD in minutes, producing a structured quality report t",
+    "href": "/library/books/llm-ba-qa/capstone-02"
+  },
+  {
+    "title": "Capstone 3: Intelligent Test Suite Generator",
+    "slug": "capstone-03",
+    "section": "llm-ba-qa",
+    "description": "Test suites decay. New features get added without corresponding tests, defect patterns repeat in the same modules, and nobody has time to reprioritize the regression suite. In this capstone, you will build a system that generates, prioritizes, and maintains test suites by learning from your applicat",
+    "href": "/library/books/llm-ba-qa/capstone-03"
+  },
+  {
+    "title": "Capstone 4: AI-Powered Sprint Assistant",
+    "slug": "capstone-04",
+    "section": "llm-ba-qa",
+    "description": "Sprint ceremonies consume hours every week — planning poker drags on, standup notes get lost, retrospective action items go untracked, and cross-team dependencies slip through the cracks. In this capstone, you will build an assistant that automates the tedious parts of sprint management so teams can",
+    "href": "/library/books/llm-ba-qa/capstone-04"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "llm-ba-qa",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/llm-ba-qa/prologue"
+  },
+  {
+    "title": "Chapter 1: Why LLMs Matter for BAs and QAs",
+    "slug": "why-llms-matter",
+    "section": "llm-ba-qa",
+    "description": "A Business Analyst who can harness Large Language Models doesn't just work faster — they think differently about what's possible. In this opening chapter, we explore why LLMs represent the most significant shift in analyst productivity since the spreadsheet, and why BAs and QAs are uniquely position",
+    "href": "/library/books/llm-ba-qa/why-llms-matter"
+  },
+  {
+    "title": "Chapter 2: How LLMs Work (No PhD Required)",
+    "slug": "how-llms-work",
+    "section": "llm-ba-qa",
+    "description": "You don't need to understand how an engine works to drive a car — but a driver who understands the basics makes better decisions on the road. This chapter gives you the practical understanding of LLM internals that will make you a more effective prompt engineer, a better judge of model outputs, and ",
+    "href": "/library/books/llm-ba-qa/how-llms-work"
+  },
+  {
+    "title": "Chapter 3: Prompt Engineering Fundamentals",
+    "slug": "prompt-engineering",
+    "section": "llm-ba-qa",
+    "description": "The difference between a mediocre LLM output and a brilliant one almost never lies in the model — it lies in the prompt. Prompt engineering is the single most important skill for any analyst working with LLMs, and the good news is that it builds directly on skills you already have: clear communicati",
+    "href": "/library/books/llm-ba-qa/prompt-engineering"
+  },
+  {
+    "title": "Chapter 4: Your First LLM-Powered Workflow",
+    "slug": "first-llm-workflow",
+    "section": "llm-ba-qa",
+    "description": "Theory without practice is empty. In this chapter, you'll move from prompting in a chat window to building a repeatable, automated LLM workflow that you can run with a single command. By the end, you'll have a working Requirements Analyzer that reads a requirements document, evaluates each requireme",
+    "href": "/library/books/llm-ba-qa/first-llm-workflow"
+  },
+  {
+    "title": "Chapter 5: Requirements Elicitation and Analysis",
+    "slug": "requirements-elicitation",
+    "section": "llm-ba-qa",
+    "description": "Requirements are the foundation of every successful project — and the source of most project failures. In this chapter you will learn how to harness LLMs to extract, classify, validate, and trace requirements at speeds and consistency levels that manual analysis cannot match.",
+    "href": "/library/books/llm-ba-qa/requirements-elicitation"
+  },
+  {
+    "title": "User Stories & Process Modeling",
+    "slug": "user-stories-process-modeling",
+    "section": "llm-ba-qa",
+    "description": "From translating business requirements into sprint-ready user stories, to extracting and optimising formal BPMN process models — this chapter covers the two core BA deliverables that turn analysis into actionable work. You will build an Agile Story Generator and a Process Discovery Engine.",
+    "href": "/library/books/llm-ba-qa/user-stories-process-modeling"
+  },
+  {
+    "title": "Chapter 7: Stakeholder Communication and Reporting",
+    "slug": "stakeholder-communication",
+    "section": "llm-ba-qa",
+    "description": "The best analysis in the world is worthless if it cannot be communicated effectively. In this chapter you will learn how to use LLMs to generate executive summaries, translate between technical and business language, automate status reports, extract action items from meetings, draft presentation dec",
+    "href": "/library/books/llm-ba-qa/stakeholder-communication"
+  },
+  {
+    "title": "Test Case Generation",
+    "slug": "test-case-generation",
+    "section": "llm-ba-qa",
+    "description": "Writing test cases is the most time-consuming activity in the QA lifecycle — yet most test cases follow predictable patterns that an LLM can generate in seconds. In this chapter, you will build a system that reads a requirement and produces comprehensive, categorized test cases automatically.",
+    "href": "/library/books/llm-ba-qa/test-case-generation"
+  },
+  {
+    "title": "Test Data and Scenario Design",
+    "slug": "test-data-design",
+    "section": "llm-ba-qa",
+    "description": "Good tests are only as good as the data behind them. In this chapter, you will learn how to use LLMs to generate realistic synthetic test data, discover hidden edge cases, build persona-driven test scenarios, and handle the critical challenge of data privacy — all without ever touching production da",
+    "href": "/library/books/llm-ba-qa/test-data-design"
+  },
+  {
+    "title": "Defect Analysis & Regression Testing",
+    "slug": "defect-analysis-regression-testing",
+    "section": "llm-ba-qa",
+    "description": "From triaging a chaotic defect backlog to generating self-healing regression suites — this chapter covers the full defect lifecycle. You will build a Defect Triage Assistant that classifies, deduplicates, and prioritizes bugs, then a Smart Regression Suite that generates, heals, and maintains tests automatically.",
+    "href": "/library/books/llm-ba-qa/defect-analysis-regression-testing"
+  },
+  {
+    "title": "RAG for Enterprise Knowledge",
+    "slug": "rag-enterprise",
+    "section": "llm-ba-qa",
+    "description": "Every enterprise sits on a mountain of knowledge locked inside wikis, SharePoint sites, Confluence pages, PDF policies, and Slack threads. Employees spend 20% of their workweek searching for information they know exists somewhere. Retrieval-Augmented Generation (RAG) unlocks that mountain by letting",
+    "href": "/library/books/llm-ba-qa/rag-enterprise"
+  },
+  {
+    "title": "Building Custom AI Assistants",
+    "slug": "custom-assistants",
+    "section": "llm-ba-qa",
+    "description": "One-off prompts are powerful, but they hit a ceiling. You type a prompt, get a response, copy-paste it somewhere, and start over. A custom AI assistant, by contrast, remembers context, calls external tools, follows multi-step workflows, and integrates into the systems your team already uses. In this",
+    "href": "/library/books/llm-ba-qa/custom-assistants"
+  },
+  {
+    "title": "Evaluating and Validating LLM Outputs",
+    "slug": "evaluating-outputs",
+    "section": "llm-ba-qa",
+    "description": "An LLM that sounds authoritative is not the same as an LLM that is correct. Every analyst who has used ChatGPT has experienced the unsettling moment when a perfectly fluent, well-structured response turns out to be confidently wrong. In production workflows where LLM outputs feed into business decis",
+    "href": "/library/books/llm-ba-qa/evaluating-outputs"
+  },
+  {
+    "title": "About CareerAlign",
+    "slug": "about",
+    "section": "static",
+    "description": "CareerAlign is a free, open-source learning platform built by practitioners, for practitioners. The mission is to help professionals move from chaos to clarity by providing structured, hands-on...",
+    "href": "/about"
+  },
+  {
+    "title": "Privacy Policy",
+    "slug": "privacy",
+    "section": "static",
+    "description": "CareerAlign is a static website. We do not collect, store, or process personal data directly.",
+    "href": "/privacy"
+  },
+  {
+    "title": "Terms of Use",
+    "slug": "terms",
+    "section": "static",
+    "description": "All content is provided for educational and informational purposes only. It is not professional advice (legal, financial, technical, or otherwise).",
+    "href": "/terms"
+  },
+  {
+    "title": "Grounded Delivery",
+    "slug": "grounded-delivery",
+    "section": "framework",
+    "description": "Agile is a category error for AI. Grounded Delivery defines five phases, probabilistic quality gates, and governance for non-deterministic systems.",
+    "href": "/framework/grounded-delivery"
+  },
+  {
+    "title": "Legacy Coexistence",
+    "slug": "legacy-coexistence",
+    "section": "framework",
+    "description": "Every AI strategy that ignores existing systems is a fantasy. Legacy Coexistence defines patterns for making AI work alongside the systems you already have.",
+    "href": "/framework/legacy-coexistence"
+  },
+  {
+    "title": "Signal Capture",
+    "slug": "signal-capture",
+    "section": "framework",
+    "description": "Most enterprise AI initiatives capture zero operational signal. Signal Capture is the discipline of identifying where AI creates outcomes impossible by any other means.",
+    "href": "/framework/signal-capture"
+  }
+]

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 300" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Prerequisite skill dependency map">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+              <polygon points="0 0, 8 3, 0 6" fill="#64748b"></polygon>
+            </marker>
+          </defs>
+          
+          <rect x="20" y="130" width="130" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="85" y="157" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">CLI / Terminal</text>
+          <rect x="175" y="130" width="130" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="240" y="157" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Git</text>
+          <rect x="330" y="130" width="130" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="395" y="150" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Python</text>
+          <text x="395" y="165" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">functions · classes</text>
+          <rect x="485" y="130" width="130" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="550" y="150" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">NumPy/Pandas</text>
+          <text x="550" y="165" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">arrays · dataframes</text>
+          <rect x="640" y="130" width="130" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="705" y="150" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">JSON / REST</text>
+          <text x="705" y="165" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">HTTP · requests</text>
+          
+          <rect x="250" y="30" width="160" height="44" rx="8" fill="#e2e8f0" stroke="#3b82f6"></rect>
+          <text x="330" y="50" text-anchor="middle" fill="#3b82f6" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">LLM API Calls</text>
+          <text x="330" y="65" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">Module 03 →</text>
+          <rect x="440" y="30" width="160" height="44" rx="8" fill="#e2e8f0" stroke="#f97316"></rect>
+          <text x="520" y="50" text-anchor="middle" fill="#f97316" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">RAG Pipelines</text>
+          <text x="520" y="65" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">Module 07 →</text>
+          <rect x="640" y="30" width="160" height="44" rx="8" fill="#e2e8f0" stroke="#a855f7"></rect>
+          <text x="720" y="50" text-anchor="middle" fill="#a855f7" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Agents</text>
+          <text x="720" y="65" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">Module 09 →</text>
+          
+          <line x1="395" y1="130" x2="360" y2="74" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"></line>
+          <line x1="550" y1="130" x2="500" y2="74" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"></line>
+          <line x1="705" y1="130" x2="700" y2="74" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"></line>
+          
+          <rect x="330" y="210" width="200" height="44" rx="8" fill="#f1f5f9" stroke="#2e3554"></rect>
+          <text x="430" y="230" text-anchor="middle" fill="#0f172a" font-family="'Space Grotesk',sans-serif" font-size="13" font-weight="600">Env Vars &amp; Virtual Envs</text>
+          <text x="430" y="245" text-anchor="middle" fill="#475569" font-family="'Nunito',sans-serif" font-size="11">secrets · isolation</text>
+          <line x1="430" y1="210" x2="410" y2="174" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"></line>
+          
+          <text x="20" y="280" fill="#64748b" font-family="'Nunito',sans-serif" font-size="11">Prerequisite skills (bottom) feed into course modules (top)</text>
+        </svg>

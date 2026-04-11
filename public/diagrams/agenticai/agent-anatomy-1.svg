@@ -1,0 +1,85 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+        
+
+        
+        <rect x="10" y="10" width="660" height="500" rx="20" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.5"></rect>
+        <text x="340" y="38" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle" letter-spacing="0.06em">AGENT ARCHITECTURE</text>
+
+        
+        <rect x="40" y="56" width="600" height="68" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="1.2"></rect>
+        <text x="340" y="82" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#993C1D" dominant-baseline="central" text-anchor="middle">Perception Layer</text>
+        <text x="340" y="104" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Input parsing · Intent classification · Multimodal ingestion · Context enrichment</text>
+
+        
+        <path d="M340,124 L340,168" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+
+        
+        <rect x="190" y="172" width="300" height="80" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+        <text x="340" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700" fill="#534AB7" dominant-baseline="central" text-anchor="middle">LLM Reasoning Core</text>
+        <text x="340" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Situation assessment · Plan generation · Tool selection · Synthesis</text>
+
+        
+        <rect x="40" y="172" width="130" height="80" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.2"></rect>
+        <text x="105" y="202" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#854F0B" dominant-baseline="central" text-anchor="middle">Planner</text>
+        <text x="105" y="222" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Reactive</text>
+        <text x="105" y="236" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Deliberative</text>
+
+        
+        <path d="M170,200 L186,200" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+        <path d="M186,224 L170,224" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+
+        
+        <rect x="510" y="140" width="150" height="144" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"></rect>
+        <text x="585" y="162" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Memory Stores</text>
+
+        
+        <rect x="524" y="176" width="122" height="28" rx="4" fill="#ffffff" stroke="#185FA5" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="585" y="190" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Buffer (short-term)</text>
+
+        <rect x="524" y="210" width="122" height="28" rx="4" fill="#ffffff" stroke="#185FA5" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="585" y="224" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Vector (semantic)</text>
+
+        <rect x="524" y="244" width="122" height="28" rx="4" fill="#ffffff" stroke="#185FA5" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="585" y="258" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#185FA5" dominant-baseline="central" text-anchor="middle">Episodic (experience)</text>
+
+        
+        <path d="M490,200 L510,200" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+        <path d="M510,230 L490,230" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+
+        
+        <path d="M340,252 L340,308" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+
+        
+        <rect x="100" y="312" width="480" height="80" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"></rect>
+        <text x="340" y="336" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Tool Belt</text>
+
+        
+        <rect x="120" y="350" width="96" height="28" rx="4" fill="#ffffff" stroke="#0F6E56" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="168" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">API Calls</text>
+
+        <rect x="228" y="350" width="96" height="28" rx="4" fill="#ffffff" stroke="#0F6E56" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="276" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">DB Queries</text>
+
+        <rect x="336" y="350" width="96" height="28" rx="4" fill="#ffffff" stroke="#0F6E56" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="384" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">Code Exec</text>
+
+        <rect x="444" y="350" width="120" height="28" rx="4" fill="#ffffff" stroke="#0F6E56" stroke-width="0.8" opacity="0.7"></rect>
+        <text x="504" y="364" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="500" fill="#0F6E56" dominant-baseline="central" text-anchor="middle">File Operations</text>
+
+        
+        <rect x="40" y="416" width="600" height="68" rx="8" fill="#F8F7F4" stroke="#D3D1C7" stroke-width="1.2"></rect>
+        <text x="340" y="442" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" dominant-baseline="central" text-anchor="middle">Action Layer</text>
+        <text x="340" y="464" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="400" fill="#64748b" dominant-baseline="central" text-anchor="middle">Validation · Sandboxing · Rate limiting · Audit logging · Result processing</text>
+
+        
+        <path d="M340,392 L340,412" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></path>
+
+        
+        <path d="M40,450 L24,450 L24,90 L40,90" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="6,3"></path>
+        <text x="16" y="274" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#64748b" dominant-baseline="central" text-anchor="middle" transform="rotate(-90, 16, 274)">AGENT LOOP</text>
+      </svg>

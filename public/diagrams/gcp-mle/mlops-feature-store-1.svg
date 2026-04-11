@@ -1,0 +1,65 @@
+<svg viewBox="0 0 820 280" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', sans-serif">
+          <rect width="820" height="280" fill="#f8fafc" rx="12"></rect>
+
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#3b82f6" opacity="0.7"></path>
+            </marker>
+          </defs>
+
+          
+          <rect x="20" y="30" width="130" height="50" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"></rect>
+          <text x="85" y="52" text-anchor="middle" fill="#f97316" font-size="11" font-weight="600">Data Sources</text>
+          <text x="85" y="68" text-anchor="middle" fill="#475569" font-size="9">BigQuery, GCS, Streams</text>
+
+          
+          <line x1="155" y1="55" x2="195" y2="55" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+
+          
+          <rect x="200" y="10" width="400" height="260" rx="12" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.4"></rect>
+          <text x="400" y="32" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="700">Vertex AI Feature Store</text>
+
+          
+          <rect x="220" y="45" width="160" height="55" rx="8" fill="#f1f5f9" stroke="#3b82f6" stroke-width="1.5" opacity="0.6"></rect>
+          <text x="300" y="67" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="600">Feature Groups</text>
+          <text x="300" y="83" text-anchor="middle" fill="#475569" font-size="9">user_features, txn_features</text>
+
+          
+          <rect x="220" y="115" width="160" height="55" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5" opacity="0.6"></rect>
+          <text x="300" y="137" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600">Offline Store</text>
+          <text x="300" y="153" text-anchor="middle" fill="#475569" font-size="9">BigQuery (batch serving)</text>
+
+          
+          <rect x="420" y="115" width="160" height="55" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5" opacity="0.6"></rect>
+          <text x="500" y="137" text-anchor="middle" fill="#f97316" font-size="11" font-weight="600">Online Store</text>
+          <text x="500" y="153" text-anchor="middle" fill="#475569" font-size="9">Low-latency (ms)</text>
+
+          
+          <rect x="420" y="45" width="160" height="55" rx="8" fill="#f1f5f9" stroke="#a855f7" stroke-width="1.5" opacity="0.6"></rect>
+          <text x="500" y="67" text-anchor="middle" fill="#a855f7" font-size="11" font-weight="600">Feature Views</text>
+          <text x="500" y="83" text-anchor="middle" fill="#475569" font-size="9">Combine features for use case</text>
+
+          
+          <rect x="310" y="190" width="180" height="55" rx="8" fill="#f1f5f9" stroke="#ef4444" stroke-width="1.5" opacity="0.6"></rect>
+          <text x="400" y="212" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="600">Feature Monitoring</text>
+          <text x="400" y="228" text-anchor="middle" fill="#475569" font-size="9">Drift, staleness, distribution</text>
+
+          
+          <line x1="300" y1="100" x2="300" y2="112" stroke="#94a3b8" stroke-width="1" marker-end="url(#arr)"></line>
+          <line x1="380" y1="72" x2="417" y2="72" stroke="#94a3b8" stroke-width="1" marker-end="url(#arr)"></line>
+          <line x1="380" y1="142" x2="417" y2="142" stroke="#94a3b8" stroke-width="1" marker-end="url(#arr)"></line>
+
+          
+          <rect x="640" y="110" width="150" height="50" rx="8" fill="#f1f5f9" stroke="#22c55e" stroke-width="1.5"></rect>
+          <text x="715" y="132" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="600">Training Pipeline</text>
+          <text x="715" y="148" text-anchor="middle" fill="#475569" font-size="9">Batch features</text>
+
+          
+          <rect x="640" y="40" width="150" height="50" rx="8" fill="#f1f5f9" stroke="#f97316" stroke-width="1.5"></rect>
+          <text x="715" y="62" text-anchor="middle" fill="#f97316" font-size="11" font-weight="600">Prediction Service</text>
+          <text x="715" y="78" text-anchor="middle" fill="#475569" font-size="9">Online features (ms)</text>
+
+          
+          <line x1="583" y1="142" x2="637" y2="135" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+          <line x1="583" y1="72" x2="637" y2="65" stroke="#f97316" stroke-width="1.5" marker-end="url(#arr)" opacity="0.7"></line>
+        </svg>

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 900 270" width="900" height="270" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Insurance Claims AI Pipeline</text>
+  <rect x="20" y="80" width="100" height="50" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="105" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Photos</text>
+  <rect x="20" y="150" width="100" height="50" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="70" y="175" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="11" font-weight="600">Reports</text>
+  <line x1="120" y1="105" x2="180" y2="125" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="185" y="80" width="130" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="250" y="103" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">CV Model</text>
+  <text x="250" y="122" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Damage assess</text>
+  <line x1="120" y1="175" x2="180" y2="175" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="185" y="150" width="130" height="60" rx="10" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="250" y="173" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="12" font-weight="600">NLP Model</text>
+  <text x="250" y="192" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Report analysis</text>
+  <line x1="315" y1="110" x2="380" y2="140" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <line x1="315" y1="175" x2="380" y2="155" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="385" y="110" width="140" height="70" rx="10" fill="#f8fafc" stroke="#ef4444" stroke-width="2"/>
+  <text x="455" y="138" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="600">Fraud Detection</text>
+  <text x="455" y="160" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Risk scoring</text>
+  <line x1="525" y1="145" x2="590" y2="145" stroke="#f59e0b" stroke-width="2" marker-end="url(#arwO)"/>
+  <polygon points="660,100 720,145 660,190 600,145" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="660" y="140" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="9">Confidence</text>
+  <text x="660" y="153" text-anchor="middle" fill="#0f172a" font-family="JetBrains Mono" font-size="9">Router</text>
+  <line x1="720" y1="120" x2="790" y2="90" stroke="#22c55e" stroke-width="2" marker-end="url(#arwG)"/>
+  <text x="755" y="95" text-anchor="middle" fill="#22c55e" font-family="JetBrains Mono" font-size="9">High</text>
+  <rect x="790" y="65" width="90" height="50" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"/>
+  <text x="835" y="88" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="11" font-weight="600">Auto</text>
+  <text x="835" y="103" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Approve</text>
+  <line x1="720" y1="170" x2="790" y2="200" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <text x="755" y="195" text-anchor="middle" fill="#ef4444" font-family="JetBrains Mono" font-size="9">Low</text>
+  <rect x="790" y="175" width="90" height="50" rx="8" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="835" y="198" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="600">Human</text>
+  <text x="835" y="213" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="9">Review</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">What AI Can and Cannot Do</text>
+  <rect x="40" y="50" width="380" height="210" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="78" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700">AI CAN</text>
+  <rect x="60" y="92" width="340" height="30" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="112" text-anchor="middle" fill="#15803d" font-family="Nunito" font-size="12" font-weight="400">Pattern Recognition</text>
+  <rect x="60" y="132" width="340" height="30" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="152" text-anchor="middle" fill="#15803d" font-family="Nunito" font-size="12" font-weight="400">Synthesis</text>
+  <rect x="60" y="172" width="340" height="30" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="192" text-anchor="middle" fill="#15803d" font-family="Nunito" font-size="12" font-weight="400">Generation</text>
+  <rect x="60" y="212" width="340" height="30" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="230" y="232" text-anchor="middle" fill="#15803d" font-family="Nunito" font-size="12" font-weight="400">Classification</text>
+  <rect x="480" y="50" width="380" height="210" rx="12" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="78" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="13" font-weight="700">AI CANNOT (Reliably)</text>
+  <rect x="500" y="92" width="340" height="26" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="109" text-anchor="middle" fill="#b91c1c" font-family="Nunito" font-size="11" font-weight="400">Guarantee correctness</text>
+  <rect x="500" y="126" width="340" height="26" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="143" text-anchor="middle" fill="#b91c1c" font-family="Nunito" font-size="11" font-weight="400">Exercise judgment</text>
+  <rect x="500" y="160" width="340" height="26" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="177" text-anchor="middle" fill="#b91c1c" font-family="Nunito" font-size="11" font-weight="400">Understand context fully</text>
+  <rect x="500" y="194" width="340" height="26" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="211" text-anchor="middle" fill="#b91c1c" font-family="Nunito" font-size="11" font-weight="400">Work without good data</text>
+  <rect x="500" y="228" width="340" height="26" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="670" y="245" text-anchor="middle" fill="#b91c1c" font-family="Nunito" font-size="11" font-weight="400">Know recent events</text>
+</svg>

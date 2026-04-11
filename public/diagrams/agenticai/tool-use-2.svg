@@ -1,0 +1,94 @@
+<svg viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg">
+        
+        <defs>
+          <marker id="arrow-2" viewBox="0 0 10 7" refX="10" refY="3.5"
+                  markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" ></polygon>
+          </marker>
+        </defs>
+
+        
+        <text x="340" y="28" font-family="system-ui, sans-serif" font-size="14"
+              font-weight="700" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">Function Calling Sequence</text>
+
+        
+        <rect x="220" y="50" width="240" height="48" rx="10"
+              fill="#E6F1FB" stroke="#185FA5" stroke-width="2" ></rect>
+        <text x="340" y="70" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">User Message</text>
+        <text x="340" y="88" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#185FA5" text-anchor="middle"
+              dominant-baseline="central">"Check order #48291"</text>
+
+        
+        <path d="M340 98 L340 138" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-2)" ></path>
+
+        
+        <rect x="220" y="144" width="240" height="48" rx="10"
+              fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="340" y="164" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">LLM Processes</text>
+        <text x="340" y="182" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Decides to call a tool</text>
+
+        
+        <path d="M340 192 L340 232" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-2)" ></path>
+
+        
+        <rect x="190" y="238" width="300" height="48" rx="10"
+              fill="#E8E6DE" stroke="#94a3b8" stroke-width="1.5" ></rect>
+        <text x="340" y="258" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">Tool Call (JSON)</text>
+        <text x="340" y="276" font-family="'SF Mono', monospace" font-size="10"
+              font-weight="400" fill="#64748b" text-anchor="middle"
+              dominant-baseline="central">get_order_status(order_id="48291")</text>
+
+        
+        <path d="M340 286 L340 326" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-2)" ></path>
+
+        
+        <rect x="220" y="332" width="240" height="48" rx="10"
+              fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="340" y="352" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Tool Execution</text>
+        <text x="340" y="370" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Your code runs the real function</text>
+
+        
+        <path d="M340 380 L340 420" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-2)" ></path>
+
+        
+        <rect x="220" y="426" width="240" height="48" rx="10"
+              fill="#E1F5EE" stroke="#0F6E56" stroke-width="2" ></rect>
+        <text x="340" y="446" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">Result (JSON)</text>
+        <text x="340" y="464" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#0F6E56" text-anchor="middle"
+              dominant-baseline="central">{"status": "preparing", "date": "..."}</text>
+
+        
+        <path d="M340 474 L340 514" fill="none" stroke="#94a3b8" stroke-width="1.5"
+ marker-end="url(#arrow-2)" ></path>
+
+        
+        <rect x="220" y="520" width="240" height="48" rx="10"
+              fill="#EEEDFE" stroke="#534AB7" stroke-width="2" ></rect>
+        <text x="340" y="540" font-family="system-ui, sans-serif" font-size="13"
+              font-weight="700" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">LLM Final Response</text>
+        <text x="340" y="558" font-family="system-ui, sans-serif" font-size="10"
+              font-weight="400" fill="#534AB7" text-anchor="middle"
+              dominant-baseline="central">Natural language answer with real data</text>
+      </svg>

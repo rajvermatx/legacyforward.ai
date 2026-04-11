@@ -1,0 +1,47 @@
+<svg viewBox="0 0 900 250" width="900" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">AI Success Metrics: Vanity vs Real</text>
+  <rect x="60" y="50" width="360" height="35" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+  <text x="240" y="73" text-anchor="middle" fill="#ef4444" font-family="Space Grotesk" font-size="12" font-weight="700">Vanity Metrics (Misleading)</text>
+  <rect x="480" y="50" width="360" height="35" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="660" y="73" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="12" font-weight="700">Real Metrics (Meaningful)</text>
+  <rect x="60" y="100" width="360" height="26" rx="4" fill="#f8fafc"/>
+  <rect x="480" y="100" width="360" height="26" rx="4" fill="#f8fafc"/>
+  <text x="240" y="117" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">Adoption count</text>
+  <text x="660" y="117" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">Value delivered per user</text>
+  <line x1="420" y1="113" x2="480" y2="113" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="132" width="360" height="26" rx="4" fill="#fff"/>
+  <rect x="480" y="132" width="360" height="26" rx="4" fill="#fff"/>
+  <text x="240" y="149" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">Model accuracy %</text>
+  <text x="660" y="149" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">Business outcome impact</text>
+  <line x1="420" y1="145" x2="480" y2="145" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="164" width="360" height="26" rx="4" fill="#f8fafc"/>
+  <rect x="480" y="164" width="360" height="26" rx="4" fill="#f8fafc"/>
+  <text x="240" y="181" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400">Queries per day</text>
+  <text x="660" y="181" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">Problems actually solved</text>
+  <line x1="420" y1="177" x2="480" y2="177" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="196" width="360" height="26" rx="4" fill="#fff"/>
+  <rect x="480" y="196" width="360" height="26" rx="4" fill="#fff"/>
+  <text x="240" y="213" text-anchor="middle" fill="#ef4444" font-family="Nunito" font-size="11" font-weight="400"># features shipped</text>
+  <text x="660" y="213" text-anchor="middle" fill="#22c55e" font-family="Nunito" font-size="11" font-weight="400">Revenue / cost attributed</text>
+  <line x1="420" y1="209" x2="480" y2="209" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+</svg>

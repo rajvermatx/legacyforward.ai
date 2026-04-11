@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+    <marker id="arwN" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0f172a"/>
+    </marker>
+  </defs>
+  <text x="450" y="28" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">Junction Table vs Graph: Many-to-Many</text>
+  <line x1="450" y1="48" x2="450" y2="280" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="225" y="58" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">SQL: 3 Tables + JOINs</text>
+  <text x="675" y="58" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="13" font-weight="700">Graph: 1 Relationship</text>
+  <rect x="30" y="80" width="130" height="60" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="95" y="102" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="700">students</text>
+  <text x="95" y="122" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="8" font-weight="400">student_id  name</text>
+  <rect x="155" y="150" width="130" height="60" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="220" y="172" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="700">enrollments</text>
+  <text x="220" y="192" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="8" font-weight="400">student_id  course_id</text>
+  <rect x="280" y="80" width="130" height="60" rx="6" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+  <text x="345" y="102" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="11" font-weight="700">courses</text>
+  <text x="345" y="122" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="8" font-weight="400">course_id  title</text>
+  <line x1="95" y1="140" x2="185" y2="162" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <line x1="285" y1="162" x2="345" y2="140" stroke="#3b82f6" stroke-width="2" marker-end="url(#arwB)"/>
+  <circle cx="530" cy="130" r="32" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="530" y="135" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Student 1</text>
+  <circle cx="530" cy="220" r="32" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="530" y="225" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Student 2</text>
+  <circle cx="840" cy="130" r="32" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="840" y="135" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Course 1</text>
+  <circle cx="840" cy="220" r="32" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="840" y="225" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="10" font-weight="700">Course 2</text>
+  <line x1="562" y1="122" x2="808" y2="122" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arw)"/>
+  <line x1="562" y1="138" x2="808" y2="212" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arw)"/>
+  <line x1="562" y1="212" x2="808" y2="138" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arw)"/>
+  <line x1="562" y1="228" x2="808" y2="228" stroke="#06b6d4" stroke-width="1.5" marker-end="url(#arw)"/>
+  <rect x="649.8" y="144" width="70.4" height="14" rx="3" fill="white" stroke="#06b6d4" stroke-width="1"/>
+  <text x="685" y="154" text-anchor="middle" fill="#06b6d4" font-family="JetBrains Mono" font-size="9" font-weight="400">ENROLLED_IN</text>
+</svg>

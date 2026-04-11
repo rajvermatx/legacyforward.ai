@@ -1,0 +1,57 @@
+<svg viewBox="0 0 900 300" width="900" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <marker id="arwP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+    </marker>
+    <marker id="arwG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arwR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <text x="450" y="30" text-anchor="middle" fill="#06b6d4" font-family="Space Grotesk" font-size="16" font-weight="700">PM ↔ ML Engineer Translation Guide</text>
+  <rect x="60" y="50" width="360" height="40" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="240" y="76" text-anchor="middle" fill="#3b82f6" font-family="Space Grotesk" font-size="13" font-weight="700">PM Language</text>
+  <rect x="480" y="50" width="360" height="40" rx="8" fill="#faf5ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="660" y="76" text-anchor="middle" fill="#a855f7" font-family="Space Grotesk" font-size="13" font-weight="700">ML Engineer Language</text>
+  <rect x="60" y="108" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <rect x="480" y="108" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <text x="240" y="125" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">It should be accurate</text>
+  <text x="660" y="125" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Precision / Recall / F1 threshold</text>
+  <line x1="420" y1="121" x2="480" y2="121" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="138" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <rect x="480" y="138" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <text x="240" y="155" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">Make it feel smarter</text>
+  <text x="660" y="155" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Reduce hallucination rate</text>
+  <line x1="420" y1="151" x2="480" y2="151" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="168" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <rect x="480" y="168" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <text x="240" y="185" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">It's too slow</text>
+  <text x="660" y="185" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">p95 latency under 800ms</text>
+  <line x1="420" y1="181" x2="480" y2="181" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="198" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <rect x="480" y="198" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <text x="240" y="215" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">Users don't trust it</text>
+  <text x="660" y="215" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Confidence calibration + RLHF</text>
+  <line x1="420" y1="211" x2="480" y2="211" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="228" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <rect x="480" y="228" width="360" height="26" rx="4" fill="#f8fafc" stroke="none"/>
+  <text x="240" y="245" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">It's getting the wrong answers</text>
+  <text x="660" y="245" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Eval dataset failure mode analysis</text>
+  <line x1="420" y1="241" x2="480" y2="241" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+  <rect x="60" y="258" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <rect x="480" y="258" width="360" height="26" rx="4" fill="#fff" stroke="none"/>
+  <text x="240" y="275" text-anchor="middle" fill="#0f172a" font-family="Nunito" font-size="11" font-weight="400">We need to improve it</text>
+  <text x="660" y="275" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10" font-weight="400">Retrain on new labeled data</text>
+  <line x1="420" y1="271" x2="480" y2="271" stroke="#06b6d4" stroke-width="2" marker-end="url(#arw)"/>
+</svg>

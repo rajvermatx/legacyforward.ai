@@ -1,0 +1,127 @@
+<svg viewBox="0 0 680 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+        
+
+        
+        <text x="340" y="24" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" text-anchor="middle" dominant-baseline="central">Prompt Injection Attack Surface and Mitigations</text>
+
+        
+        <text x="120" y="56" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">ATTACK VECTORS</text>
+
+        
+        <text x="540" y="56" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">DEFENSE LAYERS</text>
+
+        
+        <text x="330" y="56" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">DATA FLOW</text>
+
+        
+        <rect x="20" y="78" width="200" height="44" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="120" y="94" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Direct Injection</text>
+        <text x="120" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Role override, instruction extraction</text>
+
+        
+        <rect x="20" y="138" width="200" height="44" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="120" y="154" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Indirect Injection</text>
+        <text x="120" y="172" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Tainted docs, web pages, emails</text>
+
+        
+        <rect x="20" y="198" width="200" height="44" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="120" y="214" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Data Exfiltration</text>
+        <text x="120" y="232" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Gradual extraction, markdown imgs</text>
+
+        
+        <rect x="20" y="258" width="200" height="44" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="120" y="274" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Tool Abuse</text>
+        <text x="120" y="292" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Privilege escalation, chained calls</text>
+
+        
+        <rect x="20" y="318" width="200" height="44" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="1.5"></rect>
+        <text x="120" y="334" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Credential Theft</text>
+        <text x="120" y="352" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#993C1D" text-anchor="middle" dominant-baseline="central">Secrets in prompt, env leakage</text>
+
+        
+        <rect x="270" y="82" width="120" height="32" rx="5" fill="#F0F0F0" stroke="#94a3b8" stroke-width="1.2"></rect>
+        <text x="330" y="98" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">User Input</text>
+
+        <rect x="270" y="152" width="120" height="32" rx="5" fill="#F0F0F0" stroke="#94a3b8" stroke-width="1.2"></rect>
+        <text x="330" y="168" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">RAG Context</text>
+
+        <rect x="270" y="222" width="120" height="32" rx="5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"></rect>
+        <text x="330" y="238" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#185FA5" text-anchor="middle" dominant-baseline="central">LLM Agent</text>
+
+        <rect x="270" y="292" width="120" height="32" rx="5" fill="#F0F0F0" stroke="#94a3b8" stroke-width="1.2"></rect>
+        <text x="330" y="308" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">Tool Calls</text>
+
+        <rect x="270" y="362" width="120" height="32" rx="5" fill="#F0F0F0" stroke="#94a3b8" stroke-width="1.2"></rect>
+        <text x="330" y="378" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">Output</text>
+
+        
+        <line x1="330" y1="114" x2="330" y2="152" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="330" y1="184" x2="330" y2="222" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="330" y1="254" x2="330" y2="292" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="330" y1="324" x2="330" y2="362" stroke="#185FA5" stroke-width="1.5" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <line x1="220" y1="100" x2="268" y2="98" stroke="#993C1D" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="4,3"></line>
+        <line x1="220" y1="160" x2="268" y2="168" stroke="#993C1D" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="4,3"></line>
+        <line x1="220" y1="220" x2="268" y2="238" stroke="#993C1D" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="4,3"></line>
+        <line x1="220" y1="280" x2="268" y2="308" stroke="#993C1D" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="4,3"></line>
+        <line x1="220" y1="340" x2="268" y2="308" stroke="#993C1D" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)" stroke-dasharray="4,3"></line>
+
+        
+        <rect x="440" y="78" width="220" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="550" y="94" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Input Validation</text>
+        <text x="550" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Pattern detection, length limits, encoding</text>
+
+        
+        <rect x="440" y="138" width="220" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="550" y="154" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Context Isolation</text>
+        <text x="550" y="172" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Data/instruction separation, tagging</text>
+
+        
+        <rect x="440" y="198" width="220" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="550" y="214" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">LLM-as-Guard</text>
+        <text x="550" y="232" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Dedicated classifier, LlamaGuard</text>
+
+        
+        <rect x="440" y="258" width="220" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="550" y="274" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Tool Sandboxing</text>
+        <text x="550" y="292" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Least privilege, rate limits, approval</text>
+
+        
+        <rect x="440" y="318" width="220" height="44" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="550" y="334" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Output Filtering</text>
+        <text x="550" y="352" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">PII redaction, structural validation</text>
+
+        
+        <line x1="392" y1="98" x2="438" y2="100" stroke="#0F6E56" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="392" y1="168" x2="438" y2="160" stroke="#0F6E56" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="392" y1="238" x2="438" y2="220" stroke="#0F6E56" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="392" y1="308" x2="438" y2="280" stroke="#0F6E56" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)"></line>
+        <line x1="392" y1="378" x2="438" y2="340" stroke="#0F6E56" stroke-width="1.2" fill="none" marker-end="url(#arrow-1)"></line>
+
+        
+        <rect x="20" y="390" width="640" height="36" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="340" y="408" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Audit Logging — Every layer records decisions, tool calls, and outcomes</text>
+
+        
+        <rect x="20" y="440" width="640" height="36" rx="6" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"></rect>
+        <text x="340" y="458" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="700" fill="#185FA5" text-anchor="middle" dominant-baseline="central">Secrets Management — Credentials outside model context, scoped and rotated</text>
+
+        
+        <rect x="20" y="492" width="12" height="12" rx="2" fill="#FAECE7" stroke="#993C1D" stroke-width="1"></rect>
+        <text x="38" y="498" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#1a1a1a" dominant-baseline="central">Attack vector</text>
+
+        <rect x="140" y="492" width="12" height="12" rx="2" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"></rect>
+        <text x="158" y="498" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#1a1a1a" dominant-baseline="central">Defense layer</text>
+
+        <rect x="260" y="492" width="12" height="12" rx="2" fill="#F0F0F0" stroke="#94a3b8" stroke-width="1"></rect>
+        <text x="278" y="498" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#1a1a1a" dominant-baseline="central">System component</text>
+
+        <rect x="400" y="492" width="12" height="12" rx="2" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"></rect>
+        <text x="418" y="498" font-family="Helvetica Neue, Arial, sans-serif" font-size="9" font-weight="400" fill="#1a1a1a" dominant-baseline="central">Cross-cutting concern</text>
+      </svg>

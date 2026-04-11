@@ -1,0 +1,69 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"></path>
+          </marker>
+        </defs>
+        
+
+        
+        <text x="340" y="24" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" text-anchor="middle" dominant-baseline="central">Retrieval Strategies — Dense vs Sparse vs Hybrid</text>
+
+        
+        <rect x="20" y="50" width="200" height="36" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+        <text x="120" y="68" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Dense Retrieval</text>
+
+        <rect x="30" y="98" width="180" height="28" rx="4" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"></rect>
+        <text x="120" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#534AB7" text-anchor="middle" dominant-baseline="central">Embedding similarity</text>
+
+        <text x="40" y="148" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Semantic matching</text>
+        <text x="40" y="166" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Handles paraphrases</text>
+        <text x="40" y="184" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Cross-lingual capable</text>
+        <text x="40" y="208" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Misses exact keywords</text>
+        <text x="40" y="226" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Requires embedding model</text>
+        <text x="40" y="244" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Higher latency</text>
+
+        
+        <rect x="240" y="50" width="200" height="36" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+        <text x="340" y="68" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">Sparse Retrieval</text>
+
+        <rect x="250" y="98" width="180" height="28" rx="4" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1"></rect>
+        <text x="340" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#0F6E56" text-anchor="middle" dominant-baseline="central">BM25 / TF-IDF</text>
+
+        <text x="260" y="148" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Exact keyword match</text>
+        <text x="260" y="166" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Fast, no GPU needed</text>
+        <text x="260" y="184" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Highly interpretable</text>
+        <text x="260" y="208" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- No semantic understanding</text>
+        <text x="260" y="226" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Synonym blindness</text>
+        <text x="260" y="244" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Vocabulary mismatch</text>
+
+        
+        <rect x="460" y="50" width="200" height="36" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"></rect>
+        <text x="560" y="68" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#854F0B" text-anchor="middle" dominant-baseline="central">Hybrid Retrieval</text>
+
+        <rect x="470" y="98" width="180" height="28" rx="4" fill="#FAEEDA" stroke="#854F0B" stroke-width="1"></rect>
+        <text x="560" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#854F0B" text-anchor="middle" dominant-baseline="central">RRF / Weighted fusion</text>
+
+        <text x="480" y="148" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Best of both worlds</text>
+        <text x="480" y="166" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Robust across query types</text>
+        <text x="480" y="184" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#1a1a1a" dominant-baseline="central">+ Tunable weighting</text>
+        <text x="480" y="208" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- More complex to operate</text>
+        <text x="480" y="226" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Two indexes to maintain</text>
+        <text x="480" y="244" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="400" fill="#c0392b" dominant-baseline="central">- Fusion weights need tuning</text>
+
+        
+        <line x1="170" y1="270" x2="170" y2="310" stroke="#94a3b8" stroke-width="1.5" fill="none"></line>
+        <line x1="170" y1="310" x2="490" y2="310" stroke="#94a3b8" stroke-width="1.5" fill="none"></line>
+        <line x1="390" y1="270" x2="390" y2="310" stroke="#94a3b8" stroke-width="1.5" fill="none"></line>
+
+        
+        <line x1="490" y1="310" x2="560" y2="310" stroke="#94a3b8" stroke-width="1.5" fill="none"></line>
+        <line x1="560" y1="310" x2="560" y2="330" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow-2)"></line>
+
+        
+        <rect x="460" y="338" width="200" height="32" rx="6" fill="#FAEEDA" stroke="#854F0B" stroke-width="1.5"></rect>
+        <text x="560" y="354" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" font-weight="600" fill="#854F0B" text-anchor="middle" dominant-baseline="central">Fused ranked results</text>
+
+        
+        <text x="340" y="295" font-family="Helvetica Neue, Arial, sans-serif" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle" dominant-baseline="central">Recommended: start with hybrid for production systems</text>
+      </svg>

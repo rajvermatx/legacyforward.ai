@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 560" width="1050" height="560">
+  <defs>
+    <marker id="arr-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-l" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Participants -->
+  <rect x="15" y="10" width="80" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="55" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Client</text>
+
+  <rect x="140" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#06b6d4" stroke-width="2"/>
+  <text x="190" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Gateway</text>
+
+  <rect x="295" y="10" width="90" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="340" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Cache</text>
+
+  <rect x="440" y="10" width="130" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="505" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Pipeline Router</text>
+
+  <rect x="625" y="10" width="100" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="675" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">LLM Pool</text>
+
+  <rect x="780" y="10" width="110" height="36" rx="4" fill="#f8fafc" stroke="#a855f7" stroke-width="2"/>
+  <text x="835" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Guardrails</text>
+
+  <rect x="950" y="10" width="80" height="36" rx="4" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+  <text x="990" y="33" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600">Logger</text>
+
+  <!-- Lifelines -->
+  <line x1="55" y1="46" x2="55" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="190" y1="46" x2="190" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="340" y1="46" x2="340" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="505" y1="46" x2="505" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="675" y1="46" x2="675" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="835" y1="46" x2="835" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <line x1="990" y1="46" x2="990" y2="530" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Activation bars -->
+  <rect x="50" y="70" width="10" height="40" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="185" y="85" width="10" height="370" fill="#06b6d4" opacity="0.2" rx="2"/>
+  <rect x="335" y="130" width="10" height="40" fill="#f59e0b" opacity="0.2" rx="2"/>
+  <rect x="500" y="195" width="10" height="50" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="670" y="260" width="10" height="50" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="830" y="335" width="10" height="50" fill="#a855f7" opacity="0.2" rx="2"/>
+  <rect x="335" y="405" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+  <rect x="985" y="445" width="10" height="30" fill="#f59e0b" opacity="0.2" rx="2"/>
+
+  <!-- 1. Client request -->
+  <text x="7" y="82" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">1</text>
+  <line x1="60" y1="80" x2="180" y2="80" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="120" y="74" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">API request</text>
+
+  <!-- 2. Auth + rate limit -->
+  <text x="7" y="112" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">2</text>
+  <rect x="170" y="100" width="40" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="190" y="114" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">auth</text>
+  <text x="230" y="114" fill="#475569" font-family="Nunito, sans-serif" font-size="10">JWT + rate limit + input validation</text>
+
+  <!-- 3. Cache check -->
+  <text x="7" y="147" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">3</text>
+  <line x1="195" y1="140" x2="330" y2="140" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="263" y="134" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">semantic cache lookup</text>
+
+  <line x1="330" y1="165" x2="195" y2="165" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="263" y="159" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">miss (or hit: return cached)</text>
+
+  <!-- 4. Route to pipeline -->
+  <text x="7" y="207" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">4</text>
+  <line x1="195" y1="200" x2="495" y2="200" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="345" y="194" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">route: RAG | agent | direct LLM</text>
+
+  <rect x="480" y="215" width="50" height="20" rx="3" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="505" y="229" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="9">pipeline</text>
+  <text x="545" y="229" fill="#475569" font-family="Nunito, sans-serif" font-size="10">execute selected pipeline</text>
+
+  <!-- 5. LLM call -->
+  <text x="7" y="272" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">5</text>
+  <line x1="510" y1="265" x2="665" y2="265" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="588" y="259" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">LLM call (with fallback)</text>
+
+  <line x1="665" y1="300" x2="510" y2="300" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="588" y="294" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">completion + usage</text>
+
+  <!-- 6. Guardrails -->
+  <text x="7" y="347" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">6</text>
+  <line x1="510" y1="340" x2="825" y2="340" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="668" y="334" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">validate: PII, safety, format</text>
+
+  <line x1="825" y1="375" x2="510" y2="375" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="668" y="369" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">validated response (or blocked)</text>
+
+  <!-- Pipeline result back to gateway -->
+  <line x1="495" y1="400" x2="195" y2="400" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="345" y="394" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">pipeline result</text>
+
+  <!-- 7. Cache response -->
+  <text x="7" y="417" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">7</text>
+  <line x1="195" y1="415" x2="330" y2="415" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-r)"/>
+  <text x="263" y="432" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10">cache response</text>
+
+  <!-- 8. Log -->
+  <text x="7" y="457" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">8</text>
+  <line x1="195" y1="450" x2="980" y2="450" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-r)"/>
+  <text x="588" y="444" text-anchor="middle" fill="#f59e0b" font-family="Nunito, sans-serif" font-size="10">async: log trace, tokens, cost, latency, model</text>
+
+  <!-- 9. Return -->
+  <text x="7" y="492" fill="#06b6d4" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">9</text>
+  <line x1="180" y1="485" x2="60" y2="485" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="120" y="479" text-anchor="middle" fill="#475569" font-family="Nunito, sans-serif" font-size="10">HTTP 200 + response</text>
+
+  <!-- Legend -->
+  <line x1="30" y1="520" x2="60" y2="520" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-r)"/>
+  <text x="68" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">request</text>
+  <line x1="160" y1="520" x2="130" y2="520" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arr-r)"/>
+  <text x="168" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">response</text>
+  <line x1="240" y1="520" x2="270" y2="520" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="278" y="524" fill="#475569" font-family="Nunito, sans-serif" font-size="9">async</text>
+</svg>

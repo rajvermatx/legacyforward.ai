@@ -1,0 +1,93 @@
+<svg viewBox="0 0 800 420" class="learning-path-svg" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrow3" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"></polygon>
+            </marker>
+          </defs>
+
+          
+          <text x="400" y="25" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700" letter-spacing="2">INDEXING PHASE (OFFLINE)</text>
+
+          
+          <line x1="20" y1="195" x2="780" y2="195" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="8,6"></line>
+
+          <text x="400" y="220" text-anchor="middle" fill="#22c55e" font-family="Space Grotesk" font-size="13" font-weight="700" letter-spacing="2">QUERY PHASE (ONLINE)</text>
+
+          
+          
+          <rect x="20" y="50" width="120" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="80" y="78" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Documents</text>
+          <text x="80" y="98" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">PDF, TXT, HTML</text>
+
+          
+          <line x1="140" y1="82" x2="180" y2="82" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="190" y="50" width="120" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="250" y="78" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Chunker</text>
+          <text x="250" y="98" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Split &amp; overlap</text>
+
+          
+          <line x1="310" y1="82" x2="350" y2="82" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="360" y="50" width="140" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="430" y="78" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Embed Model</text>
+          <text x="430" y="98" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">text → vector</text>
+
+          
+          <line x1="500" y1="82" x2="560" y2="82" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="570" y="40" width="180" height="85" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="660" y="70" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">Vector DB</text>
+          <text x="660" y="90" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Chroma / Pinecone</text>
+          <text x="660" y="108" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">pgvector / Weaviate</text>
+
+          
+          
+          <rect x="20" y="245" width="120" height="65" rx="8" fill="#f8fafc" stroke="#22c55e" stroke-width="2"></rect>
+          <text x="80" y="273" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">User Query</text>
+          <text x="80" y="293" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Natural language</text>
+
+          
+          <line x1="140" y1="277" x2="180" y2="277" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="190" y="245" width="120" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="250" y="273" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Embed</text>
+          <text x="250" y="293" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Query → vector</text>
+
+          
+          <line x1="310" y1="277" x2="350" y2="277" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="360" y="245" width="140" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="430" y="268" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="13" font-weight="600">Vector Search</text>
+          <text x="430" y="288" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Top-K similar</text>
+          <text x="430" y="303" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">+ rerank</text>
+
+          
+          <path d="M 660 125 L 660 170 L 430 170 L 430 245" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow3)"></path>
+          <text x="545" y="163" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="9">stored vectors</text>
+
+          
+          <line x1="500" y1="277" x2="540" y2="277" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="550" y="245" width="100" height="65" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"></rect>
+          <text x="600" y="270" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="12" font-weight="600">Context</text>
+          <text x="600" y="288" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Top-K + query</text>
+
+          
+          <line x1="600" y1="310" x2="600" y2="340" stroke="#22d3ee" stroke-width="2" marker-end="url(#arrow3)"></line>
+
+          
+          <rect x="530" y="345" width="140" height="60" rx="8" fill="#f8fafc" stroke="#a855f7" stroke-width="2"></rect>
+          <text x="600" y="372" text-anchor="middle" fill="#0f172a" font-family="Space Grotesk" font-size="14" font-weight="600">LLM</text>
+          <text x="600" y="392" text-anchor="middle" fill="#475569" font-family="Nunito" font-size="10">Generate response</text>
+
+          
+          <path d="M 530 375 L 80 375 L 80 310" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow3)"></path>
+          <text x="300" y="393" text-anchor="middle" fill="#475569" font-family="JetBrains Mono" font-size="10">grounded response</text>
+        </svg>
