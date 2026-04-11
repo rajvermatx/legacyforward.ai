@@ -34,7 +34,7 @@ export default function Home() {
           <p className="text-teal-400 font-semibold text-sm uppercase tracking-widest mb-6">
             From Chaos to Clarity
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
             Your legacy systems aren&rsquo;t the problem.{" "}
             <br className="sm:hidden" />
             Your approach to AI is.
