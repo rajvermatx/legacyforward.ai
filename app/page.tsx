@@ -233,14 +233,16 @@ export default function Home() {
               <p className="text-slate-500 mb-8">
                 The LegacyForward.ai platform gives you the framework, the resources, and the tools.
               </p>
-          <ul className="space-y-4">
+          <div className="space-y-4">
             {valueProps.map((text, i) => (
-              <li key={i} className="flex gap-3 items-start">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-2" />
+              <div key={i} className="flex gap-4 items-start">
+                <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0 font-mono">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <p className="text-slate-700 leading-relaxed">{text}</p>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
 
             </div>
 
