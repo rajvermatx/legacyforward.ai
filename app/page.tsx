@@ -10,11 +10,11 @@ const problems = [
 ];
 
 const valueProps = [
-  { num: "01", text: "Start with a framework, not a vendor pitch. Signal Capture gives you a disciplined way to find and validate real AI value before committing resources." },
-  { num: "02", text: "Adopt a delivery model built for non-determinism. Grounded Delivery replaces Agile assumptions with phases designed for probabilistic outputs." },
-  { num: "03", text: "Stop treating legacy as the enemy. Legacy Coexistence patterns let AI and existing systems work together without a rip-and-replace." },
-  { num: "04", text: "Build the skills you actually need — six free practitioner books, 30 architecture patterns, and 95+ hands-on notebooks, organized by your role." },
-  { num: "05", text: "Know your AI exposure before it finds you. The AI Impact Analyzer scores your role and generates a personalized roadmap for navigating the shift." },
+  "Start with a framework, not a vendor pitch. Signal Capture gives you a disciplined way to find and validate real AI value before committing resources.",
+  "Adopt a delivery model built for non-determinism. Grounded Delivery replaces Agile assumptions with phases designed for probabilistic outputs.",
+  "Stop treating legacy as the enemy. Legacy Coexistence patterns let AI and existing systems work together without a rip-and-replace.",
+  "Build the skills you actually need — six free practitioner books, 30 architecture patterns, and 95+ hands-on notebooks, organized by your role.",
+  "Know your AI exposure before it finds you. The AI Impact Analyzer scores your role and generates a personalized roadmap for navigating the shift.",
 ];
 
 
@@ -233,16 +233,14 @@ export default function Home() {
               <p className="text-slate-500 mb-8">
                 The LegacyForward.ai platform gives you the framework, the resources, and the tools.
               </p>
-          <div className="space-y-5 max-w-3xl mx-auto mb-16">
-            {valueProps.map((item) => (
-              <div key={item.num} className="flex gap-4 items-start">
-                <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0 font-mono">
-                  {item.num}
-                </span>
-                <p className="text-slate-700 leading-relaxed">{item.text}</p>
-              </div>
+          <ul className="space-y-4">
+            {valueProps.map((text, i) => (
+              <li key={i} className="flex gap-3 items-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-500 shrink-0 mt-2" />
+                <p className="text-slate-700 leading-relaxed">{text}</p>
+              </li>
             ))}
-          </div>
+          </ul>
 
             </div>
 
