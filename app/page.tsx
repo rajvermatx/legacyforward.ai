@@ -40,11 +40,11 @@ export default function Home() {
             Your approach to AI is.
           </h1>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-6 leading-relaxed">
-            Most people approach AI as a clean break from the past. In reality, AI succeeds
+            Most people approach AI as a clean break from the past. <br />In reality, AI succeeds
             when it works with the systems already in place.
           </p>
           <p className="text-base text-teal-400 font-medium mb-12">
-            Learn to navigate it through Signal Capture → Grounded Delivery → Legacy Coexistence
+            Find the signal. Build the skills. Own your roadmap.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Link
@@ -59,6 +59,12 @@ export default function Home() {
             >
               Browse the Library
             </Link>
+            <span className="border border-slate-600 text-slate-500 px-8 py-3.5 rounded-lg font-semibold text-lg cursor-not-allowed flex items-center gap-2">
+              Get Your Roadmap
+              <span className="text-xs font-bold uppercase tracking-widest bg-amber-900/40 text-amber-400 px-2 py-0.5 rounded-full">
+                Soon
+              </span>
+            </span>
           </div>
         </div>
       </section>
