@@ -121,4 +121,4 @@ The hype is real. The capability is real. And the agent tax is real. Price all t
 
 ---
 
-*This article draws from Agentic AI: Build, Ship, Portfolio, a free guide at careeralign.com. It covers the full autonomy spectrum, agent architecture patterns, production deployment considerations, and how to build an agent portfolio that demonstrates real capability. Read Agentic AI: Build, Ship, Portfolio, free at careeralign.com.*
+*This article draws from Agentic AI: Build, Ship, Portfolio, a free guide at legacyforward.ai/library. It covers the full autonomy spectrum, agent architecture patterns, production deployment considerations, and how to build an agent portfolio that demonstrates real capability. Read Agentic AI: Build, Ship, Portfolio, free at legacyforward.ai/library.*

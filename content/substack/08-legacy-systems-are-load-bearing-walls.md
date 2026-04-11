@@ -137,4 +137,4 @@ The walls are load-bearing. Work with them, not against them.
 
 
 ![Diagram](/diagrams/substack/08-coexistence-patterns.svg)
-*This article draws from Legacy Coexistence, a free guide at careeralign.com. It covers all five coexistence patterns in depth, with decision frameworks for selecting the right pattern, real-world integration examples, and architectural guidance for each approach. Read The AI-First Enterprise, free at careeralign.com.*
+*This article draws from Legacy Coexistence, a free guide at legacyforward.ai/library. It covers all five coexistence patterns in depth, with decision frameworks for selecting the right pattern, real-world integration examples, and architectural guidance for each approach. Read The AI-First Enterprise, free at legacyforward.ai/library.*

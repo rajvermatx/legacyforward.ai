@@ -134,4 +134,4 @@ The ability to kill a project clearly, quickly, and without unnecessary organiza
 
 ---
 
-*This article draws from Signal Capture, AI for Business Leaders, and AI Product Management, free guides at careeralign.com. The full Chaos to Clarity AI Series covers the complete lifecycle from initiative design through delivery, including kill criteria templates, gate decision frameworks, and portfolio management tools for enterprise AI programs. Read the Chaos to Clarity AI Series, free at careeralign.com.*
+*This article draws from Signal Capture, AI for Business Leaders, and AI Product Management, free guides at legacyforward.ai/library. The full Chaos to Clarity AI Series covers the complete lifecycle from initiative design through delivery, including kill criteria templates, gate decision frameworks, and portfolio management tools for enterprise AI programs. Read the Chaos to Clarity AI Series, free at legacyforward.ai/library.*

@@ -26,6 +26,9 @@ export default function Nav() {
             <Link href="/framework" className="hover:text-teal-400 transition-colors">
               Framework
             </Link>
+            <Link href="/cheatsheet" className="hover:text-teal-400 transition-colors">
+              Cheatsheet
+            </Link>
             <Link href="/library" className="hover:text-teal-400 transition-colors">
               Library
             </Link>
@@ -107,6 +110,9 @@ export default function Nav() {
           <div className="md:hidden border-t border-navy-800 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
             <Link href="/framework" onClick={() => setOpen(false)} className="hover:text-teal-400">
               Framework
+            </Link>
+            <Link href="/cheatsheet" onClick={() => setOpen(false)} className="hover:text-teal-400">
+              Cheatsheet
             </Link>
             <Link href="/library" onClick={() => setOpen(false)} className="hover:text-teal-400">
               Library

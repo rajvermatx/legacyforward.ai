@@ -2,19 +2,23 @@
 title: Privacy Policy
 slug: privacy
 description: >-
-  CareerAlign is a static website. We do not collect, store, or process personal
-  data directly.
+  LegacyForward.ai respects your privacy. We do not collect, store, or process
+  personal data directly on the public site.
 section: static
 order: 0
 ---
 
 ## Overview
 
-CareerAlign is a static website. We do not collect, store, or process personal data directly.
+LegacyForward.ai respects your privacy. The public site (framework, library, blog) does not collect, store, or process personal data directly. The app (/app) uses authentication and stores only what is needed to deliver your personalized experience.
 
-## No Accounts or Tracking
+## No Tracking on the Public Site
 
-We do not require user accounts, do not use cookies for tracking, and do not run analytics scripts.
+The public site does not require user accounts, does not use cookies for tracking, and does not run analytics scripts.
+
+## The App (/app)
+
+When you sign in to the LegacyForward.ai app, we collect and store the information you provide during onboarding (career profile, goals, role) in order to power the AI agents that generate your roadmap, impact analysis, and career book. This data is stored securely and is never sold or shared with third parties.
 
 ## Third-Party Services
 
@@ -22,7 +26,7 @@ Our site loads resources from third-party services: Google Fonts (for typography
 
 ## Local Storage
 
-We use browser localStorage solely to remember your theme preference (light/dark mode). This data never leaves your browser.
+We use browser localStorage to remember your reading history and theme preference. This data never leaves your browser.
 
 ## External Links
 

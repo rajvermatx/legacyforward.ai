@@ -18,7 +18,7 @@ Content is provided "as-is" without warranties of any kind. While we strive for 
 
 ## No Affiliation
 
-CareerAlign is not affiliated with, endorsed by, or sponsored by any cloud provider (Google Cloud, AWS, Azure), vendor (OpenAI, Anthropic), certification body, or other organization mentioned in the content.
+LegacyForward.ai is not affiliated with, endorsed by, or sponsored by any cloud provider (Google Cloud, AWS, Azure), vendor (OpenAI, Anthropic), certification body, or other organization mentioned in the content.
 
 ## Code Samples
 
@@ -34,7 +34,7 @@ Content references third-party APIs, services, and datasets. We are not responsi
 
 ## Intellectual Property
 
-Content is open source. Code samples are provided under the MIT License. Written content is provided under Creative Commons Attribution 4.0 (CC BY 4.0). Attribution to CareerAlign.com is appreciated.
+Content is open source. Code samples are provided under the MIT License. Written content is provided under Creative Commons Attribution 4.0 (CC BY 4.0). Attribution to LegacyForward.ai is appreciated.
 
 ## Changes
 

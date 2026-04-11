@@ -145,4 +145,4 @@ One question. Thirty seconds. Ask it before the next budget discussion.
 
 
 ![Diagram](/diagrams/substack/02-unlimited-humans-test.svg)
-*This article draws from the LegacyForward.ai Framework guide, which covers Signal Capture methodology, the transformation vs. automation distinction, and the full five-question evaluation process. Read it free at careeralign.com/publish.*
+*This article draws from the LegacyForward.ai Framework guide, which covers Signal Capture methodology, the transformation vs. automation distinction, and the full five-question evaluation process. Read it free at legacyforward.ai/library.*

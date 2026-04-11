@@ -129,4 +129,4 @@ Fix the process. Then automate it. In that order.
 
 
 ![Diagram](/diagrams/substack/06-automation-vs-transformation.svg)
-*This article draws from Signal Capture and AI Product Management, free guides at careeralign.com. The LegacyForward.ai Framework covers process mapping, value hypothesis design, and the full Signal Capture methodology for identifying where AI delivers genuine business value. Read The LegacyForward.ai Framework guide at careeralign.com/publish.*
+*This article draws from Signal Capture and AI Product Management, free guides at legacyforward.ai/library. The LegacyForward.ai Framework covers process mapping, value hypothesis design, and the full Signal Capture methodology for identifying where AI delivers genuine business value. Read The LegacyForward.ai Framework guide at legacyforward.ai/library.*

@@ -136,4 +136,4 @@ The technology is not the hard part. This is the hard part. And it is entirely w
 
 ---
 
-*This article draws from AI for Business Leaders, a free guide at careeralign.com. It covers all six failure patterns in depth, includes a full vendor evaluation framework, and gives you the decision tools to build an AI strategy that actually delivers. Read it free at careeralign.com.*
+*This article draws from AI for Business Leaders, a free guide at legacyforward.ai/library. It covers all six failure patterns in depth, includes a full vendor evaluation framework, and gives you the decision tools to build an AI strategy that actually delivers. Read it free at legacyforward.ai/library.*

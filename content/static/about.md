@@ -1,25 +1,25 @@
 ---
-title: About CareerAlign
+title: About LegacyForward.ai
 slug: about
 description: >-
-  CareerAlign is a free, open-source learning platform built by practitioners,
-  for practitioners. The mission is to help professionals move from chaos to
-  clarity by providing structured, hands-on...
+  LegacyForward.ai is a free, practitioner-built platform for enterprise AI
+  transformation. The mission is to help professionals move from chaos to
+  clarity — with a framework, a library, and AI-powered career tools.
 section: static
 order: 0
 ---
 
 ## Mission
 
-CareerAlign is a free, open-source learning platform built by practitioners, for practitioners. The mission is to help professionals move from chaos to clarity by providing structured, hands-on learning paths for in-demand technology skills.
+LegacyForward.ai is a free, practitioner-built platform for enterprise AI transformation. The mission is to help professionals move from chaos to clarity — with a disciplined framework, a free learning library, and AI-powered tools that build a personalized roadmap around your role.
 
 ## What We Offer
 
-8 structured learning paths, 68+ modules, 78+ Jupyter notebooks, 10+ real-world use cases, and a growing library of books — all open source and free.
+A three-pillar framework (Signal Capture → Grounded Delivery → Legacy Coexistence), 6 practitioner books, 30 architecture patterns, 95+ Jupyter notebooks, 15 cheatsheets, and 6 certification learning paths — all free and open source.
 
 ## Approach
 
-Every learning path is designed to be practical and production-focused. Theory is grounded in real code, real APIs, and real datasets. Notebooks are runnable in Google Colab with zero setup.
+Every resource is practical and production-focused. Theory is grounded in real code, real APIs, and real enterprise constraints. Notebooks run in Google Colab with zero setup. Books are organized by role — from strategy and architecture to product management and hands-on engineering.
 
 ## AI-Assisted Content
 
@@ -27,4 +27,4 @@ This platform is built with AI assistance. Content is authored and reviewed by p
 
 ## Open Source
 
-All content is available on GitHub under the CareerAlign organization. Contributions, corrections, and feedback are welcome.
+All content is open source. Contributions, corrections, and feedback are welcome.

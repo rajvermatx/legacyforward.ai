@@ -130,4 +130,4 @@ The question was never "how do we make the AI better." The question was "does th
 
 ---
 
-*This article draws from AI Product Management, a free guide at careeralign.com. It covers the full AI story template, evaluation-driven development, the Grounded Delivery framework, and how to manage AI features from hypothesis to production. Read AI Product Management, free at careeralign.com.*
+*This article draws from AI Product Management, a free guide at legacyforward.ai/library. It covers the full AI story template, evaluation-driven development, the Grounded Delivery framework, and how to manage AI features from hypothesis to production. Read AI Product Management, free at legacyforward.ai/library.*

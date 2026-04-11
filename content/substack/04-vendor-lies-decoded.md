@@ -192,4 +192,4 @@ That is what separates organizations that get genuine value from AI from those t
 
 ---
 
-*This article draws from AI for Business Leaders, a free guide at careeralign.com. It covers all seven vendor claims in detail, the full build vs. buy vs. partner framework, and a chapter on AI risk and governance for executives. Read it free at careeralign.com.*
+*This article draws from AI for Business Leaders, a free guide at legacyforward.ai/library. It covers all seven vendor claims in detail, the full build vs. buy vs. partner framework, and a chapter on AI risk and governance for executives. Read it free at legacyforward.ai/library.*

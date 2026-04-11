@@ -203,4 +203,4 @@ That connection between graph databases and AI is a separate article. But the JO
 
 ---
 
-*This article draws from Graph Databases for AI, a free guide at careeralign.com. It covers the JOIN wall in depth, index-free adjacency, translating your relational data model into a graph, Cypher for SQL practitioners, and how graph databases power the next generation of AI systems. Read it free at careeralign.com.*
+*This article draws from Graph Databases for AI, a free guide at legacyforward.ai/library. It covers the JOIN wall in depth, index-free adjacency, translating your relational data model into a graph, Cypher for SQL practitioners, and how graph databases power the next generation of AI systems. Read it free at legacyforward.ai/library.*

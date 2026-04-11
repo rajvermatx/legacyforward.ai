@@ -135,4 +135,4 @@ Agile is not the enemy. It is a precise tool for a specific job. AI development 
 
 
 ![Diagram](/diagrams/substack/03-agile-vs-grounded.svg)
-*This article draws from AI Product Management, a free guide at careeralign.com. It covers the full Grounded Delivery framework, evaluation-driven development, how to manage AI sprints with engineering teams, and how to communicate AI progress to non-technical stakeholders. Read it free at careeralign.com.*
+*This article draws from AI Product Management, a free guide at legacyforward.ai/library. It covers the full Grounded Delivery framework, evaluation-driven development, how to manage AI sprints with engineering teams, and how to communicate AI progress to non-technical stakeholders. Read it free at legacyforward.ai/library.*
