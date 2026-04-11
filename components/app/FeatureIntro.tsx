@@ -22,12 +22,12 @@ export default function FeatureIntro({ id, title, description, color = "indigo" 
   const [dismissed, setDismissed] = useState(true); // hidden by default to prevent flash
 
   useEffect(() => {
-    const key = `careeralign_intro_${id}`;
+    const key = `legacyforward_intro_${id}`;
     setDismissed(localStorage.getItem(key) === "dismissed");
   }, [id]);
 
   function dismiss() {
-    localStorage.setItem(`careeralign_intro_${id}`, "dismissed");
+    localStorage.setItem(`legacyforward_intro_${id}`, "dismissed");
     setDismissed(true);
   }
 

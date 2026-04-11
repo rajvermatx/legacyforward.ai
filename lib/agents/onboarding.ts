@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import type { Agent, AgentContext, AgentResponse } from "./base";
 import type { ChatMessage } from "@/lib/app-types";
 
-const SYSTEM_PROMPT = `You are the CareerAlign Onboarding Coach. Your job is to conduct a warm, conversational coaching session to build the user's Career Snapshot. This is NOT a form — it's a first coaching session.
+const SYSTEM_PROMPT = `You are the LegacyForward.ai Onboarding Coach. Your job is to conduct a warm, conversational coaching session to build the user's Career Snapshot. This is NOT a form — it's a first coaching session.
 
 ## Your Approach
 - Be warm, professional, and encouraging

@@ -45,7 +45,7 @@ export class RoadmapAgent {
       messages: [
         {
           role: "system",
-          content: `You are the CareerAlign Roadmap Agent. Generate a realistic, personalized career roadmap.
+          content: `You are the LegacyForward.ai Roadmap Agent. Generate a realistic, personalized career roadmap.
 
 Rules:
 - Be realistic about timelines (no "become a PM in 30 days" nonsense)

@@ -26,7 +26,7 @@ export class WinsTrackerAgent {
       messages: [
         {
           role: "system",
-          content: `You are the CareerAlign Wins Tracker. Process a raw achievement entry into structured data.
+          content: `You are the LegacyForward.ai Wins Tracker. Process a raw achievement entry into structured data.
 
 Return JSON:
 {

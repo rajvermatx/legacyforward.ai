@@ -100,7 +100,7 @@ export class CAIIEngine {
       .map((t) => t.task);
 
     // Use LLM to generate narrative, skills to learn, and pivot paths
-    const narrativePrompt = `You are the CareerAlign AI Impact Advisor. Generate a brief, empowering analysis for this occupation.
+    const narrativePrompt = `You are the LegacyForward.ai AI Impact Advisor. Generate a brief, empowering analysis for this occupation.
 
 Occupation: ${occupation.title}
 Overall CAII Score: ${overallScore}/100 (${overallRiskLevel(overallScore)} risk)
