@@ -206,37 +206,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── ZONE 3A: The Problem ── */}
+      {/* ── ZONE 3: Problem + Solution side by side ── */}
       <section className="bg-slate-50 py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-2xl font-bold text-navy-900 text-center mb-3">
-            Why Most Enterprise AI Fails
-          </h2>
-          <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
-            Not because of technology — because of how organizations approach it.
-          </p>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {problems.map((problem, i) => (
-              <div key={i} className="flex gap-4 items-start">
-                <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <p className="text-slate-700 leading-relaxed">{problem}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
-      {/* ── ZONE 3B: What To Do ── */}
-      <section className="bg-white py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-2xl font-bold text-navy-900 text-center mb-3">
-            What You Should Do Instead
-          </h2>
-          <p className="text-slate-500 text-center max-w-2xl mx-auto mb-12">
-            The LegacyForward.ai platform gives you the framework, the resources, and the tools.
-          </p>
+            {/* 3A — The Problem */}
+            <div>
+              <h2 className="text-2xl font-bold text-navy-900 mb-3">
+                Why Most Enterprise AI Fails
+              </h2>
+              <p className="text-slate-500 mb-8">
+                Not because of technology — because of how organizations approach it.
+              </p>
+              <div className="space-y-4">
+                {problems.map((problem, i) => (
+                  <div key={i} className="flex gap-4 items-start">
+                    <span className="text-teal-500 font-bold text-lg mt-0.5 shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <p className="text-slate-700 leading-relaxed">{problem}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* 3B — What To Do */}
+            <div>
+              <h2 className="text-2xl font-bold text-navy-900 mb-3">
+                What You Should Do Instead
+              </h2>
+              <p className="text-slate-500 mb-8">
+                The LegacyForward.ai platform gives you the framework, the resources, and the tools.
+              </p>
           <div className="space-y-5 max-w-3xl mx-auto mb-16">
             {valueProps.map((item) => (
               <div key={item.num} className="flex gap-4 items-start">
@@ -248,20 +250,23 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Resource mini-cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {resources.map((r) => (
-              <Link
-                key={r.href}
-                href={r.href}
-                className={`group block border-t-2 ${r.color} bg-slate-50 hover:bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md transition-all`}
-              >
-                <p className="text-base font-bold text-navy-900 group-hover:text-teal-600 transition-colors mb-1">
-                  {r.label}
-                </p>
-                <p className="text-xs text-slate-400">{r.sub}</p>
-              </Link>
-            ))}
+              {/* Resource mini-cards */}
+              <div className="grid grid-cols-2 gap-3 mt-8">
+                {resources.map((r) => (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    className={`group block border-t-2 ${r.color} bg-white hover:bg-slate-50 border border-slate-200 rounded-xl p-4 hover:shadow-md transition-all`}
+                  >
+                    <p className="text-sm font-bold text-navy-900 group-hover:text-teal-600 transition-colors mb-1">
+                      {r.label}
+                    </p>
+                    <p className="text-xs text-slate-400">{r.sub}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
