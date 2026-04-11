@@ -11,6 +11,8 @@ part: "Part 04 Where AI Lands"
 
 There is a version of the enterprise AI story that goes like this: AI arrives, legacy systems are replaced, and the organization emerges transformed, running on modern, intelligent infrastructure that is nothing like what came before.
 
+![Diagram](/diagrams/enterprise-it-101/ch16-ai-on-stack.svg)
+
 This story is told at conferences, in vendor presentations, and in business publications. It is not how enterprise AI actually works.
 
 The reality is almost exactly the opposite. AI is additive, not replacement. It runs on top of the existing technology stack, reads from existing systems, writes back into existing processes, and depends on data that has been sitting in databases and data warehouses for years or decades. The stack does not disappear when AI arrives. The stack becomes the foundation on which AI either succeeds or fails.

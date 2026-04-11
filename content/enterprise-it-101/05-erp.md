@@ -11,6 +11,8 @@ part: "Part 01 The Foundation"
 
 If you work at or with a large organization and wonder why things take so long, why processes require so many approvals, or why connecting a new system to the existing infrastructure seems so difficult — there is a good chance ERP is involved.
 
+![Diagram](/diagrams/enterprise-it-101/ch05-erp-flow.svg)
+
 Enterprise Resource Planning, or ERP, is the category of software that manages the core business processes of an organization. Finance. Procurement. Human resources. Supply chain. Manufacturing. Project management. An ERP system is designed to hold all of these functions together in a single, integrated system — or at least a closely connected family of systems — so that the data flows coherently between them.
 
 The dominant ERP vendors are SAP and Oracle. Between them, they power the back-office operations of a very large share of the global economy. When a large manufacturer wants to know its total inventory position across forty factories in twenty countries, it asks SAP. When a global retailer wants to see which purchase orders are outstanding, it asks Oracle. When a government agency needs to run payroll for fifty thousand employees, it is probably running a version of one of these systems — or a specialized equivalent built for the public sector.

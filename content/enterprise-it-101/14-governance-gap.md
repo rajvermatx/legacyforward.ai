@@ -11,6 +11,8 @@ part: "Part 03 The IT Sprawl Problem"
 
 Ask the IT organization who owns a critical enterprise system, and you will get a name — probably a role like "System Owner" or "Application Manager" — on an organizational chart. Ask that person how the system actually works, who the key users are, what the system's dependencies are, and what would happen if it went down, and you may get a much less clear answer.
 
+![Diagram](/diagrams/enterprise-it-101/ch14-governance-gap.svg)
+
 This is the governance gap: the distance between nominal ownership and actual understanding and control. It exists in virtually every large organization, and it is one of the most underappreciated sources of risk, friction, and project failure in enterprise IT.
 
 ## What Governance Is Supposed to Mean

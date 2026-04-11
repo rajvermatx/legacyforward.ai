@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="420" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">THE THREE LAYERS OF ENTERPRISE SYSTEMS</text>
+
+  <!-- Layer 1: System of Record -->
+  <rect x="60" y="64" width="680" height="90" rx="10" fill="#0f172a"/>
+  <text x="400" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" letter-spacing="2">LAYER 1 — SYSTEM OF RECORD</text>
+  <text x="400" y="120" text-anchor="middle" font-size="14" font-weight="600" fill="white">Authoritative source of truth · ERP · Core Banking · HR Systems · EMR</text>
+  <text x="400" y="140" text-anchor="middle" font-size="12" fill="#64748b">Designed for reliability · Decades of data · Hard to change · Load-bearing</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="154" x2="400" y2="178" stroke="#14b8a6" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="394,176 400,186 406,176" fill="#14b8a6"/>
+
+  <!-- Layer 2: System of Engagement -->
+  <rect x="60" y="188" width="680" height="90" rx="10" fill="#1e3a5f"/>
+  <text x="400" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" letter-spacing="2">LAYER 2 — SYSTEM OF ENGAGEMENT</text>
+  <text x="400" y="244" text-anchor="middle" font-size="14" font-weight="600" fill="white">What people actually use · CRM · Portals · Mobile Apps · Collaboration Tools</text>
+  <text x="400" y="264" text-anchor="middle" font-size="12" fill="#64748b">Reads from &amp; writes to the record layer · Modern interfaces · User-facing</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="278" x2="400" y2="302" stroke="#14b8a6" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="394,300 400,310 406,300" fill="#14b8a6"/>
+
+  <!-- Layer 3: System of Intelligence -->
+  <rect x="60" y="312" width="680" height="90" rx="10" fill="#134e4a"/>
+  <text x="400" y="348" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" letter-spacing="2">LAYER 3 — SYSTEM OF INTELLIGENCE</text>
+  <text x="400" y="368" text-anchor="middle" font-size="14" font-weight="600" fill="white">Analytics · Machine Learning · AI · BI Dashboards · Predictions</text>
+  <text x="400" y="388" text-anchor="middle" font-size="12" fill="#64748b">Consumes data from layers above · Derives insight · Powers decisions</text>
+
+  <!-- Data flow label -->
+  <text x="420" y="169" font-size="11" fill="#14b8a6" font-weight="600">data flows down</text>
+  <text x="420" y="293" font-size="11" fill="#14b8a6" font-weight="600">data flows down</text>
+</svg>

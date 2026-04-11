@@ -11,6 +11,8 @@ part: "Appendix"
 
 The chapters of this book covered the enterprise technology landscape in sequence — foundation first, then modern layers, then sprawl, then AI. This appendix brings those pieces together into a single coherent map. Use it as a reference when you need to orient yourself quickly to how the layers connect.
 
+![Diagram](/diagrams/enterprise-it-101/ch22-it-landscape-map.svg)
+
 ## The Five-Layer Model
 
 Enterprise technology can be organized into five layers, each building on the one below it.

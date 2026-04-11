@@ -11,6 +11,8 @@ part: "Part 04 Where AI Lands"
 
 "Why don't they just replace it?"
 
+![Diagram](/diagrams/enterprise-it-101/ch19-coexistence.svg)
+
 It is a question that gets asked, in some form, at almost every enterprise AI project kickoff. The legacy system that holds the data is old, hard to integrate with, and runs on technology that most modern developers have never worked with. Why not replace it with something modern, clean the data, and start fresh?
 
 The answer, in practice, is that rip-and-replace rarely works — and the exceptions are so expensive, so risky, and so time-consuming that they prove rather than challenge the rule.

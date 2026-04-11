@@ -11,6 +11,8 @@ part: "Part 03 The IT Sprawl Problem"
 
 No CIO ever sat down and decided: "This year, we will build a technology landscape with forty-seven overlapping systems, three conflicting sources of truth for customer data, and integration spaghetti that nobody fully understands." Sprawl is not a decision. It is the accumulated outcome of thousands of reasonable decisions made over time by people who were solving immediate problems without full visibility into the larger picture.
 
+![Diagram](/diagrams/enterprise-it-101/ch11-sprawl.svg)
+
 Understanding how sprawl happens is the first step to understanding why it is so hard to fix — and what it costs.
 
 ## Mergers and Acquisitions

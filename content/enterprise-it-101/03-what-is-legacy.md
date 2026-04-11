@@ -11,6 +11,8 @@ part: "Part 01 The Foundation"
 
 Ask ten people to define "legacy system" and you will get ten different answers. Most of them will involve the word "old." Some will involve the word "outdated." A few will involve frustration.
 
+![Diagram](/diagrams/enterprise-it-101/ch03-legacy-spectrum.svg)
+
 The problem with defining legacy as "old" is that age alone does not make something legacy. Some systems running on forty-year-old technology are perfectly fit for purpose and will continue running for another forty years. Some systems built last year are already legacy in the sense that matters — they are hard to change, hard to replace, and deeply embedded in how the organization functions.
 
 The better definition has nothing to do with age. A legacy system is a system that the organization cannot easily replace or significantly modify without unacceptable risk or cost.

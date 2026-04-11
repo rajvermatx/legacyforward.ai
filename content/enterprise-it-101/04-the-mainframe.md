@@ -11,6 +11,8 @@ part: "Part 01 The Foundation"
 
 The mainframe computer was declared dead approximately fifty times between 1980 and today. It is still running.
 
+![Diagram](/diagrams/enterprise-it-101/ch04-mainframe.svg)
+
 The IBM mainframe — and its ecosystem of related technology — processes an estimated seventy percent of all global transaction processing. That includes most major bank transactions, the majority of airline reservation systems, a large portion of government benefit payments, and the systems that settle credit card transactions worldwide.
 
 If you have used an ATM, booked a flight, received a social security payment, or paid with a credit card today, there is a very good chance a mainframe processed part of that transaction.

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="360" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">POINT-TO-POINT VS. HUB-AND-SPOKE INTEGRATION</text>
+
+  <!-- LEFT: Spaghetti -->
+  <rect x="20" y="54" width="360" height="290" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+  <text x="200" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#991b1b">POINT-TO-POINT (SPAGHETTI)</text>
+
+  <!-- 5 systems positioned in a pentagon -->
+  <!-- ERP top -->
+  <rect x="160" y="96" width="80" height="32" rx="6" fill="#7f1d1d"/>
+  <text x="200" y="117" text-anchor="middle" font-size="10" font-weight="600" fill="white">ERP</text>
+
+  <!-- CRM left -->
+  <rect x="50" y="170" width="80" height="32" rx="6" fill="#7f1d1d"/>
+  <text x="90" y="191" text-anchor="middle" font-size="10" font-weight="600" fill="white">CRM</text>
+
+  <!-- HR right -->
+  <rect x="270" y="170" width="80" height="32" rx="6" fill="#7f1d1d"/>
+  <text x="310" y="191" text-anchor="middle" font-size="10" font-weight="600" fill="white">HR System</text>
+
+  <!-- Billing bottom-left -->
+  <rect x="80" y="260" width="80" height="32" rx="6" fill="#7f1d1d"/>
+  <text x="120" y="281" text-anchor="middle" font-size="10" font-weight="600" fill="white">Billing</text>
+
+  <!-- Portal bottom-right -->
+  <rect x="240" y="260" width="80" height="32" rx="6" fill="#7f1d1d"/>
+  <text x="280" y="281" text-anchor="middle" font-size="10" font-weight="600" fill="white">Portal</text>
+
+  <!-- Spaghetti lines - all pairs connected -->
+  <line x1="200" y1="128" x2="90" y2="170" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="200" y1="128" x2="310" y2="170" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="200" y1="128" x2="120" y2="260" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="200" y1="128" x2="280" y2="260" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="90" y1="202" x2="310" y2="186" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="90" y1="202" x2="120" y2="260" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="90" y1="202" x2="280" y2="260" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="310" y1="202" x2="120" y2="276" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="310" y1="202" x2="280" y2="260" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+  <line x1="120" y1="292" x2="280" y2="276" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+
+  <text x="200" y="332" text-anchor="middle" font-size="11" fill="#991b1b" font-weight="600">10 connections · fragile · hard to monitor</text>
+
+  <!-- RIGHT: Hub and spoke -->
+  <rect x="420" y="54" width="360" height="290" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="600" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#166534">HUB-AND-SPOKE (PLATFORM)</text>
+
+  <!-- Central hub -->
+  <rect x="540" y="168" width="120" height="48" rx="8" fill="#134e4a"/>
+  <text x="600" y="188" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">Integration</text>
+  <text x="600" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">Platform</text>
+
+  <!-- Spoke systems -->
+  <rect x="540" y="96" width="80" height="32" rx="6" fill="#166534"/>
+  <text x="580" y="117" text-anchor="middle" font-size="10" font-weight="600" fill="white">ERP</text>
+  <line x1="580" y1="128" x2="580" y2="168" stroke="#22c55e" stroke-width="2"/>
+
+  <rect x="436" y="168" width="80" height="32" rx="6" fill="#166534"/>
+  <text x="476" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="white">CRM</text>
+  <line x1="516" y1="186" x2="540" y2="192" stroke="#22c55e" stroke-width="2"/>
+
+  <rect x="684" y="168" width="80" height="32" rx="6" fill="#166534"/>
+  <text x="724" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="white">HR System</text>
+  <line x1="684" y1="186" x2="660" y2="192" stroke="#22c55e" stroke-width="2"/>
+
+  <rect x="466" y="260" width="80" height="32" rx="6" fill="#166534"/>
+  <text x="506" y="281" text-anchor="middle" font-size="10" font-weight="600" fill="white">Billing</text>
+  <line x1="546" y1="260" x2="570" y2="216" stroke="#22c55e" stroke-width="2"/>
+
+  <rect x="654" y="260" width="80" height="32" rx="6" fill="#166534"/>
+  <text x="694" y="281" text-anchor="middle" font-size="10" font-weight="600" fill="white">Portal</text>
+  <line x1="654" y1="276" x2="630" y2="216" stroke="#22c55e" stroke-width="2"/>
+
+  <text x="600" y="332" text-anchor="middle" font-size="11" fill="#166534" font-weight="600">5 connections · monitored · manageable</text>
+</svg>

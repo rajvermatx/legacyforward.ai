@@ -11,6 +11,8 @@ part: "Part 04 Where AI Lands"
 
 After twenty chapters of honest accounting — legacy systems, technical debt, integration spaghetti, vendor lock-in, data swamps, and governance gaps — it would be easy to conclude that enterprise AI is too hard and the landscape too broken for anything to work.
 
+![Diagram](/diagrams/enterprise-it-101/ch20-where-to-start.svg)
+
 That conclusion would be wrong.
 
 Enterprise AI is working. It is working at scale, in large organizations, delivering real and measurable value. Not everywhere, not easily, and not in the way the vendor presentations suggest — but it is working. The organizations doing it successfully share a common approach: they start where the conditions are right, not where the ambition is highest.

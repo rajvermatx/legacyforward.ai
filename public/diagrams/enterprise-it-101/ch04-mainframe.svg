@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="380" fill="#f8fafc" rx="12"/>
+  <text x="400" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">THE MAINFRAME AT THE CENTER</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#64748b">~70% of global transaction processing runs through mainframes</text>
+
+  <!-- Central mainframe box -->
+  <rect x="300" y="130" width="200" height="120" rx="10" fill="#0f172a"/>
+  <text x="400" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="white">IBM Mainframe</text>
+  <text x="400" y="196" text-anchor="middle" font-size="11" fill="#94a3b8">COBOL · VSAM · IBM MQ</text>
+  <text x="400" y="214" text-anchor="middle" font-size="11" fill="#14b8a6">Billions of tx/day</text>
+  <text x="400" y="232" text-anchor="middle" font-size="11" fill="#14b8a6">99.999% uptime</text>
+
+  <!-- Spoke lines -->
+  <line x1="300" y1="170" x2="160" y2="110" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="300" y1="210" x2="100" y2="230" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="400" y1="130" x2="400" y2="76" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="500" y1="170" x2="640" y2="110" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="500" y1="210" x2="700" y2="230" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="350" y1="250" x2="200" y2="320" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="450" y1="250" x2="600" y2="320" stroke="#14b8a6" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Satellite nodes -->
+  <rect x="80" y="70" width="150" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="155" y="91" text-anchor="middle" font-size="12" font-weight="600" fill="white">Banking &amp; Payments</text>
+  <text x="155" y="108" text-anchor="middle" font-size="10" fill="#94a3b8">ATMs · Wire transfers</text>
+
+  <rect x="30" y="200" width="140" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="100" y="221" text-anchor="middle" font-size="12" font-weight="600" fill="white">Government</text>
+  <text x="100" y="238" text-anchor="middle" font-size="10" fill="#94a3b8">Benefits · Tax · Payroll</text>
+
+  <rect x="310" y="30" width="180" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="400" y="51" text-anchor="middle" font-size="12" font-weight="600" fill="white">Airline Reservations</text>
+  <text x="400" y="68" text-anchor="middle" font-size="10" fill="#94a3b8">Booking · Inventory · Check-in</text>
+
+  <rect x="570" y="70" width="150" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="645" y="91" text-anchor="middle" font-size="12" font-weight="600" fill="white">Credit Card</text>
+  <text x="645" y="108" text-anchor="middle" font-size="10" fill="#94a3b8">Settlement · Auth</text>
+
+  <rect x="630" y="200" width="140" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="700" y="221" text-anchor="middle" font-size="12" font-weight="600" fill="white">Insurance</text>
+  <text x="700" y="238" text-anchor="middle" font-size="10" fill="#94a3b8">Claims · Policy admin</text>
+
+  <rect x="100" y="300" width="160" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="180" y="321" text-anchor="middle" font-size="12" font-weight="600" fill="white">Retail / Supply Chain</text>
+  <text x="180" y="338" text-anchor="middle" font-size="10" fill="#94a3b8">Inventory · Orders</text>
+
+  <rect x="530" y="300" width="160" height="50" rx="8" fill="#1e3a5f"/>
+  <text x="610" y="321" text-anchor="middle" font-size="12" font-weight="600" fill="white">Healthcare</text>
+  <text x="610" y="338" text-anchor="middle" font-size="10" fill="#94a3b8">Claims · Patient records</text>
+</svg>

@@ -11,6 +11,8 @@ part: "Part 02 The Modern Layer"
 
 If you have heard the term API — Application Programming Interface — and nodded along without being entirely sure what it means, you are not alone. API is one of those terms that gets used constantly in technology conversations and rarely explained well.
 
+![Diagram](/diagrams/enterprise-it-101/ch09-api.svg)
+
 Here is the plain-language version: an API is a defined way for one piece of software to talk to another.
 
 That is it. An API is an agreement between two systems about how they will communicate. System A sends a request in a specific format. System B receives the request, does something, and sends back a response in a specific format. Both sides know what to expect because the API defines the protocol.

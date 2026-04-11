@@ -11,6 +11,8 @@ part: "Part 02 The Modern Layer"
 
 If the systems in the previous chapters are where enterprise data is created and managed, this chapter is about where it goes to be analyzed. The data warehouse, the data lake, and the related concepts around them are the infrastructure that sits between operational systems and the analytics and AI systems that need to learn from the data.
 
+![Diagram](/diagrams/enterprise-it-101/ch10-data-landscape.svg)
+
 Understanding this infrastructure — and the ways it tends to go wrong — is essential for anyone involved in enterprise AI.
 
 ## The Data Warehouse

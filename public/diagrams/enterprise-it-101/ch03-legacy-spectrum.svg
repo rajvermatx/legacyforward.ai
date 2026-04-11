@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="300" fill="#f8fafc" rx="12"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">WHAT MAKES A SYSTEM LEGACY?</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#64748b">Age alone doesn't define legacy — replaceability does</text>
+
+  <!-- Spectrum bar gradient background -->
+  <defs>
+    <linearGradient id="specGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="90" width="640" height="40" rx="8" fill="url(#specGrad)"/>
+
+  <!-- Spectrum labels -->
+  <text x="80" y="82" font-size="12" font-weight="700" fill="#22c55e">LOW RISK</text>
+  <text x="720" y="82" text-anchor="end" font-size="12" font-weight="700" fill="#ef4444">PROBLEMATIC LEGACY</text>
+
+  <!-- Tick marks and descriptions -->
+  <!-- Point 1 -->
+  <line x1="140" y1="130" x2="140" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <text x="140" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Old but</text>
+  <text x="140" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">well-documented</text>
+  <text x="140" y="200" text-anchor="middle" font-size="10" fill="#64748b">Manageable</text>
+
+  <!-- Point 2 -->
+  <line x1="310" y1="130" x2="310" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <text x="310" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Few integrations,</text>
+  <text x="310" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">isolatable</text>
+  <text x="310" y="200" text-anchor="middle" font-size="10" fill="#64748b">Replaceable with planning</text>
+
+  <!-- Point 3 -->
+  <line x1="490" y1="130" x2="490" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <text x="490" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">Buried logic,</text>
+  <text x="490" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">rare expertise</text>
+  <text x="490" y="200" text-anchor="middle" font-size="10" fill="#64748b">Expensive to replace</text>
+
+  <!-- Point 4 -->
+  <line x1="660" y1="130" x2="660" y2="155" stroke="#475569" stroke-width="1.5"/>
+  <text x="660" y="170" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">100s of integrations,</text>
+  <text x="660" y="184" text-anchor="middle" font-size="11" font-weight="600" fill="#0f172a">undocumented logic</text>
+  <text x="660" y="200" text-anchor="middle" font-size="10" fill="#64748b">Load-bearing wall</text>
+
+  <!-- Load-bearing wall callout -->
+  <rect x="200" y="230" width="400" height="48" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="400" y="251" text-anchor="middle" font-size="12" font-weight="700" fill="#dc2626">The load-bearing wall test:</text>
+  <text x="400" y="269" text-anchor="middle" font-size="12" fill="#7f1d1d">What happens if you remove it? If the answer is "everything stops" — it's legacy.</text>
+</svg>

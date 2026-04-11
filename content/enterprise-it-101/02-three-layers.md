@@ -11,6 +11,8 @@ part: "Part 01 The Foundation"
 
 One of the most useful mental models for understanding enterprise technology is the idea of three distinct layers: systems of record, systems of engagement, and systems of intelligence. Each layer has a different job. Each layer has different technical characteristics. And each layer has a different relationship to the other two.
 
+![Diagram](/diagrams/enterprise-it-101/ch02-three-layers.svg)
+
 Most enterprise complexity comes from the interactions between these layers — data flowing (or failing to flow) from one to another, systems designed in one layer being asked to do the job of another, or projects that underestimate how hard it is to move information across the boundaries.
 
 ## Systems of Record

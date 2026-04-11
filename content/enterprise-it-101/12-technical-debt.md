@@ -11,6 +11,8 @@ part: "Part 03 The IT Sprawl Problem"
 
 The term "technical debt" was coined by software developer Ward Cunningham in 1992 to describe a specific phenomenon: when you take a shortcut in software development — writing code that solves the immediate problem but is not quite right — you create a debt. Like financial debt, it accrues interest. The longer you carry it, the more it costs you.
 
+![Diagram](/diagrams/enterprise-it-101/ch12-technical-debt.svg)
+
 The concept has expanded beyond its original meaning. Today, technical debt refers broadly to any deferred decision or deferred investment in technology that creates ongoing cost or risk. It is not just about code quality. It is about infrastructure that is past its end of life, systems that have not been upgraded, integrations that were built quickly and never properly stabilized, documentation that was never written, security patches that were deferred, architecture decisions that made sense at the time but now constrain what the organization can do.
 
 ## The Interest Metaphor

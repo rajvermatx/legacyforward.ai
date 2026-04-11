@@ -11,6 +11,8 @@ part: "Part 02 The Modern Layer"
 
 One of the most consequential decisions in enterprise technology is one that happens constantly, at every level of the organization: should we buy a commercial product, or should we build something ourselves?
 
+![Diagram](/diagrams/enterprise-it-101/ch08-cots-vs-custom.svg)
+
 The commercial product option is called COTS — Commercial Off-The-Shelf software. The acronym emphasizes that it comes pre-built, ready to use, purchased from a vendor. SAP, Salesforce, Workday, ServiceNow — these are all COTS products. You buy them, configure them, and use them.
 
 The alternative is custom development: building software specifically for your organization, designed to your exact specifications, maintained by your own (or contracted) engineering team.

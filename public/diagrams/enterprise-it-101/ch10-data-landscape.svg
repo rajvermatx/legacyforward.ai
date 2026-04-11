@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="340" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">WAREHOUSE · LAKE · SWAMP · LAKEHOUSE</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">Four approaches to storing enterprise data for analysis</text>
+
+  <!-- Warehouse -->
+  <rect x="30" y="76" width="170" height="200" rx="10" fill="#1e3a5f"/>
+  <text x="115" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#60a5fa">DATA WAREHOUSE</text>
+  <text x="115" y="130" text-anchor="middle" font-size="28">🏛️</text>
+  <text x="115" y="162" text-anchor="middle" font-size="10" fill="#94a3b8">Structured only</text>
+  <text x="115" y="178" text-anchor="middle" font-size="10" fill="#94a3b8">Schema on write</text>
+  <text x="115" y="194" text-anchor="middle" font-size="10" fill="#94a3b8">Clean &amp; governed</text>
+  <text x="115" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">Fast queries</text>
+  <rect x="50" y="228" width="130" height="28" rx="6" fill="#22c55e" opacity="0.2"/>
+  <text x="115" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#22c55e">AI-ready ✓</text>
+
+  <!-- Lake -->
+  <rect x="220" y="76" width="170" height="200" rx="10" fill="#1e3a5f"/>
+  <text x="305" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#60a5fa">DATA LAKE</text>
+  <text x="305" y="130" text-anchor="middle" font-size="28">🏞️</text>
+  <text x="305" y="162" text-anchor="middle" font-size="10" fill="#94a3b8">Any data type</text>
+  <text x="305" y="178" text-anchor="middle" font-size="10" fill="#94a3b8">Schema on read</text>
+  <text x="305" y="194" text-anchor="middle" font-size="10" fill="#94a3b8">Cheap storage</text>
+  <text x="305" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">Needs governance</text>
+  <rect x="240" y="228" width="130" height="28" rx="6" fill="#f59e0b" opacity="0.2"/>
+  <text x="305" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#f59e0b">Depends on governance</text>
+
+  <!-- Swamp -->
+  <rect x="410" y="76" width="170" height="200" rx="10" fill="#1e3a5f"/>
+  <text x="495" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#f87171">DATA SWAMP</text>
+  <text x="495" y="130" text-anchor="middle" font-size="28">🌿</text>
+  <text x="495" y="162" text-anchor="middle" font-size="10" fill="#94a3b8">Everything dumped in</text>
+  <text x="495" y="178" text-anchor="middle" font-size="10" fill="#94a3b8">No documentation</text>
+  <text x="495" y="194" text-anchor="middle" font-size="10" fill="#94a3b8">Unknown quality</text>
+  <text x="495" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">Nobody knows what's in it</text>
+  <rect x="430" y="228" width="130" height="28" rx="6" fill="#ef4444" opacity="0.2"/>
+  <text x="495" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#ef4444">Not usable ✗</text>
+
+  <!-- Lakehouse -->
+  <rect x="600" y="76" width="170" height="200" rx="10" fill="#134e4a"/>
+  <text x="685" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#14b8a6">LAKEHOUSE</text>
+  <text x="685" y="130" text-anchor="middle" font-size="28">🏗️</text>
+  <text x="685" y="162" text-anchor="middle" font-size="10" fill="#94a3b8">Any data type</text>
+  <text x="685" y="178" text-anchor="middle" font-size="10" fill="#94a3b8">Structure + governance</text>
+  <text x="685" y="194" text-anchor="middle" font-size="10" fill="#94a3b8">Cheap + fast queries</text>
+  <text x="685" y="210" text-anchor="middle" font-size="10" fill="#94a3b8">Best of both worlds</text>
+  <rect x="620" y="228" width="130" height="28" rx="6" fill="#22c55e" opacity="0.2"/>
+  <text x="685" y="247" text-anchor="middle" font-size="11" font-weight="600" fill="#22c55e">AI-ready ✓</text>
+
+  <text x="400" y="306" text-anchor="middle" font-size="12" fill="#64748b">The swamp is not a technology — it's what happens when a lake loses governance. Technology doesn't fix it. Process does.</text>
+</svg>

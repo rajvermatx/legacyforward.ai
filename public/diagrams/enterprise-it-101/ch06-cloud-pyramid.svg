@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="380" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">THE THREE CLOUD SERVICE MODELS</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">More abstraction = less control, less management burden</text>
+
+  <!-- SaaS (top) -->
+  <rect x="240" y="76" width="320" height="80" rx="10" fill="#134e4a"/>
+  <text x="400" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#14b8a6">SaaS — Software as a Service</text>
+  <text x="400" y="122" text-anchor="middle" font-size="12" fill="white">You just use the software</text>
+  <text x="400" y="140" text-anchor="middle" font-size="11" fill="#94a3b8">Salesforce · Workday · Microsoft 365 · ServiceNow</text>
+
+  <!-- Arrow -->
+  <polygon points="380,166 400,156 420,166" fill="#14b8a6"/>
+  <line x1="400" y1="156" x2="400" y2="176" stroke="#14b8a6" stroke-width="2"/>
+  <text x="520" y="172" font-size="11" fill="#64748b">more control ↓</text>
+
+  <!-- PaaS (middle) -->
+  <rect x="160" y="178" width="480" height="80" rx="10" fill="#1e3a5f"/>
+  <text x="400" y="206" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">PaaS — Platform as a Service</text>
+  <text x="400" y="224" text-anchor="middle" font-size="12" fill="white">You manage the application; provider manages the runtime</text>
+  <text x="400" y="242" text-anchor="middle" font-size="11" fill="#94a3b8">Google App Engine · Azure App Service · Heroku</text>
+
+  <!-- Arrow -->
+  <polygon points="380,268 400,258 420,268" fill="#60a5fa"/>
+  <line x1="400" y1="258" x2="400" y2="278" stroke="#60a5fa" stroke-width="2"/>
+
+  <!-- IaaS (bottom) -->
+  <rect x="80" y="280" width="640" height="80" rx="10" fill="#0f172a"/>
+  <text x="400" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8">IaaS — Infrastructure as a Service</text>
+  <text x="400" y="326" text-anchor="middle" font-size="12" fill="white">You manage OS, runtime, apps; provider manages hardware</text>
+  <text x="400" y="344" text-anchor="middle" font-size="11" fill="#64748b">AWS EC2 · Azure VMs · Google Compute Engine</text>
+
+  <!-- Control labels -->
+  <text x="42" y="180" font-size="11" font-weight="600" fill="#64748b" transform="rotate(-90 42 220)">YOU MANAGE MORE →</text>
+  <text x="758" y="340" font-size="11" font-weight="600" fill="#64748b" transform="rotate(90 758 220)">PROVIDER MANAGES MORE →</text>
+</svg>

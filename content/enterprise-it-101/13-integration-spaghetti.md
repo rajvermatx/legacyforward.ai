@@ -11,6 +11,8 @@ part: "Part 03 The IT Sprawl Problem"
 
 At some point in its growth, almost every enterprise technology organization creates an architecture diagram of its systems and the connections between them. The first time this diagram is drawn honestly, it frequently looks like a plate of spaghetti — lines crossing each other in every direction, systems connected to other systems without apparent logic, integrations overlapping and branching in ways that nobody planned and nobody can fully explain.
 
+![Diagram](/diagrams/enterprise-it-101/ch13-integration-spaghetti.svg)
+
 This is integration spaghetti. It is one of the most common and most costly problems in enterprise IT. And it is almost always the result of the same pattern: integration decisions made one at a time, to solve immediate needs, without a coherent architecture to govern how systems should connect.
 
 ## How Point-to-Point Integration Happens

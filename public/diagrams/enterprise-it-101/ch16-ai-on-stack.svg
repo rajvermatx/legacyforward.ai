@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="440" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">AI RUNS ON TOP OF THE STACK — NOT INSTEAD OF IT</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">Every AI initiative depends on the layers beneath it</text>
+
+  <!-- Layer 1: Infrastructure -->
+  <rect x="60" y="340" width="680" height="60" rx="8" fill="#1e293b"/>
+  <text x="400" y="366" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b">INFRASTRUCTURE</text>
+  <text x="400" y="384" text-anchor="middle" font-size="11" fill="#475569">Servers · Cloud · Storage · Networking</text>
+
+  <!-- Layer 2: Core Systems -->
+  <rect x="60" y="268" width="680" height="64" rx="8" fill="#0f172a"/>
+  <text x="400" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#94a3b8">CORE SYSTEMS (Systems of Record)</text>
+  <text x="400" y="312" text-anchor="middle" font-size="11" fill="#64748b">ERP · Core Banking · HR · Mainframe — holds the data AI needs</text>
+
+  <!-- Layer 3: Engagement -->
+  <rect x="60" y="196" width="680" height="64" rx="8" fill="#1e3a5f"/>
+  <text x="400" y="222" text-anchor="middle" font-size="12" font-weight="700" fill="#93c5fd">ENGAGEMENT &amp; WORKFLOW</text>
+  <text x="400" y="240" text-anchor="middle" font-size="11" fill="#64748b">CRM · Portals · Collaboration Tools — where AI outputs are consumed</text>
+
+  <!-- Layer 4: Integration -->
+  <rect x="60" y="124" width="680" height="64" rx="8" fill="#134e4a"/>
+  <text x="400" y="150" text-anchor="middle" font-size="12" font-weight="700" fill="#6ee7b7">INTEGRATION LAYER</text>
+  <text x="400" y="168" text-anchor="middle" font-size="11" fill="#64748b">APIs · ETL Pipelines · Event Streams — moves data between layers</text>
+
+  <!-- Layer 5: AI (top, highlighted) -->
+  <rect x="60" y="72" width="680" height="44" rx="8" fill="#14b8a6"/>
+  <text x="400" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="white">AI &amp; INTELLIGENCE LAYER</text>
+  <text x="400" y="108" text-anchor="middle" font-size="11" fill="#ccfbf1">Models · Predictions · Automation · Recommendations</text>
+
+  <!-- Read/Write arrows -->
+  <text x="750" y="98" font-size="10" fill="#14b8a6" font-weight="600">reads ↓</text>
+  <text x="750" y="156" font-size="10" fill="#6ee7b7" font-weight="600">moves data</text>
+  <text x="750" y="230" font-size="10" fill="#93c5fd" font-weight="600">writes ↑</text>
+  <text x="750" y="304" font-size="10" fill="#94a3b8" font-weight="600">source</text>
+
+  <!-- Key callout -->
+  <rect x="140" y="404" width="520" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="400" y="423" text-anchor="middle" font-size="11" fill="#78350f">The AI is only as good as the layers beneath it. Weak foundation = weak AI.</text>
+</svg>

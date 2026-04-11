@@ -11,6 +11,8 @@ part: "Part 02 The Modern Layer"
 
 There was a time when buying enterprise software was hard. You needed to get IT involved. You needed to go through procurement. You needed budget approval. The process took months and involved vendors, contracts, and significant internal political capital. This friction was annoying, but it had a side effect: it kept the technology landscape somewhat coherent. When buying software was hard, organizations bought less of it.
 
+![Diagram](/diagrams/enterprise-it-101/ch07-saas-sprawl.svg)
+
 Then software-as-a-service changed the economics. A team could sign up for a new tool with a credit card. The software ran in the browser. IT did not need to install anything. The monthly subscription cost was low enough to be approved at a department level without going through the capital expenditure process. Suddenly, buying software was easy.
 
 And organizations bought a lot of it.

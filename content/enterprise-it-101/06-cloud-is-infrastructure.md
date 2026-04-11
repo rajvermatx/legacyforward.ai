@@ -11,6 +11,8 @@ part: "Part 02 The Modern Layer"
 
 Cloud computing is perhaps the most over-hyped and under-explained technology of the last twenty years. The term is used to describe everything from storing photos on your phone to running complex machine learning workloads across thousands of servers. It has been sold as a solution to problems it does not solve and blamed for problems it did not cause.
 
+![Diagram](/diagrams/enterprise-it-101/ch06-cloud-pyramid.svg)
+
 The reality is simpler and more useful than the hype: cloud computing is a model for consuming computing infrastructure — storage, processing power, networking — as a service, rather than owning and operating that infrastructure yourself.
 
 That is it. It is important, but it is not magic.

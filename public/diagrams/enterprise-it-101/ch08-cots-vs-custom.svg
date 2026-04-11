@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="340" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">COTS VS. CUSTOM: THE KEY TRADE-OFFS</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">The right choice depends on how unique your process actually is</text>
+
+  <!-- Headers -->
+  <rect x="60" y="72" width="300" height="40" rx="8" fill="#0f172a"/>
+  <text x="210" y="97" text-anchor="middle" font-size="14" font-weight="700" fill="#14b8a6">COTS (Buy)</text>
+
+  <rect x="440" y="72" width="300" height="40" rx="8" fill="#0f172a"/>
+  <text x="590" y="97" text-anchor="middle" font-size="14" font-weight="700" fill="#f59e0b">Custom (Build)</text>
+
+  <!-- Rows -->
+  <!-- Speed -->
+  <text x="400" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">SPEED TO VALUE</text>
+  <rect x="60" y="148" width="300" height="32" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="210" y="169" text-anchor="middle" font-size="12" fill="#166534" font-weight="600">Fast — months to deploy</text>
+  <rect x="440" y="148" width="300" height="32" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="590" y="169" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="600">Slow — years to build</text>
+
+  <!-- Fit -->
+  <text x="400" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">FIT TO YOUR PROCESS</text>
+  <rect x="60" y="214" width="300" height="32" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="210" y="235" text-anchor="middle" font-size="12" fill="#92400e" font-weight="600">Compromise required</text>
+  <rect x="440" y="214" width="300" height="32" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="590" y="235" text-anchor="middle" font-size="12" fill="#166534" font-weight="600">Built exactly for you</text>
+
+  <!-- Cost -->
+  <text x="400" y="270" text-anchor="middle" font-size="11" font-weight="700" fill="#64748b" letter-spacing="1">LONG-TERM COST</text>
+  <rect x="60" y="280" width="300" height="32" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="210" y="301" text-anchor="middle" font-size="12" fill="#166534" font-weight="600">Lower (vendor maintains)</text>
+  <rect x="440" y="280" width="300" height="32" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="1"/>
+  <text x="590" y="301" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="600">Higher (you maintain forever)</text>
+
+  <!-- Divider -->
+  <line x1="370" y1="72" x2="370" y2="312" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="400" y="320" text-anchor="middle" font-size="11" fill="#64748b">Most processes are not as unique as teams believe. When in doubt, buy first.</text>
+</svg>

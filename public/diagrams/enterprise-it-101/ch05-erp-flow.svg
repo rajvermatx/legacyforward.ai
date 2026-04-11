@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="340" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">AN ORDER FLOWING THROUGH ERP</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">One transaction — many ERP modules — one shared data model</text>
+
+  <!-- Step boxes -->
+  <!-- Step 1 -->
+  <rect x="30" y="100" width="110" height="80" rx="8" fill="#0f172a"/>
+  <text x="85" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">01</text>
+  <text x="85" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="white">Sales</text>
+  <text x="85" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">Order received,</text>
+  <text x="85" y="179" text-anchor="middle" font-size="10" fill="#94a3b8">credit checked</text>
+
+  <line x1="140" y1="140" x2="168" y2="140" stroke="#14b8a6" stroke-width="2"/>
+  <polygon points="164,135 174,140 164,145" fill="#14b8a6"/>
+
+  <!-- Step 2 -->
+  <rect x="174" y="100" width="110" height="80" rx="8" fill="#0f172a"/>
+  <text x="229" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">02</text>
+  <text x="229" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="white">Inventory</text>
+  <text x="229" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">Stock checked,</text>
+  <text x="229" y="179" text-anchor="middle" font-size="10" fill="#94a3b8">goods reserved</text>
+
+  <line x1="284" y1="140" x2="312" y2="140" stroke="#14b8a6" stroke-width="2"/>
+  <polygon points="308,135 318,140 308,145" fill="#14b8a6"/>
+
+  <!-- Step 3 -->
+  <rect x="318" y="100" width="110" height="80" rx="8" fill="#0f172a"/>
+  <text x="373" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">03</text>
+  <text x="373" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="white">Procurement</text>
+  <text x="373" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">PO raised if</text>
+  <text x="373" y="179" text-anchor="middle" font-size="10" fill="#94a3b8">stock is low</text>
+
+  <line x1="428" y1="140" x2="456" y2="140" stroke="#14b8a6" stroke-width="2"/>
+  <polygon points="452,135 462,140 452,145" fill="#14b8a6"/>
+
+  <!-- Step 4 -->
+  <rect x="462" y="100" width="110" height="80" rx="8" fill="#0f172a"/>
+  <text x="517" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">04</text>
+  <text x="517" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="white">Warehouse</text>
+  <text x="517" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">Pick, pack,</text>
+  <text x="517" y="179" text-anchor="middle" font-size="10" fill="#94a3b8">ship</text>
+
+  <line x1="572" y1="140" x2="600" y2="140" stroke="#14b8a6" stroke-width="2"/>
+  <polygon points="596,135 606,140 596,145" fill="#14b8a6"/>
+
+  <!-- Step 5 -->
+  <rect x="606" y="100" width="110" height="80" rx="8" fill="#0f172a"/>
+  <text x="661" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#14b8a6">05</text>
+  <text x="661" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="white">Finance</text>
+  <text x="661" y="166" text-anchor="middle" font-size="10" fill="#94a3b8">Invoice sent,</text>
+  <text x="661" y="179" text-anchor="middle" font-size="10" fill="#94a3b8">ledger updated</text>
+
+  <!-- Shared data model bar -->
+  <rect x="30" y="210" width="686" height="44" rx="8" fill="#134e4a"/>
+  <text x="373" y="229" text-anchor="middle" font-size="12" font-weight="700" fill="#14b8a6">SHARED DATA MODEL</text>
+  <text x="373" y="246" text-anchor="middle" font-size="11" fill="#94a3b8">Every module reads from and writes to the same customer, product, and transaction records</text>
+
+  <!-- Key insight -->
+  <rect x="150" y="272" width="500" height="44" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="400" y="291" text-anchor="middle" font-size="12" font-weight="700" fill="#92400e">Why ERP is so hard to change:</text>
+  <text x="400" y="309" text-anchor="middle" font-size="12" fill="#78350f">A change in step 01 can break steps 02 through 05. Everything is connected.</text>
+</svg>

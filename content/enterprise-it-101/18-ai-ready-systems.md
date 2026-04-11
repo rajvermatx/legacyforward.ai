@@ -11,6 +11,8 @@ part: "Part 04 Where AI Lands"
 
 One of the most practical questions in enterprise AI is not "what can AI do?" but "what can AI do given the systems we actually have?" The answer is different for every organization, and it is determined largely by the characteristics of the existing technology landscape.
 
+![Diagram](/diagrams/enterprise-it-101/ch18-ai-ready-systems.svg)
+
 Some systems are well-suited to AI integration. They have modern APIs, clean data, documented business rules, and stable interfaces. Others are not — they use proprietary protocols, have poor data quality, and are difficult to change or integrate with. Understanding the difference upfront saves enormous time and prevents the common pattern of starting an AI project with enthusiasm and then discovering mid-stream that the foundational systems are not ready.
 
 ## Characteristics of AI-Ready Systems

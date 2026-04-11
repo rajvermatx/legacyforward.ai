@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="400" fill="#f8fafc" rx="12"/>
+  <text x="400" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">AI READINESS: SYSTEM ASSESSMENT FRAMEWORK</text>
+  <text x="400" y="52" text-anchor="middle" font-size="13" fill="#64748b">Three dimensions determine whether a system can support AI</text>
+
+  <!-- Header row -->
+  <rect x="30" y="68" width="200" height="44" rx="4" fill="#1e293b"/>
+  <rect x="238" y="68" width="170" height="44" rx="4" fill="#1e293b"/>
+  <rect x="416" y="68" width="170" height="44" rx="4" fill="#1e293b"/>
+  <rect x="594" y="68" width="176" height="44" rx="4" fill="#1e293b"/>
+  <text x="130" y="95" text-anchor="middle" font-size="12" font-weight="700" fill="#94a3b8">SYSTEM</text>
+  <text x="323" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">DATA</text>
+  <text x="323" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">ACCESSIBLE?</text>
+  <text x="501" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">INTEGRATION</text>
+  <text x="501" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">POSSIBLE?</text>
+  <text x="682" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">BUSINESS CASE</text>
+  <text x="682" y="103" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8">CLEAR?</text>
+
+  <!-- Row 1: Core Banking / ERP -->
+  <rect x="30" y="120" width="740" height="56" rx="4" fill="#0f172a"/>
+  <text x="130" y="148" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">Core Banking / ERP</text>
+  <text x="130" y="164" text-anchor="middle" font-size="10" fill="#64748b">System of Record</text>
+  <!-- Green circle -->
+  <circle cx="323" cy="145" r="14" fill="#22c55e"/>
+  <text x="323" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="white">YES</text>
+  <!-- Amber circle -->
+  <circle cx="501" cy="145" r="14" fill="#f59e0b"/>
+  <text x="501" y="150" text-anchor="middle" font-size="9" font-weight="700" fill="white">PARTIAL</text>
+  <!-- Green circle -->
+  <circle cx="682" cy="145" r="14" fill="#22c55e"/>
+  <text x="682" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="white">YES</text>
+
+  <!-- Row 2: Legacy Mainframe -->
+  <rect x="30" y="184" width="740" height="56" rx="4" fill="#1e293b"/>
+  <text x="130" y="212" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">Legacy Mainframe</text>
+  <text x="130" y="228" text-anchor="middle" font-size="10" fill="#64748b">Aging Core System</text>
+  <!-- Red -->
+  <circle cx="323" cy="209" r="14" fill="#ef4444"/>
+  <text x="323" y="214" text-anchor="middle" font-size="10" font-weight="700" fill="white">NO</text>
+  <!-- Red -->
+  <circle cx="501" cy="209" r="14" fill="#ef4444"/>
+  <text x="501" y="214" text-anchor="middle" font-size="10" font-weight="700" fill="white">NO</text>
+  <!-- Amber -->
+  <circle cx="682" cy="209" r="14" fill="#f59e0b"/>
+  <text x="682" y="214" text-anchor="middle" font-size="9" font-weight="700" fill="white">PARTIAL</text>
+
+  <!-- Row 3: Modern CRM / SaaS -->
+  <rect x="30" y="248" width="740" height="56" rx="4" fill="#0f172a"/>
+  <text x="130" y="276" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">Modern CRM / SaaS</text>
+  <text x="130" y="292" text-anchor="middle" font-size="10" fill="#64748b">Cloud-Native Platform</text>
+  <!-- All green -->
+  <circle cx="323" cy="273" r="14" fill="#22c55e"/>
+  <text x="323" y="278" text-anchor="middle" font-size="10" font-weight="700" fill="white">YES</text>
+  <circle cx="501" cy="273" r="14" fill="#22c55e"/>
+  <text x="501" y="278" text-anchor="middle" font-size="10" font-weight="700" fill="white">YES</text>
+  <circle cx="682" cy="273" r="14" fill="#22c55e"/>
+  <text x="682" y="278" text-anchor="middle" font-size="10" font-weight="700" fill="white">YES</text>
+
+  <!-- Row 4: Shadow IT / Excel -->
+  <rect x="30" y="312" width="740" height="56" rx="4" fill="#1e293b"/>
+  <text x="130" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#e2e8f0">Shadow IT / Excel</text>
+  <text x="130" y="356" text-anchor="middle" font-size="10" fill="#64748b">Unmanaged Data</text>
+  <!-- All red -->
+  <circle cx="323" cy="337" r="14" fill="#ef4444"/>
+  <text x="323" y="342" text-anchor="middle" font-size="10" font-weight="700" fill="white">NO</text>
+  <circle cx="501" cy="337" r="14" fill="#ef4444"/>
+  <text x="501" y="342" text-anchor="middle" font-size="10" font-weight="700" fill="white">NO</text>
+  <circle cx="682" cy="337" r="14" fill="#ef4444"/>
+  <text x="682" y="342" text-anchor="middle" font-size="10" font-weight="700" fill="white">NO</text>
+
+  <!-- Bottom callout -->
+  <rect x="80" y="376" width="640" height="18" rx="5" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="400" y="389" text-anchor="middle" font-size="11" fill="#78350f">Start with systems that score green on all three. Don't try to AI-enable a system that fails on data access.</text>
+</svg>

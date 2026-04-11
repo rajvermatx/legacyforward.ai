@@ -11,6 +11,8 @@ part: "Part 04 Where AI Lands"
 
 "We have the data" is one of the most optimistic — and frequently incorrect — statements made at the beginning of an enterprise AI initiative.
 
+![Diagram](/diagrams/enterprise-it-101/ch17-data-readiness.svg)
+
 Every enterprise has data. Large enterprises have enormous amounts of it. Transaction records going back decades. Customer records in the millions. Operational data from every system that has ever run in the organization. The data exists.
 
 What most enterprises do not have is data that is ready to use for AI. The gap between "we have the data" and "the data is ready" is where most AI projects run into their first serious problems — and often where projects fail or take significantly longer than expected.

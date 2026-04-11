@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="800" height="320" fill="#f8fafc" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="0.3">TECHNICAL DEBT COMPOUNDS OVER TIME</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#64748b">Small shortcuts accumulate into large organizational liabilities</text>
+
+  <!-- Axes -->
+  <line x1="80" y1="240" x2="740" y2="240" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="80" y1="80" x2="80" y2="248" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="410" y="270" text-anchor="middle" font-size="12" fill="#64748b">TIME →</text>
+  <text x="44" y="170" text-anchor="middle" font-size="12" fill="#64748b" transform="rotate(-90 44 170)">COST TO FIX →</text>
+
+  <!-- Debt accumulation curve (exponential) -->
+  <path d="M 80,220 C 180,215 260,205 320,190 C 380,172 420,155 460,132 C 500,108 540,88 580,76 C 620,66 660,64 700,63" fill="none" stroke="#ef4444" stroke-width="3"/>
+
+  <!-- Fill under curve -->
+  <path d="M 80,220 C 180,215 260,205 320,190 C 380,172 420,155 460,132 C 500,108 540,88 580,76 C 620,66 660,64 700,63 L 700,240 L 80,240 Z" fill="#ef4444" opacity="0.08"/>
+
+  <!-- Year markers -->
+  <line x1="200" y1="236" x2="200" y2="244" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="258" text-anchor="middle" font-size="11" fill="#64748b">Year 2</text>
+
+  <line x1="360" y1="236" x2="360" y2="244" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="360" y="258" text-anchor="middle" font-size="11" fill="#64748b">Year 5</text>
+
+  <line x1="520" y1="236" x2="520" y2="244" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="520" y="258" text-anchor="middle" font-size="11" fill="#64748b">Year 10</text>
+
+  <line x1="680" y1="236" x2="680" y2="244" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="680" y="258" text-anchor="middle" font-size="11" fill="#64748b">Year 15</text>
+
+  <!-- Annotation callouts -->
+  <circle cx="200" cy="214" r="5" fill="#f59e0b"/>
+  <text x="220" y="200" font-size="11" fill="#92400e">"We'll fix it later"</text>
+
+  <circle cx="360" cy="183" r="5" fill="#f59e0b"/>
+  <text x="295" y="168" font-size="11" fill="#92400e">Debt is visible but</text>
+  <text x="295" y="182" font-size="11" fill="#92400e">deprioritized</text>
+
+  <circle cx="520" cy="130" r="5" fill="#ef4444"/>
+  <text x="536" y="118" font-size="11" fill="#dc2626">Modernization is now</text>
+  <text x="536" y="132" font-size="11" fill="#dc2626">a major project</text>
+
+  <circle cx="680" cy="63" r="5" fill="#ef4444"/>
+  <text x="580" y="52" font-size="11" fill="#dc2626" font-weight="700">Crisis: experts retiring,</text>
+  <text x="580" y="66" font-size="11" fill="#dc2626" font-weight="700">security risk, AI blocked</text>
+
+  <!-- Key insight -->
+  <rect x="200" y="280" width="400" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1"/>
+  <text x="400" y="299" text-anchor="middle" font-size="11" fill="#78350f">Unlike financial debt, technical debt doesn't appear on any report — until it's a crisis.</text>
+</svg>
