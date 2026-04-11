@@ -13,7 +13,7 @@ const valueProps = [
   "Start with a framework, not a vendor pitch. Signal Capture gives you a disciplined way to find and validate real AI value before committing resources.",
   "Adopt a delivery model built for non-determinism. Grounded Delivery replaces Agile assumptions with phases designed for probabilistic outputs.",
   "Stop treating legacy as the enemy. Legacy Coexistence patterns let AI and existing systems work together without a rip-and-replace.",
-  "Build the skills you actually need — six free practitioner books, 30 architecture patterns, and 95+ hands-on notebooks, organized by your role.",
+  "Build the skills you actually need — free practitioner books, architecture patterns, and hands-on notebooks, organized by your role.",
   "Know your AI exposure before it finds you. The AI Impact Analyzer scores your role and generates a personalized roadmap for navigating the shift.",
 ];
 
