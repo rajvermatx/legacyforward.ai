@@ -54,19 +54,6 @@ export default function Home() {
               Browse the Library
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-xl mx-auto">
-            {[
-              { value: "6", label: "Books" },
-              { value: "102+", label: "Chapters" },
-              { value: "30", label: "Patterns" },
-              { value: "95+", label: "Notebooks" },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-white/5 rounded-lg py-4 px-3">
-                <p className="text-3xl font-bold text-white">{stat.value}</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wide mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
