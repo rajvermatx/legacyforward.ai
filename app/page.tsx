@@ -198,9 +198,9 @@ export default function Home() {
       </section>
 
       {/* ── Jump-to shortcut strip ── */}
-      <section className="bg-white border-t border-slate-100 py-6">
+      <section className="bg-navy-950 border-t border-navy-800 py-6">
         <div className="mx-auto max-w-6xl px-6">
-          <p className="text-xs text-slate-400 uppercase tracking-widest font-semibold mb-3">Jump to</p>
+          <p className="text-xs text-teal-500 uppercase tracking-widest font-semibold mb-3">Jump to</p>
           <div className="flex flex-wrap gap-2">
             {[
               { label: "Books", href: "/library/books" },
@@ -215,7 +215,7 @@ export default function Home() {
               <Link
                 key={href}
                 href={href}
-                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 text-sm text-slate-600 hover:border-teal-500 hover:text-teal-600 transition-colors"
+                className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-white/20 text-sm text-slate-300 hover:border-teal-400 hover:text-teal-400 transition-colors"
               >
                 {label} →
               </Link>
