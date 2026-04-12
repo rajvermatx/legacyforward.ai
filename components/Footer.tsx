@@ -77,7 +77,7 @@ export default function Footer() {
             of AI tools, reviewed and edited for accuracy. Third-party links are provided
             for reference and do not imply endorsement.
           </p>
-          <p className="text-center">
+          <p className="text-center" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} LegacyForward.ai. All rights reserved.
           </p>
         </div>

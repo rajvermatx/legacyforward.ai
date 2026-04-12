@@ -16,7 +16,7 @@ export default function ArticleCard({ title, description, date, slug, readingTim
       className="group block border border-slate-200 rounded-lg p-6 hover:border-teal-500 transition-colors"
     >
       <div className="flex items-center gap-3 mb-2">
-        <p className="text-slate-600 text-sm font-medium">
+        <p className="text-slate-600 text-sm font-medium" suppressHydrationWarning>
           {new Date(date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
