@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Library | LegacyForward.ai",
   description:
-    "Free, open-source practitioner resources — books, architecture patterns, learning paths, and cheatsheets for enterprise AI practitioners.",
+    "Free, open-source practitioner resources — books, architecture patterns, learning paths, and quick reference guides for enterprise AI practitioners.",
 };
 
 const sections = [

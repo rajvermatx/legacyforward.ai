@@ -178,7 +178,7 @@ function Header({ pageLabel }: { pageLabel: string }) {
         <View style={{ backgroundColor: C.teal, borderRadius: 3, paddingHorizontal: 4, paddingVertical: 1.5 }}>
           <Text style={{ fontSize: 7, fontWeight: 700, color: C.white }}>AI</Text>
         </View>
-        <Text style={{ fontWeight: 400, color: C.slate400, fontSize: 8 }}>Framework Cheatsheet</Text>
+        <Text style={{ fontWeight: 400, color: C.slate400, fontSize: 8 }}>Framework Quick Reference</Text>
       </View>
       <Text style={s.headerRight}>{pageLabel}</Text>
     </View>
@@ -244,7 +244,7 @@ function Q({ text, color }: { text: string; color: string }) {
 /* ═══════════════════════════════════════ */
 export default function CheatsheetPDF() {
   return (
-    <Document title="LegacyForward.ai Framework Cheatsheet" author="LegacyForward.ai">
+    <Document title="LegacyForward.ai Framework Quick Reference" author="LegacyForward.ai">
 
       {/* ═══ PAGE 1: Decision Aid + Signal Capture ═══ */}
       <Page size="A4" orientation="landscape" style={s.page}>

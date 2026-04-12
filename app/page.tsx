@@ -210,7 +210,7 @@ export default function Home() {
               { label: "Signal Capture", href: "/framework/signal-capture" },
               { label: "Grounded Delivery", href: "/framework/grounded-delivery" },
               { label: "Legacy Coexistence", href: "/framework/legacy-coexistence" },
-              { label: "Framework Cheatsheet", href: "/cheatsheet" },
+              { label: "Framework Quick Reference", href: "/cheatsheet" },
             ].map(({ label, href }) => (
               <Link
                 key={href}

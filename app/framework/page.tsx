@@ -139,7 +139,7 @@ export default function FrameworkPage() {
             href="/cheatsheet"
             className="text-teal-600 font-semibold hover:underline text-lg"
           >
-            Download the Framework Cheatsheet &rarr;
+            Download the Framework Quick Reference &rarr;
           </Link>
         </div>
       </section>

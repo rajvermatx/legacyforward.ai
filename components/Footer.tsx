@@ -27,7 +27,7 @@ export default function Footer() {
                 Legacy Coexistence
               </Link>
               <Link href="/cheatsheet" className="hover:text-teal-400 transition-colors">
-                Cheatsheet
+                Quick Reference
               </Link>
             </div>
           </div>
