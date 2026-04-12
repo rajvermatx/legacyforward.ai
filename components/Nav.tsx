@@ -15,7 +15,7 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="bg-navy-900 text-white">
+      <nav className="bg-navy-900 text-white sticky top-0 z-50">
         <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <LogoWordmark />
