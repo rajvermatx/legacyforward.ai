@@ -1,5 +1,5 @@
 ---
-title: "Model Context Protocol (MCP) Cheatsheet"
+title: "Model Context Protocol (MCP)"
 slug: "mcp-protocol"
 description: "Quick reference for MCP architecture, primitives, transport, server implementation, and security."
 section: "cheatsheets"

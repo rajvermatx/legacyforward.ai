@@ -1,5 +1,5 @@
 ---
-title: "Transformer Foundations Cheatsheet"
+title: "Transformer Foundations"
 slug: "transformer-foundations"
 description: "Quick reference for transformer architecture, attention mechanism, positional encoding, tokenization, model sizes, and inference optimization."
 section: "cheatsheets"

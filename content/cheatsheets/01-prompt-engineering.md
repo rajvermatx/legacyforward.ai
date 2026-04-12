@@ -1,5 +1,5 @@
 ---
-title: "Prompt Engineering Cheatsheet"
+title: "Prompt Engineering"
 slug: "prompt-engineering"
 description: "Quick reference for prompt patterns, templates, system prompts, and parameter tuning."
 section: "cheatsheets"

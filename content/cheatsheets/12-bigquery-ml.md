@@ -1,5 +1,5 @@
 ---
-title: "BigQuery ML Cheatsheet"
+title: "BigQuery ML"
 slug: "bigquery-ml"
 description: "Quick reference for BQML syntax, supported model types, feature engineering, evaluation, and export."
 section: "cheatsheets"

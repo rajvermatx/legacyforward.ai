@@ -1,5 +1,5 @@
 ---
-title: "AI Gateway Cheatsheet"
+title: "AI Gateway"
 slug: "ai-gateway"
 description: "Quick reference for AI gateway architecture, routing, rate limiting, guardrails, cost tracking, and failover."
 section: "cheatsheets"

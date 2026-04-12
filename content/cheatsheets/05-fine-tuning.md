@@ -1,5 +1,5 @@
 ---
-title: "Fine-Tuning LLMs Cheatsheet"
+title: "Fine-Tuning LLMs"
 slug: "fine-tuning"
 description: "Quick reference for when to fine-tune, data prep, LoRA/QLoRA, training parameters, and evaluation."
 section: "cheatsheets"

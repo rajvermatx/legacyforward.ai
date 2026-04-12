@@ -1,5 +1,5 @@
 ---
-title: "Responsible AI Cheatsheet"
+title: "Responsible AI"
 slug: "responsible-ai"
 description: "Quick reference for fairness metrics, bias detection, explainability, privacy techniques, model cards, and audit checklists."
 section: "cheatsheets"

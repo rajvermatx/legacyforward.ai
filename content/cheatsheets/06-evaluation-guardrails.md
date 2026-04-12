@@ -1,5 +1,5 @@
 ---
-title: "LLM Evaluation & Guardrails Cheatsheet"
+title: "LLM Evaluation & Guardrails"
 slug: "evaluation-guardrails"
 description: "Quick reference for LLM evaluation metrics, guardrail types, and safety patterns for input and output."
 section: "cheatsheets"

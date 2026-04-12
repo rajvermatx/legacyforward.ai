@@ -1,5 +1,5 @@
 ---
-title: "LLM APIs Cheatsheet"
+title: "LLM APIs"
 slug: "llm-apis"
 description: "Quick reference for calling OpenAI, Anthropic, and Google LLM APIs with parameters, streaming, and function calling."
 section: "cheatsheets"

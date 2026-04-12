@@ -1,5 +1,5 @@
 ---
-title: "AI Agents Cheatsheet"
+title: "AI Agents"
 slug: "ai-agents"
 description: "Quick reference for agent architecture, tool definitions, memory types, and orchestration patterns."
 section: "cheatsheets"

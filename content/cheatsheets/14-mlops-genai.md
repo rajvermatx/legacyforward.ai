@@ -1,5 +1,5 @@
 ---
-title: "MLOps for GenAI Cheatsheet"
+title: "MLOps for GenAI"
 slug: "mlops-genai"
 description: "Quick reference for CI/CD for ML, model versioning, A/B testing, canary deployment, drift detection, and monitoring."
 section: "cheatsheets"

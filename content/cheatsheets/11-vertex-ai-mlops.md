@@ -1,5 +1,5 @@
 ---
-title: "Vertex AI & MLOps Cheatsheet"
+title: "Vertex AI & MLOps"
 slug: "vertex-ai-mlops"
 description: "Quick reference for Vertex AI services, pipeline components, feature store, model registry, monitoring, and AutoML."
 section: "cheatsheets"

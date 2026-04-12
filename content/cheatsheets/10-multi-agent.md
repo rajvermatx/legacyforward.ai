@@ -1,5 +1,5 @@
 ---
-title: "Multi-Agent Systems Cheatsheet"
+title: "Multi-Agent Systems"
 slug: "multi-agent"
 description: "Quick reference for multi-agent patterns, shared memory, quality gates, and human-in-the-loop design."
 section: "cheatsheets"

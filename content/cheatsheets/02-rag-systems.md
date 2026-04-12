@@ -1,5 +1,5 @@
 ---
-title: "RAG Systems Cheatsheet"
+title: "RAG Systems"
 slug: "rag-systems"
 description: "Quick reference for RAG pipeline design, chunking, embeddings, vector databases, and retrieval strategies."
 section: "cheatsheets"

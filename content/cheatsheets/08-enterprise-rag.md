@@ -1,5 +1,5 @@
 ---
-title: "Enterprise RAG Cheatsheet"
+title: "Enterprise RAG"
 slug: "enterprise-rag"
 description: "Quick reference for production RAG systems: ingestion, ACL filtering, hybrid search, citation, freshness, and scaling."
 section: "cheatsheets"
