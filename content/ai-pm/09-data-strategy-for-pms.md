@@ -12,23 +12,23 @@ badges:
 
 # Data Strategy for Product Managers
 
-## The PM Who Didn't Ask About the Data
+## The PM Who Did Not Ask About the Data
 
 
 ![Diagram](/diagrams/ai-pm/ch09-1.svg)
-There is a pattern that plays out in AI product failures with remarkable consistency. A team gets excited about a feature. The idea is strong. The AI capability exists. Engineering scopes the work. The feature gets prioritized. Development begins. And then, somewhere around week four or six, a data engineer says: "Wait — do we actually have what we need to power this thing?"
+There is a pattern that plays out in AI product failures with remarkable consistency. A team gets excited about a feature. The idea is strong. The AI capability exists. Engineering scopes the work. The feature gets prioritized. Development begins. And then, somewhere around week four or six, a data engineer says: "Wait. Do we actually have what we need to power this thing?"
 
-In the best case, the answer is "mostly yes, but we need to do three months of cleanup work first." In the worst case, the answer is "no, and the data we'd need doesn't exist and would take a year to collect."
+In the best case, the answer is "mostly yes, but we need to do three months of cleanup work first." In the worst case, the answer is "no, and the data we would need does not exist and would take a year to collect."
 
 Both are expensive. Both were avoidable. Both happened because no one asked the right questions at the beginning.
 
-Data strategy for AI is not primarily a technical discipline. The engineers will handle the pipelines, the schema design, the ETL jobs. What only you — the product manager — can do is ask the questions that determine whether the right data will ever exist in the first place, and make the product decisions that ensure it gets created. That is the whole job. You don't need to write a single SQL query.
+Data strategy for AI is not primarily a technical discipline. The engineers will handle the pipelines, the schema design, the ETL jobs. What only you, the product manager, can do is ask the questions that determine whether the right data will ever exist in the first place, and make the product decisions that ensure it gets created. That is the whole job. You do not need to write a single SQL query.
 
-> **Think of it like this:** A data engineer builds the plumbing. A data scientist analyzes what comes through the pipes. The product manager decides what rooms get water, which faucets get priority, and whether the house should have a well or a municipal connection. You don't need to understand how solder works to make those calls — but if you never ask about the plumbing, you'll design a kitchen with no sink.
+> **Think of it like this:** A data engineer builds the plumbing. A data scientist analyzes what comes through the pipes. The product manager decides what rooms get water, which faucets get priority, and whether the house should have a well or a municipal connection. You do not need to understand how solder works to make those calls. But if you never ask about the plumbing, you will design a kitchen with no sink.
 
 ## Data Availability Checklist: Do You Have What the AI Needs?
 
-Before any AI feature enters design or engineering, walk through this checklist. These are not questions for a data engineer to answer in isolation — they require the PM to understand the user journeys, the product's data model, and the business requirements.
+Before any AI feature enters design or engineering, walk through this checklist. These are not questions for a data engineer to answer in isolation. They require the PM to understand the user journeys, the product's data model, and the business requirements.
 
 ### Existence
 
@@ -73,15 +73,15 @@ Use this checklist as an input to a conversation with your data team, not as a s
 | Several critical items no or unknown | Low | Discovery spike required before commitment |
 | Multiple fundamental items no | Not ready | Do not commit; address data foundations first |
 
-## Privacy and Consent: What You Can and Can't Use
+## Privacy and Consent: What You Can and Cannot Use
 
 The legal and ethical boundaries around data use for AI are not constant, and they are not intuitive. What your product is technically capable of doing with data and what it is legally or ethically permitted to do are very different things. As a PM, you are responsible for understanding this distinction before you build, not after a lawyer flags it during launch review.
 
-This is not a comprehensive legal guide — you will need legal counsel for jurisdiction-specific analysis. But there are several foundational principles every PM should internalize.
+This is not a comprehensive legal guide. You will need legal counsel for jurisdiction-specific analysis. But there are several foundational principles every PM should internalize.
 
 ### Consent Scope
 
-Data collected with consent for one purpose cannot automatically be reused for a different purpose. If a user uploaded their documents to use your storage feature, and your privacy policy described the product as a storage tool, you may not be able to use those documents to train an AI model — even if you technically have access to them.
+Data collected with consent for one purpose cannot automatically be reused for a different purpose. If a user uploaded their documents to use your storage feature, and your privacy policy described the product as a storage tool, you may not be able to use those documents to train an AI model, even if you technically have access to them.
 
 The question is not "do we have the data?" but "do we have the right to use it for this purpose?" In most modern privacy frameworks (GDPR, CCPA, and their successors), the answer depends on:
 
@@ -89,7 +89,7 @@ The question is not "do we have the data?" but "do we have the right to use it f
 - Whether AI training or inference constitutes a materially different use than the original purpose
 - Whether you are in a jurisdiction that requires opt-in vs. opt-out for new data uses
 
-**Practical rule of thumb:** If a reasonable user would be surprised to learn that their data is being used this way, you need explicit consent before you proceed. This is not a legal standard — it is a trust standard, and violating it has product consequences beyond the legal ones.
+**Practical rule of thumb:** If a reasonable user would be surprised to learn that their data is being used this way, you need explicit consent before you proceed. This is not a legal standard. It is a trust standard, and violating it has product consequences beyond the legal ones.
 
 ### Categories of Data That Require Special Handling
 
@@ -104,21 +104,21 @@ The question is not "do we have the data?" but "do we have the right to use it f
 
 ### The Consent Layer in AI Features
 
-When you add AI features that use data differently from the existing product, you often need to update consent. Do this early — not as an afterthought. The options are:
+When you add AI features that use data differently from the existing product, you often need to update consent. Do this early, not as an afterthought. The options are:
 
-**Updated Terms of Service**: Appropriate when the new use is minor or falls within the reasonable expectations of your existing ToS. Notify users; make changes visible.
+**Updated Terms of Service**: Appropriate when the new use is minor or falls within the reasonable expectations of your existing ToS. Notify users. Make changes visible.
 
-**In-product consent prompt**: Appropriate when the new use is significant enough that users deserve an explicit moment of consent. Must be meaningful — not a dark pattern designed to obtain consent by exhausting users.
+**In-product consent prompt**: Appropriate when the new use is significant enough that users deserve an explicit moment of consent. Must be meaningful, not a dark pattern designed to obtain consent by exhausting users.
 
-**Opt-out mechanism**: Appropriate in jurisdictions and contexts where opt-out is legally sufficient. Must be genuine — the user must be able to opt out of AI data use without losing access to core product functionality.
+**Opt-out mechanism**: Appropriate in jurisdictions and contexts where opt-out is legally sufficient. Must be genuine. The user must be able to opt out of AI data use without losing access to core product functionality.
 
 **No retroactive use**: In some cases, the cleanest answer is that existing data cannot be used for AI purposes, and you collect new data going forward with appropriate consent. This is restrictive but sometimes the only legally and ethically sound option.
 
 ## The Cold Start Problem: Launching AI with No Training Data
 
-The cold start problem is this: the AI needs data to be useful, but you don't have data because you haven't launched yet. Or you've just added a new feature, a new customer segment, or a new use case, and the historical data that powers your AI doesn't cover it.
+The cold start problem is this: the AI needs data to be useful, but you do not have data because you have not launched yet. Or you have just added a new feature, a new customer segment, or a new use case, and the historical data that powers your AI does not cover it.
 
-This is not a research problem — it is a product problem. Your job is to bridge the gap between "no data" and "enough data" without making users suffer through a demonstrably bad experience in the meantime.
+This is not a research problem. It is a product problem. Your job is to bridge the gap between "no data" and "enough data" without making users suffer through a demonstrably bad experience in the meantime.
 
 ### Cold Start Strategies
 
@@ -128,11 +128,11 @@ This is not a research problem — it is a product problem. Your job is to bridg
 
 **Human-in-the-loop bootstrapping**: In the early stages, have humans do the work that the AI will eventually do, while logging inputs and outputs as training data. You get a working feature from day one; the AI gradually takes over as data accumulates. This is expensive but effective for high-stakes use cases where a bad AI output would cause real harm.
 
-**Curated seed data**: Identify a small number of high-quality examples — perhaps sourced from experts, public datasets, or a beta cohort — that represent the ideal output. Use these as few-shot examples in prompts or as a fine-tuning seed. Small quantities of high-quality, representative data often outperform large quantities of noisy data.
+**Curated seed data**: Identify a small number of high-quality examples, perhaps sourced from experts, public datasets, or a beta cohort, that represent the ideal output. Use these as few-shot examples in prompts or as a fine-tuning seed. Small quantities of high-quality, representative data often outperform large quantities of noisy data.
 
-**Progressive rollout by data richness**: Roll out to users and contexts where you already have data before expanding to contexts where you don't. A recommendation engine with no history for new users might start by only serving recommendations to users with at least 30 days of activity, showing a non-AI fallback to others.
+**Progressive rollout by data richness**: Roll out to users and contexts where you already have data before expanding to contexts where you do not. A recommendation engine with no history for new users might start by only serving recommendations to users with at least 30 days of activity, showing a non-AI fallback to others.
 
-> **Think of it like this:** The cold start problem is like opening a new restaurant with no reviews. You can't manufacture five years of Yelp ratings overnight. But you can: invite 50 food writers to a soft opening (seed data), have a human expediter manage quality until the kitchen is trained (human-in-the-loop), start with a limited menu you know you can execute (scoped rollout), and let the reviews accumulate over time (continuous improvement). No single strategy solves it, but the combination gets you through.
+> **Think of it like this:** The cold start problem is like opening a new restaurant with no reviews. You cannot manufacture five years of Yelp ratings overnight. But you can: invite 50 food writers to a soft opening (seed data), have a human expediter manage quality until the kitchen is trained (human-in-the-loop), start with a limited menu you know you can execute (scoped rollout), and let the reviews accumulate over time (continuous improvement). No single strategy solves it, but the combination gets you through.
 
 ### Cold Start Failure Modes to Avoid
 
@@ -140,20 +140,20 @@ This is not a research problem — it is a product problem. Your job is to bridg
 |---|---|---|
 | Premature automation | Removing human review before AI quality is sufficient | Define minimum quality threshold before removing human oversight |
 | Data desert feature | Shipping an AI feature with no pathway to collect the data it needs to improve | Ensure the product interaction generates feedback data from day one |
-| Distribution mismatch | Training data doesn't match production data, often because seed data was too curated | Continuously compare production inputs to training distribution |
+| Distribution mismatch | Training data does not match production data, often because seed data was too curated | Continuously compare production inputs to training distribution |
 | Frozen model | Launching a model and never updating it as new data accumulates | Build model refresh into the operating cadence |
 
 ## Build Your Data Moat: Product Decisions That Generate Training Data
 
-The most durable competitive advantage an AI-powered product can have is not the model. Models are increasingly commoditized — anyone can access frontier model APIs. The advantage is proprietary data that no one else has, collected through the normal use of a product that users already love.
+The most durable competitive advantage an AI-powered product can have is not the model. Models are increasingly commoditized. Anyone can access frontier model APIs. The advantage is proprietary data that no one else has, collected through the normal use of a product that users already love.
 
-This is the data moat. And unlike technical moats, it compounds over time: the more users use the product, the more data you have; the more data you have, the better the AI; the better the AI, the more users use the product.
+This is the data moat. Unlike technical moats, it compounds over time: the more users use the product, the more data you have. The more data you have, the better the AI. The better the AI, the more users use the product.
 
-Building a data moat is not primarily an engineering decision. It is a product design decision. The features you build, the interactions you instrument, the feedback mechanisms you create — these are all choices that determine what data you collect and therefore what AI capabilities you can develop.
+Building a data moat is not primarily an engineering decision. It is a product design decision. The features you build, the interactions you instrument, the feedback mechanisms you create: these are all choices that determine what data you collect and therefore what AI capabilities you can develop.
 
 ### The Feedback Loop Design Principle
 
-Every user interaction that produces an outcome is an opportunity to generate training signal — if you design for it. The question to ask for every significant AI feature: "How will we know if this was good or bad?"
+Every user interaction that produces an outcome is an opportunity to generate training signal, if you design for it. The question to ask for every significant AI feature: "How will we know if this was good or bad?"
 
 **Explicit feedback signals** are the ones users give you deliberately:
 - Thumbs up / thumbs down on AI outputs
@@ -168,7 +168,7 @@ Every user interaction that produces an outcome is an opportunity to generate tr
 - Whether a suggested next step was followed or ignored
 - Return rate to an AI-assisted feature vs. one-and-done usage
 
-Implicit signals require more careful interpretation — a user might spend a long time reading a summary because it was detailed and useful, or because it was confusing and they were trying to understand it. But at scale, behavioral signals provide rich training data that explicit feedback alone cannot.
+Implicit signals require more careful interpretation. A user might spend a long time reading a summary because it was detailed and useful, or because it was confusing and they were trying to understand it. But at scale, behavioral signals provide rich training data that explicit feedback alone cannot.
 
 ### Product Decisions That Generate Data Moat Advantages
 
@@ -183,19 +183,19 @@ Implicit signals require more careful interpretation — a user might spend a lo
 
 ### What Not to Do
 
-The data moat opportunity tempts some teams into choices that undermine user trust and ultimately destroy the moat they're trying to build.
+The data moat opportunity tempts some teams into choices that undermine user trust and ultimately destroy the moat they are trying to build.
 
-**Do not collect data you didn't disclose**. If users discover you're using their data in ways they didn't consent to, the resulting loss of trust is more damaging than any competitive advantage the data provided.
+**Do not collect data you did not disclose**. If users discover you are using their data in ways they did not consent to, the resulting loss of trust is more damaging than any competitive advantage the data provided.
 
 **Do not design dark patterns to force feedback**. Requiring users to rate every AI output before they can continue using the product will generate high-volume but low-quality signal. Users will click through without genuine engagement. The data will be worse than no data.
 
 **Do not optimize for the metric you can measure at the expense of the outcome that matters**. A data moat built on optimizing for thumbs-up clicks may not translate into a model that actually serves users well. Design feedback mechanisms that capture what you actually care about.
 
-**Do not ignore the data you're generating**. The most common data moat failure is that teams build feedback loops into the product but never actually use the data to improve the model. If the data isn't creating a feedback loop that closes — collection, analysis, model improvement, deployment — it is not a moat. It is a landfill.
+**Do not ignore the data you are generating**. The most common data moat failure is that teams build feedback loops into the product but never actually use the data to improve the model. If the data is not creating a feedback loop that closes, covering collection, analysis, model improvement, and deployment, it is not a moat. It is a landfill.
 
 ## Bringing It Together: Your Data Strategy One-Pager
 
-Before any AI feature moves from ideation to planning, you should be able to fill out this one-pager. If you can't, you're not ready to commit.
+Before any AI feature moves from ideation to planning, you should be able to fill out this one-pager. If you cannot, you are not ready to commit.
 
 | Question | Your answer |
 |---|---|
@@ -209,4 +209,4 @@ Before any AI feature moves from ideation to planning, you should be able to fil
 | What is our data retention and deletion policy for AI data? | |
 | Who is accountable for data quality on an ongoing basis? | |
 
-Data strategy is not a one-time checklist — it is an ongoing product responsibility. The questions above don't stop being relevant after launch. They get more important as your AI feature grows, your data accumulates, and the competitive advantage of your data moat either compounds or erodes.
+Data strategy is not a one-time checklist. It is an ongoing product responsibility. The questions above do not stop being relevant after launch. They get more important as your AI feature grows, your data accumulates, and the competitive advantage of your data moat either compounds or erodes.

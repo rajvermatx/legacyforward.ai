@@ -30,7 +30,7 @@ Your job: figure out what to do.
 
 ## Step 1: Cost Analysis Framework
 
-Before deciding anything, understand exactly what you're dealing with.
+Before deciding anything, understand exactly what you are dealing with.
 
 ### The Full Cost Picture
 
@@ -56,12 +56,12 @@ Pull usage data segmented by customer. You find:
 | P95 | 180 | $90.00 |
 | P99 | 610 | $305.00 |
 
-**Interpretation**: The median Professional customer costs you $6/month in AI against their $29 in revenue — that's fine. Your P99 customers are costing you $305/month against their $29 revenue — that is a catastrophic unit economics failure. And the top 1% (24 customers) are consuming a disproportionate share of your $47K monthly cost.
+**Interpretation**: The median Professional customer costs you $6/month in AI against their $29 in revenue. That is fine. Your P99 customers are costing you $305/month against their $29 revenue. That is a catastrophic unit economics failure. And the top 1% (24 customers) are consuming a disproportionate share of your $47K monthly cost.
 
 **What does the tail look like?**
 
-Pull the top 50 customers by AI usage. Investigate what they're doing:
-- Several are running automated batch uploads through your API — hundreds of documents per day
+Pull the top 50 customers by AI usage. Investigate what they are doing:
+- Several are running automated batch uploads through your API, hundreds of documents per day
 - Some are legal teams processing entire contract repositories
 - A few appear to be using your product as a backend for their own client-facing tools
 
@@ -110,7 +110,7 @@ Remove document analysis from Professional entirely. AI features become a Busine
 
 **Revenue impact**: Customers who chose Professional specifically for document analysis will churn or upgrade. Estimate 30–40% of current Professional customers cited AI analysis in their reason for buying; perhaps 50% of those upgrade, 50% churn.
 
-**This is the highest-risk option**: You're removing a feature that customers are paying for and using. Even if your terms allow it, the trust and relationship cost is significant. Avoid unless Options A and C fail.
+**This is the highest-risk option**: You are removing a feature that customers are paying for and using. Even if your terms allow it, the trust and relationship cost is significant. Avoid unless Options A and C fail.
 
 ### Option C: Introduce a "Professional Plus" Tier at $49/month
 
@@ -197,7 +197,7 @@ Before committing to the full pricing change, validate your assumptions with an 
 
 **What to test**: New customer sign-up page offering Professional vs. Professional Plus as the default recommendation.
 
-**Why new customers**: Testing pricing changes on existing customers is methodologically messy (they have anchoring bias from their current price) and ethically complicated (you're explicitly offering different prices to similar customers). New customers are the right test population.
+**Why new customers**: Testing pricing changes on existing customers is methodologically messy (they have anchoring bias from their current price) and ethically complicated (you are explicitly offering different prices to similar customers). New customers are the right test population.
 
 **Test design:**
 
@@ -208,9 +208,9 @@ Before committing to the full pricing change, validate your assumptions with an 
 | Secondary metric | ARPU at signup | ARPU at signup | ARPU at signup |
 | Tertiary metric | 90-day retention | 90-day retention | 90-day retention |
 
-**Sample size calculation**: You need statistical significance before drawing conclusions. For a 5% conversion rate and a minimum detectable effect of 1 percentage point, you'll need approximately 3,800 visitors per variant. At your current signup volume, plan for 4–6 weeks of test duration.
+**Sample size calculation**: You need statistical significance before drawing conclusions. For a 5% conversion rate and a minimum detectable effect of 1 percentage point, you will need approximately 3,800 visitors per variant. At your current signup volume, plan for 4-6 weeks of test duration.
 
-**What you're trying to learn:**
+**What you are trying to learn:**
 
 1. Does adding a middle tier increase overall conversion, decrease it, or have no effect? (The "paradox of choice" question — three tiers might confuse buyers.)
 2. Does the new middle tier cannibalize Business upgrades or capture users who would have chosen Professional?

@@ -18,13 +18,13 @@ badges:
 ![Diagram](/diagrams/ai-pm/ch12-1.svg)
 A traditional product roadmap is built on a comfortable fiction: that if we invest enough effort and time into a feature, it will work as intended by the date we specify. Engineering can estimate complexity. Design can scope the work. With enough sprints, we get to the destination.
 
-AI features break this fiction. You can invest exactly the right amount of time and engineering effort into an AI feature and still not have something that works well enough to ship, because the quality of an AI feature is determined by a combination of factors that don't respond predictably to investment: the quality of your training data, the capability ceiling of current models, the difficulty of the underlying task, and the gap between your evaluation suite and the real world.
+AI features break this fiction. You can invest exactly the right amount of time and engineering effort into an AI feature and still not have something that works well enough to ship, because the quality of an AI feature is determined by a combination of factors that do not respond predictably to investment: the quality of your training data, the capability ceiling of current models, the difficulty of the underlying task, and the gap between your evaluation suite and the real world.
 
-This is not a failure of effort or planning. It is a fundamental property of AI development. An LLM that can answer 80% of customer service queries correctly is not "80% done" — it may be at the limit of what current technology can achieve for that specific use case, and no amount of additional engineering sprints will close the gap.
+This is not a failure of effort or planning. It is a fundamental property of AI development. An LLM that can answer 80% of customer service queries correctly is not "80% done." It may be at the limit of what current technology can achieve for that specific use case, and no amount of additional engineering sprints will close the gap.
 
-> **Think of it like this:** Planning a traditional software feature is like building a bridge of known length to a known point. You know the materials, the process, the distance. You can estimate with confidence. Planning an AI feature is like sending a ship to find new territory. You know the direction, you have good instruments, you've done exploration before — but you don't know exactly how long the voyage will take, what conditions you'll encounter, or whether the destination is where you think it is. You set a course, not a deadline.
+> **Think of it like this:** Planning a traditional software feature is like building a bridge of known length to a known point. You know the materials, the process, the distance. You can estimate with confidence. Planning an AI feature is like sending a ship to find new territory. You know the direction, you have good instruments, you have done exploration before. But you do not know exactly how long the voyage will take, what conditions you will encounter, or whether the destination is where you think it is. You set a course, not a deadline.
 
-This doesn't mean AI roadmaps are useless. It means they require a different structure — one that communicates direction and investment intent rather than feature-and-date commitments.
+This does not mean AI roadmaps are useless. It means they require a different structure, one that communicates direction and investment intent rather than feature-and-date commitments.
 
 ## Roadmapping Non-Deterministic Features
 
@@ -41,23 +41,23 @@ Instead of organizing the roadmap as "Feature X ships in Q2," structure it as "W
 | "AI recommendation engine replaces manual curation Q4" | "By Q4, we will have validated that AI recommendations meet or exceed human curation satisfaction scores in an A/B test, and have a rollout plan if they do" |
 
 The outcome-based roadmap item has three properties that the traditional structure lacks:
-1. It describes what you're trying to learn or achieve, not what you're committing to ship.
+1. It describes what you are trying to learn or achieve, not what you are committing to ship.
 2. It includes a measurement that defines success.
 3. It explicitly acknowledges that the outcome may lead to a course correction rather than a feature launch.
 
 ### Horizon Segmentation for AI Roadmaps
 
-AI roadmaps benefit from explicit horizon segmentation — longer time windows for AI features than traditional features, with decreasing specificity as you look further out:
+AI roadmaps benefit from explicit horizon segmentation, with longer time windows for AI features than traditional features and decreasing specificity as you look further out:
 
 **Now (current quarter)**: Specific initiatives with defined success criteria. AI features in this horizon have passed quality bars and are in the delivery or rollout phase. Commitments are specific and defensible.
 
-**Next (1–2 quarters out)**: Problem spaces you're investing in. AI features in this horizon are in active development or late discovery. Describe the problem being solved and the capability being built, not the specific feature form.
+**Next (1–2 quarters out)**: Problem spaces you are investing in. AI features in this horizon are in active development or late discovery. Describe the problem being solved and the capability being built, not the specific feature form.
 
-**Later (3–4 quarters out)**: Research bets and dependencies. AI features in this horizon depend on model improvements, data accumulation, or technical work that isn't yet complete. These are intentional R&D investments, not planned deliverables.
+**Later (3–4 quarters out)**: Research bets and dependencies. AI features in this horizon depend on model improvements, data accumulation, or technical work that is not yet complete. These are intentional R&D investments, not planned deliverables.
 
-**Future (beyond 4 quarters)**: Vision and direction. Not a commitment. A signal of where you're heading.
+**Future (beyond 4 quarters)**: Vision and direction. Not a commitment. A signal of where you are heading.
 
-This structure is honest. It tells stakeholders that you're investing deliberately across time horizons, that your commitments get more specific as you get closer, and that uncertainty increases as you look further out. This is not evasion — it is accuracy.
+This structure is honest. It tells stakeholders that you are investing deliberately across time horizons, that your commitments get more specific as you get closer, and that uncertainty increases as you look further out. This is not evasion. It is accuracy.
 
 ## Communicating Uncertainty to Stakeholders
 
@@ -67,21 +67,21 @@ This is a communication challenge as much as a planning challenge. How you frame
 
 ### Framing Uncertainty as Rigor, Not Incompetence
 
-The worst framing: "We can't give you a date because AI is uncertain." This sounds like an excuse.
+The worst framing: "We cannot give you a date because AI is uncertain." This sounds like an excuse.
 
-The better framing: "We've built our plan around quality gates rather than calendar dates, because we've seen teams ship AI features that met their dates but failed their users. Our commitment is to ship when the AI meets the quality bar, not to ship on a date and hope the quality catches up."
+The better framing: "We have built our plan around quality gates rather than calendar dates, because we have seen teams ship AI features that met their dates but failed their users. Our commitment is to ship when the AI meets the quality bar, not to ship on a date and hope the quality catches up."
 
-This reframes uncertainty as a quality standard. You're not saying you don't know — you're saying you won't compromise.
+This reframes uncertainty as a quality standard. You are not saying you do not know. You are saying you will not compromise.
 
 ### The Three Questions Stakeholders Actually Care About
 
 Behind every demand for a specific date are three real concerns:
 
-1. **Are we making progress?** Stakeholders need to know the team isn't spinning its wheels. Answer this with frequent, concrete evidence of progress: evaluation scores improving, user research completed, shadow mode data gathered.
+1. **Are we making progress?** Stakeholders need to know the team is not spinning its wheels. Answer this with frequent, concrete evidence of progress: evaluation scores improving, user research completed, shadow mode data gathered.
 
 2. **Are we investing in the right things?** Stakeholders need confidence that your AI investments are aligned with business strategy. Answer this with clear outcome definitions and explicit connections between AI features and business metrics.
 
-3. **When will I be able to tell customers/the board/the market about this?** Stakeholders often need planning horizons for external communication. Answer this with confidence intervals rather than point estimates: "We expect to be able to announce this to customers in Q3 or Q4 — we'll have more precision by the end of Q2."
+3. **When will I be able to tell customers/the board/the market about this?** Stakeholders often need planning horizons for external communication. Answer this with confidence intervals rather than point estimates: "We expect to be able to announce this to customers in Q3 or Q4. We will have more precision by the end of Q2."
 
 ### The Stakeholder Communication Calendar
 
@@ -98,17 +98,17 @@ Regularity reduces surprise. Stakeholders who receive predictable, data-driven u
 
 ## The Research vs. Delivery Balance on Your Roadmap
 
-AI product development has a natural tension between two modes: **research mode**, where you're exploring what's possible and generating learning, and **delivery mode**, where you're building, shipping, and iterating on features users can see.
+AI product development has a natural tension between two modes: **research mode**, where you are exploring what is possible and generating learning, and **delivery mode**, where you are building, shipping, and iterating on features users can see.
 
-Both modes are necessary. Pure research without delivery produces a team that generates insights but no user value. Pure delivery without research produces a team that ships features that hit quality ceilings they didn't anticipate.
+Both modes are necessary. Pure research without delivery produces a team that generates insights but no user value. Pure delivery without research produces a team that ships features that hit quality ceilings they did not anticipate.
 
 ### How to Allocate
 
 There is no universal right ratio, but a useful planning heuristic for teams with at least one AI feature in production and one in development is:
 
 - **60% delivery capacity**: Building, refining, and operating features in production. This produces user value and generates revenue.
-- **25% applied research**: Investigating improvements to current features, testing new model capabilities, evaluating new approaches to problems you're already working on.
-- **15% exploratory research**: Looking ahead to the next generation of capabilities, evaluating emerging model providers, exploring use cases that aren't on the roadmap yet.
+- **25% applied research**: Investigating improvements to current features, testing new model capabilities, evaluating new approaches to problems you are already working on.
+- **15% exploratory research**: Looking ahead to the next generation of capabilities, evaluating emerging model providers, exploring use cases that are not on the roadmap yet.
 
 These ratios shift based on your product maturity:
 
@@ -121,7 +121,7 @@ These ratios shift based on your product maturity:
 
 ### Making Research Visible on the Roadmap
 
-Research that doesn't appear on the roadmap gets cut when delivery pressure mounts. Make research explicitly visible as a roadmap item:
+Research that does not appear on the roadmap gets cut when delivery pressure mounts. Make research explicitly visible as a roadmap item:
 
 - Name it: "AI quality improvement research for document summarization"
 - Define an output: "Evaluation report with recommended improvement strategy"
@@ -134,15 +134,15 @@ Research on a roadmap that has a defined output and a decision gate is defensibl
 
 Some AI product roadmaps have a hidden dependency that is rarely documented explicitly: they depend on model providers making improvements that the team does not control.
 
-This is not inherently a problem. Model capabilities have been improving rapidly, and many roadmap bets that seemed optimistic a year ago turned out to be conservative. But undocumented model dependency is a risk that can produce significant stakeholder disappointment when a vendor's model release is delayed, when the released model doesn't improve the specific capability you needed, or when the improvement comes from a different provider than you expected.
+This is not inherently a problem. Model capabilities have been improving rapidly, and many roadmap bets that seemed optimistic a year ago turned out to be conservative. But undocumented model dependency is a risk that can produce significant stakeholder disappointment when a vendor's model release is delayed, when the released model does not improve the specific capability you needed, or when the improvement comes from a different provider than you expected.
 
 ### The Model Dependency Audit
 
 For each AI feature on your roadmap, document explicitly:
 
-- Does this feature depend on model capabilities that don't currently exist or are below current quality thresholds?
+- Does this feature depend on model capabilities that do not currently exist or are below current quality thresholds?
 - If yes, what specific capability improvement is needed, and what is the basis for believing it will be available in your planning window?
-- What is the fallback plan if the capability doesn't materialize on schedule?
+- What is the fallback plan if the capability does not materialize on schedule?
 
 **Dependency levels:**
 
@@ -158,8 +158,8 @@ For each AI feature on your roadmap, document explicitly:
 If your roadmap has hard model dependencies, maintain active relationships with your model providers:
 
 - Request preview access or early access programs for upcoming model releases.
-- Share your use case with provider product teams — they often include high-value use cases in benchmark evaluations for new models.
-- Maintain fallback providers so that a single vendor's delay doesn't block your entire roadmap.
+- Share your use case with provider product teams. They often include high-value use cases in benchmark evaluations for new models.
+- Maintain fallback providers so that a single vendor's delay does not block your entire roadmap.
 - Evaluate new model releases quickly (within days of launch for important dependencies) so that improvements can be incorporated into your timeline without long lead times.
 
 ## The 12-Month AI Product Roadmap Template
@@ -181,7 +181,7 @@ Use this structure as a starting point for your team's AI product roadmap. Adapt
 
 **Key business metrics AI is expected to drive:** [List 2–3 specific business outcomes: retention, conversion, ARPU, NPS, etc.]
 
-**Model dependencies to watch:** [List any external model capabilities your roadmap depends on, and the current assessment of when they'll be available]
+**Model dependencies to watch:** [List any external model capabilities your roadmap depends on, and the current assessment of when they will be available]
 
 ---
 
@@ -237,6 +237,6 @@ Use this structure as a starting point for your team's AI product roadmap. Adapt
 
 ---
 
-This template is a starting point, not a straitjacket. The most important thing about your AI roadmap is that it accurately represents what you know and what you don't know — so that your stakeholders are making decisions based on reality, and your team is protected from commitments that can't be kept without compromising the quality of what gets built.
+This template is a starting point, not a straitjacket. The most important thing about your AI roadmap is that it accurately represents what you know and what you do not know, so that your stakeholders are making decisions based on reality, and your team is protected from commitments that cannot be kept without compromising the quality of what gets built.
 
-An honest AI roadmap that communicates uncertainty is more valuable than a confident AI roadmap that conceals it. The difference shows up when the uncertainty resolves — and with AI features, it always does, eventually.
+An honest AI roadmap that communicates uncertainty is more valuable than a confident AI roadmap that conceals it. The difference shows up when the uncertainty resolves, and with AI features, it always does eventually.

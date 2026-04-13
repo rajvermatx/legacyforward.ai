@@ -18,15 +18,15 @@ badges:
 
 
 ![Diagram](/diagrams/ai-pm/ch11-1.svg)
-Traditional software features fail in obvious ways. A server goes down and users can't load the page. A bug causes the checkout flow to throw an error. A form field stops saving data. These failures are binary, detectable, and usually self-evident. Your alerting fires. An engineer gets paged. The failure is investigated and fixed.
+Traditional software features fail in obvious ways. A server goes down and users cannot load the page. A bug causes the checkout flow to throw an error. A form field stops saving data. These failures are binary, detectable, and usually self-evident. Your alerting fires. An engineer gets paged. The failure is investigated and fixed.
 
-AI features fail in subtle ways. The system is up. The API is responding. The feature is loading perfectly. But the outputs have gotten worse — gradually, quietly, without anyone noticing — and users have started to silently disengage. No alert fires. No engineer gets paged. The product just slowly becomes less useful, and by the time you notice, you've lost months of user trust.
+AI features fail in subtle ways. The system is up. The API is responding. The feature is loading perfectly. But the outputs have gotten worse, gradually and quietly, without anyone noticing, and users have started to silently disengage. No alert fires. No engineer gets paged. The product just slowly becomes less useful, and by the time you notice, you have lost months of user trust.
 
-And then, if the feature succeeds: the costs report comes in, and someone in finance sends a message: "We need to talk about the AI line item." Usage grew. But AI cost doesn't scale like database storage or CDN bandwidth — it scales differently, often faster, with different breakpoints, and with surprises that traditional infrastructure scaling never produced.
+And then, if the feature succeeds: the costs report comes in, and someone in finance sends a message: "We need to talk about the AI line item." Usage grew. But AI cost does not scale like database storage or CDN bandwidth. It scales differently, often faster, with different breakpoints, and with surprises that traditional infrastructure scaling never produced.
 
 Operating AI in production requires two capabilities: monitoring quality continuously (not just availability), and managing costs as the feature scales. This chapter covers both.
 
-> **Think of it like this:** Monitoring a traditional feature is like monitoring a vending machine — you know it's broken when the customer doesn't get their snack and the display shows an error. Monitoring an AI feature is like monitoring a food delivery service — the driver shows up, the bag looks right, but the order might be wrong, cold, or missing items. You need a feedback mechanism that tracks whether customers are satisfied after the exchange, not just whether the exchange occurred.
+> **Think of it like this:** Monitoring a traditional feature is like monitoring a vending machine. You know it is broken when the customer does not get their snack and the display shows an error. Monitoring an AI feature is like monitoring a food delivery service. The driver shows up, the bag looks right, but the order might be wrong, cold, or missing items. You need a feedback mechanism that tracks whether customers are satisfied after the exchange, not just whether the exchange occurred.
 
 ## What to Watch: The Four Monitoring Dimensions
 
@@ -36,9 +36,9 @@ Quality is the most important dimension and the one most commonly under-monitore
 
 **Metrics to track:**
 
-- **Human evaluation sample rate**: What percentage of AI outputs are manually reviewed by a human for quality? This doesn't need to be 100% — even 0.5% of outputs can be statistically meaningful at scale. Define who does the review, how often, and what rubric they use.
+- **Human evaluation sample rate**: What percentage of AI outputs are manually reviewed by a human for quality? This does not need to be 100%. Even 0.5% of outputs can be statistically meaningful at scale. Define who does the review, how often, and what rubric they use.
 - **Correction rate**: If your feature allows users to correct AI outputs, what percentage of outputs are being corrected? Rising correction rate is an early signal of quality degradation.
-- **Explicit rating scores**: If you've built in thumbs up/down or star ratings, track these by feature, by user segment, by query type.
+- **Explicit rating scores**: If you have built in thumbs up/down or star ratings, track these by feature, by user segment, by query type.
 - **Task completion rate**: For AI features designed to help users accomplish a specific task, what percentage of the time does the user complete the task after the AI intervenes, vs. abandon or redo it manually?
 - **Output rejection rate**: For AI suggestions that can be accepted or dismissed, the dismissal rate is a proxy quality signal.
 
@@ -52,7 +52,7 @@ Cost monitoring ensures your AI feature's economics remain viable as usage scale
 
 - **Cost per call**: Average and median cost per AI invocation, including all cost layers (model tokens, retrieval, infrastructure).
 - **Cost per monthly active user (MAU)**: Total AI cost divided by monthly active users on the feature. Watch for this growing faster than revenue.
-- **Cost trend**: Is cost per call stable, declining (good — model costs are often falling), or rising (investigate — usually indicates prompt bloat or increased context length)?
+- **Cost trend**: Is cost per call stable, declining (model costs are often falling), or rising (investigate, as this usually indicates prompt bloat or increased context length)?
 - **Cost by user percentile**: What does the p90 and p99 user cost look like? If your top 1% of users account for 40% of your AI cost, you may have a rate limiting or cap problem.
 - **Forecast vs. actual**: Compare your monthly AI cost forecast to actuals. Consistent overruns indicate your usage model is wrong.
 
@@ -95,7 +95,7 @@ User satisfaction is the outcome metric that all the others ultimately serve. It
 - **Feature NPS or satisfaction score**: Segment responses by AI feature users vs. non-users to understand the AI feature's contribution to satisfaction.
 - **Support ticket volume and category**: Are AI feature-related support tickets increasing?
 - **Feature retention**: Are users who activate the AI feature more or less likely to be retained at 30, 60, and 90 days?
-- **Voluntary opt-out rate**: What percentage of users who activated the feature later disabled it? High opt-out rates indicate the feature isn't delivering on its promise.
+- **Voluntary opt-out rate**: What percentage of users who activated the feature later disabled it? High opt-out rates indicate the feature is not delivering on its promise.
 
 ## Building Feedback Loops
 
@@ -106,17 +106,17 @@ The four elements of a functional feedback loop are:
 1. **Signal collection**: The product captures user behavior or explicit ratings as feedback.
 2. **Signal aggregation**: The feedback is stored, structured, and surfaced to the team in usable form.
 3. **Analysis and interpretation**: The team reviews the feedback, identifies patterns, and forms hypotheses about what to fix.
-4. **Model or product improvement**: The team acts on the analysis — by adjusting prompts, updating the model, changing the UI, or modifying the feature scope.
+4. **Model or product improvement**: The team acts on the analysis by adjusting prompts, updating the model, changing the UI, or modifying the feature scope.
 
 Most teams are reasonably good at steps 1 and 2. Steps 3 and 4 are where feedback loops die.
 
 ### Designing Feedback Mechanisms
 
-**Thumbs up / thumbs down**: Simple, high-volume, low-friction. Best for capturing gross quality signal. Limitation: doesn't tell you *why* something was good or bad.
+**Thumbs up / thumbs down**: Simple, high-volume, low-friction. Best for capturing gross quality signal. Limitation: does not tell you why something was good or bad.
 
 **Corrections and edits**: If your AI feature produces text that users can edit, every edit is a feedback signal. Log diffs between AI outputs and final user versions.
 
-**Category-labeled flags**: "This is wrong," "This is irrelevant," "This is inappropriate" — structured error categories that give you actionable signal about what kind of quality issue you're seeing.
+**Category-labeled flags**: "This is wrong," "This is irrelevant," "This is inappropriate." These structured error categories give you actionable signal about what kind of quality issue you are seeing.
 
 **Post-task surveys**: A brief survey shown after a user completes (or abandons) a task that involved the AI feature.
 
@@ -139,9 +139,9 @@ Drift is the phenomenon where an AI feature that was working well gradually degr
 
 **Input distribution shift**: The inputs users are sending to your AI feature today are different from the inputs it was trained or tested on.
 
-**Reference data drift**: Your AI feature may depend on data that gets updated over time — a knowledge base, a product catalog, a set of rules.
+**Reference data drift**: Your AI feature may depend on data that gets updated over time, such as a knowledge base, a product catalog, or a set of rules.
 
-**Model provider changes**: If you're using a hosted model API, the provider may have updated the underlying model without prominent notification.
+**Model provider changes**: If you are using a hosted model API, the provider may have updated the underlying model without prominent notification.
 
 **Seasonal and behavioral changes**: User behavior and language evolve over time.
 
@@ -166,14 +166,14 @@ When you suspect drift:
 
 ## Incident Response: When the AI Says Something Wrong Publicly
 
-Every AI product will eventually produce a bad output that gets noticed publicly. This is not a hypothetical — it is a when, not an if.
+Every AI product will eventually produce a bad output that gets noticed publicly. This is not a hypothetical. It is a when, not an if.
 
 ### The AI Incident Response Playbook
 
 **Step 1: Contain (0–2 hours)**
-- Reproduce the issue to confirm it's real and understand its scope.
+- Reproduce the issue to confirm it is real and understand its scope.
 - Determine whether the issue is isolated or systemic.
-- If systemic: implement a temporary mitigation — disable the feature, add a guardrail, or route affected query types to a fallback.
+- If systemic: implement a temporary mitigation. Disable the feature, add a guardrail, or route affected query types to a fallback.
 - Communicate internally to legal, comms, customer success, and leadership.
 
 **Step 2: Assess (2–8 hours)**
@@ -240,9 +240,9 @@ Your model provider has rate limits — caps on how many tokens per minute or re
 
 ### Tail User Cost Concentration
 
-At 100,000 users, you'll inevitably have a small number who are generating a disproportionate share of your AI costs — power users who've built automated workflows, developers using your API in a loop, enterprise accounts with large teams, or bots that have discovered your AI feature.
+At 100,000 users, you will inevitably have a small number who are generating a disproportionate share of your AI costs. These include power users who have built automated workflows, developers using your API in a loop, enterprise accounts with large teams, or bots that have discovered your AI feature.
 
-**Prevention**: Instrument cost by user at the P90, P95, and P99 percentile level. Know who your top-cost users are and what they're doing. Introduce soft limits that flag for review and hard limits that cap usage.
+**Prevention**: Instrument cost by user at the P90, P95, and P99 percentile level. Know who your top-cost users are and what they are doing. Introduce soft limits that flag for review and hard limits that cap usage.
 
 ### Evaluation Infrastructure at Scale
 
@@ -376,10 +376,10 @@ Before your AI feature enters a high-growth phase:
 
 ## Summary
 
-Operating AI at scale requires two parallel disciplines. The first is quality monitoring — tracking not just whether the feature is available, but whether its outputs remain useful. The four monitoring dimensions (quality, cost, latency, user satisfaction) give you the signals you need. Feedback loops turn those signals into improvement. Drift detection keeps you ahead of gradual degradation. Incident response playbooks ensure you're ready when something goes wrong publicly.
+Operating AI at scale requires two parallel disciplines. The first is quality monitoring, tracking not just whether the feature is available, but whether its outputs remain useful. The four monitoring dimensions (quality, cost, latency, user satisfaction) give you the signals you need. Feedback loops turn those signals into improvement. Drift detection keeps you ahead of gradual degradation. Incident response playbooks ensure you are ready when something goes wrong publicly.
 
-The second discipline is cost and scale management. AI costs don't scale linearly with users — they scale faster, with breakpoints that surprise teams who planned on traditional infrastructure assumptions. Prompt length creep, rate limit encounters, and tail user cost concentration are the most common scaling surprises. Rate limits, fair use policies, and caching strategies manage costs without degrading the experience for typical users.
+The second discipline is cost and scale management. AI costs do not scale linearly with users. They scale faster, with breakpoints that surprise teams who planned on traditional infrastructure assumptions. Prompt length creep, rate limit encounters, and tail user cost concentration are the most common scaling surprises. Rate limits, fair use policies, and caching strategies manage costs without degrading the experience for typical users.
 
-International expansion compounds both challenges: linguistic complexity affects quality and cost, while regulatory variation introduces compliance requirements that traditional software localization doesn't face.
+International expansion compounds both challenges: linguistic complexity affects quality and cost, while regulatory variation introduces compliance requirements that traditional software localization does not face.
 
-Scaling is not a problem that only affects successful products. It is a problem that determines whether successful products remain sustainable — or whether their success becomes the source of their failure.
+Scaling is not a problem that only affects successful products. It is a problem that determines whether successful products remain sustainable, or whether their success becomes the source of their failure.

@@ -22,11 +22,11 @@ Product requirements documents describe what to build. A value hypothesis descri
 
 The distinction is not semantic. When you write a requirement, you are implicitly asserting that the problem is understood and the solution is known. When you write a hypothesis, you are acknowledging that you are working under uncertainty and committing to a structured process for resolving it. In traditional software development, many features are understood well enough that the requirement framing is appropriate. In AI feature development, almost nothing is understood well enough at the outset.
 
-You don't know exactly how accurate the model will be. You don't know whether users will trust its outputs. You don't know whether the feature will change behavior in the ways you expect. You don't know whether the data you have is sufficient or whether you'll need to instrument additional collection. Starting with a hypothesis rather than a requirement is not a sign of uncertainty — it is the appropriate epistemic posture for working with probabilistic systems.
+You do not know exactly how accurate the model will be. You do not know whether users will trust its outputs. You do not know whether the feature will change behavior in the ways you expect. You do not know whether the data you have is sufficient or whether you will need to instrument additional collection. Starting with a hypothesis rather than a requirement is not a sign of uncertainty. It is the appropriate epistemic posture for working with probabilistic systems.
 
 > **Think of it like this:** A scientist doesn't say "I'm going to prove that this molecule cures the disease." They say "I hypothesize that this molecule reduces symptoms by mechanism X, and I will design experiments to test that claim." The rigor is in the falsifiability, not the confidence.
 
-This chapter gives you the tools to write a good value hypothesis for an AI feature — and then to prioritize across a backlog of them with the rigor the work demands.
+This chapter gives you the tools to write a good value hypothesis for an AI feature, and then to prioritize across a backlog of them with the rigor the work demands.
 
 ## The One-Sentence Value Hypothesis Template
 
@@ -34,7 +34,7 @@ Every AI feature should have a one-sentence value hypothesis that captures the c
 
 > **We believe that [user segment] will [behavioral outcome] because [AI capability] reduces/enables [specific friction or gap], which we will validate by [measurable signal] within [timeframe].**
 
-This sentence is doing more work than it appears. Let's break down each slot:
+This sentence is doing more work than it appears. Here is what each slot means:
 
 **[user segment]** — Not "users." A specific, describable group of people with a shared context and need. "Enterprise account managers who manage more than 50 accounts" is a user segment. "Our customers" is not.
 
@@ -94,7 +94,7 @@ Why this is weak: "improve satisfaction" is not a behavioral outcome, "find what
 
 ---
 
-The pattern that separates strong from weak hypotheses is not confidence — it's specificity. A strong hypothesis makes a claim you could be wrong about and tells you how you'd know.
+The pattern that separates strong from weak hypotheses is not confidence. It is specificity. A strong hypothesis makes a claim you could be wrong about and tells you how you would know.
 
 ## The 4 Validation Dimensions
 
@@ -106,9 +106,9 @@ A value hypothesis is not validated by a single experiment. It has four dimensio
 
 This is frequently the dimension that kills otherwise strong hypotheses, and it kills them late when the team has already invested significantly. Data validation should happen first, before feasibility, before adoption research.
 
-What to assess: Does the data exist in your systems or can it be sourced? How complete is it? How labeled? What's the quality — are there gaps, inconsistencies, or biases that would impair model performance? What's the volume — is there enough to train or fine-tune, or to provide reliable context for retrieval? What are the data governance implications — can you use this data for this purpose given your privacy policies and any applicable regulations?
+What to assess: Does the data exist in your systems or can it be sourced? How complete is it? How labeled? What is the quality: are there gaps, inconsistencies, or biases that would impair model performance? What is the volume: is there enough to train or fine-tune, or to provide reliable context for retrieval? What are the data governance implications: can you use this data for this purpose given your privacy policies and any applicable regulations?
 
-Red flags: data that exists but is siloed across systems without integration infrastructure; data that theoretically exists but is locked in unstructured formats that would require significant preprocessing; historical data that reflects workflows or behaviors that have since changed.
+Red flags: data that exists but is siloed across systems without integration infrastructure. Data that theoretically exists but is locked in unstructured formats requiring significant preprocessing. Historical data that reflects workflows or behaviors that have since changed.
 
 ### Dimension 2: Technical Feasibility
 
@@ -118,7 +118,7 @@ This is where PMs need to work closely with ML engineering or AI infrastructure 
 
 What to assess: Is this a task that AI handles well in comparable contexts? What accuracy levels are realistic? What's the latency profile — can the AI respond within the time window the user experience requires? What's the infrastructure cost at the volume you're targeting? Are there known failure modes or bias patterns that need to be designed around?
 
-Red flags: AI tasks that require reasoning that current models demonstrably struggle with; latency requirements that current inference speeds can't meet; cost per call that makes the unit economics unworkable at scale.
+Red flags: AI tasks requiring reasoning that current models demonstrably struggle with. Latency requirements that current inference speeds cannot meet. Cost per call that makes the unit economics unworkable at scale.
 
 ### Dimension 3: Adoption Feasibility
 
@@ -128,7 +128,7 @@ This is the dimension most often underweighted by technically-oriented teams. Bu
 
 What to assess: What is the user's current workflow, and how does the AI feature fit into it? Does using the feature require behavior change, and how much? What is the user's baseline level of trust in AI outputs for this type of task? Are there professional, cultural, or process reasons why users might resist AI involvement in this decision? Does the feature surface its outputs at the moment in the workflow when they would be most actionable?
 
-Red flags: features that require users to explicitly navigate to the AI output rather than surfacing it in context; features in domains where users have strong professional identity tied to the manual task; features where the cost of acting on a wrong AI recommendation is high enough to create adoption-killing risk aversion.
+Red flags: features that require users to explicitly navigate to the AI output rather than surfacing it in context. Features in domains where users have strong professional identity tied to the manual task. Features where acting on a wrong AI recommendation is costly enough to create adoption-killing risk aversion.
 
 ### Dimension 4: Economic Validation
 
@@ -138,7 +138,7 @@ AI features have different economics than traditional software features in ways 
 
 What to assess: What is the engineering and infrastructure cost to build and launch? What is the ongoing operational cost per user or per call at target scale? What is the maintenance cost, including evaluation, monitoring, and quality improvement? What revenue or cost-savings does the hypothesis claim, and how confident are you in that estimate? What is the break-even timeline?
 
-Red flags: unit economics that only work at scale you haven't yet reached; cost structures driven primarily by third-party API pricing that you don't control; ROI models that assume 100% adoption when historical adoption rates for new features at your company are 30%.
+Red flags: unit economics that only work at scale you have not yet reached. Cost structures driven primarily by third-party API pricing you do not control. ROI models that assume 100% adoption when historical adoption rates for new features at your company are 30%.
 
 ## Go/No-Go Gate Criteria
 
@@ -213,7 +213,7 @@ The following one-page canvas consolidates your value hypothesis work into a for
 
 ---
 
-The kill criteria field deserves special emphasis. Many teams fill in the positive validation signals clearly and leave the kill criteria vague. This is a mistake. Knowing when to stop is as important as knowing when to continue. If you can't articulate what would convince you the hypothesis is wrong, you haven't thought through the assumption structure clearly enough.
+The kill criteria field deserves special emphasis. Many teams fill in the positive validation signals clearly and leave the kill criteria vague. This is a mistake. Knowing when to stop is as important as knowing when to continue. If you cannot articulate what would convince you the hypothesis is wrong, you have not thought through the assumption structure clearly enough.
 
 ## Common Hypothesis Failure Modes
 
@@ -229,17 +229,17 @@ The kill criteria field deserves special emphasis. Many teams fill in the positi
 
 ## The Problem with 10 AI Ideas
 
-Once you've written strong value hypotheses, you'll face a new problem: your backlog has too many of them. Here is a situation you will encounter repeatedly. Your organization has developed genuine enthusiasm for AI. Ideas are flowing from engineering, from sales, from the executive team, from customer success. You have a backlog of ten potentially interesting AI feature concepts. Your team has capacity to meaningfully pursue two of them in the next two quarters.
+Once you have written strong value hypotheses, you will face a new problem: your backlog has too many of them. Here is a situation you will encounter repeatedly. Your organization has developed genuine enthusiasm for AI. Ideas are flowing from engineering, from sales, from the executive team, from customer success. You have a backlog of ten potentially interesting AI feature concepts. Your team has capacity to meaningfully pursue two of them in the next two quarters.
 
 Which two?
 
 This question is harder for AI features than it is for traditional product features, for three specific reasons.
 
-First, **uncertainty is structural, not incidental.** In traditional product development, you can estimate effort with reasonable accuracy once you've done discovery. In AI feature development, even after a thorough discovery phase, you often don't know whether the approach will work at all. Two features that look equivalent on paper can require radically different development timelines depending on data quality, model behavior, and edge case complexity — and you often can't determine which is which until you're deep in the work.
+First, **uncertainty is structural, not incidental.** In traditional product development, you can estimate effort with reasonable accuracy once you have done discovery. In AI feature development, even after a thorough discovery phase, you often do not know whether the approach will work at all. Two features that look equivalent on paper can require radically different development timelines depending on data quality, model behavior, and edge case complexity. You often cannot determine which is which until you are deep in the work.
 
-Second, **the impact is harder to compare.** An automation feature that saves your operations team 20 hours per week is valuable, but it's a different kind of value than a transformation feature that enables an entirely new product motion. Comparing them on a single impact score obscures the strategic differences.
+Second, **the impact is harder to compare.** An automation feature that saves your operations team 20 hours per week is valuable, but it is a different kind of value than a transformation feature that enables an entirely new product motion. Comparing them on a single impact score obscures the strategic differences.
 
-Third, **the cost of a wrong bet is higher.** An AI feature that doesn't work after three months of development hasn't just failed to deliver value — it has consumed engineering time, burned ML infrastructure costs, created expectations with stakeholders, and potentially shipped a poor user experience that damages trust in AI features broadly.
+Third, **the cost of a wrong bet is higher.** An AI feature that does not work after three months of development has not just failed to deliver value. It has consumed engineering time, burned ML infrastructure costs, created expectations with stakeholders, and potentially shipped a poor user experience that damages trust in AI features broadly.
 
 ## Adding the Uncertainty Dimension
 
@@ -252,7 +252,7 @@ This third dimension changes the math entirely. Consider two features:
 - Feature A: High impact, medium effort, low uncertainty (you've done this type of AI before, the data is clean, similar implementations exist at comparable companies)
 - Feature B: High impact, medium effort, high uncertainty (the approach is novel, the data is messier than you'd like, you're not sure the accuracy you need is achievable)
 
-A traditional matrix would rate them equally. But Feature B carries a materially higher expected cost because a portion of the "medium effort" may be spent discovering that the approach doesn't work — at which point you've consumed resources and have nothing to show for it.
+A traditional matrix would rate them equally. But Feature B carries a materially higher expected cost because a portion of the "medium effort" may be spent discovering that the approach does not work. At that point you have consumed resources and have nothing to show for it.
 
 > **Think of it like this:** Comparing a deterministic software feature to an AI feature on effort alone is like comparing a construction project (you know roughly what it costs to build a known structure) to an oil drilling project (you know the cost of drilling, but not whether there's oil). The uncertainty about the outcome changes everything about how you should budget and sequence the work.
 
@@ -304,7 +304,7 @@ The kill date is not a deadline to have the feature done. It is a decision point
 
 **Setting kill dates:** Use the validation timeline you established in your value hypothesis as the starting point. If your hypothesis said you'd validate adoption in six weeks, then six weeks is when you either have the evidence or you don't. If you've been trying to achieve a required accuracy level for eight sprints and you're not converging, that is data — not bad luck.
 
-**Making the kill decision real:** Kill dates only work if killing is culturally acceptable. If your organization treats stopping an AI initiative as a failure rather than as disciplined capital allocation, teams will game the process by always finding a reason to continue. Leadership needs to explicitly communicate that killing an initiative that failed to validate is a success of the process, not a failure of the team.
+**Making the kill decision real:** Kill dates only work if killing is culturally acceptable. If your organization treats stopping an AI initiative as a failure rather than as disciplined capital allocation, teams will game the process by always finding a reason to continue. Leadership needs to communicate clearly that killing an initiative that failed to validate is a success of the process, not a failure of the team.
 
 > **Think of it like this:** A kill date in an AI project is like a stop-loss in an investment portfolio. It doesn't mean you expect to lose — it means you've pre-committed to the conditions under which you'll accept the loss rather than doubling down on a losing position.
 
@@ -314,7 +314,7 @@ A healthy AI feature portfolio is not composed exclusively of high-certainty aut
 
 The right mix depends on three factors: your organization's current AI maturity, your competitive situation, and your team's capacity for managing uncertainty.
 
-**Early AI maturity (first 1–2 years of meaningful AI investment):**
+**Early AI maturity (first 1-2 years of meaningful AI investment):**
 Target portfolio: ~70% automation, ~30% transformation. Organizations building AI capability for the first time need wins that build trust with users and internal stakeholders, demonstrate that the team can ship AI features that work, and generate the data and operational infrastructure that more ambitious features will require.
 
 **Developing AI maturity (active AI investment, some features in production):**

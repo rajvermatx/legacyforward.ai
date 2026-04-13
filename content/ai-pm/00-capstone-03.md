@@ -84,7 +84,7 @@ The trajectory is a classic improvement curve that has flattened. The team has r
 4 of 10 pilot customers are "actively using" SmartReview at month 8. Dig into this:
 - What does "actively using" mean? Weekly? Monthly?
 - Of the 6 not actively using it: did they disengage? Did they try it and stop? Why?
-- Are the 4 active users using SmartReview because it's genuinely useful, or because they feel obligated as pilot participants?
+- Are the 4 active users using SmartReview because it is genuinely useful, or because they feel obligated as pilot participants?
 
 Interview the disengaged customers. Their answers will be more revealing than the active users'.
 
@@ -102,7 +102,7 @@ The accuracy trajectory has flattened well below the target. Pilot customer rete
 
 The hardest part of this decision is the sunk cost. Eight months. A 6-person team. Significant infrastructure investment. Real customer relationships. It feels like killing the project wastes all of that.
 
-It doesn't. This is the sunk cost fallacy, and it is one of the most reliable destroyers of PM credibility.
+It does not. This is the sunk cost fallacy, and it is one of the most reliable destroyers of PM credibility.
 
 ### The Right Question
 
@@ -136,11 +136,11 @@ Killing a project that has been publicly championed, that has a dedicated team, 
 
 ### What Not to Do
 
-**Don't present it as a failure.** Presenting the kill as a failure invites defensiveness from everyone who invested in the project and makes the decision harder to accept.
+**Do not present it as a failure.** Presenting the kill as a failure invites defensiveness from everyone who invested in the project and makes the decision harder to accept.
 
-**Don't surprise the VP.** If your VP is going to hear "kill it" for the first time in a group review, they have no time to process and will often default to defending the team rather than engaging with your analysis. Brief them 1:1 before the group meeting.
+**Do not surprise the VP.** If your VP is going to hear "kill it" for the first time in a group review, they have no time to process and will often default to defending the team rather than engaging with your analysis. Brief them 1:1 before the group meeting.
 
-**Don't let the team hear it from someone else.** Tell the team directly, ideally before the formal communication goes up. They deserve to hear it from you, with context, before the org announcement.
+**Do not let the team hear it from someone else.** Tell the team directly, ideally before the formal communication goes up. They deserve to hear it from you, with context, before the org announcement.
 
 ### The Upward Communication Framework
 
@@ -148,21 +148,21 @@ Brief the VP (and skip-level if relevant) with this structure:
 
 **1. The decision, stated clearly upfront.**
 
-"I recommend we close the SmartReview pilot and redirect the team. Here's my reasoning."
+"I recommend we close the SmartReview pilot and redirect the team. Here is my reasoning."
 
-Don't bury the recommendation at the end. Decision-makers lose respect for PMs who meander to a conclusion. State it first, justify it after.
+Do not bury the recommendation at the end. Decision-makers lose respect for PMs who meander to a conclusion. State it first, justify it after.
 
 **2. The evidence, without editorializing.**
 
-Present the data from Step 1. No dramatic framing. Just: here's what we targeted, here's where we are, here's the trajectory. Let the numbers speak.
+Present the data from Step 1. No dramatic framing. Just: here is what we targeted, here is where we are, here is the trajectory. Let the numbers speak.
 
 **3. The forward path, not just the closedown.**
 
-The worst kill conversations end with "and so we're shutting it down." The best ones continue: "and here's what I propose we do instead." Show that you've thought about where to redirect the team's capability, what you've learned that can be applied elsewhere, and what the team's next assignment should be.
+The worst kill conversations end with "and so we are shutting it down." The best ones continue: "and here is what I propose we do instead." Show that you have thought about where to redirect the team's capability, what you have learned that can be applied elsewhere, and what the team's next assignment should be.
 
 **4. The customer plan.**
 
-"Here's how we'll communicate with the 10 pilot firms, what we'll offer them, and who owns those relationships going forward." Leaving customers in ambiguity while you sort out the internal decision is not acceptable.
+"Here is how we will communicate with the 10 pilot firms, what we will offer them, and who owns those relationships going forward." Leaving customers in ambiguity while you sort out the internal decision is not acceptable.
 
 **Sample upward communication:**
 
@@ -174,7 +174,7 @@ The worst kill conversations end with "and so we're shutting it down." The best 
 
 ### Handling Pushback
 
-**"But we're so close!"** Ask for specificity: what does "close" mean? What will be different in 6 months that isn't true today? What evidence supports the belief that the accuracy plateau will break? If the answer is "we think we're almost there," that is not evidence.
+**"But we're so close!"** Ask for specificity: what does "close" mean? What will be different in 6 months that is not true today? What evidence supports the belief that the accuracy plateau will break? If the answer is "we think we're almost there," that is not evidence.
 
 **"The pilot customers like it!"** Segment this: which customers like it, how much are they using it, and are they willing to pay for it? Liking a free pilot and paying for a product are different things.
 
@@ -188,9 +188,9 @@ The kill decision is not the end of the story. How you handle what comes after d
 
 ### What to Preserve
 
-**The data and infrastructure**: The document corpus, clause taxonomy, and RAG retrieval infrastructure built for SmartReview likely has value for future AI features. Document what was built, where it lives, and what future use cases it could serve. Don't let it die with the project.
+**The data and infrastructure**: The document corpus, clause taxonomy, and RAG retrieval infrastructure built for SmartReview likely has value for future AI features. Document what was built, where it lives, and what future use cases it could serve. Do not let it die with the project.
 
-**The domain knowledge**: The ML engineer and data scientist have spent 8 months learning the structure of legal documents, the vocabulary of contract review, and the failure modes of AI in high-stakes professional contexts. This knowledge doesn't live in code — it lives in people. Keep them engaged with AI work.
+**The domain knowledge**: The ML engineer and data scientist have spent 8 months learning the structure of legal documents, the vocabulary of contract review, and the failure modes of AI in high-stakes professional contexts. This knowledge does not live in code. It lives in people. Keep them engaged with AI work.
 
 **The relationships**: The pilot customers, even the ones who disengaged, had real conversations with your team about what they needed. These conversations are qualitative research data. Synthesize the findings before the pilot closes.
 
@@ -201,12 +201,12 @@ The kill decision is not the end of the story. How you handle what comes after d
 Have the conversation in person or on video. Not in a Slack message.
 
 Structure:
-1. What you've decided and why — the evidence, briefly.
-2. What you respect about the work they've done.
+1. What you have decided and why, with the evidence briefly stated.
+2. What you respect about the work they have done.
 3. What is being preserved and why it matters.
-4. What's next for each person on the team.
+4. What is next for each person on the team.
 
-The most important part of point 4 is that you've actually thought about it before the conversation. "I'm not sure yet" is not a reassuring answer when someone is hearing their project is being killed. Even a provisional next assignment communicates that the person's future was in your mind when you made the decision.
+The most important part of point 4 is that you have actually thought about it before the conversation. "I am not sure yet" is not a reassuring answer when someone is hearing their project is being killed. Even a provisional next assignment communicates that the person's future was in your mind when you made the decision.
 
 ### The Learnings Report
 
@@ -229,6 +229,6 @@ Share this report broadly — not as a post-mortem of failure, but as institutio
 
 The real test of kill discipline is not whether you can identify a failing project. Most experienced PMs can see the signs. The test is whether you can make the call before the sunk costs become overwhelming, whether you can communicate it with clarity and respect, and whether you can turn the closedown into a forward-looking moment rather than a backward-looking autopsy.
 
-SmartReview was not a waste. It was an 8-month investment that produced a clear answer to an important question: AI-powered full-contract review at attorney-grade accuracy is not achievable with current technology for this use case at this team's resources. That answer is worth having. It was purchased with 8 months; a team that didn't ask the question early enough could have purchased it with 2 years.
+SmartReview was not a waste. It was an 8-month investment that produced a clear answer to an important question: AI-powered full-contract review at attorney-grade accuracy is not achievable with current technology for this use case at this team's resources. That answer is worth having. It was purchased with 8 months. A team that did not ask the question early enough could have purchased it with 2 years.
 
 Kill discipline is the discipline of buying that answer at the lowest possible price.

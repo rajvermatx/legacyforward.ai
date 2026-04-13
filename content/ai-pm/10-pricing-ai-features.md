@@ -16,19 +16,19 @@ badges:
 
 
 ![Diagram](/diagrams/ai-pm/ch10-1.svg)
-Traditional software features have a comforting economic property: once they're built, the marginal cost of an additional user using them is effectively zero. A user runs a search, applies a filter, exports a spreadsheet — the servers are running anyway, the engineering is amortized across the user base, the cost per interaction is fractions of a cent. This is why software businesses have such attractive unit economics. You build it once and the incremental usage is almost free.
+Traditional software features have a comforting economic property: once they are built, the marginal cost of an additional user using them is effectively zero. A user runs a search, applies a filter, exports a spreadsheet. The servers are running anyway, the engineering is amortized across the user base, the cost per interaction is fractions of a cent. This is why software businesses have such attractive unit economics. You build it once and the incremental usage is almost free.
 
 AI features break this model entirely.
 
 Every time a user invokes your AI feature, you pay something. You pay for the tokens consumed by the model. You pay for the compute to run inference. You pay for the storage of context that gets fed into the prompt. Depending on your architecture, you may pay for vector database queries, embedding computations, and retrieval operations before the model ever starts generating. And you pay this cost every single time, for every single user, at every single scale.
 
-This fundamentally changes the calculus of pricing and packaging. A feature that costs $0.50 per use sounds fine when 100 users are using it. At 10,000 users, you're spending $5,000 a day in variable costs. At 100,000 users using it twice a day, you're spending $100,000 a day. The economics that worked as an experiment collapse spectacularly at scale if you haven't priced for the cost structure.
+This fundamentally changes the calculus of pricing and packaging. A feature that costs $0.50 per use sounds fine when 100 users are using it. At 10,000 users, you are spending $5,000 a day in variable costs. At 100,000 users using it twice a day, you are spending $100,000 a day. The economics that worked as an experiment collapse spectacularly at scale if you have not priced for the cost structure.
 
-> **Think of it like this:** Pricing an AI feature without understanding its cost structure is like opening a restaurant where every dish requires a different amount of premium ingredients, giving all the dishes the same menu price, and then being surprised when the kitchen says you're losing money on every order. The revenue is real. The problem is the costs are also real — and they scale with every customer who walks through the door.
+> **Think of it like this:** Pricing an AI feature without understanding its cost structure is like opening a restaurant where every dish requires a different amount of premium ingredients, giving all the dishes the same menu price, and then being surprised when the kitchen says you are losing money on every order. The revenue is real. The problem is the costs are also real. They scale with every customer who walks through the door.
 
 ## Cost Structure of AI Features
 
-Before you can make a pricing decision, you need to understand what you're actually paying for. AI feature costs have four layers, and most PMs underestimate the second and third.
+Before you can make a pricing decision, you need to understand what you are actually paying for. AI feature costs have four layers, and most PMs underestimate the second and third.
 
 ### Layer 1: Model Inference Costs
 
@@ -44,7 +44,7 @@ To estimate this cost:
 
 A feature with a 2,000-token prompt and a 500-token response at $10/M input and $30/M output costs approximately: (2,000 × $0.000010) + (500 × $0.000030) = $0.020 + $0.015 = **$0.035 per call**.
 
-At 10,000 calls per day, that's $350/day, $10,500/month. Not trivial.
+At 10,000 calls per day, that is $350/day, $10,500/month. Not trivial.
 
 ### Layer 2: Retrieval and Context Costs
 
@@ -61,7 +61,7 @@ Teams that accurately estimate model inference costs often discover that retriev
 - **API gateway and monitoring**: Requests to model APIs go through infrastructure that has its own cost.
 - **Caching layer**: If you implement output caching (covered in Chapter 14), the cache itself has storage costs.
 - **Logging and observability**: Every AI call you log for monitoring, debugging, or compliance purposes has storage and compute cost.
-- **Safety and moderation**: If you run outputs through a moderation model before displaying them, that's an additional model call.
+- **Safety and moderation**: If you run outputs through a moderation model before displaying them, that is an additional model call.
 
 ### Layer 4: Human Review and Escalation
 
@@ -76,7 +76,7 @@ For AI features in sensitive domains, some percentage of outputs require human r
 | Infrastructure and overhead | 10–20% |
 | Human review and escalation | 0–25% (domain-dependent) |
 
-Run this accounting before you set a price. If you don't know your fully-loaded cost per call, you cannot know whether you're pricing for margin or pricing for ruin.
+Run this accounting before you set a price. If you do not know your fully-loaded cost per call, you cannot know whether you are pricing for margin or pricing for ruin.
 
 ## Pricing Models: Three Approaches and When Each Works
 
@@ -86,7 +86,7 @@ AI features are part of the product. No additional charge. No usage limits commu
 
 **When this works:**
 - AI feature usage per user is low and predictable
-- AI cost is a small fraction of overall COGS (cost of goods sold) — typically under 5–10% of subscription revenue
+- AI cost is a small fraction of overall COGS (cost of goods sold), typically under 5-10% of subscription revenue
 - The AI feature is a key differentiator that drives initial conversion and retention, making it worth subsidizing
 - You can absorb cost variance because the user base is paying meaningful per-seat or per-account fees
 
@@ -125,16 +125,16 @@ Users pay for AI features based on how much they use them — per document proce
 - Enterprise customers prefer to pay for what they use rather than a flat fee
 
 **When this breaks:**
-- Usage-based pricing creates psychological friction that suppresses feature adoption — users hesitate to use the feature because they're watching a meter
+- Usage-based pricing creates psychological friction that suppresses feature adoption. Users hesitate to use the feature because they are watching a meter.
 - Small-scale users see low bills but feel nickel-and-dimed
-- Your sales and billing infrastructure isn't set up for usage-based models
+- Your sales and billing infrastructure is not set up for usage-based models
 - You lose the simplicity of flat-rate pricing that makes buying decisions easy
 
 **Hybrid approach**: Usage-based above a generous included baseline. Users get, for example, 100 AI generations per month included, with additional usage at $0.10/generation. This preserves the simplicity and adoption benefits of the included model for most users while protecting economics at the tail.
 
 ## Margin Management: When the Feature Costs More Than It Earns
 
-The most dangerous scenario in AI feature pricing is one that's common: the feature is working, users love it, adoption is growing — and the unit economics are getting worse with every new user.
+The most dangerous scenario in AI feature pricing is one that is common: the feature is working, users love it, adoption is growing, and the unit economics are getting worse with every new user.
 
 This is not a hypothetical risk. It has happened to real products, particularly those that launched AI features with optimistic cost assumptions and then watched usage patterns diverge dramatically from projections.
 
@@ -158,15 +158,15 @@ Track these metrics on a per-user or per-account basis, not just in aggregate:
 | Critical (AI cost >40% of segment revenue) | Immediate pricing or packaging change required; rate-limit affected users; consider feature scope reduction |
 | Unsustainable (AI cost > revenue generated) | Shut down unlimited access; move to usage-based pricing immediately; evaluate whether feature should exist in current form |
 
-Never let a margin problem go unaddressed because the feature is popular. Popularity without economics is not success — it is a liability that grows with scale.
+Never let a margin problem go unaddressed because the feature is popular. Popularity without economics is not success. It is a liability that grows with scale.
 
 ## The Free Tier Trap: Giving Away AI to Drive Adoption
 
-The free tier trap is a specific version of the margin problem, and it deserves its own treatment because it's so common and so seductive.
+The free tier trap is a specific version of the margin problem, and it deserves its own treatment because it is so common and so seductive.
 
 The logic of the free AI tier sounds reasonable: offer AI features for free to drive adoption, demonstrate value, and convert users to paid. It works for many software features. Why not for AI?
 
-Because most software features have near-zero marginal cost at scale. AI features do not. Every free user who uses your AI feature is a real cost that doesn't convert to revenue unless and until they pay.
+Because most software features have near-zero marginal cost at scale. AI features do not. Every free user who uses your AI feature is a real cost that does not convert to revenue unless and until they pay.
 
 ### When Free AI Works
 
@@ -178,13 +178,13 @@ Because most software features have near-zero marginal cost at scale. AI feature
 ### When Free AI Destroys Value
 
 - Free usage is unlimited or the caps are generous enough to be the full product
-- Conversion rates are low — free users are using the feature indefinitely without converting
+- Conversion rates are low. Free users are using the feature indefinitely without converting.
 - Your free tier is populated by users who have no intention of paying (e.g., students, hobbyists, competitors doing competitive research)
 - The free AI feature attracts high-volume automated usage that was never the target user
 
 **The viability test for free AI tiers:**
 
-Estimate your cost per free user per month (actual AI costs). Multiply by your free-to-paid conversion rate. Compare to the average revenue of a converted paid user over their first year. If the math doesn't work at current conversion rates, the free tier is not a growth strategy — it is a subsidy program.
+Estimate your cost per free user per month (actual AI costs). Multiply by your free-to-paid conversion rate. Compare to the average revenue of a converted paid user over their first year. If the math does not work at current conversion rates, the free tier is not a growth strategy. It is a subsidy program.
 
 | Scenario | Monthly free AI cost/user | Conversion rate | LTV of converted user (year 1) | Verdict |
 |---|---|---|---|---|
@@ -218,7 +218,7 @@ For each competitor, calculate what the user is getting per dollar:
 - Documents processed per dollar per month
 - (Whatever the relevant unit is for your category)
 
-This gives you a normalizable comparison. If Competitor A provides 100 AI summaries/month for $30 and Competitor B provides 500 AI summaries/month for $50, they are not the same offer — and your pricing needs to be positioned relative to both.
+This gives you a normalizable comparison. If Competitor A provides 100 AI summaries/month for $30 and Competitor B provides 500 AI summaries/month for $50, they are not the same offer. Your pricing needs to be positioned relative to both.
 
 ### Step 3: Identify Positioning Opportunities
 
@@ -232,7 +232,7 @@ This gives you a normalizable comparison. If Competitor A provides 100 AI summar
 
 ### Step 4: Validate with Users
 
-Competitive pricing analysis tells you what the market is charging. User research tells you what your specific users value and what they'll pay. Run pricing sensitivity research — willingness-to-pay studies, conjoint analysis, or straightforward pricing conversations in user interviews — before setting final prices. Competitor data is an input, not a substitute for direct user signal.
+Competitive pricing analysis tells you what the market is charging. User research tells you what your specific users value and what they will pay. Run pricing sensitivity research, such as willingness-to-pay studies, conjoint analysis, or straightforward pricing conversations in user interviews, before setting final prices. Competitor data is an input, not a substitute for direct user signal.
 
 ### The Pricing Decision Checklist
 

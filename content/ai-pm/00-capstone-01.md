@@ -50,9 +50,9 @@ Pull your last 90 days of support ticket data. Categorize tickets by:
 | Billing/account questions | 150 | Partially |
 | Other | 70 | Mixed |
 
-**Analysis**: Approximately 1,060 tickets per month (59%) are candidates for AI deflection. If the AI deflects 40% of those, that's ~424 fewer tickets per month — meaningful for a team managing 1,800/month.
+**Analysis**: Approximately 1,060 tickets per month (59%) are candidates for AI deflection. If the AI deflects 40% of those, that is approximately 424 fewer tickets per month, which is meaningful for a team managing 1,800/month.
 
-**The "unlimited humans" test**: If you had 10 more support reps, what would they do? They'd answer the same how-to and configuration questions faster. An AI doing this isn't transforming anything — it's automating a cost center. That's legitimate value, but frame it correctly.
+**The "unlimited humans" test**: If you had 10 more support reps, what would they do? They would answer the same how-to and configuration questions faster. An AI doing this is not transforming anything. It is automating a cost center. That is legitimate value, but frame it correctly.
 
 **Is 90 days realistic?**
 
@@ -219,7 +219,7 @@ Track these by query category, user segment, and over time.
 
 **Customer-facing**: "We're piloting an AI support assistant to help you get faster answers. If it doesn't solve your issue, it will connect you to our team in one click. [Enable for my account / Keep standard support]."
 
-Do not call it "AI-powered" in customer-facing language without first confirming your customer base reacts positively to AI branding. Some B2B operations buyers are skeptical; "intelligent assistant" or "automated help" may be preferable framing depending on research.
+Do not call it "AI-powered" in customer-facing language without first confirming your customer base reacts positively to AI branding. Some B2B operations buyers are skeptical. "Intelligent assistant" or "automated help" may be preferable framing depending on research.
 
 ### Monitoring Setup
 
@@ -252,12 +252,12 @@ Before Phase 2 launches, the following must be live:
 
 ## Common Failure Modes to Avoid
 
-**Shipping without shadow mode**: Teams skip shadow mode because 90 days is short. Don't. Shadow mode in weeks 1–3 is what makes the rest of the plan safe. If shadow mode reveals that the chatbot is wrong 40% of the time, you've saved yourself from a customer trust crisis.
+**Shipping without shadow mode**: Teams skip shadow mode because 90 days is short. Do not. Shadow mode in weeks 1-3 is what makes the rest of the plan safe. If shadow mode reveals that the chatbot is wrong 40% of the time, you have saved yourself from a customer trust crisis.
 
-**Letting the CEO's timeline override the kill criteria**: The most important decision in this capstone is maintaining discipline at the 45-day review. If the metrics don't support proceeding, say so. A failed chatbot in production is more damaging to the CEO's goals than a delayed launch.
+**Letting the CEO's timeline override the kill criteria**: The most important decision in this capstone is maintaining discipline at the 45-day review. If the metrics do not support proceeding, say so. A failed chatbot in production is more damaging to the CEO's goals than a delayed launch.
 
 **Ignoring the support team**: The support team is a critical stakeholder and a crucial source of quality feedback. Loop them in early, treat them as partners, and make sure their workflow is respected during the transition.
 
 **Optimizing for deflection rate instead of resolution quality**: A chatbot that deflects 50% of tickets by giving vague non-answers that frustrate users has made your product worse, not better. The success metric is resolved issues, not deflected tickets. Define the distinction clearly and track both.
 
-**Never closing the feedback loop**: If users flag errors and nothing changes, they stop flagging errors. Demonstrate that feedback leads to improvements — announce when you've fixed something a user reported. This converts skeptics into advocates.
+**Never closing the feedback loop**: If users flag errors and nothing changes, they stop flagging errors. Demonstrate that feedback leads to improvements. Announce when you have fixed something a user reported. This converts skeptics into advocates.

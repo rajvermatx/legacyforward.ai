@@ -22,13 +22,13 @@ The board has added a 30-minute item to next quarter's meeting: "AI Product Stra
 
 You have 30 minutes, a room of 8 board members with backgrounds in finance, operations, and enterprise software (not AI), and a company that has shipped two AI features in the last 12 months with mixed results.
 
-Your job: structure a presentation that's honest, forward-looking, and inspires confidence without overpromising.
+Your job: structure a presentation that is honest, forward-looking, and inspires confidence without overpromising.
 
 ---
 
 ## Part 1: Structure the Narrative
 
-The worst AI strategy presentations do one of three things: they try to impress with technical depth the board doesn't need and can't evaluate; they over-commit to a roadmap of features that haven't been validated; or they are defensive and focus too much on catching up to competitors rather than establishing a forward path.
+The worst AI strategy presentations do one of three things: they try to impress with technical depth the board does not need and cannot evaluate. They over-commit to a roadmap of features that have not been validated. Or they are defensive and focus too much on catching up to competitors rather than establishing a forward path.
 
 The best board-level AI strategy presentation tells a clear story in four acts:
 
@@ -40,7 +40,7 @@ For Meridian, the opportunity framing might be:
 
 > "HR teams in mid-market companies are drowning in repetitive administrative work — onboarding paperwork, compliance reminders, performance review cycles — while struggling to find time for the strategic work that actually moves their organizations forward. AI creates the opportunity to automate the administrative layer and surface the insights that make HR leaders more effective. Our thesis is that the companies that get this right will become indispensable to their HR teams, not just useful."
 
-Keep Act 1 short. The board knows AI is important — they've asked you to present on it. You don't need to spend 10 minutes on market context.
+Keep Act 1 short. The board knows AI is important. They have asked you to present on it. You do not need to spend 10 minutes on market context.
 
 ### Act 2: Where We Are (7–8 minutes)
 
@@ -62,11 +62,11 @@ Board members do not need to understand how the AI Onboarding Assistant works. T
 | "Our recommendation engine uses collaborative filtering and content-based signals" | "Employees shown AI-recommended training are 2.3x more likely to complete it than those assigned courses manually" |
 | "We've fine-tuned on our customer data for 6 months" | "Our AI accuracy has improved from 62% to 81% since launch, based on feedback from 340 pilot users" |
 
-### Act 3: Where We're Going (10 minutes)
+### Act 3: Where We Are Going (10 minutes)
 
 This is your forward strategy. Three to four strategic bets, each with a clear rationale, a description of what success looks like, and a realistic timeline.
 
-**Avoid the temptation to present a feature roadmap.** A list of features with Q3 and Q4 dates is not a strategy — it's a delivery plan, and the board doesn't need that level of detail. What the board needs is confidence that you understand where value is created, that you're making deliberate bets, and that you have a framework for deciding what to build.
+**Avoid the temptation to present a feature roadmap.** A list of features with Q3 and Q4 dates is not a strategy. It is a delivery plan, and the board does not need that level of detail. What the board needs is confidence that you understand where value is created, that you are making deliberate bets, and that you have a framework for deciding what to build.
 
 For Meridian, the strategic bets might be:
 
@@ -86,7 +86,7 @@ For Meridian, the strategic bets might be:
 
 Board members are thinking about capital allocation and risk. Be direct about both.
 
-**Investment ask** (if any): If you're asking for incremental budget to accelerate AI development, state the ask clearly, explain what it buys, and provide a return framework. "We're requesting $800K in incremental R&D budget for 2026 to staff the performance review AI feature. Our model shows this feature, if it meets quality targets, adds 15 percentage points of retention improvement for at-risk accounts. At our current ARR, that's worth approximately $2.1M in retained revenue annually."
+**Investment ask** (if any): If you are asking for incremental budget to accelerate AI development, state the ask clearly, explain what it buys, and provide a return framework. "We're requesting $800K in incremental R&D budget for 2026 to staff the performance review AI feature. Our model shows this feature, if it meets quality targets, adds 15 percentage points of retention improvement for at-risk accounts. At our current ARR, that's worth approximately $2.1M in retained revenue annually."
 
 **Risk acknowledgment**: Boards respect honesty about risk more than optimism. Name the real risks:
 
@@ -118,13 +118,13 @@ Board members are thinking about capital allocation and risk. Be direct about bo
 | AI investment efficiency | What is the return on AI R&D spend? | "Each dollar of AI R&D in 2025 contributed $2.40 of retained revenue" |
 | Competitive positioning | How do we compare to AI-native competitors? | User research: customers rank our AI features at parity with Competitor A for onboarding, below parity for performance review |
 
-> **Think of it like this:** The board is not running the product. They are providing capital and oversight. The questions they're answering are: "Is this a good use of our capital? Is the team executing well? Are we winning in the market?" Every metric you present should be answerable to one of those three questions. If you can't connect a metric to capital allocation, execution quality, or competitive position, cut it from the presentation.
+> **Think of it like this:** The board is not running the product. They are providing capital and oversight. The questions they are answering are: "Is this a good use of our capital? Is the team executing well? Are we winning in the market?" Every metric you present should be answerable to one of those three questions. If you cannot connect a metric to capital allocation, execution quality, or competitive position, cut it from the presentation.
 
 ---
 
 ## Part 3: Handling the Workforce Replacement Question
 
-Every AI board presentation eventually reaches this moment. A board member — often the one with the most generalist background — asks some version of:
+Every AI board presentation eventually reaches this moment. A board member, often the one with the most generalist background, asks some version of:
 
 > "When do you think AI will replace most of our customers' HR teams? Should we be worried about our market shrinking?"
 
@@ -221,7 +221,7 @@ Use this as a leave-behind for board members, or as the spine of your internal A
 
 **Investment Ask**
 
-*[If applicable: what incremental resources you're requesting, what they buy, and the expected return]*
+*[If applicable: what incremental resources you are requesting, what they buy, and the expected return]*
 
 ---
 
@@ -234,6 +234,6 @@ Use this as a leave-behind for board members, or as the spine of your internal A
 
 ---
 
-This one-pager should be able to stand alone — if a board member forwards it to a colleague who wasn't in the room, they should be able to understand your strategy, your current state, and your forward direction without the presentation deck.
+This one-pager should be able to stand alone. If a board member forwards it to a colleague who was not in the room, they should be able to understand your strategy, your current state, and your forward direction without the presentation deck.
 
-The best board presentations don't just inform. They create alignment. When you leave the room, every board member should have the same understanding of where you're going, why you're going there, and what success looks like. That alignment — more than any individual slide — is what makes the 30 minutes worthwhile.
+The best board presentations do not just inform. They create alignment. When you leave the room, every board member should have the same understanding of where you are going, why you are going there, and what success looks like. That alignment, more than any individual slide, is what makes the 30 minutes worthwhile.

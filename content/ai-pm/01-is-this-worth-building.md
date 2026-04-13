@@ -26,9 +26,9 @@ This chapter gives you the framework to answer that question before you commit.
 
 ## Two Very Different Things AI Can Do
 
-The first conceptual mistake PMs make when evaluating AI features is treating "AI" as a single category of capability. It isn't. For purposes of product decision-making, there are two fundamentally different things an AI-powered feature can do, and they require completely different kinds of justification.
+The first conceptual mistake PMs make when evaluating AI features is treating "AI" as a single category of capability. It is not. For purposes of product decision-making, there are two fundamentally different things an AI-powered feature can do, and they require completely different kinds of justification.
 
-**Automation** uses AI to do something a human already does, faster, cheaper, or at greater scale. The task is understood, the output is defined, and the value comes from removing cost or friction. An AI that reads invoices and extracts line items is automating a known task. An AI that categorizes support tickets is automating a known task. The signal that you're looking at an automation use case: you could describe a clear rubric for what "correct" looks like.
+**Automation** uses AI to do something a human already does, faster, cheaper, or at greater scale. The task is understood, the output is defined, and the value comes from removing cost or friction. An AI that reads invoices and extracts line items is automating a known task. An AI that categorizes support tickets is automating a known task. The signal that you are looking at an automation use case: you could describe a clear rubric for what "correct" looks like.
 
 **Transformation** uses AI to do something that wasn't possible before — or that would only have been possible for the most resourceful, best-staffed organizations. An AI that synthesizes a year of customer feedback into a prioritized list of product themes isn't just automating reading — it's enabling a qualitative capability that most teams simply didn't have. An AI that predicts which accounts are likely to churn next month before any human signals appear is surfacing information that didn't previously exist in actionable form.
 
@@ -36,7 +36,7 @@ The first conceptual mistake PMs make when evaluating AI features is treating "A
 
 The distinction matters because automation use cases live and die on economics and accuracy. Transformation use cases live and die on whether users trust and act on what the AI surfaces. Both are worth building under the right conditions — but the way you validate them, the metrics you track, and the risks you manage are completely different.
 
-This is the first principle of Signal Capture as applied to product management: before you can capture the right signal from a market or user base, you need to know what kind of value you're actually trying to generate.
+This is the first principle of Signal Capture as applied to product management: before you can capture the right signal from a market or user base, you need to know what kind of value you are actually trying to generate.
 
 ## The "Unlimited Humans" Test
 
@@ -52,7 +52,7 @@ If the answer is "sort of, but it would take too long" — pay close attention. 
 
 ## The Signal Capture Test: 5 Questions
 
-Before any AI feature idea advances from conversation to discovery, run it through these five questions. They constitute what the LegacyForward framework calls the Signal Capture test — because you cannot build a useful product if you haven't correctly identified the signal you're trying to capture.
+Before any AI feature idea advances from conversation to discovery, run it through these five questions. They constitute what the LegacyForward framework calls the Signal Capture test, because you cannot build a useful product if you have not correctly identified the signal you are trying to capture.
 
 **Question 1: What is the specific user pain, and how does the user experience it today?**
 
@@ -68,7 +68,7 @@ Every AI-powered feature has failure modes. The question isn't whether the AI wi
 
 **Question 4: What data does this require, and do you have it?**
 
-AI features are not built from logic; they're built from data. This question has two parts that PMs often conflate. First: what kind of data does the AI need to do its job? Second: does that data exist, is it accessible, is it of sufficient quality, and is your organization permitted to use it? Many promising AI feature ideas die here, not because the concept is wrong, but because the data foundation doesn't exist or can't be assembled at realistic cost and timeline.
+AI features are not built from logic. They are built from data. This question has two parts that PMs often conflate. First: what kind of data does the AI need to do its job? Second: does that data exist, is it accessible, is it of sufficient quality, and is your organization permitted to use it? Many promising AI feature ideas die here, not because the concept is wrong, but because the data foundation does not exist or cannot be assembled at realistic cost and timeline.
 
 **Question 5: What's the simplest non-AI solution, and why isn't it good enough?**
 
@@ -93,29 +93,29 @@ The key column is the last one. Warning signs don't mean "never build this" — 
 
 ## Transformation vs. Automation: The Signal Capture Frame
 
-The Signal Capture principle from the LegacyForward framework is, at its core, about identifying which signals from your market and users actually matter — and then building your product architecture around those signals rather than around what's technically interesting. Applied to the build-or-not decision, it asks: *are you chasing a genuine signal from users, or are you chasing excitement about the technology itself?*
+The Signal Capture principle from the LegacyForward framework is, at its core, about identifying which signals from your market and users actually matter, and then building your product architecture around those signals rather than around what is technically interesting. Applied to the build-or-not decision, it asks: are you chasing a genuine signal from users, or are you chasing excitement about the technology itself?
 
 Here is how this plays out in practice. A genuine signal looks like this: users are consistently taking a long and painful workaround to accomplish something, and when you describe an AI-powered version that removes that workaround, their eyes light up. Or: a high-value user segment is not using your product for a category of work they're currently doing elsewhere, and the reason is a capability gap that AI can plausibly fill.
 
-A false signal looks like this: no user has ever complained about the problem you're solving. Or: the problem exists, but users are satisfied with their current solution and don't feel the pain acutely. Or: the feature sounds impressive in a demo but doesn't integrate naturally into the workflow where the decision actually gets made.
+A false signal looks like this: no user has ever complained about the problem you are solving. Or the problem exists, but users are satisfied with their current solution and do not feel the pain acutely. Or the feature sounds impressive in a demo but does not integrate naturally into the workflow where the decision actually gets made.
 
-The Signal Capture test isn't passed by validating that the AI can do the thing. It's passed by validating that the thing, done well, will change user behavior in a way that creates measurable business value.
+The Signal Capture test is not passed by validating that the AI can do the thing. It is passed by validating that the thing, done well, will change user behavior in a way that creates measurable business value.
 
 ## The Anti-Pattern: A Solution Looking for a Problem
 
 Every experienced PM has seen this pattern: a team falls in love with a technology and then works backward to find a problem it can solve. In the AI era, this anti-pattern is especially dangerous because the technology is genuinely impressive, demos beautifully, and generates real organizational excitement.
 
-The tells are subtle but consistent. Teams in this pattern spend more time describing what the AI does than what the user problem is. They measure success by model metrics (accuracy, latency, benchmark scores) rather than user outcomes. They frame competitive risk as "we'll fall behind if we don't have AI" rather than "users will switch to a competitor that solves X better." And when you ask "what does a user do differently because this feature exists?" the answer is vague.
+The tells are subtle but consistent. Teams in this pattern spend more time describing what the AI does than what the user problem is. They measure success by model metrics (accuracy, latency, benchmark scores) rather than user outcomes. They frame competitive risk as "we will fall behind if we do not have AI" rather than "users will switch to a competitor that solves X better." And when you ask "what does a user do differently because this feature exists?" the answer is vague.
 
 > **Think of it like this:** A hammer is a remarkable tool. But if you find yourself looking around your house for things that might be nails, you've inverted the problem-solving process. First find the thing that needs fixing. Then decide whether a hammer is the right tool.
 
-The solution-looking-for-a-problem pattern isn't just wasteful — it's actively harmful. It consumes engineering capacity that could go to genuine user needs, creates technical debt in the form of features nobody uses, and trains the organization to evaluate ideas by how impressive they sound rather than by what problem they solve.
+The solution-looking-for-a-problem pattern is not just wasteful. It is actively harmful. It consumes engineering capacity that could go to genuine user needs, creates technical debt in the form of features nobody uses, and trains the organization to evaluate ideas by how impressive they sound rather than by what problem they solve.
 
 The antidote is disciplined application of the five Signal Capture questions above, consistently, before any feature gets resources.
 
 ## Putting It Together: A Pre-Discovery Checklist
 
-Before an AI feature idea moves from your backlog into active discovery work, it should clear this checklist. Each "no" is a blocker that needs to be resolved — either by doing more research, reframing the feature, or removing it from consideration.
+Before an AI feature idea moves from your backlog into active discovery work, it should clear this checklist. Each "no" is a blocker that needs to be resolved, either by doing more research, reframing the feature, or removing it from consideration.
 
 | Checkpoint | Question | Status |
 |---|---|---|
@@ -139,8 +139,8 @@ The most valuable thing a PM can do in an AI-first product environment is be the
 
 ## Summary
 
-The first question for any AI feature is not "can we build this?" — it's "should we?" Answering that question requires understanding whether you're pursuing automation or transformation, applying the five Signal Capture questions, honestly comparing AI to the best non-AI alternative, and using the decision table to match feature types to the right technical approach.
+The first question for any AI feature is not "can we build this?" It is "should we?" Answering that question requires understanding whether you are pursuing automation or transformation, applying the five Signal Capture questions, honestly comparing AI to the best non-AI alternative, and using the decision table to match feature types to the right technical approach.
 
 The Unlimited Humans test cuts through technical excitement to the underlying value question. The pre-discovery checklist ensures you've done the homework before committing resources. And the awareness of the solution-looking-for-a-problem anti-pattern keeps you grounded when organizational pressure pushes toward AI for its own sake.
 
-Every chapter that follows assumes you've cleared this gate. Not because perfect certainty is achievable at the idea stage — it never is — but because disciplined early filtering is what separates product teams that build the right things from product teams that build impressive demos that users never adopt.
+Every chapter that follows assumes you have cleared this gate. Not because perfect certainty is achievable at the idea stage, it never is, but because disciplined early filtering is what separates product teams that build the right things from product teams that build impressive demos that users never adopt.
