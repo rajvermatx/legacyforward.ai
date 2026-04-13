@@ -26,7 +26,7 @@ badges:
 ![Diagram 1](/diagrams/graph-ai/capstone-03.svg)
 A mid-size enterprise has 200+ applications, 50+ infrastructure components, and a CMDB (Configuration Management Database) that lives in a spreadsheet that was last updated 6 months ago. When an incident hits a critical system, the operations team calls around asking "Does your app use the payment gateway?" and "Are you connected to the Oracle database on server DB-PROD-03?"
 
-The goal: ingest the service catalog and dependency data into a graph, then build an agent that answers impact questions — "What breaks if X goes down?" — with a complete blast radius report.
+The goal: ingest the service catalog and dependency data into a graph, then build an agent that answers impact questions such as "What breaks if X goes down?" with a complete blast radius report.
 
 ### What We Are Building
 
@@ -262,7 +262,7 @@ class DependencyGraphBuilder:
 
 ## Stage 3: Blast Radius Queries
 
-The core value of the dependency graph is answering "What breaks if X goes down?" These are blast radius queries — starting from a failed component and traversing outward to find everything affected.
+The core value of the dependency graph is answering "What breaks if X goes down?" These are blast radius queries: starting from a failed component and traversing outward to find everything affected.
 
 ```python
 from dataclasses import dataclass, field

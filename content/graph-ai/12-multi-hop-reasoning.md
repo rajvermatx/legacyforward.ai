@@ -18,38 +18,38 @@ badges:
 
 # Multi-Hop Reasoning
 
-Who approved the vendor that supplies the component that failed the safety test? That's 4 hops.
+Who approved the vendor that supplies the component that failed the safety test? That is 4 hops.
 
 ## 01. What Multi-Hop Means
 
 
 ![Diagram 1](/diagrams/graph-ai/ch12-01.svg)
-A hop is a single relationship traversal. "Who manages Alice?" is 1 hop — you follow one MANAGES relationship from Alice to her manager. "Who manages Alice's manager?" is 2 hops. "Who approved the vendor that supplies the component that failed the safety test?" is 4 hops:
+A hop is a single relationship traversal. "Who manages Alice?" is 1 hop. You follow one MANAGES relationship from Alice to her manager. "Who manages Alice's manager?" is 2 hops. "Who approved the vendor that supplies the component that failed the safety test?" is 4 hops:
 
 ```
 SafetyTest --[FAILED]--> Component --[SUPPLIED_BY]--> Vendor
     --[APPROVED_BY]--> Approver
 ```
 
-Multi-hop questions are the questions that knowledge graphs were built to answer. They are also the questions that are hardest for LLMs to handle alone, because each hop requires looking up specific data — and the LLM does not have that data in its weights or its context window.
+Multi-hop questions are the questions that knowledge graphs were built to answer. They are also the questions that are hardest for LLMs to handle alone. Each hop requires looking up specific data that the LLM does not have in its weights or its context window.
 
 > **Think of it like this:** Imagine someone asks you "What is the name of the architect who designed the building where the company that makes your phone's processor is headquartered?" You know who makes your phone's processor (maybe TSMC or Qualcomm), but you probably do not know their headquarters' architect. Each hop in that question requires a separate lookup in a different knowledge domain. That is exactly what multi-hop graph traversal does — it chains together lookups, where the output of each lookup feeds the input of the next.
 
 ## 02. Why This Is Hard for LLMs Alone
 
-LLMs without graph access attempt multi-hop reasoning in one of two ways, both unreliable:
+LLMs without graph access attempt multi-hop reasoning in one of two ways. Both are unreliable:
 
 ### Failure Mode 1: Guessing the Chain
 
-The LLM tries to answer the full chain from its training data. "Who approved the vendor that supplies the failed component?" The LLM might generate a plausible-sounding answer — "Based on typical procurement processes, the VP of Supply Chain likely approved..." — but it is fabricating, not reasoning. It has no access to your specific approval records.
+The LLM tries to answer the full chain from its training data. "Who approved the vendor that supplies the failed component?" The LLM might generate a plausible-sounding answer: "Based on typical procurement processes, the VP of Supply Chain likely approved..." It is fabricating, not reasoning. It has no access to your specific approval records.
 
 ### Failure Mode 2: Partial Retrieval
 
-With standard RAG, the LLM retrieves chunks related to the question. It might find a chunk mentioning the failed component and another chunk mentioning vendor approvals. But the chunks do not connect — they come from different documents, different time periods, maybe different contexts. The LLM cannot bridge the gap because the connection exists in the graph structure, not in any single text passage.
+With standard RAG, the LLM retrieves chunks related to the question. It might find a chunk mentioning the failed component and another chunk mentioning vendor approvals. But the chunks do not connect. They come from different documents, different time periods, and different contexts. The LLM cannot bridge the gap because the connection exists in the graph structure, not in any single text passage.
 
 ### What the Graph Provides
 
-The graph makes multi-hop reasoning deterministic. Each hop is a concrete traversal with a concrete result:
+The graph makes multi-hop reasoning deterministic. Each hop is a concrete traversal with a verifiable result:
 
 ```
 Hop 1: MATCH (t:Event {name: "Safety Test ST-2024-019"})
@@ -73,7 +73,7 @@ Each hop is verifiable. Each result is traceable. The final answer — "Sarah Ch
 
 ## 03. Decomposing Multi-Hop Questions
 
-The first challenge is breaking a natural language question into individual hops. This is where the LLM shines — understanding language structure — while the graph handles the data lookups.
+The first challenge is breaking a natural language question into individual hops. This is where the LLM shines: understanding language structure. The graph handles the data lookups.
 
 ```python
 import anthropic
@@ -165,7 +165,7 @@ def decompose_question(question: str) -> list[dict]:
 
 ## 04. Chain-of-Traversal: Step-by-Step Graph Walking
 
-Chain-of-traversal is the graph equivalent of chain-of-thought. Instead of reasoning through logic steps, the agent walks through graph steps — executing one traversal, observing the result, then executing the next traversal using the result.
+Chain-of-traversal is the graph equivalent of chain-of-thought. Instead of reasoning through logic steps, the agent walks through graph steps. It executes one traversal, observes the result, then executes the next traversal using that result.
 
 ```python
 from neo4j import GraphDatabase
@@ -332,7 +332,7 @@ Provide:
 
 ## 05. Combining Graph Paths with LLM Synthesis
 
-Sometimes you do not need to decompose — you can traverse the full path in a single Cypher query and then use the LLM to interpret the result.
+Sometimes you do not need to decompose. You can traverse the full path in a single Cypher query and then use the LLM to interpret the result.
 
 ```python
 def single_query_multi_hop(
@@ -560,11 +560,11 @@ Return ONLY the Cypher query."""
 
 ## 07. Performance Considerations
 
-Multi-hop queries can be expensive. Here is how to keep them fast.
+Multi-hop queries can be expensive. Here are the techniques that keep them fast.
 
 ### Depth Limits
 
-Every additional hop can multiply the number of paths explored. Set hard limits based on your use case:
+Every additional hop can multiply the number of paths explored. Set hard limits based on your use case and enforce them at the query level:
 
 ```python
 # Recommended depth limits by use case
@@ -594,7 +594,7 @@ The number of paths explored grows exponentially with depth for highly connected
 
 ### Caching Intermediate Results
 
-When the same entities appear in multiple questions, cache their neighborhoods:
+When the same entities appear in multiple questions, cache their neighborhoods to avoid redundant traversals:
 
 ```python
 from functools import lru_cache
@@ -640,7 +640,7 @@ def cached_neighborhood(
 
 ### Pruning Traversals
 
-Not all relationships are equal. When traversing, you can prune low-value paths:
+Not all relationships are equal. When traversing, prune low-value paths to narrow the search space:
 
 ```cypher
 // Instead of traversing ALL relationships:
@@ -658,7 +658,7 @@ WHERE ALL(n IN nodes(path) WHERE n.status <> 'inactive')
 
 ## 08. Hop Count by Use Case
 
-This table provides a reference for how many hops typical questions require, organized from simple to complex:
+This table provides a reference for how many hops typical questions require, from simple to complex:
 
 | Hops | Use Case | Example Question | Typical Latency |
 | --- | --- | --- | --- |
@@ -758,4 +758,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Can you set appropriate depth limits for different use cases?
 - [ ] Can you build a complete multi-hop agent with a step-by-step trace?
 
-Multi-hop reasoning is where knowledge graphs and LLMs complement each other most powerfully. The graph provides deterministic, traceable traversal through connected data. The LLM provides natural language understanding, question decomposition, and answer synthesis. Together, they answer questions that neither could handle alone.
+Multi-hop reasoning is where knowledge graphs and LLMs complement each other most powerfully. The graph provides deterministic, traceable traversal through connected data. The LLM provides natural language understanding, question decomposition, and answer synthesis. Together they answer questions that neither could handle alone.

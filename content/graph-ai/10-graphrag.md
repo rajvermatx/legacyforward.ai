@@ -19,7 +19,7 @@ badges:
 
 # GraphRAG — Beyond Vector Search
 
-Your RAG chatbot answers "What is our return policy?" perfectly. But "Which manager approved the vendor whose part failed the safety test?" — blank stare.
+Your RAG chatbot answers "What is our return policy?" perfectly. Ask "Which manager approved the vendor whose part failed the safety test?" and you get a blank stare.
 
 ## 01. Where Vector-Only RAG Breaks
 
@@ -27,15 +27,15 @@ Your RAG chatbot answers "What is our return policy?" perfectly. But "Which mana
 ![Diagram 1](/diagrams/graph-ai/ch10-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch10-02.svg)
-Retrieval-Augmented Generation (RAG) has become the standard architecture for enterprise AI: embed your documents, store them in a vector database, retrieve relevant chunks based on semantic similarity to the user's question, and feed those chunks to an LLM for synthesis.
+Retrieval-Augmented Generation (RAG) has become the standard architecture for enterprise AI. You embed your documents, store them in a vector database, retrieve relevant chunks based on semantic similarity to the user's question, and feed those chunks to an LLM for synthesis.
 
-This works beautifully for lookup questions — questions where the answer lives in a single chunk of text. "What is the vacation policy?" "How do I submit an expense report?" "What are the system requirements for Product X?" The embedding captures the meaning of the question, the vector search finds the chunk that talks about the same topic, and the LLM extracts the answer.
+This works well for lookup questions: questions where the answer lives in a single chunk of text. "What is the vacation policy?" "How do I submit an expense report?" "What are the system requirements for Product X?" The embedding captures the meaning of the question, the vector search finds the matching chunk, and the LLM extracts the answer.
 
 It breaks for relationship questions. Here is why.
 
 ### The Embedding Problem
 
-When you embed the sentence "Acme Corp supplies the X-200 valve," you get a vector that captures the semantic meaning — something about a company, a product, and a supply relationship. When a user asks "Which vendors supply components used in Building 7?" the embedding of that question is semantically similar to chunks about vendors, components, and buildings. But the vector search has no way to connect the dots: Acme supplies the X-200, the X-200 is installed in the HVAC system, the HVAC system is in Building 7. Each of those facts might live in a different chunk, a different document, or even a different system.
+When you embed the sentence "Acme Corp supplies the X-200 valve," you get a vector that captures the semantic meaning: something about a company, a product, and a supply relationship. When a user asks "Which vendors supply components used in Building 7?" the embedding of that question is semantically similar to chunks about vendors, components, and buildings. But the vector search has no way to connect the dots. Acme supplies the X-200, the X-200 is installed in the HVAC system, the HVAC system is in Building 7. Each of those facts might live in a different chunk, a different document, or even a different system.
 
 > **Think of it like this:** Vector search is like searching a library by topic. You can find every book about "climate" and every book about "agriculture," but you cannot ask "which climate events affected crop yields in the Midwest in 2024?" because that answer requires connecting facts from multiple books. Graph traversal is the librarian who knows that Book A mentions a drought, Book B links that drought to Iowa corn production, and Book C has the yield data.
 
@@ -51,7 +51,7 @@ When you embed the sentence "Acme Corp supplies the X-200 valve," you get a vect
 
 GraphRAG is an architecture that adds graph traversal to the RAG pipeline. Instead of relying solely on vector similarity to find relevant context, GraphRAG uses the structure of a knowledge graph to follow relationships between entities.
 
-The core idea: when a question involves relationships between entities, retrieve context by traversing the graph, not by embedding similarity.
+The core idea: when a question involves relationships between entities, retrieve context by traversing the graph rather than by embedding similarity.
 
 ```
 User Question
@@ -75,13 +75,13 @@ User Question
 
 ## 03. Microsoft's GraphRAG Approach
 
-Microsoft Research published the most cited GraphRAG paper in 2024. Their approach is worth understanding even if you build your own implementation, because it introduced two important concepts.
+Microsoft Research published the most cited GraphRAG paper in 2024. Their approach is worth understanding even if you build your own implementation. It introduced two important concepts.
 
 ### Community Summaries
 
-Microsoft's approach starts by building a knowledge graph from your documents (similar to Chapter 7). Then it runs a community detection algorithm (Leiden) on the graph, which identifies clusters of densely connected nodes. For each community, it generates a natural language summary using an LLM.
+Microsoft's approach starts by building a knowledge graph from your documents (similar to Chapter 7). It then runs a community detection algorithm (Leiden) on the graph, which identifies clusters of densely connected nodes. For each community, it generates a natural language summary using an LLM.
 
-These community summaries act as a layer of abstraction. Instead of traversing raw graph data, you can retrieve relevant community summaries that describe groups of related entities.
+These community summaries act as a layer of abstraction. Instead of traversing raw graph data, you retrieve relevant community summaries that describe groups of related entities.
 
 ### Local Search vs. Global Search
 
@@ -97,7 +97,7 @@ Here is a practical implementation using Neo4j for the graph, a vector store for
 
 ### Step 1: Set Up the Graph and Vector Store
 
-Assuming you have already built a knowledge graph (Chapters 7-9), add vector embeddings to your nodes:
+Assuming you have already built a knowledge graph (Chapters 7 to 9), add vector embeddings to your nodes:
 
 ```python
 from neo4j import GraphDatabase
@@ -412,7 +412,7 @@ CONTEXT:
 
 ## 05. Hybrid Retrieval: When to Use What
 
-Not every question needs graph traversal. Not every question is answered by vector search alone. The key is routing.
+Not every question needs graph traversal. Not every question is answered by vector search alone. The key is routing each question to the right retrieval strategy.
 
 ```python
 def classify_question(question: str) -> str:
@@ -475,7 +475,7 @@ def smart_query(question: str) -> str:
 
 ## 06. Comparison: Vector-Only RAG vs. GraphRAG
 
-Here is a side-by-side comparison across ten common question types. The "Quality" column rates how well each approach answers on a 5-point scale (1 = fails, 5 = excellent).
+Here is a side-by-side comparison across ten common question types. The "Quality" column rates how well each approach answers on a 5-point scale (1 = fails, 5 = excellent). Use this table to set expectations before pitching GraphRAG to stakeholders.
 
 | # | Question Type | Example | Vector RAG | GraphRAG | Why |
 | --- | --- | --- | --- | --- | --- |
@@ -490,11 +490,11 @@ Here is a side-by-side comparison across ten common question types. The "Quality
 | 9 | **Temporal** | "Which contracts expire this quarter?" | 2 | 4 | Graph filters on date properties |
 | 10 | **Global theme** | "What are the biggest supply chain risks?" | 4 | 5 | Vector finds risk-related text; graph adds structure |
 
-**Key insight:** Vector-only RAG is excellent for questions where the answer lives in a contiguous chunk of text. GraphRAG is essential for questions that involve connections between entities — and in enterprise contexts, those are often the most valuable questions.
+**Key insight:** Vector-only RAG is excellent for questions where the answer lives in a contiguous chunk of text. GraphRAG is essential for questions that involve connections between entities. In enterprise contexts, those are often the most valuable questions.
 
 ## 07. Performance Considerations
 
-GraphRAG adds latency compared to vector-only RAG. Here is where the time goes and how to manage it:
+GraphRAG adds latency compared to vector-only RAG. Here is where the time goes and how to reduce it:
 
 | Stage | Typical Latency | Optimization |
 | --- | --- | --- |
@@ -541,15 +541,15 @@ def cached_graph_retrieve(entities_key: tuple) -> dict:
 
 ### Pitfall 1: Over-Retrieving from the Graph
 
-Traversing 3 hops from a highly connected node can return thousands of relationships. The LLM context window fills up with irrelevant data, and answer quality drops.
+Traversing 3 hops from a highly connected node can return thousands of relationships. The LLM context window fills up with irrelevant data and answer quality drops.
 
-**Fix:** Limit traversal depth based on node connectivity. High-degree nodes (> 50 connections) should be traversed only 1 hop. Low-degree nodes can go 2-3 hops.
+**Fix:** Limit traversal depth based on node connectivity. High-degree nodes (more than 50 connections) should be traversed only 1 hop. Low-degree nodes can go 2 to 3 hops.
 
 ### Pitfall 2: Entity Detection Mismatches
 
 The LLM detects "Building 7" in the question, but the graph stores it as "Facility B7" or "Building Seven." No graph results are found.
 
-**Fix:** Use fuzzy matching in the graph lookup. Full-text indexes in Neo4j support approximate matching. Maintain an alias table for common alternate names.
+**Fix:** Use fuzzy matching in the graph lookup. Full-text indexes in Neo4j support approximate matching. Maintain an alias table for common alternate names. This also handles abbreviations like "NYC" versus "New York City."
 
 ```cypher
 // Create full-text index for fuzzy entity matching
@@ -566,7 +566,7 @@ RETURN node.name, labels(node)[0], score
 
 ### Pitfall 3: Ignoring the Graph When It Has No Matches
 
-If entity detection finds nothing in the graph, fall back gracefully to vector-only RAG. Do not return "no results" — the vector store may still have the answer.
+If entity detection finds nothing in the graph, fall back gracefully to vector-only RAG. Do not return "no results." The vector store may still have the answer.
 
 ## 09. Chapter Checklist
 
@@ -579,4 +579,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Can you assemble hybrid context from both vector and graph sources?
 - [ ] Can you classify questions to route them to the best retrieval strategy?
 
-The next chapter extends GraphRAG by giving AI agents the ability to actively query and reason over the knowledge graph — not just retrieve context, but plan and execute multi-step graph operations.
+The next chapter extends GraphRAG by giving AI agents the ability to actively query and reason over the knowledge graph. The agents do not just retrieve context. They plan and execute multi-step graph operations.

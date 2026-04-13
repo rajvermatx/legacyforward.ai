@@ -18,15 +18,15 @@ badges:
 
 # Testing Graph Systems
 
-Your QA team has never tested a graph database. Here's the test pyramid they need.
+Your QA team has never tested a graph database. Here is the test pyramid they need.
 
 ## 01. Why Graph Testing Is Different
 
-Your QA team knows how to test relational databases. They write SQL assertions, check row counts, validate foreign key integrity. Graph databases require a different mindset because the data model is different. Instead of rows in tables, you have nodes with labels and properties connected by typed relationships. Instead of JOIN correctness, you care about traversal correctness — does following a chain of relationships produce the right result?
+Your QA team knows how to test relational databases. They write SQL assertions, check row counts, and validate foreign key integrity. Graph databases require a different mindset because the data model is different. Instead of rows in tables, you have nodes with labels and properties connected by typed relationships. Instead of JOIN correctness, you care about traversal correctness: does following a chain of relationships produce the right result?
 
 Three things make graph testing harder than relational testing:
 
-1. **Schema flexibility.** Neo4j does not enforce a rigid schema. A node can have any properties, and missing properties do not throw errors — they return null. A test must check not just that data exists but that it has the expected shape.
+1. **Schema flexibility.** Neo4j does not enforce a rigid schema. A node can have any properties, and missing properties do not throw errors. They return null. A test must check not just that data exists but that it has the expected shape.
 
 2. **Traversal depth.** A query that traverses 4 relationships is correct only if every hop lands on the right node. One wrong relationship in the middle of the path corrupts the entire result.
 
@@ -68,7 +68,7 @@ The graph test pyramid has 5 layers, from fastest and most numerous to slowest a
 
 ## 03. Setting Up: Testcontainers for Neo4j
 
-Every test layer below uses testcontainers to spin up a real Neo4j instance in Docker. No mocks. Mocking a graph database gives you false confidence — the mock does not validate Cypher syntax, does not enforce uniqueness constraints, and does not catch traversal errors.
+Every test layer below uses testcontainers to spin up a real Neo4j instance in Docker. No mocks. Mocking a graph database gives false confidence. The mock does not validate Cypher syntax, does not enforce uniqueness constraints, and does not catch traversal errors.
 
 ```python
 # conftest.py — shared fixtures for all graph tests
@@ -175,7 +175,7 @@ def compliance_graph(session):
 
 ## 04. Unit Tests: Testing Cypher Queries
 
-Unit tests verify that individual Cypher queries return correct results against known fixture data. Each test loads a small graph, runs one query, and asserts the result.
+Unit tests verify that individual Cypher queries return correct results against known fixture data. Each test loads a small graph, runs one query, and asserts on the result.
 
 ```python
 # test_cypher_queries.py
@@ -276,7 +276,7 @@ class TestComplianceQueries:
 
 ## 05. Integration Tests: Testing the Extraction Pipeline
 
-Integration tests verify that the end-to-end extraction pipeline — from source data to graph — produces the correct graph structure. These tests run slower because they exercise the full pipeline.
+Integration tests verify that the end-to-end extraction pipeline from source data to graph produces the correct graph structure. These tests run slower because they exercise the full pipeline.
 
 ```python
 # test_extraction_pipeline.py
@@ -428,7 +428,7 @@ class TestGraphStructure:
 
 ## 06. Query Regression Tests
 
-Query regression tests capture the expected output of key queries and verify that results do not change after data updates, schema migrations, or Cypher query refactoring.
+Query regression tests capture the expected output of key queries and verify that results do not change after data updates, schema migrations, or Cypher refactoring.
 
 ```python
 # test_query_regression.py
@@ -512,7 +512,7 @@ class TestQueryRegression:
 
 ## 07. Data Quality Tests
 
-These are the automated checks from Chapter 9, packaged to run in CI/CD after every data load. They catch problems before bad data reaches production queries.
+These are the automated checks from Chapter 9, packaged to run in CI/CD after every data load. They catch bad data before it reaches production queries.
 
 ```python
 # test_data_quality.py
@@ -599,7 +599,7 @@ class TestDataQuality:
 
 ## 08. Performance Tests
 
-Performance tests establish baselines and catch regressions before they reach production.
+Performance tests establish baselines and catch latency regressions before they reach production.
 
 ```python
 # test_performance.py
@@ -683,7 +683,7 @@ def save_benchmark(name: str, stats: dict, filepath: str = "benchmarks.json"):
 
 ## 09. Putting It All Together: CI/CD Integration
 
-Here is how to wire these tests into a CI/CD pipeline:
+Here is how to wire all test layers into a CI/CD pipeline:
 
 ```yaml
 # .github/workflows/graph-tests.yml
@@ -778,4 +778,4 @@ Before you move on, verify:
 - [ ] Data quality tests check for duplicates, missing properties, and cardinality violations
 - [ ] Performance tests track p50/p95/p99 latency for critical queries
 - [ ] Tests run in CI/CD on every PR (unit, integration, data quality) and weekly (performance)
-- [ ] The database is cleaned between tests to prevent test interdependence
+- [ ] The database is cleaned between tests to prevent interdependence

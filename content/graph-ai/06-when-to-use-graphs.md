@@ -18,7 +18,7 @@ badges:
 
 # When to Use Graphs (and When Not To)
 
-Your manager just read an article about Neo4j. Before you migrate everything, read this.
+Your manager just read an article about Neo4j. Before you migrate everything, read this chapter first.
 
 ## 01. The Hype Cycle Is Real
 
@@ -26,29 +26,29 @@ Your manager just read an article about Neo4j. Before you migrate everything, re
 ![Diagram 1](/diagrams/graph-ai/ch06-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch06-02.svg)
-Graph databases have been gaining momentum since 2020, and the arrival of GraphRAG and knowledge-graph-powered AI in 2024-2025 pushed them further into the spotlight. Articles with titles like "Why Every Enterprise Needs a Knowledge Graph" and "Graph Databases Will Replace SQL" are making the rounds.
+Graph databases have been gaining momentum since 2020. The arrival of GraphRAG and knowledge-graph-powered AI in 2024-2025 pushed them further into the spotlight. Articles with titles like "Why Every Enterprise Needs a Knowledge Graph" and "Graph Databases Will Replace SQL" are making the rounds.
 
 Most of those articles are written by vendors. They are not wrong about the capabilities of graph databases, but they are wrong about the universality. Graph databases solve specific problems extremely well. For those problems, they are genuinely transformative. For everything else, they are an expensive complication.
 
-This chapter gives you a structured framework for deciding where graphs fit in your architecture — and equally important, where they do not.
+This chapter gives you a structured framework for deciding where graphs fit in your architecture. It also covers where they do not belong.
 
 > **Think of it like this:** Graph databases are like a pickup truck. If you need to haul lumber, tow a trailer, or navigate rough terrain, a pickup truck is exactly right. If you need to commute 40 miles on a highway, a sedan is better. If someone tells you that everyone needs a pickup truck, they are either selling pickup trucks or they only haul lumber.
 
 ## 02. The Six Diagnostic Questions
 
-Before evaluating any specific graph product, answer these six questions about your workload. They are ordered from most to least important.
+Before evaluating any specific graph product, answer these six questions about your workload. They are ordered from most important to least important.
 
 ### Question 1: Does your data have deep, variable-length relationships?
 
 **What this means:** Do you have queries that need to follow chains of connections where the depth is not known in advance? Org hierarchies with unknown depth. Supply chains with variable numbers of intermediaries. Dependency graphs where you need to trace impact to any level.
 
-**If yes:** This is the strongest indicator for a graph database. Variable-length traversal is what graphs do best, and what relational databases do worst.
+**If yes:** This is the strongest indicator for a graph database. Variable-length traversal is what graphs do best. It is what relational databases do worst.
 
 **If no:** A fixed-depth relationship (manager → employee, one level) is handled perfectly well by a single JOIN. You probably do not need a graph.
 
 ### Question 2: Do you need to traverse paths (not just query endpoints)?
 
-**What this means:** Is the path itself important, or just the starting and ending points? "Find Bob's manager" queries the endpoint — the manager. "Show me the full approval chain for this purchase order" queries the path — every node along the way.
+**What this means:** Is the path itself important, or just the starting and ending points? "Find Bob's manager" queries the endpoint. "Show me the full approval chain for this purchase order" queries the path: every node along the way.
 
 **If yes:** Path queries are graph territory. SQL can retrieve endpoints efficiently but struggles with full paths, especially when you need to return all intermediate nodes.
 
@@ -56,7 +56,7 @@ Before evaluating any specific graph product, answer these six questions about y
 
 ### Question 3: Is the relationship itself important (not just the entities)?
 
-**What this means:** Do you care about attributes of the connections between entities? "Alice manages Bob" is a relationship. "Alice has managed Bob since 2022 with a performance rating of 4.5" is a relationship with properties. If the properties on the connection matter, you are dealing with rich relationships.
+**What this means:** Do you care about attributes of the connections between entities? "Alice manages Bob" is a relationship. "Alice has managed Bob since 2022 with a performance rating of 4.5" is a relationship with properties. When the properties on the connection matter, you are dealing with rich relationships.
 
 **If yes:** Property graphs handle relationship attributes natively. In SQL, this requires a junction table, which adds complexity to every query.
 
@@ -72,19 +72,19 @@ Before evaluating any specific graph product, answer these six questions about y
 
 ### Question 5: Does the schema change frequently?
 
-**What this means:** Are you regularly adding new entity types, new relationship types, or new properties? Graph databases are schema-optional — you can add new node labels, relationship types, and properties at any time without ALTER TABLE statements or migrations.
+**What this means:** Are you regularly adding new entity types, new relationship types, or new properties? Graph databases are schema-optional. You can add new node labels, relationship types, and properties at any time without ALTER TABLE statements or migrations.
 
-**If yes:** The schema flexibility of graphs is a significant advantage when your data model is evolving rapidly (common in early-stage products, research, and AI applications).
+**If yes:** The schema flexibility of graphs is a significant advantage when your data model is evolving rapidly. This is common in early-stage products, research, and AI applications.
 
-**If no:** A stable schema is a good thing. Relational databases enforce schema consistency, which prevents data quality issues.
+**If no:** A stable schema is a good thing. Relational databases enforce schema consistency and prevent data quality issues.
 
 ### Question 6: Are you doing recommendations, fraud detection, or impact analysis?
 
-**What this means:** These three use cases are the "killer apps" for graph databases — the workloads where the performance and expressiveness gap between graph and relational is largest.
+**What this means:** These three use cases are the "killer apps" for graph databases. They are the workloads where the performance and expressiveness gap between graph and relational is largest.
 
 **If yes:** A graph database should be your default choice for these workloads.
 
-**If no:** That does not mean you do not need a graph — go back to Questions 1-5.
+**If no:** That does not mean you do not need a graph. Go back to Questions 1-5.
 
 ## 03. The Scorecard
 
@@ -100,7 +100,7 @@ Before evaluating any specific graph product, answer these six questions about y
 **Scoring:**
 
 - **0-1 "Yes":** A graph database is probably not worth the investment right now. Focus on optimizing your relational queries.
-- **2-3 "Yes":** A graph database is worth prototyping for the specific workloads where you answered "yes." Do not migrate everything — add a graph alongside your relational database for the relationship-heavy use cases.
+- **2-3 "Yes":** A graph database is worth prototyping for the specific workloads where you answered "yes." Do not migrate everything. Add a graph alongside your relational database for the relationship-heavy use cases.
 - **4-6 "Yes":** A graph database should be a core component of your data architecture. The ROI will be significant in query performance, development speed, and the ability to answer questions that were previously impractical.
 
 > **Think of it like this:** This scorecard is like a doctor's checklist. One symptom might not mean anything. Two or three suggest something worth investigating. Four or more mean you should take action.
@@ -111,7 +111,7 @@ Before evaluating any specific graph product, answer these six questions about y
 
 **The problem:** Fraudsters create networks of fake accounts that transact with each other to move money, inflate reviews, or manipulate systems. These networks are invisible when you look at individual transactions but obvious when you look at the connections between accounts.
 
-**Why graphs win:** Fraud detection is fundamentally about finding patterns in networks — circular transactions, unusual clusters of connections, accounts that share devices or addresses with known bad actors. These patterns require multi-hop traversal and pattern matching, which are graph-native operations.
+**Why graphs win:** Fraud detection is fundamentally about finding patterns in networks: circular transactions, unusual clusters of connections, accounts that share devices or addresses with known bad actors. These patterns require multi-hop traversal and pattern matching, which are graph-native operations.
 
 **Real example:**
 ```cypher
@@ -127,9 +127,9 @@ RETURN a.id, b.id, c.id
 
 ### Use Case 2: Supply Chain Dependency Mapping
 
-**The problem:** Modern supply chains have multiple tiers of suppliers. When a disruption occurs (a factory closes, a port is blocked, a raw material becomes scarce), you need to know which of your products are affected — including indirect dependencies through sub-suppliers.
+**The problem:** Modern supply chains have multiple tiers of suppliers. When a disruption occurs (a factory closes, a port is blocked, a raw material becomes scarce), you need to know which of your products are affected. That includes indirect dependencies through sub-suppliers.
 
-**Why graphs win:** Supply chains are inherently graph-structured. Supplier A provides components to Supplier B, who assembles them for Supplier C, who sells to you. Tracing this chain to identify vulnerabilities requires variable-depth traversal.
+**Why graphs win:** Supply chains are inherently graph-structured. Supplier A provides components to Supplier B. Supplier B assembles them for Supplier C, who sells to you. Tracing this chain to identify vulnerabilities requires variable-depth traversal.
 
 **Real example:**
 ```cypher
@@ -145,7 +145,7 @@ ORDER BY revenue_at_risk DESC
 
 **The problem:** "Customers who bought X also bought Y" requires finding purchase patterns across the customer base. "People in similar roles with similar skills also took this training" requires matching across multiple dimensions.
 
-**Why graphs win:** Recommendation engines rely on collaborative filtering — finding similar entities based on shared connections. This is a traversal problem: start at the user, find what they are connected to, find other users who share those connections, find what those users are connected to that the original user is not.
+**Why graphs win:** Recommendation engines rely on collaborative filtering. They find similar entities based on shared connections. This is a traversal problem: start at the user, find what they are connected to, find other users who share those connections, then find what those users are connected to that the original user is not.
 
 **Real example:**
 ```cypher
@@ -164,7 +164,7 @@ LIMIT 5
 
 **The problem:** Regulatory compliance often requires tracing the full chain of actions, approvals, and entities involved in a decision. "Show me every person and system involved in approving this loan, their qualifications, and any conflicts of interest."
 
-**Why graphs win:** Compliance queries span multiple entity types (people, documents, systems, decisions) and require following chains of relationships. The graph naturally models the "paper trail" that compliance teams need to trace.
+**Why graphs win:** Compliance queries span multiple entity types (people, documents, systems, decisions) and require following chains of relationships. The graph naturally models the paper trail that compliance teams need to trace.
 
 **Real example:**
 ```cypher
@@ -181,7 +181,7 @@ RETURN approver.name, cert.name AS certification,
 
 ### Use Case 5: Knowledge Management for AI
 
-**The problem:** Your organization's knowledge is scattered across documents, databases, wikis, and people's heads. Building an AI system that can answer questions about this knowledge requires not just finding relevant documents but understanding how concepts, people, processes, and systems relate to each other.
+**The problem:** Your organization's knowledge is scattered across documents, databases, wikis, and people's heads. Building an AI system that can answer questions about this knowledge requires more than finding relevant documents. It requires understanding how concepts, people, processes, and systems relate to each other.
 
 **Why graphs win:** A knowledge graph structures your organization's information as a network of connected facts. When an AI agent needs to answer a complex question, it can traverse this network to find and assemble the answer.
 
@@ -203,7 +203,7 @@ User registration, profile management, content management systems, inventory tra
 
 ### Use Case 2: Financial Reporting and Analytics
 
-Revenue reports, budget tracking, quarterly summaries — these are aggregation-heavy workloads. SQL's GROUP BY, window functions, and ROLLUP are purpose-built for this. Graph databases can aggregate, but it is not their strength, and the tooling (BI platforms, reporting frameworks) is built around SQL.
+Revenue reports, budget tracking, quarterly summaries: these are aggregation-heavy workloads. SQL's GROUP BY, window functions, and ROLLUP are purpose-built for this. Graph databases can aggregate, but it is not their strength. The tooling (BI platforms, reporting frameworks) is built around SQL.
 
 ### Use Case 3: Time-Series Data
 
@@ -215,13 +215,13 @@ Point-of-sale systems, booking engines, order processing — workloads where the
 
 ### Use Case 5: Batch ETL and Data Warehousing
 
-Moving large volumes of data between systems on a schedule. SQL-based ETL tools (dbt, Informatica, SSIS) dominate this space. Graph databases can participate as a target, but they are not the right orchestration layer for batch data movement.
+Moving large volumes of data between systems on a schedule. SQL-based ETL tools (dbt, Informatica, SSIS) dominate this space. Graph databases can participate as a target, but they are not the right orchestration layer for batch data movement. Use SQL-native tooling here.
 
 > **Think of it like this:** You would not use a sports car to move furniture, and you would not use a moving truck for a road trip. Relational databases are the moving trucks of data — excellent at carrying large loads reliably. Graph databases are the sports cars — excellent at navigating complex terrain quickly.
 
 ## 06. Hybrid Architectures: Graph + Relational Together
 
-In practice, the most common architecture is hybrid. Your transactional data stays in PostgreSQL or MySQL. The relationship-heavy subset is replicated to a graph database. The two systems stay in sync.
+In practice, the most common architecture is hybrid. Your transactional data stays in PostgreSQL or MySQL. The relationship-heavy subset is replicated to a graph database. The two systems remain in sync.
 
 ### Pattern 1: Graph as Read Replica
 
@@ -260,7 +260,7 @@ The relational database is the system of record. The graph database is a read-op
 └──────┘  └──────┘  └──────────┘
 ```
 
-Each database handles what it does best. The application routes queries to the appropriate database based on the query type.
+Each database handles what it does best. The application routes queries to the appropriate database based on query type.
 
 **Best for:** Greenfield architectures or microservices where each service can choose its own data store.
 
@@ -286,7 +286,7 @@ Each database handles what it does best. The application routes queries to the a
 └──────────────┘
 ```
 
-The knowledge graph sits between the AI layer and the transactional databases. It is populated from the relational data but optimized for the AI agent's query patterns.
+The knowledge graph sits between the AI layer and the transactional databases. It is populated from the relational data and optimized for the AI agent's query patterns.
 
 **Best for:** Adding AI capabilities to an existing enterprise application.
 
@@ -316,7 +316,7 @@ Cost is often the deciding factor. Here is a practical comparison as of early 20
 | I/O | $0.20 per million requests |
 
 **Strengths:** Fully managed on AWS, integrates with IAM, CloudWatch, etc.
-**Weaknesses:** I/O charges can be unpredictable, vendor lock-in, less community support than Neo4j.
+**Weaknesses:** I/O charges can be unpredictable. Vendor lock-in. Less community support than Neo4j.
 
 ### Self-Hosted (Neo4j Community or FalkorDB)
 
@@ -330,7 +330,7 @@ Cost is often the deciding factor. Here is a practical comparison as of early 20
 | Ops overhead (your team's time) | 4-10 hrs/month |
 
 **Strengths:** Full control, lowest per-unit cost, no vendor lock-in.
-**Weaknesses:** You own the uptime, backups, upgrades, and security.
+**Weaknesses:** You own the uptime, backups, upgrades, and security patches.
 
 ### Cost Decision Matrix
 
@@ -348,7 +348,7 @@ Cost is often the deciding factor. Here is a practical comparison as of early 20
 
 ## 08. Building the Business Case
 
-If you have scored 4+ on the diagnostic questions and identified specific use cases, you need to build a business case. Here is a template.
+If you have scored 4 or more on the diagnostic questions and identified specific use cases, you need to build a business case. Here is a template.
 
 ### The Problem Statement
 
@@ -421,9 +421,9 @@ Here is the honest assessment:
 
 **Graph databases are transformative for a specific class of problems.** If your data is deeply connected and your queries need to traverse those connections, a graph database will be faster, more expressive, and more maintainable than the relational equivalent.
 
-**The risk of doing nothing is real.** If you have queries that take hours, questions that users have stopped asking, or AI systems that cannot answer relationship questions — you are paying a cost for not having a graph. That cost is just harder to see because it shows up as missed opportunities, manual workarounds, and slow decision-making.
+**The risk of doing nothing is real.** If you have queries that take hours, questions that users have stopped asking, or AI systems that cannot answer relationship questions, you are paying a cost for not having a graph. That cost is harder to see. It shows up as missed opportunities, manual workarounds, and slow decision-making.
 
-**Start small, prove value, then expand.** This is true for any technology adoption, but it is especially true for graph databases because the learning curve is modest (especially with SQL-to-Cypher translation skills) and the impact on the right use case is dramatic.
+**Start small, prove value, then expand.** This is true for any technology adoption. It is especially true for graph databases because the learning curve is modest and the impact on the right use case is dramatic.
 
 ## 11. Chapter Checklist
 
@@ -436,4 +436,4 @@ Before moving to the next part of this book, make sure you can answer these ques
 - [ ] Can you estimate the monthly cost of a graph database for your workload?
 - [ ] Could you write a one-page business case for adding a graph database?
 
-If you answered yes to all six, you have the foundation to evaluate, pilot, and deploy a graph database alongside your existing systems. The rest of this book will take you deeper into implementation — building knowledge graphs, integrating with AI systems, and operating graph databases in production.
+If you answered yes to all six, you have the foundation to evaluate, pilot, and deploy a graph database alongside your existing systems. The rest of this book takes you deeper into implementation: building knowledge graphs, integrating with AI systems, and operating graph databases in production.

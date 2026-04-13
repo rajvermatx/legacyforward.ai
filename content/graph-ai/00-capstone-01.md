@@ -25,7 +25,7 @@ Build a system that turns 500 regulatory documents into a searchable graph so co
 ![Diagram 1](/diagrams/graph-ai/capstone-01.svg)
 A mid-size financial services firm has 500+ regulatory documents: federal regulations, state-level guidance, internal policies, audit reports, and vendor compliance certificates. When regulators ask "Show us every regulation that affects your payment processing system and the controls you have in place," the compliance team spends 2-3 weeks manually cross-referencing documents.
 
-The goal: build a knowledge graph that captures the relationships between regulations, business processes, controls, systems, and audit findings — then put a GraphRAG layer on top so compliance officers can query it in natural language.
+The goal: build a knowledge graph that captures the relationships between regulations, business processes, controls, systems, and audit findings. Then put a GraphRAG layer on top so compliance officers can query it in natural language.
 
 ### What We Are Building
 
@@ -58,7 +58,7 @@ PDF/DOCX Files                     User Query
 
 ## Stage 1: The Ontology
 
-Before extracting anything, define what you are looking for. This is the ontology — the types of entities and relationships the graph will contain.
+Before extracting anything, define what you are looking for. This is the ontology: the types of entities and relationships the graph will contain.
 
 ### Entity Types
 

@@ -18,7 +18,7 @@ badges:
 
 # Ontology Design Without a PhD
 
-The consultants quoted $500K for an ontology. Here's how to build one yourself in a week.
+The consultants quoted $500K for an ontology. This chapter shows how to build one yourself in a week, without academic overhead.
 
 ## 01. What an Ontology Actually Is
 
@@ -26,34 +26,34 @@ The consultants quoted $500K for an ontology. Here's how to build one yourself i
 ![Diagram 1](/diagrams/graph-ai/ch08-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch08-02.svg)
-Strip away the academic language, and an ontology is a data model for a knowledge graph. It defines:
+Strip away the academic language. An ontology is a data model for a knowledge graph. It defines:
 
 - **What types of nodes exist** (Person, Organization, Document, Regulation)
 - **What types of relationships exist** (WORKS_AT, MANAGES, REFERENCES)
 - **What properties each type has** (Person has name, title, email; WORKS_AT has start_date, department)
 - **What constraints apply** (a Person can WORKS_AT an Organization but not at a Document)
 
-If you have ever designed a relational database schema, you have designed something very close to an ontology. The difference is that an ontology also encodes domain meaning — it says not just "these two tables are linked" but "a Person works at an Organization, and that relationship has specific meaning."
+If you have ever designed a relational database schema, you have designed something close to an ontology. The difference is that an ontology also encodes domain meaning. It says not just "these two tables are linked" but "a Person works at an Organization, and that relationship has specific meaning."
 
 > **Think of it like this:** A relational schema is a floor plan — it shows where the walls and doors are. An ontology is a floor plan plus a user guide — it shows where the walls and doors are, explains what each room is for, and tells you which rooms are connected by hallways versus which ones you should not walk between.
 
-The reason ontology projects get expensive is that consultants treat them as philosophical exercises. They interview 40 stakeholders, model every conceivable entity type, debate whether a "Policy" is a subclass of "Document" or a separate concept, and deliver a 200-page specification that nobody can implement.
+The reason ontology projects get expensive is that consultants treat them as philosophical exercises. They interview 40 stakeholders, model every conceivable entity type, and debate whether a "Policy" is a subclass of "Document" or a separate concept. They deliver a 200-page specification that nobody can implement.
 
-You do not need that. You need a working ontology that covers your most important entities and relationships, validates against real data, and can evolve as you learn more.
+You do not need that. You need a working ontology that covers your most important entities and relationships, validates against real data, and evolves as you learn more.
 
 ## 02. The Five-by-Five Starter
 
 Start with exactly five node types and five relationship types. Not three, not fifty. Five and five.
 
-Why five? It is enough to model meaningful connections without drowning in complexity. It forces you to decide what matters most. And it is small enough to validate in a day.
+Why five? It is enough to model meaningful connections without drowning in complexity. It forces you to decide what matters most. It is small enough to validate in a day.
 
 ### How to Pick Your Five Node Types
 
-Look at your source documents and ask: "What are the nouns that appear in every important question our users ask?" If your users ask "Which vendor supplies the component that failed inspection?" — your nouns are Vendor, Component, and Inspection. If they also ask "Who approved that vendor?" — add Person and Approval.
+Look at your source documents and ask: "What are the nouns that appear in every important question our users ask?" If your users ask "Which vendor supplies the component that failed inspection?" your nouns are Vendor, Component, and Inspection. If they also ask "Who approved that vendor?" add Person and Approval.
 
 ### How to Pick Your Five Relationship Types
 
-Look at the verbs. "Which vendor **supplies** the component that **failed** inspection?" gives you SUPPLIES and FAILED. "Who **approved** that vendor?" gives you APPROVED.
+Look at the verbs. "Which vendor **supplies** the component that **failed** inspection?" gives you SUPPLIES and FAILED. "Who **approved** that vendor?" gives you APPROVED. Verbs become relationship types.
 
 ### Example: Procurement Domain
 
@@ -73,7 +73,7 @@ Relationship Types:
   5. REFERENCES    — Document → Document
 ```
 
-That is your starter ontology. It looks simple because it is. But it can already answer questions that would require five JOINs in a relational database:
+That is your starter ontology. It looks simple because it is simple. It can already answer questions that would require five JOINs in a relational database:
 
 ```cypher
 // Which person approved the contract for the vendor
@@ -86,11 +86,11 @@ RETURN p.name, d.name, v.name, c.name
 
 ## 03. Iterative Design: Start Small, Validate, Expand
 
-Ontology design is not a waterfall process. It is iterative. You build a small ontology, load real data, discover what is missing, and expand.
+Ontology design is not a waterfall process. It is iterative. You build a small ontology, load real data, discover what is missing, and then expand.
 
 ### Iteration 1: The Starter (Day 1-2)
 
-Define your five-by-five. Load a sample of 20-50 documents through the extraction pipeline from Chapter 7. Look at the graph.
+Define your five-by-five. Load a sample of 20 to 50 documents through the extraction pipeline from Chapter 7. Look at the graph.
 
 **Questions to ask:**
 - Can you answer the three most important business questions with this ontology?
@@ -99,7 +99,7 @@ Define your five-by-five. Load a sample of 20-50 documents through the extractio
 
 ### Iteration 2: Fill the Gaps (Day 3-4)
 
-Based on what you found, add 2-3 more node types and 2-3 more relationship types. Common additions after the first iteration:
+Based on what you found, add two or three more node types and two or three more relationship types. Common additions after the first iteration:
 
 - **Location** — almost every domain has a geographic component
 - **Date/Event** — temporal entities that mark deadlines, milestones, incidents
@@ -216,7 +216,7 @@ ONTOLOGY = {
 
 ### Iteration 4: Stress Test (Day 6-7)
 
-Load 500+ documents. Run your target queries. Look for:
+Load 500 or more documents. Run your target queries. Look for:
 - Queries that return no results when they should return something
 - Entity types that are heavily populated but never queried
 - Relationships that are always missing (extraction prompt may need tuning)
@@ -276,7 +276,7 @@ You do not need to invent your ontology from scratch. Most industries have recur
 
 ## 05. Using LLMs to Suggest Ontology Structure
 
-You can use an LLM to bootstrap your ontology from sample documents. This is not a replacement for domain expertise, but it is an excellent starting point.
+You can use an LLM to bootstrap your ontology from sample documents. This is not a replacement for domain expertise. It is an excellent starting point.
 
 ```python
 import anthropic
@@ -313,11 +313,11 @@ Format as structured text, not code."""
     return response.content[0].text
 ```
 
-The LLM will typically over-generate. It might suggest 15 node types when you need 7. Use its output as input to your own judgment: which of these types will you actually query? Which relationships appear in your real business questions?
+The LLM will typically over-generate. It might suggest 15 node types when you need 7. Use its output as a starting point. Ask which of these types you will actually query and which relationships appear in your real business questions.
 
 ## 06. Schema Validation
 
-Once you have an ontology, enforce it. A knowledge graph without schema validation will drift — extraction pipelines will create nodes with wrong labels, relationships between incompatible types, and missing required properties.
+Once you have an ontology, enforce it. A knowledge graph without schema validation will drift. Extraction pipelines will create nodes with wrong labels, relationships between incompatible types, and missing required properties.
 
 ```python
 from neo4j import GraphDatabase
@@ -437,19 +437,19 @@ def print_validation_report(violations: list[dict]):
 
 ## 07. Anti-Pattern: Over-Engineering Before You Have Data
 
-The most common ontology failure is spending months designing a comprehensive model before loading any real data. This fails for three reasons:
+The most common ontology failure is spending months designing a comprehensive model before loading any real data. This approach fails for three reasons:
 
 **1. You do not know what you do not know.** Until you see real extracted data, you cannot predict which entity types the LLM will find consistently and which it will struggle with. Designing for 50 entity types when the LLM can only reliably extract 10 is wasted effort.
 
-**2. Schema evolution is cheap in graphs.** Unlike relational databases where adding a column requires an ALTER TABLE and possibly a data migration, adding a new node label or relationship type to a graph is free. You just start creating nodes with the new label. This means the cost of starting small and expanding is near zero.
+**2. Schema evolution is cheap in graphs.** Unlike relational databases where adding a column requires an ALTER TABLE and a data migration, adding a new node label or relationship type to a graph is free. You simply start creating nodes with the new label. The cost of starting small and expanding is close to zero.
 
-**3. Unused complexity obscures real problems.** If your ontology has 200 node types but only 15 are populated, every query requires you to remember which types actually have data. Quality checks become noisy because most of the schema is empty. Dashboards show 185 entity types with zero count, and nobody knows if that is expected or a problem.
+**3. Unused complexity obscures real problems.** If your ontology has 200 node types but only 15 are populated, every query requires you to remember which types actually have data. Quality checks become noisy because most of the schema is empty. Dashboards show 185 entity types with a zero count, and nobody knows if that is expected or a problem.
 
 > **Think of it like this:** Over-engineering an ontology is like drawing a detailed architectural plan for a 50-room mansion before you know how many people will live in the house. Build a solid 5-room house first. You can always add rooms later, and you will know exactly which rooms you need because you will have lived in the house.
 
 ## 08. Starter Ontology Templates
 
-Here are copy-and-paste starter ontologies for common domains. Each includes the node types, relationship types, and three example queries.
+Here are copy-and-paste starter ontologies for common domains. Each one includes the node types, relationship types, and three example queries.
 
 ### Template: Vendor Risk Management
 
@@ -571,7 +571,7 @@ RETURN p.name, c.name, c.frequency, c.owner
 
 ## 09. Evolving Your Ontology
 
-Your ontology will change. New document types arrive. New questions emerge. The key is evolving without breaking existing queries and data.
+Your ontology will change. New document types arrive and new questions emerge. The key is evolving without breaking existing queries or data.
 
 ### Adding Node Types
 
@@ -585,7 +585,7 @@ CREATE (:Country {name: "Taiwan", risk_level: "elevated",
 
 ### Adding Relationship Types
 
-Create new relationships alongside existing ones. Do not rename existing relationship types — that would break queries.
+Create new relationships alongside existing ones. Do not rename existing relationship types. Renaming breaks queries.
 
 ```cypher
 // New requirement: track where components are manufactured
@@ -596,7 +596,7 @@ CREATE (c)-[:MANUFACTURED_IN {factory: "TSMC Fab 18"}]->(country)
 
 ### Deprecating Types
 
-Do not delete old types immediately. Add a deprecated property and migrate over time.
+Do not delete old types immediately. Add a deprecated property and migrate them over time.
 
 ```cypher
 // Mark old relationship type as deprecated
@@ -615,4 +615,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Can you write a schema validation query to check your graph against your ontology?
 - [ ] Can you explain why over-engineering an ontology before loading data is an anti-pattern?
 
-With an ontology in place, the next challenge is making sure the data in your graph is actually correct. Chapter 9 covers data quality — the QA engineer's perspective on testing a knowledge graph.
+With an ontology in place, the next challenge is making sure the data in your graph is correct. Chapter 9 covers data quality from the QA engineer's perspective.

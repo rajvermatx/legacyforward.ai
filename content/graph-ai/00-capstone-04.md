@@ -18,7 +18,7 @@ badges:
 
 # Capstone 4: Customer 360 with GraphRAG
 
-A support agent picks up a call. The customer is frustrated. They bought a product 6 months ago, opened 3 support tickets, got a partial refund, and now the same issue is back. The support agent has to check the CRM, the ticketing system, and the order system — three different screens, three different search boxes — to piece together what happened.
+A support agent picks up a call. The customer is frustrated. They bought a product 6 months ago, opened 3 support tickets, got a partial refund, and now the same issue is back. The support agent has to check the CRM, the ticketing system, and the order system: three different screens, three different search boxes, to piece together what happened.
 
 This capstone builds a unified customer graph that connects purchases, support interactions, product issues, and account history into a single queryable structure, then wraps it with a GraphRAG layer so a support agent can ask "Tell me everything about this customer's journey" and get a complete, contextualized answer.
 
@@ -365,7 +365,7 @@ class Customer360Builder:
 
 ## Stage 3: Identity Resolution
 
-The hardest part of Customer 360 is identity resolution — stitching together the same customer across three systems that each use different identifiers.
+The hardest part of Customer 360 is identity resolution: stitching together the same customer across three systems that each use different identifiers.
 
 ```python
 class IdentityResolver:

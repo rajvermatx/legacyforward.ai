@@ -18,19 +18,19 @@ badges:
 
 # Migration Strategy
 
-We can't rip out Oracle. Nobody is asking you to. Here's how to add graphs incrementally.
+Nobody is asking you to rip out Oracle. Here is how to add graphs incrementally instead.
 
 ## 01. Why Nobody Rips and Replaces
 
-Every year, someone proposes ripping out the relational database and replacing it with something new. Every year, that proposal dies — and it should. Your relational database has 15 years of battle-tested stored procedures, 200 reports built on top of it, an operations team that knows how to back it up and restore it at 3am, and a vendor support contract that someone in procurement spent 6 months negotiating.
+Every year, someone proposes ripping out the relational database and replacing it with something new. Every year, that proposal dies. It should. Your relational database has 15 years of battle-tested stored procedures, 200 reports built on top of it, an operations team that knows how to back it up and restore it at 3am, and a vendor support contract that someone in procurement spent 6 months negotiating.
 
-Graph databases do not replace relational databases. They augment them. You add a graph alongside your existing systems, feed it the data that benefits most from graph representation, and query the graph for the questions that relational databases answer poorly or not at all.
+Graph databases do not replace relational databases. They augment them. You add a graph alongside your existing systems, feed it the data that benefits most from graph representation, and query the graph for questions that relational databases answer poorly or not at all.
 
 > **Think of it like this:** You do not tear down your house to add a workshop. You build the workshop in the backyard and run power from the main panel. The house keeps doing what the house does. The workshop handles what the house was never designed for — and they share electricity.
 
 ## 02. The Sidecar Pattern
 
-The sidecar pattern is the foundational architecture for incremental graph adoption. Your relational database remains the system of record. The graph database runs alongside it as a read-optimized projection of specific data.
+The sidecar pattern is the foundational architecture for incremental graph adoption. Your relational database remains the system of record. The graph database runs alongside it as a read-optimized projection of specific, relationship-heavy data.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -65,11 +65,11 @@ The sidecar pattern is the foundational architecture for incremental graph adopt
 
 ### The Rule of Thumb
 
-If your question starts with "find all things connected to X" — that belongs in the graph. If your question starts with "sum the revenue for Q3" — that stays in the relational database.
+If your question starts with "find all things connected to X," that belongs in the graph. If your question starts with "sum the revenue for Q3," that stays in the relational database.
 
 ## 03. What to Migrate First
 
-Not all data benefits equally from graph representation. Start with the data that has the highest relationship density and the most painful SQL queries.
+Not all data benefits equally from graph representation. Start with data that has the highest relationship density and the most painful SQL queries.
 
 ### Scoring Your Data for Graph Suitability
 
@@ -81,7 +81,7 @@ Not all data benefits equally from graph representation. Start with the data tha
 | **Schema variability** | Fixed schema, rarely changes | New entity types and relationship types monthly |
 | **Business pain** | Queries run fine | Queries time out, reports are late, users complain |
 
-Score each data domain on these 5 factors. Total score of 20+ means "migrate this first." Total score below 10 means "leave it in the relational database for now."
+Score each data domain on these 5 factors. A total score of 20 or above means migrate this first. A total score below 10 means leave it in the relational database for now.
 
 ### Common High-Scoring Candidates
 
@@ -96,7 +96,7 @@ Score each data domain on these 5 factors. Total score of 20+ means "migrate thi
 
 ## 04. Sync Strategies: Dual-Write vs CDC vs Batch
 
-There are three ways to keep the graph in sync with the relational database. Each has trade-offs.
+There are three ways to keep the graph in sync with the relational database. Each has trade-offs that affect your architecture choices.
 
 ### Comparison Table
 
@@ -112,13 +112,13 @@ There are three ways to keep the graph in sync with the relational database. Eac
 
 ### The Short Answer
 
-Use CDC for production sync. Use batch for the initial data load. Avoid dual-write unless you have a very specific reason and are prepared to handle distributed transaction failures.
+Use CDC for production sync. Use batch for the initial data load. Avoid dual-write unless you have a specific reason for it and are prepared to handle distributed transaction failures.
 
 > **Think of it like this:** Dual-write is like asking someone to write a letter and simultaneously type it — they will eventually make a mistake and the two copies will diverge. CDC is like a copy machine that watches everything you write and automatically makes a copy — it can fall behind, but it never forgets. Batch is like photocopying everything at the end of the day — simple, but you are always working with yesterday's information.
 
 ## 05. CDC Pipeline: PostgreSQL to Neo4j
 
-CDC (Change Data Capture) reads the database's transaction log — the write-ahead log (WAL) in PostgreSQL — and streams every INSERT, UPDATE, and DELETE as an event. Debezium is the standard open-source CDC connector. It reads the WAL, publishes events to Kafka, and a consumer writes those events to Neo4j.
+CDC (Change Data Capture) reads the database transaction log (the write-ahead log, or WAL, in PostgreSQL) and streams every INSERT, UPDATE, and DELETE as an event. Debezium is the standard open-source CDC connector. It reads the WAL, publishes events to Kafka, and a consumer writes those events to Neo4j.
 
 ### Architecture
 
@@ -126,7 +126,7 @@ CDC (Change Data Capture) reads the database's transaction log — the write-ahe
 PostgreSQL WAL → Debezium Connector → Kafka Topics → Consumer → Neo4j
 ```
 
-Each table gets its own Kafka topic. The consumer reads from the topics, transforms the relational row into a graph operation, and executes it against Neo4j.
+Each table gets its own Kafka topic. The consumer reads from those topics, transforms each relational row into a graph operation, and executes it against Neo4j.
 
 ### Step 1: Configure PostgreSQL for Logical Replication
 
@@ -390,17 +390,17 @@ if __name__ == "__main__":
 
 ### Key Design Decisions in This Pipeline
 
-1. **Soft deletes in the graph.** When a row is deleted from PostgreSQL, we do not delete the node from Neo4j. We mark it as deleted. This preserves historical relationships and avoids orphaning connected nodes.
+1. **Soft deletes in the graph.** When a row is deleted from PostgreSQL, the node in Neo4j is not deleted. It is marked as deleted. This preserves historical relationships and avoids orphaning connected nodes.
 
 2. **MERGE, not CREATE.** Every write uses MERGE (upsert) so the pipeline is idempotent. If Kafka redelivers a message, the result is the same.
 
 3. **One handler per table.** The decorator pattern keeps the mapping clean. When you add a new table, you write one function and register it.
 
-4. **Manual commit.** We commit the Kafka offset only after the Neo4j write succeeds. If the consumer crashes mid-write, it re-reads and re-processes the event on restart.
+4. **Manual commit.** The Kafka offset is committed only after the Neo4j write succeeds. If the consumer crashes mid-write, it re-reads and re-processes the event on restart.
 
 ## 06. Phased Migration Timeline
 
-Do not try to migrate everything at once. A phased approach reduces risk and builds organizational confidence.
+A phased approach reduces risk and builds organizational confidence. Do not try to migrate everything at once.
 
 ### Phase 1: Proof of Concept (Weeks 1-4)
 
@@ -414,7 +414,7 @@ Do not try to migrate everything at once. A phased approach reduces risk and bui
 | Build 3-5 graph queries that answer painful business questions | Developer + BA | 1 week |
 | Present results to stakeholders | Team Lead | 1 day |
 
-**Exit criteria:** Stakeholders see concrete value. At least one query answers a question that was previously impossible or took hours of manual work.
+**Exit criteria:** Stakeholders see concrete value. At least one query answers a question that was previously impossible or required hours of manual work.
 
 ### Phase 2: Pipeline (Weeks 5-10)
 
@@ -472,7 +472,7 @@ Graph migration is a team effort. Here is who does what.
 
 ### The Common Mistake
 
-Teams often assign graph migration to one person. That person becomes a single point of failure and burns out. The minimum viable team is 3 people: one data engineer (pipeline), one developer (queries and application integration), and one DevOps person (infrastructure). Everyone else contributes part-time.
+Teams often assign graph migration to one person. That person becomes a single point of failure and burns out. The minimum viable team is three people: one data engineer (pipeline), one developer (queries and application integration), and one DevOps person (infrastructure). Everyone else contributes part-time.
 
 ## 08. Risk Mitigation
 
@@ -490,7 +490,7 @@ Every phase needs a rollback plan. Here is the framework:
 
 ### The Fallback Rule
 
-Because the graph is a sidecar — not the system of record — rollback is always the same: stop reading from the graph and go back to reading from the relational database. Your application code should have a feature flag for every graph-powered query path:
+Because the graph is a sidecar and not the system of record, rollback is always the same: stop reading from the graph and go back to reading from the relational database. Your application code should have a feature flag for every graph-powered query path:
 
 ```python
 from functools import wraps
@@ -627,4 +627,4 @@ Before you move on, verify:
 - [ ] You have a phased plan with clear exit criteria for each phase
 - [ ] Every graph query path has a relational fallback with a feature flag
 - [ ] Nightly consistency checks are in place before you go live
-- [ ] Your rollback plan does not require a deployment — just a feature flag flip
+- [ ] Your rollback plan does not require a deployment. A feature flag flip is sufficient.

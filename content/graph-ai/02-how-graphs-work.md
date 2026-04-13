@@ -17,7 +17,7 @@ badges:
 
 # How Graphs Actually Work
 
-I get tables. Show me what's different — in terms I already understand.
+I get tables. Show me what is different, in terms I already understand.
 
 ## 01. The Rosetta Stone: Relational to Graph
 
@@ -39,15 +39,15 @@ Graph databases use different vocabulary for the same fundamental concepts, and 
 | Junction table (many-to-many) | Relationship with properties | A direct connection that carries its own data |
 | Schema (DDL) | Flexible (optional schema) | Graph databases are typically schema-optional |
 
-> **Think of it like this:** In a relational database, relationships are implied by matching values in columns. In a graph database, relationships are physical things — they exist as first-class objects, just like the data they connect. It is the difference between knowing that two people share a phone number (you have to look it up) and seeing them holding the same piece of string (the connection is visible and direct).
+> **Think of it like this:** In a relational database, relationships are implied by matching values in columns. In a graph database, relationships are physical things. They exist as first-class objects, just like the data they connect. It is the difference between knowing that two people share a phone number (you have to look it up) and seeing them holding the same piece of string (the connection is visible and direct).
 
 ## 02. The Property Graph Model, Explained via HR Data
 
-The most common graph model — and the one used by Neo4j, FalkorDB, and most graph databases you will encounter — is the **property graph model**. It has exactly three building blocks:
+The most common graph model, used by Neo4j, FalkorDB, and most graph databases you will encounter, is the **property graph model**. It has exactly three building blocks:
 
-1. **Nodes** — the things (entities)
-2. **Relationships** — the connections between things (always directed, always have a type)
-3. **Properties** — key-value pairs attached to either nodes or relationships
+1. **Nodes**: the things (entities)
+2. **Relationships**: the connections between things (always directed, always have a type)
+3. **Properties**: key-value pairs attached to either nodes or relationships
 
 Let us take an HR database you already know and show the same data both ways.
 
@@ -134,11 +134,11 @@ Three things happened in the translation:
 
 1. **The `departments`, `employees`, and `projects` tables became nodes** with labels (`Department`, `Employee`, `Project`). Each row became a node. Each column became a property on that node.
 
-2. **The foreign keys became relationships.** The `dept_id` column in the employees table was replaced by a `BELONGS_TO` relationship. The `manager_id` self-referencing foreign key became a `REPORTS_TO` relationship. Foreign keys disappear entirely — they are not needed when the relationship is stored directly.
+2. **The foreign keys became relationships.** The `dept_id` column in the employees table was replaced by a `BELONGS_TO` relationship. The `manager_id` self-referencing foreign key became a `REPORTS_TO` relationship. Foreign keys disappear entirely. They are not needed when the relationship is stored directly.
 
 3. **The junction table disappeared.** The `employee_projects` table, which existed only to connect employees to projects, became a `WORKS_ON` relationship with the `role` and `assigned_date` stored as properties on the relationship itself.
 
-> **Think of it like this:** In the relational model, you describe connections with data ("Bob's manager_id is 101, and 101 maps to Alice"). In the graph model, you describe connections with structure ("Bob REPORTS_TO Alice"). The information is identical, but the storage is different — and that storage difference is what makes traversal fast.
+> **Think of it like this:** In the relational model, you describe connections with data ("Bob's manager_id is 101, and 101 maps to Alice"). In the graph model, you describe connections with structure ("Bob REPORTS_TO Alice"). The information is identical, but the storage is different. That storage difference is what makes traversal fast.
 
 ## 03. Side-by-Side: The Same Query Both Ways
 
@@ -182,7 +182,7 @@ WHERE colleague <> bob
 RETURN colleague.name, w.role;
 ```
 
-The SQL requires four JOINs — two passes through the junction table and two through the employees table. The Cypher expresses the pattern directly: Bob works on a project, and someone else also works on that project.
+The SQL requires four JOINs: two passes through the junction table and two through the employees table. The Cypher expresses the pattern directly: Bob works on a project, and someone else also works on that project.
 
 ### Query 3: Find Bob's manager's other direct reports
 
@@ -207,7 +207,7 @@ Again, the Cypher reads like the question: "Start at Bob, go up to his manager, 
 
 ## 04. How Traversal Actually Works
 
-When the relational database executes a JOIN, it performs a matching operation. It takes a value from one table (say, `manager_id = 101`) and searches for that value in another table's index. This is a lookup — a search through a data structure.
+When the relational database executes a JOIN, it performs a matching operation. It takes a value from one table (say, `manager_id = 101`) and searches for that value in another table's index. This is a lookup: a search through a data structure.
 
 When a graph database traverses a relationship, it follows a stored pointer. The relationship is not a value to be matched; it is an address to be followed. This is the fundamental mechanism behind the performance characteristics we discussed in Chapter 1.
 
@@ -233,7 +233,7 @@ Step 3: Node #101 has no outgoing REPORTS_TO → stop
 Result: [Bob → Alice]
 ```
 
-Step 1 is the same — both databases need to find the starting node. But Step 2 is different. Instead of searching an index, the graph database reads a pointer from Bob's relationship list. That pointer is a direct memory address (or disk offset) of Alice's node. The cost does not depend on how many employees exist in the database.
+Step 1 is the same. Both databases need to find the starting node. But Step 2 is different. Instead of searching an index, the graph database reads a pointer from Bob's relationship list. That pointer is a direct memory address (or disk offset) of Alice's node. The cost does not depend on how many employees exist in the database.
 
 > **Think of it like this:** In the relational model, every hop in a traversal is like looking someone up in a phone book. In the graph model, every hop is like already having their phone number in your pocket. The phone book approach works, but it slows down as the phone book gets bigger. The pocket approach takes the same amount of time regardless of how many people exist in the city.
 
@@ -261,7 +261,7 @@ For most teams starting with graph databases, **Neo4j** is the safest choice. It
 
 ## 06. Property Graph vs. RDF: And Why It Matters for AI
 
-You will encounter two fundamentally different graph models in the wild, and understanding the distinction matters — especially as you move toward AI use cases.
+You will encounter two fundamentally different graph models in the wild. Understanding the distinction matters, especially as you move toward AI use cases.
 
 ### Property Graph
 
@@ -298,7 +298,7 @@ The same data takes more triples to express, and the query language (SPARQL) has
 | Tooling ecosystem | Large, growing | Established but smaller |
 | Best for AI applications | Knowledge graphs, GraphRAG, recommendations | Formal ontologies, linked open data |
 
-> **Think of it like this:** Property graphs are like JSON — flexible, easy to read, and good enough for most applications. RDF is like XML with schemas — more formal, more powerful for interchange, but heavier to work with. If you are building a knowledge graph to power an AI application, start with a property graph. If you are building a standards-compliant knowledge base for a government or academic institution, consider RDF.
+> **Think of it like this:** Property graphs are like JSON: flexible, easy to read, and good enough for most applications. RDF is like XML with schemas: more formal, more powerful for interchange, but heavier to work with. If you are building a knowledge graph to power an AI application, start with a property graph. If you are building a standards-compliant knowledge base for a government or academic institution, consider RDF.
 
 For the rest of this book, we will focus on property graphs and Cypher, as they are the most practical path for practitioners coming from the relational world.
 
@@ -421,7 +421,7 @@ with driver.session() as session:
 #   → Alice Chen (VP Engineering)
 ```
 
-Notice the `REPORTS_TO*1..10` syntax. This tells Neo4j to follow the REPORTS_TO relationship between 1 and 10 hops. If Alice reported to a CTO, and the CTO reported to a CEO, all three would be returned — with a single query, no recursive CTE.
+Notice the `REPORTS_TO*1..10` syntax. This tells Neo4j to follow the REPORTS_TO relationship between 1 and 10 hops. If Alice reported to a CTO, and the CTO reported to a CEO, all three would be returned with a single query and no recursive CTE.
 
 ## 09. Mental Model Summary
 
@@ -446,4 +446,4 @@ Before moving on, make sure you can answer these questions:
 - [ ] Can you explain the difference between property graphs and RDF?
 - [ ] Could you run a simple Cypher query against Neo4j using Python?
 
-If you answered yes to all five, you are ready for Chapter 3, where we connect graph databases to the AI stack — and explain why this combination is so powerful.
+If you answered yes to all five, you are ready for Chapter 3, where we connect graph databases to the AI stack and explain why this combination is so powerful.

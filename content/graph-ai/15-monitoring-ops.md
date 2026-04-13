@@ -18,13 +18,13 @@ badges:
 
 # Monitoring and Operations
 
-It's in production. Three things will wake you up at 3am if you don't monitor them.
+It is in production. Three things will wake you up at 3am if you do not monitor them.
 
 ## 01. The Three Things
 
 After running graph databases in production across multiple organizations, three categories of failure account for the vast majority of 3am pages:
 
-1. **Query latency spikes.** A query that ran in 200ms starts taking 15 seconds. Users see timeouts. The cause is usually an unindexed property lookup, a Cartesian product in a Cypher query, or a traversal that hit a supernode — a single node with 100,000+ relationships.
+1. **Query latency spikes.** A query that ran in 200ms starts taking 15 seconds. Users see timeouts. The cause is usually an unindexed property lookup, a Cartesian product in a Cypher query, or a traversal that hit a supernode: a single node with 100,000 or more relationships.
 
 2. **Graph size growth.** The graph was designed for 1 million nodes. It now has 50 million because someone added a data source without considering cardinality. Memory is exhausted, queries slow to a crawl, and the page cache starts evicting.
 
@@ -34,7 +34,7 @@ After running graph databases in production across multiple organizations, three
 
 ## 02. Key Metrics Dashboard
 
-Every graph database deployment needs a dashboard with these metrics. Whether you use Grafana, Datadog, or CloudWatch, track all of them.
+Every graph database deployment needs a dashboard with these metrics. Whether you use Grafana, Datadog, or CloudWatch, track all of them from day one.
 
 ### Query Metrics
 
@@ -188,7 +188,7 @@ def format_metrics_for_prometheus(metrics: GraphMetrics) -> str:
 
 ## 03. Alerting Rules: What to Alert On vs What to Log
 
-Not everything is an alert. Alert fatigue kills on-call teams faster than actual incidents. Here is the framework:
+Not everything is an alert. Alert fatigue kills on-call teams faster than actual incidents. Use this framework to separate signal from noise:
 
 ### Alert Hierarchy
 
@@ -308,7 +308,7 @@ def evaluate_alert(rule: AlertRule, current_value: float) -> AlertLevel:
 
 ## 04. Backup and Disaster Recovery
 
-Graph databases need backup strategies just like relational databases. The approach depends on whether you are running self-managed Neo4j or a cloud-managed service.
+Graph databases need backup strategies just as relational databases do. The approach depends on whether you are running self-managed Neo4j or a cloud-managed service.
 
 ### Backup Strategy
 
@@ -368,13 +368,13 @@ echo "Backup complete: ${BACKUP_NAME}.tar.gz"
 | **Cloud region outage** | Health checks fail | Switch to cross-region replica | 15-30 min |
 | **Complete data loss** | Everything is gone | Rebuild from relational source via batch sync | 2-8 hours |
 
-The last row is the ultimate safety net of the sidecar pattern: because the relational database is the system of record, you can always rebuild the graph from scratch. It takes time, but you never truly lose data.
+The last row is the ultimate safety net of the sidecar pattern. Because the relational database is the system of record, you can always rebuild the graph from scratch. It takes time, but you never truly lose data.
 
 ## 05. Scaling Patterns
 
 ### Read Replicas
 
-For read-heavy workloads — which graph databases almost always are — add read replicas:
+For read-heavy workloads, which graph databases almost always are, add read replicas:
 
 ```
                     ┌──────────────────┐
@@ -431,7 +431,7 @@ def write_query(driver, cypher: str, params: dict = None):
 
 ### Connection Pooling
 
-Connection pool exhaustion is a common production issue. Configure it properly:
+Connection pool exhaustion is a common production issue. Configure these settings before you go live:
 
 | Setting | Default | Recommended | Why |
 | --- | --- | --- | --- |
@@ -443,15 +443,15 @@ Connection pool exhaustion is a common production issue. Configure it properly:
 
 ### When to Consider Sharding
 
-Most graph databases — including Neo4j — do not natively shard like relational databases. Before you consider sharding, exhaust these options:
+Most graph databases, including Neo4j, do not natively shard like relational databases. Before you consider sharding, exhaust these options:
 
 1. **Index everything you query by.** Most latency problems are missing indexes, not capacity problems.
-2. **Add read replicas.** If reads are the bottleneck, throw replicas at it.
+2. **Add read replicas.** If reads are the bottleneck, add replicas.
 3. **Optimize queries.** Profile with `EXPLAIN` and `PROFILE` in Cypher. Fix Cartesian products and unbounded variable-length paths.
 4. **Increase page cache.** If the cache hit ratio is below 95%, give Neo4j more RAM.
-5. **Separate workloads.** Run analytics queries on a replica, operational queries on the primary.
+5. **Separate workloads.** Run analytics queries on a replica and operational queries on the primary.
 
-If you have genuinely exhausted all of these and still need more capacity, consider:
+If you have exhausted all of these options and still need more capacity, consider:
 
 - **Domain-based partitioning:** Separate graphs per tenant or per business domain, with cross-graph federation at the application layer.
 - **Fabric (Neo4j 5+):** Query across multiple Neo4j databases as if they were one.
@@ -459,7 +459,7 @@ If you have genuinely exhausted all of these and still need more capacity, consi
 
 ## 06. Cost Management
 
-Cloud graph database costs can surprise you. Here is what to watch:
+Cloud graph database costs can surprise teams that do not watch them. Here is what to monitor:
 
 | Cost Driver | How It Grows | How to Control It |
 | --- | --- | --- |
@@ -481,15 +481,15 @@ Network:      Estimated 500GB transfer               $W/month
 Total estimated:                                     $TOTAL/month
 ```
 
-Track actual vs estimated monthly and set a budget alert at 80% of your estimate.
+Track actual against estimated cost monthly. Set a budget alert at 80% of your estimate.
 
 ## 07. Runbook: Common Issues and Fixes
 
-This runbook covers the 8 most common operational issues. Print it out — or more realistically, put it in your team's wiki where on-call engineers can find it at 3am.
+This runbook covers the 8 most common operational issues. Put it in your team's wiki where on-call engineers can find it at 3am.
 
 ### Issue 1: Query Latency Spike
 
-**Symptoms:** p95 latency jumps from 200ms to 5s+. Users report timeouts.
+**Symptoms:** p95 latency jumps from 200ms to 5 seconds or more. Users report timeouts.
 
 **Diagnosis:**
 ```cypher
@@ -502,9 +502,9 @@ ORDER BY elapsedTimeMillis DESC
 
 **Common causes and fixes:**
 1. Missing index: `CREATE INDEX FOR (n:Label) ON (n.property)`
-2. Cartesian product: Add relationship patterns to connect disconnected `MATCH` clauses
+2. Cartesian product: Add relationship patterns to connect disconnected `MATCH` clauses.
 3. Supernode hit: Add degree filter `WHERE size((n)--()) < 10000`
-4. Unbounded path: Change `[:REL*]` to `[:REL*..5]` with explicit depth limit
+4. Unbounded path: Change `[:REL*]` to `[:REL*..5]` with an explicit depth limit.
 
 ### Issue 2: CDC Pipeline Stopped
 
@@ -521,14 +521,14 @@ curl -s http://localhost:8083/connectors/pg-graph-connector/status
 ```
 
 **Common causes and fixes:**
-1. Consumer crashed: Restart consumer, check dead letter queue for failed events
-2. Connector lost: Restart Debezium connector, verify PostgreSQL replication slot exists
-3. Schema change: Update CDC handler for new/changed columns, replay from last committed offset
-4. Kafka disk full: Increase retention, add brokers, or reduce topic retention time
+1. Consumer crashed: Restart consumer, check dead letter queue for failed events.
+2. Connector lost: Restart Debezium connector, verify PostgreSQL replication slot exists.
+3. Schema change: Update CDC handler for new or changed columns, replay from last committed offset.
+4. Kafka disk full: Increase retention, add brokers, or reduce topic retention time.
 
 ### Issue 3: Out of Memory
 
-**Symptoms:** GC pauses > 1s, heap usage > 95%, queries timing out.
+**Symptoms:** GC pauses over 1 second, heap usage above 95%, queries timing out.
 
 **Diagnosis:**
 ```bash
@@ -541,10 +541,10 @@ ORDER BY allocatedBytes DESC LIMIT 5
 ```
 
 **Common causes and fixes:**
-1. Page cache too small: Increase `server.memory.pagecache.size`
-2. Heap too small: Increase `server.memory.heap.max_size`
-3. Query returning too much data: Add `LIMIT`, filter earlier in the query
-4. Graph outgrew instance: Upgrade instance size or add read replicas
+1. Page cache too small: Increase `server.memory.pagecache.size`.
+2. Heap too small: Increase `server.memory.heap.max_size`.
+3. Query returning too much data: Add `LIMIT`, filter earlier in the query.
+4. Graph outgrew instance: Upgrade instance size or add read replicas.
 
 ### Issue 4: Data Inconsistency Between PostgreSQL and Neo4j
 
@@ -560,10 +560,10 @@ for check in results:
 ```
 
 **Common causes and fixes:**
-1. CDC lag: Wait for consumer to catch up, monitor lag
-2. Dropped events: Check dead letter queue, re-sync affected tables
-3. Handler bug: Fix the CDC handler, replay events from before the bug
-4. Schema drift: PostgreSQL column renamed but handler not updated
+1. CDC lag: Wait for consumer to catch up and monitor lag.
+2. Dropped events: Check dead letter queue, re-sync affected tables.
+3. Handler bug: Fix the CDC handler, replay events from before the bug.
+4. Schema drift: PostgreSQL column renamed but handler not updated.
 
 ### Issue 5: Supernode Causing Slow Queries
 
@@ -581,9 +581,9 @@ LIMIT 20
 ```
 
 **Common causes and fixes:**
-1. Data modeling issue: Break the supernode into subgroups (e.g., by time period or category)
-2. Query issue: Filter relationships by type or property before traversing from the supernode
-3. Legitimate high-degree node: Add a degree check in the query and handle high-degree nodes differently
+1. Data modeling issue: Break the supernode into subgroups (by time period or category, for example).
+2. Query issue: Filter relationships by type or property before traversing from the supernode.
+3. Legitimate high-degree node: Add a degree check in the query and handle high-degree nodes separately.
 
 ### Issue 6: Backup Failure
 
@@ -592,30 +592,30 @@ LIMIT 20
 **Diagnosis:** Check backup job logs, verify disk space on backup target.
 
 **Fixes:**
-1. Disk full: Free space or increase backup volume
-2. Database locked: Ensure backup runs during low-traffic period
-3. Permission error: Verify backup user has correct filesystem permissions
-4. Network error (cloud backup): Retry, verify cloud credentials
+1. Disk full: Free space or increase the backup volume.
+2. Database locked: Ensure backup runs during a low-traffic period.
+3. Permission error: Verify the backup user has correct filesystem permissions.
+4. Network error (cloud backup): Retry and verify cloud credentials.
 
 ### Issue 7: Read Replica Lag
 
 **Symptoms:** Read replica returns stale data, replication lag metrics climbing.
 
 **Fixes:**
-1. Network bottleneck: Check bandwidth between primary and replica
-2. Replica overloaded: Reduce query load or add another replica
-3. Large transaction on primary: Wait for it to complete and replicate
-4. Restart replica if lag does not recover
+1. Network bottleneck: Check bandwidth between primary and replica.
+2. Replica overloaded: Reduce query load or add another replica.
+3. Large transaction on primary: Wait for it to complete and replicate.
+4. Restart the replica if lag does not recover within a reasonable window.
 
 ### Issue 8: Connection Pool Exhaustion
 
 **Symptoms:** "Unable to acquire connection" errors in application logs.
 
 **Fixes:**
-1. Increase pool size if current size is too small for workload
-2. Fix connection leaks: ensure every session is closed (use `with` blocks)
-3. Reduce query time to free connections faster
-4. Add connection acquisition timeout to fail fast
+1. Increase pool size if current size is too small for the workload.
+2. Fix connection leaks: ensure every session is closed (use `with` blocks).
+3. Reduce query time to free connections faster.
+4. Add a connection acquisition timeout to fail fast rather than queue indefinitely.
 
 ## 08. Chapter Checklist
 

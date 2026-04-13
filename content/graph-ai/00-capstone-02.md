@@ -18,7 +18,7 @@ badges:
 
 # Capstone 2: Fraud Investigation Agent
 
-Build an agent that a financial analyst can point at a suspicious account and say "Follow the money" — and it traces the transaction network across multiple hops, flags suspicious patterns, and produces an investigation report.
+Build an agent that a financial analyst can point at a suspicious account and say "Follow the money." It traces the transaction network across multiple hops, flags suspicious patterns, and produces an investigation report.
 
 ## The Scenario
 
@@ -26,7 +26,7 @@ Build an agent that a financial analyst can point at a suspicious account and sa
 ![Diagram 1](/diagrams/graph-ai/capstone-02.svg)
 A regional bank's fraud team manually investigates suspicious activity reports (SARs). An analyst gets an alert: Account A-7734 received an unusually large deposit and immediately sent smaller amounts to 8 different accounts. Today, the analyst spends 3-4 hours pulling transaction records, tracing where the money went, checking whether the receiving accounts are connected, and writing up findings.
 
-The goal: build a transaction graph and an agent that automates the "follow the money" analysis — tracing funds across multiple hops, detecting common fraud patterns (structuring, rapid movement, circular flows), and generating an investigation summary.
+The goal: build a transaction graph and an agent that automates the "follow the money" analysis. It traces funds across multiple hops, detects common fraud patterns (structuring, rapid movement, circular flows), and generates an investigation summary.
 
 ### What We Are Building
 

@@ -18,7 +18,7 @@ badges:
 
 # Knowledge Graphs from Documents
 
-You have 10,000 policy documents. Nobody can find anything. Here's how to turn them into a searchable knowledge graph.
+You have 10,000 policy documents. Nobody can find anything. This chapter shows how to turn them into a searchable knowledge graph that answers questions instead of returning keyword matches.
 
 ## 01. The Document Problem
 
@@ -26,9 +26,9 @@ You have 10,000 policy documents. Nobody can find anything. Here's how to turn t
 ![Diagram 1](/diagrams/graph-ai/ch07-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch07-02.svg)
-Every enterprise has a document graveyard. SharePoint sites with 40,000 files. Confluence spaces that nobody navigates. Policy repositories where the only search option is full-text keyword matching — which returns 300 results for "vendor approval" and zero results for "who needs to sign off on a new supplier."
+Every enterprise has a document graveyard. SharePoint sites with 40,000 files. Confluence spaces that nobody navigates. Policy repositories where the only search option is full-text keyword matching, which returns 300 results for "vendor approval" and zero results for "who needs to sign off on a new supplier."
 
-The problem is not that the information does not exist. It is that the information is trapped in prose. A contract says "Acme Corp shall deliver components to the Springfield facility by Q3 2026, subject to approval by the Procurement Director." That single sentence contains four entities (Acme Corp, Springfield facility, Q3 2026, Procurement Director) and three relationships (delivers to, deadline, requires approval from). But to a search engine, it is just a bag of words.
+The problem is not that the information does not exist. The information is trapped in prose. A contract says "Acme Corp shall deliver components to the Springfield facility by Q3 2026, subject to approval by the Procurement Director." That single sentence contains four entities (Acme Corp, Springfield facility, Q3 2026, Procurement Director) and three relationships (delivers to, deadline, requires approval from). To a search engine, it is just a bag of words.
 
 A knowledge graph extracts those entities and relationships from text and stores them as nodes and edges. Once they are in a graph, you can query them: "Which vendors deliver to Springfield?" "What deadlines fall in Q3?" "Who approves procurement for each facility?" These questions become simple graph traversals instead of archaeology expeditions through PDF files.
 
@@ -42,7 +42,7 @@ A knowledge graph is a graph where:
 - **Edges represent relationships** — how entities connect: WORKS_AT, SUPPLIES, APPROVED_BY, LOCATED_IN, REFERENCES, EFFECTIVE_DATE.
 - **Properties carry details** — both nodes and edges can have attributes: a Person node has a name and title, a SUPPLIES relationship has a contract number and start date.
 
-The difference between a knowledge graph and a regular graph database model is the source. In a typical graph project, you are migrating structured data from tables into nodes and edges. In a knowledge graph project, you are extracting semi-structured or unstructured data from documents, emails, reports, and other text — and creating the structure that never existed.
+The difference between a knowledge graph and a regular graph database model is the source. In a typical graph project, you migrate structured data from tables into nodes and edges. In a knowledge graph project, you extract semi-structured or unstructured data from documents, emails, reports, and other text, creating structure that never existed before.
 
 | Regular Graph Project | Knowledge Graph Project |
 | --- | --- |
@@ -54,7 +54,7 @@ The difference between a knowledge graph and a regular graph database model is t
 
 ## 03. The Extraction Pipeline
 
-The pipeline from document to graph has five stages. Each stage introduces potential errors, so understanding the full pipeline is essential for building a system that produces reliable results.
+The pipeline from document to graph has five stages. Each stage introduces potential errors. Understanding the full pipeline is essential for building a system that produces reliable results.
 
 ```
 Document → Chunking → LLM Extraction → Entity Resolution → Graph Storage
@@ -62,7 +62,7 @@ Document → Chunking → LLM Extraction → Entity Resolution → Graph Storage
 
 ### Stage 1: Document Ingestion
 
-Raw documents come in many formats — PDF, DOCX, HTML, plain text, scanned images. Before you can extract anything, you need clean text. This stage is unglamorous but critical. A poorly parsed PDF will produce garbage entities downstream.
+Raw documents come in many formats: PDF, DOCX, HTML, plain text, scanned images. Before you can extract anything, you need clean text. This stage is unglamorous but critical. A poorly parsed PDF will produce garbage entities downstream.
 
 ```python
 from pathlib import Path
@@ -85,7 +85,7 @@ def extract_text_from_pdf(file_path: str) -> list[dict]:
 
 ### Stage 2: Chunking
 
-LLMs have context limits, and even within those limits, extraction quality degrades with document length. You need to split documents into chunks — but not arbitrarily. A chunk should contain enough context for the LLM to understand what it is reading.
+LLMs have context limits, and extraction quality degrades with document length even within those limits. You need to split documents into chunks, but not arbitrarily. A chunk should contain enough context for the LLM to understand what it is reading.
 
 ```python
 def chunk_text(
@@ -129,7 +129,7 @@ def chunk_text(
 
 ### Stage 3: LLM Entity and Relationship Extraction
 
-This is where the magic — and the risk — happens. You send each chunk to an LLM with instructions to extract entities and relationships, and the LLM returns structured data.
+This is where the power and the risk converge. You send each chunk to an LLM with instructions to extract entities and relationships. The LLM returns structured data.
 
 ```python
 from pydantic import BaseModel, Field
@@ -333,13 +333,13 @@ def build_knowledge_graph(
 
 ## 05. Quality Challenges
 
-LLM-based extraction is powerful but imperfect. Here are the three biggest quality issues and how to address each one.
+LLM-based extraction is powerful but imperfect. Here are the three biggest quality issues and how to address them.
 
 ### Hallucinated Entities
 
 The LLM invents entities that are not in the source text. You ask it to extract entities from a paragraph about vendor management, and it creates a "Vendor Management Committee" node even though the text only mentions "the committee" without specifying which one.
 
-**Mitigation:** Add strict grounding rules to your prompt ("Only extract entities explicitly named in the text"). Post-process by checking that every entity name appears as a substring of the source chunk. Flag entities that do not match for human review.
+**Mitigation:** Add strict grounding rules to your prompt ("Only extract entities explicitly named in the text"). Post-process by checking that every entity name appears as a substring of the source chunk. Flag entities that do not match for human review. Any entity the LLM named but that does not appear verbatim in the text is a candidate for deletion.
 
 ```python
 def validate_grounding(
@@ -362,17 +362,17 @@ def validate_grounding(
 
 ### Duplicate Nodes
 
-The same entity appears under different names across different chunks or documents. "IBM" in one chunk, "International Business Machines" in another, "IBM Corporation" in a third. Without resolution, your graph has three disconnected nodes for the same company.
+The same entity appears under different names across different chunks or documents. "IBM" in one chunk, "International Business Machines" in another, "IBM Corporation" in a third. Without resolution, your graph has three disconnected nodes for the same company. Entity resolution (section 06) addresses this directly.
 
 ### Missing Relationships
 
-The LLM extracts two entities from a chunk but misses the relationship between them. This is especially common with implicit relationships — "The Springfield facility, managed by Regional Director Tom Chen" contains a MANAGES relationship that some models miss because it is expressed as a parenthetical clause rather than an active verb.
+The LLM extracts two entities from a chunk but misses the relationship between them. This is especially common with implicit relationships. "The Springfield facility, managed by Regional Director Tom Chen" contains a MANAGES relationship that some models miss because it is expressed as a parenthetical clause rather than an active verb.
 
 **Mitigation:** Run a second extraction pass focused specifically on relationships between already-extracted entities. Provide the entity list and ask the LLM to identify connections.
 
 ## 06. Entity Resolution
 
-Entity resolution is the process of determining that two or more entity mentions refer to the same real-world thing. This is the hardest part of knowledge graph construction and the most impactful for graph quality.
+Entity resolution is the process of determining that two or more entity mentions refer to the same real-world thing. This is the hardest part of knowledge graph construction and the most impactful for graph quality. Skipping it produces a graph full of duplicate nodes and broken traversals.
 
 > **Think of it like this:** Entity resolution is like a mail room in a large building. Letters arrive addressed to "J. Smith," "John Smith," "Dr. John Smith," "John Smith, Finance Dept," and "jsmith@company.com." The mail room's job is to figure out that all of these go to the same mailbox. Get it wrong, and John gets no mail — or someone else's mail.
 
@@ -447,7 +447,7 @@ Answer ONLY "yes" or "no"."""
 
 ### Strategy 4: Graph-Based Resolution
 
-Use the graph structure itself. If two person nodes both have WORKS_AT relationships to the same organization, REPORTS_TO the same manager, and have similar names — they are probably the same person.
+Use the graph structure itself. If two person nodes both have WORKS_AT relationships to the same organization, REPORTS_TO the same manager, and have similar names, they are probably the same person.
 
 ```cypher
 // Find potential duplicate Person nodes
@@ -475,7 +475,7 @@ RETURN node
 
 ## 07. Extraction Prompt Patterns by Document Type
 
-Different document types require different extraction strategies. The entities and relationships you care about, and the way they are expressed in text, vary significantly.
+Different document types require different extraction strategies. The entities and relationships you care about vary by domain. The way those relationships are expressed in text also varies significantly.
 
 | Document Type | Key Entity Types | Key Relationship Types | Prompt Emphasis |
 | --- | --- | --- | --- |
@@ -488,11 +488,11 @@ Different document types require different extraction strategies. The entities a
 
 ## 08. Scaling the Pipeline
 
-When you move from a proof of concept with 50 documents to a production system with 10,000, three things break: cost, speed, and error handling.
+When you move from a proof of concept with 50 documents to a production system with 10,000, three things break: cost, speed, and error handling. All three require attention at scale.
 
 ### Cost Management
 
-LLM extraction is not free. A 10-page document produces roughly 15-20 chunks. Each chunk requires one API call. At 10,000 documents, that is 150,000-200,000 API calls. With Claude Sonnet at roughly $3 per million input tokens and $15 per million output tokens, a large extraction run can cost $500-2,000 depending on document length and extraction complexity.
+LLM extraction is not free. A 10-page document produces roughly 15-20 chunks. Each chunk requires one API call. At 10,000 documents, that is 150,000 to 200,000 API calls. With Claude Sonnet at roughly $3 per million input tokens and $15 per million output tokens, a large extraction run can cost $500 to $2,000 depending on document length and complexity.
 
 **Strategies:**
 - Use a smaller model for simple entity recognition and a larger model only for complex relationship extraction.
@@ -536,7 +536,7 @@ async def extract_parallel(
 
 ### Error Recovery
 
-Production pipelines need checkpointing. If the pipeline fails at document 7,432 out of 10,000, you should not have to re-extract the first 7,431.
+Production pipelines need checkpointing. If the pipeline fails at document 7,432 out of 10,000, you should not have to re-extract the first 7,431 documents.
 
 ```python
 import json
@@ -623,4 +623,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Do you understand the cost and scaling implications of LLM-based extraction?
 - [ ] Can you write Cypher queries to verify the quality of an extracted graph?
 
-The extraction pipeline gets your data into the graph. The next chapter addresses how to design the structure of that graph — the ontology — so that it is useful, maintainable, and extensible.
+The extraction pipeline gets your data into the graph. The next chapter addresses how to design the structure of that graph. The ontology must be useful, maintainable, and extensible from day one.

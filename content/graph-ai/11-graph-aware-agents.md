@@ -18,7 +18,7 @@ badges:
 
 # Graph-Aware Agents
 
-The support agent needs to understand: this customer bought this product, which uses this component, which has this known issue. That's a graph traversal.
+The support agent needs to understand: this customer bought this product, which uses this component, which has this known issue. That is a graph traversal.
 
 ## 01. Why Agents Need Graph Access
 
@@ -28,19 +28,19 @@ The support agent needs to understand: this customer bought this product, which 
 ![Diagram 2](/diagrams/graph-ai/ch11-02.svg)
 An AI agent is an LLM with tools. The LLM reasons about what to do, calls tools to interact with the world, observes the results, and decides what to do next. Most enterprise agents have tools for searching documents, calling APIs, and querying databases.
 
-But when an agent needs to reason about connections — "Which customers are affected by this component recall?" "What is the blast radius of this service outage?" "Who should approve this exception request?" — it needs a different kind of tool. It needs to traverse a graph.
+When an agent needs to reason about connections, it needs a different kind of tool. "Which customers are affected by this component recall?" "What is the blast radius of this service outage?" "Who should approve this exception request?" These questions require traversing a graph.
 
-Standard database queries retrieve rows that match criteria. Graph queries follow paths. This distinction matters for agents because the most valuable enterprise questions are rarely about isolated facts. They are about chains of cause and effect, hierarchies of authority, webs of dependency.
+Standard database queries retrieve rows that match criteria. Graph queries follow paths. This distinction matters for agents because the most valuable enterprise questions are rarely about isolated facts. They are about chains of cause and effect, hierarchies of authority, and webs of dependency.
 
 > **Think of it like this:** Giving an agent a SQL tool is like giving a detective access to filing cabinets — they can look up individual records. Giving an agent a graph tool is like giving them a wall of connected evidence — they can follow the red string from suspect to witness to location to motive. The filing cabinet holds facts. The evidence wall holds relationships between facts.
 
 ## 02. The Four Essential Graph Tools
 
-You do not need twenty graph tools. You need four. Each one handles a distinct reasoning pattern.
+You do not need twenty graph tools. You need four. Each handles a distinct reasoning pattern.
 
 ### Tool 1: Cypher Query Tool
 
-The most flexible tool. The agent generates a Cypher query and executes it against the graph.
+The most flexible tool. The agent generates a Cypher query and executes it against the graph. Use this for specific lookups, filtering, and aggregation.
 
 ```python
 from neo4j import GraphDatabase
@@ -120,7 +120,7 @@ def format_records(records: list[dict]) -> str:
 
 ### Tool 2: Path Finder Tool
 
-Finds the shortest path between two entities. This is the tool agents use when answering "how are X and Y connected?" questions.
+Finds the shortest path between two entities. Use this when answering "how are X and Y connected?" questions.
 
 ```python
 class PathFinderInput(BaseModel):
@@ -181,7 +181,7 @@ def path_finder_tool(input: PathFinderInput) -> str:
 
 ### Tool 3: Impact Analysis Tool
 
-Traverses outward from an entity to find everything that depends on it or is affected by it. Critical for incident response and change management.
+Traverses outward from an entity to find everything that depends on it or is affected by it. This tool is critical for incident response and change management.
 
 ```python
 class ImpactAnalysisInput(BaseModel):
@@ -267,7 +267,7 @@ def impact_analysis_tool(input: ImpactAnalysisInput) -> str:
 
 ### Tool 4: Subgraph Summarizer Tool
 
-Retrieves a subgraph around an entity and produces a natural language summary. This is useful when the agent needs to understand context before deciding what to do next.
+Retrieves a subgraph around an entity and produces a natural language summary. Use this when the agent needs to understand context before deciding what to do next.
 
 ```python
 import anthropic
@@ -486,11 +486,11 @@ agent = create_react_agent(
 
 ## 04. Teaching the Agent to Generate Cypher
 
-The biggest challenge with a Cypher query tool is teaching the LLM to write correct Cypher. Few-shot prompting with schema context is the most effective approach.
+The biggest challenge with a Cypher query tool is teaching the LLM to write correct Cypher. Few-shot prompting with schema context is the most effective approach. Without it, the agent guesses at node labels and relationship types.
 
 ### Schema Context
 
-Always include the graph schema in the system prompt (shown above). Without it, the agent will guess at node labels and relationship types.
+Always include the graph schema in the system prompt (shown above). Without it, the agent guesses at node labels and relationship types and produces invalid queries.
 
 ### Few-Shot Examples
 
@@ -532,11 +532,11 @@ A: MATCH (e:Event)-[:CAUSED_BY]->(c:Component)
 
 ## 05. Guardrails for Production
 
-An agent with database access needs guardrails. Here are the essentials.
+An agent with database access needs guardrails. These are the essentials.
 
 ### Read-Only Access
 
-The Cypher tool already rejects write keywords, but you should also use a read-only Neo4j user:
+The Cypher tool already rejects write keywords. You should also use a read-only Neo4j user at the database level:
 
 ```python
 # Create a read-only user in Neo4j
@@ -727,4 +727,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Can you implement read-only access, query timeout, and result limits?
 - [ ] Can you design an agent prompt for a specific use case (support, compliance, IT)?
 
-The next chapter dives deeper into one of the most powerful capabilities of graph-aware agents: multi-hop reasoning — answering questions that require traversing multiple relationships step by step.
+The next chapter dives deeper into one of the most powerful capabilities of graph-aware agents: multi-hop reasoning. These are questions that require traversing multiple relationships step by step to reach a verifiable answer.

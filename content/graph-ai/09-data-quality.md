@@ -18,7 +18,7 @@ badges:
 
 # Data Quality for Knowledge Graphs
 
-Your knowledge graph has 50,000 nodes. How do you know they're correct?
+Your knowledge graph has 50,000 nodes. How do you know they are correct? This chapter gives you the checks, metrics, and workflows to find out.
 
 ## 01. Why Graph Quality Is Different
 
@@ -28,13 +28,13 @@ Your knowledge graph has 50,000 nodes. How do you know they're correct?
 ![Diagram 2](/diagrams/graph-ai/ch09-02.svg)
 If you come from a relational background, you know how to test data quality. Check for NULLs in NOT NULL columns. Validate foreign key constraints. Run row counts against expected values. These checks work because relational databases have rigid schemas that define what valid data looks like.
 
-Graphs are different. There are no foreign keys — any node can connect to any other node. There is no NOT NULL constraint by default — a node can have any combination of properties. And the most dangerous quality problems are not missing data but wrong relationships: a Person node connected by WORKS_AT to a Document node instead of an Organization node. That relationship is syntactically valid but semantically nonsensical.
+Graphs are different. There are no foreign keys: any node can connect to any other node. There is no NOT NULL constraint by default. A node can have any combination of properties. The most dangerous quality problems are not missing data but wrong relationships. A Person node connected by WORKS_AT to a Document node instead of an Organization node is syntactically valid but semantically wrong.
 
 > **Think of it like this:** Testing a relational database is like proofreading a form — you check that every required field is filled in and that dates look like dates. Testing a knowledge graph is like fact-checking a newspaper article — you need to verify not just that the names and dates are present but that the statements connecting them are true. "John Smith approved the vendor contract" is a claim, and you need a way to verify it.
 
 ## 02. The Six Categories of Graph Quality Issues
 
-Every quality problem in a knowledge graph falls into one of these six categories:
+Every quality problem in a knowledge graph falls into one of six categories:
 
 | Category | What It Means | Example | Detection Difficulty |
 | --- | --- | --- | --- |
@@ -47,11 +47,11 @@ Every quality problem in a knowledge graph falls into one of these six categorie
 
 ## 03. Automated Quality Checks
 
-These checks can run automatically after every extraction batch. They catch the easiest problems and should be your first line of defense.
+These checks can run automatically after every extraction batch. They catch the most common problems and serve as the first line of defense.
 
 ### Check 1: Orphan Nodes
 
-Nodes with no relationships are almost always errors. In a knowledge graph built from documents, every entity should connect to at least one other entity or to a source document.
+Nodes with no relationships are almost always errors. In a knowledge graph built from documents, every entity should connect to at least one other entity or to a source document node.
 
 ```cypher
 // Find all orphan nodes
@@ -69,7 +69,7 @@ RETURN labels(n)[0] AS type, count(n) AS orphan_count
 ORDER BY orphan_count DESC
 ```
 
-**Threshold:** Fewer than 5% of nodes should be orphans. If you see more, your extraction pipeline is creating entities without capturing their relationships.
+**Threshold:** Fewer than 5% of nodes should be orphans. If you see more, the extraction pipeline is creating entities without capturing their relationships.
 
 ### Check 2: Duplicate Entities
 
@@ -100,7 +100,7 @@ ORDER BY similarity DESC
 
 ### Check 3: Type Violations
 
-These are relationships that connect node types your ontology says should not be connected. This check requires the ontology definition from Chapter 8.
+These are relationships that connect node types the ontology says should not be connected. This check requires the ontology definition from Chapter 8.
 
 ```python
 from neo4j import GraphDatabase
@@ -187,7 +187,7 @@ def check_type_violations() -> list[dict]:
 
 ### Check 4: Property Completeness
 
-Nodes missing critical properties are less useful for queries and may indicate extraction problems.
+Nodes missing critical properties are less useful in queries and may indicate extraction problems.
 
 ```cypher
 // Persons without a name (should never happen)
@@ -212,7 +212,7 @@ RETURN
 
 ### Check 5: Relationship Direction
 
-Some relationship types only make sense in one direction. REPORTS_TO should go from employee to manager, not the other way around.
+Some relationship types only make sense in one direction. REPORTS_TO should go from employee to manager, not from manager to employee.
 
 ```cypher
 // Find suspiciously bidirectional relationships
@@ -227,7 +227,7 @@ RETURN n.name, labels(n)[0] AS type, type(r) AS rel_type
 
 ## 04. Consistency Validation
 
-Automated checks catch structural problems. Consistency validation catches logical problems — relationships that are structurally valid but do not make sense in context.
+Automated checks catch structural problems. Consistency validation catches logical problems: relationships that are structurally valid but do not make sense in context.
 
 ### Semantic Consistency Rules
 
@@ -320,7 +320,7 @@ def run_consistency_checks(
 
 ## 05. Coverage Metrics
 
-Coverage answers the question: "What percentage of the information in our source documents is represented in the graph?" High entity counts mean nothing if half your documents were skipped or only partially extracted.
+Coverage answers the question: what percentage of the information in your source documents is represented in the graph? High entity counts mean nothing if half your documents were skipped or only partially extracted. Coverage is the check that catches silent pipeline failures.
 
 ### Document Coverage
 
@@ -355,7 +355,7 @@ def check_document_coverage(
 
 ### Entity Density
 
-How many entities per document? Too few suggests under-extraction. Too many suggests hallucination.
+How many entities per document? Too few suggests under-extraction. Too many suggests hallucination or spurious entities.
 
 ```cypher
 // Entity density by source document
@@ -379,7 +379,7 @@ ORDER BY entity_count DESC
 
 ### Relationship Density
 
-The ratio of relationships to entities should generally be between 1.0 and 3.0. Below 1.0, most nodes are islands. Above 3.0, the extraction may be creating spurious connections.
+The ratio of relationships to entities should generally fall between 1.0 and 3.0. Below 1.0, most nodes are islands. Above 3.0, the extraction may be creating spurious connections.
 
 ```cypher
 // Overall relationship-to-entity ratio
@@ -393,11 +393,11 @@ RETURN nodes, rels,
 
 ## 06. Human Review Workflows
 
-Automated checks catch structural problems. Humans catch meaning problems. You need both.
+Automated checks catch structural problems. Humans catch meaning problems. Both are necessary.
 
 ### Sampling Strategy
 
-You cannot review every extraction. Sample strategically:
+You cannot review every extraction. Sample strategically to get the most signal per reviewer-hour:
 
 1. **Random sample** — 5% of all extractions, reviewed for general accuracy.
 2. **Low-confidence sample** — extractions where the LLM expressed uncertainty (if you capture confidence scores).
@@ -457,7 +457,7 @@ def sample_for_review(
 
 ### Review Interface
 
-A review does not need a fancy UI. A spreadsheet with these columns works:
+A review does not need a complex UI. A spreadsheet with these columns works:
 
 | Column | Purpose |
 | --- | --- |
@@ -517,7 +517,7 @@ def apply_review_corrections(corrections: list[dict]):
 
 ## 07. Continuous Quality Monitoring
 
-Quality is not a one-time check. As new documents are ingested and the graph grows, quality can drift.
+Quality is not a one-time check. As new documents are ingested and the graph grows, quality drifts. Continuous monitoring catches problems before they compound.
 
 ### Quality Dashboard Metrics
 
@@ -592,7 +592,7 @@ def collect_quality_metrics() -> dict:
 
 ### Drift Detection
 
-Compare current metrics against baseline to catch degradation:
+Compare current metrics against a baseline to catch degradation:
 
 ```python
 import json
@@ -786,4 +786,4 @@ Before moving to the next chapter, make sure you can answer these questions:
 - [ ] Can you design a sampling strategy for human review?
 - [ ] Can you set up continuous quality monitoring with drift detection?
 
-With a quality foundation in place, the next part of the book explores how to use your knowledge graph to power AI systems — starting with GraphRAG, which combines graph traversal with retrieval-augmented generation.
+With a quality foundation in place, the next part of the book explores how to use your knowledge graph to power AI systems. The first topic is GraphRAG, which combines graph traversal with retrieval-augmented generation.

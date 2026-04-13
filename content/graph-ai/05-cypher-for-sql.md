@@ -17,7 +17,7 @@ badges:
 
 # Cypher for SQL People
 
-You know SELECT, JOIN, WHERE, GROUP BY. Here's the same 20 queries in Cypher.
+You know SELECT, JOIN, WHERE, GROUP BY. Here are the same 20 queries in Cypher.
 
 ## 01. The Mental Shift
 
@@ -53,7 +53,7 @@ RETURN e.name, e.title, e.salary
 ```
 
 The mapping:
-- `FROM employees` becomes `MATCH (e:Employee)` — find nodes labeled Employee
+- `FROM employees` becomes `MATCH (e:Employee)`: find nodes labeled Employee
 - `WHERE` is identical
 - `SELECT` becomes `RETURN`
 - Column references use dot notation: `e.name` instead of `name`
@@ -110,7 +110,7 @@ Identical syntax for ORDER BY and LIMIT.
 
 ## 03. JOINs Become Relationship Patterns
 
-This is where Cypher diverges from SQL — and where it gets interesting.
+This is where Cypher diverges from SQL, and where it gets interesting.
 
 ### INNER JOIN (one-to-many)
 
@@ -145,7 +145,7 @@ OPTIONAL MATCH (e)-[:BELONGS_TO]->(d:Department)
 RETURN e.name, d.name AS department
 ```
 
-`LEFT JOIN` becomes `OPTIONAL MATCH`. If no matching relationship exists, the variables from the OPTIONAL MATCH are null — same behavior as a LEFT JOIN returning NULLs.
+`LEFT JOIN` becomes `OPTIONAL MATCH`. If no matching relationship exists, the variables from the OPTIONAL MATCH are null. This is the same behavior as a LEFT JOIN returning NULLs.
 
 ### Multi-table JOIN
 
@@ -166,7 +166,7 @@ MATCH (e)-[w:WORKS_ON]->(p:Project)
 RETURN e.name, d.name AS department, p.name AS project, w.role
 ```
 
-Three JOINs become two MATCH lines. The junction table `employee_projects` disappears — its data (the `role` column) lives on the `WORKS_ON` relationship as a property.
+Three JOINs become two MATCH lines. The junction table `employee_projects` disappears. Its data (the `role` column) lives on the `WORKS_ON` relationship as a property.
 
 ### Self-JOIN (hierarchy)
 
@@ -206,7 +206,7 @@ RETURN department, emp_count
 ```
 
 Key differences:
-- `GROUP BY` is implicit — Cypher groups by the non-aggregated columns in the `WITH` clause
+- `GROUP BY` is implicit: Cypher groups by the non-aggregated columns in the `WITH` clause
 - `HAVING` becomes a regular `WHERE` after the `WITH`
 - `WITH` is Cypher's way of piping results from one stage to the next (like a subquery in SQL)
 
@@ -230,9 +230,9 @@ RETURN d.name,
        max(e.salary) AS max_salary
 ```
 
-The aggregate functions are the same names. The grouping is implicit — Cypher groups by `d.name` because it is the non-aggregated column in the RETURN.
+The aggregate functions are the same names. The grouping is implicit: Cypher groups by `d.name` because it is the non-aggregated column in the RETURN.
 
-### collect() — Cypher's Unique Aggregation
+### collect(): Cypher's Unique Aggregation
 
 Cypher has a function that SQL does not: `collect()`, which gathers values into a list.
 
@@ -281,7 +281,7 @@ RETURN d.name, size
 ORDER BY size DESC
 ```
 
-The `WITH` clause in Cypher serves the same purpose as a CTE: it computes an intermediate result that subsequent clauses can use. The difference is that `WITH` is inline — you do not need to declare it separately.
+The `WITH` clause in Cypher serves the same purpose as a CTE: it computes an intermediate result that subsequent clauses can use. The difference is that `WITH` is inline. You do not need to declare it separately.
 
 ### Correlated Subquery
 
@@ -453,7 +453,7 @@ RETURN [n IN nodes(path) | n.name] AS path_names,
 
 ### Query 3: Pattern Matching (Fraud Detection)
 
-"Find all circular payment chains — A pays B, B pays C, C pays A."
+"Find all circular payment chains: A pays B, B pays C, C pays A."
 
 **SQL:**
 ```sql
@@ -771,4 +771,4 @@ Before moving on, make sure you can answer these questions:
 - [ ] Do you know the difference between CREATE, MERGE, SET, DELETE, and DETACH DELETE?
 - [ ] Can you write a variable-length path query (`*1..N`) without reaching for a recursive CTE?
 
-If you answered yes to all five, you are ready for Chapter 6 — the decision framework for when graphs are (and are not) the right choice.
+If you answered yes to all five, you are ready for Chapter 6, the decision framework for when graphs are (and are not) the right choice.

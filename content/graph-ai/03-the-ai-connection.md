@@ -17,7 +17,7 @@ badges:
 
 # The AI Connection
 
-Your RAG chatbot can answer "what is our refund policy?" but fails at "who approved the vendor that supplies the part that failed?" -- here's why.
+Your RAG chatbot can answer "what is our refund policy?" but fails at "who approved the vendor that supplies the part that failed?" Here is why.
 
 ## 01. The Question That Breaks Your Chatbot
 
@@ -25,7 +25,7 @@ Your RAG chatbot can answer "what is our refund policy?" but fails at "who appro
 ![Diagram 1](/diagrams/graph-ai/ch03-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch03-02.svg)
-Let us set the scene. Your team has built a RAG (Retrieval-Augmented Generation) chatbot. It indexes your company's documentation — policies, procedures, product specs, vendor contracts — into a vector database. Users ask questions, the system retrieves relevant document chunks, feeds them to an LLM, and gets answers. It works well for straightforward questions.
+Let us set the scene. Your team has built a RAG (Retrieval-Augmented Generation) chatbot. It indexes your company's documentation (policies, procedures, product specs, vendor contracts) into a vector database. Users ask questions, the system retrieves relevant document chunks, feeds them to an LLM, and gets answers. It works well for straightforward questions.
 
 "What is our refund policy for enterprise customers?" -- The chatbot nails this. It finds the policy document, retrieves the relevant section, and gives an accurate answer.
 
@@ -33,19 +33,19 @@ Let us set the scene. Your team has built a RAG (Retrieval-Augmented Generation)
 
 This is not a limitation of the LLM. It is a limitation of the retrieval mechanism. Vector search finds documents that are **semantically similar** to a question. It does not find documents that are **structurally connected** to each other in ways that answer the question.
 
-> **Think of it like this:** Vector search is like a librarian who finds books on similar topics. Ask for "refund policy" and they bring you the refund policy manual. Ask "who approved the vendor that supplies the part that failed?" and they bring you three different books — one on vendor approvals, one on parts catalogs, and one on incident reports — but they cannot tell you how the information across those books connects. A knowledge graph is the librarian's index card system that tracks which books reference which other books, and how.
+> **Think of it like this:** Vector search is like a librarian who finds books on similar topics. Ask for "refund policy" and they bring you the refund policy manual. Ask "who approved the vendor that supplies the part that failed?" and they bring you three different books: one on vendor approvals, one on parts catalogs, and one on incident reports. They cannot tell you how the information across those books connects. A knowledge graph is the librarian's index card system that tracks which books reference which other books, and how.
 
 ## 02. Why Vector Search Misses Relationships
 
 To understand why this gap exists, you need to understand what vector search actually does.
 
-When you embed a document into a vector database, you convert the text into a high-dimensional numerical representation — a vector. Documents with similar meaning end up close together in this vector space. When a user asks a question, the question is also converted to a vector, and the system finds the nearest document vectors.
+When you embed a document into a vector database, you convert the text into a high-dimensional numerical representation: a vector. Documents with similar meaning end up close together in this vector space. When a user asks a question, the question is also converted to a vector, and the system finds the nearest document vectors.
 
 This works well for **semantic similarity**: finding documents that talk about the same topic. It fails for **structural relationships** because:
 
-1. **Relationships span documents.** The fact that Vendor A supplies Part B might be in a procurement database. The fact that Part B failed might be in an incident report. The fact that Manager D approved the Vendor A contract might be in an approval log. Vector search finds each document independently — it has no mechanism to chain them together.
+1. **Relationships span documents.** The fact that Vendor A supplies Part B might be in a procurement database. The fact that Part B failed might be in an incident report. The fact that Manager D approved the Vendor A contract might be in an approval log. Vector search finds each document independently. It has no mechanism to chain them together.
 
-2. **Embeddings lose relational structure.** When you embed the sentence "Acme Corp supplies hydraulic valve HV-200," the vector captures the semantic meaning — something about a company and a part. But it does not capture the structured fact `(Acme Corp)-[:SUPPLIES]->(HV-200)` in a way that can be traversed.
+2. **Embeddings lose relational structure.** When you embed the sentence "Acme Corp supplies hydraulic valve HV-200," the vector captures the semantic meaning: something about a company and a part. But it does not capture the structured fact `(Acme Corp)-[:SUPPLIES]->(HV-200)` in a way that can be traversed.
 
 3. **Multi-hop questions require traversal, not retrieval.** The question "who approved the vendor that supplies the part that failed?" requires four hops: Failed Part -> Supplied By -> Vendor -> Approved By -> Manager. Vector search retrieves documents; it does not traverse paths.
 
@@ -109,7 +109,7 @@ In early 2024, Microsoft Research published a paper and open-source library call
 
 This two-level approach addresses a specific weakness of standard RAG: global questions. If you ask "what are the main themes across all customer complaints?" standard RAG retrieves a few complaint documents, but it cannot synthesize across all of them. GraphRAG's community summaries provide pre-computed answers to these high-level questions.
 
-### How GraphRAG Works — Step by Step
+### How GraphRAG Works: Step by Step
 
 ```
 Step 1: Document Ingestion
@@ -290,7 +290,7 @@ MATCH (past_resolution:Resolution)-[:RESOLVES]->(past_incident:Incident)
 RETURN past_resolution.description, past_incident.id
 ```
 
-> **Think of it like this:** Pattern 1 (graph-enhanced RAG) is like giving your chatbot a Rolodex alongside its filing cabinet. Pattern 2 (graph-aware agent) is like giving a researcher access to both a library and an organizational chart — they decide which to consult based on the question. Pattern 3 (graph-based memory) is like the researcher keeping a notebook of lessons learned that they can refer back to.
+> **Think of it like this:** Pattern 1 (graph-enhanced RAG) is like giving your chatbot a Rolodex alongside its filing cabinet. Pattern 2 (graph-aware agent) is like giving a researcher access to both a library and an organizational chart. They decide which to consult based on the question. Pattern 3 (graph-based memory) is like the researcher keeping a notebook of lessons learned that they can refer back to.
 
 ## 06. Why Graphs + AI Converged Now
 
@@ -298,7 +298,7 @@ The combination of graph databases and AI is not new in concept. Researchers hav
 
 ### Reason 1: LLMs Can Build Graphs from Text
 
-Before LLMs, building a knowledge graph from unstructured text required custom NLP pipelines — named entity recognition, relation extraction, coreference resolution, entity linking. Each step required specialized models, training data, and significant engineering effort. Building a knowledge graph from 10,000 documents was a multi-month project.
+Before LLMs, building a knowledge graph from unstructured text required custom NLP pipelines: named entity recognition, relation extraction, coreference resolution, and entity linking. Each step required specialized models, training data, and significant engineering effort. Building a knowledge graph from 10,000 documents was a multi-month project.
 
 With LLMs, you can extract entities and relationships from text with a single prompt:
 
@@ -323,7 +323,7 @@ Triples:
 # (HV-200, type, Hydraulic Valve)
 ```
 
-This is not perfect — LLMs make extraction errors, miss entities, and hallucinate relationships. But it is 10x faster than building custom NLP pipelines, and the error rate is acceptable for many use cases when combined with human review.
+This is not perfect. LLMs make extraction errors, miss entities, and hallucinate relationships. But it is 10x faster than building custom NLP pipelines, and the error rate is acceptable for many use cases when combined with human review.
 
 ### Reason 2: RAG Hit Its Ceiling
 
@@ -398,17 +398,17 @@ For most enterprise AI applications, the optimal architecture combines all three
                    └─────────────────┘
 ```
 
-The key component is the **router** — the LLM or classifier that examines the user's question and decides which retrieval mechanisms to use. For simple content questions, it queries the vector database. For relationship questions, it queries the graph. For complex questions, it queries both and assembles the context before passing it to the response-generation LLM.
+The key component is the **router**: the LLM or classifier that examines the user's question and decides which retrieval mechanisms to use. For simple content questions, it queries the vector database. For relationship questions, it queries the graph. For complex questions, it queries both and assembles the context before passing it to the response-generation LLM.
 
 ## 09. What You Do Not Need to Know Yet
 
 This chapter has covered a lot of ground at the conceptual level. Here is what we are NOT going to worry about yet:
 
-- **How to build a knowledge graph from your data** — Chapter 4 covers translating your existing data model.
-- **How to write graph queries** — Chapter 5 is a complete Cypher tutorial for SQL developers.
-- **How to decide which parts of your data to graph** — Chapter 6 provides the decision framework.
-- **How to deploy and operate a graph database** — that is a later chapter.
-- **How to fine-tune LLMs for entity extraction** — for most use cases, zero-shot prompting with GPT-4o or Claude is sufficient.
+- **How to build a knowledge graph from your data**: Chapter 4 covers translating your existing data model.
+- **How to write graph queries**: Chapter 5 is a complete Cypher tutorial for SQL developers.
+- **How to decide which parts of your data to graph**: Chapter 6 provides the decision framework.
+- **How to deploy and operate a graph database**: that is a later chapter.
+- **How to fine-tune LLMs for entity extraction**: for most use cases, zero-shot prompting with GPT-4o or Claude is sufficient.
 
 ## 10. Chapter Checklist
 
@@ -416,8 +416,8 @@ Before moving on, make sure you can answer these questions:
 
 - [ ] Can you explain why vector search fails at multi-hop relationship questions?
 - [ ] Can you describe the three patterns for combining graphs with AI (graph-enhanced RAG, graph-aware agents, graph-based memory)?
-- [ ] Can you explain GraphRAG at a high level — what it does and when it is overkill?
+- [ ] Can you explain GraphRAG at a high level: what it does and when it is overkill?
 - [ ] Can you identify at least one question that your users ask today that would benefit from a knowledge graph?
 - [ ] Do you understand why LLMs made knowledge graph construction practical?
 
-If you answered yes to all five, you are ready for Part 2, where we shift from "why graphs" to "how to graph" — starting with translating your existing relational data models.
+If you answered yes to all five, you are ready for Part 2, where we shift from "why graphs" to "how to graph," starting with translating your existing relational data models.

@@ -18,7 +18,7 @@ badges:
 
 # Translating Your Data Model
 
-You have an ERD with 30 tables. Here's how to convert the parts that benefit from a graph.
+You have an ERD with 30 tables. Here is how to convert the parts that benefit from a graph.
 
 ## 01. You Are Not Replacing Your Database
 
@@ -26,11 +26,11 @@ You have an ERD with 30 tables. Here's how to convert the parts that benefit fro
 ![Diagram 1](/diagrams/graph-ai/ch04-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch04-02.svg)
-Let us be direct about this before we start: the goal of this chapter is NOT to take your entire relational database and move it into a graph. That would be a bad idea. Most of your data — transactional records, user accounts, financial ledgers, audit logs — is perfectly well-served by a relational database.
+Let us be direct about this before we start: the goal of this chapter is NOT to take your entire relational database and move it into a graph. That would be a bad idea. Most of your data (transactional records, user accounts, financial ledgers, audit logs) is perfectly well-served by a relational database.
 
 The goal is to identify the **specific patterns** in your schema that are hitting the limits of the relational model and would benefit from a graph representation. In most enterprises, this is 10-20% of the overall data model. The other 80-90% stays exactly where it is.
 
-> **Think of it like this:** You do not tear down your house because the attic is poorly organized. You reorganize the attic. This chapter teaches you to find the "attic" in your data model — the parts that are struggling with the relational structure — and reorganize those parts into a graph.
+> **Think of it like this:** You do not tear down your house because the attic is poorly organized. You reorganize the attic. This chapter teaches you to find the "attic" in your data model, the parts that are struggling with the relational structure, and reorganize those parts into a graph.
 
 ## 02. The Five Patterns
 
@@ -128,7 +128,7 @@ The `REPORTS_TO*` syntax means "follow this relationship any number of hops." No
 
 ### When the Relational Version Is Fine
 
-If your hierarchy is shallow (2-3 levels), queries are always "who is X's manager?" (one hop), and you never need to traverse the full chain — keep it in the relational database. The self-referencing foreign key is simple, well-understood, and efficient for single-hop lookups.
+If your hierarchy is shallow (2-3 levels), queries are always "who is X's manager?" (one hop), and you never need to traverse the full chain, keep it in the relational database. The self-referencing foreign key is simple, well-understood, and efficient for single-hop lookups.
 
 ## 04. Pattern 2: Many-to-Many Junction Table
 
@@ -201,11 +201,11 @@ ORDER BY shared DESC
 
 The junction table is gone. The proficiency and certified_date columns that lived on the junction table are now properties on the `HAS_SKILL` relationship. The query reads like the question: "Start at Bob, find skills he has, find others who also have those skills, count the overlap."
 
-> **Think of it like this:** A junction table is like a guest list for a party that records which guests know which other guests. In a graph, you skip the list — you just draw lines between the people who know each other. The information is the same, but the lines are faster to follow than the list is to search.
+> **Think of it like this:** A junction table is like a guest list for a party that records which guests know which other guests. In a graph, you skip the list and draw lines between the people who know each other. The information is the same, but the lines are faster to follow than the list is to search.
 
 ### When the Graph Is Better
 
-The graph wins when you are querying **through** the junction table — finding shared connections, traversing from entity to entity via the many-to-many relationship. The relational model wins when you are querying **the junction table itself** — for example, "show me all skill certifications granted in Q3 2024" (a simple SELECT against the junction table with a date filter).
+The graph wins when you are querying **through** the junction table: finding shared connections, traversing from entity to entity via the many-to-many relationship. The relational model wins when you are querying **the junction table itself**, for example, "show me all skill certifications granted in Q3 2024" (a simple SELECT against the junction table with a date filter).
 
 ## 05. Pattern 3: Polymorphic Associations
 
@@ -282,19 +282,19 @@ RETURN author.name, comment.text, labels(entity)[0] AS entity_type,
        coalesce(entity.title, entity.name) AS entity_name
 ```
 
-In the graph model, the polymorphic association simply becomes a relationship. The `ABOUT` relationship can point to any type of node — Ticket, Project, or Document — without any special handling. The `entity_type` column disappears because the type is inherent in the node's label.
+In the graph model, the polymorphic association simply becomes a relationship. The `ABOUT` relationship can point to any type of node (Ticket, Project, or Document) without any special handling. The `entity_type` column disappears because the type is inherent in the node's label.
 
 > **Think of it like this:** Polymorphic associations in SQL are like writing "see Room 42 in Building 3" on a sticky note. You have to know that Building 3 is the Tickets building and Room 42 is ticket #42. In a graph, you just draw an arrow from the comment to the ticket. No lookup, no translation.
 
 ### When the Graph Is Better
 
-Almost always, for this specific pattern. Polymorphic associations are a workaround for a limitation of the relational model — the inability to create foreign keys to multiple tables. Graphs do not have this limitation. The only case where you might keep the relational version is if you rarely query through the polymorphic column and mostly just insert records (e.g., a write-heavy audit log that is rarely queried).
+Almost always, for this specific pattern. Polymorphic associations are a workaround for a limitation of the relational model: the inability to create foreign keys to multiple tables. Graphs do not have this limitation. The only case where you might keep the relational version is if you rarely query through the polymorphic column and mostly just insert records (e.g., a write-heavy audit log that is rarely queried).
 
 ## 06. Pattern 4: Temporal Data (Effective Dates)
 
 ### The Relational Version
 
-Many enterprise schemas track historical relationships using effective date ranges. An employee's department assignment, a product's price, a vendor's certification status — all change over time, and you need to know what was true at any given point.
+Many enterprise schemas track historical relationships using effective date ranges. An employee's department assignment, a product's price, and a vendor's certification status all change over time. You need to know what was true at any given point.
 
 ```sql
 CREATE TABLE employee_departments (
@@ -371,7 +371,7 @@ RETURN report.name, dept1.name AS from_dept, dept2.name AS to_dept, bt1.to AS ch
 
 The hierarchy traversal and the temporal query combine naturally. No recursive CTE. No self-join on the temporal table.
 
-> **Think of it like this:** In the relational model, temporal data creates rows that must be matched and filtered by date ranges — essentially turning every query into a range scan puzzle. In a graph, temporal data lives on the relationships as properties, and the graph traversal handles the hierarchy. The two concerns (time and structure) stay separate instead of tangling together in a complex query.
+> **Think of it like this:** In the relational model, temporal data creates rows that must be matched and filtered by date ranges, turning every query into a range scan puzzle. In a graph, temporal data lives on the relationships as properties, and the graph traversal handles the hierarchy. The two concerns (time and structure) stay separate instead of tangling together in a complex query.
 
 ### When the Relational Version Is Fine
 
@@ -381,7 +381,7 @@ For simple "what is the current value?" queries without hierarchy traversal, the
 
 ### The Relational Version
 
-Product categories, organizational divisions, document taxonomies — hierarchical categories are everywhere in enterprise data. The relational approach typically uses either adjacency lists (self-referencing table) or materialized paths.
+Product categories, organizational divisions, and document taxonomies are everywhere in enterprise data. The relational approach typically uses either adjacency lists (self-referencing table) or materialized paths.
 
 ```sql
 -- Adjacency list approach
@@ -476,7 +476,7 @@ WITH p, leaf, collect(root.name) + collect(leaf.name) AS path_parts
 RETURN p.name, path_parts
 ```
 
-The `SUBCATEGORY_OF*0..` syntax means "follow zero or more SUBCATEGORY_OF relationships" — giving you the entire subtree without recursion.
+The `SUBCATEGORY_OF*0..` syntax means "follow zero or more SUBCATEGORY_OF relationships," giving you the entire subtree without recursion.
 
 ### When the Graph Is Better
 
@@ -606,4 +606,4 @@ Before moving on, make sure you can answer these questions:
 - [ ] Can you articulate the "entities vs. connections" rule of thumb?
 - [ ] Do you have a plan for keeping the graph and relational database in sync?
 
-If you answered yes to all five, you are ready for Chapter 5, where we translate SQL queries to Cypher — the graph query language that will feel surprisingly familiar.
+If you answered yes to all five, you are ready for Chapter 5, where we translate SQL queries to Cypher, the graph query language that will feel surprisingly familiar.
