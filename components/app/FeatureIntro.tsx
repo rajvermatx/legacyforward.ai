@@ -19,7 +19,7 @@ const COLORS = {
 };
 
 export default function FeatureIntro({ id, title, description, color = "indigo" }: FeatureIntroProps) {
-  const [dismissed, setDismissed] = useState(true); // hidden by default to prevent flash
+  const [dismissed, setDismissed] = useState<boolean | null>(null); // null = not yet mounted
 
   useEffect(() => {
     const key = `legacyforward_intro_${id}`;
@@ -31,7 +31,8 @@ export default function FeatureIntro({ id, title, description, color = "indigo" 
     setDismissed(true);
   }
 
-  if (dismissed) return null;
+  // null = pre-mount (matches server render of nothing); true = user dismissed it
+  if (dismissed !== false) return null;
 
   const c = COLORS[color];
 
