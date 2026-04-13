@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import AppLayout from "@/components/app/AppLayout";
+import AppShell from "@/components/app/AppShell";
 import FeatureIntro from "@/components/app/FeatureIntro";
 import type { BookChapter } from "@/lib/agents";
 
@@ -111,7 +111,7 @@ export default function BookPage() {
   const hasData = !!snapshot?.currentRole;
 
   return (
-    <AppLayout>
+    <AppShell>
           <FeatureIntro
             id="book"
             title="Your Personalized Career Bible — No One Else Gets This Book"
@@ -330,6 +330,6 @@ export default function BookPage() {
               </div>
             </div>
           )}
-    </AppLayout>
+    </AppShell>
   );
 }

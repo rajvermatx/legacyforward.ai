@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import AppShell from "@/components/app/AppShell";
 
 const tiers = [
   {
@@ -83,12 +84,11 @@ export default function PricingPage() {
   const [currency, setCurrency] = useState<"USD" | "INR">("USD");
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
+    <AppShell>
+      <div className="py-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/app/dashboard" className="text-teal-600 font-bold text-lg">LegacyForward.ai</Link>
-          <h1 className="text-3xl font-extrabold text-slate-900 mt-4 mb-2">Choose Your Plan</h1>
+          <h1 className="text-3xl font-extrabold text-slate-900 mb-2">Choose Your Plan</h1>
           <p className="text-slate-500">Invest in your career. Get your personalized Career Bible.</p>
 
           {/* Currency toggle */}
@@ -190,6 +190,6 @@ export default function PricingPage() {
           </Link>
         </div>
       </div>
-    </div>
+    </AppShell>
   );
 }

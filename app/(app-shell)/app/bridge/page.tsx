@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import AppLayout from "@/components/app/AppLayout";
+import AppShell from "@/components/app/AppShell";
 import FeatureIntro from "@/components/app/FeatureIntro";
 import { InfoLabel } from "@/components/app/Tooltip";
 import type { BridgeAnalysis } from "@/lib/agents";
@@ -47,7 +47,7 @@ export default function BridgePage() {
     : "";
 
   return (
-    <AppLayout>
+    <AppShell>
           <FeatureIntro
             id="bridge"
             title="Bridge Builder — Your Skills Already Travel Further Than You Think"
@@ -188,6 +188,6 @@ export default function BridgePage() {
               </div>
             </div>
           )}
-    </AppLayout>
+    </AppShell>
   );
 }

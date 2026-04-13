@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-import { WebsiteJsonLd } from "@/components/JsonLd";
-import SearchDialog from "@/components/SearchDialog";
-import { ContinueReadingBanner } from "@/components/ReadingProgress";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,16 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Analytics: drop in Google Analytics, Plausible, or Fathom script here */}
-      </head>
+      <head />
       <body className={`${inter.className} bg-white text-slate-800 antialiased`}>
-        <WebsiteJsonLd />
-        <Nav />
-        <ContinueReadingBanner />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <SearchDialog />
+        {children}
       </body>
     </html>
   );

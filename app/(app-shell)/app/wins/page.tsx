@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import AppLayout from "@/components/app/AppLayout";
+import AppShell from "@/components/app/AppShell";
 import FeatureIntro from "@/components/app/FeatureIntro";
 import { InfoLabel } from "@/components/app/Tooltip";
 
@@ -150,7 +150,7 @@ export default function WinsPage() {
   const categories = [...new Set(wins.map((w) => w.category))];
 
   return (
-    <AppLayout>
+    <AppShell>
           <FeatureIntro
             id="wins"
             title="Your Achievement Journal — Never Forget a Win"
@@ -262,6 +262,6 @@ export default function WinsPage() {
               </div>
             </div>
           )}
-    </AppLayout>
+    </AppShell>
   );
 }
