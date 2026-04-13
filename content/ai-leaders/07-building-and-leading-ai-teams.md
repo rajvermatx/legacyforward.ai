@@ -35,7 +35,7 @@ The AI talent market in 2026 is simultaneously overheated and misunderstood.
 
 **What is genuinely scarce:** Deep research scientists who train foundation models from scratch. You do not need these people. The companies that need them are OpenAI, Google, Anthropic, and a handful of well-funded AI labs. Their compensation starts at $500,000 and they will not join your company.
 
-**What is plentiful but poorly labeled:** People who can configure, deploy, and tune existing AI systems — often called "AI engineers" or "ML engineers" — are far more available than the market hysteria suggests. Many are sitting inside your organization right now, underutilized and underidentified.
+**What is plentiful but poorly labeled:** People who can configure, deploy, and tune existing AI systems, often called "AI engineers" or "ML engineers," are far more available than the market hysteria suggests. Many are sitting inside your organization right now, underutilized and underidentified.
 
 **What is genuinely needed and often overlooked:** Business-facing AI roles. People who understand your industry deeply and can translate that knowledge into AI system requirements. These people may not have "AI" anywhere on their current resume.
 
@@ -115,7 +115,7 @@ All AI talent sits in a single team — often reporting to the Chief Digital Off
 
 Works well when: You are in early stages of AI deployment (first 12-18 months). You need to establish standards, governance, and shared infrastructure. Your business units lack technical maturity to manage AI independently.
 
-Fails when: Business units feel AI is being done "to them" rather than "with them." The CoE becomes a bottleneck — projects queue for months. The CoE team lacks domain knowledge to build solutions that actually fit business needs.
+Fails when: Business units feel AI is being done "to them" rather than "with them." The CoE becomes a bottleneck and projects queue for months. The CoE team lacks domain knowledge to build solutions that actually fit business needs.
 
 Typical size: 5-15 people for a mid-market company. 20-50 for large enterprises.
 
@@ -137,7 +137,7 @@ A small central team owns standards, governance, shared platforms, and capabilit
 
 Works well when: You have passed the initial deployment phase and need both scale and control. This is where most mature organizations land.
 
-The design principle: Central team owns the "how" (standards, tooling, governance). Embedded teams own the "what" (use cases, domain expertise, business outcomes).
+The design principle: the central team owns the "how," meaning standards, tooling, and governance. Embedded teams own the "what," meaning use cases, domain expertise, and business outcomes.
 
 | Model | Best for | Risk | Typical cost (mid-market) |
 |---|---|---|---|
@@ -205,7 +205,7 @@ Outsourcing core strategic capability — if AI is central to your competitive d
 | **AI Product Manager** | $200K–$310K/yr fully loaded | $30K–$60K training for existing PM | $120K–$200K for defined scope |
 | **AI Governance Lead** | $180K–$300K/yr fully loaded | $20K–$50K for compliance/legal professional | $80K–$150K for audit/policy work |
 
-**The decision rule:** Hire externally when the role requires expertise that does not exist in your organization and cannot be developed in the timeframe you need. Upskill internally when the gap is learnable, when domain knowledge of your business is important, and when you have 3-12 months before you need full productivity. Outsource when you need a specific capability for a bounded period, or when you are buying a product rather than building a capability.
+**The decision rule:** Hire externally when the role requires expertise that does not exist in your organization and cannot be developed in the timeframe you need. Upskill internally when the gap is learnable, when domain knowledge of your business is important, and when you have 3-12 months before you need full productivity. Outsource when you need a specific capability for a bounded period or when you are buying a product rather than building a capability.
 
 ---
 
@@ -213,7 +213,7 @@ Outsourcing core strategic capability — if AI is central to your competitive d
 
 ### Grounded Delivery: The 5 Phases Explained for Executives
 
-AI projects do not follow the same lifecycle as traditional software projects. Understanding the difference between the phases — and what each one should produce — is the foundation of effective oversight.
+AI projects do not follow the same lifecycle as traditional software projects. Understanding what each phase should produce is the foundation of effective oversight.
 
 **Phase 1: Discovery and Problem Definition (2-6 weeks)**
 
@@ -279,11 +279,11 @@ The single most common AI project management problem is the "80% done" phenomeno
 
 > **Think of it like this:** Building an AI system is not like constructing a building, where progress is physically visible and milestones are unambiguous. It is more like training a sports team for a championship. You can have weeks of practice that feel productive — the plays are being run, the drills are completed, the athletes are improving — and still not know whether the team will win the championship until they actually play it. The last 20% of performance improvement is often harder than the first 80%, and practice (development) does not guarantee game performance (production).
 
-**Reason 1: Development performance vs. production performance.** AI systems that work well on controlled test data frequently underperform on real data. Teams report "80% done" based on development metrics, but the real test — production — has not happened yet.
+**Reason 1: Development performance vs. production performance.** AI systems that work well on controlled test data frequently underperform on real data. Teams report "80% done" based on development metrics, but the real test, production, has not happened yet.
 
 **Reason 2: The last mile is the hardest.** Going from 80% accuracy to 95% accuracy often requires as much work as going from 0% to 80%.
 
-**Reason 3: Integration is not development.** An AI model that works well in isolation may require substantial additional work to integrate with real systems. Teams often report the model as "done" before integration work begins — but integration work can double the timeline.
+**Reason 3: Integration is not development.** An AI model that works well in isolation may require substantial additional work to integrate with real systems. Teams often report the model as "done" before integration work begins, but integration work can double the timeline.
 
 **What to do about it:** Replace percentage-complete reporting with milestone-based reporting. Instead of "we are 75% done," require: "we have completed Phase 3 development, achieved 89% accuracy on test data, and are beginning the pilot phase with 50 real users. Pilot completion is scheduled for [date]."
 
@@ -339,7 +339,7 @@ Milestones are binary — either done or not done. Percentages are an invitation
 
 ### How to Read an AI Demo Without Being Fooled
 
-AI demos are one of the most effective management communication tools ever invented — and one of the easiest to misread. The demo for a system that is 40% ready and the demo for a system that is 95% ready can look identical to an executive audience.
+AI demos are one of the most effective management communication tools ever invented, and one of the easiest to misread. The demo for a system that is 40% ready and the demo for a system that is 95% ready can look identical to an executive audience.
 
 **The controlled conditions problem:** Most AI demos are run with carefully selected inputs that the system handles well. Ask the team to handle an input you provide on the spot, not one they have prepared.
 
@@ -412,7 +412,7 @@ The most important change most executives need to make is not learning more abou
 
 Most AI teams are not trying to mislead their executive sponsors. They are doing genuinely hard work in an environment where progress is nonlinear, where good news and bad news can coexist in the same status update, and where they are often uncertain themselves about when "almost done" will become "actually done."
 
-Your job is to create conditions where honesty is easier than optimism. That means rewarding teams that surface bad news early. It means asking questions that require specific answers rather than accepting vague reassurances. And it means establishing a reporting structure where "we don't know yet" is an acceptable answer — and "everything is fine" is the answer that triggers scrutiny.
+Your job is to create conditions where honesty is easier than optimism. That means rewarding teams that surface bad news early. It means asking questions that require specific answers rather than accepting vague reassurances. It means establishing a reporting structure where "we don't know yet" is an acceptable answer and "everything is fine" is the answer that triggers scrutiny.
 
 The same principle applies to talent. The executives most effective at building AI teams are not those who post the most ambitious job descriptions or pay the highest salaries. They are those who understand what capability they actually need, where it most efficiently comes from — inside the organization or outside — and how to create the conditions in which that capability can actually produce results.
 

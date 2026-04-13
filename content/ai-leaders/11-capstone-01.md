@@ -28,7 +28,7 @@ An AI strategy is not a technology roadmap. Roadmaps describe what you will buil
 
 An AI strategy is not a vision statement. "We will be an AI-powered organization" is a wish, not a strategy. A strategy contains choices: what you will do and what you will not do, where you will invest and where you will not, what you will measure and what will determine whether you continue.
 
-An AI strategy is not a vendor-driven deployment plan. If your AI strategy is essentially a description of what one vendor told you to buy, you do not have a strategy — you have a procurement plan dressed up as a strategy.
+An AI strategy is not a vendor-driven deployment plan. If your AI strategy is essentially a description of what one vendor told you to buy, you do not have a strategy. You have a procurement plan dressed up as a strategy.
 
 A complete AI strategy has six sections:
 
@@ -171,7 +171,7 @@ After you have written each initiative brief, score the portfolio as a whole usi
 | Initiative 4 | | | | | | |
 | Initiative 5 | | | | | | |
 
-The weighted score should reflect the priority weights you defined in Section 2b. This scoring is a conversation tool, not a precise calculation. If the scoring produces a ranking that does not match your intuition, that is a useful conversation to have with your leadership team — either the scoring is wrong or your intuition is.
+The weighted score should reflect the priority weights you defined in Section 2b. This scoring is a conversation tool, not a precise calculation. If the scoring produces a ranking that does not match your intuition, that is a useful conversation to have with your leadership team. Either the scoring is wrong or your intuition is.
 
 ---
 
@@ -194,7 +194,7 @@ Build your cost estimate from the components that are actually chargeable, not j
 | Infrastructure (cloud compute, storage) | | | | |
 | **Total** | | | | |
 
-The most commonly underestimated cost category is internal time. A vendor license that costs $500K may require 3 FTE-years of internal engineering to implement correctly. Omitting the internal time produces a cost estimate that will not survive the first budget review.
+The most commonly underestimated cost category is internal time. A vendor license that costs $500K may require 3 FTE-years of internal engineering to implement correctly. Omitting internal time produces a cost estimate that will not survive the first budget review.
 
 ### 4b. Value Case by Initiative
 
@@ -217,7 +217,7 @@ For each initiative, provide the value case using the format: confirmed vs. esti
 | Net (w/ Estimated) | | | | |
 | ROI (Confirmed) | | | | |
 
-Present both the confirmed-only and the confirmed-plus-estimated rows. Presenting only the optimistic number and then missing it destroys credibility. Presenting a range with explicit basis for each component demonstrates financial discipline.
+Present both the confirmed-only and the confirmed-plus-estimated rows. Showing only the optimistic number and then missing it destroys credibility. A range with an explicit basis for each component demonstrates financial discipline.
 
 ---
 

@@ -14,7 +14,7 @@ badges:
 
 One of the defining challenges for executives in 2026 is that staying informed about AI requires filtering at a level that did not exist for previous technology cycles. The volume of news, announcements, research papers, vendor briefings, and breathless punditry is genuinely unprecedented. If you tried to read everything relevant, you would not have time to run your business.
 
-And yet the filter cannot be "ignore it all and let the team handle it." The executives who are most effective with AI are not those who know the most technical details — they are those who have developed reliable signal detection: the ability to recognize the trends that will materially affect their business and distinguish them from the noise that will not.
+And yet the filter cannot be "ignore it all and let the team handle it." The executives who are most effective with AI are not those who know the most technical details. They are those who have developed reliable signal detection: the ability to recognize the trends that will materially affect their business and distinguish them from the noise that will not.
 
 This chapter gives you the signal detection framework and the 30-minute monthly ritual that keeps it current.
 
@@ -73,15 +73,15 @@ A distinct class of AI model — often called "reasoning models" or "o-series" t
 - Legal and regulatory analysis requiring careful chain-of-thought
 - Strategic scenario analysis
 
-They are also meaningfully slower and more expensive per query than standard models. This creates a practical architecture question: which of your use cases need deeper reasoning (and should use reasoning models at higher cost) versus which need fast response (and should use standard models)?
+They are also meaningfully slower and more expensive per query than standard models. This creates a practical architecture question: which of your use cases need deeper reasoning and should use reasoning models at higher cost, versus which need fast response and should use standard models?
 
-For executives, the implication is that AI is no longer a single capability. It is a portfolio of capabilities at different cost and performance points — more like a professional services firm with different tiers of expertise than a single software tool.
+For executives, the implication is that AI is no longer a single capability. It is a portfolio of capabilities at different cost and performance points, more like a professional services firm with different tiers of expertise than a single software tool.
 
 ### 4. AI-Native Software Replacing Traditional Enterprise Software
 
 The most strategically significant trend that does not get enough executive attention is the rate at which AI-native competitors are emerging to challenge legacy enterprise software categories.
 
-ERP, CRM, HRIS, legal research tools, financial modeling platforms — in almost every category, new entrants are building software where AI is the primary interface and primary capability, not a feature added to an existing system. These new entrants often have dramatically lower implementation costs, faster time to value, and better user adoption than incumbent systems.
+ERP, CRM, HRIS, legal research tools, financial modeling platforms: in almost every category, new entrants are building software where AI is the primary interface and primary capability, not a feature added to an existing system. These new entrants often have dramatically lower implementation costs, faster time to value, and better user adoption than incumbent systems.
 
 The strategic risk: your competitors are considering replacements to the same legacy systems you are. If they adopt AI-native alternatives and you do not, the productivity gap is structural, not just marginal.
 
@@ -213,7 +213,7 @@ The vendors who have good answers to these questions are worth your time. The on
 
 ## Building Your Personal AI Literacy Over Time
 
-Executive AI literacy is not a destination — it is an ongoing practice. The landscape shifts fast enough that what was current knowledge 18 months ago is now partial knowledge.
+Executive AI literacy is not a destination. It is an ongoing practice. The landscape shifts fast enough that what was current knowledge 18 months ago is now partial knowledge.
 
 The most time-efficient way to maintain literacy is:
 

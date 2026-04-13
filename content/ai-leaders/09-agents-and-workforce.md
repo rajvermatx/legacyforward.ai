@@ -15,9 +15,9 @@ badges:
 
 The AI landscape shifted in late 2024 and accelerated through 2025. The shift was not a new model, a new chip, or a new company. It was a change in the fundamental mode of operation: AI stopped waiting to be asked and started taking action.
 
-This is the transition from AI as a tool — you ask, it answers — to AI as an agent: it receives a goal, makes a plan, takes a sequence of actions, checks its own work, and continues until the goal is complete or it gets stuck.
+This is the transition from AI as a tool, you ask and it answers, to AI as an agent: it receives a goal, makes a plan, takes a sequence of actions, checks its own work, and continues until the goal is complete or it gets stuck.
 
-At the same time, there is a question circulating in every break room, every Slack channel, and every one-on-one in your organization. People may not be asking their managers directly, but they are asking each other, asking the internet, and reading the headlines.
+At the same time, there is a question circulating in every break room, every Slack channel, and every one-on-one in your organization. People may not be asking their managers directly. But they are asking each other, asking the internet, and reading the headlines.
 
 The question is: is this coming for me?
 
@@ -79,7 +79,7 @@ Campaign execution: Agents manage multi-channel campaigns — create variants, s
 
 Here is the problem: most organizations deploy agent capabilities before they build governance for agent capabilities.
 
-This happens for understandable reasons. The tools are easy to activate. The early results look impressive. The productivity gains are real. And the governance questions feel abstract until something goes wrong.
+This happens for understandable reasons. The tools are easy to activate. The early results look impressive. The productivity gains are real. The governance questions feel abstract until something goes wrong.
 
 What goes wrong tends to fall into four categories.
 
@@ -176,7 +176,7 @@ You do not need a fifty-page policy document to govern agentic AI. You need five
 
 The next evolution — already in deployment at larger organizations — is multi-agent systems: networks of agents that communicate with and delegate to each other. A managing agent breaks down a goal, assigns subtasks to specialized agents, collects their outputs, and synthesizes a result.
 
-Multi-agent systems multiply the capability of agentic AI. They also multiply the governance complexity. When Agent A instructs Agent B to take an action that Agent B's owner did not anticipate, accountability becomes genuinely difficult to assign.
+Multi-agent systems multiply the capability of agentic AI and multiply the governance complexity. When Agent A instructs Agent B to take an action that Agent B's owner did not anticipate, accountability becomes genuinely difficult to assign.
 
 If your organization is evaluating or already running multi-agent architectures, the governance controls above are necessary but not sufficient. You additionally need: explicit definition of which agents are permitted to instruct which other agents, logging of inter-agent communications (not just end-actions), a single accountability owner for the orchestrating system, and escalation paths that work across the entire agent network.
 
@@ -184,9 +184,9 @@ If your organization is evaluating or already running multi-agent architectures,
 
 ### How to Brief Your Board
 
-When your board asks about agentic AI — and they will — the framing that serves you best is this: "Agentic AI is AI that takes action, not just answers. We are deploying it in [two or three specific areas]. We have established [specific governance controls]. The owner is [name]. The value case is [specific metric]. The risk controls are [specific]. We review this quarterly."
+When your board asks about agentic AI, and they will, the framing that serves you best is this: "Agentic AI is AI that takes action, not just answers. We are deploying it in [two or three specific areas]. We have established [specific governance controls]. The owner is [name]. The value case is [specific metric]. The risk controls are [specific]. We review this quarterly."
 
-That is twelve sentences. It demonstrates that you are capturing the opportunity, that you understand the risks, and that someone accountable is watching. The alternative — "we are experimenting with AI agents across several initiatives" — sounds like you do not know what you have deployed or who is responsible for it. Boards notice.
+That is twelve sentences. It demonstrates that you are capturing the opportunity, that you understand the risks, and that someone accountable is watching. The alternative, "we are experimenting with AI agents across several initiatives," sounds like you do not know what you have deployed or who is responsible for it. Boards notice.
 
 ---
 
@@ -248,7 +248,7 @@ The value of this framework is that it forces specificity. "AI will augment our 
 
 ### The Employee Communication Playbook
 
-The most common mistake executives make in AI-related workforce communication is either saying nothing (letting anxiety fill the vacuum) or saying everything is fine (eroding trust when people can see it is not fully true).
+The most common mistake executives make in AI-related workforce communication is either saying nothing, letting anxiety fill the vacuum, or saying everything is fine, eroding trust when people can see it is not fully true.
 
 The communication approach that maintains trust has four characteristics:
 
@@ -344,7 +344,7 @@ There is a reasonable debate about how much disruption organizations owe their w
 
 What is not debatable is this: the organizations that handle AI-driven workforce transitions honestly, specifically, and with genuine investment in their people emerge with more organizational capability, more employee trust, and more resilience than the organizations that handle it poorly.
 
-The half-measure — vague reassurances followed by surprise restructurings — produces the worst of all outcomes: the harm of the restructuring plus the trust damage of the deception.
+The half-measure, vague reassurances followed by surprise restructurings, produces the worst of all outcomes: the harm of the restructuring plus the trust damage of the deception.
 
 This principle applies equally to agent governance. The organizations that deploy agents carefully — with named owners, tested kill switches, and honest accounting of what the technology is doing — get the value of the productivity gains without the liability exposure of uncontrolled automation.
 

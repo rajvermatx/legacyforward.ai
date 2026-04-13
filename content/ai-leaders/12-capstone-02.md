@@ -16,7 +16,7 @@ Most board presentations about AI go wrong in one of two ways.
 
 The first type undersells. The presenter is cautious, hedges every statement, buries the recommendation in qualifications, and leaves the board with no clear ask and no clear basis for a decision. The board thanks them politely and the initiative stalls waiting for a decision that was never actually requested.
 
-The second type oversells. The presenter leads with industry hype, presents vendor-supplied projections as company analysis, quotes benchmark statistics that do not apply to their specific context, and promises transformation without evidence. Experienced board members — particularly those who have been through previous technology cycles — see through this immediately. Trust erodes.
+The second type oversells. The presenter leads with industry hype, presents vendor-supplied projections as company analysis, quotes benchmark statistics that do not apply to their specific context, and promises transformation without evidence. Experienced board members, particularly those who have been through previous technology cycles, see through this immediately. Trust erodes.
 
 The presentation that works is neither of these. It is a 30-minute, evidence-based case for a specific investment or strategic decision, delivered by an executive who demonstrates they understand both the opportunity and the risk, and who asks for a clear, specific decision.
 
@@ -32,7 +32,7 @@ The board presentation is the last step, not the first. Before you put a slide t
 
 **1. The strategy is written.** If you have not completed or substantially drafted the AI strategy document (Capstone 1), you are not ready to present to the board. The presentation is a distillation of the strategy, not a substitute for it.
 
-**2. The CFO has already seen it.** Your CFO should be a co-presenter or at minimum an explicit endorser of the financial analysis. A board presentation where the CFO is hearing the cost figures for the first time is a board presentation that will go badly.
+**2. The CFO has already seen it.** Your CFO should be a co-presenter or at minimum an explicit endorser of the financial analysis. A board presentation where the CFO is hearing the cost figures for the first time will go badly.
 
 **3. You have pre-read the room.** Know which board members are skeptical of technology investment (they are usually right to be — talk to them in advance), which are impatient for the company to move faster on AI (calibrate their expectations about realistic timelines), and which are primarily focused on risk (make sure your risk slides are substantive, not decorative).
 
@@ -161,7 +161,7 @@ This is where many AI presentations become vague at precisely the moment precisi
 | Net (w/ Estimated) | | | | |
 | Payback period (Confirmed) | | | | |
 
-Show both the confirmed-only and the confirmed-plus-estimated rows. Clearly label the difference. This is the financial discipline move that distinguishes credible from optimistic.
+Show both the confirmed-only and the confirmed-plus-estimated rows. Clearly label the difference. This is the financial discipline that distinguishes credible from optimistic.
 
 ### Slide: What We Are Asking For
 

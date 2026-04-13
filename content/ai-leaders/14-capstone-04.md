@@ -14,7 +14,7 @@ badges:
 
 Somewhere between twelve and eighteen months into most AI programs, at least one initiative will reach a point where the original business case is not holding up. The metrics are not where they should be. The team has been making adjustments but the trajectory has not changed. The quarterly review feels more defensive than confident. And nobody has said the word "kill" yet, because killing an initiative feels like admitting failure.
 
-This is one of the most consequential moments in an AI program. Organizations that make the kill decision well — when they should, for the right reasons, with clear communication — emerge with stronger programs, higher organizational trust in AI investment, and a culture that can support continued innovation. Organizations that do not make it — that keep funding struggling initiatives past the point of rational justification, that avoid the conversation, or that make the decision but communicate it poorly — pay compounding costs for years.
+This is one of the most consequential moments in an AI program. Organizations that make the kill decision well, when they should, for the right reasons, with clear communication, emerge with stronger programs, higher organizational trust in AI investment, and a culture that can support continued innovation. Organizations that do not make it, that keep funding struggling initiatives past the point of rational justification or communicate the decision poorly, pay compounding costs for years.
 
 This capstone gives you the framework for making and communicating the kill decision well.
 
@@ -28,7 +28,7 @@ The kill decision is emotionally and organizationally difficult for reasons that
 
 > **Think of it like this:** A commercial real estate investor buys a property for $5 million that declines in value to $3 million. Their advisor recommends selling before values decline further. The investor says: "I can't sell — I'd be taking a $2 million loss." But the loss already happened. The question is not whether to realize it on paper but whether holding longer will increase or decrease the damage. The property's future value is the only relevant variable. The original purchase price is not. AI initiative decisions work identically.
 
-**Political attachment.** Initiatives have sponsors. Sponsors have reputations. Killing an initiative feels like indicting the sponsor's judgment. In organizations where failure is not handled gracefully, sponsors will resist killing their initiative because they fear the personal consequence more than they fear the continued cost to the organization.
+**Political attachment.** Initiatives have sponsors. Sponsors have reputations. Killing an initiative feels like indicting the sponsor's judgment. In organizations where failure is not handled gracefully, sponsors resist killing their initiative because they fear the personal consequence more than the continued cost to the organization.
 
 **Narrative momentum.** Vendors have told your stakeholders this is going to work. The team has told the organization this is important. The initiative appears in board materials. Killing it requires revising a narrative that has institutional momentum.
 
@@ -138,7 +138,7 @@ Pivot decisions fail most often because they are not specific enough. "We are pi
 - The remaining investment needed to reach value exceeds what is justified by the probability-adjusted value
 - The team working on the initiative has lost confidence in the path and is not being realistic about the probability of success
 
-**The kill is not a failure acknowledgment — it is a capital allocation decision.** The question is not "did this fail?" The question is "is future investment in this direction the best use of resources available to us?" Often the answer is no — and that is a financially disciplined answer, not a failure.
+**The kill is not a failure acknowledgment. It is a capital allocation decision.** The question is not "did this fail?" The question is: is future investment in this direction the best use of available resources? Often the answer is no. That is a financially disciplined answer, not a failure.
 
 ---
 
@@ -174,7 +174,7 @@ In this example, Scenario C is financially superior to Scenario A — even thoug
 
 ## Step 4: Making the Recommendation
 
-After the scenario analysis, one scenario will be clearly superior or there will be a close call between two. Either way, you need to produce a written recommendation. This is not optional — a verbal recommendation in a meeting is too easily misunderstood, too easily revisited, and too easily blamed on whoever was in the room.
+After the scenario analysis, one scenario will be clearly superior or there will be a close call between two. Either way, produce a written recommendation. This is not optional. A verbal recommendation in a meeting is too easily misunderstood, too easily revisited, and too easily blamed on whoever was in the room.
 
 ### The Recommendation Document
 
@@ -190,7 +190,7 @@ Brief description of each scenario evaluated and the key variable for each.
 Why one scenario is superior to the others. Include the expected value calculation. Be specific about the assumptions that drive the analysis.
 
 **4. Recommendation**
-State it plainly: "We recommend [Scenario A / B / C]." No hedging. No "we might consider" or "subject to further analysis." A recommendation is a recommendation.
+State it plainly: "We recommend [Scenario A / B / C]." No hedging. No "we might consider" or "subject to further analysis." A recommendation is not a suggestion.
 
 If you are recommending Scenario A (continue) or Scenario B (pivot), include specific conditions: "If the following milestones are not met by [date], we will return with a Scenario C recommendation at that time." This prevents the continue or pivot decision from becoming a license for indefinite additional investment.
 
@@ -201,7 +201,7 @@ The specific actions in the first 30 days following the decision, with named own
 
 ## Step 5: The Communication Plan
 
-Killing an AI initiative creates an organizational narrative. If you do not shape that narrative, it will be shaped by rumor, by the people most affected, and by the natural human tendency to interpret organizational events as signals about the future.
+Killing an AI initiative creates an organizational narrative. If you do not shape that narrative, rumor will. The people most affected will fill the vacuum, and the organization will interpret events as signals about the future.
 
 The communication you control is always better than the narrative vacuum you leave.
 
@@ -241,7 +241,7 @@ Follow contract terms for notice. Where possible, have the conversation before s
 
 ## The Learning Debrief
 
-Within 30 days of the termination decision, conduct a formal learning debrief. This is not a post-mortem (which often becomes a blame exercise) — it is a structured examination of what the initiative revealed.
+Within 30 days of the termination decision, conduct a formal learning debrief. This is not a post-mortem, which often becomes a blame exercise. It is a structured examination of what the initiative revealed.
 
 ### Debrief Questions
 
@@ -264,7 +264,7 @@ Within 30 days of the termination decision, conduct a formal learning debrief. T
 - Does this learning have value for other initiatives or future investments?
 - Is there a better-defined version of this problem that is worth pursuing in a future cycle?
 
-Write a two-to-three page learning summary and distribute it to all initiative sponsors and the AI program lead. This document is one of the most valuable outputs of a killed initiative — the investment was not entirely lost if the organization genuinely learns from it.
+Write a two-to-three page learning summary and distribute it to all initiative sponsors and the AI program lead. This document is one of the most valuable outputs of a killed initiative. The investment is not entirely lost if the organization genuinely learns from it.
 
 ---
 
@@ -276,7 +276,7 @@ If you make kill decisions when the evidence warrants them, communicate them hon
 
 That signal makes every future initiative easier to staff, easier to fund, and more likely to be honest with you when things are not working.
 
-If you do not make kill decisions when you should — if you keep funding failing initiatives because of sunk cost, political attachment, or fear of the message — you are signaling that AI investment is not subject to normal financial discipline. That signal attracts more of the same: larger bets, lower accountability, and a culture where nobody tells the executive in charge what is really happening.
+If you do not make kill decisions when you should, if you keep funding failing initiatives because of sunk cost, political attachment, or fear of the message, you signal that AI investment is not subject to normal financial discipline. That signal attracts more of the same: larger bets, lower accountability, and a culture where nobody tells the executive what is really happening.
 
 The kill decision, done well, is not the end of an AI initiative. It is evidence that your program is mature enough to be trusted with more.
 

@@ -12,7 +12,7 @@ badges:
 
 # AI Strategy That Actually Works
 
-Ask fifty companies to share their AI strategy and you will find that most of them are not strategies at all. They are tool adoption plans dressed up in strategic language. They describe which products the company plans to deploy, what the implementation timeline is, which vendors have been selected, and what the budget is. What they do not describe — clearly, specifically, verifiably — is what business value will be created, how it will be measured, and why AI is the right path to that value rather than something simpler.
+Ask fifty companies to share their AI strategy and you will find that most of them are not strategies at all. They are tool adoption plans dressed up in strategic language. They describe which products the company plans to deploy, what the implementation timeline is, which vendors have been selected, and what the budget is. What they do not describe, clearly, specifically, verifiably, is what business value will be created, how it will be measured, and why AI is the right path to that value rather than something simpler.
 
 This distinction is not semantic. It is the difference between spending $5 million on technology that changes what your company uses and spending $5 million on outcomes that change how your company competes.
 
@@ -30,7 +30,7 @@ Applied to executive AI strategy, Signal Capture asks a single foundational ques
 
 **Where in our business do we have untapped information that, if acted upon faster or more accurately, would create measurable competitive advantage?**
 
-This question is not about AI. It is about value. AI may or may not be the best mechanism to capture that value. Often there are faster, cheaper, more reliable ways to address the opportunity. But if there is an opportunity that depends on processing large volumes of information at speed, at scale, or with a consistency that humans alone cannot provide — then AI deserves serious evaluation.
+This question is not about AI. It is about value. AI may or may not be the best mechanism to capture that value. Often there are faster, cheaper, more reliable ways to address the opportunity. But if there is an opportunity that depends on processing large volumes of information at speed, at scale, or with a consistency that humans alone cannot provide, then AI deserves serious evaluation.
 
 > **Think of it like this:** A gold mining company does not start by purchasing mining equipment. It starts by identifying where the gold is. It commissions geological surveys, studies topographical maps, analyzes ore samples. Only after it has strong evidence that gold exists in a specific location does it commit to the capital cost of extraction equipment. AI strategy follows the same logic. The "geological survey" is the process of identifying high-value opportunities where information is underused. The "mining equipment" is the AI system. Most companies skip the survey and go straight to buying equipment.
 
@@ -44,7 +44,7 @@ There is a question that should appear on the cover page of every AI business ca
 
 **"Where does this create value we cannot achieve any other way?"**
 
-This question does three things simultaneously. First, it forces specificity — "we cannot achieve any other way" is a high bar that requires genuine analysis, not vague claims. Second, it establishes uniqueness — if the value can be achieved through hiring more people, improving a manual process, or buying a simpler software tool, then AI is not the right answer. Third, it creates accountability — someone is on record claiming that AI is necessary for this value to be created.
+This question does three things. First, it forces specificity. "We cannot achieve any other way" is a high bar that requires genuine analysis, not vague claims. Second, it establishes uniqueness. If the value can be achieved through hiring more people, improving a manual process, or buying a simpler software tool, then AI is not the right answer. Third, it creates accountability. Someone is on record claiming that AI is necessary for this value to be created.
 
 Not every AI initiative will have a perfect answer to this question. But the process of trying to answer it rigorously tends to produce better-scoped, better-justified initiatives than the alternative. It also surfaces the initiatives that should never have been funded — the ones where the honest answer is "we could achieve this without AI, but AI is fashionable right now."
 
@@ -52,7 +52,7 @@ Not every AI initiative will have a perfect answer to this question. But the pro
 
 ## Transformation vs. Automation: The Distinction That Saves Millions
 
-The most expensive mistake in AI strategy is conflating transformation with automation. These are not just different degrees of the same thing — they are different categories of investment with different risk profiles, different time horizons, and different organizational requirements.
+The most expensive mistake in AI strategy is conflating transformation with automation. These are not different degrees of the same thing. They are different categories of investment with different risk profiles, different time horizons, and different organizational requirements.
 
 **Automation** means using AI to do the same thing you are already doing, faster, cheaper, or with fewer people. Automating invoice processing. Automating first-level customer support. Automating document classification. These are legitimate, valuable initiatives with relatively straightforward success metrics.
 
@@ -202,11 +202,11 @@ Examples of effective guardrails:
 
 A strategy canvas produces direction. A roadmap converts that direction into sequenced, resourced action. The transition from canvas to roadmap requires three conversations that are often skipped:
 
-**The sequencing conversation:** Given your portfolio of initiatives, which ones must come first because others depend on them? Data infrastructure investments typically need to precede analytics applications. Governance frameworks need to precede customer-facing deployments. Getting this sequence right prevents costly restarts.
+**The sequencing conversation:** Given your portfolio of initiatives, which ones must come first because others depend on them? Data infrastructure investments typically need to precede analytics applications. Governance frameworks need to precede customer-facing deployments. Getting the sequence right prevents costly restarts.
 
-**The dependency conversation:** What must be true for each initiative to succeed? For each item on the portfolio, identify the three or four critical assumptions — about data, about people, about organizational readiness — and decide explicitly how you will validate those assumptions before committing full investment.
+**The dependency conversation:** What must be true for each initiative to succeed? For each item on the portfolio, identify the three or four critical assumptions about data, people, and organizational readiness. Decide how you will validate those assumptions before committing full investment.
 
-**The portfolio balance conversation:** A healthy AI portfolio has initiatives across multiple time horizons. Quick wins (demonstrable within 90 days) build organizational confidence and fund future investment. Medium-term bets (6-18 months) address material business problems. Long-term strategic investments (18+ months) create durable competitive advantage. If your portfolio is all long-term bets, you have no early proof points. If it is all quick wins, you are optimizing for optics rather than strategy.
+**The portfolio balance conversation:** A healthy AI portfolio has initiatives across multiple time horizons. Quick wins, demonstrable within 90 days, build organizational confidence and fund future investment. Medium-term bets, 6 to 18 months, address material business problems. Long-term strategic investments, 18 or more months, create durable competitive advantage. If your portfolio is all long-term bets, you have no early proof points. If it is all quick wins, you are optimizing for optics rather than strategy.
 
 ---
 
@@ -226,6 +226,6 @@ Before your AI strategy is presented to the board or used to drive budget alloca
 
 Every AI strategy needs an executive sponsor who is not the CTO or CIO. When AI strategy is owned exclusively by the technology function, it tends to produce technology roadmaps rather than business strategies. The technology function is excellent at identifying what AI can do. They are not the right function to determine what the business should do with it.
 
-The most effective AI strategies are co-developed between the business and technology leadership, with a business-side executive serving as primary sponsor. This structural choice sends a clear organizational signal: AI is a business strategy, not a technology project. It also creates the accountability structure that distinguishes successful from unsuccessful initiatives — a business executive who is on record claiming a business outcome, and whose performance evaluation includes whether that outcome was delivered.
+The most effective AI strategies are co-developed between business and technology leadership, with a business-side executive as primary sponsor. This structural choice sends a clear signal: AI is a business strategy, not a technology project. It also creates the accountability structure that distinguishes successful from unsuccessful initiatives. A business executive is on record claiming a business outcome, and their performance evaluation includes whether that outcome was delivered.
 
 That accountability is not a burden. It is the mechanism that converts strategy from a document into a set of outcomes.

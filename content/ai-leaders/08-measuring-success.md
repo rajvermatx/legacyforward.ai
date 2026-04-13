@@ -26,9 +26,9 @@ This chapter gives you the measurement system that separates programs that actua
 ![Diagram](/diagrams/ai-leaders/ch08-1.svg)
 Measuring AI success is genuinely different from measuring most technology investments, for three reasons.
 
-**First, the baseline problem.** When you buy a new ERP system, you can compare processing time before and after. AI often changes the nature of the task rather than just the speed of the old task. A document review process that used to take a lawyer 4 hours and now takes 30 minutes with AI assistance is a clean win — but what happens when the AI surfaces insights the lawyer would never have found manually? How do you measure value that didn't exist before?
+**First, the baseline problem.** When you buy a new ERP system, you can compare processing time before and after. AI often changes the nature of the task rather than just the speed of the old task. A document review process that used to take a lawyer 4 hours and now takes 30 minutes with AI assistance is a clean win. But what happens when the AI surfaces insights the lawyer would never have found manually? How do you measure value that didn't exist before?
 
-**Second, the attribution problem.** AI rarely operates in isolation. It sits inside a workflow that includes human judgment, process changes, and other technology. When revenue increases 12% in a quarter where you also deployed an AI sales assistant, how much credit belongs to the AI? Attribution is genuinely difficult, and anyone who claims otherwise is oversimplifying.
+**Second, the attribution problem.** AI rarely operates in isolation. It sits inside a workflow that includes human judgment, process changes, and other technology. When revenue increases 12% in a quarter where you also deployed an AI sales assistant, how much credit belongs to the AI? Attribution is genuinely difficult. Anyone who claims otherwise is oversimplifying.
 
 **Third, the time horizon problem.** Some AI benefits are immediate (a chatbot deflects 40% of tier-1 support tickets starting day one). Others are slow-building (the AI system learns your product catalog over six months and gradually improves recommendation accuracy). Measuring both on the same quarterly cadence will make the slow-building investments look like failures even when they are not.
 
@@ -133,7 +133,7 @@ Controlled comparisons are resisted because they feel like slowing down deployme
 
 ### 4. Report Honestly to Leadership
 
-Build a reporting format that separates what you know from what you believe. A program reporting "we believe this initiative reduced churn" when what they have is a correlation with a confounded dataset is not being dishonest — but leadership needs to know the difference between confirmed value and estimated value.
+Build a reporting format that separates what you know from what you believe. A program reporting "we believe this initiative reduced churn" when what they have is a correlation with a confounded dataset is not being dishonest. But leadership needs to know the difference between confirmed value and estimated value.
 
 A simple traffic-light system works well: green for confirmed, measured impact; yellow for estimated or modeled impact; red for insufficient data or negative result.
 

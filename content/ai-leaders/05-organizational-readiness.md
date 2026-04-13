@@ -52,9 +52,9 @@ At the practitioner level, this means having people who can translate business r
 
 Culture readiness measures whether your organization's norms, incentives, and behaviors support productive AI adoption.
 
-This is frequently the least visible readiness dimension and the one most likely to be the actual constraint on AI success. Organizations with excellent data and strong technical talent frequently fail at AI because their culture produces the wrong behaviors: siloed data ownership that prevents AI systems from accessing the information they need, resistance to workflow changes driven by job security concerns, or a blame culture that makes it impossible to acknowledge and learn from AI failures.
+This is frequently the least visible readiness dimension and the one most likely to be the actual constraint on AI success. Organizations with excellent data and strong technical talent frequently fail at AI because their culture produces the wrong behaviors. Siloed data ownership prevents AI systems from accessing the information they need. Resistance to workflow changes driven by job security concerns blocks adoption. A blame culture makes it impossible to acknowledge and learn from AI failures.
 
-Key cultural questions: Does your organization learn from failure, or does failure create defensiveness? Do your incentive structures reward the adoption of new approaches, or do they reward the continuation of existing processes? Do your data owners share information openly, or does data ownership create power dynamics that limit access?
+Key cultural questions: Does your organization learn from failure, or does failure create defensiveness? Do your incentive structures reward the adoption of new approaches, or do they reward existing processes? Do your data owners share information openly, or does data ownership create power dynamics that limit access?
 
 ### Dimension 4: Governance Readiness
 
@@ -140,7 +140,7 @@ This question surfaces in every AI strategy conversation, and the answer depends
 - You have the management infrastructure to support a specialized technical team
 - Salary and equity benchmarks in your market are competitive with what AI talent can earn at technology companies
 
-**The reality of hiring:** AI practitioners — particularly machine learning engineers, data scientists with production experience, and MLOps specialists — are among the most competitively compensated roles in the market. Entry-level ML engineers command $130-180K base in major markets; experienced practitioners commanding $200-350K+ are accessible primarily to technology companies and large financial institutions. If your compensation structure cannot compete, hiring will be chronically under-resourced.
+**The reality of hiring:** AI practitioners, particularly machine learning engineers, data scientists with production experience, and MLOps specialists, are among the most competitively compensated roles in the market. Entry-level ML engineers command $130-180K base in major markets. Experienced practitioners at $200-350K or more are accessible primarily to technology companies and large financial institutions. If your compensation structure cannot compete, hiring will be chronically under-resourced.
 
 **Upskill when:**
 - You have existing technical staff (software engineers, data analysts, BI developers) who are motivated to develop AI skills
@@ -148,7 +148,7 @@ This question surfaces in every AI strategy conversation, and the answer depends
 - You have time for a 6-12 month capability development investment
 - Retention of institutional knowledge in AI systems is important
 
-**The reality of upskilling:** Not all technical staff want to transition to AI roles. The ones who do are often the highest performers — which means you are investing in development for people who could be hired away. A visible career development pathway, clear opportunities to apply new skills, and recognition of AI capability in performance evaluation are all necessary to make upskilling investment stick.
+**The reality of upskilling:** Not all technical staff want to transition to AI roles. The ones who do are often the highest performers, which means you are investing in development for people who could be hired away. A visible career development pathway, clear opportunities to apply new skills, and recognition of AI capability in performance evaluation are all necessary to make upskilling investment stick.
 
 **Outsource when:**
 - You need to move quickly and do not have time for a hiring or upskilling cycle
@@ -158,7 +158,7 @@ This question surfaces in every AI strategy conversation, and the answer depends
 
 **The reality of outsourcing:** Partner relationships produce the best results when they are structured as capability transfers rather than pure delivery agreements. If the partner builds your AI systems without your team deeply involved in the work, you will be dependent on that partner indefinitely. The best partnership structures include explicit knowledge transfer goals, joint teams where your people work alongside the partner's people, and a planned transition timeline.
 
-**The hybrid reality:** Most organizations that have built effective AI programs over 18-36 months end up with some version of all three: a small core team of internal AI practitioners (hired or upskilled), supported by a partner relationship for specialized work and surge capacity, supplemented by vendor tools that reduce the custom engineering burden.
+**The hybrid reality:** Most organizations that have built effective AI programs over 18-36 months end up with some version of all three. A small core team of internal AI practitioners, hired or upskilled, supported by a partner relationship for specialized work and surge capacity, supplemented by vendor tools that reduce the custom engineering burden.
 
 ---
 
@@ -166,7 +166,7 @@ This question surfaces in every AI strategy conversation, and the answer depends
 
 One of the highest-return investments an organization can make in AI readiness is building a baseline level of AI understanding across the entire leadership population — not just the technical team.
 
-AI-literate leaders ask better questions, make better investment decisions, and are more effective at identifying high-value opportunities. They are also more credible to their teams when they lead AI change initiatives, because they speak from understanding rather than faith.
+AI-literate leaders ask better questions, make better investment decisions, and are more effective at identifying high-value opportunities. They are also more credible to their teams when they lead AI change initiatives, because they speak from understanding rather than assumption.
 
 Effective AI literacy programs for senior leaders have four characteristics:
 

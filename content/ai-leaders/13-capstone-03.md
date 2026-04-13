@@ -12,7 +12,7 @@ badges:
 
 # Evaluating an AI Vendor
 
-Vendor selection is one of the highest-leverage decisions in an AI program. The wrong vendor does not just delay your timeline — it can compromise your data, lock you into a platform you cannot exit, expose you to liability you did not anticipate, and undermine the organizational credibility of your entire AI program.
+Vendor selection is one of the highest-leverage decisions in an AI program. The wrong vendor does not just delay your timeline. It can compromise your data, lock you into a platform you cannot exit, expose you to liability you did not anticipate, and undermine the organizational credibility of your entire AI program.
 
 The right vendor, on the other hand, can materially accelerate your timeline, provide expertise your team does not yet have, and give you a partner for navigating the regulatory and technical complexity of enterprise AI.
 
@@ -75,7 +75,7 @@ Before you issue any RFP or make any contact with vendors, write down your evalu
 
 ## Running the Three-Vendor Evaluation
 
-Three vendors is the right number for a serious evaluation. Two is too few — you cannot establish a credible competitive dynamic or comparison baseline. Four or more is too many — the evaluation becomes so time-consuming that quality drops, and your team's attention dilutes to the point where the differences between vendors become meaningless.
+Three vendors is the right number for a serious evaluation. Two is too few: you cannot establish a credible competitive dynamic or comparison baseline. Four or more is too many: the evaluation becomes so time-consuming that quality drops, and the differences between vendors become meaningless.
 
 ### Stage 1: RFP Issuance (Week 1-2)
 
@@ -148,7 +148,7 @@ The vendor's willingness and ability to answer these questions honestly is itsel
 
 ## Reference Checks That Actually Reveal Problems
 
-Standard reference checks are largely useless because vendors curate them for success stories, and reference customers know they are supposed to say positive things. To get useful information, change the format.
+Standard reference checks are largely useless. Vendors curate them for success stories, and reference customers know they are supposed to say positive things. To get useful information, change the format.
 
 ### The Three-Question Reference Call
 
@@ -180,11 +180,11 @@ Beyond vendor-curated references:
 
 ## Contract Negotiation Points for AI
 
-AI vendor contracts contain terms that do not appear in typical software contracts and require specific attention. Most procurement teams are not familiar with these terms. Brief your legal team with the following checklist before they begin negotiation.
+AI vendor contracts contain terms that do not appear in typical software contracts. Most procurement teams are not familiar with them. Brief your legal team with the following checklist before they begin negotiation.
 
 ### Data Ownership and Usage
 
-**The clause to watch:** Many AI vendor agreements include language permitting the vendor to use customer data to train or improve their models. This may be disclosed in a sub-clause, not a headline term.
+**The clause to watch:** Many AI vendor agreements permit the vendor to use customer data to train or improve their models. This is often buried in a sub-clause, not a headline term.
 
 **What to require:**
 - Explicit prohibition on using your data to train models for other customers
@@ -202,7 +202,7 @@ AI vendor contracts contain terms that do not appear in typical software contrac
 
 ### Model Performance Obligations
 
-**The clause to watch:** AI vendor contracts typically do not guarantee model accuracy or quality — they guarantee availability (uptime) and often disclaim liability for model outputs entirely.
+**The clause to watch:** AI vendor contracts typically do not guarantee model accuracy or quality. They guarantee availability and often disclaim liability for model outputs entirely.
 
 **What to negotiate:**
 - Minimum accuracy or quality thresholds with defined measurement methodology
@@ -211,7 +211,7 @@ AI vendor contracts contain terms that do not appear in typical software contrac
 
 ### Portability and Exit
 
-**The clause to watch:** AI deployments can create significant switching costs over time — fine-tuned models, integrated workflows, trained users. Vendors benefit from this lock-in and may not proactively offer portability.
+**The clause to watch:** AI deployments create significant switching costs over time: fine-tuned models, integrated workflows, trained users. Vendors benefit from this lock-in and may not proactively offer portability.
 
 **What to require:**
 - Portability of any fine-tuned model weights you have paid to develop
@@ -221,7 +221,7 @@ AI vendor contracts contain terms that do not appear in typical software contrac
 
 ### Liability and Indemnification
 
-**The clause to watch:** Standard AI vendor contracts disclaim virtually all liability for harm resulting from model outputs. This creates a gap: if your AI system produces an output that causes customer harm, the vendor's contract likely says it is not their problem.
+**The clause to watch:** Standard AI vendor contracts disclaim virtually all liability for harm resulting from model outputs. If your AI system produces an output that causes customer harm, the vendor's contract likely says it is not their problem.
 
 **What to negotiate:**
 - Mutual indemnification for IP infringement (if the vendor's model produces output that infringes third-party IP, the vendor should indemnify you)
@@ -230,7 +230,7 @@ AI vendor contracts contain terms that do not appear in typical software contrac
 
 ### Price Escalation Controls
 
-**The clause to watch:** AI API pricing has historically been volatile. A contract based on current pricing can expose you to significant cost increase at renewal, particularly as usage grows.
+**The clause to watch:** AI API pricing has historically been volatile. A contract based on current pricing can expose you to significant cost increases at renewal, particularly as usage grows.
 
 **What to require:**
 - Multi-year pricing locks or caps on annual price increases (5-10% cap is achievable with most established vendors)
@@ -241,7 +241,7 @@ AI vendor contracts contain terms that do not appear in typical software contrac
 
 ## Scoring the Final Decision
 
-After the technical demonstration and reference checks, run a final scoring round with your evaluation panel. Compare the final scores to the initial RFP scores — any significant shifts (positive or negative) should be discussed and the reasoning documented.
+After the technical demonstration and reference checks, run a final scoring round with your evaluation panel. Compare the final scores to the initial RFP scores. Any significant shifts should be discussed and the reasoning documented.
 
 ### Final Vendor Comparison
 
@@ -267,7 +267,7 @@ Write a one-to-two page recommendation document before you present the decision 
 5. Key contract terms negotiated
 6. Explicit statement: "We recommend [Vendor X] for the following reasons, and we are confident in this recommendation because..."
 
-The writing discipline of this document often surfaces second thoughts or unconsidered risks before the contract is signed, when it is still easy to change direction.
+The discipline of writing this document often surfaces second thoughts or unconsidered risks before the contract is signed, while it is still easy to change direction.
 
 ---
 
