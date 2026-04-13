@@ -141,7 +141,7 @@ export default function OnboardingPage() {
     <div className="flex h-screen bg-white">
       {/* Sidebar - Progress */}
       <div className="hidden md:flex w-64 flex-col border-r border-slate-200 bg-slate-50 p-6">
-        <div className="text-lg font-bold text-indigo-600 mb-6">
+        <div className="text-lg font-bold text-teal-600 mb-6">
           LegacyForward.ai
         </div>
         <div className="text-sm font-semibold text-slate-700 mb-4">
@@ -156,7 +156,7 @@ export default function OnboardingPage() {
                     stage.id < currentStage
                       ? "bg-emerald-500 text-white"
                       : stage.id === currentStage
-                      ? "bg-indigo-600 text-white"
+                      ? "bg-teal-600 text-white"
                       : "bg-slate-200 text-slate-500"
                   }`}
                 >
@@ -175,7 +175,7 @@ export default function OnboardingPage() {
               <span
                 className={`text-xs ${
                   stage.id === currentStage
-                    ? "text-indigo-600 font-semibold"
+                    ? "text-teal-600 font-semibold"
                     : stage.id < currentStage
                     ? "text-emerald-600"
                     : "text-slate-500"
@@ -213,13 +213,13 @@ export default function OnboardingPage() {
         <div className="md:hidden p-4 border-b border-slate-200">
           <div className="flex justify-between items-center mb-2">
             <span className="text-sm font-semibold">Your First Session</span>
-            <span className="text-xs text-indigo-600 font-semibold">
+            <span className="text-xs text-teal-600 font-semibold">
               Step {currentStage} of 5
             </span>
           </div>
           <div className="h-1 bg-slate-100 rounded">
             <div
-              className="h-full bg-indigo-600 rounded transition-all"
+              className="h-full bg-teal-600 rounded transition-all"
               style={{ width: `${(currentStage / 5) * 100}%` }}
             />
           </div>
@@ -235,14 +235,14 @@ export default function OnboardingPage() {
                 }`}
               >
                 {msg.role === "assistant" && (
-                  <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center text-xs font-bold shrink-0">
                     CA
                   </div>
                 )}
                 <div
                   className={`max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
                     msg.role === "user"
-                      ? "bg-indigo-600 text-white rounded-br-sm"
+                      ? "bg-teal-600 text-white rounded-br-sm"
                       : "bg-slate-100 text-slate-900 rounded-bl-sm"
                   }`}
                 >
@@ -252,7 +252,7 @@ export default function OnboardingPage() {
             ))}
           {isLoading && (
             <div className="flex gap-3">
-              <div className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold shrink-0">
+              <div className="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center text-xs font-bold shrink-0">
                 CA
               </div>
               <div className="bg-slate-100 rounded-2xl rounded-bl-sm px-4 py-3">
@@ -284,7 +284,7 @@ export default function OnboardingPage() {
             </p>
             <a
               href="/app/dashboard"
-              className="inline-block mt-3 px-6 py-2 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition"
+              className="inline-block mt-3 px-6 py-2 bg-teal-600 text-white rounded-lg text-sm font-semibold hover:bg-teal-700 transition"
             >
               Go to Dashboard →
             </a>
@@ -306,12 +306,12 @@ export default function OnboardingPage() {
                   : "Type your response..."
               }
               disabled={isComplete || isLoading}
-              className="flex-1 bg-slate-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 disabled:opacity-50"
+              className="flex-1 bg-slate-100 rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-300 disabled:opacity-50"
             />
             <button
               onClick={() => sendMessage(input)}
               disabled={!input.trim() || isComplete || isLoading}
-              className="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center hover:bg-teal-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               ➤
             </button>

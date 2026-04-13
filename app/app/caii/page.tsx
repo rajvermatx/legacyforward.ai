@@ -159,12 +159,12 @@ export default function CAIIPage() {
                   onChange={(e) => setRole(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && generateReport()}
                   placeholder="e.g. Marketing Manager, Software Developer, Teacher..."
-                  className="flex-1 bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300"
+                  className="flex-1 bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-300"
                 />
                 <button
                   onClick={generateReport}
                   disabled={loading || !role.trim()}
-                  className="px-6 py-3 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition disabled:opacity-50"
+                  className="px-6 py-3 bg-teal-600 text-white rounded-lg text-sm font-semibold hover:bg-teal-700 transition disabled:opacity-50"
                 >
                   {loading ? "Analyzing..." : "Generate Report"}
                 </button>
@@ -175,7 +175,7 @@ export default function CAIIPage() {
           {/* Loading */}
           {loading && !report && (
             <div className="mt-8 text-center">
-              <div className="inline-block w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+              <div className="inline-block w-8 h-8 border-4 border-teal-600 border-t-transparent rounded-full animate-spin" />
               <p className="text-sm text-slate-500 mt-3">
                 Analyzing {role} across 12 AI capability dimensions...
               </p>
@@ -243,14 +243,14 @@ export default function CAIIPage() {
               {/* Skills + Pivots */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-white border border-slate-200 rounded-xl p-4">
-                  <h3 className="text-sm font-bold text-indigo-600 mb-3">
+                  <h3 className="text-sm font-bold text-teal-600 mb-3">
                     📚 Learn These to Stay Ahead
                   </h3>
                   <div className="space-y-2">
                     {report.skillsToLearn.map((skill, i) => (
                       <div
                         key={i}
-                        className="text-xs px-3 py-2 bg-indigo-50 rounded-lg text-indigo-700"
+                        className="text-xs px-3 py-2 bg-indigo-50 rounded-lg text-teal-700"
                       >
                         {skill}
                       </div>
@@ -281,7 +281,7 @@ export default function CAIIPage() {
               <div className="flex gap-3">
                 <Link
                   href="/app/dashboard"
-                  className="flex-1 py-3 bg-indigo-600 text-white rounded-xl text-center text-sm font-semibold hover:bg-indigo-700 transition"
+                  className="flex-1 py-3 bg-teal-600 text-white rounded-xl text-center text-sm font-semibold hover:bg-teal-700 transition"
                 >
                   📖 Go to Dashboard
                 </Link>

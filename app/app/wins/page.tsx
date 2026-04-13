@@ -18,7 +18,7 @@ interface Win {
 
 const CATEGORY_COLORS: Record<string, { bg: string; text: string; label: string }> = {
   leadership: { bg: "bg-emerald-50", text: "text-emerald-600", label: "Leadership" },
-  technical: { bg: "bg-indigo-50", text: "text-indigo-600", label: "Technical" },
+  technical: { bg: "bg-indigo-50", text: "text-teal-600", label: "Technical" },
   collaboration: { bg: "bg-blue-50", text: "text-blue-600", label: "Collaboration" },
   delivery: { bg: "bg-purple-50", text: "text-purple-600", label: "Delivery" },
   innovation: { bg: "bg-amber-50", text: "text-amber-600", label: "Innovation" },
@@ -35,7 +35,7 @@ function WinCard({ win }: { win: Win }) {
       <div className="flex justify-between items-start">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-            <span className="text-[11px] text-slate-400">{date}</span>
+            <span className="text-[11px] text-slate-400" suppressHydrationWarning>{date}</span>
             <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${cat.bg} ${cat.text}`}>
               {cat.label}
             </span>
@@ -48,14 +48,14 @@ function WinCard({ win }: { win: Win }) {
           {/* STAR Format (expandable) */}
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-[11px] text-indigo-600 font-semibold mt-2 hover:underline"
+            className="text-[11px] text-teal-600 font-semibold mt-2 hover:underline"
           >
             {expanded ? "Hide" : "Show"} STAR Format ▾
           </button>
 
           {expanded && (
             <div className="mt-2 p-3 bg-slate-50 rounded-lg border-l-3 border-indigo-500" style={{ borderLeftWidth: 3, borderLeftColor: "#4F46E5" }}>
-              <div className="text-[10px] text-indigo-600 font-semibold mb-1"><InfoLabel label="STAR Format" tooltip="Situation-Task-Action-Result: the standard structure used in performance reviews and job interviews to communicate impact clearly. AI auto-generates this from your raw notes." /></div>
+              <div className="text-[10px] text-teal-600 font-semibold mb-1"><InfoLabel label="STAR Format" tooltip="Situation-Task-Action-Result: the standard structure used in performance reviews and job interviews to communicate impact clearly. AI auto-generates this from your raw notes." /></div>
               <div className="text-[11px] text-slate-700 leading-relaxed space-y-0.5">
                 <div><strong>S:</strong> {win.starFormat.situation}</div>
                 <div><strong>T:</strong> {win.starFormat.task}</div>
@@ -73,7 +73,7 @@ function WinCard({ win }: { win: Win }) {
               </span>
             ))}
             {win.tags.map((t, i) => (
-              <span key={i} className="text-[10px] px-2 py-0.5 bg-indigo-50 text-indigo-600 rounded-full">
+              <span key={i} className="text-[10px] px-2 py-0.5 bg-indigo-50 text-teal-600 rounded-full">
                 {t}
               </span>
             ))}
@@ -195,12 +195,12 @@ export default function WinsPage() {
               onKeyDown={(e) => e.key === "Enter" && logWin()}
               placeholder="What did you accomplish today?"
               disabled={isLogging}
-              className="flex-1 bg-white rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 border border-slate-200 disabled:opacity-50"
+              className="flex-1 bg-white rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-300 border border-slate-200 disabled:opacity-50"
             />
             <button
               onClick={logWin}
               disabled={!input.trim() || isLogging}
-              className="px-5 py-3 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition disabled:opacity-50"
+              className="px-5 py-3 bg-teal-600 text-white rounded-lg text-sm font-semibold hover:bg-teal-700 transition disabled:opacity-50"
             >
               {isLogging ? "..." : "+ Log Win"}
             </button>
@@ -216,7 +216,7 @@ export default function WinsPage() {
                     navigator.clipboard.writeText(summary);
                     alert("Copied to clipboard!");
                   }}
-                  className="text-xs text-indigo-600 font-semibold hover:underline"
+                  className="text-xs text-teal-600 font-semibold hover:underline"
                 >
                   📋 Copy
                 </button>

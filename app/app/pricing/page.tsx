@@ -30,7 +30,7 @@ const tiers = [
     description: "Full career navigation",
     popular: true,
     cta: "Upgrade to Pro",
-    ctaStyle: "bg-indigo-600 text-white hover:bg-indigo-700",
+    ctaStyle: "bg-teal-600 text-white hover:bg-teal-700",
     features: [
       { text: "Everything in Free", included: true },
       { text: "Unlimited AI Coach", included: true, bold: true },
@@ -67,7 +67,7 @@ const tiers = [
     description: "The complete package",
     dark: true,
     cta: "Go Premium",
-    ctaStyle: "bg-white text-indigo-700 hover:bg-indigo-50",
+    ctaStyle: "bg-white text-teal-700 hover:bg-indigo-50",
     features: [
       { text: "Everything in Career Bible", included: true },
       { text: "Printed hardcover book", included: true, bold: true },
@@ -87,7 +87,7 @@ export default function PricingPage() {
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-20">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/app/dashboard" className="text-indigo-600 font-bold text-lg">LegacyForward.ai</Link>
+          <Link href="/app/dashboard" className="text-teal-600 font-bold text-lg">LegacyForward.ai</Link>
           <h1 className="text-3xl font-extrabold text-slate-900 mt-4 mb-2">Choose Your Plan</h1>
           <p className="text-slate-500">Invest in your career. Get your personalized Career Bible.</p>
 
@@ -95,13 +95,13 @@ export default function PricingPage() {
           <div className="inline-flex mt-6 bg-slate-100 rounded-lg overflow-hidden">
             <button
               onClick={() => setCurrency("USD")}
-              className={`px-4 py-2 text-xs font-semibold transition ${currency === "USD" ? "bg-indigo-600 text-white" : "text-slate-500"}`}
+              className={`px-4 py-2 text-xs font-semibold transition ${currency === "USD" ? "bg-teal-600 text-white" : "text-slate-500"}`}
             >
               USD $
             </button>
             <button
               onClick={() => setCurrency("INR")}
-              className={`px-4 py-2 text-xs font-semibold transition ${currency === "INR" ? "bg-indigo-600 text-white" : "text-slate-500"}`}
+              className={`px-4 py-2 text-xs font-semibold transition ${currency === "INR" ? "bg-teal-600 text-white" : "text-slate-500"}`}
             >
               INR ₹
             </button>
@@ -117,15 +117,15 @@ export default function PricingPage() {
                 tier.dark
                   ? "bg-gradient-to-b from-slate-800 to-slate-900 text-white"
                   : "bg-white border border-slate-200"
-              } ${tier.popular ? "border-2 border-indigo-600 shadow-lg" : ""}`}
+              } ${tier.popular ? "border-2 border-teal-500 shadow-lg" : ""}`}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-teal-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">
                   POPULAR
                 </div>
               )}
 
-              <div className={`text-sm font-bold ${tier.dark ? "text-indigo-300" : tier.popular ? "text-indigo-600" : "text-slate-700"}`}>
+              <div className={`text-sm font-bold ${tier.dark ? "text-indigo-300" : tier.popular ? "text-teal-600" : "text-slate-700"}`}>
                 {tier.name}
               </div>
 
@@ -185,7 +185,7 @@ export default function PricingPage() {
 
         {/* Back link */}
         <div className="text-center mt-8">
-          <Link href="/app/dashboard" className="text-sm text-indigo-600 font-semibold hover:underline">
+          <Link href="/app/dashboard" className="text-sm text-teal-600 font-semibold hover:underline">
             ← Back to Dashboard
           </Link>
         </div>

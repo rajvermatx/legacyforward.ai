@@ -20,7 +20,7 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
             isComplete
               ? "bg-emerald-500 text-white"
               : isCurrent
-              ? "bg-indigo-600 text-white ring-4 ring-indigo-100"
+              ? "bg-teal-600 text-white ring-4 ring-teal-100"
               : "bg-slate-200 text-slate-500"
           }`}
         >
@@ -39,14 +39,14 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
           isComplete
             ? "bg-emerald-50 border border-emerald-200 opacity-80"
             : isCurrent
-            ? "bg-white border-2 border-indigo-600 shadow-md"
+            ? "bg-white border-2 border-teal-500 shadow-md"
             : "bg-slate-50 border border-dashed border-slate-300 opacity-70"
         }`}
       >
         <div className="flex justify-between items-start">
           <div
             className={`text-sm font-semibold ${
-              isComplete ? "text-emerald-600" : isCurrent ? "text-indigo-700" : "text-slate-500"
+              isComplete ? "text-emerald-600" : isCurrent ? "text-teal-700" : "text-slate-500"
             }`}
           >
             {isComplete ? "✓ " : isCurrent ? "▶ " : ""}
@@ -57,7 +57,7 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
               isComplete
                 ? "bg-emerald-100 text-emerald-600"
                 : isCurrent
-                ? "bg-indigo-100 text-indigo-600"
+                ? "bg-indigo-100 text-teal-600"
                 : "text-slate-500"
             }`}
           >
@@ -71,7 +71,7 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
           <div className="mt-2">
             <div className="h-1.5 bg-slate-100 rounded-full">
               <div
-                className="h-full bg-indigo-600 rounded-full transition-all"
+                className="h-full bg-teal-600 rounded-full transition-all"
                 style={{ width: `${milestone.progress}%` }}
               />
             </div>
@@ -83,7 +83,7 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
         {milestone.skills?.length > 0 && (
           <div className="flex gap-1.5 mt-2 flex-wrap">
             {milestone.skills.map((skill, i) => (
-              <span key={i} className="text-[10px] px-2 py-0.5 bg-indigo-50 text-indigo-600 rounded-full">
+              <span key={i} className="text-[10px] px-2 py-0.5 bg-indigo-50 text-teal-600 rounded-full">
                 {skill}
               </span>
             ))}
@@ -95,7 +95,7 @@ function MilestoneCard({ milestone, index }: { milestone: Milestone; index: numb
           <div className="mt-2 p-2 bg-slate-50 rounded-lg">
             <div className="text-[10px] font-semibold text-slate-500 mb-1">Resources</div>
             {milestone.resources.map((r, i) => (
-              <div key={i} className="text-xs text-indigo-600 hover:underline">
+              <div key={i} className="text-xs text-teal-600 hover:underline">
                 📚{" "}
                 {r.url ? (
                   <a href={r.url} target="_blank" rel="noopener noreferrer">{r.title}</a>
@@ -176,7 +176,7 @@ export default function RoadmapPage() {
                     value={currentRole}
                     onChange={(e) => setCurrentRole(e.target.value)}
                     placeholder="e.g. Marketing Manager"
-                    className="w-full bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 mt-1"
+                    className="w-full bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-300 mt-1"
                   />
                 </div>
                 <div>
@@ -187,14 +187,14 @@ export default function RoadmapPage() {
                     onChange={(e) => setTargetRole(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && generate()}
                     placeholder="e.g. Customer Experience Lead"
-                    className="w-full bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-indigo-300 mt-1"
+                    className="w-full bg-slate-100 rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-300 mt-1"
                   />
                 </div>
               </div>
               <button
                 onClick={generate}
                 disabled={loading || !currentRole.trim() || !targetRole.trim()}
-                className="w-full py-3 bg-indigo-600 text-white rounded-lg text-sm font-semibold hover:bg-indigo-700 transition disabled:opacity-50"
+                className="w-full py-3 bg-teal-600 text-white rounded-lg text-sm font-semibold hover:bg-teal-700 transition disabled:opacity-50"
               >
                 {loading ? "Generating roadmap..." : "Generate Roadmap"}
               </button>
@@ -203,7 +203,7 @@ export default function RoadmapPage() {
 
           {loading && !roadmap && (
             <div className="mt-8 text-center">
-              <div className="inline-block w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+              <div className="inline-block w-8 h-8 border-4 border-teal-600 border-t-transparent rounded-full animate-spin" />
               <p className="text-sm text-slate-500 mt-3">Planning your path from {currentRole} to {targetRole}...</p>
             </div>
           )}
@@ -214,7 +214,7 @@ export default function RoadmapPage() {
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-sm text-slate-500">
-                    {roadmap.currentRole} → <span className="font-semibold text-indigo-600">{roadmap.targetRole}</span>
+                    {roadmap.currentRole} → <span className="font-semibold text-teal-600">{roadmap.targetRole}</span>
                   </p>
                 </div>
                 <div className="text-right">
@@ -226,7 +226,7 @@ export default function RoadmapPage() {
               {/* Progress bar */}
               <div className="h-2.5 bg-slate-100 rounded-full">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-indigo-600 transition-all"
+                  className="h-full rounded-full bg-gradient-to-r from-teal-400 to-teal-600 transition-all"
                   style={{ width: `${Math.max(roadmap.overallProgress, 2)}%` }}
                 />
               </div>
@@ -247,7 +247,7 @@ export default function RoadmapPage() {
                         <div className="flex items-center gap-2">
                           <span className="text-[10px] text-slate-400">{gap.currentLevel}</span>
                           <span className="text-[10px]">→</span>
-                          <span className="text-[10px] text-indigo-600 font-semibold">{gap.targetLevel}</span>
+                          <span className="text-[10px] text-teal-600 font-semibold">{gap.targetLevel}</span>
                           <span
                             className={`text-[9px] px-1.5 py-0.5 rounded-full font-semibold ${
                               gap.priority === "high"
@@ -276,7 +276,7 @@ export default function RoadmapPage() {
 
               {/* Actions */}
               <div className="flex gap-3">
-                <Link href="/app/coach" className="flex-1 py-3 bg-indigo-600 text-white rounded-xl text-center text-sm font-semibold hover:bg-indigo-700 transition">
+                <Link href="/app/coach" className="flex-1 py-3 bg-teal-600 text-white rounded-xl text-center text-sm font-semibold hover:bg-teal-700 transition">
                   💬 Discuss with Coach
                 </Link>
                 <button

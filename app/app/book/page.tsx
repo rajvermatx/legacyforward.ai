@@ -121,7 +121,7 @@ export default function BookPage() {
           {/* No book yet — generate */}
           {chapters.length === 0 && !generating && (
             <div>
-              <div className="bg-gradient-to-r from-indigo-700 to-purple-700 rounded-2xl p-8 text-white text-center mb-6">
+              <div className="bg-gradient-to-r from-navy-800 to-teal-900 rounded-2xl p-8 text-white text-center mb-6">
                 <div className="text-4xl mb-4">📖</div>
                 <h1 className="text-2xl font-extrabold mb-2">Your Career Bible</h1>
                 <p className="text-sm opacity-90 max-w-lg mx-auto mb-6">
@@ -130,14 +130,14 @@ export default function BookPage() {
                 {hasData ? (
                   <button
                     onClick={generateBook}
-                    className="px-8 py-3 bg-white text-indigo-700 rounded-lg text-sm font-bold hover:bg-indigo-50 transition"
+                    className="px-8 py-3 bg-white text-teal-700 rounded-lg text-sm font-bold hover:bg-indigo-50 transition"
                   >
                     Generate Your Career Bible
                   </button>
                 ) : (
                   <div>
                     <p className="text-sm opacity-70 mb-3">Complete onboarding first to personalize your book.</p>
-                    <Link href="/app/onboarding" className="px-6 py-2 bg-white text-indigo-700 rounded-lg text-sm font-semibold">
+                    <Link href="/app/onboarding" className="px-6 py-2 bg-white text-teal-700 rounded-lg text-sm font-semibold">
                       Start Onboarding →
                     </Link>
                   </div>
@@ -156,7 +156,7 @@ export default function BookPage() {
                           const plan = chapterPlan[num - 1];
                           return (
                             <div key={num} className="px-3 py-2 bg-slate-50 rounded-lg text-xs text-slate-600">
-                              <span className="font-semibold text-indigo-600">Ch {num}.</span>{" "}
+                              <span className="font-semibold text-teal-600">Ch {num}.</span>{" "}
                               {plan?.title || `Chapter ${num}`}
                             </div>
                           );
@@ -175,13 +175,13 @@ export default function BookPage() {
               <div className="bg-white border border-slate-200 rounded-xl p-6 mb-6">
                 <div className="flex justify-between items-center mb-4">
                   <h2 className="text-lg font-bold">Generating Your Career Bible...</h2>
-                  <span className="text-sm text-indigo-600 font-semibold">
+                  <span className="text-sm text-teal-600 font-semibold">
                     Chapter {currentChapter} of 16
                   </span>
                 </div>
                 <div className="h-3 bg-slate-100 rounded-full mb-2">
                   <div
-                    className="h-full bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full transition-all duration-500"
+                    className="h-full bg-gradient-to-r from-teal-500 to-teal-700 rounded-full transition-all duration-500"
                     style={{ width: `${(chapters.length / 16) * 100}%` }}
                   />
                 </div>
@@ -191,9 +191,9 @@ export default function BookPage() {
                       key={i}
                       className={`h-8 rounded flex items-center justify-center text-[10px] font-bold ${
                         i < chapters.length
-                          ? "bg-indigo-600 text-white"
+                          ? "bg-teal-600 text-white"
                           : i === chapters.length
-                          ? "bg-indigo-100 text-indigo-600 animate-pulse"
+                          ? "bg-indigo-100 text-teal-600 animate-pulse"
                           : "bg-slate-100 text-slate-400"
                       }`}
                     >
@@ -223,11 +223,11 @@ export default function BookPage() {
           {chapters.length === 16 && !generating && (
             <div>
               {/* Header */}
-              <div className="bg-gradient-to-r from-indigo-700 to-purple-700 rounded-2xl p-6 text-white mb-6 flex gap-6 items-center">
+              <div className="bg-gradient-to-r from-navy-800 to-teal-900 rounded-2xl p-6 text-white mb-6 flex gap-6 items-center">
                 {/* Mini book cover */}
                 <div className="w-28 h-40 bg-white rounded-sm shadow-lg flex flex-col items-center justify-center p-3 shrink-0" style={{ borderRadius: "2px 10px 10px 2px" }}>
-                  <div className="text-[8px] text-indigo-600 font-bold uppercase tracking-wider">Your Career Bible</div>
-                  <div className="w-8 h-0.5 bg-indigo-600 my-1.5" />
+                  <div className="text-[8px] text-teal-600 font-bold uppercase tracking-wider">Your Career Bible</div>
+                  <div className="w-8 h-0.5 bg-teal-600 my-1.5" />
                   <div className="text-[11px] font-extrabold text-slate-900 text-center">
                     {(snapshot?.currentRole as string) || "Your Name"}
                   </div>
@@ -236,12 +236,12 @@ export default function BookPage() {
                 <div className="flex-1">
                   <h1 className="text-xl font-extrabold">Your Career Bible</h1>
                   <p className="text-sm opacity-80 mt-1">
-                    16 chapters · {totalWords.toLocaleString()} words · Generated {new Date().toLocaleDateString()}
+                    16 chapters · {totalWords.toLocaleString()} words · Generated <span suppressHydrationWarning>{new Date().toLocaleDateString()}</span>
                   </p>
                   <div className="flex gap-3 mt-4">
                     <button
                       onClick={downloadAsText}
-                      className="px-4 py-2 bg-white text-indigo-700 rounded-lg text-xs font-semibold hover:bg-indigo-50 transition"
+                      className="px-4 py-2 bg-white text-teal-700 rounded-lg text-xs font-semibold hover:bg-indigo-50 transition"
                     >
                       📄 Download (Markdown)
                     </button>
@@ -272,7 +272,7 @@ export default function BookPage() {
                               onClick={() => setSelectedChapter(num)}
                               className={`w-full text-left px-2 py-1.5 rounded text-xs ${
                                 selectedChapter === num
-                                  ? "bg-indigo-50 text-indigo-600 font-semibold"
+                                  ? "bg-indigo-50 text-teal-600 font-semibold"
                                   : "text-slate-600 hover:bg-slate-50"
                               }`}
                             >
@@ -289,7 +289,7 @@ export default function BookPage() {
                 <div className="bg-white border border-slate-200 rounded-xl p-6 md:p-8">
                   {activeChapter ? (
                     <>
-                      <div className="text-[10px] text-indigo-600 font-semibold uppercase tracking-widest">
+                      <div className="text-[10px] text-teal-600 font-semibold uppercase tracking-widest">
                         Chapter {activeChapter.number}
                       </div>
                       <h2 className="text-xl font-extrabold text-slate-900 mt-1 mb-6">
@@ -309,7 +309,7 @@ export default function BookPage() {
                         <button
                           onClick={() => setSelectedChapter(Math.max(1, (selectedChapter || 1) - 1))}
                           disabled={selectedChapter === 1}
-                          className="text-sm text-slate-400 hover:text-indigo-600 disabled:opacity-30"
+                          className="text-sm text-slate-400 hover:text-teal-600 disabled:opacity-30"
                         >
                           ← Previous
                         </button>
@@ -317,7 +317,7 @@ export default function BookPage() {
                         <button
                           onClick={() => setSelectedChapter(Math.min(16, (selectedChapter || 1) + 1))}
                           disabled={selectedChapter === 16}
-                          className="text-sm text-indigo-600 font-semibold hover:underline disabled:opacity-30"
+                          className="text-sm text-teal-600 font-semibold hover:underline disabled:opacity-30"
                         >
                           Next →
                         </button>
