@@ -11,7 +11,7 @@ Part 2 — Core Patterns
 
 # Reasoning Patterns
 
-Your agent from Chapter 4 can reason one step at a time. But ask it to plan a weekend trip involving flights, hotels, dietary restrictions, and a budget constraint, and it confidently books a hotel in the wrong city. The problem is not intelligence — it is the absence of structured thinking.
+Your agent from Chapter 4 can reason one step at a time. But ask it to plan a weekend trip involving flights, hotels, dietary restrictions, and a budget constraint, and it confidently books a hotel in the wrong city. The problem is not intelligence. It is the absence of structured thinking.
 
 Reading time: ~25 min Project: Reasoning Engine Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -31,7 +31,7 @@ Consider a straightforward question: *"A store sells apples at $1.50 each. You h
 
 When you send this to a language model with no reasoning guidance, something interesting happens. The model often answers immediately — "Buy 3 apples ($4.50) and 7 oranges ($14.00), total $18.50" — and it happens to be correct. But change the numbers slightly, add a constraint (say, you also need at least one banana at $1.25), and the model begins making arithmetic errors or ignoring constraints entirely. It is not that the model cannot do math. It is that the model is pattern-matching to a plausible-sounding answer rather than working through the problem systematically.
 
-This is the core failure mode of **direct prompting**: the model compresses multi-step reasoning into a single forward pass. For the model, producing the token "7" (oranges) requires simultaneously holding the apple cost, the remaining budget, the orange price, and the integer division — all in the residual stream at the same layer. Sometimes this works. Often it does not. And when it fails, it fails silently, with the same confident tone as when it succeeds.
+This is the core failure mode of **direct prompting**: the model compresses multi-step reasoning into a single forward pass. For the model, producing the token "7" (oranges) requires simultaneously holding the apple cost, the remaining budget, the orange price, and the integer division, all in the residual stream at the same layer. Sometimes this works. Often it does not. When it fails, it fails silently, with the same confident tone as when it succeeds.
 
 Here is what this failure looks like in agent code:
 
@@ -70,9 +70,9 @@ This matters enormously for agents. An agent making decisions about which tools 
 
 ## 5.2 Chain-of-Thought Prompting
 
-Chain-of-Thought prompting, introduced by Wei et al. (2022), is the single most important reasoning technique in the LLM toolkit. The idea is almost embarrassingly simple: instead of asking the model to produce an answer directly, you ask it to show its work. The model generates intermediate reasoning steps as tokens, and those tokens become part of the context for subsequent tokens. Each step is grounded in the previous one, turning a single high-difficulty forward pass into multiple low-difficulty passes.
+Chain-of-Thought prompting, introduced by Wei et al. (2022), is the single most important reasoning technique in the LLM toolkit. The idea is simple: instead of asking the model to produce an answer directly, you ask it to show its work. The model generates intermediate reasoning steps as tokens, and those tokens become part of the context for subsequent tokens. Each step is grounded in the previous one, turning a single high-difficulty forward pass into multiple low-difficulty passes.
 
-The mechanism is important to understand. When a model generates the text "Step 1: The evening shift has 4 nurses, so we have 12 - 4 = 8 nurses remaining," the tokens "8 nurses remaining" are now in the context window. When the model generates Step 2, it can attend to that "8" directly, rather than having to recompute it internally. The chain of thought is, in effect, an **external scratchpad** that offloads intermediate results from the model's hidden state into the token sequence itself.
+The mechanism is important to understand. When a model generates the text "Step 1: The evening shift has 4 nurses, so we have 12 - 4 = 8 nurses remaining," the tokens "8 nurses remaining" are now in the context window. When the model generates Step 2, it can attend to that "8" directly, rather than recomputing it internally. The chain of thought is, in effect, an **external scratchpad** that offloads intermediate results from the model's hidden state into the token sequence itself.
 
 ### 5.2.1 Zero-Shot Chain-of-Thought
 
@@ -108,7 +108,7 @@ result = ask_with_zero_shot_cot(
 
 Zero-shot CoT is the lowest-effort, highest-impact change you can make to an agent's reasoning. On the GSM8K math benchmark, zero-shot CoT improved accuracy by 10–15 percentage points across model sizes. On more complex multi-step tasks, the improvement can be even larger.
 
-However, zero-shot CoT has a significant limitation: you have no control over the *structure* of the reasoning. The model might produce three steps or thirteen. It might reason about irrelevant aspects of the problem. It might get the right answer through a sloppy chain. For production agents where you need predictable, auditable reasoning, you often need more control.
+However, zero-shot CoT has a significant limitation: you have no control over the *structure* of the reasoning. The model might produce three steps or thirteen. It might reason about irrelevant aspects of the problem. It might reach the right answer through a sloppy chain. For production agents where you need predictable, auditable reasoning, you often need more control.
 
 ### 5.2.2 Few-Shot Chain-of-Thought
 
@@ -193,7 +193,7 @@ Chain-of-Thought is a single chain — one path from question to answer. This wo
 
 Consider an agent tasked with debugging a production outage. The symptoms are: API response times increased 5x, database CPU is at 90%, and no recent deployments occurred. The agent needs to consider multiple hypotheses simultaneously — a slow query introduced by a data change, a connection pool leak, an index that was dropped, a spike in traffic — evaluate evidence for each, and prune hypotheses that do not fit the data.
 
-**Tree-of-Thought** (Yao et al., 2023) generalizes CoT from a chain to a tree. Instead of generating one reasoning path, the model explores multiple branches, evaluates each, and selects the most promising ones to continue. Branches that look unpromising are pruned, saving computation.
+**Tree-of-Thought** (Yao et al., 2023) generalizes CoT from a chain to a tree. Instead of generating one reasoning path, the model explores multiple branches, evaluates each, and selects the most promising ones to continue. Unpromising branches are pruned, saving computation.
 
 The algorithm has three components:
 
@@ -391,7 +391,7 @@ result = solve_with_self_consistency(
 # }
 ```
 
-Self-consistency is particularly valuable for agents because it provides a built-in **confidence signal**. If all five chains agree, the agent can proceed with high confidence. If the chains are split 3-2, the agent might want to escalate to a human or use a more expensive reasoning strategy. If the chains produce five different answers, something is fundamentally ambiguous about the problem.
+Self-consistency is particularly valuable for agents because it provides a built-in **confidence signal**. If all five chains agree, the agent can proceed with high confidence. If the chains are split 3-2, the agent should escalate to a human or use a more expensive reasoning strategy. If the chains produce five different answers, something is fundamentally ambiguous about the problem.
 
 > Production Consideration
 > 
@@ -474,7 +474,7 @@ def solve_with_reflection(question: str) -> dict:
     }
 ```
 
-Reflection is particularly powerful for agent tasks that involve planning. An agent that generates a plan, critiques it for gaps, and then revises it before execution will produce dramatically better plans than one that executes immediately. The cost is two extra LLM calls, but for complex tasks those calls often save multiple failed tool executions that would cost even more.
+Reflection is particularly powerful for agent tasks that involve planning. An agent that generates a plan, critiques it for gaps, and revises it before execution will produce better plans than one that executes immediately. The cost is two extra LLM calls, but for complex tasks those calls often save multiple failed tool executions that would cost even more.
 
 > Common Mistake
 > 
@@ -527,7 +527,7 @@ def reflective_agent_step(state: dict) -> dict:
     return state
 ```
 
-This pattern — plan, critique, execute, assess — is the hallmark of robust agent systems. It adds latency to each step, but it prevents the far more expensive failure mode of an agent executing a sequence of wrong actions before anyone notices.
+This pattern, plan, critique, execute, assess, is the hallmark of robust agent systems. It adds latency to each step, but it prevents the far more expensive failure mode of an agent executing a sequence of wrong actions before anyone notices.
 
 ## 5.6 How Reasoning Improves Tool Selection and Planning
 
@@ -581,7 +581,7 @@ No single reasoning strategy is best for all situations. The art of building pro
 | **Tree-of-Thought** | Complex planning, exploration problems | 10–40x | High |
 | **Reflection** | Plans, code generation, long-form analysis | 3x | Medium |
 
-A well-designed agent does not use one strategy for everything. It uses a **strategy selector** that examines the incoming task and chooses the appropriate reasoning approach. Simple factual queries get direct prompting. Arithmetic and logic problems get zero-shot CoT. Complex planning tasks get reflection. Ambiguous, high-stakes decisions get ToT or self-consistency.
+A well-designed agent does not use one strategy for everything. It uses a **strategy selector** that examines the incoming task and chooses the appropriate reasoning approach. Simple factual queries get direct prompting. Arithmetic and logic problems get zero-shot CoT. Complex planning tasks get reflection. Ambiguous or high-stakes decisions get ToT or self-consistency.
 
 This is exactly what the chapter project implements.
 

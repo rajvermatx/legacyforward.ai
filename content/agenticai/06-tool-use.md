@@ -7,11 +7,11 @@ order: 6
 part: "Part 02 Core Patterns"
 ---
 
-Part 2 — Core Patterns
+Part 2: Core Patterns
 
 # Tool Use
 
-An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist — all with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.
+An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist. All of this happens with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.
 
 Reading time: ~25 min Project: Tool Registry Framework Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -38,7 +38,7 @@ in transit via FedEx (tracking: 7829104856302). Expected delivery
 is March 7th. The shipping address is 142 Oak Lane, Portland, OR.
 ```
 
-Every detail in that response — the date, the carrier, the tracking number, the address — is fabricated. The model has never queried your order database. It has no network access. It simply predicted what a plausible order status response *would look like* based on its training data, and generated that with absolute confidence. The customer now has a fake tracking number. If they call back angry, a second agent might fabricate a different tracking number.
+Every detail in that response, the date, the carrier, the tracking number, the address, is fabricated. The model has never queried your order database. It has no network access. It simply predicted what a plausible order status response would look like based on its training data, and generated that with absolute confidence. The customer now has a fake tracking number. If they call back angry, a second agent might fabricate a different tracking number.
 
 This is not a rare failure mode. It is the **default behavior** of any LLM asked to perform an action it cannot actually perform. Language models are completion engines: given a prompt that implies a database lookup happened, they will complete the text as if it did. The more specific and confident the system prompt (“You have access to the order database”), the more specific and confident the hallucination becomes.
 
@@ -46,7 +46,7 @@ This is not a rare failure mode. It is the **default behavior** of any LLM asked
 > 
 > Telling an LLM it “has access” to a system does not give it access. It gives it permission to hallucinate more convincingly. Real access requires a tool — a function the model can request be executed on its behalf, with actual results returned into the conversation.
 
-The solution is mechanical, not philosophical. Instead of pretending the model can query databases, we give it a structured protocol for *requesting* that we query databases on its behalf. The model outputs a structured function call. Our code executes it. The real result goes back into the conversation. The model then responds based on actual data. This is tool use, and it is the single most important capability separating toy demos from production agents.
+The solution is mechanical, not philosophical. Instead of pretending the model can query databases, we give it a structured protocol for requesting that we query databases on its behalf. The model outputs a structured function call. Our code executes it. The real result goes back into the conversation. The model then responds based on actual data. This is tool use, and it is the single most important capability separating toy demos from production agents.
 
 ## 6.2 The Function Calling Protocol
 
@@ -92,7 +92,7 @@ print(message.tool_calls)
 
 Several things are happening here that deserve attention:
 
-1.  **The model does not execute anything.** It outputs a JSON object saying *“I want to call get\_order\_status with order\_id=48291.”* Your code decides whether and how to execute that.
+1.  **The model does not execute anything.** It outputs a JSON object saying “I want to call get\_order\_status with order\_id=48291.” Your code decides whether and how to execute that.
 2.  **The tool definition is a JSON Schema.** The `parameters` field follows the JSON Schema specification. The model uses this schema to understand what arguments are valid and how to format them.
 3.  **Each tool call has a unique ID.** This ID (`call_abc123`) is used to correlate the tool result back to the specific call that requested it, which matters when the model makes multiple tool calls in parallel.
 4.  **The arguments are a JSON string.** Even though the model “knows” the value is a number, it serializes it as a JSON string because that is what the schema specifies. You must parse this string in your code.
@@ -135,7 +135,7 @@ Now the response is grounded in real data. The model did not invent a tracking n
 
 ## 6.3 Tool Definitions: The Art of JSON Schema
 
-The tool definition is not just metadata — it is the **interface contract** between your agent and your code. A poorly defined tool is worse than no tool at all, because the model will call it with wrong arguments, get confusing errors, and either spiral or hallucinate a recovery.
+The tool definition is not just metadata. It is the **interface contract** between your agent and your code. A poorly defined tool is worse than no tool at all, because the model will call it with wrong arguments, get confusing errors, and either spiral or hallucinate a recovery.
 
 ### Anatomy of a Tool Definition
 
@@ -182,7 +182,7 @@ Let us dissect what makes each field effective:
 
 **Name.** Use `verb_noun` format: `get_order_status`, `search_products`, `create_ticket`. Avoid generic names like `query` or `helper`. The name is the first thing the model reads when deciding which tool to call, and ambiguous names cause misrouting.
 
-**Description.** This is the most important field in the entire definition. Write it as if you are explaining the tool to a new developer on your team. Include: what the tool does, what it returns, and *when to use it*. That last part — usage guidance — is what separates tools that get called correctly from tools that get called at the wrong time. Models use the description for routing decisions, not just argument formatting.
+**Description.** This is the most important field in the entire definition. Write it as if you are explaining the tool to a new developer on your team. Include what the tool does, what it returns, and when to use it. That last part, usage guidance, is what separates tools that get called correctly from tools that get called at the wrong time. Models use the description for routing decisions, not just argument formatting.
 
 **Parameters.** Use the tightest schema that accurately represents the input space. If a parameter has a fixed set of valid values, use `enum`. If a parameter has a default, document it. If a parameter is optional, leave it out of `required`. Every constraint you add to the schema is a constraint the model can use to generate correct arguments.
 
@@ -202,9 +202,9 @@ Let us dissect what makes each field effective:
 
 ## 6.4 Tool Registry Architecture
 
-When you have three tools, you can hardcode them in a list. When you have thirty, you need a registry. When you have three hundred — which happens fast in enterprise systems — you need auto-discovery, categorization, and dynamic selection. The tool registry is the component that manages all of this.
+When you have three tools, you can hardcode them in a list. When you have thirty, you need a registry. When you have three hundred, which happens fast in enterprise systems, you need auto-discovery, categorization, and dynamic selection. The tool registry is the component that manages all of this.
 
-A registry serves four functions: it **stores** tool definitions, **validates** them on registration, **indexes** them for fast lookup, and **exports** them in the format that LLM APIs expect. Here is a production-grade implementation:
+A registry serves four functions: it stores tool definitions, validates them on registration, indexes them for fast lookup, and exports them in the format that LLM APIs expect. Here is a production-grade implementation:
 
 ```
 from dataclasses import dataclass, field
@@ -288,8 +288,8 @@ class ToolRegistry:
 
 Several design decisions in this registry are worth examining:
 
--   **Schema validation on registration.** If a tool has an invalid JSON Schema, it fails at registration time — not at runtime when the LLM tries to call it. This is the “fail fast” principle applied to tool configuration.
--   **Tag-based indexing.** Tags like `"database"`, `"search"`, or `"admin"` enable filtering tools by category. When an agent is handling a search query, you can pass only search-tagged tools to the LLM, reducing confusion and token usage.
+-   **Schema validation on registration.** If a tool has an invalid JSON Schema, it fails at registration time, not at runtime when the LLM tries to call it. This is the “fail fast” principle applied to tool configuration.
+-   **Tag-based indexing.** Tags like `”database”`, `”search”`, or `”admin”` enable filtering tools by category. When an agent is handling a search query, you can pass only search-tagged tools to the LLM, reducing confusion and token usage.
 -   **Confirmation flag.** Tools marked `requires_confirmation=True` (like `delete_account` or `send_payment`) signal to the dispatcher that a human approval step is needed before execution.
 -   **Timeout.** Each tool has a timeout. A web scraping tool might need 30 seconds; a calculator needs 1. Without per-tool timeouts, a slow tool can hang your entire agent loop.
 
@@ -473,7 +473,7 @@ class ToolDispatcher:
         }
 ```
 
-The five-step dispatch pipeline — lookup, validate, confirm, execute, serialize — handles every failure mode that commonly derails agents:
+The five-step dispatch pipeline, lookup, validate, confirm, execute, serialize, handles every failure mode that commonly derails agents:
 
 -   **Unknown tool names** get a clear error listing available tools, so the model can self-correct.
 -   **Malformed arguments** get schema-specific error messages (e.g., “missing required field”), which are far more useful to the model than a Python traceback.
@@ -491,7 +491,7 @@ Tool results vary wildly in size and structure. A calculator returns a single nu
 
 ### Strategies for Large Results
 
-**Truncation with summary.** For results exceeding a threshold (4,000 characters is a reasonable default), truncate the data but prepend a summary: `“Returned 47 results. Showing first 10. Use pagination to see more.”` This gives the model enough information to decide whether it needs more data.
+**Truncation with summary.** For results exceeding a threshold (4,000 characters is a reasonable default), truncate the data but prepend a summary: “Returned 47 results. Showing first 10. Use pagination to see more.” This gives the model enough information to decide whether it needs more data.
 
 **Projection.** If the tool returns full database rows but the model only needs three fields, strip the result down before returning it. This requires knowing what the model is likely to need, which you can sometimes infer from the tool call arguments or from the original user query.
 
@@ -590,11 +590,11 @@ For the largest registries (hundreds of tools), use a two-stage approach: first,
 
 Individual tools are atoms. Useful work usually requires molecules — sequences of tool calls that together accomplish something no single tool can. Tool composition is the pattern of combining simple tools into higher-order operations.
 
-There are two approaches to composition: **agent-driven** and **pre-composed**.
+There are two approaches to composition: agent-driven and pre-composed.
 
 ### Agent-Driven Composition
 
-The agent decides on its own to chain tools together. You give it `search_products`, `check_inventory`, and `calculate_shipping`. When a user asks “Can you ship the cheapest wireless headphones to Austin, TX by Friday?”, the agent reasons through the sequence: search for headphones, filter by price, check inventory for the cheapest, calculate shipping to Austin with a Friday deadline. Each step uses one tool, and the agent plans the pipeline dynamically.
+The agent decides on its own to chain tools together. You give it `search_products`, `check_inventory`, and `calculate_shipping`. When a user asks to ship the cheapest wireless headphones to Austin, TX by Friday, the agent reasons through the sequence: search for headphones, filter by price, check inventory for the cheapest, calculate shipping to Austin with a Friday deadline. Each step uses one tool, and the agent plans the pipeline dynamically.
 
 This is the default pattern in ReAct agents, and it works well for novel combinations. The downside is that each tool call is a separate LLM turn, adding latency and cost.
 
@@ -631,7 +631,7 @@ def find_and_ship(query: str, destination: str, deadline: str) -> dict:
     }
 ```
 
-Pre-composed tools trade flexibility for efficiency. The agent makes one tool call instead of three, saving two LLM round-trips. The tradeoff is that the composition logic is hardcoded — if the user’s request does not quite match the pre-composed pipeline, the agent cannot adapt.
+Pre-composed tools trade flexibility for efficiency. The agent makes one tool call instead of three, saving two LLM round-trips. The composition logic is hardcoded: if the user’s request does not quite match the pre-composed pipeline, the agent cannot adapt.
 
 In practice, you use both. Pre-compose the common workflows (80% of requests), and let the agent compose dynamically for the long tail.
 
@@ -641,7 +641,7 @@ Figure 6.2 — Function calling sequence. The user message flows to the LLM, whi
 
 ## 6.9 Error Handling Patterns
 
-Tool calls fail. APIs go down, databases time out, users provide invalid inputs. The difference between a robust agent and a fragile one is how it handles these failures. There are three strategies, and production agents typically use all three.
+Tool calls fail. APIs go down, databases time out, and users provide invalid inputs. The difference between a robust agent and a fragile one is how it handles these failures. There are three strategies, and production agents typically use all three.
 
 ### Strategy 1: Structured Error Return
 
@@ -701,7 +701,7 @@ def get_order_status_fallback(order_id: str) -> dict:
     return result
 ```
 
-The model learns about fallbacks from the tool descriptions. When it sees that `get_order_status` failed, it reads the available tools and discovers the fallback. The description tells it when to use it and what limitations to expect.
+The model learns about fallbacks from the tool descriptions. When it sees that `get_order_status` failed, it reads the available tools and discovers the fallback. The description tells it when to use the fallback and what limitations to expect.
 
 > Defense in Depth
 > 
@@ -709,7 +709,7 @@ The model learns about fallbacks from the tool descriptions. When it sees that `
 
 ## 6.10 Security Considerations
 
-Tools extend the agent’s capabilities into the real world. That makes them the primary attack surface. Every tool is a potential vector for prompt injection, data exfiltration, and unauthorized actions. Security is not a separate topic from tool use — it is inseparable from it.
+Tools extend the agent’s capabilities into the real world. That makes them the primary attack surface. Every tool is a potential vector for prompt injection, data exfiltration, and unauthorized actions. Security is not a separate topic from tool use. It is inseparable from it.
 
 ### Input Validation
 
@@ -744,11 +744,11 @@ Tools that execute arbitrary code — like code interpreters or shell commands �
 
 ### Least Privilege
 
-Give each tool only the permissions it needs. A tool that reads orders should not have write access to the orders database. A tool that searches products should not have access to customer data. This maps directly to the tag system in the registry — you can create permission sets based on tags and enforce them in the dispatcher.
+Give each tool only the permissions it needs. A tool that reads orders should not have write access to the orders database. A tool that searches products should not have access to customer data. This maps directly to the tag system in the registry. You can create permission sets based on tags and enforce them in the dispatcher.
 
 ### Audit Logging
 
-Log every tool call, its arguments, and its result. This is not just for debugging — it is a security requirement. When (not if) something goes wrong, you need a complete trace of every action the agent took:
+Log every tool call, its arguments, and its result. This is not just for debugging. It is a security requirement. When something goes wrong, you need a complete trace of every action the agent took:
 
 ```
 import logging
@@ -840,7 +840,7 @@ class ToolAgent:
         return "I was unable to complete the task within the turn limit."
 ```
 
-This is a production-ready skeleton. The agent selects relevant tools per turn, executes them with retries and auditing, and loops until the model is satisfied or the turn limit is reached. Every component — registry, dispatcher, selector, result parser — is independently testable and swappable.
+This is a production-ready skeleton. The agent selects relevant tools per turn, executes them with retries and auditing, and loops until the model is satisfied or the turn limit is reached. Every component, registry, dispatcher, selector, result parser, is independently testable and swappable.
 
 ## Project: Tool Registry Framework
 
@@ -872,7 +872,7 @@ Legal Research Legal — Case law search, contract analysis, compliance check
 
 ## Summary
 
-Tool use is the mechanism that transforms language models from text generators into capable actors. Without tools, agents hallucinate actions. With tools, they ground their responses in real data and perform real operations. The architecture is straightforward — a registry stores tool definitions, a dispatcher executes them safely, and a result parser normalizes outputs — but the details of schema design, error handling, and security are what separate production systems from demos.
+Tool use is the mechanism that transforms language models from text generators into capable actors. Without tools, agents hallucinate actions. With tools, they ground their responses in real data and perform real operations. The architecture is straightforward: a registry stores tool definitions, a dispatcher executes them safely, and a result parser normalizes outputs. The details of schema design, error handling, and security are what separate production systems from demos.
 
 -   LLMs without tools fabricate data with high confidence. Tool use solves this by routing action requests through real function calls, not text completion.
 -   The function calling protocol is a structured handoff: the model emits a JSON tool call, your code executes it, and the result goes back into the conversation. The model never executes code directly.

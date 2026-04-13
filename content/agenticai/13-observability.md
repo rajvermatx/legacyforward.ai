@@ -7,11 +7,11 @@ order: 13
 part: "Part 04 Production"
 ---
 
-Part 4 — Production
+Part 4: Production
 
 # Observability
 
-Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cites the bank’s lending criteria. The problem: the agent’s retrieval step started returning an outdated policy document after a vector store reindex, and the model dutifully followed it. Six hours, four hundred rejected applications, zero exceptions. You discover it at 8 AM when the lending team notices the approval rate dropped to zero. This is not a crash — it is a silent behavioral drift that only observability can catch.
+Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cites the bank’s lending criteria. The problem: the agent’s retrieval step started returning an outdated policy document after a vector store reindex, and the model dutifully followed it. Six hours, four hundred rejected applications, zero exceptions. You discover it at 8 AM when the lending team notices the approval rate dropped to zero. This is not a crash. It is a silent behavioral drift that only observability can catch.
 
 Reading time: ~25 min Project: Agent Observatory Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -19,7 +19,7 @@ Reading time: ~25 min Project: Agent Observatory Variants: Tech / Software, Heal
 
 -   Why traditional monitoring fails for agent systems and what observability must cover instead
 -   How to instrument agent runs with distributed traces, spans, and structured logs using OpenTelemetry
--   Which metrics matter for production agents — latency, token usage, error rates, and behavioral signals
+-   Which metrics matter for production agents: latency, token usage, error rates, and behavioral signals
 -   How to build dashboards that surface agent health, cost, and quality at a glance
 -   How to debug non-deterministic agent behavior by replaying traces and inspecting decision points
 -   How to integrate LLM observability platforms like LangSmith and Langfuse into your stack
@@ -28,7 +28,7 @@ Reading time: ~25 min Project: Agent Observatory Variants: Tech / Software, Heal
 
 Traditional web services have a simple contract: a request arrives, the server processes it, a response leaves. If the server throws an exception, the error propagates. If latency spikes, the load balancer notices. Monitoring tools built for this world assume that failures are loud and deterministic.
 
-Agents break every one of those assumptions. A single user request triggers a chain of LLM calls, tool invocations, retrieval steps, and reasoning loops. Each step is non-deterministic. The agent might take three steps today and seven tomorrow for an identical query. And when it fails, it usually does so silently — returning a plausible-sounding answer that happens to be wrong.
+Agents break every one of those assumptions. A single user request triggers a chain of LLM calls, tool invocations, retrieval steps, and reasoning loops. Each step is non-deterministic. The agent might take three steps today and seven tomorrow for an identical query. And when it fails, it usually does so silently, returning a plausible-sounding answer that happens to be wrong.
 
 **Non-determinism.** The same input produces different traces every time. You must observe the distribution of behaviors, not a single expected path.
 
@@ -38,11 +38,11 @@ Agents break every one of those assumptions. A single user request triggers a ch
 
 > Monitoring vs. Observability
 > 
-> Monitoring tells you *that* something went wrong. Observability tells you *why*. Monitoring watches predefined metrics and fires alerts when thresholds are breached. Observability captures enough context — traces, logs, metrics — that you can debug novel failures you did not anticipate. For agents, you cannot predefine what “wrong” looks like. You need the raw telemetry to investigate.
+> Monitoring tells you that something went wrong. Observability tells you why. Monitoring watches predefined metrics and fires alerts when thresholds are breached. Observability captures enough context, traces, logs, and metrics, that you can debug novel failures you did not anticipate. For agents, you cannot predefine what “wrong” looks like. You need the raw telemetry to investigate.
 
 ## 13.2 Traces and Spans
 
-A **trace** represents one complete agent run from initial request to final response. A trace is composed of **spans** — individual units of work. Each span captures an operation: an LLM call, a tool invocation, a retrieval query. Spans nest hierarchically. The root span covers the entire run; child spans cover individual steps; grandchild spans cover sub-operations like the HTTP request inside a web-search tool.
+A **trace** represents one complete agent run from initial request to final response. A trace is composed of spans, which are individual units of work. Each span captures an operation: an LLM call, a tool invocation, or a retrieval query. Spans nest hierarchically. The root span covers the entire run. Child spans cover individual steps. Grandchild spans cover sub-operations like the HTTP request inside a web-search tool.
 
 ```
 from opentelemetry import trace
@@ -93,7 +93,7 @@ def traced(span_name: str = None, capture_args: bool = True):
 
 ## 13.3 Structured Logging
 
-Unstructured log lines — `print("Processing query...")` — are worthless for debugging agents at scale. Structured logs are JSON objects with consistent fields that can be queried, filtered, and correlated with traces.
+Unstructured log lines like `print("Processing query...")` are worthless for debugging agents at scale. Structured logs are JSON objects with consistent fields that can be queried, filtered, and correlated with traces.
 
 ```
 import logging, json
@@ -138,7 +138,7 @@ class StructuredAgentLogger:
         })
 ```
 
-The key field is `trace_id`. Every log event during an agent run carries the same trace ID, so you can pull every log line for a single run with one query. This bridges your logs and traces — without it, structured logs are just well-formatted noise.
+The key field is `trace_id`. Every log event during an agent run carries the same trace ID, so you can pull every log line for a single run with one query. This bridges your logs and traces. Without it, structured logs are just well-formatted noise.
 
 ## 13.4 Metrics That Matter
 
@@ -244,7 +244,7 @@ class ObservableAgent:
                 raise
 ```
 
-Three design decisions matter here. The **step cap** prevents runaway loops. Every span captures both **inputs and outputs** — you cannot debug an agent if you only know a tool was called but not what it returned. And **metrics are recorded inline** with the trace, ensuring they always agree.
+Three design decisions matter here. The step cap prevents runaway loops. Every span captures both inputs and outputs: you cannot debug an agent if you only know a tool was called but not what it returned. Metrics are recorded inline with the trace, ensuring they always agree.
 
 ## 13.6 The Observability Stack
 
@@ -252,13 +252,13 @@ Three design decisions matter here. The **step cap** prevents runaway loops. Eve
 
 Figure 13-1. The five-layer observability stack for agent systems. Telemetry flows upward from instrumentation through collection, storage, and analysis to dashboards.
 
-**Layer 1: Instrumentation.** Your agent code emits raw telemetry using the OpenTelemetry SDK — the `@traced` decorators, the structured logger calls, the metric counters.
+**Layer 1: Instrumentation.** Your agent code emits raw telemetry using the OpenTelemetry SDK: the `@traced` decorators, the structured logger calls, the metric counters.
 
 **Layer 2: Collection.** The OpenTelemetry Collector receives telemetry, batches it, applies sampling rules, and enriches it with metadata like environment labels and service version tags.
 
 **Layer 3: Storage.** Each signal type goes to a specialized backend. Traces to Tempo or Jaeger, logs to Loki or Elasticsearch, metrics to Prometheus or Mimir. Specialized storage matters because access patterns differ: traces are queried by ID, logs by time range and filter, metrics by aggregation window.
 
-**Layer 4: Analysis.** Query engines let you explore stored telemetry — trace waterfalls, log search, metric aggregation and anomaly detection.
+**Layer 4: Analysis.** Query engines let you explore stored telemetry: trace waterfalls, log search, metric aggregation, and anomaly detection.
 
 **Layer 5: Dashboards and Alerts.** Grafana turns raw data into visual panels. Alert rules fire when metrics cross thresholds: latency exceeding 2x p99, error rate above 5%, token usage per run exceeding budget.
 
@@ -268,7 +268,7 @@ The hardest part of agent observability is knowing what to look for. Agent failu
 
 ### Trace Replay
 
-The most powerful debugging technique is **trace replay**: pulling the complete trace for a problematic run and walking through every decision. For each span, examine: what was the input? What did the model output? What tool was called, with what arguments? Where did reasoning diverge from the expected path?
+The most powerful debugging technique is trace replay: pulling the complete trace for a problematic run and walking through every decision. For each span, examine: what was the input? What did the model output? What tool was called, with what arguments? Where did reasoning diverge from the expected path?
 
 ```
 class TraceDebugger:
@@ -352,19 +352,19 @@ class BehavioralBaseline:
 
 > The Hardest Bug: Correct Format, Wrong Content
 > 
-> The most insidious agent failures produce output that is syntactically perfect but semantically wrong. The JSON is valid, the tone is professional, the citations are formatted correctly — but the answer is factually incorrect. These bugs are invisible to traditional monitoring. The only defense is logging the full reasoning chain and periodically sampling runs for human review.
+> The most insidious agent failures produce output that is syntactically perfect but semantically wrong. The JSON is valid, the tone is professional, the citations are formatted correctly, but the answer is factually incorrect. These bugs are invisible to traditional monitoring. The only defense is logging the full reasoning chain and periodically sampling runs for human review.
 
 ## 13.8 Building Dashboards
 
-A good agent dashboard answers three questions at a glance: **Is the agent working?** (error rates, completion rates), **Is it fast enough?** (latency percentiles), and **Is it affordable?** (token usage, cost per run).
+A good agent dashboard answers three questions at a glance: Is the agent working? (error rates, completion rates). Is it fast enough? (latency percentiles). Is it affordable? (token usage, cost per run).
 
-**Run Success Rate (time series).** Percentage of runs completing without errors. A sudden drop signals a systemic issue; a gradual decline signals drift. Target: above 98%.
+**Run Success Rate (time series).** Percentage of runs completing without errors. A sudden drop signals a systemic issue. A gradual decline signals drift. Target: above 98%.
 
-**Latency Distribution (heatmap).** Plot p50, p95, and p99 on the same chart. If p99 is 10x p50, some runs are hitting a pathological path — usually a reasoning loop.
+**Latency Distribution (heatmap).** Plot p50, p95, and p99 on the same chart. If p99 is 10x p50, some runs are hitting a pathological path, usually a reasoning loop.
 
-**Token Usage per Run (histogram).** The distribution should be roughly normal for a given query type. A fat right tail means some runs are consuming far more tokens than expected — investigate those by pulling their traces.
+**Token Usage per Run (histogram).** The distribution should be roughly normal for a given query type. A fat right tail means some runs are consuming far more tokens than expected. Investigate those by pulling their traces.
 
-**Step Count Distribution (histogram).** An increase in median step count often precedes an increase in error rate — the agent is struggling more before it fails.
+**Step Count Distribution (histogram).** An increase in median step count often precedes an increase in error rate. The agent is struggling more before it fails.
 
 **Tool Call Breakdown (stacked bar).** If a tool that should be called in 5% of runs suddenly appears in 40%, the agent’s planning has changed. This is an early warning sign.
 
@@ -402,7 +402,7 @@ groups:
 
 ## 13.9 LangSmith and Langfuse Integration
 
-General-purpose tools (Grafana, Jaeger, Prometheus) give you the infrastructure layer. Purpose-built LLM observability platforms provide the application layer — they understand chains, tool calls, and retrieval steps, and provide specialized views for debugging agent behavior.
+General-purpose tools (Grafana, Jaeger, Prometheus) give you the infrastructure layer. Purpose-built LLM observability platforms provide the application layer. They understand chains, tool calls, and retrieval steps, and provide specialized views for debugging agent behavior.
 
 ### LangSmith
 
@@ -469,7 +469,7 @@ def agent_run(user_input: str) -> str:
 
 > Choosing Between Platforms
 > 
-> Use LangSmith if you are already in the LangChain ecosystem. Use Langfuse if you need self-hosting or open-source flexibility. Use both with OpenTelemetry as the common transport layer — instrument once, export to whichever backend you prefer. You can switch platforms without changing your instrumentation code.
+> Use LangSmith if you are already in the LangChain ecosystem. Use Langfuse if you need self-hosting or open-source flexibility. Use both with OpenTelemetry as the common transport layer: instrument once, export to whichever backend you prefer. You can switch platforms without changing your instrumentation code.
 
 ## 13.10 Common Failure Patterns
 
@@ -479,7 +479,7 @@ After operating agents in production, certain failure patterns recur. Recognizin
 
 **The Retrieval Miss.** Retrieval spans return zero results or very low similarity scores, but the agent proceeds to answer anyway, hallucinating confidently. Fix: log retrieval scores and configure the agent to decline when retrieval quality is below threshold.
 
-**The Tool Argument Drift.** Tool calls start failing because the model passes slightly wrong arguments — a date in the wrong format, a renamed field. Fix: version your tool schemas, test tool calls in CI, and log argument validation failures.
+**The Tool Argument Drift.** Tool calls start failing because the model passes slightly wrong arguments, such as a date in the wrong format or a renamed field. Fix: version your tool schemas, test tool calls in CI, and log argument validation failures.
 
 **The Context Window Overflow.** Token counts spike for a subset of runs, and output quality drops. The agent accumulated too much context across steps or a retrieval step returned an unusually large document. Fix: track cumulative context size and implement summarization when it exceeds a threshold.
 
@@ -487,11 +487,11 @@ After operating agents in production, certain failure patterns recur. Recognizin
 
 Single-agent tracing is straightforward: one root span, child spans for each step. Multi-agent systems break this model. A supervisor agent delegates to a researcher agent, which calls a retrieval agent, which fans out to three data source agents. The user's request spawns a tree of agent invocations across multiple processes, potentially across multiple machines. Without distributed tracing, you see five independent traces that have no visible relationship to each other.
 
-The solution is **trace context propagation** — passing the trace ID and parent span ID from one agent to the next so that all work for a single user request appears in a single, unified trace.
+The solution is trace context propagation: passing the trace ID and parent span ID from one agent to the next so that all work for a single user request appears in a single, unified trace.
 
 ### Trace Propagation Across Agent Boundaries
 
-When one agent invokes another — whether through a function call, a message queue, or an HTTP request — the calling agent must inject its current trace context into the request. The receiving agent extracts that context and creates a child span, establishing the parent-child relationship that makes the trace navigable.
+When one agent invokes another, whether through a function call, a message queue, or an HTTP request, the calling agent must inject its current trace context into the request. The receiving agent extracts that context and creates a child span, establishing the parent-child relationship that makes the trace navigable.
 
 ```
 from opentelemetry import trace, context
@@ -603,7 +603,7 @@ def consume_agent_task(message: dict):
 
 > Cross-Process Trace Stitching
 >
-> In large multi-agent deployments, a single user request can generate spans across five or more processes. Without propagation, you have five orphan traces. With propagation, you have one unified trace that shows the full journey. The overhead of propagation is negligible — a few hundred bytes of metadata per message — but the debugging value is transformational. Invest in propagation early; retrofitting it into an existing system is significantly harder.
+> In large multi-agent deployments, a single user request can generate spans across five or more processes. Without propagation, you have five orphan traces. With propagation, you have one unified trace that shows the full journey. The overhead of propagation is negligible, only a few hundred bytes of metadata per message, but the debugging value is transformational. Invest in propagation early; retrofitting it into an existing system is significantly harder.
 
 ## 13.12 Cost Tracking and Attribution
 
@@ -753,11 +753,11 @@ Beyond per-request budgets, production systems need aggregate cost monitoring. T
 
 **Daily budget threshold.** Alert at 70% of the daily budget so the on-call engineer has time to investigate. At 90%, automatically downgrade non-critical agents to cheaper models. At 100%, reject new requests with a graceful error message and page the team.
 
-**Per-agent anomaly detection.** If a specific agent's cost share changes dramatically — say the researcher agent normally accounts for 40% of total cost but suddenly jumps to 80% — that agent may be stuck in a reasoning loop or receiving unusually complex inputs. Alert on per-agent cost share deviations of more than 2x from the 7-day baseline.
+**Per-agent anomaly detection.** If a specific agent's cost share changes dramatically, say the researcher agent normally accounts for 40% of total cost but suddenly jumps to 80%, that agent may be stuck in a reasoning loop or receiving unusually complex inputs. Alert on per-agent cost share deviations of more than 2x from the 7-day baseline.
 
 ## 13.13 Production Monitoring Checklist
 
-The following table consolidates the metrics every production agent system should track. Use it as a checklist when setting up your monitoring stack — if any row is missing from your dashboards, you have a blind spot.
+The following table consolidates the metrics every production agent system should track. Use it as a checklist when setting up your monitoring stack. If any row is missing from your dashboards, you have a blind spot.
 
 | Category | Metric | How to Measure | Alert Threshold | Why It Matters |
 | --- | --- | --- | --- | --- |
@@ -783,7 +783,7 @@ The following table consolidates the metrics every production agent system shoul
 
 > Prioritize Incrementally
 >
-> You do not need every metric on day one. Start with the top four: end-to-end p95 latency, LLM error rate, cost per run, and agent loop count. These four metrics catch the most common production issues — slow responses, provider outages, budget breaches, and reasoning loops. Add quality metrics in week two, and per-agent cost attribution once you have multi-agent workflows.
+> You do not need every metric on day one. Start with the top four: end-to-end p95 latency, LLM error rate, cost per run, and agent loop count. These four metrics catch the most common production issues: slow responses, provider outages, budget breaches, and reasoning loops. Add quality metrics in week two, and per-agent cost attribution once you have multi-agent workflows.
 
 ## Project: Agent Observatory
 
@@ -805,11 +805,11 @@ Build a complete observability layer for an agent system. Instrument an existing
 
 Agent observability is the difference between operating a production system and operating a production liability. Unlike traditional services, agents fail silently, behave non-deterministically, and drift in ways no predefined alert can anticipate. The only defense is capturing enough telemetry that you can reconstruct what any agent did, why it did it, and whether the result was correct.
 
--   Agents fail silently — a 200 status code with a confidently wrong answer is the default failure mode. Observability must capture what the agent did at every step, not just whether it completed.
+-   Agents fail silently. A 200 status code with a confidently wrong answer is the default failure mode. Observability must capture what the agent did at every step, not just whether it completed.
 -   Instrument every LLM call, tool invocation, and retrieval query as a separate span within a trace. Without span-level visibility, you are debugging with a blindfold.
--   Track four metric categories: latency, cost, errors, and quality. Cost tracking is not optional — a single runaway loop can exceed your daily budget.
+-   Track four metric categories: latency, cost, errors, and quality. Cost tracking is not optional. A single runaway loop can exceed your daily budget.
 -   Establish behavioral baselines from known-good runs and alert on deviations. Step count increases and token usage spikes are leading indicators of quality degradation.
--   Use OpenTelemetry for vendor-neutral instrumentation and export to your platform of choice — you can switch backends without rewriting instrumentation code.
+-   Use OpenTelemetry for vendor-neutral instrumentation and export to your platform of choice. You can switch backends without rewriting instrumentation code.
 
 ### Exercises
 

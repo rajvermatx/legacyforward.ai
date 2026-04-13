@@ -7,11 +7,11 @@ order: 7
 part: "Part 02 Core Patterns"
 ---
 
-Part 2 — Core Patterns
+Part 2: Core Patterns
 
 # Memory
 
-An agent that forgets what you said three messages ago is not an assistant — it is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.
+An agent that forgets what you said three messages ago is not an assistant. It is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.
 
 Reading time: ~25 min Project: Memory Manager Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -42,17 +42,17 @@ User: Now show me how much I can save if I cut dining out.
 Agent: I'd be happy to help! What is your current salary and rent?
 ```
 
-The agent has forgotten everything. The salary, the rent, the entire budget discussion — all gone. The user is now talking to a blank slate that confidently asks for information it was given two messages ago.
+The agent has forgotten everything. The salary, the rent, the entire budget discussion: all gone. The user is now talking to a blank slate that confidently asks for information it was given two messages ago.
 
-This is not a bug in the model. It is the default architecture. Every call to an LLM API is **stateless**. The model receives a list of messages, generates a completion, and discards everything. There is no persistent memory between calls. If you do not include previous messages in the next request, they never happened.
+This is not a bug in the model. It is the default architecture. Every call to an LLM API is stateless. The model receives a list of messages, generates a completion, and discards everything. There is no persistent memory between calls. If you do not include previous messages in the next request, they never happened.
 
-The naive solution is obvious: include every previous message in every request. This is the conversation buffer, and for short exchanges it works perfectly. But tokens cost money and context windows have limits. A 50-turn conversation about tax planning might consume 40,000 tokens per request. At GPT-4o pricing, that is roughly $0.10 per message — and that is *before* the model generates a response. A thousand users with fifty-turn conversations means $5,000 in memory costs alone.
+The naive solution is obvious: include every previous message in every request. This is the conversation buffer, and for short exchanges it works perfectly. But tokens cost money and context windows have limits. A 50-turn conversation about tax planning might consume 40,000 tokens per request. At GPT-4o pricing, that is roughly $0.10 per message, and that is before the model generates a response. A thousand users with fifty-turn conversations means $5,000 in memory costs alone.
 
-The real problem is deeper than cost. Even if context windows were infinite and free, raw conversation history is the wrong data structure for memory. Human memory is not a transcript. It is layered: you remember the gist of last week’s meeting (summary), the exact deadline your boss mentioned (fact), and the pattern that this client always changes requirements on Fridays (episodic). Effective agent memory needs the same layered architecture.
+The real problem is deeper than cost. Even if context windows were infinite and free, raw conversation history is the wrong data structure for memory. Human memory is not a transcript. It is layered: you remember the gist of last week’s meeting, the exact deadline your boss mentioned, and the pattern that this client always changes requirements on Fridays. Effective agent memory needs the same layered architecture.
 
 ## 7.2 Short-Term Memory: Conversation Buffers
 
-The simplest form of memory is the **conversation buffer** — a list that stores every message in the current session and sends all of them with each API call. Every chatbot tutorial starts here:
+The simplest form of memory is the **conversation buffer**, a list that stores every message in the current session and sends all of them with each API call. Every chatbot tutorial starts here:
 
 ```
 class ConversationBuffer:
@@ -91,7 +91,7 @@ class SlidingWindowMemory:
         return [self.system] + self.messages
 ```
 
-The tradeoff is brutal and predictable. If the user mentioned their budget constraints in message 3 and you are now on message 25 with a window of 20, that constraint is gone. The agent will cheerfully recommend expenses the user explicitly ruled out. Sliding windows trade accuracy for cost, and the user never knows which facts have been silently discarded.
+The tradeoff is brutal and predictable. If the user mentioned their budget constraints in message 3 and you are now on message 25 with a window of 20, that constraint is gone. The agent will recommend expenses the user explicitly ruled out. Sliding windows trade accuracy for cost, and the user never knows which facts have been silently discarded.
 
 > Common Mistake
 > 
@@ -126,7 +126,7 @@ class TokenWindowMemory:
 
 ## 7.3 Summary Memory
 
-Summary memory solves the sliding window’s amnesia problem. Instead of discarding old messages, you compress them into a running summary. The summary is prepended to the context window, giving the agent a “gist” of everything that came before, while recent messages remain in full detail.
+Summary memory solves the sliding window’s amnesia problem. Instead of discarding old messages, you compress them into a running summary. The summary is prepended to the context window, giving the agent a gist of everything that came before, while recent messages remain in full detail.
 
 ```
 class SummaryMemory:
@@ -183,7 +183,7 @@ class SummaryMemory:
 > 
 > Summary memory uses a cheaper, faster model (like `gpt-4o-mini`) for compression. The summarization call adds latency and cost, but both are small compared to the savings from sending 500 tokens of summary instead of 5,000 tokens of raw history. The key instruction is “never drop a concrete detail” — without this, the summarizer will produce vague abstractions that destroy the agent’s ability to reference specific facts.
 
-Summary memory has a fundamental limitation: it is lossy. Every compression step risks dropping something the user considers important but the summarizer considers minor. If the user mentioned a shellfish allergy in passing during a restaurant recommendation conversation, a summarizer focused on “key decisions” might discard it. Three turns later, the agent recommends a seafood restaurant. For safety-critical facts, you need a memory layer that never compresses.
+Summary memory has a fundamental limitation: it is lossy. Every compression step risks dropping something the user considers important but the summarizer considers minor. If the user mentioned a shellfish allergy in passing during a restaurant recommendation conversation, a summarizer focused on key decisions might discard it. Three turns later, the agent recommends a seafood restaurant. For safety-critical facts, you need a memory layer that never compresses.
 
 ![Diagram 1](/diagrams/agenticai/memory-1.svg)
 
@@ -191,7 +191,7 @@ Figure 7-1. Multi-tier memory architecture — each layer trades off speed, cost
 
 ## 7.4 Long-Term Memory with Vector Stores
 
-Summary memory compresses the current session. But what about yesterday’s conversation? Or the conversation from last month where the user explained their entire project architecture? For cross-session memory, you need a **vector store**.
+Summary memory compresses the current session. But what about yesterday’s conversation? Or the conversation from last month where the user explained their entire project architecture? For cross-session memory, you need a vector store.
 
 The idea is straightforward: take chunks of conversation (or extracted facts), convert them into embedding vectors, and store them in a vector database. When the agent needs context, embed the current query and retrieve the most semantically similar memories.
 
@@ -235,7 +235,7 @@ def retrieve_memories(user_id: str, query: str, k: int = 5) -> list[str]:
     return results["documents"][0]
 ```
 
-Vector retrieval is powerful but imprecise. The embedding model might consider “I hate spicy food” and “I love spicy food” as highly similar because both are about spicy food preferences. Negation, quantification, and temporal context are all poorly captured by embedding similarity alone. This is why production systems never rely on vector search as the sole retrieval strategy.
+Vector retrieval is powerful but imprecise. The embedding model might consider “I hate spicy food” and “I love spicy food” as highly similar because both are about spicy food preferences. Negation, quantification, and temporal context are poorly captured by embedding similarity alone. This is why production systems never rely on vector search as the sole retrieval strategy.
 
 > Under the Hood
 > 
@@ -247,7 +247,7 @@ Figure 7-2. Semantic similarity retrieval — the query vector Q finds nearest n
 
 ## 7.5 Episodic Memory
 
-Episodic memory stores **structured records of specific events**. Where vector memory answers “what do I know about budgets?”, episodic memory answers “what happened the last time the user asked me to create a budget?” The distinction matters: the user does not just want relevant facts — they want the agent to learn from past interactions.
+Episodic memory stores structured records of specific events. Where vector memory answers “what do I know about budgets?”, episodic memory answers “what happened the last time the user asked me to create a budget?” The distinction matters: the user does not just want relevant facts. They want the agent to learn from past interactions.
 
 ```
 from dataclasses import dataclass, field
@@ -289,11 +289,11 @@ class EpisodicMemory:
                      reverse=True)[:limit]
 ```
 
-Episodic memory enables a pattern that is impossible with buffer or vector memory alone: **learning from mistakes**. If the agent tried a SQL query that failed last Tuesday, episodic memory can surface that failure when the agent considers the same approach again. The agent can then choose a different strategy without repeating the error.
+Episodic memory enables a pattern that is impossible with buffer or vector memory alone: learning from mistakes. If the agent tried a SQL query that failed last Tuesday, episodic memory can surface that failure when the agent considers the same approach again. The agent can then choose a different strategy without repeating the error.
 
 ## 7.6 Semantic Memory: Facts vs. Experiences
 
-Semantic memory stores **decontextualized facts** extracted from conversations. Where episodic memory records “on March 3rd the user said they are allergic to shellfish during a restaurant conversation,” semantic memory simply stores: `user.allergies = ["shellfish"]`.
+Semantic memory stores decontextualized facts extracted from conversations. Where episodic memory records “on March 3rd the user said they are allergic to shellfish during a restaurant conversation,” semantic memory simply stores: `user.allergies = [“shellfish”]`.
 
 ```
 class SemanticMemory:
@@ -329,7 +329,7 @@ class SemanticMemory:
         return self.facts.get(user_id, {})
 ```
 
-The power of semantic memory is in its permanence and precision. A conversation buffer forgets after the window slides. A summary might compress away a detail. A vector store might not retrieve a fact if the current query is not semantically similar enough. But a semantic fact store will always know the user’s name, preferences, and constraints — because those are stored as structured data, not buried in conversation text.
+The power of semantic memory is in its permanence and precision. A conversation buffer forgets after the window slides. A summary might compress away a detail. A vector store might not retrieve a fact if the current query is not semantically similar enough. But a semantic fact store will always know the user’s name, preferences, and constraints, because those are stored as structured data, not buried in conversation text.
 
 > Production Consideration
 > 
@@ -337,7 +337,7 @@ The power of semantic memory is in its permanence and precision. A conversation 
 
 ## 7.7 Memory Retrieval Strategies
 
-Having multiple memory stores is useless if you cannot decide what to retrieve and when. Production memory systems use hybrid retrieval strategies that combine multiple signals:
+Having multiple memory stores is useless without a strategy for deciding what to retrieve and when. Production memory systems use hybrid retrieval strategies that combine multiple signals:
 
 ### Recency
 
@@ -355,11 +355,11 @@ def recency_score(memory_time: datetime, half_life_hours: float = 24.0) -> float
 
 ### Relevance (Semantic Similarity)
 
-The cosine similarity score from vector search. Highly relevant memories surface even if they are old. This is why the user’s shellfish allergy, mentioned months ago, can still appear when they ask for restaurant recommendations.
+The cosine similarity score from vector search. Highly relevant memories surface even if they are old. This is why a shellfish allergy mentioned months ago can still appear when the user asks for restaurant recommendations.
 
 ### Importance
 
-Not all memories are equal. “The user prefers dark mode” is less important than “the user is allergic to penicillin.” Importance scoring requires either explicit tagging (the agent marks high-importance facts) or LLM-based scoring at storage time:
+Not all memories are equal. “The user prefers dark mode” is less important than “the user is allergic to penicillin.” Importance scoring requires either explicit tagging, where the agent marks high-importance facts, or LLM-based scoring at storage time:
 
 ```
 def score_importance(client, memory_text: str) -> float:
@@ -404,7 +404,7 @@ def hybrid_score(recency: float, relevance: float,
 
 ## 7.8 Choosing the Right Memory Type
 
-Every memory type has a sweet spot. Using the wrong one wastes resources or creates blind spots. Here is the decision framework:
+Every memory type has a sweet spot. Using the wrong type wastes resources or creates blind spots. Here is the decision framework:
 
 | Memory Type | Best For | Retention | Cost | Failure Mode |
 | --- | --- | --- | --- | --- |
@@ -422,6 +422,7 @@ Most production agents need at least two layers: a buffer or sliding window for 
 The final architectural question is how memory integrates with the agent loop. There are two patterns:
 
 **Pre-prompt injection** retrieves relevant memories before the LLM call and injects them into the system prompt or a dedicated memory message. This is the simplest and most common approach:
+
 
 ```
 def build_prompt(user_msg: str, memory_manager) -> list[dict]:
@@ -447,7 +448,7 @@ Relevant memories from past conversations:
     ]
 ```
 
-**Tool-based retrieval** gives the agent a `search_memory` tool. Instead of automatically retrieving memories, the agent decides when it needs past context and explicitly searches for it. This reduces unnecessary retrieval but requires the agent to know when it is missing information — a meta-cognitive skill that smaller models handle poorly.
+**Tool-based retrieval** gives the agent a `search_memory` tool. Instead of automatically retrieving memories, the agent decides when it needs past context and explicitly searches for it. This reduces unnecessary retrieval but requires the agent to know when it is missing information. That meta-cognitive skill is one that smaller models handle poorly.
 
 ```
 memory_tool = {
@@ -509,11 +510,11 @@ Legal Case research memory — remembers cited precedents, argument history, cli
 
 ## Summary
 
-1.  **LLM calls are stateless by default.** Every API call is a blank slate. Memory is not built in — it must be engineered as an explicit system layer that persists, compresses, and retrieves conversation context.
+1.  **LLM calls are stateless by default.** Every API call is a blank slate. Memory is not built in. It must be engineered as an explicit system layer that persists, compresses, and retrieves conversation context.
 2.  **Buffer memory is simple but does not scale.** Conversation buffers work for short exchanges but grow linearly in cost and eventually hit context limits. Token-aware sliding windows cap costs but silently discard early context.
 3.  **Summary memory preserves the gist, not the details.** Compressing old messages into running summaries saves tokens but introduces lossy compression. Always instruct the summarizer to preserve specific facts, numbers, and decisions.
 4.  **Vector stores enable cross-session memory through semantic retrieval.** Embedding past interactions and querying by similarity lets agents recall relevant context from days or months ago, but negation and temporal nuance are poorly captured by embeddings alone.
-5.  **Production systems combine multiple memory layers with hybrid scoring.** Recency, relevance, and importance each capture different aspects of what the agent should remember. The right weights depend on your domain — a medical agent needs high importance weighting; a chat companion needs high recency weighting.
+5.  **Production systems combine multiple memory layers with hybrid scoring.** Recency, relevance, and importance each capture different aspects of what the agent should remember. The right weights depend on your domain. A medical agent needs high importance weighting; a chat companion needs high recency weighting.
 
 ### Exercises
 

@@ -11,7 +11,7 @@ Part 1 — Foundations
 
 # What Is Agentic AI?
 
-A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things — and the failure wasn't a bug. It was an architecture that was never designed for agency.
+A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things. The failure was not a bug. It was an architecture that was never designed for agency.
 
 Reading time: ~20 min Project: Autonomy Classifier Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -30,11 +30,11 @@ In early 2024, a major US retailer — let us call them NovaMart — celebrated 
 
 Six months later, the product team proposed an ambitious upgrade: let the chatbot actually *do* things. Instead of merely explaining the return policy, it would initiate returns. Instead of quoting shipping timelines, it would modify delivery addresses. Instead of directing customers to a phone line for refunds, it would issue them. The CEO signed off. Engineering estimated four weeks.
 
-Eight months and three failed launches later, the project was shelved. The chatbot could not reliably determine *when* to act versus when to ask for clarification. It could not maintain context across a multi-step return workflow. It had no mechanism for checking its own work — an incorrect refund of $4,200 to the wrong customer was the final straw. Post-mortem analysis identified a root cause that had nothing to do with model quality or prompt engineering: the system was architecturally incapable of agency.
+Eight months and three failed launches later, the project was shelved. The chatbot could not reliably determine *when* to act versus when to ask for clarification. It could not maintain context across a multi-step return workflow. It had no mechanism for checking its own work — an incorrect refund of $4,200 to the wrong customer was the final straw. Post-mortem analysis identified a root cause that had nothing to do with model quality or prompt engineering. The system was architecturally incapable of agency.
 
-NovaMart's chatbot was a **reactive system**. It received a question, generated a response, and forgot everything. It had no goals, no ability to plan a sequence of steps, no tools to interact with external systems, and no way to evaluate whether its actions succeeded. The team was trying to bolt agency onto a system that had been designed — from its very foundation — as a sophisticated text-completion engine.
+NovaMart's chatbot was a **reactive system**. It received a question, generated a response, and forgot everything. It had no goals, no ability to plan a sequence of steps, no tools to interact with external systems, and no way to evaluate whether its actions succeeded. The team was trying to bolt agency onto a system that had been designed, from its very foundation, as a sophisticated text-completion engine.
 
-This story is not unusual. Across industries, organizations are discovering the same gap: the distance between a system that can *talk about* actions and a system that can *take* them is not a feature gap. It is an architectural chasm. Understanding that chasm — what lies on either side of it, and how to cross it — is the subject of this chapter.
+This story is not unusual. Across industries, organizations are discovering the same gap: the distance between a system that can *talk about* actions and a system that can *take* them is not a feature gap. It is an architectural chasm. Understanding that chasm, what lies on either side of it, and how to cross it, is the subject of this chapter.
 
 ## 1.2 Defining Agency
 
@@ -47,7 +47,7 @@ An **agentic AI system** is a software system that uses a language model (or oth
 3.  **Tool use.** The system interacts with external systems, APIs, databases, file systems, or other resources to gather information and take actions in the world. Without tool use, a system can reason but cannot act.
 4.  **Adaptive reasoning.** The system adjusts its approach based on the results of its actions. When a tool call fails, when new information contradicts an assumption, or when a sub-goal turns out to be irrelevant, the system re-plans rather than blindly continuing.
 
-These four properties exist on a continuum. A system with weak goal-directedness and limited tool use is "slightly agentic." A system with strong autonomous planning, rich tool integration, and sophisticated error recovery is "highly agentic." The binary question — "Is this system an agent?" — is less useful than the graded question: "How agentic is this system, and is that the right level of agency for the problem it solves?"
+These four properties exist on a continuum. A system with weak goal-directedness and limited tool use is "slightly agentic." A system with strong autonomous planning, rich tool integration, and sophisticated error recovery is "highly agentic." The binary question, "Is this system an agent?", is less useful than the graded question: "How agentic is this system, and is that the right level of agency for the problem it solves?"
 
 > Under the hood
 > 
@@ -55,7 +55,7 @@ These four properties exist on a continuum. A system with weak goal-directedness
 
 ### What agency is not
 
-Precision requires us to also state what agency is *not*. A system is not agentic merely because it uses a large language model. ChatGPT, in its default conversational mode, is not an agent — it is a reactive system that generates a single response to a single prompt. A system is not agentic merely because it chains multiple LLM calls together. A pipeline that summarizes a document, then translates the summary, then formats the output is a **chain**, not an agent — because there is no branching decision logic, no re-planning, and no tool interaction with the external world. A system is not agentic merely because a human markets it as one. The label matters less than the architecture.
+Precision requires us to also state what agency is *not*. A system is not agentic merely because it uses a large language model. ChatGPT, in its default conversational mode, is not an agent. It is a reactive system that generates a single response to a single prompt. A system is not agentic merely because it chains multiple LLM calls together. A pipeline that summarizes a document, then translates the summary, then formats the output is a **chain**, not an agent, because there is no branching decision logic, no re-planning, and no tool interaction with the external world. A system is not agentic merely because a human markets it as one. The label matters less than the architecture.
 
 ## 1.3 The Autonomy Spectrum
 
@@ -75,7 +75,7 @@ Scripts are not agentic, but they are extraordinarily valuable. The overwhelming
 
 One step rightward on the spectrum, we find **chains** — sequences of LLM calls where the output of one call feeds into the input of the next. A chain might take a customer email, use one LLM call to classify the intent, another to draft a response, and a third to check the response for policy compliance. Each step uses a language model, but the *sequence* of steps is fixed at design time.
 
-Chains are common in production systems, and frameworks like LangChain popularized the pattern. They are more flexible than scripts because the LLM introduces non-determinism at each step — the same email might be classified differently on two runs. But chains are not agentic, because the system never decides *what to do next*. The developer decided that at design time. The chain cannot skip a step, add a step, or choose between alternative paths based on intermediate results.
+Chains are common in production systems, and frameworks like LangChain popularized the pattern. They are more flexible than scripts because the LLM introduces non-determinism at each step. The same email might be classified differently on two runs. But chains are not agentic, because the system never decides *what to do next*. The developer decided that at design time. The chain cannot skip a step, add a step, or choose between alternative paths based on intermediate results.
 
 > Common mistake
 > 
@@ -95,13 +95,13 @@ At the far right of the spectrum, we find **multi-agent systems** — architectu
 
 A research assistant system might include a "planner" agent that breaks a research question into sub-tasks, a "searcher" agent that queries web APIs and academic databases, a "reader" agent that extracts key findings from retrieved papers, and a "writer" agent that synthesizes everything into a coherent report. Each agent operates semi-independently, and the supervisor routes tasks between them based on the current state of the research.
 
-Multi-agent systems add coordination complexity on top of individual agent complexity. They introduce new failure modes — agents can disagree, work at cross purposes, or enter infinite delegation loops. They also introduce new capabilities: specialization (each agent can be optimized for its role), parallelism (multiple agents can work simultaneously), and redundancy (multiple agents can verify each other's work). We will explore these patterns in depth in Part 3.
+Multi-agent systems add coordination complexity on top of individual agent complexity. They introduce new failure modes: agents can disagree, work at cross purposes, or enter infinite delegation loops. They also introduce new capabilities: specialization (each agent can be optimized for its role), parallelism (multiple agents can work simultaneously), and redundancy (multiple agents can verify each other's work). We will explore these patterns in depth in Part 3.
 
 ## 1.4 Why Now? The LLM Inflection Point
 
 The concept of autonomous software agents is not new. Researchers have been building goal-directed, tool-using, adaptive systems since at least the 1980s. The Stanford Research Institute's STRIPS planner (1971), the BDI (Belief-Desire-Intention) architecture of the 1990s, and decades of work in multi-agent systems all laid theoretical groundwork. So why is agentic AI suddenly practical?
 
-The answer is that large language models solved — or dramatically reduced — four problems that had blocked practical agency for decades:
+The answer is that large language models solved, or dramatically reduced, four problems that had blocked practical agency for decades:
 
 ### Problem 1: Natural language understanding
 
@@ -155,7 +155,7 @@ A multi-agent system might handle the same request by routing it to a triage age
 
 ## 1.6 The Anatomy of an Agent
 
-Every agentic system, regardless of its complexity or domain, is built from four fundamental components: **perception**, **memory**, **reasoning**, and **action**. These components interact in a continuous loop — the agent perceives its environment, consults and updates its memory, reasons about what to do next, takes an action, and then perceives the result of that action. This loop continues until the agent achieves its goal, determines it cannot make progress, or exceeds a resource budget.
+Every agentic system, regardless of its complexity or domain, is built from four fundamental components: **perception**, **memory**, **reasoning**, and **action**. These components interact in a continuous loop. The agent perceives its environment, consults and updates its memory, reasons about what to do next, takes an action, and then perceives the result of that action. This loop continues until the agent achieves its goal, determines it cannot make progress, or exceeds a resource budget.
 
 ![Diagram 2](/diagrams/agenticai/what-is-agentic-ai-2.svg)
 
@@ -171,16 +171,16 @@ In LLM-based agents, perception is largely handled by the language model itself.
 
 Memory gives the agent context beyond the current turn. Without memory, every step of the agent's execution would be independent, with no access to what happened previously. Memory in LLM-based agents typically exists at two levels:
 
--   **Short-term memory** (also called working memory or the scratchpad) is the conversation history that accumulates during a single agent run. It includes the original user request, every tool call and its result, every intermediate reasoning step, and any observations the agent has made. In most implementations, short-term memory is simply the context window of the LLM — the growing sequence of messages that the model sees at each step.
+-   **Short-term memory** (also called working memory or the scratchpad) is the conversation history that accumulates during a single agent run. It includes the original user request, every tool call and its result, every intermediate reasoning step, and any observations the agent has made. In most implementations, short-term memory is simply the context window of the LLM: the growing sequence of messages that the model sees at each step.
 -   **Long-term memory** persists across runs and sessions. This might include a vector database of previously encountered problems and their solutions, a user profile with preferences and history, or a knowledge base of domain-specific information. Long-term memory is what allows an agent to learn from experience and personalize its behavior over time.
 
-Memory management is one of the most challenging aspects of agent design. The LLM's context window is finite, and as an agent takes more steps, the accumulated history can exceed that window. Strategies for managing this — summarization, retrieval-augmented generation, priority-based truncation — are the subject of Chapter 7.
+Memory management is one of the most challenging aspects of agent design. The LLM's context window is finite, and as an agent takes more steps, the accumulated history can exceed that window. Strategies for managing this, including summarization, retrieval-augmented generation, and priority-based truncation, are the subject of Chapter 7.
 
 ### Reasoning
 
 Reasoning is the agent's decision-making engine — the component that looks at the current state (what do I know, what have I tried, what was the result) and determines what to do next. In LLM-based agents, reasoning is performed by the language model itself. The quality of an agent's reasoning depends on the model's capability, the design of the system prompt, and the reasoning pattern employed.
 
-The simplest reasoning pattern is **ReAct** (Reasoning + Acting), where the model alternates between thinking steps ("I need to look up the order to check the return window") and action steps (calling the order lookup API). More sophisticated patterns include Chain-of-Thought (explicit step-by-step reasoning before acting), Tree-of-Thought (exploring multiple reasoning paths in parallel), and Reflection (the model critiques its own reasoning to catch errors). We will explore these patterns in detail in Chapter 5.
+The simplest reasoning pattern is **ReAct** (Reasoning + Acting), where the model alternates between thinking steps ("I need to look up the order to check the return window") and action steps (calling the order lookup API). More sophisticated patterns include Chain-of-Thought (explicit step-by-step reasoning before acting), Tree-of-Thought (exploring multiple reasoning paths in parallel), and Reflection (the model critiques its own reasoning to catch errors). These patterns are covered in detail in Chapter 5.
 
 ### Action
 
@@ -220,7 +220,7 @@ Legal agentic systems demonstrate the value of multi-step reasoning over domain-
 
 ## 1.8 The Agency Tax: What You Pay for Autonomy
 
-Agency is not free. Every step up the autonomy spectrum brings capabilities, but it also imposes costs that must be weighed against those capabilities. Responsible system design requires clear-eyed accounting of what we will call the **agency tax**.
+Agency is not free. Every step up the autonomy spectrum brings capabilities, but it also imposes costs that must be weighed against those capabilities. Responsible system design requires clear-eyed accounting of the **agency tax**.
 
 ### Latency
 
@@ -242,7 +242,7 @@ Agents can fail in ways that scripts and chains cannot. They can enter infinite 
 
 When a script fails, you read the log line. When an agent fails, you need to reconstruct a multi-step reasoning trace, understand why the model made each decision, identify where reasoning went wrong, and determine whether the failure was due to the model, the tools, the prompt, or the data. Agentic systems require fundamentally more sophisticated observability infrastructure than conventional software.
 
-None of these costs argue against building agentic systems. They argue for building them *deliberately*, with a clear understanding of which problems actually require agency and which are better served by simpler approaches. The project at the end of this chapter will give you a framework for making that determination.
+None of these costs argue against building agentic systems. They argue for building them *deliberately*, with a clear understanding of which problems actually require agency and which are better served by simpler approaches. The project at the end of this chapter provides a framework for making that determination.
 
 ## Project: Autonomy Classifier
 

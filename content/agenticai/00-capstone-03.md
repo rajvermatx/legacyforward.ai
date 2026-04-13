@@ -264,11 +264,11 @@ class ConversationMemory:
         }
 ```
 
-The memory system operates at two time scales. The **session** captures the current conversation as an ordered list with a two-hour TTL — long enough for a support interaction, short enough to avoid stale state. The **history** stores the last 500 messages in a sorted set keyed by timestamp, giving the agent access to prior interactions spanning 90 days. When a returning customer opens a new ticket, the agent can reference previous issues without the customer repeating anything.
+The memory system operates at two time scales. The **session** captures the current conversation as an ordered list with a two-hour TTL, long enough for a support interaction and short enough to avoid stale state. The **history** stores the last 500 messages in a sorted set keyed by timestamp, giving the agent access to prior interactions spanning 90 days. When a returning customer opens a new ticket, the agent can reference previous issues without the customer repeating anything.
 
 ## C3.5 Sentiment Analysis and Escalation
 
-The difference between a resolved ticket and a churned customer often comes down to detecting frustration early. A customer who writes “this is the third time I’ve contacted you about this” is not asking a question — they are warning you. The sentiment analyzer catches these signals and feeds them into the escalation router.
+The difference between a resolved ticket and a churned customer often comes down to detecting frustration early. A customer who writes “this is the third time I’ve contacted you about this” is not asking a question. They are warning you. The sentiment analyzer catches these signals and feeds them into the escalation router.
 
 ```
 from enum import Enum
@@ -519,7 +519,7 @@ After your response, rate your confidence from 0.0 to 1.0 based on:
         }
 ```
 
-The confidence score is self-reported by the model, which makes it imperfect but surprisingly useful. Models are well-calibrated when the retrieved context clearly answers the question (high confidence) or clearly does not (low confidence). The unreliable zone is the middle — when the documents are tangentially related. That is exactly the zone where the escalation router applies its frustration-weighted threshold to decide.
+The confidence score is self-reported by the model, which makes it imperfect but useful. Models are well-calibrated when the retrieved context clearly answers the question (high confidence) or clearly does not (low confidence). The unreliable zone is the middle, when the documents are tangentially related. That is exactly the zone where the escalation router applies its frustration-weighted threshold to decide.
 
 ## C3.7 Human Handoff
 
@@ -595,7 +595,7 @@ class HumanHandoff:
         return "Review the AI draft response and edit as needed before sending."
 ```
 
-The handoff package includes a `suggested_action` field that gives the human agent an immediate starting point. This is not a directive — it is a nudge that reduces the time a human spends reading context from minutes to seconds. The draft response is included so the human can edit and send it rather than writing from scratch, turning the AI from an autonomous agent into an intelligent assistant.
+The handoff package includes a `suggested_action` field that gives the human agent an immediate starting point. This is not a directive. It is a nudge that reduces the time a human spends reading context from minutes to seconds. The draft response is included so the human can edit and send it rather than writing from scratch, turning the AI from an autonomous agent into an intelligent assistant.
 
 ## C3.8 Putting It All Together
 
@@ -893,7 +893,7 @@ class Ticket:
         return total
 ```
 
-The state machine enforces valid transitions — a resolved ticket can only become reopened, not escalated directly. Every transition is recorded with a timestamp and reason, creating a complete audit trail. The `time_in_status` method lets you measure how long tickets sit in each stage, which is essential for identifying bottlenecks: if tickets spend an average of 45 minutes in the escalated state, you need more human agents in that queue.
+The state machine enforces valid transitions. A resolved ticket can only become reopened, not escalated directly. Every transition is recorded with a timestamp and reason, creating a complete audit trail. The `time_in_status` method lets you measure how long tickets sit in each stage, which is essential for identifying bottlenecks: if tickets spend an average of 45 minutes in the escalated state, you need more human agents in that queue.
 
 ## Project: Build a Domain-Specific Support Agent
 

@@ -7,38 +7,38 @@ order: 12
 part: "Part 03 Multi Agent"
 ---
 
-Part 3 — Multi-Agent Systems
+Part 3: Multi-Agent Systems
 
 # Agent Communication
 
-Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation — each followed its instructions perfectly. The failure is that they never talked to each other. Multi-agent systems do not fail because individual agents are incompetent. They fail because communication between agents is absent, ambiguous, or structurally broken.
+Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation. Each followed its instructions perfectly. The failure is that they never talked to each other. Multi-agent systems do not fail because individual agents are incompetent. They fail because communication between agents is absent, ambiguous, or structurally broken.
 
 Reading time: ~22 min Project: Agent Messenger Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
 ### What You Will Learn
 
--   How message passing patterns — broadcast, request/reply, and pub/sub — shape agent interactions and when each topology is appropriate
+-   How broadcast, request/reply, and pub/sub message passing patterns shape agent interactions and when each topology is appropriate
 -   Why shared state is both the simplest coordination mechanism and the most dangerous source of race conditions in multi-agent systems
 -   How to design structured message formats that prevent the ambiguity and data loss that plague unstructured agent conversations
 -   What agent protocols are, how they govern turn-taking and authority, and why protocol violations cause cascading failures
--   How to manage conversations between agents — threading, context windows, and preventing infinite loops
+-   How to manage conversations between agents: threading, context windows, and preventing infinite loops
 -   How agents resolve conflicts when they disagree on facts, priorities, or next steps
 
 ## 12.1 Why Communication Is the Hard Problem
 
 A single agent has a straightforward job: receive input, reason, act, return output. The moment you add a second agent, you introduce a problem that no amount of individual agent quality can solve. The agents must agree on what to communicate, when to communicate it, and what format to use. Miss any of these three, and the system produces contradictory outputs, duplicated work, or deadlocks where both agents wait for the other to go first.
 
-This is not a new problem. Distributed systems engineering has spent decades on message passing, consensus protocols, and shared state management. The difference with LLM-based agents is that the messages are not just data packets — they are natural language, which means they carry ambiguity, implicit assumptions, and context that degrades as conversations grow longer. An integer either matches or it does not. A sentence like “the timeline looks fine” can mean six different things depending on who said it and when.
+This is not a new problem. Distributed systems engineering has spent decades on message passing, consensus protocols, and shared state management. The difference with LLM-based agents is that the messages are not just data packets. They are natural language, which means they carry ambiguity, implicit assumptions, and context that degrades as conversations grow longer. An integer either matches or it does not. A sentence like “the timeline looks fine” can mean six different things depending on who said it and when.
 
 > The Telephone Problem
 > 
-> When Agent A summarizes its findings for Agent B, and Agent B summarizes those for Agent C, information degrades at every hop. By the time Agent C acts, it may be operating on a distorted version of what Agent A actually found. This is not a theoretical concern — it is the default behavior of multi-agent systems that pass natural language summaries between agents. Every hop is a lossy compression step. Structured message formats exist to prevent this.
+> When Agent A summarizes its findings for Agent B, and Agent B summarizes those for Agent C, information degrades at every hop. By the time Agent C acts, it may be operating on a distorted version of what Agent A actually found. This is not a theoretical concern. It is the default behavior of multi-agent systems that pass natural language summaries between agents. Every hop is a lossy compression step. Structured message formats exist to prevent this.
 
 The communication patterns in this chapter are not abstractions for their own sake. Each one solves a specific coordination failure. Broadcast solves the problem of agents not knowing what other agents are doing. Request/reply solves the problem of agents needing specific information from a specific source. Pub/sub solves the problem of agents needing to react to events they cannot predict in advance. Shared state solves the problem of agents needing a single source of truth. None of them solves all problems, and using the wrong pattern creates new failures.
 
 ## 12.2 Message Passing Patterns
 
-Message passing is the foundational mechanism for agent communication. One agent produces a message; one or more agents consume it. The topology — who sends to whom, and how — determines the system’s behavior under load, failure, and scale.
+Message passing is the foundational mechanism for agent communication. One agent produces a message. One or more agents consume it. The sending topology, meaning who sends to whom and how, determines the system’s behavior under load, failure, and scale.
 
 ### Broadcast
 
@@ -84,11 +84,11 @@ class BroadcastChannel:
         return messages
 ```
 
-Broadcast is appropriate for status updates, phase transitions (“planning is complete, execution begins”), and system-wide announcements. It breaks down when agents are numerous or messages are frequent, because every agent must process every message regardless of relevance. In a system with ten agents exchanging updates every second, each agent processes nine messages per second — most of which it does not care about.
+Broadcast is appropriate for status updates, phase transitions (“planning is complete, execution begins”), and system-wide announcements. It breaks down when agents are numerous or messages are frequent, because every agent must process every message regardless of relevance. In a system with ten agents exchanging updates every second, each agent processes nine messages per second, most of which it does not care about.
 
 ### Request/Reply
 
-Request/reply is a directed, synchronous pattern. One agent sends a request to a specific agent and waits for a response. This is the most intuitive pattern: it mirrors function calls. Agent A asks Agent B a question; Agent B answers.
+Request/reply is a directed, synchronous pattern. One agent sends a request to a specific agent and waits for a response. This is the most intuitive pattern: it mirrors function calls. Agent A asks Agent B a question. Agent B answers.
 
 ```
 import asyncio
@@ -128,11 +128,11 @@ class RequestReplyBus:
         return await self._inboxes[agent_id].get()
 ```
 
-Request/reply is appropriate when one agent needs specific information that only another agent can provide. It fails when the responding agent is slow, overloaded, or dead — the requesting agent blocks. Always set timeouts. Always handle the timeout case explicitly. A multi-agent system where one slow agent blocks all others is worse than a single-agent system.
+Request/reply is appropriate when one agent needs specific information that only another agent can provide. It fails when the responding agent is slow, overloaded, or dead. The requesting agent blocks. Always set timeouts. Always handle the timeout case explicitly. A multi-agent system where one slow agent blocks all others is worse than a single-agent system.
 
 ### Publish/Subscribe
 
-Pub/sub decouples senders from receivers. Agents publish messages to topics; other agents subscribe to the topics they care about. A publisher does not know or care which agents receive its messages. A subscriber does not know or care which agent produced the message. This decoupling is the key advantage.
+Pub/sub decouples senders from receivers. Agents publish messages to topics. Other agents subscribe to the topics they care about. A publisher does not know or care which agents receive its messages. A subscriber does not know or care which agent produced the message. This decoupling is the key advantage.
 
 ```
 class PubSubBroker:
@@ -180,15 +180,15 @@ broker.publish("research.complete", Message(
 ))
 ```
 
-Pub/sub shines in event-driven architectures where agents react to changes in the system rather than being explicitly told what to do. It is the right pattern when new agent types will be added later — they just subscribe to the topics they care about, and no existing code changes. It fails when you need guaranteed delivery order or when you need to know that a specific agent received a specific message. Pub/sub is fire-and-forget by default.
+Pub/sub shines in event-driven architectures where agents react to changes in the system rather than being explicitly told what to do. It is the right pattern when new agent types will be added later. They just subscribe to the topics they care about, and no existing code changes. It fails when you need guaranteed delivery order or when you need to know that a specific agent received a specific message. Pub/sub is fire-and-forget by default.
 
 ![Diagram 1](/diagrams/agenticai/agent-communication-1.svg)
 
-Figure 12-1. Three fundamental agent communication topologies — broadcast delivers to all, request/reply is directed and synchronous, pub/sub decouples senders from receivers via named topics.
+Figure 12-1. Three fundamental agent communication topologies: broadcast delivers to all, request/reply is directed and synchronous, and pub/sub decouples senders from receivers via named topics.
 
 ## 12.3 Shared State
 
-Shared state is the alternative to message passing. Instead of agents sending messages to each other, they read from and write to a common data store. A blackboard, a shared document, a database row — the mechanism varies, but the principle is the same: agents coordinate through a shared artifact rather than through direct communication.
+Shared state is the alternative to message passing. Instead of agents sending messages to each other, they read from and write to a common data store. A blackboard, a shared document, a database row: the mechanism varies, but the principle is the same. Agents coordinate through a shared artifact rather than through direct communication.
 
 ```
 import threading
@@ -243,11 +243,11 @@ The blackboard pattern is simple and powerful. Every agent can see the current s
 
 > When to Use Shared State vs. Message Passing
 > 
-> Use shared state when agents need a consistent view of the world — a document being collaboratively edited, a plan being refined, or a set of facts being accumulated. Use message passing when agents need to trigger actions in other agents, request information, or react to events. Most real systems use both: shared state for the “what” (current plan, accumulated facts) and message passing for the “when” (notifying agents that the state has changed and they should act).
+> Use shared state when agents need a consistent view of the world, such as a document being collaboratively edited, a plan being refined, or a set of facts being accumulated. Use message passing when agents need to trigger actions in other agents, request information, or react to events. Most real systems use both: shared state for the current truth (current plan, accumulated facts) and message passing for events and triggers (notifying agents that the state has changed and they should act).
 
 ## 12.4 Structured Message Formats
 
-When agents communicate in free-form natural language, every message is an interpretation challenge. Consider an agent that sends: “I found some issues with the data. The revenue numbers look off for Q3, and there might be a problem with the customer counts too.” What exactly is the receiving agent supposed to do with this? Which revenue numbers? Off by how much? “Might be” a problem — is it or isn’t it?
+When agents communicate in free-form natural language, every message is an interpretation challenge. Consider an agent that sends: “I found some issues with the data. The revenue numbers look off for Q3, and there might be a problem with the customer counts too.” What exactly is the receiving agent supposed to do with this? Which revenue numbers? Off by how much? “Might be” a problem: is it or is it not?
 
 Structured message formats eliminate this ambiguity by forcing agents to express information in a schema that both sender and receiver agree on.
 
@@ -317,7 +317,7 @@ Three principles for message format design:
 
 **Make payloads typed per message type.** A request for data analysis has a different payload schema than a status update. Validate each payload against its expected schema. Reject messages that do not conform rather than attempting to parse them.
 
-**Include provenance.** Every message should carry its sender, a unique ID, and a timestamp. Every reply should reference the message it replies to. Without this metadata, debugging a multi-agent conversation is impossible — you cannot trace which agent said what, when, or in response to what.
+**Include provenance.** Every message should carry its sender, a unique ID, and a timestamp. Every reply should reference the message it replies to. Without this metadata, debugging a multi-agent conversation is impossible. You cannot trace which agent said what, when, or in response to what.
 
 ## 12.5 Agent Protocols
 
@@ -393,7 +393,7 @@ The protocol above enforces a propose-review-revise cycle. An agent proposes, an
 
 > Contract Net Protocol
 > 
-> The Contract Net Protocol (CNP), developed in the 1980s for distributed AI, remains one of the most practical agent interaction patterns. A manager broadcasts a task announcement; agents evaluate their ability to perform the task and submit bids; the manager evaluates bids and awards the contract. CNP elegantly solves the task allocation problem in systems where agents have different capabilities and workloads. Modern multi-agent frameworks like AutoGen and CrewAI implement variations of this protocol under different names.
+> The Contract Net Protocol (CNP), developed in the 1980s for distributed AI, remains one of the most practical agent interaction patterns. A manager broadcasts a task announcement. Agents evaluate their ability to perform the task and submit bids. The manager evaluates bids and awards the contract. CNP elegantly solves the task allocation problem in systems where agents have different capabilities and workloads. Modern multi-agent frameworks like AutoGen and CrewAI implement variations of this protocol under different names.
 
 ## 12.6 Conversation Management
 
@@ -401,7 +401,7 @@ Agent-to-agent conversations are not chat threads. They are structured workflows
 
 ### Threading and Context
 
-When multiple conversations happen concurrently — Agent A is reviewing a document with Agent B while simultaneously coordinating with Agent C on deployment — each conversation must maintain its own context. Cross-contamination between threads produces nonsensical behavior: the reviewer starts discussing deployment timelines, or the deployment coordinator comments on grammar.
+When multiple conversations happen concurrently, for example Agent A reviewing a document with Agent B while simultaneously coordinating with Agent C on deployment, each conversation must maintain its own context. Cross-contamination between threads produces nonsensical behavior: the reviewer starts discussing deployment timelines, or the deployment coordinator comments on grammar.
 
 ```
 class ConversationManager:
@@ -498,13 +498,13 @@ Loop detection should be a first-class concern, not an afterthought. Build it in
 
 ## 12.7 Conflict Resolution
 
-Agents disagree. A research agent finds evidence that contradicts a planning agent’s assumptions. Two coding agents propose different implementations of the same feature. A safety agent vetoes a marketing agent’s proposed copy. These conflicts are not bugs — they are a sign that the system is working. The question is how the system resolves them.
+Agents disagree. A research agent finds evidence that contradicts a planning agent’s assumptions. Two coding agents propose different implementations of the same feature. A safety agent vetoes a marketing agent’s proposed copy. These conflicts are not bugs. They are a sign that the system is working. The question is how the system resolves them.
 
 Four conflict resolution strategies, each appropriate for different situations:
 
 **Hierarchy.** A supervisor agent has final authority. When agents disagree, the supervisor decides. This is the simplest strategy and works when one agent genuinely has more context or authority than others. It fails when the supervisor becomes a bottleneck or when the supervisor lacks the domain expertise to adjudicate.
 
-**Voting.** Each agent casts a vote, and the majority wins. This works when agents have roughly equal expertise and the decision is binary. It fails when one agent has critical information that others lack — majority rule can overrule the one agent that is actually right.
+**Voting.** Each agent casts a vote, and the majority wins. This works when agents have roughly equal expertise and the decision is binary. It fails when one agent has critical information that others lack. Majority rule can overrule the one agent that is actually right.
 
 **Evidence-based arbitration.** Agents must support their position with evidence. A dedicated arbitrator agent evaluates the strength of each side’s evidence and decides. This is slower but produces better outcomes when the disagreement is factual rather than preferential.
 
@@ -644,27 +644,27 @@ Build a multi-agent communication system where at least three agents collaborate
 
 ### Domain Variants
 
-Code Review Pipeline Tech / Software — Agents review code for style, security, performance, then negotiate a final verdict
+Code Review Pipeline Tech / Software: Agents review code for style, security, performance, then negotiate a final verdict
 
-Clinical Case Conference Healthcare — Specialist agents discuss diagnosis and treatment, resolve conflicting recommendations
+Clinical Case Conference Healthcare: Specialist agents discuss diagnosis and treatment, resolve conflicting recommendations
 
-Investment Committee Finance — Analyst agents debate buy/sell/hold, present evidence, vote on final recommendation
+Investment Committee Finance: Analyst agents debate buy/sell/hold, present evidence, vote on final recommendation
 
-Essay Workshop Education — Agents take roles of writer, critic, and fact-checker to collaboratively improve a draft
+Essay Workshop Education: Agents take roles of writer, critic, and fact-checker to collaboratively improve a draft
 
-Product Listing Optimizer E-commerce — SEO, copywriting, and compliance agents negotiate product descriptions
+Product Listing Optimizer E-commerce: SEO, copywriting, and compliance agents negotiate product descriptions
 
-Contract Negotiation Legal — Agents represent parties, exchange proposals, flag risks, converge on acceptable terms
+Contract Negotiation Legal: Agents represent parties, exchange proposals, flag risks, converge on acceptable terms
 
 ## Summary
 
-Agent communication is the infrastructure that determines whether a multi-agent system behaves as a coordinated team or a collection of individuals working at cross-purposes. The three fundamental message passing patterns — broadcast, request/reply, and pub/sub — each solve specific coordination problems and introduce specific failure modes. Shared state provides a single source of truth but demands careful concurrency management. Structured message formats eliminate the ambiguity that natural language introduces, ensuring that information survives transmission without distortion. Protocols enforce interaction rules that prevent agents from talking over each other, looping forever, or deadlocking. Conversation management keeps agent dialogues within context budgets and detects repetitive cycles before they waste resources. Conflict resolution transforms disagreements from system failures into decision points with explicit strategies and auditable outcomes.
+Agent communication is the infrastructure that determines whether a multi-agent system behaves as a coordinated team or a collection of individuals working at cross-purposes. The three fundamental message passing patterns, broadcast, request/reply, and pub/sub, each solve specific coordination problems and introduce specific failure modes. Shared state provides a single source of truth but demands careful concurrency management. Structured message formats eliminate the ambiguity that natural language introduces, ensuring that information survives transmission without distortion. Protocols enforce interaction rules that prevent agents from talking over each other, looping forever, or deadlocking. Conversation management keeps agent dialogues within context budgets and detects repetitive cycles before they waste resources. Conflict resolution transforms disagreements from system failures into decision points with explicit strategies and auditable outcomes.
 
 -   Message passing patterns are not interchangeable. Broadcast works for announcements to small groups, request/reply for directed information needs, and pub/sub for event-driven systems where new agents can subscribe without changing existing code. Choose based on your coupling and delivery requirements, not convenience.
 -   Shared state and message passing are complementary, not competing. Use shared state for the current truth (plans, accumulated facts, decisions) and message passing for events and triggers. Most production multi-agent systems use both.
--   Structured message formats with typed payloads, unique IDs, and provenance metadata are not over-engineering — they are the minimum required infrastructure for debugging multi-agent conversations. Free-form natural language between agents degrades information at every hop.
+-   Structured message formats with typed payloads, unique IDs, and provenance metadata are not over-engineering. They are the minimum required infrastructure for debugging multi-agent conversations. Free-form natural language between agents degrades information at every hop.
 -   Protocols with explicit phase transitions and round limits are the primary defense against infinite loops and deadlocks. Build termination conditions into every agent interaction, and enforce them at the framework level rather than trusting individual agents to self-terminate.
--   Conflict resolution must be an explicit, configurable system component — not an emergent behavior. Silent disagreements between agents produce the hardest-to-debug failures. Design communication patterns that force assumptions to surface so conflicts can be detected and resolved with auditable strategies.
+-   Conflict resolution must be an explicit, configurable system component, not an emergent behavior. Silent disagreements between agents produce the hardest-to-debug failures. Design communication patterns that force assumptions to surface so conflicts can be detected and resolved with auditable strategies.
 
 ### Exercises
 

@@ -28,7 +28,7 @@ Reading time: ~30 min Project: ReAct Agent Variants: Tech / Software, Healthcare
 
 Let us begin with a disaster. Suppose you give a language model access to two tools — a web search function and a calculator — and ask it: *"What is the current population of Tokyo, and what percentage of Japan's total population does that represent?"*
 
-A naive implementation does something like this: it sees the question, immediately calls the search tool with the query `"population of Tokyo"`, gets back a snippet saying 13.96 million, then calls the calculator with `13.96 / 125.7 * 100` — except it never searched for Japan's population. The 125.7 figure was hallucinated from training data. The answer comes back as 11.1%, stated with absolute confidence. The real figure, using 2024 data, is closer to 11.3%. Close enough to seem right, far enough to be wrong, and completely undetectable by anyone who does not already know the answer.
+A naive implementation does something like this: it sees the question, immediately calls the search tool with the query `"population of Tokyo"`, gets back a snippet saying 13.96 million, then calls the calculator with `13.96 / 125.7 * 100`. It never searched for Japan's population. The 125.7 figure was hallucinated from training data. The answer comes back as 11.1%, stated with absolute confidence. The real figure, using 2024 data, is closer to 11.3%. Close enough to seem right, far enough to be wrong, and completely undetectable by anyone who does not already know the answer.
 
 Here is the code that produces this failure:
 
@@ -58,13 +58,13 @@ def run_naive_agent(question: str) -> str:
     return final.choices[0].message.content
 ```
 
-The problem is structural, not cosmetic. This agent has no loop. It fires tools once, trusts whatever comes back, and assembles a response. There is no step where it examines the search results and thinks, *"Wait, I need Japan's population too."* There is no mechanism for it to realize a tool call failed or returned irrelevant data. There is no stopping condition beyond "I ran all the tools once." It is a script with an LLM as a subroutine, not an agent.
+The problem is structural, not cosmetic. This agent has no loop. It fires tools once, trusts whatever comes back, and assembles a response. There is no step where it examines the search results and thinks, "Wait, I need Japan's population too." There is no mechanism for it to realize a tool call failed or returned irrelevant data. There is no stopping condition beyond "I ran all the tools once." It is a script with an LLM as a subroutine, not an agent.
 
 > Common Mistake
 > 
 > Many tutorials show agents as a single LLM call with tool execution bolted on. This produces impressive demos but fails on any task requiring more than one reasoning step. If your agent cannot decide to call a tool it did not plan to call at the start, it is not an agent — it is a pipeline.
 
-The fix requires a fundamental change in architecture. Instead of "call tools once and assemble," we need a loop where the agent **observes** what it has learned so far, **thinks** about what to do next, and then **acts** — repeating until the task is genuinely complete. This is the ReAct pattern.
+The fix requires a fundamental change in architecture. Instead of "call tools once and assemble," we need a loop where the agent **observes** what it has learned so far, **thinks** about what to do next, and then **acts**, repeating until the task is genuinely complete. This is the ReAct pattern.
 
 ## 4.2 ReAct: Reasoning + Acting
 
@@ -342,9 +342,9 @@ class ReActAgent:
 
 Let us walk through the critical design decisions in this code.
 
-**The system prompt enforces structure.** By telling the model to prefix every step with "Thought:" and to signal completion with "FINAL ANSWER:", we create a parseable protocol. The model's free-form reasoning becomes machine-readable. This is not a suggestion to the model — it is the contract that the loop depends on.
+**The system prompt enforces structure.** By telling the model to prefix every step with "Thought:" and to signal completion with "FINAL ANSWER:", we create a parseable protocol. The model's free-form reasoning becomes machine-readable. This is not a suggestion to the model. It is the contract that the loop depends on.
 
-**The loop runs up to `max_iterations`.** This is a hard safety limit. Without it, a confused agent can loop forever, burning API credits and never producing an answer. Ten iterations is a reasonable default for most tasks — enough for complex multi-step problems, but not so many that a stuck agent costs you twenty dollars.
+**The loop runs up to `max_iterations`.** This is a hard safety limit. Without it, a confused agent can loop forever, burning API credits and never producing an answer. Ten iterations is a reasonable default for most tasks: enough for complex multi-step problems, but not so many that a stuck agent costs you twenty dollars.
 
 **Tool results are fed back as `role: "tool"` messages.** This is the observation step. The LLM sees the tool output as a distinct message type, which helps it distinguish between its own reasoning and external data. The `tool_call_id` links each result back to the specific call that produced it.
 
@@ -372,7 +372,7 @@ answer = agent.run(
 print(f"\n=== Final Answer ===\n{answer}")
 ```
 
-With verbose mode on, you see the full reasoning trace — every thought, every tool call, every observation. This is not just useful for debugging; it is the entire point. An agent whose reasoning you cannot inspect is an agent you cannot trust.
+With verbose mode on, you see the full reasoning trace: every thought, every tool call, every observation. This is not just useful for debugging. It is the entire point. An agent whose reasoning you cannot inspect is an agent you cannot trust.
 
 ### 4.4.4 Anatomy of a Trace
 
@@ -572,7 +572,7 @@ The last rule — never pretend a failed call succeeded — is critical. Without
 
 You might be wondering: why did we write all this from scratch when LangChain, LlamaIndex, CrewAI, and a dozen other frameworks offer ReAct agents out of the box? The answer is pedagogical but also practical.
 
-**Frameworks are abstractions over things you need to understand.** When LangChain's `AgentExecutor` gets stuck in a loop, you need to understand the observe-think-act cycle to diagnose it. When a CrewAI agent hallucinates despite having the right tools, you need to understand how the thought step steers the model. Frameworks do not eliminate complexity — they relocate it.
+**Frameworks are abstractions over things you need to understand.** When LangChain's `AgentExecutor` gets stuck in a loop, you need to understand the observe-think-act cycle to diagnose it. When a CrewAI agent hallucinates despite having the right tools, you need to understand how the thought step steers the model. Frameworks do not eliminate complexity. They relocate it.
 
 **Our 100-line agent covers 80% of use cases.** The ReAct loop you just built handles multi-step reasoning, tool use, error recovery, and configurable stopping conditions. Many production agents are not much more complex than this. Adding a framework adds dependency management, version compatibility issues, and opaque abstractions for features you may not need.
 

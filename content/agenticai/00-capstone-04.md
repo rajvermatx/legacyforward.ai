@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 4: Data Pipeline Orchestrator
 
-Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today — each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that detects schema drift, validates quality, transforms data, and heals its own failures — replacing the manual triage loop with a supervisor-worker architecture that keeps pipelines healthy around the clock.
+Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today: each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that detects schema drift, validates quality, transforms data, and heals its own failures, replacing the manual triage loop with a supervisor-worker architecture that keeps pipelines healthy around the clock.
 
 Reading time: ~25 min Project: Self-Healing ETL Agent Variants: Healthcare, Finance, E-commerce, IoT, Government, Media
 
@@ -28,9 +28,9 @@ Reading time: ~25 min Project: Self-Healing ETL Agent Variants: Healthcare, Fina
 
 Every data team has a war story. The marketing dashboard showed zero conversions for six hours because a third-party API changed its JSON envelope. The ML model retrained on corrupted features because a CSV upstream switched to semicolons. The compliance report went out with last week’s numbers because a cron job silently failed. These are not edge cases; they are Tuesday.
 
-Traditional ETL pipelines are brittle because they encode assumptions statically. You hardcode column names, set row-count thresholds, and hope nothing changes. When something does — the pipeline either crashes loudly (best case) or passes corrupted data downstream (worst case). The manual repair loop takes hours on a good day.
+Traditional ETL pipelines are brittle because they encode assumptions statically. You hardcode column names, set row-count thresholds, and hope nothing changes. When something does, the pipeline either crashes loudly (best case) or passes corrupted data downstream (worst case). The manual repair loop takes hours on a good day.
 
-An agentic pipeline inverts this. Agents *inspect* incoming data, *reason* about what changed, and *act* to fix it — or escalate when the change is too large for automated repair. The goal is not to eliminate human oversight; it is to shrink the gap between “something broke” and “here is what changed, what we did, and what needs your approval.”
+An agentic pipeline inverts this. Agents *inspect* incoming data, *reason* about what changed, and *act* to fix it, or escalate when the change is too large for automated repair. The goal is not to eliminate human oversight. It is to shrink the gap between “something broke” and “here is what changed, what we did, and what needs your approval.”
 
 > When Not to Auto-Heal
 > 
@@ -107,7 +107,7 @@ class CSVConnector(BaseConnector):
 
 ## C4.4 Schema Analyzer Agent
 
-The schema analyzer infers types, compares against the expected schema, and produces a drift report. For simple changes it proposes automatic mappings; for structural breaks it flags for human review.
+The schema analyzer infers types, compares against the expected schema, and produces a drift report. For simple changes it proposes automatic mappings. For structural breaks it flags for human review.
 
 ```
 """Schema Analyzer Agent — infer, compare, report drift."""
@@ -328,7 +328,7 @@ class TransformerAgent:
 
 ## C4.7 Healer Agent and Retry Logic
 
-When the quality gate fails, the healer follows three steps: **diagnose** from the quality report, **select a fix strategy** from a known taxonomy, and **apply** deterministically. Unresolved issues within the retry limit trigger escalation.
+When the quality gate fails, the healer follows three steps: **diagnose** from the quality report, **select a fix strategy** from a known taxonomy, and **apply** deterministically. Issues unresolved within the retry limit trigger escalation.
 
 ```
 """Healer Agent — diagnose, fix, retry, or escalate."""
@@ -581,7 +581,7 @@ Media Analytics Ad-impression logs, timestamp-zone normalization, campaign ID sc
 
 ## Summary
 
-We built a supervisor-worker ETL architecture where each stage — schema inference, quality checking, transformation, and healing — is handled by a focused agent. The system detects schema drift, validates against rules and statistical baselines, repairs common failures autonomously, and escalates cleanly when confidence is insufficient.
+We built a supervisor-worker ETL architecture where each stage, schema inference, quality checking, transformation, and healing, is handled by a focused agent. The system detects schema drift, validates against rules and statistical baselines, repairs common failures autonomously, and escalates cleanly when confidence is insufficient.
 
 ### Key Takeaways
 

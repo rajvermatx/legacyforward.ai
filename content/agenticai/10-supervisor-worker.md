@@ -1,17 +1,17 @@
 ---
 title: "Supervisor-Worker Pattern"
 slug: "supervisor-worker"
-description: "The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the "
+description: "The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the "
 section: "agenticai"
 order: 10
 part: "Part 03 Multi Agent"
 ---
 
-Part 3 — Multi-Agent Systems
+Part 3: Multi-Agent Systems
 
 # Supervisor-Worker Pattern
 
-The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the financial data, forget it was supposed to draft a report, and eventually time out after burning forty dollars in API calls. The problem was not intelligence. The problem was asking one agent to hold an entire workflow in its head at once. The supervisor-worker pattern exists because the same principle that makes human organizations effective applies to agents: a coordinator who plans and delegates will outperform a single genius who tries to do everything alone.
+The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report, all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the financial data, forget it was supposed to draft a report, and eventually time out after burning forty dollars in API calls. The problem was not intelligence. The problem was asking one agent to hold an entire workflow in its head at once. The supervisor-worker pattern exists because the same principle that makes human organizations effective applies to agents: a coordinator who plans and delegates will outperform a single generalist who tries to do everything alone.
 
 Reading time: ~25 min Project: Task Delegation System Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -26,11 +26,11 @@ Reading time: ~25 min Project: Task Delegation System Variants: Tech / Software,
 
 ## 10.1 The Case for Hierarchy
 
-Single-agent architectures hit a ceiling. As the number of tools grows beyond a dozen, the model struggles to select the right one. As the workflow lengthens beyond five or six steps, earlier context gets compressed or forgotten. As the task requires different reasoning styles — analytical for data extraction, creative for writing, precise for code generation — a single system prompt cannot optimize for all of them.
+Single-agent architectures hit a ceiling. As the number of tools grows beyond a dozen, the model struggles to select the right one. As the workflow lengthens beyond five or six steps, earlier context gets compressed or forgotten. As the task requires different reasoning styles, analytical for data extraction, creative for writing, and precise for code generation, a single system prompt cannot optimize for all of them.
 
-The supervisor-worker pattern addresses this by splitting the work into two distinct roles. The **supervisor** is responsible for understanding the overall goal, breaking it into subtasks, deciding which worker handles each subtask, and assembling the final result. **Workers** are specialists: each has a narrow system prompt, a focused set of tools, and no knowledge of the broader workflow. A research worker does not know that its output will be used in a report. A code-generation worker does not know that its output will be reviewed by a quality worker. This isolation is a feature, not a limitation — it keeps each agent’s context window focused on a single, well-defined task.
+The supervisor-worker pattern addresses this by splitting the work into two distinct roles. The supervisor is responsible for understanding the overall goal, breaking it into subtasks, deciding which worker handles each subtask, and assembling the final result. Workers are specialists: each has a narrow system prompt, a focused set of tools, and no knowledge of the broader workflow. A research worker does not know that its output will be used in a report. A code-generation worker does not know that its output will be reviewed by a quality worker. This isolation is a feature, not a limitation. It keeps each agent's context window focused on a single, well-defined task.
 
-The analogy to human organizations is deliberate. A project manager does not write the code, design the UI, or draft the legal review. They decompose the project into work items, assign each to the right specialist, track progress, handle blockers, and synthesize deliverables. The supervisor agent does precisely the same thing, except its “team” is a set of LLM-powered workers with distinct capabilities.
+The analogy to human organizations is deliberate. A project manager does not write the code, design the UI, or draft the legal review. They decompose the project into work items, assign each to the right specialist, track progress, handle blockers, and synthesize deliverables. The supervisor agent does precisely the same thing, except its "team" is a set of LLM-powered workers with distinct capabilities.
 
 > Supervisor vs. Orchestrator
 > 
@@ -38,17 +38,17 @@ The analogy to human organizations is deliberate. A project manager does not wri
 
 ## 10.2 Architecture Overview
 
-A supervisor-worker system has three layers. The supervisor layer receives the user’s request, plans the workflow, and returns the final answer. The worker layer contains specialized agents, each with its own system prompt and tool set. The tool layer provides the actual capabilities — API calls, database queries, file operations, web searches — that workers use to accomplish their tasks.
+A supervisor-worker system has three layers. The supervisor layer receives the user's request, plans the workflow, and returns the final answer. The worker layer contains specialized agents, each with its own system prompt and tool set. The tool layer provides the actual capabilities that workers use to accomplish their tasks: API calls, database queries, file operations, and web searches.
 
 ![Diagram 1](/diagrams/agenticai/supervisor-worker-1.svg)
 
-Figure 10.1 — Supervisor-worker topology. The supervisor plans and delegates; workers execute with focused tool sets; results flow back for aggregation.
+Figure 10.1: Supervisor-worker topology. The supervisor plans and delegates; workers execute with focused tool sets; results flow back for aggregation.
 
-The key insight is that each layer operates at a different level of abstraction. The supervisor thinks in terms of tasks: “research competitor pricing,” “analyze trends in the data,” “draft the executive summary.” Workers think in terms of tool calls: “search the web for X,” “query the database for Y,” “format the output as a table.” This separation of concerns means the supervisor’s prompt stays clean and strategic, while each worker’s prompt stays tactical and focused.
+The key insight is that each layer operates at a different level of abstraction. The supervisor thinks in terms of tasks: "research competitor pricing," "analyze trends in the data," "draft the executive summary." Workers think in terms of tool calls: "search the web for X," "query the database for Y," "format the output as a table." This separation of concerns means the supervisor's prompt stays clean and strategic, while each worker's prompt stays tactical and focused.
 
 ## 10.3 Designing the Supervisor
 
-The supervisor is the brain of the system. It receives the user’s request, decomposes it into a plan, dispatches tasks to workers, monitors results, and decides when the overall job is done. A well-designed supervisor has three core capabilities: **task decomposition**, **delegation**, and **result aggregation**.
+The supervisor is the brain of the system. It receives the user's request, decomposes it into a plan, dispatches tasks to workers, monitors results, and decides when the overall job is done. A well-designed supervisor has three core capabilities: task decomposition, delegation, and result aggregation.
 
 ```
 from dataclasses import dataclass, field
@@ -149,11 +149,11 @@ class Supervisor:
         )
 ```
 
-The decomposition step is where the supervisor earns its keep. A good decomposition produces tasks that are **independent where possible** (enabling parallelism), **correctly sequenced where necessary** (using dependency declarations), and **scoped to a single worker’s capabilities** (preventing confusion).
+The decomposition step is where the supervisor earns its keep. A good decomposition produces tasks that are independent where possible (enabling parallelism), correctly sequenced where necessary (using dependency declarations), and scoped to a single worker's capabilities (preventing confusion).
 
 > Decomposition Failures
 > 
-> The most common supervisor bug is producing tasks that are too vague for workers to execute. “Analyze the data” is not a task; “Calculate the year-over-year revenue growth rate from the quarterly earnings data” is. If your workers consistently return poor results, the problem is usually in the supervisor’s decomposition, not in the workers themselves. Add examples of good task descriptions to the supervisor’s system prompt.
+> The most common supervisor bug is producing tasks that are too vague for workers to execute. "Analyze the data" is not a task; "Calculate the year-over-year revenue growth rate from the quarterly earnings data" is. If your workers consistently return poor results, the problem is usually in the supervisor's decomposition, not in the workers themselves. Add examples of good task descriptions to the supervisor's system prompt.
 
 ## 10.4 Building Worker Agents
 
@@ -240,7 +240,7 @@ class Worker:
         return "\n".join(parts)
 ```
 
-The worker design has several deliberate constraints. The tool loop is capped at ten iterations to prevent runaway execution. Each tool call is wrapped in a try/except so that a single tool failure does not crash the worker — the error message is passed back to the LLM, which can decide to retry or work around the failure. And the worker returns a structured dictionary, not free-form text, so the supervisor can programmatically check status and extract results.
+The worker design has several deliberate constraints. The tool loop is capped at ten iterations to prevent runaway execution. Each tool call is wrapped in a try/except so that a single tool failure does not crash the worker. The error message is passed back to the LLM, which can decide to retry or work around the failure. And the worker returns a structured dictionary, not free-form text, so the supervisor can programmatically check status and extract results.
 
 ### Specialization Through System Prompts
 
@@ -298,17 +298,17 @@ writing_worker = Worker(
 
 > Tool Isolation Principle
 > 
-> Give each worker only the tools it needs. A research worker does not need the database query tool. An analysis worker does not need the web search tool. Tool isolation reduces the chance of a worker going off-task and makes it easier to audit what each worker did. If you find a worker needs tools from another worker’s domain, that is a signal to split the task differently at the supervisor level.
+> Give each worker only the tools it needs. A research worker does not need the database query tool. An analysis worker does not need the web search tool. Tool isolation reduces the chance of a worker going off-task and makes it easier to audit what each worker did. If you find a worker needs tools from another worker's domain, that is a signal to split the task differently at the supervisor level.
 
 ## 10.5 Task Decomposition
 
-Task decomposition is the critical planning step where the supervisor converts a vague user request into a directed acyclic graph of concrete, assignable tasks. The quality of decomposition determines the quality of the entire system’s output.
+Task decomposition is the critical planning step where the supervisor converts a vague user request into a directed acyclic graph of concrete, assignable tasks. The quality of decomposition determines the quality of the entire system's output.
 
 There are three common decomposition strategies:
 
 **Sequential decomposition.** Tasks form a chain: each depends on the output of the previous one. This is the simplest pattern and appropriate when later tasks genuinely need the results of earlier ones. The downside is that total latency equals the sum of all task durations.
 
-**Parallel decomposition.** Independent tasks are identified and marked as having no dependencies. They can execute simultaneously, reducing total latency to the duration of the longest single task. The supervisor must identify which tasks are truly independent — falsely declaring a dependency as independent leads to missing context, while falsely declaring independence as dependent wastes time.
+**Parallel decomposition.** Independent tasks are identified and marked as having no dependencies. They can execute simultaneously, reducing total latency to the duration of the longest single task. The supervisor must identify which tasks are truly independent. Falsely declaring a dependent task as independent leads to missing context, while falsely declaring an independent task as dependent wastes time.
 
 **Hybrid decomposition.** A mix of parallel and sequential phases. This is the most common pattern in real workflows: gather data in parallel, then analyze the combined data sequentially, then produce outputs in parallel from the shared analysis.
 
@@ -385,7 +385,7 @@ The execution engine is a simple loop: find tasks whose dependencies are satisfi
 
 ## 10.6 Parallel Execution
 
-Parallel execution is where the supervisor-worker pattern delivers its biggest latency improvement. Instead of running five tasks sequentially — each taking 10–30 seconds of API call time — you run independent tasks simultaneously.
+Parallel execution is where the supervisor-worker pattern delivers its biggest latency improvement. Instead of running five tasks sequentially, each taking 10 to 30 seconds of API call time, you run independent tasks simultaneously.
 
 But parallelism introduces three challenges that sequential execution does not have:
 
@@ -503,7 +503,7 @@ Error handling in a multi-agent system is fundamentally different from error han
 
 There are four categories of errors in supervisor-worker systems:
 
-**Worker execution errors.** A worker’s tool call fails (API timeout, rate limit, malformed response). The worker should catch these internally and either retry or return a structured error. The supervisor sees a failed task and decides whether to retry with the same worker, reassign to a different worker, or proceed without that result.
+**Worker execution errors.** A worker's tool call fails (API timeout, rate limit, malformed response). The worker should catch these internally and either retry or return a structured error. The supervisor sees a failed task and decides whether to retry with the same worker, reassign to a different worker, or proceed without that result.
 
 **Decomposition errors.** The supervisor creates tasks that are impossible, circular, or assigned to nonexistent workers. Validate the plan before execution: check for missing worker types, detect dependency cycles, and verify that task descriptions are concrete enough.
 
@@ -564,7 +564,7 @@ def _refine_task(self, description: str, error: str) -> str:
     return response.choices[0].message.content
 ```
 
-The retry logic has a subtle but important detail: after the first failed attempt, the supervisor *refines* the task description. This is not a dumb retry — it uses the LLM to understand why the task failed and produce a better formulation. If a research task failed because the search query was too broad, the refined task might include more specific keywords.
+The retry logic has a subtle but important detail: after the first failed attempt, the supervisor refines the task description. This is not a dumb retry. It uses the LLM to understand why the task failed and produce a better formulation. If a research task failed because the search query was too broad, the refined task might include more specific keywords.
 
 > Circuit Breakers
 > 
@@ -576,7 +576,7 @@ The full delegation lifecycle follows a clear sequence: the user submits a reque
 
 ![Diagram 2](/diagrams/agenticai/supervisor-worker-2.svg)
 
-Figure 10.2 — Task delegation and result aggregation flow. The supervisor splits work into parallel tasks, collects results, checks for errors, and merges outputs into a single response.
+Figure 10.2: Task delegation and result aggregation flow. The supervisor splits work into parallel tasks, collects results, checks for errors, and merges outputs into a single response.
 
 The decision diamond is the error-handling checkpoint. If all workers succeeded, the supervisor proceeds to aggregation. If any failed, the supervisor decides whether to retry (loop back to task split with a refined task) or skip (proceed to aggregation with partial results and flag the gaps). This retry loop is bounded by the circuit breaker from section 10.8.
 
@@ -700,7 +700,7 @@ The supervisor-worker pattern is not always the right choice. It adds complexity
 
 > Start Simple, Scale Up
 > 
-> Do not begin with a supervisor-worker architecture. Start with a single agent. When you hit the ceiling — tool confusion, context window overflow, inconsistent quality across different parts of the output — extract the problematic functionality into a worker. The supervisor-worker pattern should emerge from observed limitations, not from an architect’s whiteboard.
+> Do not begin with a supervisor-worker architecture. Start with a single agent. When you hit the ceiling, with tool confusion, context window overflow, or inconsistent quality across different parts of the output, extract the problematic functionality into a worker. The supervisor-worker pattern should emerge from observed limitations, not from an architect's whiteboard.
 
 ## Project: Task Delegation System
 
@@ -717,21 +717,21 @@ Build a supervisor-worker system where a supervisor agent decomposes user reques
 
 ### Domain Variants
 
-Competitive Intelligence Report Tech / Software — Research competitors, analyze features, draft comparison report
+Competitive Intelligence Report Tech / Software: Research competitors, analyze features, draft comparison report
 
-Patient Case Summarizer Healthcare — Gather records, analyze trends, produce clinical summary
+Patient Case Summarizer Healthcare: Gather records, analyze trends, produce clinical summary
 
-Portfolio Rebalancing Advisor Finance — Pull market data, run allocation analysis, draft recommendations
+Portfolio Rebalancing Advisor Finance: Pull market data, run allocation analysis, draft recommendations
 
-Curriculum Builder Education — Research topics, structure learning objectives, generate materials
+Curriculum Builder Education: Research topics, structure learning objectives, generate materials
 
-Product Launch Planner E-commerce — Market research, pricing analysis, launch copy generation
+Product Launch Planner E-commerce: Market research, pricing analysis, launch copy generation
 
-Contract Review Pipeline Legal — Extract clauses, check compliance, produce risk assessment report
+Contract Review Pipeline Legal: Extract clauses, check compliance, produce risk assessment report
 
 ## Summary
 
-The supervisor-worker pattern brings organizational structure to multi-agent systems. A supervisor agent takes responsibility for understanding the user’s goal, decomposing it into concrete subtasks, delegating each to a specialized worker with focused tools, and synthesizing the results into a coherent output. This separation of planning from execution solves the problems that sink single-agent architectures: tool overload, context window exhaustion, and the impossibility of optimizing one system prompt for multiple reasoning styles. The pattern introduces its own costs — planning latency, inter-agent communication overhead, and a single point of failure at the supervisor — but for workflows that require diverse skills and benefit from parallel execution, the trade-off is overwhelmingly positive.
+The supervisor-worker pattern brings organizational structure to multi-agent systems. A supervisor agent takes responsibility for understanding the user's goal, decomposing it into concrete subtasks, delegating each to a specialized worker with focused tools, and synthesizing the results into a coherent output. This separation of planning from execution solves the problems that sink single-agent architectures: tool overload, context window exhaustion, and the impossibility of optimizing one system prompt for multiple reasoning styles. The pattern introduces its own costs: planning latency, inter-agent communication overhead, and a single point of failure at the supervisor. For workflows that require diverse skills and benefit from parallel execution, the trade-off is positive.
 
 -   The supervisor-worker pattern separates planning from execution. The supervisor decomposes tasks, delegates to specialists, and aggregates results. Workers execute with focused tool sets and no knowledge of the broader workflow. This mirrors how effective human teams operate.
 -   Task decomposition quality determines system quality. Vague tasks produce vague results. The supervisor must produce tasks that are concrete, scoped to a single worker, and correctly ordered by dependencies. Add few-shot examples of good decompositions to the supervisor prompt.

@@ -7,11 +7,11 @@ order: 15
 part: "Part 04 Production"
 ---
 
-Part 4 — Production
+Part 4: Production
 
 # Deployment
 
-The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that still loaded the old prompt template, and the cost dashboard showed $1,200 in token spend overnight — ten times the daily budget. Nothing was technically “broken.” Every component worked in isolation. The system failed because nobody had designed the space between the components: the pipeline that builds, the container that runs, the orchestrator that scales, and the monitors that tell you when reality diverges from your assumptions.
+The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that still loaded the old prompt template, and the cost dashboard showed $1,200 in token spend overnight, ten times the daily budget. Nothing was technically “broken.” Every component worked in isolation. The system failed because nobody had designed the space between the components: the pipeline that builds, the container that runs, the orchestrator that scales, and the monitors that tell you when reality diverges from your assumptions.
 
 Reading time: ~25 min Project: Deploy Pipeline Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -26,7 +26,7 @@ Reading time: ~25 min Project: Deploy Pipeline Variants: Tech / Software, Health
 
 ## 15.1 Why Deployment Is Different for Agents
 
-A traditional web API is stateless by convention: every request carries everything the server needs. An agentic service is different in three ways that change how you deploy it. First, a single user request can trigger dozens of LLM calls, tool invocations, and memory lookups, turning a “simple endpoint” into a long-running, resource-intensive workflow. Second, the behavior of the system depends on prompt templates, model versions, and retrieval indices that sit outside the application code — a code deploy that does not update the prompt registry is a partial deploy. Third, latency profiles are unpredictable: one request may resolve in 800ms, the next may chain five tool calls and take twelve seconds. Standard autoscaling heuristics built for uniform request latencies break down.
+A traditional web API is stateless by convention: every request carries everything the server needs. An agentic service is different in three ways that change how you deploy it. First, a single user request can trigger dozens of LLM calls, tool invocations, and memory lookups, turning a “simple endpoint” into a long-running, resource-intensive workflow. Second, the behavior of the system depends on prompt templates, model versions, and retrieval indices that sit outside the application code. A code deploy that does not update the prompt registry is a partial deploy. Third, latency profiles are unpredictable: one request may resolve in 800ms, the next may chain five tool calls and take twelve seconds. Standard autoscaling heuristics built for uniform request latencies break down.
 
 These properties mean that agent deployment is not “deploy a Flask app plus some API keys.” It requires treating prompts as versioned artifacts, treating model endpoints as external dependencies with SLAs, and designing infrastructure that tolerates wide variance in per-request resource consumption.
 
@@ -216,11 +216,11 @@ jobs:
             --namespace=production --timeout=300s
 ```
 
-The pipeline above has four stages, and the ordering is deliberate. Unit tests run first because they are fast and deterministic. Prompt regression tests run second because they call an LLM and are slower; if unit tests fail, you do not waste API credits. The build stage produces an immutable image tagged with the commit SHA, not `latest` alone, so every deployment is traceable to a specific commit. Production uses a canary deployment: the new version receives a fraction of traffic, and the `environment: production` gate requires manual approval before full rollout.
+The pipeline above has four stages, and the ordering is deliberate. Unit tests run first because they are fast and deterministic. Prompt regression tests run second because they call an LLM and are slower. If unit tests fail, you do not waste API credits. The build stage produces an immutable image tagged with the commit SHA, not `latest` alone, so every deployment is traceable to a specific commit. Production uses a canary deployment: the new version receives a fraction of traffic, and the `environment: production` gate requires manual approval before full rollout.
 
 > Prompt Regression Tests in CI
 > 
-> Prompt tests should use a fixed model version (not `gpt-4o` but `gpt-4o-2024-08-06`) and a `temperature` of 0. Assert on structural properties of the output — JSON schema compliance, presence of required fields, absence of forbidden content — rather than exact string matches. Store expected outputs as fixtures and update them deliberately when prompts change, treating them as you would database migration files.
+> Prompt tests should use a fixed model version (not `gpt-4o` but `gpt-4o-2024-08-06`) and a `temperature` of 0. Assert on structural properties of the output, such as JSON schema compliance, presence of required fields, and absence of forbidden content, rather than exact string matches. Store expected outputs as fixtures and update them deliberately when prompts change, treating them as you would database migration files.
 
 ## 15.4 Environment Management
 
@@ -273,7 +273,7 @@ class Settings:
 settings = Settings()
 ```
 
-Secrets (API keys, database passwords) belong in a secrets manager — AWS Secrets Manager, HashiCorp Vault, or your cloud provider’s equivalent — injected into the container at startup. Non-secret configuration (model names, feature flags) can live in ConfigMaps, environment variables, or a configuration service. The key principle: **never store secrets in version control, container images, or CI logs**. Rotate secrets on a schedule and after any suspected exposure.
+Secrets (API keys, database passwords) belong in a secrets manager such as AWS Secrets Manager, HashiCorp Vault, or your cloud provider’s equivalent, injected into the container at startup. Non-secret configuration (model names, feature flags) can live in ConfigMaps, environment variables, or a configuration service. The key principle: **never store secrets in version control, container images, or CI logs**. Rotate secrets on a schedule and after any suspected exposure.
 
 | Config Category | Examples | Storage | Change Frequency |
 | --- | --- | --- | --- |
@@ -284,7 +284,7 @@ Secrets (API keys, database passwords) belong in a secrets manager — AWS Secre
 
 ## 15.5 Scaling Strategies
 
-Agent workloads scale differently from web APIs because request duration varies by orders of magnitude. A typical REST endpoint returns in 50–200ms. An agent that chains three tool calls through an LLM might take 5–15 seconds. This means that a pod handling 10 concurrent requests is not “10x the CPU load of one request” — it is 10 long-lived connections consuming memory for context, open connections to external APIs, and potentially queued callbacks.
+Agent workloads scale differently from web APIs because request duration varies by orders of magnitude. A typical REST endpoint returns in 50–200ms. An agent that chains three tool calls through an LLM might take 5–15 seconds. This means that a pod handling 10 concurrent requests is not “10x the CPU load of one request.” It is 10 long-lived connections consuming memory for context, open connections to external APIs, and potentially queued callbacks.
 
 **Horizontal scaling** is the primary strategy. Run multiple replicas of your agent service behind a load balancer. Each replica is stateless: conversation state lives in Redis or a database, not in process memory. When load increases, add replicas. When load decreases, remove them.
 
@@ -433,7 +433,7 @@ async def detailed_health():
     }
 ```
 
-Two distinct health endpoints serve different purposes. The **liveness probe** answers: “Is this process alive?” If liveness fails, the orchestrator kills and restarts the pod. Keep this check trivial — if the HTTP server can respond, the process is alive. The **readiness probe** answers: “Can this instance serve traffic?” During startup, while the agent loads prompt templates or warms a local embedding model, readiness returns 503. The load balancer will not send traffic until readiness passes. This prevents users from hitting a half-initialized instance.
+Two distinct health endpoints serve different purposes. The **liveness probe** answers: “Is this process alive?” If liveness fails, the orchestrator kills and restarts the pod. Keep this check trivial: if the HTTP server can respond, the process is alive. The **readiness probe** answers: “Can this instance serve traffic?” During startup, while the agent loads prompt templates or warms a local embedding model, readiness returns 503. The load balancer will not send traffic until readiness passes. This prevents users from hitting a half-initialized instance.
 
 A common mistake is making the liveness probe depend on an external service (the database, the LLM API). If the LLM provider has a brief outage, your liveness probe fails, the orchestrator restarts all your pods simultaneously, and you create a thundering herd of reconnections that makes the situation worse. Liveness should check only the process itself. Readiness can check external dependencies.
 
@@ -503,7 +503,7 @@ class ResilientAgent:
         )
 ```
 
-The fallback stack has three layers. The primary model handles normal traffic. When it fails — rate limits, timeouts, provider outages — the agent falls back to a cheaper, smaller model that is often hosted by a different provider. If both LLM providers are down simultaneously (rare but not impossible), a static response tells the user what happened instead of crashing. Each layer is worse than the one above it, but every layer is better than a 500 error.
+The fallback stack has three layers. The primary model handles normal traffic. When it fails, due to rate limits, timeouts, or provider outages, the agent falls back to a cheaper, smaller model that is often hosted by a different provider. If both LLM providers are down simultaneously (rare but not impossible), a static response tells the user what happened instead of crashing. Each layer is worse than the one above it, but every layer is better than a 500 error.
 
 > Circuit Breakers
 > 
@@ -579,7 +579,7 @@ Four cost controls that prevent bill shock:
 
 **Model tiering.** Route simple requests (classification, short answers) to cheaper models and reserve expensive models for complex reasoning tasks. A routing layer that examines the input and selects the appropriate model can cut costs by 40–60% with minimal quality impact.
 
-**Caching.** Cache LLM responses for identical or near-identical inputs. Semantic caching — embedding the input and checking for similar cached queries — can achieve 20–40% cache hit rates for customer support agents where many users ask similar questions.
+**Caching.** Cache LLM responses for identical or near-identical inputs. Semantic caching, which embeds the input and checks for similar cached queries, can achieve 20–40% cache hit rates for customer support agents where many users ask similar questions.
 
 ## 15.9 Monitoring in Production
 
@@ -666,11 +666,11 @@ class AgentMonitor:
                       chain_length=chain_length, status=status)
 ```
 
-The metrics above feed into dashboards that answer three questions at a glance: **Is the service healthy?** (error rate, latency p50/p95/p99). **Is it expensive?** (token consumption rate, estimated daily cost). **Is the agent behaving correctly?** (chain length distribution, fallback rate, tool success rate). A spike in chain length often indicates a prompt regression — the agent is looping because it cannot determine when to stop. A rising fallback rate indicates a provider issue before users start complaining.
+The metrics above feed into dashboards that answer three questions at a glance: **Is the service healthy?** (error rate, latency p50/p95/p99). **Is it expensive?** (token consumption rate, estimated daily cost). **Is the agent behaving correctly?** (chain length distribution, fallback rate, tool success rate). A spike in chain length often indicates a prompt regression: the agent is looping because it cannot determine when to stop. A rising fallback rate indicates a provider issue before users start complaining.
 
 > Alerting Thresholds for Agent Services
 > 
-> Set alerts on: error rate above 5% for 5 minutes (page immediately), p95 latency above 15 seconds for 10 minutes (warning), fallback rate above 20% for 5 minutes (warning), daily cost exceeding 120% of forecast (warning), and chain length p95 above 10 (investigate prompt regression). These thresholds are starting points; adjust them based on your baseline after two weeks of production data.
+> Set alerts on: error rate above 5% for 5 minutes (page immediately), p95 latency above 15 seconds for 10 minutes (warning), fallback rate above 20% for 5 minutes (warning), daily cost exceeding 120% of forecast (warning), and chain length p95 above 10 (investigate prompt regression). These thresholds are starting points. Adjust them based on your baseline after two weeks of production data.
 
 ## 15.10 Deployment Topology
 
@@ -678,11 +678,11 @@ The following diagram shows the end-to-end flow from code commit to running, mon
 
 ![Diagram 1](/diagrams/agenticai/deployment-1.svg)
 
-Figure 15-1. Deployment topology — from code commit through CI/CD, container orchestration, running services, and monitoring with cost controls. The feedback loop from monitoring back to CI/CD enables automated rollbacks and prompt regression detection.
+Figure 15-1. Deployment topology: from code commit through CI/CD, container orchestration, running services, and monitoring with cost controls. The feedback loop from monitoring back to CI/CD enables automated rollbacks and prompt regression detection.
 
 ## When Agents Fail: Lessons from Production
 
-The metrics, fallbacks, and cost controls described in this chapter exist because agent systems fail in production. Not in theory — in practice, with real money, real customers, and real consequences. The following case study is a composite drawn from documented incidents across the industry, but the architecture, the failure mode, and the dollar figures are representative of what happens when an agent system is deployed without sufficient guardrails.
+The metrics, fallbacks, and cost controls described in this chapter exist because agent systems fail in production. Not in theory. In practice, with real money, real customers, and real consequences. The following case study is a composite drawn from documented incidents across the industry, but the architecture, the failure mode, and the dollar figures are representative of what happens when an agent system is deployed without sufficient guardrails.
 
 ### The Incident: TravelAssist's Escalation Catastrophe
 
@@ -690,11 +690,11 @@ TravelAssist (a pseudonym) deployed a customer service agent to handle booking m
 
 In month three of production, the engineering team updated the cancellation policy tool to support a new "flexible booking" tier. The tool's response format changed: the field `refund_eligible` moved from the top-level JSON to a nested `policy.eligibility.refund_eligible` path. The agent's system prompt still referenced the old path.
 
-When the agent called the cancellation policy tool and could not find `refund_eligible` at the top level, it did not error. It did not ask for clarification. Instead, it reasoned — incorrectly but plausibly — that the absence of the field meant the booking was non-refundable. For standard bookings, this happened to be correct roughly 60% of the time, masking the problem. For flexible bookings — the premium tier whose entire value proposition was easy cancellation — the agent told every customer their booking was non-refundable and offered a travel credit instead.
+When the agent called the cancellation policy tool and could not find `refund_eligible` at the top level, it did not error. It did not ask for clarification. Instead, it reasoned, incorrectly but plausibly, that the absence of the field meant the booking was non-refundable. For standard bookings, this happened to be correct roughly 60% of the time, masking the problem. For flexible bookings, the premium tier whose entire value proposition was easy cancellation, the agent told every customer their booking was non-refundable and offered a travel credit instead.
 
 Customers who pushed back were escalated to human agents. But the agent's escalation logic had a second flaw: it classified persistent customers as "adversarial" based on a sentiment analysis step that flagged repeated requests as negative sentiment. The escalation note sent to the human agent read: "Customer is disputing non-refundable cancellation policy. Sentiment: negative. Recommended action: hold firm on policy." Human agents, trusting the AI's policy lookup, upheld the incorrect decision in 73% of cases.
 
-Over 11 days, 2,340 flexible-booking customers were incorrectly denied refunds. When the error was discovered — through a spike in social media complaints, not through monitoring — TravelAssist had to issue retroactive refunds totaling $1.8 million, plus $200 goodwill credits per affected customer. The total cost exceeded $2.2 million. The company's app store rating dropped from 4.3 to 3.1 in two weeks.
+Over 11 days, 2,340 flexible-booking customers were incorrectly denied refunds. When the error was discovered, through a spike in social media complaints rather than through monitoring, TravelAssist had to issue retroactive refunds totaling $1.8 million, plus $200 goodwill credits per affected customer. The total cost exceeded $2.2 million. The company's app store rating dropped from 4.3 to 3.1 in two weeks.
 
 ### Root Cause Analysis
 
@@ -704,23 +704,23 @@ The post-mortem identified five contributing factors, none of which alone would 
 
 2. **No confidence threshold on policy decisions.** The agent was never required to express confidence in its determination. A rule requiring the agent to flag any refund decision where the underlying data was ambiguous would have caught the missing-field problem immediately.
 
-3. **Missing fallback for data ambiguity.** When the agent could not find the expected field, the correct behavior was to escalate to a human — not to infer meaning from the absence of data. The system had no "I am not sure" pathway for policy decisions.
+3. **Missing fallback for data ambiguity.** When the agent could not find the expected field, the correct behavior was to escalate to a human, not to infer meaning from the absence of data. The system had no "I am not sure" pathway for policy decisions.
 
 4. **Poisoned escalation context.** The sentiment analysis step contaminated the human review process. Human agents received a biased summary that framed the customer as difficult rather than presenting the raw facts. The AI's confidence became the human's anchor.
 
-5. **No behavioral monitoring on refund approval rates.** The refund approval rate for flexible bookings dropped from 94% to 31% overnight. This metric was not tracked per booking tier. The aggregate refund rate — across all booking types — shifted only modestly, staying within alert thresholds.
+5. **No behavioral monitoring on refund approval rates.** The refund approval rate for flexible bookings dropped from 94% to 31% overnight. This metric was not tracked per booking tier. The aggregate refund rate across all booking types shifted only modestly, staying within alert thresholds.
 
 ### Architectural Lessons Learned
 
-- **Validate tool response schemas before the model sees them.** Parse tool outputs against expected schemas. If a required field is missing or a type is wrong, route to an error handler — never let the model interpret malformed data.
+- **Validate tool response schemas before the model sees them.** Parse tool outputs against expected schemas. If a required field is missing or a type is wrong, route to an error handler. Never let the model interpret malformed data.
 - **Require explicit confidence signals for high-stakes decisions.** Force the agent to output a confidence score alongside any decision that involves money, access control, or irreversible actions. Route low-confidence decisions to human review automatically.
-- **Design escalation as a first-class workflow, not a fallback.** Escalation context should include raw data, the agent's reasoning chain, and the specific point of uncertainty — not a summarized recommendation that anchors the human reviewer.
+- **Design escalation as a first-class workflow, not a fallback.** Escalation context should include raw data, the agent's reasoning chain, and the specific point of uncertainty. It should not be a summarized recommendation that anchors the human reviewer.
 - **Monitor behavioral metrics at the granularity that matters.** Aggregate metrics hide segment-level regressions. Track approval rates, error rates, and resolution times per customer tier, per product category, per booking type. A metric that cannot detect a 60-percentage-point drop in a specific segment is useless for that segment.
 - **Treat tool interface changes as breaking deployments.** Any change to a tool's response format should trigger the same CI/CD validation pipeline as a model change or prompt change. Version tool schemas and test agent behavior against both the old and new schema before deploying.
 
 ### Red Flags: Warning Signs of Impending Agent Failure
 
-The following table lists telemetry signals that indicate an agent system is heading toward a production incident. Each signal is detectable with standard observability tooling — the challenge is not technical but organizational: someone must be watching.
+The following table lists telemetry signals that indicate an agent system is heading toward a production incident. Each signal is detectable with standard observability tooling. The challenge is not technical but organizational: someone must be watching.
 
 | Warning Sign | What It Looks Like in Telemetry | What It Usually Means | Recommended Action |
 | --- | --- | --- | --- |
@@ -739,17 +739,17 @@ Build a complete deployment pipeline for an agentic service. Start with a Docker
 
 Stretch goals: add autoscaling configuration based on a custom metric (active sessions), implement a circuit breaker for the LLM provider, and add a canary deployment step that routes 5% of traffic to the new version before full rollout.
 
-DevOps Support Agent Tech / Software — Deploys a code review and CI debugging assistant
+DevOps Support Agent Tech / Software: Deploys a code review and CI debugging assistant
 
-Clinical Triage Agent Healthcare — Deploys a symptom-assessment agent with strict uptime SLAs
+Clinical Triage Agent Healthcare: Deploys a symptom-assessment agent with strict uptime SLAs
 
-Trading Signal Agent Finance — Deploys a market analysis agent with latency-sensitive scaling
+Trading Signal Agent Finance: Deploys a market analysis agent with latency-sensitive scaling
 
-Tutoring Agent Education — Deploys a student Q&A agent with cost caps per session
+Tutoring Agent Education: Deploys a student Q&A agent with cost caps per session
 
-Customer Service Agent E-commerce — Deploys an order and returns agent with seasonal scaling
+Customer Service Agent E-commerce: Deploys an order and returns agent with seasonal scaling
 
-Document Review Agent Legal — Deploys a contract analysis agent with audit logging
+Document Review Agent Legal: Deploys a contract analysis agent with audit logging
 
 ## Summary
 

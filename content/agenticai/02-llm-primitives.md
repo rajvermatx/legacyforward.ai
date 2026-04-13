@@ -11,7 +11,7 @@ Part 1 — Foundations
 
 # LLM Primitives
 
-A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never instrumented token counts because they did not understand the request lifecycle well enough to know where costs accumulate. This chapter makes sure you do.
+A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never instrumented token counts because they did not understand the request lifecycle well enough to know where costs accumulate. This chapter closes that gap.
 
 Reading time: ~25 min Project: LLM Explorer Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -30,7 +30,7 @@ Every interaction with a large language model begins and ends with tokens. Not c
 
 Modern LLMs use subword tokenization, most commonly a variant of Byte Pair Encoding (BPE). The algorithm starts with individual bytes and iteratively merges the most frequent adjacent pairs into new tokens. The result is a fixed vocabulary — typically 32,000 to 200,000 entries — where common words like "the" or "function" are single tokens, while rare words get split into subword fragments. The word "tokenization" itself might become `["token", "ization"]` in one model's vocabulary and `["tok", "en", "iz", "ation"]` in another's.
 
-This has immediate practical consequences. First, token counts do not map intuitively to word counts. English prose averages roughly 1.3 tokens per word, but code can hit 2.5 tokens per word because variable names, operators, and whitespace each consume tokens. JSON is notoriously token-hungry: a simple key-value pair like `"patient_id": "P-12345"` costs around 12 tokens, while the semantic content — one identifier — could be expressed in 3. Second, every model has a context window measured in tokens, not characters. GPT-4o's 128,000-token context holds roughly 96,000 words of English prose but only about 50,000 words' worth of verbose JSON. Third, you are billed per token — both input tokens (your prompt) and output tokens (the model's response). A system that passes raw database rows into the context window instead of summaries can easily burn ten times the token budget for the same semantic content.
+This has immediate practical consequences. First, token counts do not map intuitively to word counts. English prose averages roughly 1.3 tokens per word, but code can hit 2.5 tokens per word because variable names, operators, and whitespace each consume tokens. JSON is notoriously token-hungry: a simple key-value pair like `"patient_id": "P-12345"` costs around 12 tokens, while the semantic content, one identifier, could be expressed in 3. Second, every model has a context window measured in tokens, not characters. GPT-4o's 128,000-token context holds roughly 96,000 words of English prose but only about 50,000 words' worth of verbose JSON. Third, you are billed per token, both input tokens (your prompt) and output tokens (the model's response). A system that passes raw database rows into the context window instead of summaries can easily burn ten times the token budget for the same semantic content.
 
 ### The Tokenizer as a Separate Artifact
 
@@ -61,7 +61,7 @@ print(f"Decoded: {[encoding.decode([t]) for t in tokens]}")
 
 The Completion API is the single interface through which all LLM-powered applications communicate with the model. Despite the variety of things LLMs appear to do — answer questions, write code, analyze documents, call tools — every capability routes through the same endpoint: you send a list of messages, the model returns a completion. Understanding this interface at the protocol level is essential because every agent framework, every RAG pipeline, and every chat application is ultimately a wrapper around this one API call.
 
-A completion request consists of three main components: a model identifier, an array of messages, and a set of optional parameters that control the model's behavior. The messages array is an ordered conversation history where each message has a `role` (system, user, or assistant) and `content`. The model does not remember previous requests — it is stateless. Every call must include the full conversation context you want the model to consider. This statelessness is not a limitation but a design choice that gives you complete control over what the model sees.
+A completion request consists of three main components: a model identifier, an array of messages, and a set of optional parameters that control the model's behavior. The messages array is an ordered conversation history where each message has a `role` (system, user, or assistant) and `content`. The model does not remember previous requests. It is stateless. Every call must include the full conversation context you want the model to consider. This statelessness is not a limitation but a design choice that gives you complete control over what the model sees.
 
 ```
 from openai import OpenAI
@@ -83,7 +83,7 @@ print(response.choices[0].message.content)
 #  catheter to widen narrowed or blocked blood vessels."
 ```
 
-The response object contains more than just text. It includes a `usage` field reporting exact token counts (prompt tokens, completion tokens, total tokens), a `finish_reason` indicating why the model stopped generating (length limit, natural stop, or tool call), and metadata about the model version used. Production systems should log all of these fields for every request. The `finish_reason` is particularly important: if it says `"length"` instead of `"stop"`, your response was truncated and the output is incomplete. An agent that does not check this field will silently operate on partial data.
+The response object contains more than just text. It includes a `usage` field reporting exact token counts (prompt tokens, completion tokens, total tokens), a `finish_reason` indicating why the model stopped generating (length limit, natural stop, or tool call), and metadata about the model version used. Production systems should log all of these fields for every request. The `finish_reason` is particularly important. If it says `"length"` instead of `"stop"`, the response was truncated and the output is incomplete. An agent that does not check this field will silently operate on partial data.
 
 > Common Mistake
 > 
@@ -93,7 +93,7 @@ The response object contains more than just text. It includes a `usage` field re
 
 The three message roles form the control surface of every LLM application. They are not cosmetic labels — the model weights treat them differently during inference, and using them correctly is the difference between a reliable agent and an unpredictable one.
 
-The **system message** sets the behavioral frame. It appears first in the messages array and instructs the model on its persona, constraints, output format, and boundaries. Think of it as the agent's constitution — the rules it should follow regardless of what the user asks. A well-crafted system message for a financial compliance agent might specify: never provide investment advice, always cite the relevant regulation, respond in structured JSON, and refuse requests that ask for personally identifiable information. The model gives system messages elevated attention during inference, making them the most reliable place to encode hard constraints.
+The **system message** sets the behavioral frame. It appears first in the messages array and instructs the model on its persona, constraints, output format, and boundaries. Think of it as the agent's constitution: the rules it should follow regardless of what the user asks. A well-crafted system message for a financial compliance agent might specify: never provide investment advice, always cite the relevant regulation, respond in structured JSON, and refuse requests that ask for personally identifiable information. The model gives system messages elevated attention during inference, making them the most reliable place to encode hard constraints.
 
 The **user message** represents the current input — the task, question, or instruction from the end user or from the orchestration layer. In an agent system, user messages are not always from a human. An orchestrator might inject a user message that says "Analyze the following tool output and decide the next action." The model does not distinguish between messages from a human and messages from code; it only sees the role label and content.
 
@@ -139,19 +139,18 @@ messages = [
 
 When a language model generates text, it does not deterministically select the "best" next word. Instead, it produces a probability distribution over its entire vocabulary at each step — a vector of 100,000+ floating-point numbers that sum to 1.0. The token it ultimately emits depends on how you sample from this distribution, and the sampling parameters are your primary control over the model's output characteristics.
 
-**Temperature** is a scaling factor applied to the logits (raw model outputs) before they are converted to probabilities via the softmax function. Mathematically, each probability becomes `p_i = exp(logit_i / T) / sum(exp(logit_j / T))` where T is the temperature. At `temperature=0`, the distribution collapses to a spike on the highest-probability token — greedy decoding, fully deterministic. At `temperature=1.0`, you get the model's native distribution. At `temperature=2.0`, the distribution flattens, giving low-probability tokens a better chance. The effect is intuitive: lower temperatures produce more predictable, repetitive text; higher temperatures produce more varied, creative, and occasionally incoherent text.
+**Temperature** is a scaling factor applied to the logits (raw model outputs) before they are converted to probabilities via the softmax function. Mathematically, each probability becomes `p_i = exp(logit_i / T) / sum(exp(logit_j / T))` where T is the temperature. At `temperature=0`, the distribution collapses to a spike on the highest-probability token: greedy decoding, fully deterministic. At `temperature=1.0`, you get the model's native distribution. At `temperature=2.0`, the distribution flattens, giving low-probability tokens a better chance. The effect is intuitive. Lower temperatures produce more predictable, repetitive text. Higher temperatures produce more varied, creative, and occasionally incoherent text.
 
 **Top-p** (nucleus sampling) takes a different approach. Instead of scaling probabilities, it truncates the distribution: sort all tokens by probability, then keep only the smallest set whose cumulative probability exceeds the threshold p. If `top_p=0.9`, the model considers only the tokens that collectively account for 90% of the probability mass, discarding the long tail of unlikely tokens. This dynamically adjusts the number of candidate tokens at each step — some positions might have 5 viable continuations, others might have 500.
 
 In practice, you should use one or the other, not both simultaneously. For agent systems where reliability matters, `temperature=0` (or near-zero, like 0.1) is the default choice. You want your agent to select the same tool, produce the same JSON structure, and reach the same conclusion every time it sees the same input. Save higher temperatures for creative tasks: generating marketing copy, brainstorming product names, or producing diverse synthetic training data.
-
 ![Diagram 1](/diagrams/agenticai/llm-primitives-1.svg)
 
 Figure 2.1 — How temperature reshapes the next-token probability distribution. Left: low temperature concentrates mass on the most likely token. Right: high temperature flattens the distribution, giving more tokens a chance of being selected.
 
 ### Other Sampling Parameters
 
-**max\_tokens** caps the number of tokens the model will generate. This is a hard ceiling, not a target — the model will stop at this limit even mid-sentence. Set it too low and you get truncated output; set it too high and you pay for unused capacity. For agent systems, calculate your expected output size (the length of a typical tool-call JSON or reasoning trace) and add a 30% buffer.
+**max\_tokens** caps the number of tokens the model will generate. This is a hard ceiling, not a target. The model will stop at this limit even mid-sentence. Set it too low and you get truncated output. Set it too high and you pay for unused capacity. For agent systems, calculate your expected output size (the length of a typical tool-call JSON or reasoning trace) and add a 30% buffer.
 
 **frequency\_penalty** and **presence\_penalty** reduce repetition. Frequency penalty scales with how many times a token has already appeared; presence penalty applies a flat penalty to any token that has appeared at all. These are useful for free-form text generation but rarely needed for structured agent outputs where the format constraints already prevent repetition.
 
@@ -159,9 +158,9 @@ Figure 2.1 — How temperature reshapes the next-token probability distribution.
 
 ## Streaming
 
-Without streaming, an API call blocks until the model has generated its entire response. For a 500-token completion at a typical generation rate of 50 tokens per second, that is a 10-second wait during which your application shows nothing. Streaming changes the communication pattern from request-response to request-stream: the model sends tokens as they are generated, and your application receives them incrementally via Server-Sent Events (SSE).
+Without streaming, an API call blocks until the model has generated its entire response. For a 500-token completion at a typical generation rate of 50 tokens per second, that is a 10-second wait during which your application shows nothing. Streaming changes the communication pattern from request-response to request-stream. The model sends tokens as they are generated, and your application receives them incrementally via Server-Sent Events (SSE).
 
-Enabling streaming is a one-parameter change (`stream=True`), but handling it correctly requires care. Each chunk in the stream is a partial delta — a fragment of the message being built. You must accumulate these deltas to reconstruct the full response. More importantly, tool calls arrive in fragments too: first the function name, then pieces of the arguments JSON. You cannot parse the tool call until the stream signals it is complete.
+Enabling streaming is a one-parameter change (`stream=True`), but handling it correctly requires care. Each chunk in the stream is a partial delta: a fragment of the message being built. You must accumulate these deltas to reconstruct the full response. Tool calls arrive in fragments too: first the function name, then pieces of the arguments JSON. You cannot parse the tool call until the stream signals it is complete.
 
 ```
 stream = client.chat.completions.create(
@@ -193,7 +192,7 @@ Tool calling is the mechanism that transforms a language model from a text gener
 
 The protocol works as follows. In your API request, you include a `tools` array that describes the available functions: their names, descriptions, and parameter schemas (specified as JSON Schema). The model reads these descriptions alongside the conversation and decides whether to call a tool and, if so, which one with what arguments. If it decides to call a tool, the response's `finish_reason` is `"tool_calls"` instead of `"stop"`, and the message contains a `tool_calls` array with the function name and arguments as a JSON string.
 
-Your application is then responsible for actually executing the function, collecting the result, and sending it back to the model as a message with `role: "tool"`. The model sees this result and either produces a final text response or decides to call another tool. This loop — model decides, application executes, model integrates — is the agent loop. Chapter 4 will formalize this pattern, but the underlying mechanism is just the tool-call protocol defined here.
+Your application is then responsible for actually executing the function, collecting the result, and sending it back to the model as a message with `role: "tool"`. The model sees this result and either produces a final text response or decides to call another tool. This loop, model decides, application executes, model integrates, is the agent loop. Chapter 4 formalizes this pattern, but the underlying mechanism is just the tool-call protocol defined here.
 
 ```
 # Define tools available to the model
@@ -246,7 +245,7 @@ Figure 2.2 — The LLM request/response lifecycle. After model inference, the ou
 
 ### Tool Choice and Parallel Tool Calls
 
-The `tool_choice` parameter controls whether and how the model uses tools. Set to `"auto"`, the model decides on its own. Set to `"none"`, tool calls are disabled entirely — useful for forcing a text-only response. Set to a specific function name, the model is forced to call that function. In agent systems, you will use all three modes: `"auto"` for general operation, `"none"` when you want a summary after tool execution, and forced calls when the orchestrator knows exactly which tool should run next.
+The `tool_choice` parameter controls whether and how the model uses tools. Set to `"auto"`, the model decides on its own. Set to `"none"`, tool calls are disabled entirely, useful for forcing a text-only response. Set to a specific function name, the model is forced to call that function. In agent systems, you will use all three modes: `"auto"` for general operation, `"none"` when you want a summary after tool execution, and forced calls when the orchestrator knows exactly which tool should run next.
 
 Some models support parallel tool calls — returning multiple tool calls in a single response. If the model determines that answering the user's question requires both a database lookup and a weather API call, it can issue both simultaneously rather than making two sequential inference passes. Your application must handle this by executing the calls (potentially in parallel), collecting all results, and sending them back as separate tool-result messages. This feature can dramatically reduce latency in multi-tool agent architectures.
 
@@ -256,7 +255,7 @@ Free-form text responses are useful for chatbots but problematic for agents. Whe
 
 **Prompt-based structuring** relies on instructions in the system message: "Respond only in JSON with keys: action, parameters, reasoning." This works surprisingly well but offers no guarantees. The model might include a preamble before the JSON, use slightly different key names, or produce syntactically invalid JSON — especially under high temperature or when the prompt is complex.
 
-**JSON mode** is a provider-level feature (available as `response_format={"type": "json_object"}` in the OpenAI API) that constrains the model's output to valid JSON. The model will always produce parseable JSON, but the schema is still not enforced — you might get valid JSON with wrong keys or missing fields.
+**JSON mode** is a provider-level feature (available as `response_format={"type": "json_object"}` in the OpenAI API) that constrains the model's output to valid JSON. The model will always produce parseable JSON, but the schema is still not enforced. You might get valid JSON with wrong keys or missing fields.
 
 **Structured outputs with schema enforcement** is the strongest option. You provide a JSON Schema definition, and the provider's decoding engine constrains the token generation to only produce tokens that result in schema-compliant JSON. This means you get guaranteed type-correct, schema-valid output on every call. For agent systems, this is the correct choice for any tool output that feeds into downstream processing.
 
@@ -324,7 +323,7 @@ def call_with_backoff(messages, max_retries=5):
     raise RuntimeError("Exhausted retries")
 ```
 
-Beyond rate limits, you must handle several other failure modes. **Context length exceeded** (HTTP 400) means your messages array plus the expected output exceeds the model's context window. **Content filter triggered** means the input or output was flagged by the provider's safety filters. **Server errors** (HTTP 500/503) indicate transient provider issues. **Timeout** means the request took longer than your client's configured timeout — common with large context windows and high max\_tokens values. Each requires a different recovery strategy: truncate context, rephrase the prompt, retry, or fall back to a different model.
+Beyond rate limits, you must handle several other failure modes. **Context length exceeded** (HTTP 400) means your messages array plus the expected output exceeds the model's context window. **Content filter triggered** means the input or output was flagged by the provider's safety filters. **Server errors** (HTTP 500/503) indicate transient provider issues. **Timeout** means the request took longer than your client's configured timeout, common with large context windows and high max\_tokens values. Each requires a different recovery strategy: truncate context, rephrase the prompt, retry, or fall back to a different model.
 
 > Common Mistake
 > 
@@ -332,7 +331,7 @@ Beyond rate limits, you must handle several other failure modes. **Context lengt
 
 ## Cost Optimization
 
-LLM API costs follow a simple formula — (input\_tokens + output\_tokens) x price\_per\_token — but optimizing that formula requires understanding where tokens accumulate across your entire system. In an agent that makes five tool calls per user request, the conversation history grows with each round trip. By the fifth call, the model is re-reading the original system message, the user query, four previous assistant responses, and four tool results. The cumulative input token count grows quadratically with the number of turns.
+LLM API costs follow a simple formula: (input\_tokens + output\_tokens) x price\_per\_token. Optimizing that formula requires understanding where tokens accumulate across your entire system. In an agent that makes five tool calls per user request, the conversation history grows with each round trip. By the fifth call, the model is re-reading the original system message, the user query, four previous assistant responses, and four tool results. The cumulative input token count grows quadratically with the number of turns.
 
 The most impactful optimization strategies, in order of typical savings:
 

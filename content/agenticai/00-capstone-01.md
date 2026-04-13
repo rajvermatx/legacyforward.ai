@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 1: Research Assistant
 
-A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The analyst is not slow. The process is. Manual research does not scale because humans are sequential synthesizers working against a combinatorial information space. Every additional source doubles the cross-referencing burden, every conflicting data point demands a judgment call with no audit trail, and every citation must be tracked by hand. Errors compound silently — a misattributed statistic, a stale figure, a missing counterargument — and the final report carries an air of authority it has not earned. This capstone builds the system that replaces that morning ritual: a multi-agent research assistant that plans queries, searches the web in parallel, analyzes documents through RAG, synthesizes findings across sources, and produces a cited report ready for human review.
+A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The analyst is not slow. The process is. Manual research does not scale because humans are sequential synthesizers working against a combinatorial information space. Every additional source doubles the cross-referencing burden, every conflicting data point demands a judgment call with no audit trail, and every citation must be tracked by hand. Errors compound silently: a misattributed statistic, a stale figure, a missing counterargument. The final report carries an air of authority it has not earned. This capstone builds the system that replaces that morning ritual: a multi-agent research assistant that plans queries, searches the web in parallel, analyzes documents through RAG, synthesizes findings across sources, and produces a cited report ready for human review.
 
 Reading time: ~25 min Project: Multi-Agent Research System Variants: Tech, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -48,7 +48,7 @@ The research assistant is a four-agent system coordinated by a supervisor. Each 
 | **Synthesis Agent** | Merges findings, resolves contradictions, identifies gaps, produces narrative sections | LLM (long context) | List of `Section` objects with heading, body text, and inline citation markers |
 | **Citation Agent** | Validates every citation marker against the source database, formats the bibliography, flags unsupported claims | Source database lookup | Final `Report` with validated citations and bibliography |
 
-The data flows in a directed graph: the supervisor creates a query plan, the search agent populates the source database, the analysis agent produces findings from those sources, the synthesis agent weaves findings into narrative sections, and the citation agent validates and formats the final output. The supervisor can loop back — if the synthesis agent identifies a gap, the supervisor dispatches additional search queries to fill it.
+The data flows in a directed graph: the supervisor creates a query plan, the search agent populates the source database, the analysis agent produces findings from those sources, the synthesis agent weaves findings into narrative sections, and the citation agent validates and formats the final output. The supervisor can loop back. If the synthesis agent identifies a gap, the supervisor dispatches additional search queries to fill it.
 
 ## C1.3 Architecture Diagram
 
@@ -307,7 +307,7 @@ synthesis_chain = SYNTHESIS_PROMPT | ChatOpenAI(
 ).with_structured_output(list[SectionDraft])
 ```
 
-The synthesis agent’s output includes a list of `finding_ids` per section, which the citation agent uses for validation. If the synthesis agent references a finding that does not exist, the citation agent flags it. If a section makes a claim without a citation marker, it gets added to the `unsupported_claims` list.
+The synthesis agent’s output includes a list of `finding_ids` per section, which the citation agent uses for validation. If the synthesis agent references a finding that does not exist, the citation agent flags it. If a section makes a claim without a citation marker, that claim gets added to the `unsupported_claims` list.
 
 > Handling Contradictions
 > 
@@ -366,7 +366,7 @@ def validate_citations(
     )
 ```
 
-The final report is a `CitedReport` object that a rendering layer can convert to Markdown, HTML, or PDF. The `unsupported_claims` field is surfaced to the human reviewer — it is not hidden. Transparency about what the system could not verify is more valuable than a polished facade.
+The final report is a `CitedReport` object that a rendering layer can convert to Markdown, HTML, or PDF. The `unsupported_claims` field is surfaced to the human reviewer, not hidden. Transparency about what the system could not verify is more valuable than a polished facade.
 
 ## C1.10 The Agent Graph
 

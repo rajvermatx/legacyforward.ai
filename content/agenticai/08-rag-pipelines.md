@@ -7,11 +7,11 @@ order: 8
 part: "Part 02 Core Patterns"
 ---
 
-Part 2 — Core Patterns
+Part 2: Core Patterns
 
 # RAG Pipelines
 
-A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundred support tickets later, someone discovers the agent was answering from training data that predates the policy change. RAG exists because models do not know what they do not know — and they will never tell you they are guessing.
+A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundred support tickets later, someone discovers the agent was answering from training data that predates the policy change. RAG exists because models do not know what they do not know, and they will never tell you they are guessing.
 
 Reading time: ~30 min Project: RAG Pipeline Builder Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -26,11 +26,11 @@ Reading time: ~30 min Project: RAG Pipeline Builder Variants: Tech / Software, H
 
 ## 8.1 Why RAG
 
-Large language models store knowledge in their parameters. This parametric knowledge has three fundamental limitations. First, it is **frozen at training time**. A model trained in January does not know about a policy change in March. Second, it is **lossy**. The model compresses billions of documents into billions of parameters, and rare facts — your company’s specific refund terms, a patient’s medication history, last quarter’s financial results — are the first to blur. Third, it is **unverifiable**. When a model generates an answer from parametric memory, there is no source to cite, no document to check, no way to distinguish knowledge from confabulation.
+Large language models store knowledge in their parameters. This parametric knowledge has three fundamental limitations. First, it is frozen at training time. A model trained in January does not know about a policy change in March. Second, it is lossy. The model compresses billions of documents into billions of parameters, and rare facts, such as your company’s specific refund terms, a patient’s medication history, or last quarter’s financial results, are the first to blur. Third, it is unverifiable. When a model generates an answer from parametric memory, there is no source to cite, no document to check, and no way to distinguish knowledge from confabulation.
 
 Retrieval-Augmented Generation addresses all three by injecting external documents into the prompt at inference time. Instead of asking the model to recall facts from training, you retrieve the relevant documents and hand them to the model as context. The model generates its answer grounded in those documents, not in compressed parametric memory.
 
-The architecture is deceptively simple: given a query, find the relevant documents, stuff them into the prompt, and ask the model to answer using only that context. The engineering challenge is in every word of that sentence. “Find” requires a retrieval system that works at scale. “Relevant” requires understanding what relevance means for your domain. “Stuff them into the prompt” requires chunking strategies that preserve meaning within token limits. And “answer using only that context” requires prompt design that prevents the model from falling back to parametric memory when the retrieved context is insufficient.
+The architecture is deceptively simple: given a query, find the relevant documents, insert them into the prompt, and ask the model to answer using only that context. The engineering challenge lives in every part of that sentence. “Find” requires a retrieval system that works at scale. “Relevant” requires understanding what relevance means for your domain. “Insert them into the prompt” requires chunking strategies that preserve meaning within token limits. “Answer using only that context” requires prompt design that prevents the model from falling back to parametric memory when the retrieved context is insufficient.
 
 > RAG vs. Fine-Tuning
 > 
@@ -116,13 +116,13 @@ class DocumentLoader:
         )]
 ```
 
-**Metadata matters.** Every document should carry its source path, page number, section heading, creation date, and any domain-specific tags. This metadata flows through the entire pipeline: it helps chunking preserve section boundaries, helps retrieval filter by date or category, and helps generation cite sources. Losing metadata at the loading stage is a debt you pay at every downstream stage.
+**Metadata matters.** Every document should carry its source path, page number, section heading, creation date, and any domain-specific tags. This metadata flows through the entire pipeline. It helps chunking preserve section boundaries, helps retrieval filter by date or category, and helps generation cite sources. Losing metadata at the loading stage is a debt you pay at every downstream stage.
 
 ## 8.3 Chunking Strategies
 
 Models have finite context windows. Even with 128k-token models, stuffing entire documents into the prompt wastes tokens on irrelevant content and drowns the relevant passages in noise. Chunking splits documents into smaller pieces that can be independently indexed and retrieved.
 
-The goal of chunking is to create pieces that are **semantically self-contained** — each chunk should make sense on its own — and **retrieval-aligned** — a relevant query should match the chunk that contains the answer, not a chunk that contains half the answer and half of something else.
+The goal of chunking is to create pieces that are semantically self-contained, where each chunk makes sense on its own, and retrieval-aligned, where a relevant query matches the chunk that contains the answer rather than a chunk that contains half the answer and half of something else.
 
 ### Fixed-Size Chunking
 
@@ -232,7 +232,7 @@ def chunk_semantic(
 
 An embedding model converts text into a dense vector — a list of floating-point numbers, typically 384 to 3072 dimensions — such that semantically similar texts have vectors that are close together in the embedding space. This is the foundation of dense retrieval: you embed the query, embed the documents, and find the documents whose vectors are nearest to the query vector.
 
-Choosing an embedding model involves three trade-offs:
+Choosing an embedding model involves three tradeoffs:
 
 | Factor | Small Models (384d) | Large Models (1536–3072d) |
 | --- | --- | --- |
@@ -328,7 +328,7 @@ Dense retrieval uses embedding similarity to find relevant documents. You embed 
 
 **Strengths:** Captures semantic similarity. A query about “cancellation policy” retrieves chunks about “refund terms” even if the exact word “cancellation” never appears. Handles paraphrases, synonyms, and conceptual matches naturally.
 
-**Weaknesses:** Struggles with exact keyword matching. A query for error code “ERR-4092” may not retrieve the chunk containing that exact code if the embedding space does not preserve lexical tokens. Also struggles with negation and complex logical queries.
+**Weaknesses:** Struggles with exact keyword matching. A query for error code “ERR-4092” may not retrieve the chunk containing that exact code if the embedding space does not preserve lexical tokens. Dense retrieval also struggles with negation and complex logical queries.
 
 ### Sparse Retrieval
 
@@ -409,7 +409,7 @@ Figure 8-2. Three retrieval strategies compared: dense captures meaning, sparse 
 
 Initial retrieval is fast but imprecise. You cast a wide net with top-50 or top-100 results, then use a more expensive model to re-score and re-order them. Re-ranking is the step that transforms noisy retrieval into precise context selection.
 
-The key insight: retrieval models (bi-encoders) process the query and document independently, comparing their embeddings. Re-ranking models (cross-encoders) process the query and document *together*, allowing deep token-level interaction. This makes them far more accurate but too slow to run against the full index.
+The key insight: retrieval models (bi-encoders) process the query and document independently, comparing their embeddings. Re-ranking models (cross-encoders) process the query and document together, allowing deep token-level interaction. This makes them far more accurate but too slow to run against the full index.
 
 ```
 from sentence_transformers import CrossEncoder
@@ -472,9 +472,9 @@ Three prompt design principles that matter for RAG:
 
 **Explicit grounding instructions.** Tell the model to use only the provided context. Without this, models will blend retrieved context with parametric memory, and you lose the verifiability that makes RAG valuable.
 
-**Source attribution.** Require the model to cite which source(s) it used for each claim. This enables downstream verification and gives users confidence in the answer. A citation that points to a real passage is more valuable than a confident answer with no provenance.
+**Source attribution.** Require the model to cite which source or sources it used for each claim. This enables downstream verification and gives users confidence in the answer. A citation that points to a real passage is more valuable than a confident answer with no provenance.
 
-**Graceful failure.** Instruct the model to say “I don’t have enough information to answer this” rather than hallucinating when the retrieved context does not contain the answer. This is the hardest instruction to enforce — models are trained to be helpful, and “I don’t know” feels unhelpful. Testing this failure mode explicitly is essential.
+**Graceful failure.** Instruct the model to say it does not have enough information to answer rather than hallucinating when the retrieved context does not contain the answer. This is the hardest instruction to enforce. Models are trained to be helpful, and declining to answer feels unhelpful. Testing this failure mode explicitly is essential.
 
 ```
 import openai
@@ -554,7 +554,7 @@ def expand_query(query: str, client: openai.OpenAI) -> list[str]:
     return [q.strip() for q in queries if q.strip()]
 ```
 
-**Multi-query retrieval** generates multiple reformulations of the user’s question and retrieves for each, then merges the results. This catches relevant documents that any single query formulation might miss.
+**Multi-query retrieval** generates multiple reformulations of the user’s question, retrieves for each, then merges the results. This catches relevant documents that any single query formulation might miss.
 
 ### Parent Document Retrieval
 
@@ -583,7 +583,7 @@ RAG evaluation requires measuring two stages independently: **retrieval quality*
 
 ### Generation Metrics
 
-**Faithfulness:** Does the answer contain only claims supported by the retrieved context? An unfaithful answer is one that introduces facts not present in the provided documents — even if those facts happen to be correct. Faithfulness is the defining metric for RAG because the entire point is grounded generation.
+**Faithfulness:** Does the answer contain only claims supported by the retrieved context? An unfaithful answer introduces facts not present in the provided documents, even if those facts happen to be correct. Faithfulness is the defining metric for RAG because the entire point is grounded generation.
 
 **Relevance:** Does the answer address the user’s question? A faithful answer that is off-topic is useless.
 
@@ -629,11 +629,11 @@ RAG systems fail in predictable ways. Knowing these patterns lets you diagnose a
 
 **Wrong chunks retrieved.** The most common failure. The retrieval step returns passages that look superficially similar to the query but do not contain the answer. Fix: improve chunking to preserve semantic coherence, add metadata filtering, or switch to hybrid retrieval.
 
-**Answer not in knowledge base.** The user asks a question whose answer genuinely is not in your documents. The model, instead of admitting ignorance, generates an answer from parametric memory. Fix: strengthen the grounding instruction in your prompt and add an explicit “confidence threshold” — if no retrieved passage scores above a minimum relevance, return a canned “I don’t have this information” response before the model even sees the query.
+**Answer not in knowledge base.** The user asks a question whose answer is not in your documents. The model, instead of admitting ignorance, generates an answer from parametric memory. Fix: strengthen the grounding instruction in your prompt and add an explicit confidence threshold. If no retrieved passage scores above a minimum relevance, return a canned “I do not have this information” response before the model even sees the query.
 
-**Stale index.** Documents are updated but the vector index still contains embeddings of the old content. The model generates answers from outdated information — the exact problem RAG was supposed to solve. Fix: implement incremental indexing with document versioning. When a source document changes, delete its old chunks and re-index the new version.
+**Stale index.** Documents are updated but the vector index still contains embeddings of the old content. The model generates answers from outdated information, which is the exact problem RAG was supposed to solve. Fix: implement incremental indexing with document versioning. When a source document changes, delete its old chunks and re-index the new version.
 
-**Context window overflow.** Too many retrieved passages are stuffed into the prompt, exceeding the context window or diluting relevance. Fix: aggressive re-ranking, contextual compression, or parent document retrieval with smaller indexed chunks.
+**Context window overflow.** Too many retrieved passages are inserted into the prompt, exceeding the context window or diluting relevance. Fix: aggressive re-ranking, contextual compression, or parent document retrieval with smaller indexed chunks.
 
 **Contradictory sources.** Two retrieved passages contain conflicting information (an old policy and a new one, for example). The model picks one arbitrarily or tries to reconcile them, producing a confused answer. Fix: metadata-based date filtering to prefer newer documents, or explicit instructions to flag contradictions.
 
@@ -667,7 +667,7 @@ Legal Research Assistant Legal — Case law, statutes, contract templates, compl
 
 ## Summary
 
-RAG solves the fundamental limitation of parametric knowledge in language models: training data is frozen, lossy, and unverifiable. By retrieving relevant documents at inference time and injecting them into the prompt, RAG gives models access to current, domain-specific, and citable knowledge. The engineering challenge lies in every stage of the pipeline — loading clean text from messy formats, chunking documents into semantically coherent pieces, choosing embedding models that balance cost and quality, building retrieval systems that combine semantic and lexical search, re-ranking to surface the most relevant passages, and designing prompts that ground the model in the retrieved context rather than its parametric memory.
+RAG solves the fundamental limitation of parametric knowledge in language models: training data is frozen, lossy, and unverifiable. By retrieving relevant documents at inference time and injecting them into the prompt, RAG gives models access to current, domain-specific, and citable knowledge. The engineering challenge lives in every stage of the pipeline: loading clean text from messy formats, chunking documents into semantically coherent pieces, choosing embedding models that balance cost and quality, building retrieval systems that combine semantic and lexical search, re-ranking to surface the most relevant passages, and designing prompts that ground the model in the retrieved context rather than its parametric memory.
 
 -   RAG addresses the three limitations of parametric knowledge — staleness, lossy compression, and unverifiability — by injecting external documents into the prompt at inference time. It is not a replacement for fine-tuning; it solves a different problem.
 -   Chunking strategy determines retrieval quality more than any other single factor. Aim for semantically self-contained chunks of 256–512 tokens, and always preserve metadata through the pipeline for filtering and citation.

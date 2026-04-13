@@ -7,11 +7,11 @@ order: 9
 part: "Part 03 Multi Agent"
 ---
 
-Part 3 — Multi-Agent Systems
+Part 3: Multi-Agent Systems
 
 # Orchestration
 
-The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit of $15,000. But the fraud scorer timed out — and no one had programmed what should happen next. The system approved the claim without a fraud check. Forty-seven similar claims later, an auditor discovered that every one came from the same body shop, with identical damage photos rotated by a few degrees. The agent did exactly what it was told. The problem was that nobody told it what to do when a step fails. Orchestration is the discipline of making that impossible.
+The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit of $15,000. But the fraud scorer timed out, and no one had programmed what should happen next. The system approved the claim without a fraud check. Forty-seven similar claims later, an auditor discovered that every one came from the same body shop, with identical damage photos rotated by a few degrees. The agent did exactly what it was told. The problem was that nobody told it what to do when a step fails. Orchestration is the discipline of making that impossible.
 
 Reading time: ~25 min Project: Workflow Orchestrator Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -28,9 +28,9 @@ Reading time: ~25 min Project: Workflow Orchestrator Variants: Tech / Software, 
 
 The simplest way to coordinate multiple agents is to call them sequentially. Agent A produces output, you pass it to Agent B, Agent B’s output feeds Agent C. This works for demos. It breaks the moment any of the following become true: a step can fail, a step needs to be retried, two steps can run in parallel, the output of one step determines which step runs next, a human needs to approve before continuing, or you need to resume a workflow that crashed halfway through.
 
-Sequential chaining is **implicit orchestration**. The control flow is hidden inside procedural code — nested if-statements, try-except blocks, boolean flags tracking which steps have completed. Within a month of production traffic, you cannot look at the code and answer a basic question: given the current state of this workflow, what happens next?
+Sequential chaining is implicit orchestration. The control flow is hidden inside procedural code: nested if-statements, try-except blocks, and boolean flags tracking which steps have completed. Within a month of production traffic, you cannot look at the code and answer a basic question: given the current state of this workflow, what happens next?
 
-The alternative is **explicit orchestration**: defining the workflow as a data structure — a graph — where nodes represent actions, edges represent transitions, and the current position in the graph tells you everything about what has happened and what will happen. This is not a new idea. Business process management, compiler design, and network protocol specification all converged on the same insight decades ago: when control flow gets complex, make it a first-class data structure you can inspect, serialize, and reason about.
+The alternative is explicit orchestration: defining the workflow as a data structure, a graph, where nodes represent actions, edges represent transitions, and the current position in the graph tells you everything about what has happened and what will happen. This is not a new idea. Business process management, compiler design, and network protocol specification all converged on the same insight decades ago. When control flow gets complex, make it a first-class data structure you can inspect, serialize, and reason about.
 
 > The Hidden Cost of Implicit Orchestration
 > 
@@ -115,15 +115,15 @@ class StateMachine:
         }
 ```
 
-This gives you three things that procedural code does not. **Inspectability**: you can serialize the current state and know exactly where the workflow stands. **Determinism**: given a state and a context, the next state is unambiguous. **Recoverability**: if the process crashes, you reload the last saved state and resume from that point, not from the beginning.
+This gives you three things that procedural code does not. **Inspectability**: you can serialize the current state and know exactly where the workflow stands. **Determinism**: given a state and a context, the next state is unambiguous. **Recoverability**: if the process crashes, you reload the last saved state and resume from that point rather than from the beginning.
 
-But finite state machines have a limitation: they cannot model **concurrent execution**. In the insurance example, image analysis and policy lookup are independent — they should run in parallel. A pure FSM forces you to serialize them. This is where graphs generalize the model.
+But finite state machines have a limitation: they cannot model concurrent execution. In the insurance example, image analysis and policy lookup are independent and should run in parallel. A pure FSM forces you to serialize them. This is where graphs generalize the model.
 
 ## 9.3 Graph-Based Workflows
 
 A workflow graph is a directed graph where nodes represent computational steps and edges represent the flow of data and control between them. Unlike a state machine, a graph can express parallelism (a node with two outgoing edges that both execute), convergence (two edges merging into a single node that waits for both), and conditional branching (edges with guard conditions that determine which path to take at runtime).
 
-The key insight is that a graph separates *what* happens (nodes) from *when and why* it happens (edges). You can change execution order without touching individual steps, add a validation node between two existing nodes without rewriting either one, and hand the rendered diagram to a product manager who has never read a line of code.
+The key insight is that a graph separates what happens (nodes) from when and why it happens (edges). You can change execution order without touching individual steps, add a validation node between two existing nodes without rewriting either one, and hand the rendered diagram to a product manager who has never read a line of code.
 
 ```
 from typing import Any
@@ -222,7 +222,7 @@ Figure 9-1. A LangGraph state machine with agent nodes (purple), conditional rou
 
 ## 9.4 LangGraph Concepts
 
-LangGraph is a framework for building agent workflows as graphs. It builds on four core abstractions: **state**, **nodes**, **edges**, and **conditional edges**. Understanding these abstractions matters even if you never use LangGraph directly, because they represent the minimal vocabulary for describing any agent orchestration system.
+LangGraph is a framework for building agent workflows as graphs. It builds on four core abstractions: state, nodes, edges, and conditional edges. Understanding these abstractions matters even if you never use LangGraph directly, because they represent the minimal vocabulary for describing any agent orchestration system.
 
 ### State
 
@@ -247,7 +247,7 @@ class ClaimState(TypedDict):
     requires_review: bool
 ```
 
-The state schema is your contract. It defines what information the workflow tracks, what each node can read, and what each node is expected to produce. When a node writes a key that does not exist in the schema, LangGraph raises an error. When a node fails to write a required key, the next node that reads it gets `None`. This strictness is intentional: it catches integration errors at graph compilation time rather than at 2 AM in production.
+The state schema is your contract. It defines what information the workflow tracks, what each node can read, and what each node is expected to produce. When a node writes a key that does not exist in the schema, LangGraph raises an error. When a node fails to write a required key, the next node that reads it gets `None`. This strictness is intentional. It catches integration errors at graph compilation time rather than at 2 AM in production.
 
 ### Nodes
 
@@ -293,7 +293,7 @@ async def score_fraud(state: ClaimState) -> dict:
 
 ### Edges and Conditional Edges
 
-An edge connects two nodes. A **normal edge** is unconditional: when node A finishes, node B always runs next. A **conditional edge** calls a routing function that inspects the current state and returns the name of the next node. This is how the graph makes decisions.
+An edge connects two nodes. A normal edge is unconditional: when node A finishes, node B always runs next. A conditional edge calls a routing function that inspects the current state and returns the name of the next node. This is how the graph makes decisions.
 
 ```
 def route_after_scoring(state: ClaimState) -> str:
@@ -437,7 +437,7 @@ final_result = await app.ainvoke(None, config)
 # Resumes from human_review with updated state
 ```
 
-The interrupt pattern has three critical design considerations. First, **timeouts**: what happens if the human never responds? You need a separate monitoring process that checks for stale interrupts and either escalates or auto-resolves them. Second, **state validity**: the world may have changed while the workflow was paused. The policy may have been updated, the customer may have submitted additional documents. The resuming node should re-validate any state it depends on. Third, **concurrent modifications**: if two reviewers can see the same paused workflow, you need optimistic locking to prevent conflicting updates.
+The interrupt pattern has three critical design considerations. First, timeouts: what happens if the human never responds? You need a separate monitoring process that checks for stale interrupts and either escalates or auto-resolves them. Second, state validity: the world may have changed while the workflow was paused. The policy may have been updated, or the customer may have submitted additional documents. The resuming node should re-validate any state it depends on. Third, concurrent modifications: if two reviewers can see the same paused workflow, you need optimistic locking to prevent conflicting updates.
 
 > Interrupts Are Not Optional for Regulated Industries
 > 
@@ -449,7 +449,7 @@ Figure 9-2. A workflow with interrupt points (coral) where the graph pauses for 
 
 ## 9.7 Checkpointing and Durable Execution
 
-A checkpoint is a snapshot of the entire graph state at a specific point in execution. Checkpointing serves three purposes: **durability** (surviving process crashes), **resumability** (supporting human-in-the-loop pauses), and **observability** (replaying the exact sequence of state transitions for debugging or audit).
+A checkpoint is a snapshot of the entire graph state at a specific point in execution. Checkpointing serves three purposes: durability (surviving process crashes), resumability (supporting human-in-the-loop pauses), and observability (replaying the exact sequence of state transitions for debugging or audit).
 
 LangGraph provides a checkpointer interface with implementations for in-memory storage (testing), SQLite (single-machine), and PostgreSQL (production). Every time a node completes, the framework writes a checkpoint. Every checkpoint is identified by a thread ID and a sequence number, forming a complete history of the workflow’s execution.
 
@@ -479,7 +479,7 @@ for i, snapshot in enumerate(history):
           f"state_keys={list(snapshot.values.keys())}")
 ```
 
-Checkpointing introduces a design question: **what belongs in state?** Everything in the state is serialized at every checkpoint. Store **references and decisions**, not raw data. Store the document ID, not the document. Store the assessment summary, not the full model output. A typical workflow with 8 nodes and 2 KB state generates 16 KB per execution — trivial for PostgreSQL. Store full LLM responses in state and that jumps to 800 KB per execution. Design your state schema with storage in mind from day one.
+Checkpointing introduces a design question: what belongs in state? Everything in the state is serialized at every checkpoint. Store references and decisions, not raw data. Store the document ID, not the document. Store the assessment summary, not the full model output. A typical workflow with 8 nodes and 2 KB state generates 16 KB per execution, which is trivial for PostgreSQL. Storing full LLM responses in state jumps that to 800 KB per execution. Design your state schema with storage in mind from day one.
 
 ## 9.8 Error Handling in Graphs
 
@@ -530,7 +530,7 @@ def route_with_error_handling(state: ClaimState) -> str:
     return "auto_approve"
 ```
 
-The key principle is: **errors are states, not exceptions**. When a node fails, it writes an error indicator to the state. The routing function reads that indicator and directs the workflow to an error-handling node. The error handler can log the failure, notify an operator, attempt a fallback strategy, or gracefully terminate the workflow with a meaningful status rather than a stack trace.
+The key principle is: errors are states, not exceptions. When a node fails, it writes an error indicator to the state. The routing function reads that indicator and directs the workflow to an error-handling node. The error handler can log the failure, notify an operator, attempt a fallback strategy, or gracefully terminate the workflow with a meaningful status rather than a stack trace.
 
 ## 9.9 Putting It All Together
 
@@ -596,7 +596,7 @@ result = await app.ainvoke(
 )
 ```
 
-This graph is inspectable: render it as a diagram for compliance review. It is durable: if the server crashes after damage analysis, it resumes from the last checkpoint. It is safe: high-risk claims pause for human review. And it is debuggable: the checkpoint history shows every state transition and routing decision.
+This graph is inspectable: render it as a diagram for compliance review. It is durable: if the server crashes after damage analysis, it resumes from the last checkpoint. It is safe: high-risk claims pause for human review. It is debuggable: the checkpoint history shows every state transition and routing decision.
 
 > Start Simple, Add Structure as Failures Teach You
 > 
@@ -624,8 +624,8 @@ Orchestration is the discipline of making agent workflows explicit, inspectable,
 
 -   **Make control flow a data structure.** When you can inspect, serialize, and render the workflow as a graph, debugging moves from reconstructing what happened to simply looking at the path through the graph. The graph position is the state.
 -   **State machines enforce discipline, graphs add flexibility.** Finite state machines guarantee that the system is always in exactly one known state. Graph-based workflows extend this with parallelism, fan-out/fan-in, and conditional routing that pure FSMs cannot express.
--   **Conditional routing is the decision layer.** Content-based routing uses explicit rules; model-based routing uses LLM judgment. Both read the current state and return the name of the next node. The routing function is the single place where workflow logic lives.
--   **Interrupts are a compliance requirement, not a feature.** Any workflow that takes high-stakes actions — financial, legal, medical — must include human-in-the-loop checkpoints. The cost of a human review is always less than the cost of an automated mistake in regulated domains.
+-   **Conditional routing is the decision layer.** Content-based routing uses explicit rules. Model-based routing uses LLM judgment. Both read the current state and return the name of the next node. The routing function is the single place where workflow logic lives.
+-   **Interrupts are a compliance requirement, not a feature.** Any workflow that takes high-stakes actions, financial, legal, or medical, must include human-in-the-loop checkpoints. The cost of a human review is always less than the cost of an automated mistake in regulated domains.
 -   **Checkpointing makes workflows durable and auditable.** Every node completion saves a snapshot. Crashed workflows resume from the last checkpoint. The checkpoint history is a complete audit trail of every state transition and routing decision.
 
 ### Exercises

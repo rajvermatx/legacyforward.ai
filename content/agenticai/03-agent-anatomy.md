@@ -11,7 +11,7 @@ Part 1 — Foundations
 
 # Agent Anatomy
 
-A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp; the architecture was hollow. This chapter opens the hood.
+A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp. The architecture was hollow. This chapter opens the hood.
 
 Reading time: ~22 min Project: Agent Blueprint Analyzer Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -31,7 +31,7 @@ Consider the refund agent from the opening. Its designers gave it a clear system
 
 Within hours, the agent began processing refunds for customers who had simply asked about their order status. A user would write "I'm wondering about my order #4821 — any update?" The agent, lacking any memory of what had already happened in that conversation thread, would interpret the vague query as a complaint, reason that complaints often lead to refunds, and call `process_refund`. It had no perception layer to distinguish a status inquiry from a refund request. It had no memory to recall that this same customer had received an update five minutes earlier. It had no planning mechanism to pause and verify before taking an irreversible action.
 
-The LLM itself was performing exactly as language models do: it was generating plausible next-token sequences given its context window. The failure was architectural. Every missing component — perception, memory, planning — left a gap that the LLM silently filled with hallucinated intent. This is the fundamental lesson of agent anatomy: **an LLM is a reasoning engine, not a complete agent**. The other components are not optional accessories; they are structural load-bearing walls.
+The LLM itself was performing exactly as language models do: it was generating plausible next-token sequences given its context window. The failure was architectural. Every missing component, perception, memory, planning, left a gap that the LLM silently filled with hallucinated intent. This is the fundamental lesson of agent anatomy: **an LLM is a reasoning engine, not a complete agent**. The other components are not optional accessories. They are structural load-bearing walls.
 
 > Common Mistake
 > 
@@ -56,7 +56,7 @@ The key insight is that perception is not passive. It is an active filtering and
 
 Memory gives an agent continuity. Without memory, every turn of conversation is a blank slate — the agent has no idea what it said ten seconds ago, let alone what the user's preferences are or what strategy worked in similar situations last month. Memory comes in three distinct flavors, and most production agents use at least two:
 
-**Buffer memory (short-term).** This is the conversation history — the rolling window of recent messages that gets included in the LLM's context. It is the simplest form of memory: just append each user message and agent response to a list, then include the last *N* turns in the prompt. Buffer memory is cheap, fast, and ephemeral. It lives only for the duration of a session. Its primary limitation is the context window: once you exceed the model's token limit, you must truncate or summarize, which means information loss.
+**Buffer memory (short-term).** This is the conversation history: the rolling window of recent messages that gets included in the LLM's context. It is the simplest form of memory: just append each user message and agent response to a list, then include the last *N* turns in the prompt. Buffer memory is cheap, fast, and ephemeral. It lives only for the duration of a session. Its primary limitation is the context window: once you exceed the model's token limit, you must truncate or summarize, which means information loss.
 
 **Vector memory (long-term semantic).** When an agent needs to recall facts across sessions — a user's dietary restrictions, a project's technical constraints, a patient's medication history — you store those facts as embeddings in a vector database. At query time, the agent's perception layer embeds the current input, performs a similarity search against the vector store, and injects the most relevant results into the prompt. Vector memory is how agents achieve personalization and domain grounding without fine-tuning the model.
 
@@ -77,7 +77,7 @@ What does the LLM actually do as a reasoning engine? It performs several interle
 -   **Tool selection.** Which tool (if any) from the available tool belt should be invoked? With what parameters?
 -   **Response synthesis.** After actions are taken and results are returned, how should the agent communicate the outcome to the user?
 
-The critical point is that the LLM performs all of these functions through the same mechanism: next-token prediction over a carefully constructed prompt. The "reasoning" is emergent — it arises from the model's learned ability to produce coherent, contextually appropriate text. This is both the power and the peril: the same mechanism that enables brilliant multi-step reasoning also enables confident, fluent hallucination. The other three pillars exist, in part, to constrain the reasoning core — to feed it good data (perception), give it relevant context (memory), and channel its decisions into safe actions (action).
+The critical point is that the LLM performs all of these functions through the same mechanism: next-token prediction over a carefully constructed prompt. The "reasoning" is emergent. It arises from the model's learned ability to produce coherent, contextually appropriate text. This is both the power and the peril: the same mechanism that enables brilliant multi-step reasoning also enables confident, fluent hallucination. The other three pillars exist, in part, to constrain the reasoning core: to feed it good data (perception), give it relevant context (memory), and channel its decisions into safe actions (action).
 
 ### Pillar 4: Action
 
@@ -85,7 +85,7 @@ Action is the agent's interface with the external world. It encompasses everythi
 
 The action layer has two critical responsibilities beyond simply executing tool calls:
 
-**Validation and sandboxing.** Before executing any action, the action layer checks that the parameters are well-formed, that the action is permitted given the current user's authorization level, and that the action falls within the agent's operational bounds. A financial trading agent's action layer should reject any order that exceeds the position limit, regardless of what the reasoning core requested. This is where guardrails live — not in the prompt, where they can be bypassed, but in deterministic code that wraps every tool invocation.
+**Validation and sandboxing.** Before executing any action, the action layer checks that the parameters are well-formed, that the action is permitted given the current user's authorization level, and that the action falls within the agent's operational bounds. A financial trading agent's action layer should reject any order that exceeds the position limit, regardless of what the reasoning core requested. This is where guardrails live: not in the prompt, where they can be bypassed, but in deterministic code that wraps every tool invocation.
 
 **Result processing.** After a tool executes, the action layer transforms the raw result into a format the reasoning core can consume in the next iteration of the agent loop. A database query might return 10,000 rows; the action layer summarizes or paginates before feeding the result back. An API call might return a 500 error; the action layer translates that into a structured error message the LLM can reason about.
 
@@ -95,7 +95,7 @@ The action layer has two critical responsibilities beyond simply executing tool 
 
 ## How the Pillars Interact
 
-The four pillars do not operate in isolation. They form a continuous cycle — the **agent loop** — that repeats until the agent decides it has accomplished its goal or hits a termination condition. Understanding this loop is essential for debugging, optimization, and design.
+The four pillars do not operate in isolation. They form a continuous cycle, the **agent loop**, that repeats until the agent decides it has accomplished its goal or hits a termination condition. Understanding this loop is essential for debugging, optimization, and design.
 
 Here is one full iteration of the agent loop, traced step by step:
 
@@ -114,11 +114,11 @@ Figure 3.1 — Agent component map. The LLM reasoning core (purple) is surrounde
 
 ## The LLM as the Reasoning Core
 
-In Chapter 2, we established that an LLM is fundamentally a next-token predictor — a function that takes a sequence of tokens and outputs a probability distribution over the next token. So how does next-token prediction become "reasoning"?
+In Chapter 2, we established that an LLM is fundamentally a next-token predictor: a function that takes a sequence of tokens and outputs a probability distribution over the next token. So how does next-token prediction become "reasoning"?
 
 The answer is that reasoning, in the context of agents, is not the formal logical reasoning of a theorem prover. It is *contextual decision-making*: given a situation description and a set of possible actions, choose the action most likely to advance toward the goal. Large language models excel at this because they have been trained on vast quantities of text that describes situations, decisions, and their consequences. When you give an LLM a prompt that says "The user wants X, you have tools Y and Z available, the conversation history shows W," the model draws on its training to generate a response that is — more often than not — a reasonable next step.
 
-This is a profound shift in how we build software. Traditional agents (think of a Roomba or a rule-based chatbot) used hand-coded decision trees or reinforcement learning policies. The reasoning was explicit: `if obstacle_detected then turn_right`. LLM-based agents replace those hand-coded rules with a general-purpose reasoning engine that can handle novel situations it was never explicitly programmed for. The trade-off is that this reasoning is probabilistic and opaque — you cannot easily predict what the model will decide in every situation, and you cannot formally verify its behavior.
+This is a profound shift in how we build software. Traditional agents (think of a Roomba or a rule-based chatbot) used hand-coded decision trees or reinforcement learning policies. The reasoning was explicit: `if obstacle_detected then turn_right`. LLM-based agents replace those hand-coded rules with a general-purpose reasoning engine that can handle novel situations it was never explicitly programmed for. The trade-off is that this reasoning is probabilistic and opaque. You cannot easily predict what the model will decide in every situation, and you cannot formally verify its behavior.
 
 This trade-off is why the other three pillars matter so much. You compensate for the reasoning core's unpredictability by:
 
@@ -145,7 +145,7 @@ A tool is any function that the agent can invoke to interact with the world beyo
 
 Each tool in the belt is presented to the LLM as a structured description: a name, a description of what it does, and a schema defining its parameters. The quality of these descriptions directly affects how well the agent uses its tools. A vague tool description like `"search: searches for things"` will produce vague tool usage. A precise description like `"search_knowledge_base: Searches the internal knowledge base for articles matching the query. Returns the top 5 results with title, snippet, and relevance score. Use this when the user asks about product features, pricing, or company policies."` gives the LLM the information it needs to choose the right tool at the right time.
 
-This is one of the most underappreciated aspects of agent design: **tool descriptions are a form of programming**. You are not writing code that executes deterministically; you are writing natural-language instructions that influence a probabilistic system. The same care you would put into writing a function's docstring and type signature should go into every tool description.
+This is one of the most underappreciated aspects of agent design: **tool descriptions are a form of programming**. You are not writing code that executes deterministically. You are writing natural-language instructions that influence a probabilistic system. The same care you would put into writing a function's docstring and type signature should go into every tool description.
 
 > Under the Hood
 > 
@@ -155,7 +155,7 @@ This is one of the most underappreciated aspects of agent design: **tool descrip
 
 In simple agents, the tool belt is static — you define it once at startup and it never changes. But in production systems, tool availability often varies by context. A customer-service agent might have access to `process_refund` only for premium customers. A coding agent might gain access to a `deploy` tool only after tests pass. A research agent might acquire new search tools as it discovers new data sources.
 
-Dynamic tool belts are implemented by modifying the tool definitions sent to the LLM on each iteration of the agent loop. The agent runtime evaluates the current state (user permissions, workflow stage, discovered capabilities) and constructs the appropriate tool set for that iteration. This is a powerful pattern because it provides capability-level access control without relying on the LLM to self-restrict — if the tool is not in the belt, the model cannot call it.
+Dynamic tool belts are implemented by modifying the tool definitions sent to the LLM on each iteration of the agent loop. The agent runtime evaluates the current state (user permissions, workflow stage, discovered capabilities) and constructs the appropriate tool set for that iteration. This is a powerful pattern because it provides capability-level access control without relying on the LLM to self-restrict. If the tool is not in the belt, the model cannot call it.
 
 ## Memory Stores in Depth
 
@@ -216,7 +216,7 @@ Deliberative planning shines for complex, multi-step tasks where the order of op
 
 Most production agents use a hybrid approach: generate a rough plan (deliberative), execute the first step (reactive), observe the result, and revise the plan before executing the next step. This combines the strategic coherence of deliberative planning with the adaptability of reactive planning. The ReAct (Reason + Act) pattern, which we will implement in Chapter 4, is the most well-known hybrid planning strategy.
 
-The key design decision in hybrid planning is the **re-planning frequency**. Do you re-plan after every action? Only when an action fails? Only when the result diverges significantly from expectations? Re-planning too often wastes tokens and increases latency. Re-planning too rarely means the agent stubbornly follows an outdated plan. A good heuristic: re-plan when the result of an action contradicts the assumption that justified the next planned step.
+The key design decision in hybrid planning is the **re-planning frequency**. Do you re-plan after every action? Only when an action fails? Only when the result diverges significantly from expectations? Re-planning too often wastes tokens and increases latency. Re-planning too rarely means the agent stubbornly follows an outdated plan. A useful heuristic: re-plan when the result of an action contradicts the assumption that justified the next planned step.
 
 > Production Consideration
 > 

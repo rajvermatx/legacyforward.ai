@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Code Review Agent
 
-Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interpolation on line 247. Code reviews are simultaneously the most important quality gate in software development and the most inconsistent. This capstone builds an automated PR reviewer that combines static analysis, security scanning, style enforcement, and LLM-generated natural-language feedback into a single agent pipeline — the kind of system that ships in your portfolio and demonstrates every pattern from Parts 1 through 4.
+Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interpolation on line 247. Code reviews are simultaneously the most important quality gate in software development and the most inconsistent. This capstone builds an automated PR reviewer that combines static analysis, security scanning, style enforcement, and LLM-generated natural-language feedback into a single agent pipeline: the kind of system that ships in your portfolio and demonstrates every pattern from Parts 1 through 4.
 
 Reading time: ~25 min Project: Automated PR Reviewer Variants: DevOps, FinTech, Healthcare, Open Source, Mobile, Data Engineering
 
@@ -28,7 +28,7 @@ Reading time: ~25 min Project: Automated PR Reviewer Variants: DevOps, FinTech, 
 
 Software teams treat code review as a prerequisite for merging, and rightly so. Reviews catch bugs, enforce architectural standards, and transfer knowledge across the team. But the process has three structural weaknesses that no amount of process documentation fixes. First, reviews are **inconsistent**: the same diff reviewed by two engineers produces different findings because each reviewer carries different mental models. Second, reviews are **slow**: the median time-to-first-response for a PR in a large organization is four hours, and complex changes often wait more than a day. Third, reviews are **shallow on security**: spotting injection vulnerabilities or insecure deserialization requires specialized knowledge that generalist engineers do not exercise daily.
 
-An automated code review agent does not replace human reviewers. It handles the mechanical work — style enforcement, known vulnerability patterns, documentation gaps — so that humans can focus on architecture, intent, and edge cases requiring domain judgment.
+An automated code review agent does not replace human reviewers. It handles the mechanical work, style enforcement, known vulnerability patterns, documentation gaps, so that humans can focus on architecture, intent, and edge cases requiring domain judgment.
 
 > Scope Check
 > 
@@ -58,7 +58,7 @@ The system follows the supervisor-worker pattern from Chapter 10. An orchestrato
 | **Style Checker** | AST parser, lint rule engine, naming validator | Style violations with rule references and auto-fix suggestions |
 | **Logic Analyzer** | LLM chain-of-thought (no external tools) | Bugs, edge cases, complexity warnings with reasoning traces |
 
-The security scanner and style checker are **deterministic tools** that the agent wraps, while the logic analyzer is a **pure LLM reasoning task**. Two of three workers produce reproducible results independent of model temperature; the third contributes creative reasoning that static tools cannot provide.
+The security scanner and style checker are **deterministic tools** that the agent wraps, while the logic analyzer is a **pure LLM reasoning task**. Two of three workers produce reproducible results independent of model temperature. The third contributes creative reasoning that static tools cannot provide.
 
 > Why Not One Big Prompt?
 > 
@@ -260,7 +260,7 @@ The temperature is 0.2 for analytical consistency. The system prompt explicitly 
 
 ## C2.8 The Orchestrator: Merging and Confidence Scoring
 
-The orchestrator runs all three workers concurrently, normalizes their outputs into a unified schema, and deduplicates overlapping findings. When multiple independent workers flag the same line, confidence is boosted — a SQL injection found by both regex and LLM reasoning is more credible than either alone.
+The orchestrator runs all three workers concurrently, normalizes their outputs into a unified schema, and deduplicates overlapping findings. When multiple independent workers flag the same line, confidence is boosted. A SQL injection found by both regex and LLM reasoning is more credible than either alone.
 
 ```
 async def run_review_pipeline(files, client, config):
@@ -324,7 +324,7 @@ async def generate_comments(findings, file_contents, client, model="gpt-4o"):
 
 ## C2.10 Posting Comments and the Webhook Endpoint
 
-The final stage posts review comments atomically as a single GitHub review. The `event` is always `"COMMENT"` — the agent surfaces information but never approves or blocks a PR.
+The final stage posts review comments atomically as a single GitHub review. The `event` is always `"COMMENT"`. The agent surfaces information but never approves or blocks a PR.
 
 ```
 async def post_review(comments, repo, pr_number, commit_sha, token):
@@ -367,7 +367,7 @@ async def handle_webhook(request: Request):
 
 ## C2.11 Observability and Cost Control
 
-A production review agent needs monitoring across three dimensions: **correctness** (are findings useful?), **latency** (does the review post before the developer context-switches?), and **cost** (how many tokens per review?). Track three key metrics: the *dismissal rate* (how often developers dismiss findings), the *catch rate* (how often the agent flags real issues), and the *cost per review*.
+A production review agent needs monitoring across three dimensions: **correctness** (are findings useful?), **latency** (does the review post before the developer context-switches?), and **cost** (how many tokens per review?). Track three key metrics: the dismissal rate (how often developers dismiss findings), the catch rate (how often the agent flags real issues), and the cost per review.
 
 ```
 async def run_pipeline_instrumented(files, client, config):

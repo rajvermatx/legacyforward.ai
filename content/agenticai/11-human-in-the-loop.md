@@ -7,11 +7,11 @@ order: 11
 part: "Part 03 Multi Agent"
 ---
 
-Part 3 — Multi-Agent Systems
+Part 3: Multi-Agent Systems
 
 # Human-in-the-Loop
 
-It was 2:47 AM when the automated procurement agent placed a $2.3 million order for industrial solvents. The purchase order had passed the agent’s internal validation: the supplier was in the approved vendor list, the price-per-unit fell within historical ranges, and the requesting department had budget remaining. What the agent could not know was that the department had submitted a cancellation request four hours earlier — through a channel the agent did not monitor. By the time a human reviewed the morning’s activity log, the order was confirmed, the supplier had begun fulfillment, and the reversal cost the company $180,000 in cancellation fees. The agent was not broken. It was unsupervised.
+It was 2:47 AM when the automated procurement agent placed a $2.3 million order for industrial solvents. The purchase order had passed the agent’s internal validation: the supplier was in the approved vendor list, the price-per-unit fell within historical ranges, and the requesting department had budget remaining. What the agent could not know was that the department had submitted a cancellation request four hours earlier, through a channel the agent did not monitor. By the time a human reviewed the morning’s activity log, the order was confirmed, the supplier had begun fulfillment, and the reversal cost the company $180,000 in cancellation fees. The agent was not broken. It was unsupervised.
 
 Reading time: ~22 min Project: Approval Gateway Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
 
@@ -27,13 +27,13 @@ Reading time: ~22 min Project: Approval Gateway Variants: Tech / Software, Healt
 
 ## 11.1 The Case for Human Oversight
 
-The procurement disaster in the opening is not hypothetical — it is a composite of real incidents reported across organizations deploying autonomous agents in 2024 and 2025. The pattern repeats: an agent operates correctly within its knowledge boundary, encounters a situation that requires context it does not have, and takes an irreversible action. The cost of that action exceeds what any amount of post-hoc monitoring can recover.
+The procurement disaster in the opening is not hypothetical. It is a composite of real incidents reported across organizations deploying autonomous agents in 2024 and 2025. The pattern repeats: an agent operates correctly within its knowledge boundary, encounters a situation that requires context it does not have, and takes an irreversible action. The cost of that action exceeds what any amount of post-hoc monitoring can recover.
 
-Fully autonomous agents are appropriate when three conditions hold simultaneously: the action is reversible, the cost of error is low, and the domain is well-bounded. Sending a draft email for review? Autonomous is fine. Executing a financial trade, modifying patient records, or deploying code to production? These require a human in the loop — not because the agent is incompetent, but because the consequences of edge-case failures exceed the value of speed.
+Fully autonomous agents are appropriate when three conditions hold simultaneously: the action is reversible, the cost of error is low, and the domain is well-bounded. Sending a draft email for review? Autonomous is fine. Executing a financial trade, modifying patient records, or deploying code to production? These require a human in the loop, not because the agent is incompetent, but because the consequences of edge-case failures exceed the value of speed.
 
 **The autonomy spectrum.** Human-in-the-loop is not a binary switch. It is a spectrum with at least four levels:
 
-1.  **Full human control.** The agent drafts; the human executes. Every action requires explicit approval. Suitable for regulated environments where audit trails are mandatory.
+1.  **Full human control.** The agent drafts. The human executes. Every action requires explicit approval. Suitable for regulated environments where audit trails are mandatory.
 2.  **Approval gates.** The agent executes routine actions autonomously but pauses at predefined decision points for human review. The 80/20 approach: most actions flow through, high-stakes ones get human eyes.
 3.  **Exception-based oversight.** The agent runs autonomously and escalates only when it detects uncertainty, anomalies, or policy violations. Humans handle the edge cases. This requires the agent to know what it does not know.
 4.  **Full autonomy with audit.** The agent operates independently, and humans review logs after the fact. Appropriate only when all actions are reversible and the blast radius of errors is contained.
@@ -42,11 +42,11 @@ Most production systems operate at level 2 or 3. The engineering challenge is bu
 
 > Irreversibility Is the Key Variable
 > 
-> The single most important question when deciding whether an action needs human approval: can this be undone? If the answer is no — or if undoing it has significant cost — route it through a human. Database deletes, financial transactions, external API calls with side effects, and communications sent to customers are all examples of actions where the undo cost is high enough to warrant a pause.
+> The single most important question when deciding whether an action needs human approval: can this be undone? If the answer is no, or if undoing it has significant cost, route it through a human. Database deletes, financial transactions, external API calls with side effects, and communications sent to customers are all examples of actions where the undo cost is high enough to warrant a pause.
 
 ## 11.2 Interrupt Points
 
-An interrupt point is a location in the agent’s execution graph where processing halts, state is persisted, and control transfers to a human. The agent does not crash or restart — it suspends, like a thread waiting on I/O. When the human responds, execution resumes from exactly where it paused.
+An interrupt point is a location in the agent’s execution graph where processing halts, state is persisted, and control transfers to a human. The agent does not crash or restart. It suspends, like a thread waiting on I/O. When the human responds, execution resumes from exactly where it paused.
 
 Designing interrupt points requires answering three questions: where should the agent pause, what context does the human need to make a decision, and how does execution resume after the human responds?
 
@@ -197,7 +197,7 @@ class ApprovalGate:
         return request
 ```
 
-The timeout policy is a critical design decision. Defaulting to reject on timeout is the safe choice: if no one reviews the action within the window, it does not happen. Defaulting to approve is dangerous but sometimes necessary for time-sensitive workflows (a customer is waiting for a response). Escalation on timeout is the middle ground — ping a backup reviewer or a manager.
+The timeout policy is a critical design decision. Defaulting to reject on timeout is the safe choice: if no one reviews the action within the window, it does not happen. Defaulting to approve is dangerous but sometimes necessary for time-sensitive workflows (a customer is waiting for a response). Escalation on timeout is the middle ground: ping a backup reviewer or a manager.
 
 > Batch Approvals
 > 
@@ -262,7 +262,7 @@ class ConfidenceRouter:
             return "reject"
 ```
 
-Notice the three-tier routing. The middle band (between `review_threshold` and `auto_threshold`) captures actions where the agent has some confidence but not enough to act alone. The lower band catches actions that are so uncertain they should not be attempted even with human approval — the agent should reformulate or gather more information before proposing the action again.
+Notice the three-tier routing. The middle band (between `review_threshold` and `auto_threshold`) captures actions where the agent has some confidence but not enough to act alone. The lower band catches actions that are so uncertain they should not be attempted even with human approval. The agent should reformulate or gather more information before proposing the action again.
 
 **Calibrating thresholds.** Start with conservative thresholds (high auto\_threshold, low review\_threshold) so most actions route to humans. Over the first two weeks of production use, track the human approval rate for actions in each confidence band. If humans approve 95%+ of actions in a given band, raise the review\_threshold to let those through automatically. If humans reject more than 10% of actions in a band, lower the auto\_threshold. This empirical calibration converges to the right thresholds for your specific domain within 2–4 weeks.
 
@@ -276,9 +276,9 @@ Escalation determines who reviews an action and how urgently. A well-designed es
 
 **Tiered escalation.** Define reviewer tiers based on authorization level:
 
--   **Tier 1 — Frontline reviewers.** Handle routine approvals: standard customer communications, low-value transactions, minor configuration changes. Response SLA: 15 minutes.
--   **Tier 2 — Domain specialists.** Handle actions requiring domain expertise: medical recommendations, legal document modifications, complex financial instruments. Response SLA: 1 hour.
--   **Tier 3 — Senior decision-makers.** Handle high-impact, irreversible, or policy-ambiguous actions: large financial commitments, regulatory submissions, actions with legal liability. Response SLA: 4 hours.
+-   **Tier 1: Frontline reviewers.** Handle routine approvals: standard customer communications, low-value transactions, minor configuration changes. Response SLA: 15 minutes.
+-   **Tier 2: Domain specialists.** Handle actions requiring domain expertise: medical recommendations, legal document modifications, complex financial instruments. Response SLA: 1 hour.
+-   **Tier 3: Senior decision-makers.** Handle high-impact, irreversible, or policy-ambiguous actions: large financial commitments, regulatory submissions, actions with legal liability. Response SLA: 4 hours.
 
 ```
 @dataclass
@@ -318,7 +318,7 @@ class EscalationManager:
                 print(f"[ESCALATION] Notifying {reviewer}")
 ```
 
-**Time-based escalation.** If a Tier 1 reviewer does not respond within their SLA, the request automatically escalates to Tier 2. If Tier 2 misses their window, it goes to Tier 3. This prevents approval requests from blocking workflows indefinitely. In practice, three tiers are sufficient for most organizations — beyond that, the escalation chain itself becomes a bottleneck.
+**Time-based escalation.** If a Tier 1 reviewer does not respond within their SLA, the request automatically escalates to Tier 2. If Tier 2 misses their window, it goes to Tier 3. This prevents approval requests from blocking workflows indefinitely. In practice, three tiers are sufficient for most organizations. Beyond that, the escalation chain itself becomes a bottleneck.
 
 > Escalation Fatigue
 > 
@@ -332,7 +332,7 @@ The human review interface is the most neglected component of human-in-the-loop 
 
 **1\. Lead with the decision, not the context.** The first thing the reviewer sees should be: “The agent wants to \[action\]. Approve or reject?” Context follows below. Most reviewers scan for the decision point first and then read supporting information. Putting a wall of context before the question increases decision time by 40%.
 
-**2\. Show the agent’s reasoning chain.** Do not just show the proposed action; show why the agent chose it. “The agent selected Supplier X because it has the lowest price ($4.20/unit vs. $4.85/unit from Supplier Y) and a 98% on-time delivery rate.” This lets the reviewer evaluate the reasoning, not just the conclusion.
+**2\. Show the agent’s reasoning chain.** Do not just show the proposed action. Show why the agent chose it. “The agent selected Supplier X because it has the lowest price ($4.20/unit vs. $4.85/unit from Supplier Y) and a 98% on-time delivery rate.” This lets the reviewer evaluate the reasoning, not just the conclusion.
 
 **3\. Highlight what is unusual.** Flag deviations from normal patterns: “This order is 3x larger than the average for this department.” “This customer has had two refund requests in the past week.” Anomaly flags reduce the cognitive load of spotting problems in routine-looking requests.
 
@@ -389,7 +389,7 @@ def _urgency_level(seconds_pending: float,
 
 ## 11.7 Resuming After Interruption
 
-The hardest engineering problem in human-in-the-loop is not pausing — it is resuming. When a human approves an action, the agent must pick up exactly where it left off with the full state of its reasoning intact. When a human rejects an action, the agent must gracefully handle the denial and either try an alternative or report failure.
+The hardest engineering problem in human-in-the-loop is not pausing. It is resuming. When a human approves an action, the agent must pick up exactly where it left off with the full state of its reasoning intact. When a human rejects an action, the agent must gracefully handle the denial and either try an alternative or report failure.
 
 **State persistence.** Before pausing, the agent must serialize its complete state: the conversation history, tool call results accumulated so far, the current position in the execution graph, and any intermediate variables. This state must survive process restarts, because the human might not respond for hours.
 
@@ -628,7 +628,7 @@ for event in app.stream(human_decision, config, stream_mode="updates"):
 # Graph continues through execution_node to END
 ```
 
-The key advantage of LangGraph’s approach is that the `MemorySaver` (or a persistent checkpointer like `PostgresSaver`) stores the complete graph state. The process can crash and restart between the interrupt and the resume — the state is recovered from the checkpointer, not from memory. In production, replace `MemorySaver` with a database-backed checkpointer so state survives deployments.
+The key advantage of LangGraph’s approach is that the `MemorySaver` (or a persistent checkpointer like `PostgresSaver`) stores the complete graph state. The process can crash and restart between the interrupt and the resume. The state is recovered from the checkpointer, not from memory. In production, replace `MemorySaver` with a database-backed checkpointer so state survives deployments.
 
 > Multiple Interrupts in One Graph
 > 
@@ -642,7 +642,7 @@ Figure 11-1. Human-in-the-loop interrupt flow. Blue nodes represent autonomous a
 
 Several patterns emerge from organizations running human-in-the-loop agents at scale:
 
-**Progressive autonomy.** Start with all actions requiring approval. As the system builds a track record, gradually increase the auto-approval threshold. This is not just about confidence calibration — it builds trust with stakeholders who are understandably nervous about autonomous agents. A system that starts fully supervised and earns autonomy is politically easier to deploy than one that starts autonomous and gets restricted after an incident.
+**Progressive autonomy.** Start with all actions requiring approval. As the system builds a track record, gradually increase the auto-approval threshold. This is not just about confidence calibration. It builds trust with stakeholders who are understandably nervous about autonomous agents. A system that starts fully supervised and earns autonomy is politically easier to deploy than one that starts autonomous and gets restricted after an incident.
 
 **Feedback loops.** Every human decision (approve, reject, modify) is training data. Log the agent’s proposed action, the human’s decision, and the reason. Over time, this dataset reveals which action types the agent handles well and which consistently need correction. Use this data to fine-tune the confidence model and adjust routing thresholds.
 
@@ -652,7 +652,7 @@ Several patterns emerge from organizations running human-in-the-loop agents at s
 
 > Measuring Human-in-the-Loop Effectiveness
 > 
-> Track four metrics: (1) approval rate by action type — if it is above 95%, consider auto-approving; (2) median time-to-decision — if it exceeds 10 minutes, the UX needs work; (3) override rate — how often humans modify rather than simply approve or reject; (4) post-approval incident rate — how often approved actions lead to problems. Together these metrics tell you whether the human-in-the-loop is adding value or just adding latency.
+> Track four metrics. First, approval rate by action type: above 95% suggests auto-approving is safe. Second, median time-to-decision: above 10 minutes indicates the UX needs work. Third, override rate: how often humans modify rather than simply approve or reject. Fourth, post-approval incident rate: how often approved actions lead to problems. Together these metrics tell you whether the human-in-the-loop is adding value or just adding latency.
 
 ## Project: Approval Gateway
 
@@ -669,27 +669,27 @@ Build an approval gateway system that integrates with an LLM-powered agent to pr
 
 ### Domain Variants
 
-Deployment Gatekeeper Tech / Software — CI/CD pipeline approvals, production deploys, rollbacks
+Deployment Gatekeeper Tech / Software: CI/CD pipeline approvals, production deploys, rollbacks
 
-Clinical Order Reviewer Healthcare — Medication orders, dosage changes, treatment plan modifications
+Clinical Order Reviewer Healthcare: Medication orders, dosage changes, treatment plan modifications
 
-Transaction Approver Finance — Wire transfers, trade execution, credit limit adjustments
+Transaction Approver Finance: Wire transfers, trade execution, credit limit adjustments
 
-Content Moderator Education — Course material publication, student communications, grade changes
+Content Moderator Education: Course material publication, student communications, grade changes
 
-Order Fulfillment Gate E-commerce — High-value orders, bulk shipments, refund approvals
+Order Fulfillment Gate E-commerce: High-value orders, bulk shipments, refund approvals
 
-Contract Review Gate Legal — Contract modifications, settlement offers, filing approvals
+Contract Review Gate Legal: Contract modifications, settlement offers, filing approvals
 
 ## Summary
 
-Human-in-the-loop is not an admission that agents are unreliable — it is an engineering discipline that matches the level of autonomy to the stakes of the decision. Agents excel at speed, consistency, and tireless execution. Humans excel at contextual judgment, ethical reasoning, and handling novel situations. The best systems combine both: agents handle the 80% of decisions that are routine and well-understood, while humans focus their attention on the 20% that carry real risk. The engineering work is in the interrupt mechanism (pausing without losing state), the routing logic (knowing when to escalate), the review UX (making human decisions fast and accurate), and the resume mechanism (picking up exactly where the agent left off). LangGraph’s `interrupt()` and persistent checkpointing make this pattern implementable in production without building a custom state machine from scratch.
+Human-in-the-loop is not an admission that agents are unreliable. It is an engineering discipline that matches the level of autonomy to the stakes of the decision. Agents excel at speed, consistency, and tireless execution. Humans excel at contextual judgment, ethical reasoning, and handling novel situations. The best systems combine both: agents handle the 80% of decisions that are routine and well-understood, while humans focus their attention on the 20% that carry real risk. The engineering work is in the interrupt mechanism (pausing without losing state), the routing logic (knowing when to escalate), the review UX (making human decisions fast and accurate), and the resume mechanism (picking up exactly where the agent left off). LangGraph’s `interrupt()` and persistent checkpointing make this pattern implementable in production without building a custom state machine from scratch.
 
 -   The decision to require human approval should be driven by irreversibility and impact, not by agent capability. A perfectly capable agent should still pause before taking actions that cannot be undone.
--   Confidence thresholds must be calibrated empirically, not guessed. Start conservative, track human approval rates per confidence band, and adjust weekly. A single threshold rarely works across action types — maintain a per-action-type threshold table.
+-   Confidence thresholds must be calibrated empirically, not guessed. Start conservative, track human approval rates per confidence band, and adjust weekly. A single threshold rarely works across action types. Maintain a per-action-type threshold table.
 -   Escalation policies prevent approval requests from becoming bottlenecks. Tiered reviewers with time-based auto-escalation ensure that no request blocks indefinitely, even when the primary reviewer is unavailable.
 -   Review UX determines the quality of human decisions. Lead with the decision, show the agent’s reasoning, highlight anomalies, and make the default action a single click. A poorly designed review interface negates the value of human oversight.
--   LangGraph’s `interrupt()` with persistent checkpointing solves the hardest engineering problem — resuming stateful execution after an arbitrary pause. Use database-backed checkpointers in production so state survives process restarts and deployments.
+-   LangGraph’s `interrupt()` with persistent checkpointing solves the hardest engineering problem: resuming stateful execution after an arbitrary pause. Use database-backed checkpointers in production so state survives process restarts and deployments.
 
 ### Exercises
 
