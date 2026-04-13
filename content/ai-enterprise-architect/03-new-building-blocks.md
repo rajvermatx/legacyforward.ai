@@ -48,13 +48,13 @@ What makes this function remarkable is its versatility. A single LLM, without an
 | Scalability | Horizontal (API-based) or GPU-bound (self-hosted) |
 | Failure modes | Hallucination, refusal, format violations |
 
-The best mental model for an LLM, from an architecture standpoint, is to think of it like an external SaaS service. It offers high capability, but comes with variable latency and a pay-per-use pricing model. You do not control its internals, and you cannot predict its exact behavior with the same certainty you would expect from a deterministic function. This is not a flaw — it is a trade-off you need to design around, just as you would design around the eventual consistency of a distributed database or the latency characteristics of a third-party API.
+The best mental model for an LLM, from an architecture standpoint, is to think of it like an external SaaS service. It offers high capability, but comes with variable latency and a pay-per-use pricing model. You do not control its internals, and you cannot predict its exact behavior with the same certainty you would expect from a deterministic function. This is not a flaw. It is a trade-off you need to design around, just as you would design around the eventual consistency of a distributed database or the latency characteristics of a third-party API.
 
 ### Design Considerations
 
 When integrating an LLM into your architecture, idempotency is one of the first things you will need to grapple with. Unlike a traditional function where the same input reliably produces the same output, sending the same prompt to an LLM twice may yield different results each time. If your system requires consistency — for example, if you are generating compliance reports or populating structured records — you will want to set the model’s temperature parameter to zero and implement a caching layer in front of it. This way, identical requests return identical responses, and you avoid paying for redundant computation.
 
-Timeout handling deserves careful attention as well. Long generations, especially those involving complex reasoning or lengthy output, can take thirty seconds or more. In a synchronous request-response architecture, that kind of latency is often unacceptable. Wherever possible, design for asynchronous interaction. Queue the request, let the model work, and deliver the result when it is ready. Your users and your infrastructure will thank you.
+Timeout handling deserves careful attention as well. Long generations, especially those involving complex reasoning or lengthy output, can take thirty seconds or more. In a synchronous request-response architecture, that kind of latency is often unacceptable. Wherever possible, design for asynchronous interaction. Queue the request, let the model work, and deliver the result when it is ready.
 
 Cost management is another concern that does not exist with most traditional components. Every token that goes into and comes out of an LLM costs money, and those costs can add up remarkably fast if you are not deliberate about prompt design. Architect for prompt efficiency from the start — strip unnecessary context, avoid sending entire documents when a summary will do, and monitor your token usage the way you would monitor database query costs. We will cover cost optimization in depth in Chapter 12, including multi-model routing strategies that can reduce inference costs by 60 to 80 percent.
 
@@ -100,7 +100,7 @@ A vector database is a database that has been purpose-built — or in some cases
 | Chroma | Lightweight | Prototyping, small datasets |
 | Qdrant | Open source | Performance-sensitive |
 
-If your organization is already running PostgreSQL — and most are — the pragmatic starting point is pgvector. Adding an extension to a database you already operate, monitor, and back up is dramatically simpler than introducing an entirely new data store into your technology stack. You avoid the operational overhead of a new deployment, you can leverage your existing connection pooling and access control, and your team does not need to learn a new query language. Move to a dedicated vector database only when you have concrete evidence that you are hitting scale limits with pgvector. Premature optimization in this space is just as wasteful as it is anywhere else.
+If your organization is already running PostgreSQL, and most are, the pragmatic starting point is pgvector. Adding an extension to a database you already operate, monitor, and back up is dramatically simpler than introducing an entirely new data store into your technology stack. You avoid the operational overhead of a new deployment, you can leverage your existing connection pooling and access control, and your team does not need to learn a new query language. Move to a dedicated vector database only when you have concrete evidence that you are hitting scale limits with pgvector. Premature optimization in this space is just as wasteful as it is anywhere else.
 
 ## Prompt Templates — The New Configuration
 
@@ -120,7 +120,7 @@ What makes prompt templates architecturally significant is the outsized impact t
 
 ### Architectural Concerns
 
-Version control for prompt templates is not optional — it is essential. Every prompt template should be versioned in your source control system alongside your code, because a seemingly minor wording change can completely alter system behavior. Imagine changing one sentence in a classification prompt and suddenly having your system categorize customer complaints into the wrong buckets. Without version history, debugging that kind of regression becomes a nightmare.
+Version control for prompt templates is not optional. It is essential. Every prompt template should be versioned in your source control system alongside your code, because a seemingly minor wording change can completely alter system behavior. Imagine changing one sentence in a classification prompt and suddenly having your system categorize customer complaints into the wrong buckets. Without version history, debugging that kind of regression becomes a nightmare.
 
 Testing prompts requires a different mindset than testing traditional code. Unit tests alone are not sufficient, because the output of a prompt is probabilistic and nuanced. What you need are evaluation suites — curated sets of test inputs with expected outputs, scored against quality metrics. Think of it as the difference between testing whether a function returns the right number and testing whether a translation reads naturally to a native speaker. The tooling for this is still maturing, but the discipline needs to be in place from the start.
 
@@ -132,7 +132,7 @@ The mental model that serves architects best here is this: prompts are configura
 
 ### What It Is
 
-RAG is not a single component — it is an architectural pattern that combines two capabilities: search (retrieval) and text generation. Understanding this distinction matters, because when someone says “we need RAG,” they are describing a pattern that involves multiple components working together, not a product you can buy off the shelf.
+RAG is not a single component. It is an architectural pattern that combines two capabilities: search (retrieval) and text generation. Understanding this distinction matters, because when someone says “we need RAG,” they are describing a pattern that involves multiple components working together, not a product you can buy off the shelf.
 
 The pattern works like this. First, a user asks a question or submits a query. The system then takes that question, converts it into an embedding vector, and searches your knowledge base for the documents most relevant to the query. Those retrieved documents — typically the top five or ten results — are then inserted directly into the LLM’s prompt, providing the model with specific, factual context to draw upon. Finally, the LLM generates an answer that is grounded in your actual data rather than relying solely on whatever knowledge was baked into the model during training.
 
@@ -150,7 +150,7 @@ The architectural analogy that resonates most with enterprise architects is that
 
 RAG has become the most popular enterprise AI pattern for very good reasons, and most of those reasons are architectural rather than technical.
 
-First, RAG requires no model training whatsoever. Your proprietary data stays in a database that you control, rather than being baked into the weights of a neural network. This means you do not need a machine learning team to get started, you do not need expensive GPU clusters for fine-tuning, and you do not need to worry about your sensitive data leaking into a model that might be shared or compromised.
+First, RAG requires no model training. Your proprietary data stays in a database that you control, rather than being baked into the weights of a neural network. This means you do not need a machine learning team to get started, you do not need expensive GPU clusters for fine-tuning, and you do not need to worry about your sensitive data leaking into a model that might be shared or compromised.
 
 Second, your data can be updated in real time. When a document changes, you simply re-embed it and update the vector database. The next query will automatically pick up the new information. Contrast this with model training, where updating knowledge requires a full retraining cycle that can take days or weeks.
 
@@ -162,7 +162,7 @@ Finally, RAG works with any LLM. You can swap out your language model — upgrad
 
 ### What It Is
 
-An AI agent is what happens when you give an LLM the ability to take action in the real world. More precisely, an agent is an LLM that has been equipped with tools — functions that interact with external systems such as APIs, databases, or file systems. The LLM examines the user’s request, decides which tools to call and in what order, interprets the results of each tool call, and iterates through this loop until the task is complete or it determines that it cannot proceed.
+An AI agent is what happens when you give an LLM the ability to take action in the real world. More precisely, an agent is an LLM equipped with tools. These are functions that interact with external systems such as APIs, databases, or file systems. The LLM examines the user’s request, decides which tools to call and in what order, interprets the results of each tool call, and iterates through this loop until the task is complete or it cannot proceed.
 
 ```
 User: "Book me a flight from SFO to JFK next Tuesday under $500"
@@ -172,7 +172,7 @@ Agent thinks: Found 3 options, cheapest is $420 → calls book_flight()
 Agent thinks: Booking confirmed → returns result to user
 ```
 
-This is a fundamentally different kind of component than anything in your traditional architecture toolkit. With a standard workflow engine, you define the steps in advance — if this, then that, else the other thing. With an agent, the LLM dynamically decides the next step based on what it has learned so far. This makes agents extraordinarily flexible, but it also makes them harder to reason about, harder to test, and harder to predict.
+This is a fundamentally different kind of component than anything in your traditional architecture toolkit. With a standard workflow engine, you define the steps in advance: if this, then that, else the other thing. With an agent, the LLM dynamically decides the next step based on what it has learned so far. This makes agents extraordinarily flexible, but it also makes them harder to reason about, harder to test, and harder to predict.
 
 ### Architectural Properties
 
@@ -183,11 +183,11 @@ This is a fundamentally different kind of component than anything in your tradit
 | Predictability | Low (agent may take unexpected paths) |
 | Failure modes | Infinite loops, wrong tool calls, partial completion |
 
-The most useful mental model for an agent is a workflow engine — but one where the flowchart is generated on the fly rather than defined in advance. This is immensely powerful when it works well, but it requires guardrails and constraints that would be unnecessary in a traditional workflow system.
+The most useful mental model for an agent is a workflow engine where the flowchart is generated on the fly rather than defined in advance. This is immensely powerful when it works well, but it requires guardrails and constraints that would be unnecessary in a traditional workflow system.
 
 ### Design Considerations
 
-Tool sandboxing is your first line of defense when deploying agents. An agent should only have access to the specific tools you have explicitly provided, and each of those tools should be scoped to the minimum permissions necessary. Giving an agent unrestricted database access is the AI equivalent of giving a junior developer production root credentials — the potential for catastrophic mistakes is simply too high. Define your tool interfaces carefully, validate their inputs rigorously, and limit their blast radius.
+Tool sandboxing is your first line of defense when deploying agents. An agent should only have access to the specific tools you have explicitly provided, and each of those tools should be scoped to the minimum permissions necessary. Giving an agent unrestricted database access is the AI equivalent of giving a junior developer production root credentials. The potential for catastrophic mistakes is too high. Define your tool interfaces carefully, validate their inputs rigorously, and limit their blast radius.
 
 Budget limits are equally important. Because an agent can theoretically loop forever — calling tools, interpreting results, and deciding to call more tools — you need to cap the number of LLM calls per agent execution. A reasonable starting point might be ten steps. If the agent cannot complete the task in ten steps, it should return what it has accomplished so far and escalate to a human. Without this kind of budget control, a single confused agent can run up significant costs before anyone notices.
 
@@ -199,9 +199,9 @@ Finally, observability is non-negotiable. Every tool call, every piece of LLM re
 
 ### What It Is
 
-Guardrails are runtime checks applied to the inputs and outputs of AI components, and they are every bit as important to an AI architecture as input validation and output sanitization are to a traditional web application. In fact, that is exactly the right analogy: guardrails are input validation and output sanitization, reimagined for a world where both the inputs and the outputs are natural language rather than structured data.
+Guardrails are runtime checks applied to the inputs and outputs of AI components. They are every bit as important to an AI architecture as input validation and output sanitization are to a traditional web application. Guardrails are input validation and output sanitization, reimagined for a world where both the inputs and the outputs are natural language rather than structured data.
 
-The need for guardrails arises from the inherent unpredictability of LLMs. Because an LLM can generate virtually any text in response to virtually any prompt, you need explicit checks to ensure that what goes in and what comes out conforms to your system’s requirements, your organization’s policies, and basic safety standards. Without guardrails, you are essentially deploying a system that can say anything to anyone, which is not a position any enterprise architect wants to be in.
+The need for guardrails arises from the inherent unpredictability of LLMs. Because an LLM can generate virtually any text in response to virtually any prompt, you need explicit checks to ensure that what goes in and what comes out conforms to your system’s requirements, your organization’s policies, and basic safety standards. Without guardrails, you are deploying a system that can say anything to anyone. That is not a position any enterprise architect wants to be in.
 
 ### Types
 
@@ -214,7 +214,7 @@ The need for guardrails arises from the inherent unpredictability of LLMs. Becau
 | Factuality check | Verify claims against sources | Cross-reference RAG citations |
 | Cost limiter | Prevent runaway costs | Max tokens per request |
 
-The architectural parallel here is your API gateway. You already apply rate limiting, input validation, authentication, and content filtering at the gateway layer for your traditional APIs. Guardrails serve the same purpose for your AI components — they are the policy enforcement layer that sits between your users and the unpredictable capabilities of the model. The concept is identical; only the implementation is new.
+The architectural parallel here is your API gateway. You already apply rate limiting, input validation, authentication, and content filtering at the gateway layer for your traditional APIs. Guardrails serve the same purpose for your AI components. They are the policy enforcement layer that sits between your users and the unpredictable capabilities of the model. The concept is identical. Only the implementation is new.
 
 ## Key Takeaways
 

@@ -17,13 +17,13 @@ podcastUrl: /audio/ai-enterprise-architect/podcast/16-appendix-reference-archite
 
 This appendix presents ten reference architectures for common enterprise AI use cases. Each diagram shows the key components, data flows, and integration points that an AI Enterprise Architect needs to consider when designing these systems.
 
-These are not prescriptive blueprints — every enterprise has unique constraints around data, security, compliance, and organizational readiness. Use these as starting points for your own architecture designs, adapting them to fit your specific context. The patterns and components shown here are drawn from the architectural concepts covered throughout this book.
+These are not prescriptive blueprints. Every enterprise has unique constraints around data, security, compliance, and organizational readiness. Use these as starting points for your own architecture designs, adapting them to fit your specific context. The patterns and components shown here are drawn from the architectural concepts covered throughout this book.
 
 ## 1\. Customer Service AI Agent
 
 **Industry:** Cross-industry | **Key Patterns:** RAG, Agent Tools, Model Tiering, Human-in-the-Loop
 
-This architecture powers an AI-driven customer service system that can answer questions from a knowledge base (via RAG), take actions in enterprise systems (via agent tools), and escalate to human agents when confidence is low. The model router enables cost-effective tiering — simple FAQs go to a small model while complex issues are routed to a larger one. Guardrails ensure PII filtering and content safety before responses reach the user.
+This architecture powers an AI-driven customer service system that can answer questions from a knowledge base (via RAG), take actions in enterprise systems (via agent tools), and escalate to human agents when confidence is low. The model router enables cost-effective tiering: simple FAQs go to a small model while complex issues are routed to a larger one. Guardrails ensure PII filtering and content safety before responses reach the user.
 
 ![Customer Service AI Agent](/diagrams/ai-enterprise-architect/appendix/01-customer-service-agent.svg)
 
@@ -53,13 +53,13 @@ This architecture combines vector search (semantic understanding) with keyword s
 
 AI-Powered Search and Knowledge Base
 
-**Key design decisions:** Chunking strategy and chunk size for the vector database. Re-ranking model selection and latency budget. How to handle access control — ensuring users only see documents they are authorized to access.
+**Key design decisions:** Chunking strategy and chunk size for the vector database. Re-ranking model selection and latency budget. How to handle access control, ensuring users only see documents they are authorized to access.
 
 ## 4\. Fraud Detection with GenAI Explanation
 
 **Industry:** Banking, Financial Services | **Key Patterns:** Traditional ML + GenAI, Feature Store, Human-in-the-Loop
 
-This architecture pairs a traditional ML fraud model (optimized for speed and accuracy on structured data) with an LLM explanation engine (optimized for human-readable reasoning). The ML model makes the decision; the LLM explains it. This is a powerful pattern for any use case where fast, accurate predictions need to be accompanied by natural language explanations for human reviewers or regulators.
+This architecture pairs a traditional ML fraud model (optimized for speed and accuracy on structured data) with an LLM explanation engine (optimized for human-readable reasoning). The ML model makes the decision. The LLM explains it. This is a powerful pattern for any use case where fast, accurate predictions need to be accompanied by natural language explanations for human reviewers or regulators.
 
 ![Fraud Detection with GenAI Explanation](/diagrams/ai-enterprise-architect/appendix/04-fraud-detection.svg)
 
@@ -95,7 +95,7 @@ Supply Chain Demand Forecasting
 
 **Industry:** Technology | **Key Patterns:** RAG over Code, Static Analysis + LLM, Developer Feedback
 
-This architecture augments traditional code review tools (static analysis, security scanning, linting) with an LLM reviewer that understands your codebase through RAG over repository embeddings. The LLM can identify architectural issues, suggest improvements, and assess risk — insights that rule-based tools cannot provide. Developer feedback on review quality drives continuous improvement.
+This architecture augments traditional code review tools (static analysis, security scanning, linting) with an LLM reviewer that understands your codebase through RAG over repository embeddings. The LLM can identify architectural issues, suggest improvements, and assess risk: insights that rule-based tools cannot provide. Developer feedback on review quality drives continuous improvement.
 
 ![Code Review and Development Assistant](/diagrams/ai-enterprise-architect/appendix/07-code-review-assistant.svg)
 
@@ -119,13 +119,13 @@ Compliance and Regulatory Monitoring
 
 **Industry:** Consulting, Finance, Strategy | **Key Patterns:** Agent Orchestration, Specialized Tools, Shared Memory, Quality Review
 
-This architecture uses an orchestrator agent to decompose a research brief into tasks for specialized agents — each with access to domain-specific tools. The shared memory allows agents to build on each other’s work. The quality review agent fact-checks and ensures consistency before human review. This pattern scales to any knowledge work that involves research, analysis, and report generation.
+This architecture uses an orchestrator agent to decompose a research brief into tasks for specialized agents, each with access to domain-specific tools. The shared memory allows agents to build on each other’s work. The quality review agent fact-checks and ensures consistency before human review. This pattern scales to any knowledge work that involves research, analysis, and report generation.
 
 ![Multi-Agent Research and Analysis](/diagrams/ai-enterprise-architect/appendix/09-multi-agent-research.svg)
 
 Multi-Agent Research and Analysis
 
-**Key design decisions:** How to decompose tasks effectively — too granular wastes tokens, too coarse loses specialization benefits. How to manage shared context without exceeding token limits. When to involve the human reviewer in the loop versus at the end.
+**Key design decisions:** How to decompose tasks effectively: too granular wastes tokens, too coarse loses specialization benefits. How to manage shared context without exceeding token limits. When to involve the human reviewer in the loop versus at the end.
 
 ## 10\. AI Gateway & Model Management Platform
 
@@ -137,4 +137,4 @@ This is the enterprise platform architecture that underlies many of the other us
 
 AI Gateway and Model Management Platform
 
-**Key design decisions:** Whether to build a custom gateway or use an emerging commercial product. How to implement model routing logic — rules, classifier, or LLM-based. How to allocate AI costs back to consuming teams. Cache invalidation strategy for the semantic response cache.
+**Key design decisions:** Whether to build a custom gateway or use an emerging commercial product. How to implement model routing logic, whether rules, classifier, or LLM-based. How to allocate AI costs back to consuming teams. Cache invalidation strategy for the semantic response cache.
