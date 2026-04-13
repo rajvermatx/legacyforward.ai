@@ -125,7 +125,7 @@ export default function CoachPage() {
                   <button
                     key={i}
                     onClick={() => send(s)}
-                    className="px-3 py-2 border border-indigo-200 rounded-full text-xs text-teal-600 hover:bg-indigo-50 transition"
+                    className="px-3 py-2 border border-teal-200 rounded-full text-xs text-teal-600 hover:bg-teal-50 transition"
                   >
                     {s}
                   </button>
@@ -188,11 +188,11 @@ export default function CoachPage() {
       </div>
 
       {/* Context Sidebar (desktop) */}
-      <div className="hidden lg:flex w-64 flex-col border-l border-slate-200 bg-slate-50 p-4 text-xs overflow-y-auto">
-        <div className="font-bold text-slate-700 mb-3">Your Context</div>
+      <div className="hidden lg:flex w-64 flex-col border-l border-slate-200 bg-slate-50 p-4 text-xs overflow-y-auto gap-3">
+        <div className="font-bold text-slate-700">Your Context</div>
 
         {/* Snapshot */}
-        <div className="bg-white rounded-lg p-3 mb-3 border border-slate-200">
+        <div className="bg-white rounded-lg p-3 border border-slate-200">
           <div className="font-semibold text-slate-600 mb-1">Career Snapshot</div>
           {snapshot ? (
             <>
@@ -208,7 +208,7 @@ export default function CoachPage() {
         </div>
 
         {/* CAII */}
-        <div className="bg-white rounded-lg p-3 mb-3 border border-slate-200">
+        <div className="bg-white rounded-lg p-3 border border-slate-200">
           <div className="font-semibold text-slate-600 mb-1">CAII Score</div>
           {caiiScore ? (
             <div className={`text-2xl font-extrabold ${caiiColor}`}>{caiiScore}/100</div>
@@ -218,7 +218,7 @@ export default function CoachPage() {
         </div>
 
         {/* Roadmap */}
-        <div className="bg-white rounded-lg p-3 mb-3 border border-slate-200">
+        <div className="bg-white rounded-lg p-3 border border-slate-200">
           <div className="font-semibold text-slate-600 mb-1">Roadmap</div>
           {roadmap ? (
             <>
@@ -233,13 +233,13 @@ export default function CoachPage() {
         </div>
 
         {/* Suggestions */}
-        <div className="font-semibold text-slate-500 mt-2 mb-2">Quick Questions</div>
+        <div className="font-semibold text-slate-500">Quick Questions</div>
         <div className="space-y-1.5">
           {suggestions.map((s, i) => (
             <button
               key={i}
               onClick={() => send(s)}
-              className="w-full text-left px-2 py-1.5 bg-white border border-slate-200 rounded-md text-[11px] text-teal-600 hover:bg-indigo-50 transition"
+              className="w-full text-left px-2 py-1.5 bg-white border border-slate-200 rounded-md text-[11px] text-teal-600 hover:bg-teal-50 transition"
             >
               {s}
             </button>

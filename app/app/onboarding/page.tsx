@@ -141,70 +141,65 @@ export default function OnboardingPage() {
     <div className="flex h-screen bg-white">
       {/* Sidebar - Progress */}
       <div className="hidden md:flex w-64 flex-col border-r border-slate-200 bg-slate-50 p-6">
-        <div className="text-lg font-bold text-teal-600 mb-6">
-          LegacyForward.ai
-        </div>
-        <div className="text-sm font-semibold text-slate-700 mb-4">
-          Your First Session
-        </div>
-        <div className="flex flex-col gap-1">
+        <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Career Navigator</div>
+        <div className="text-base font-bold text-slate-800 mb-5">Your First Session</div>
+
+        <div className="flex flex-col">
           {STAGES.map((stage) => (
-            <div key={stage.id} className="flex items-center gap-3">
+            <div key={stage.id} className="flex gap-3">
+              {/* Step indicator + connector */}
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 ${
                     stage.id < currentStage
                       ? "bg-emerald-500 text-white"
                       : stage.id === currentStage
                       ? "bg-teal-600 text-white"
-                      : "bg-slate-200 text-slate-500"
+                      : "bg-slate-200 text-slate-400"
                   }`}
                 >
                   {stage.id < currentStage ? "✓" : stage.id}
                 </div>
-                {stage.id < 5 && (
-                  <div
-                    className={`w-0.5 h-4 ${
-                      stage.id < currentStage
-                        ? "bg-emerald-500"
-                        : "bg-slate-200"
-                    }`}
-                  />
+                {stage.id < STAGES.length && (
+                  <div className={`w-px flex-1 min-h-[20px] ${stage.id < currentStage ? "bg-emerald-300" : "bg-slate-200"}`} />
                 )}
               </div>
-              <span
-                className={`text-xs ${
-                  stage.id === currentStage
-                    ? "text-teal-600 font-semibold"
-                    : stage.id < currentStage
-                    ? "text-emerald-600"
-                    : "text-slate-500"
-                }`}
-              >
-                {stage.label}
-              </span>
+              {/* Label */}
+              <div className="pb-4">
+                <span
+                  className={`text-xs leading-6 ${
+                    stage.id === currentStage
+                      ? "text-teal-600 font-semibold"
+                      : stage.id < currentStage
+                      ? "text-emerald-600"
+                      : "text-slate-400"
+                  }`}
+                >
+                  {stage.label}
+                </span>
+              </div>
             </div>
           ))}
         </div>
-        <div className="mt-auto space-y-3">
-          <div className="p-3 bg-amber-50 rounded-lg border border-amber-200">
-            <div className="text-xs font-semibold text-amber-600">Tip</div>
-            <div className="text-xs text-slate-700 mt-1">
-              The more you share, the more personalized your Career Book will be!
-            </div>
+
+        <div className="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-200">
+          <div className="text-xs font-semibold text-amber-600">Tip</div>
+          <div className="text-xs text-slate-700 mt-1">
+            The more you share, the more personalized your Career Book will be!
           </div>
-          {messages.length > 1 && (
-            <button
-              onClick={() => {
-                localStorage.removeItem("legacyforward_onboarding");
-                window.location.reload();
-              }}
-              className="w-full text-xs text-slate-400 hover:text-rose-500 transition py-1"
-            >
-              Start over
-            </button>
-          )}
         </div>
+
+        {messages.length > 1 && (
+          <button
+            onClick={() => {
+              localStorage.removeItem("legacyforward_onboarding");
+              window.location.reload();
+            }}
+            className="mt-3 w-full text-xs text-slate-400 hover:text-rose-500 transition py-1"
+          >
+            Start over
+          </button>
+        )}
       </div>
 
       {/* Main Chat */}
