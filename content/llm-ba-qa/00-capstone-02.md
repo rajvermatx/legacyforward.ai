@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 2: Automated BRD Analyzer
 
-Business Requirements Documents are the foundation of every project, yet they are riddled with ambiguity, missing edge cases, and inconsistencies that only surface months later during UAT. In this capstone, you will build a tool that analyzes a BRD in minutes, producing a structured quality report that flags problems before a single line of code is written.
+Business Requirements Documents are the foundation of every project, yet they are riddled with ambiguity, missing edge cases, and inconsistencies that only surface months later during UAT. In this capstone, you will build a tool that analyzes a BRD in minutes and produces a structured quality report that flags problems before a single line of code is written.
 
 Building time: ~2 hours Chapters used: 3, 5, 7, 15
 
@@ -89,7 +89,7 @@ Here is a sample BRD with deliberate quality issues for the analyzer to find:
 
 Create a sample BRD for a Customer Portal Redesign with deliberate quality issues for the analyzer to find: vague terms ("modern," "easy to use," "fast," "quickly," "relevant"), missing sections (no risk analysis, no data requirements, no acceptance criteria), inconsistent modal verbs ("shall" vs. "should"), and undefined thresholds ("failed login attempts" without specifying how many).
 
-Notice the deliberate issues: vague terms ("modern," "easy to use," "fast," "quickly," "relevant"), missing sections (no risk analysis, no data requirements, no acceptance criteria), inconsistent modal verbs ("shall" vs. "should"), and undefined thresholds ("failed login attempts" — how many?).
+Notice the deliberate issues: vague terms ("modern," "easy to use," "fast," "quickly," "relevant"), missing sections (no risk analysis, no data requirements, no acceptance criteria), inconsistent modal verbs ("shall" vs. "should"), and undefined thresholds ("failed login attempts": how many?).
 
 The parsing module extracts structure from the document:
 
@@ -107,7 +107,7 @@ The completeness checker compares the BRD's section headings against a configura
 
 ### 2b. Ambiguity Detector
 
-The ambiguity detector uses both rule-based pattern matching (for known vague terms) and LLM analysis (for subtler issues like missing quantifiers and undefined scope). This hybrid approach is faster and cheaper than sending everything to the LLM while catching more issues than rules alone.
+The ambiguity detector uses both rule-based pattern matching (for known vague terms) and LLM analysis (for subtler issues like missing quantifiers and undefined scope). This hybrid approach is faster and cheaper than sending everything to the LLM, while catching more issues than rules alone.
 
 ```python
 """modules/ambiguity.py — Detect ambiguous language in requirements."""
@@ -268,7 +268,7 @@ Return ONLY the JSON array."""
 
 ### 2c. Compliance Scanner
 
-The compliance scanner checks the BRD against configurable rules — organizational naming conventions, required metadata fields, and standards references:
+The compliance scanner checks the BRD against configurable rules: organizational naming conventions, required metadata fields, and standards references:
 
 The compliance scanner runs rule-based checks against the full BRD text: presence of version number, author, and date in metadata; consistency of requirement ID formats (flagging if FR-001 and NFR-01 use different digit counts); presence of acceptance criteria anywhere in the document; and existence of traceability references. Each failed check generates a finding with a specific, actionable recommendation for how to fix it.
 
@@ -428,7 +428,7 @@ def _score_to_rating(score: float) -> str:
 
 ## Step 4: Validation and Quality
 
-Before trusting the analyzer's output, you need to validate its findings. This step implements self-checks and a confidence calibration layer that uses the LLM to review its own findings (Chapter 15).
+Before trusting the output of the analyzer, you need to validate its findings. This step implements self-checks and a confidence calibration layer that uses the LLM to review its own findings (Chapter 15).
 
 The validation module performs two cleanup passes: **deduplication** removes findings with the same location and similar descriptions, and **severity calibration** sends the top 10 major/critical findings to the LLM for review, asking it to assess whether each severity rating is appropriate. If the LLM recommends a downgrade (e.g., from "major" to "minor"), the finding is adjusted. This reduces false positives and builds trust in the analyzer's output.
 
@@ -521,12 +521,12 @@ if __name__ == "__main__":
 -   **Add industry-specific rule packs.** Create rule sets for healthcare (HIPAA references), finance (SOX compliance), or government (Section 508 accessibility). Store them as YAML configuration files so users can select the appropriate pack.
 -   **Build a trend dashboard.** Store analysis results over time and plot quality scores per project. Showing that BRD quality improved from 45% to 82% over three sprints tells a powerful story.
 
-**Portfolio presentation tip:** Show a before-and-after. Present the sample BRD with all its issues, then show the analyzer's report, then show the improved BRD. The visual progression from messy to clean is compelling. Include the quality scorecard as a screenshot — hiring managers love dashboards.
+**Portfolio presentation tip:** Show a before-and-after. Present the sample BRD with all its issues, then show the report from the analyzer, then show the improved BRD. The visual progression from messy to clean is compelling. Include the quality scorecard as a screenshot. Hiring managers respond well to dashboards.
 
 ## Summary
 
 -   You built a multi-dimensional BRD analyzer that checks completeness, ambiguity, and compliance in a single pass.
 -   The hybrid approach — rule-based checks for known patterns, LLM analysis for subtle issues — balances speed, cost, and accuracy.
--   The quality scorecard turns subjective "this BRD looks okay" assessments into objective, repeatable measurements.
+-   The quality scorecard turns subjective assessments ("this BRD looks okay") into objective, repeatable measurements.
 -   Severity validation using LLM self-review reduces false positives and builds trust in automated findings.
 -   The modular architecture makes it easy to add new rule packs, industry standards, or custom checks without touching existing code.

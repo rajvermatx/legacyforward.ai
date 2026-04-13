@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 3: Intelligent Test Suite Generator
 
-Test suites decay. New features get added without corresponding tests, defect patterns repeat in the same modules, and nobody has time to reprioritize the regression suite. In this capstone, you will build a system that generates, prioritizes, and maintains test suites by learning from your application's change history and defect data — turning reactive QA into proactive quality engineering.
+Test suites decay. New features get added without corresponding tests, defect patterns repeat in the same modules, and nobody has time to reprioritize the regression suite. In this capstone, you will build a system that generates, prioritizes, and maintains test suites by learning from your application's change history and defect data, turning reactive QA into proactive quality engineering.
 
 Building time: ~2 hours Chapters used: 9, 10, 12, 15
 
@@ -29,7 +29,7 @@ Figure C3.1 — Three input channels (code changes, defect history, existing tes
 
 ## Architecture Overview
 
-The system has three input channels — code changes, defect history, and existing test coverage — that feed into a central intelligence layer. The intelligence layer uses an LLM to synthesize these signals into prioritized test generation decisions.
+The system has three input channels: code changes, defect history, and existing test coverage. These feed into a central intelligence layer. The intelligence layer uses an LLM to synthesize these signals into prioritized test generation decisions.
 
 **Data models:**
 
@@ -430,12 +430,12 @@ if __name__ == "__main__":
 -   **Add visual coverage maps.** Generate a heatmap showing test coverage across modules, color-coded by risk level. Use matplotlib or Plotly to create an interactive visualization. Visual outputs make strong portfolio demos.
 -   **Support multiple test frameworks.** Generate test code directly in pytest, JUnit, or Cypress format instead of plain-text test cases. This makes the output immediately executable.
 
-**Portfolio presentation tip:** Demo this tool on a real open-source project. Clone a popular GitHub repo, run the generator against its recent commit history, and show the risk assessment and generated tests. Using real data (not just samples) demonstrates that your tool works in the wild.
+**Portfolio presentation tip:** Demo this tool on a real open-source project. Clone a popular GitHub repo, run the generator against its recent commit history, and show the risk assessment and generated tests. Using real data rather than samples demonstrates that your tool works in the wild.
 
 ## Summary
 
 -   You built a system that combines three data sources — code changes, defect history, and test coverage — to make intelligent test generation decisions.
 -   Risk-based prioritization ensures testing effort focuses where it matters most, rather than generating tests uniformly.
--   The test data generator uses Faker for speed and the LLM for domain-specific field selection, balancing efficiency and quality.
+-   The test data generator uses Faker for speed and the LLM for domain-specific field selection, which balances efficiency and quality.
 -   Validation checks catch coverage gaps and duplicate tests before the suite reaches human reviewers.
 -   The modular architecture allows each component to be tested, replaced, or extended independently.

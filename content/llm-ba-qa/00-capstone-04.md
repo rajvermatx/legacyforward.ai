@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 4: AI-Powered Sprint Assistant
 
-Sprint ceremonies consume hours every week — planning poker drags on, standup notes get lost, retrospective action items go untracked, and cross-team dependencies slip through the cracks. In this capstone, you will build an assistant that automates the tedious parts of sprint management so teams can focus on the conversations that matter.
+Sprint ceremonies consume hours every week. Planning poker drags on, standup notes get lost, retrospective action items go untracked, and cross-team dependencies slip through the cracks. In this capstone, you will build an assistant that automates the tedious parts of sprint management so teams can focus on the conversations that matter.
 
 Building time: ~2 hours Chapters used: 6, 8, 11, 14
 
@@ -29,7 +29,7 @@ Figure C4.1 — Hub-and-spoke architecture. The Sprint Assistant connects five s
 
 ## Architecture Overview
 
-The assistant is organized around the sprint lifecycle. Each ceremony has a dedicated module, and a central sprint context store connects them — so the retrospective analyzer knows what was planned, the planner knows what went wrong last sprint, and the standup summarizer knows what was committed.
+The assistant is organized around the sprint lifecycle. Each ceremony has a dedicated module, and a central sprint context store connects them. The retrospective analyzer knows what was planned, the planner knows what went wrong last sprint, and the standup summarizer knows what was committed.
 
 **Data models:**
 
@@ -329,7 +329,7 @@ The dashboard generator produces a comprehensive sprint health report combining 
 
 ## Step 4: Validation and Quality
 
-The validation step checks the sprint plan for common mistakes — overcommitment, unresolved dependencies, and missing estimation data:
+The validation step checks the sprint plan for common mistakes: overcommitment, unresolved dependencies, and missing estimation data:
 
 Sprint plan validation checks five common mistakes: **overcommitment** (utilization above 100%), **high utilization** (above 95%, leaving no buffer), **undercommitment** (below 60%, wasting capacity), **missing estimates** (stories without point values in the sprint), **large stories** (8+ points that risk not completing), and **deferred dependencies** (included stories that depend on deferred stories). Each issue includes a severity level and a specific recommendation for how to fix it.
 
@@ -429,7 +429,7 @@ if __name__ == "__main__":
 -   **Build a sprint comparison view.** Compare metrics across the last 5-10 sprints: velocity trend, blocker frequency, action item completion rate, team morale signal. This turns the assistant from a single-sprint tool into a continuous improvement engine.
 -   **Add natural language queries.** Let users ask questions like "Which stories are at risk?" or "What blocked us most last sprint?" and have the LLM answer from the sprint context store. This turns the data into a conversational interface.
 
-**Portfolio presentation tip:** Record a 3-minute video walkthrough. Show the tool running against sample data, then show the generated dashboard. Emphasize the cross-team dependency detection — this is the feature that gets the most attention from engineering managers, because it solves a problem that is painful, expensive, and almost never automated.
+**Portfolio presentation tip:** Record a 3-minute video walkthrough. Show the tool running against sample data, then show the generated dashboard. Emphasize the cross-team dependency detection. This is the feature that gets the most attention from engineering managers, because it solves a problem that is painful, expensive, and almost never automated.
 
 ## Summary
 
@@ -437,5 +437,5 @@ if __name__ == "__main__":
 -   LLM-powered story estimation provides a useful starting point that teams can adjust, saving 30-60 minutes of planning poker per sprint.
 -   The standup analyzer surfaces blockers and risks that might otherwise go unnoticed until they become emergencies.
 -   Retrospective theme analysis with historical comparison turns scattered feedback into actionable patterns.
--   Cross-team dependency mapping catches alignment risks early — the kind of problem that traditionally only surfaces during integration testing.
+-   Cross-team dependency mapping catches alignment risks early. This is the kind of problem that traditionally only surfaces during integration testing.
 -   The sprint health dashboard gives stakeholders a single-page view of sprint status, replacing multiple manual reports.

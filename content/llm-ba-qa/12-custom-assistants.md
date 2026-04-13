@@ -7,7 +7,7 @@ order: 12
 part: "Part 04 Advanced Patterns"
 ---
 
-Part 4 — Advanced Patterns
+Part 4: Advanced Patterns
 
 # Building Custom AI Assistants
 
@@ -35,26 +35,26 @@ Figure 14.2 — Multi-step reasoning chains break complex tasks into discrete st
 
 ## 14.1 Beyond One-Off Prompts
 
-Most BA and QA professionals start with LLMs by pasting text into ChatGPT and copying the result back. This works for simple tasks, but it breaks down when the workflow requires multiple steps, external data, or consistency across interactions.
+Most BA and QA professionals start with LLMs by pasting text into ChatGPT and copying the result back. This works for simple tasks. It breaks down when the workflow requires multiple steps, external data, or consistency across interactions.
 
 Consider a typical BA workflow: gathering requirements from a stakeholder interview transcript. A one-off prompt approach requires you to manually paste the transcript, copy out the requirements, paste them into Jira, go back to the LLM to generate acceptance criteria, copy those into each story, then return to generate test cases. Each step is disconnected. A custom assistant handles the entire flow in one conversation:
 
 | Capability | One-Off Prompts | Custom Assistant |
 | --- | --- | --- |
-| Context retention | None — each prompt is independent | Remembers the full conversation and prior outputs |
+| Context retention | None: each prompt is independent | Remembers the full conversation and prior outputs |
 | Tool access | Manual copy-paste to/from external systems | Reads from Jira, writes to Confluence, queries databases |
 | Multi-step workflows | User orchestrates each step manually | Assistant follows a defined workflow automatically |
 | Consistency | Varies with each prompt | System prompt ensures consistent format and tone |
 | Error handling | User must notice and correct errors | Built-in validation and fallback logic |
 | Auditability | No history unless manually saved | Full conversation logs with timestamps |
 
-The shift from one-off prompts to custom assistants is the difference between using a calculator and using a spreadsheet. Both do math, but only one remembers your data, applies formulas across cells, and updates automatically.
+The shift from one-off prompts to custom assistants is the difference between using a calculator and using a spreadsheet. Both do math. Only one remembers your data, applies formulas across cells, and updates automatically.
 
-> **Start with the workflow, not the technology.** Before writing any code, map out the manual workflow you want to automate. Identify the inputs, outputs, decision points, and external systems involved. The most common mistake is building an assistant that is impressive in a demo but does not match how people actually work. Shadow a BA or QA analyst for a day and document every step they take — then decide which steps the assistant should handle.
+> **Start with the workflow, not the technology.** Before writing any code, map out the manual workflow you want to automate. Identify the inputs, outputs, decision points, and external systems involved. The most common mistake is building an assistant that is impressive in a demo but does not match how people actually work. Shadow a BA or QA analyst for a day and document every step they take. Then decide which steps the assistant should handle.
 
 ## 14.2 Designing Assistant Workflows
 
-An assistant workflow is a state machine. At each state, the assistant either waits for user input, performs an action, or makes a decision about what to do next. Designing these workflows explicitly — rather than letting the LLM improvise — is key to reliability.
+An assistant workflow is a state machine. At each state, the assistant either waits for user input, performs an action, or makes a decision about what to do next. Designing these workflows explicitly, rather than letting the LLM improvise, is key to reliability.
 
 The workflow is defined as a series of named states (such as `GATHER_CONTEXT`, `ANALYZE_REQUIREMENTS`, `GENERATE_STORIES`, `REVIEW_AND_REFINE`, `EXPORT`). Each state has a description, an associated system prompt, a set of available tools, and transition rules defining which states can follow. A handler function runs the logic for each state, and the workflow controller moves through states based on LLM decisions and user input.
 
@@ -68,11 +68,11 @@ Each state maps to a specific system prompt and set of available tools. This pre
 | REVIEW | Present artifacts clearly, accept feedback | Diff viewer, comment tracker | User approves or requests changes |
 | EXPORT | Format and push to external systems | Jira API, Confluence API, file writer | Export confirmed |
 
-> **Always include an escape hatch.** Users must be able to override the workflow — go back to a previous step, skip a step, or abandon the workflow entirely. An assistant that forces users through a rigid sequence will frustrate them. Model the escape transitions explicitly (e.g., from any state back to GATHER\_CONTEXT) rather than hoping the LLM handles it gracefully.
+> **Always include an escape hatch.** Users must be able to override the workflow: go back to a previous step, skip a step, or abandon the workflow entirely. An assistant that forces users through a rigid sequence will frustrate them. Model the escape transitions explicitly (e.g., from any state back to GATHER\_CONTEXT) rather than hoping the LLM handles it gracefully.
 
 ## 14.3 Multi-Step Reasoning Chains
 
-Complex BA and QA tasks require the assistant to break a problem into subtasks, execute them in sequence, and combine the results. This is "chain of thought" at the workflow level — not just inside a single prompt, but across multiple LLM calls.
+Complex BA and QA tasks require the assistant to break a problem into subtasks, execute them in sequence, and combine the results. This is "chain of thought" at the workflow level: not just inside a single prompt, but across multiple LLM calls.
 
 The implementation follows the chain pattern from Figure 14.2: each step receives the output of the previous step as input. The chain runner iterates through steps sequentially, calling the LLM once per step with a focused prompt. If any step fails, the chain halts and reports which step failed and why. Results accumulate in a dictionary that grows richer at each step.
 
@@ -87,7 +87,7 @@ Multi-step chains provide several advantages over single-prompt approaches:
 
 ## 14.4 Tool Integration Patterns
 
-Tools extend the assistant's capabilities beyond text generation. A tool is any function the assistant can call: reading from a database, creating a Jira ticket, querying an API, or running a calculation. The LLM decides when to call a tool and how to use the result.
+Tools extend the assistant's capabilities beyond text generation. A tool is any function the assistant can call: reading from a database, creating a Jira ticket, querying an API, or running a calculation. The LLM decides when to call a tool and how to interpret the result.
 
 ```python
 from openai import OpenAI
@@ -323,11 +323,11 @@ print(response)
 
 ## 14.5 Integrating LLMs with Your Existing Tools
 
-The tool integration patterns in Section 14.4 are general-purpose. But most BA and QA teams live inside a specific ecosystem — Jira for work tracking, Azure DevOps for pipelines, Confluence for documentation. This section shows concrete integration patterns for the tools analysts use every day.
+The tool integration patterns in Section 14.4 are general-purpose. Most BA and QA teams live inside a specific ecosystem: Jira for work tracking, Azure DevOps for pipelines, Confluence for documentation. This section shows concrete integration patterns for the tools analysts use every day.
 
 ### Jira: Auto-Generating User Stories and Classifying Bugs
 
-Jira is the centre of gravity for most agile teams. Two LLM integrations deliver immediate value:
+Jira is the centre of gravity for most agile teams. Two LLM integrations deliver immediate value.
 
 **Auto-generating user stories from meeting notes.** After a stakeholder interview or sprint planning session, paste the raw transcript or notes into a prompt that extracts action items and converts each into a structured user story with acceptance criteria. The assistant then calls the Jira API to create each story in the correct project, with labels, priority, and story points pre-populated. The analyst reviews and adjusts before moving stories to "Ready for Refinement."
 
@@ -335,15 +335,15 @@ Jira is the centre of gravity for most agile teams. Two LLM integrations deliver
 
 ### Azure DevOps: Test Plans and Work Item Linking
 
-For teams on Microsoft's stack, Azure DevOps integration follows similar patterns through its REST API:
+For teams on Microsoft's stack, Azure DevOps integration follows similar patterns through its REST API.
 
-**Generating test plans from requirements.** The LLM reads a set of work items tagged as requirements, generates test cases for each (including boundary conditions and negative scenarios), and creates them as test case work items linked to the originating requirement. This builds traceability automatically — no manual matrix maintenance required.
+**Generating test plans from requirements.** The LLM reads a set of work items tagged as requirements, generates test cases for each (including boundary conditions and negative scenarios), and creates them as test case work items linked to the originating requirement. This builds traceability automatically, with no manual matrix maintenance required.
 
 **Linking related work items.** The LLM analyses new work items against existing ones and suggests parent-child relationships, predecessor-successor links, and duplicate candidates. This is especially valuable during backlog grooming, when dozens of new items need to be connected to the existing work item hierarchy.
 
 ### Confluence: Summarisation and Documentation Currency
 
-Documentation goes stale because updating it is tedious. LLM integrations can keep Confluence spaces current:
+Documentation goes stale because updating it is tedious. LLM integrations can keep Confluence spaces current.
 
 **Auto-summarising pages.** For long specification documents or meeting notes, the LLM generates a "TL;DR" summary block at the top of each page. When the page content is updated, the summary regenerates. Stakeholders who only need the headline can scan summaries without reading full documents.
 
@@ -463,7 +463,7 @@ if __name__ == "__main__":
     main()
 ```
 
-> **Start read-only, graduate to write.** When first connecting an LLM workflow to Jira or Azure DevOps, begin with read-only operations (search, query). Once you trust the output quality, add write operations (create, update) with a mandatory confirmation step. The Jira creation lines in the example above are commented out deliberately — uncomment them only after you have validated the generated test cases on several stories.
+> **Start read-only, graduate to write.** When first connecting an LLM workflow to Jira or Azure DevOps, begin with read-only operations (search, query). Once you trust the output quality, add write operations (create, update) with a mandatory confirmation step. The Jira creation lines in the example above are commented out deliberately. Uncomment them only after you have validated the generated test cases on several stories.
 
 ## 14.6 Memory and Context Management
 
@@ -628,7 +628,7 @@ Memory management strategies and when to use each:
 
 ## 14.7 User Experience Design
 
-An assistant that produces perfect outputs but is confusing to use will be abandoned within a week. UX design for AI assistants follows different rules than traditional software UX because the interaction is conversational and the outputs are probabilistic.
+An assistant that produces perfect outputs but is confusing to use will be abandoned within a week. UX design for AI assistants follows different rules than traditional software UX. The interaction is conversational and the outputs are probabilistic.
 
 The UX layer wraps assistant interactions with clear formatting: user messages are visually distinct from assistant responses, tool calls show progress indicators ("Searching Jira..."), and errors display in a friendly format with suggested next steps. The assistant always confirms before taking destructive actions (like creating or updating tickets) and provides a summary of what it did at the end of multi-step workflows.
 
@@ -646,7 +646,7 @@ Common UX mistakes in AI assistants and how to avoid them:
 
 ## 14.8 Deployment and Monitoring
 
-Deploying a custom assistant means running it reliably for multiple users while monitoring quality, cost, and performance. Unlike traditional software, AI assistants can degrade silently — producing subtly worse answers without throwing errors — so monitoring requires quality metrics, not just uptime checks.
+Deploying a custom assistant means running it reliably for multiple users while monitoring quality, cost, and performance. Unlike traditional software, AI assistants can degrade silently, producing subtly worse answers without throwing errors. Monitoring therefore requires quality metrics, not just uptime checks.
 
 Production deployment requires three monitoring layers: **operational metrics** (response latency, error rates, uptime), **quality metrics** (user satisfaction ratings, task completion rates, hallucination frequency), and **cost metrics** (tokens consumed per conversation, cost per task category, monthly spend trends). Log every conversation turn with timestamps, token counts, and tool calls. Set alerts for latency spikes above 10 seconds, error rates above 5%, and daily cost exceeding your budget threshold. Review a random sample of 20 conversations weekly to catch quality degradation that automated metrics miss.
 
@@ -661,7 +661,7 @@ Key monitoring dimensions for production assistants:
 | Usage | Queries per day, unique users, peak hours | Traffic spike > 3x normal |
 | Tools | Tool call success rate, tool latency | Tool failure rate > 10% |
 
-> **Monitor quality, not just uptime.** A traditional web service is either up or down. An AI assistant can be "up" while returning increasingly poor answers — for example, if the model provider changes the model version, if source documents become stale, or if user queries shift to topics outside the assistant's training. Schedule weekly reviews of low-rated queries and randomly sample 10 conversations per week for manual quality review.
+> **Monitor quality, not just uptime.** A traditional web service is either up or down. An AI assistant can be "up" while returning increasingly poor answers, for example if the model provider changes the model version, if source documents become stale, or if user queries shift to topics outside the assistant's training. Schedule weekly reviews of low-rated queries and randomly sample 10 conversations per week for manual quality review.
 
 ## Project: BA/QA Assistant
 
@@ -691,10 +691,10 @@ Your BA/QA Assistant project integrates all the patterns from this chapter: a wo
 
 ## Summary
 
--   **Custom assistants outperform one-off prompts** for recurring workflows because they retain context, call external tools, and follow structured processes — eliminating the copy-paste overhead between the LLM and external systems.
+-   **Custom assistants outperform one-off prompts** for recurring workflows because they retain context, call external tools, and follow structured processes, eliminating the copy-paste overhead between the LLM and external systems.
 -   **Design workflows as state machines** with explicit states, transitions, and available tools per state. This prevents the assistant from skipping steps or going off-track.
 -   **Multi-step reasoning chains** break complex tasks (transcript to stories to test cases) into focused subtasks, improving quality and debuggability while enabling step-by-step validation.
--   **Tool integration** extends the assistant beyond text generation — reading from Jira, writing to Confluence, querying databases — but always confirm before write operations.
+-   **Tool integration** extends the assistant beyond text generation: reading from Jira, writing to Confluence, and querying databases. Always confirm before write operations.
 -   **Memory management** combines summarization of older messages, persistent fact extraction, and full history for recent context to work within context window limits.
 -   **UX design for AI assistants** requires transparency (confidence indicators, source citations), progressive disclosure (one step at a time), and escape hatches (undo, override, restart).
 -   **Production monitoring** must track quality (user ratings, sampled reviews), not just reliability (uptime, error rate), because AI assistants can degrade silently.

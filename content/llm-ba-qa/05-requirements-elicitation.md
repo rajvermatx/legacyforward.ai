@@ -7,11 +7,11 @@ order: 5
 part: "Part 02 Business Analysis"
 ---
 
-Part 2 — Business Analysis with LLMs
+Part 2: Business Analysis with LLMs
 
 # Chapter 5: Requirements Elicitation and Analysis
 
-Requirements are the foundation of every successful project — and the source of most project failures. In this chapter you will learn how to harness LLMs to extract, classify, validate, and trace requirements at speeds and consistency levels that manual analysis cannot match.
+Requirements are the foundation of every successful project. They are also the source of most project failures. In this chapter you will learn how to harness LLMs to extract, classify, validate, and trace requirements at speeds and consistency levels that manual analysis cannot match.
 
 Reading time: ~25 min Project: Smart Requirements Extractor
 
@@ -34,13 +34,13 @@ The Standish Group's CHAOS reports consistently show that incomplete or misunder
 -   **Traceability:** Mapping a requirement from its origin through design, implementation, and testing is labour-intensive and error-prone when done manually.
 -   **Change velocity:** Agile environments produce a constant stream of requirement revisions that must be reconciled with existing baselines.
 
-LLMs do not replace the BA's judgment, domain expertise, or stakeholder relationships. What they *do* offer is a set of cognitive power tools that dramatically accelerate the mechanical parts of elicitation and analysis — freeing the analyst to focus on the nuanced, human-centric aspects of the role.
+LLMs do not replace the BA's judgment, domain expertise, or stakeholder relationships. What they do offer is a set of cognitive power tools that dramatically accelerate the mechanical parts of elicitation and analysis. This frees the analyst to focus on the nuanced, human-centric aspects of the role.
 
-> **Key Insight:** Think of an LLM as a tireless junior analyst who can read 500 pages in seconds, produce a first-pass extraction, and flag inconsistencies — but who still needs your expertise to validate, prioritize, and negotiate.
+> **Key Insight:** Think of an LLM as a tireless junior analyst who can read 500 pages in seconds, produce a first-pass extraction, and flag inconsistencies. The LLM still needs your expertise to validate, prioritize, and negotiate.
 
 ### The LLM-Augmented Requirements Lifecycle
 
-Throughout this chapter we will build on a five-stage model that mirrors the traditional BA workflow while inserting LLM capabilities at each stage:
+Throughout this chapter we build on a five-stage model that mirrors the traditional BA workflow while inserting LLM capabilities at each stage:
 
 | Stage | Traditional Approach | LLM-Augmented Approach |
 | --- | --- | --- |
@@ -56,11 +56,11 @@ Figure 5-1. Requirements Extraction Pipeline — from raw source documents throu
 
 ## 5.2 Extracting Requirements from Documents
 
-The most immediate win an LLM offers a BA is the ability to ingest large, unstructured documents — RFPs, regulatory filings, meeting transcripts, legacy system manuals — and produce a structured list of candidate requirements. The key word here is *candidate*: the LLM output is a starting point for human review, not a finished artifact.
+The most immediate win an LLM offers a BA is the ability to ingest large, unstructured documents: RFPs, regulatory filings, meeting transcripts, and legacy system manuals. It produces a structured list of candidate requirements. The key word is *candidate*: the LLM output is a starting point for human review, not a finished artifact.
 
 ### Designing the Extraction Prompt
 
-A well-structured extraction prompt has four parts: **role**, **task**, **constraints**, and **output format**. The role establishes the LLM as a requirements engineering specialist. The task section tells it to read the document and extract every requirement — explicit or implied — producing a sequential ID, a clarified requirement statement, a type classification (Functional, Non-Functional, Constraint, or Assumption), a source reference back to the original text, and a confidence rating. Constraints prevent the model from inventing requirements that are not supported by the source and instruct it to flag ambiguous items as low-confidence with an explanatory note. Finally, the output format requests a clean JSON array with no surrounding commentary.
+A well-structured extraction prompt has four parts: **role**, **task**, **constraints**, and **output format**. The role establishes the LLM as a requirements engineering specialist. The task section tells it to read the document and extract every requirement, explicit or implied, producing a sequential ID, a clarified requirement statement, a type classification (Functional, Non-Functional, Constraint, or Assumption), a source reference back to the original text, and a confidence rating. Constraints prevent the model from inventing requirements that are not supported by the source and instruct it to flag ambiguous items as low-confidence with an explanatory note. Finally, the output format requests a clean JSON array with no surrounding commentary.
 
 When calling the LLM, use a low temperature (0.1) for consistency across runs, and set the response format to JSON to guarantee parseable output. The system message reinforces the extraction role, while the user message inserts the document text into the template.
 
@@ -85,7 +85,7 @@ In our benchmarks across 12 real-world RFP documents, GPT-4o achieved 89 percent
 
 ## 5.3 Ambiguity Detection and Resolution
 
-Ambiguity is the silent killer of software projects. A requirement like "The system shall respond quickly" is meaningless without a quantified threshold. LLMs excel at flagging these issues because they can compare a requirement against a taxonomy of common ambiguity types.
+Ambiguity is the silent killer of software projects. A requirement like "The system shall respond quickly" is meaningless without a quantified threshold. LLMs excel at flagging these issues. They compare a requirement against a taxonomy of common ambiguity types.
 
 ### Taxonomy of Requirement Ambiguities
 
@@ -101,7 +101,7 @@ Ambiguity is the silent killer of software projects. A requirement like "The sys
 
 The ambiguity scanning prompt instructs the LLM to act as a requirements quality auditor. For each requirement in the set, the model checks against the five ambiguity types listed above and returns structured results: the requirement ID, the specific ambiguity type, the exact problematic phrase, a concrete rewrite suggestion, and a severity rating (High, Medium, or Low). Requirements with no issues are omitted from the results, keeping the output focused on items that need attention.
 
-Use a temperature of 0.0 for this task — you want deterministic, consistent analysis rather than creative variation. Request JSON output format so the results can be programmatically merged back into your requirements tracker.
+Use a temperature of 0.0 for this task: you want deterministic, consistent analysis rather than creative variation. Request JSON output format so the results can be programmatically merged back into your requirements tracker.
 
 ![Diagram 2](/diagrams/llm-ba-qa/requirements-elicitation-2.svg)
 
@@ -135,7 +135,7 @@ Once requirements are extracted and de-ambiguated, the next step is classificati
 
 ### Multi-Dimensional Classification Approach
 
-The classification prompt sends the full set of extracted requirements to the LLM and asks it to assign five dimensions simultaneously for each item: type, domain, MoSCoW priority, complexity, and a one-sentence rationale explaining the choices. The model returns a JSON array that can be merged back into the master requirements list programmatically — matching on requirement ID and updating each record with its new classification fields.
+The classification prompt sends the full set of extracted requirements to the LLM and asks it to assign five dimensions simultaneously for each item: type, domain, MoSCoW priority, complexity, and a one-sentence rationale explaining the choices. The model returns a JSON array that can be merged back into the master requirements list programmatically, matching on requirement ID and updating each record with its new classification fields.
 
 Use a temperature of 0.0 for classification to maximise consistency. After the merge, any requirement where the classification rationale seems weak or the domain assignment is unexpected should be flagged for manual BA review.
 
@@ -167,13 +167,13 @@ The resulting JSON can be exported as an HTML table for stakeholder review or co
 
 ### Keeping the Matrix Current
 
-A stale traceability matrix is worse than none at all because it gives false confidence. Use a change-detection pipeline: whenever a requirement is added, modified, or deleted, re-run the LLM on the affected rows only, passing the existing matrix as context so the model can produce an incremental update rather than regenerating from scratch.
+A stale traceability matrix is worse than none at all because it gives false confidence. Use a change-detection pipeline. Whenever a requirement is added, modified, or deleted, re-run the LLM on the affected rows only. Pass the existing matrix as context so the model produces an incremental update rather than regenerating from scratch.
 
-> **Cross-Reference:** For real-world examples of how enterprise architects apply requirements analysis at scale — including regulatory compliance and legacy modernisation — see *The AI-First Enterprise*, [Chapter 14: Case Studies](/ai-enterprise-architect/case-studies). The healthcare payer and financial services cases are particularly relevant to BAs working in regulated industries.
+> **Cross-Reference:** For real-world examples of how enterprise architects apply requirements analysis at scale, including regulatory compliance and legacy modernisation, see *The AI-First Enterprise*, [Chapter 14: Case Studies](/ai-enterprise-architect/case-studies). The healthcare payer and financial services cases are particularly relevant to BAs working in regulated industries.
 
 ## 5.6 Gap Analysis Automation
 
-Gap analysis answers the question: "What is missing?" It compares a requirement set against a reference — a standard, a competitor product, a regulatory framework, or a previous version of the system — and identifies uncovered areas.
+Gap analysis answers the question: "What is missing?" It compares a requirement set against a reference and identifies uncovered areas. The reference may be a standard, a competitor product, a regulatory framework, or a previous version of the system.
 
 ### LLM-Driven Gap Detection
 
@@ -199,11 +199,11 @@ Even the best-extracted, perfectly-classified requirements are worthless if stak
 
 ### Audience-Aware Summaries
 
-Different stakeholders need different views of the same requirement set. The summary generation prompt accepts an audience parameter — Executive, Technical, or Legal — and applies audience-specific rules. For executives, the summary focuses on business outcomes, costs, and risks using bullet points limited to one page with no technical jargon. For technical audiences, it organises requirements by subsystem and includes system components, interfaces, and constraints. For legal audiences, it highlights compliance obligations, liability considerations, and specific regulatory references.
+Different stakeholders need different views of the same requirement set. The summary generation prompt accepts an audience parameter (Executive, Technical, or Legal) and applies audience-specific rules. For executives, the summary focuses on business outcomes, costs, and risks using bullet points limited to one page with no technical jargon. For technical audiences, it organises requirements by subsystem and includes system components, interfaces, and constraints. For legal audiences, it highlights compliance obligations, liability considerations, and specific regulatory references.
 
 ### Change-Highlighted Review Packages
 
-When preparing for a follow-up review, it is critical to show stakeholders what has changed since the last version. The change summary process works in two steps. First, it programmatically compares the previous and current requirement sets to identify three categories: added requirements (IDs present in the current set but not the previous), removed requirements (IDs present in the previous set but not the current), and modified requirements (same ID but different text). Second, it passes this structured change data to the LLM with a prompt to narrate the changes in a clear, professional format suitable for a stakeholder review meeting. The result is a human-readable summary that stakeholders can scan in minutes rather than having to diff two large documents manually.
+When preparing for a follow-up review, showing stakeholders what has changed since the last version is critical. The change summary process works in two steps. First, it programmatically compares the previous and current requirement sets to identify three categories: added requirements (IDs present in the current set but not the previous), removed requirements (IDs present in the previous set but not the current), and modified requirements (same ID but different text). Second, it passes this structured change data to the LLM with a prompt to narrate the changes in a clear, professional format suitable for a stakeholder review meeting. The result is a human-readable summary that stakeholders can scan in minutes rather than diffing two large documents manually.
 
 > **Integration Idea:** Connect this workflow to your organisation's collaboration tools. Generate the review summary, post it to a Confluence page or SharePoint site, and send a Slack/Teams notification with a direct link and a deadline for feedback.
 
@@ -304,7 +304,7 @@ Add the `generate_traceability_matrix` function from Section 5.5 and connect it 
 #### Coding
 
 1.  Modify the `extract_requirements` function to accept a custom taxonomy of requirement types (passed as a parameter) instead of using the hardcoded list.
-2.  Write a function that compares two traceability matrices (previous and current) and produces a list of "orphaned" test cases — test cases that no longer map to any requirement.
+2.  Write a function that compares two traceability matrices (previous and current) and produces a list of "orphaned" test cases: test cases that no longer map to any requirement.
 3.  Implement a confidence calibration function that compares the LLM's confidence labels (HIGH/MEDIUM/LOW) against a gold-standard dataset and reports calibration metrics.
 
 #### Design

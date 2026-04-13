@@ -7,11 +7,11 @@ order: 11
 part: "Part 04 Advanced Patterns"
 ---
 
-Part 4 — Advanced Patterns
+Part 4: Advanced Patterns
 
 # RAG for Enterprise Knowledge
 
-Every enterprise sits on a mountain of knowledge locked inside wikis, SharePoint sites, Confluence pages, PDF policies, and Slack threads. Employees spend 20% of their workweek searching for information they know exists somewhere. Retrieval-Augmented Generation (RAG) unlocks that mountain by letting an LLM answer questions grounded in your organization's actual documents — not its training data. In this chapter, you will build a complete RAG pipeline from document ingestion through retrieval-augmented answering, and learn how to evaluate whether the answers are trustworthy.
+Every enterprise sits on a mountain of knowledge locked inside wikis, SharePoint sites, Confluence pages, PDF policies, and Slack threads. Employees spend 20% of their workweek searching for information they know exists somewhere. Retrieval-Augmented Generation (RAG) unlocks that mountain by letting an LLM answer questions grounded in your organization's actual documents, not its training data. In this chapter, you will build a complete RAG pipeline from document ingestion through retrieval-augmented answering, and learn how to evaluate whether the answers are trustworthy.
 
 Reading time: ~25 min Project: Knowledge Base Assistant
 
@@ -35,7 +35,7 @@ Figure 13.2 — Three chunking strategies compared. Fixed-size splits uniformly,
 
 ## 13.1 Why RAG Matters for Analysts
 
-Business analysts and quality analysts deal with enormous volumes of documentation daily: requirements specifications, process documents, compliance policies, test plans, defect databases, and release notes. The challenge is not creating documentation — it is finding the right piece of information at the right moment.
+Business analysts and quality analysts deal with enormous volumes of documentation daily: requirements specifications, process documents, compliance policies, test plans, defect databases, and release notes. The challenge is not creating documentation. It is finding the right piece of information at the right moment.
 
 Consider the alternatives for connecting an LLM to your enterprise knowledge:
 
@@ -46,7 +46,7 @@ Consider the alternatives for connecting an LLM to your enterprise knowledge:
 | RAG | Medium | Near real-time | High (grounded) | Medium |
 | Full context window | High (tokens) | Real-time | Good | Low |
 
-RAG hits the sweet spot for most enterprise use cases. It keeps the LLM grounded in actual documents (reducing hallucination), stays current as documents are updated, and works with any LLM without expensive retraining. For BAs, this means an assistant that can answer "What is the refund policy for enterprise customers?" by citing the actual policy document, not by guessing from training data.
+RAG hits the sweet spot for most enterprise use cases. It keeps the LLM grounded in actual documents (reducing hallucination), stays current as documents are updated, and works with any LLM without expensive retraining. For BAs, this means an assistant that answers "What is the refund policy for enterprise customers?" by citing the actual policy document, not by guessing from training data.
 
 The core RAG loop is deceptively simple:
 
@@ -54,7 +54,7 @@ The core RAG loop is deceptively simple:
 2.  **Retrieve:** When a user asks a question, embed the query and find the most similar document chunks
 3.  **Generate:** Pass the retrieved chunks to the LLM as context along with the question
 
-> **RAG does not replace search — it augments it.** Traditional keyword search (Elasticsearch, Solr) is still excellent at finding exact matches, known document titles, and structured metadata queries. RAG excels at answering questions that span multiple documents, require synthesis, or use different terminology than the source material. The best enterprise systems combine both.
+> **RAG does not replace search. It augments it.** Traditional keyword search (Elasticsearch, Solr) is still excellent at finding exact matches, known document titles, and structured metadata queries. RAG excels at answering questions that span multiple documents, require synthesis, or use different terminology than the source material. The best enterprise systems combine both.
 
 ## 13.2 Building a Knowledge Base
 
@@ -65,16 +65,16 @@ A typical document loader scans a directory, detects file types by extension, an
 Key design decisions for your document loader:
 
 -   **Error handling:** Skip files that fail to parse rather than crashing the entire pipeline. Log warnings so you can fix format issues later.
--   **Metadata richness:** Capture as much metadata as possible at ingestion time — filename, directory, size, last modified date. You cannot add metadata after embedding without re-indexing.
+-   **Metadata richness:** Capture as much metadata as possible at ingestion time: filename, directory, size, and last modified date. You cannot add metadata after embedding without re-indexing.
 -   **Deduplication:** Use content hashing to detect and skip duplicate documents. The same policy document living in three wikis should be indexed once.
 
-A well-organized knowledge base is the foundation of RAG quality. Garbage in, garbage out applies doubly here — if your source documents are poorly formatted, duplicated, or outdated, the LLM will faithfully retrieve and cite bad information.
+A well-organized knowledge base is the foundation of RAG quality. Garbage in, garbage out applies doubly here. If your source documents are poorly formatted, duplicated, or outdated, the LLM will faithfully retrieve and cite bad information.
 
-> **Clean your data before indexing.** Common issues that degrade RAG quality include: duplicate documents (same policy in three wikis), outdated versions (the 2023 process doc still indexed alongside the 2025 update), boilerplate noise (headers, footers, and navigation text from HTML extraction), and encoding artifacts from PDF extraction. Spend time on data cleaning — it has a bigger impact on RAG quality than any model or algorithm choice.
+> **Clean your data before indexing.** Common issues that degrade RAG quality include: duplicate documents (same policy in three wikis), outdated versions (the 2023 process doc still indexed alongside the 2025 update), boilerplate noise (headers, footers, and navigation text from HTML extraction), and encoding artifacts from PDF extraction. Spend time on data cleaning. It has a bigger impact on RAG quality than any model or algorithm choice.
 
 ## 13.3 Document Chunking Strategies
 
-Documents must be split into chunks small enough to fit in an embedding model's context window and focused enough to be relevant to a specific question. This is where most RAG implementations succeed or fail. The Figure 13.2 above shows three primary strategies visually.
+Documents must be split into chunks small enough to fit in an embedding model's context window and focused enough to be relevant to a specific question. This is where most RAG implementations succeed or fail. Figure 13.2 above shows three primary strategies visually.
 
 Each chunk is a self-contained unit of text with a document ID, chunk index, and metadata inherited from the source document. The three main chunking strategies work as follows:
 
@@ -92,11 +92,11 @@ Choosing the right strategy depends on your document types and query patterns:
 | Sentence-level | FAQ pages, short answers | Maximum retrieval precision | Loses surrounding context |
 | Sliding window | Narrative text, conversations | Smooth overlap prevents lost context | Duplicate content in index |
 
-> **Start with semantic chunking and 500-800 character chunks.** This gives you the best balance of precision and context for most enterprise documents. If retrieval quality is low, experiment with parent-child chunking — retrieve on small child chunks for precision, but pass the larger parent chunk to the LLM for richer context.
+> **Start with semantic chunking and 500-800 character chunks.** This gives you the best balance of precision and context for most enterprise documents. If retrieval quality is low, experiment with parent-child chunking. Retrieve on small child chunks for precision, but pass the larger parent chunk to the LLM for richer context.
 
 ## 13.4 Embedding and Retrieval
 
-Embeddings are the bridge between natural language and mathematical similarity. An embedding model converts text into a dense numerical vector such that semantically similar texts produce similar vectors. This allows you to find relevant document chunks by measuring vector distance rather than keyword matching.
+Embeddings are the bridge between natural language and mathematical similarity. An embedding model converts text into a dense numerical vector such that semantically similar texts produce similar vectors. This allows relevant document chunks to be found by measuring vector distance rather than keyword matching.
 
 The embedding and retrieval workflow has four parts:
 
@@ -105,7 +105,7 @@ The embedding and retrieval workflow has four parts:
 3.  **Search:** When a user asks a question, embed the query using the same model, then compute cosine similarity between the query vector and all stored vectors. Return the top-k most similar chunks.
 4.  **Filter:** Apply a similarity threshold (typically 0.65-0.70) to remove low-relevance results that would add noise to the LLM's context window.
 
-The retrieval step is where RAG quality is won or lost. A perfect LLM cannot answer correctly if it is given the wrong chunks. Key factors that affect retrieval quality:
+The retrieval step is where RAG quality is won or lost. A perfect LLM cannot answer correctly if it receives the wrong chunks. Key factors that affect retrieval quality:
 
 | Factor | Impact | How to Optimize |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ The retrieval step is where RAG quality is won or lost. A perfect LLM cannot ans
 
 ## 13.5 Query Enhancement Techniques
 
-Users rarely ask perfect questions. They use vague language, omit context, or ask complex questions that span multiple topics. Query enhancement techniques transform the user's raw query into one or more optimized queries that retrieve better chunks.
+Users rarely ask perfect questions. They use vague language, omit context, or ask complex questions that span multiple topics. Query enhancement techniques transform the user's raw query into one or more optimised queries that retrieve better chunks.
 
 ```python
 from openai import OpenAI
@@ -274,7 +274,7 @@ Each enhancement technique addresses a different retrieval failure mode:
 
 ## 13.6 Evaluating RAG Quality
 
-A RAG system that returns confident-sounding wrong answers is worse than no system at all. You need rigorous evaluation metrics to ensure your RAG pipeline is trustworthy. RAG evaluation has three dimensions: retrieval quality, generation quality, and end-to-end quality.
+A RAG system that returns confident-sounding wrong answers is worse than no system at all. You need rigorous evaluation metrics to ensure your RAG pipeline is trustworthy. RAG evaluation covers three dimensions: retrieval quality, generation quality, and end-to-end quality.
 
 RAG evaluation has three core methods, each addressing a different dimension of quality:
 
@@ -296,11 +296,11 @@ Target quality metrics for enterprise RAG systems:
 
 > **Do not skip evaluation.** Every RAG project should have a test set of at least 50 question-answer pairs with known correct answers and source documents. Without this, you are guessing at quality. Build the test set incrementally: every time a user reports a wrong answer, add it to the test set with the correct answer and source document. This creates a regression test suite for your RAG system.
 
-> **Cross-Reference:** For a deeper dive into GenAI architecture patterns — including when to use RAG versus fine-tuning versus full-context approaches — see *The AI-First Enterprise*, [Chapter 10: GenAI Architectures](/ai-enterprise-architect/genai-architectures). For a production-grade reference architecture with access controls, source citations, and data lineage, see the [Enterprise RAG Blueprint](/blueprints/enterprise-rag).
+> **Cross-Reference:** For a deeper dive into GenAI architecture patterns, including when to use RAG versus fine-tuning versus full-context approaches, see *The AI-First Enterprise*, [Chapter 10: GenAI Architectures](/ai-enterprise-architect/genai-architectures). For a production-grade reference architecture with access controls, source citations, and data lineage, see the [Enterprise RAG Blueprint](/blueprints/enterprise-rag).
 
 ## 13.7 Enterprise RAG Architecture
 
-Moving from a prototype RAG notebook to a production system serving hundreds of analysts requires architectural decisions around scalability, security, freshness, and observability. Here is a reference architecture for enterprise RAG.
+Moving from a prototype RAG notebook to a production system serving hundreds of analysts requires architectural decisions around scalability, security, freshness, and observability. The following section presents a reference architecture for enterprise RAG.
 
 ```python
 """
@@ -519,10 +519,10 @@ Test with questions like "What is our password rotation policy?", "How do I subm
 -   **RAG grounds LLM answers in your actual documents** rather than training data, making it the most practical pattern for enterprise knowledge access without expensive fine-tuning.
 -   **Document chunking is the highest-leverage optimization.** Semantic chunking that respects document structure (headings, sections) outperforms naive fixed-size splitting for most enterprise documents.
 -   **Embedding quality and hybrid search** determine retrieval accuracy. Combine vector similarity search with keyword search (BM25) and re-ranking for best results.
--   **Query enhancement techniques** — especially HyDE (hypothetical document embeddings) — dramatically improve retrieval by bridging the vocabulary gap between questions and documents.
+-   **Query enhancement techniques**, especially HyDE (hypothetical document embeddings), dramatically improve retrieval by bridging the vocabulary gap between questions and documents.
 -   **Evaluation is non-negotiable.** Measure faithfulness (no hallucination), relevance (answers the question), and retrieval quality (right chunks found) with a test set of at least 50 annotated question-answer pairs.
 -   **Enterprise RAG requires access control.** Mirror source-system permissions so users only retrieve documents they are authorized to see.
--   **Observability and logging** — query latency, retrieval scores, user feedback — are essential for continuous improvement of the RAG pipeline.
+-   **Observability and logging** covering query latency, retrieval scores, and user feedback are essential for continuous improvement of the RAG pipeline.
 
 ### Exercises
 

@@ -7,11 +7,11 @@ order: 7
 part: "Part 02 Business Analysis"
 ---
 
-Part 2 — Business Analysis with LLMs
+Part 2: Business Analysis with LLMs
 
 # Chapter 8: Stakeholder Communication and Reporting
 
-The best analysis in the world is worthless if it cannot be communicated effectively. In this chapter you will learn how to use LLMs to generate executive summaries, translate between technical and business language, automate status reports, extract action items from meetings, draft presentation decks, and adapt content for different audiences — all while maintaining accuracy and your professional voice.
+The best analysis in the world is worthless if it cannot be communicated effectively. In this chapter you will learn how to use LLMs to generate executive summaries, translate between technical and business language, automate status reports, extract action items from meetings, draft presentation decks, and adapt content for different audiences. All of this can be done while maintaining accuracy and your professional voice.
 
 Reading time: ~25 min Project: Report Generator
 
@@ -27,7 +27,7 @@ Reading time: ~25 min Project: Report Generator
 
 ## 8.1 The Communication Challenge
 
-Business Analysts sit at the intersection of business and technology, and their primary deliverable is not a document — it is *shared understanding*. Every day, BAs translate between stakeholders who speak different languages: executives care about revenue impact and strategic alignment; developers care about APIs, data models, and edge cases; compliance officers care about regulatory adherence and audit trails.
+Business Analysts sit at the intersection of business and technology. Their primary deliverable is not a document. It is *shared understanding*. Every day, BAs translate between stakeholders who speak different languages. Executives care about revenue impact and strategic alignment. Developers care about APIs, data models, and edge cases. Compliance officers care about regulatory adherence and audit trails.
 
 ### The Cost of Miscommunication
 
@@ -47,11 +47,11 @@ LLMs excel at three communication tasks that consume disproportionate BA time:
 2.  **Tone and audience adaptation:** Rewriting the same content for different audiences without losing accuracy.
 3.  **Information extraction:** Pulling structured data (action items, decisions, risks) from unstructured text (transcripts, email threads).
 
-> **The 80/20 Rule:** LLMs generate the first 80 percent of a communication artifact in minutes. The remaining 20 percent — verifying facts, adding organisational context, adjusting political nuance — requires human expertise and takes the same time it always did. The net result is a 60 to 70 percent time saving on communication tasks.
+> **The 80/20 Rule:** LLMs generate the first 80 percent of a communication artifact in minutes. The remaining 20 percent requires human expertise: verifying facts, adding organisational context, and adjusting political nuance. That final 20 percent takes the same time it always did. The net result is a 60 to 70 percent time saving on communication tasks.
 
 ## 8.2 Executive Summary Generation
 
-An executive summary distils a complex document into its essential elements: the situation, the findings, the recommended action, and the associated risks. Executives typically need to make decisions in minutes, not hours, so the summary must front-load the most important information.
+An executive summary distils a complex document into its essential elements: the situation, the findings, the recommended action, and the associated risks. Executives need to make decisions in minutes, not hours. The summary must front-load the most important information.
 
 ### The Pyramid Principle
 
@@ -69,11 +69,11 @@ When preparing for a steering committee, summarise multiple documents in two pas
 
 ## 8.3 Technical-to-Business Translation
 
-One of the BA's core skills is translating between technical and business language. LLMs can do this bidirectionally — converting a developer's technical description into business-friendly language, or converting a business request into a technical specification.
+One of the BA's core skills is translating between technical and business language. LLMs can do this bidirectionally: converting a developer's technical description into business-friendly language, or converting a business request into a technical specification.
 
 ### Bidirectional Translation
 
-The translation prompt works in both directions — technical-to-business and business-to-technical — with direction-specific guidelines. When translating **technical to business**, the rules are: replace API names with capability descriptions, replace performance metrics with business impact statements, replace system component names with functional descriptions, use "the system" instead of specific module names, and frame everything in terms of user outcomes and business value. When translating **business to technical**, the rules shift: identify implicit technical requirements, replace vague terms with specific measurable criteria, map business capabilities to system components where possible, add notes about likely technical constraints, and use standard technical vocabulary consistently.
+The translation prompt works in both directions, technical-to-business and business-to-technical, with direction-specific guidelines. When translating **technical to business**, the rules are: replace API names with capability descriptions, replace performance metrics with business impact statements, replace system component names with functional descriptions, use "the system" instead of specific module names, and frame everything in terms of user outcomes and business value. When translating **business to technical**, the rules shift: identify implicit technical requirements, replace vague terms with specific measurable criteria, map business capabilities to system components where possible, add notes about likely technical constraints, and use standard technical vocabulary consistently.
 
 In both directions, the model must preserve all factual content, maintain the same logical structure, and include a brief parenthetical explanation for any concept that cannot be simplified without losing accuracy.
 
@@ -89,11 +89,11 @@ In both directions, the model must preserve all factual content, maintain the sa
 
 ## 8.4 Status Report Automation
 
-Status reports are necessary but time-consuming. Most BAs spend 2 to 4 hours per week compiling data from Jira, Confluence, email, and Slack into a coherent weekly report. LLMs can automate the narrative portions while you provide the raw data.
+Status reports are necessary but time-consuming. Most BAs spend 2 to 4 hours per week compiling data from Jira, Confluence, email, and Slack into a coherent weekly report. LLMs automate the narrative portions while the analyst provides the raw data.
 
 ### Data-Driven Status Report
 
-The status report prompt accepts raw project metrics — sprint velocity versus target, stories completed, stories in progress, stories blocked, bugs found and resolved, current blockers, key accomplishments, risks, and upcoming milestones — and generates a structured report with eight sections: a RAG status indicator with justification, the reporting period, an accomplishments narrative, an in-progress summary, blockers and risks, a metrics table, a next-period plan, and any decisions needed from leadership. The prompt explicitly instructs the model not to fabricate information beyond what the raw data provides.
+The status report prompt accepts raw project metrics (sprint velocity versus target, stories completed, stories in progress, stories blocked, bugs found and resolved, current blockers, key accomplishments, risks, and upcoming milestones) and generates a structured report with eight sections: a RAG status indicator with justification, the reporting period, an accomplishments narrative, an in-progress summary, blockers and risks, a metrics table, a next-period plan, and any decisions needed from leadership. The prompt explicitly instructs the model not to fabricate information beyond what the raw data provides.
 
 ### Pulling Data from Jira
 
@@ -103,7 +103,7 @@ To fully automate the process, connect the report generator to your project mana
 
 ## 8.5 Meeting Notes and Action Items
 
-Meetings generate valuable decisions and commitments, but these are routinely lost because notes are incomplete or action items are not tracked. LLMs can process meeting transcripts (from tools like Otter.ai, Fireflies, or Microsoft Teams recordings) and produce structured output.
+Meetings generate valuable decisions and commitments, but these are routinely lost because notes are incomplete or action items are not tracked. LLMs can process meeting transcripts from tools like Otter.ai, Fireflies, or Microsoft Teams recordings and produce structured output.
 
 ### Meeting Transcript Processor
 
@@ -117,7 +117,7 @@ The action item tracker accumulates items across multiple meetings, tagging each
 
 ## 8.6 Presentation Deck Drafting
 
-BAs frequently create presentations for steering committees, sprint reviews, and stakeholder demos. While LLMs cannot generate visual slides directly, they can produce structured outlines with speaker notes that dramatically accelerate deck creation.
+BAs frequently create presentations for steering committees, sprint reviews, and stakeholder demos. LLMs cannot generate visual slides directly. They can, however, produce structured outlines with speaker notes that dramatically accelerate deck creation.
 
 ### Presentation Outline Generator
 
@@ -125,13 +125,13 @@ The presentation outline prompt accepts four contextual inputs: the target audie
 
 ### From Outline to Slides
 
-The JSON outline can be converted to actual slide files using Python libraries such as python-pptx (for Microsoft PowerPoint) or the Google Slides API. Each slide in the outline maps to a slide in the output file, with the title, content, and speaker notes populated automatically. For web-based presentations, the same JSON structure can generate Reveal.js HTML slides. The key advantage of the JSON intermediate format is flexibility — a single generation step supports multiple output formats without re-prompting the LLM.
+The JSON outline can be converted to actual slide files using Python libraries such as python-pptx (for Microsoft PowerPoint) or the Google Slides API. Each slide in the outline maps to a slide in the output file, with the title, content, and speaker notes populated automatically. For web-based presentations, the same JSON structure can generate Reveal.js HTML slides. The key advantage of the JSON intermediate format is flexibility: a single generation step supports multiple output formats without re-prompting the LLM.
 
 > **Advanced Approach:** For teams using Google Slides, you can use the Google Slides API to create slides programmatically from the outline JSON. The python-pptx library shown above works for Microsoft PowerPoint. For web-based presentations, generate Reveal.js HTML slides directly.
 
 ## 8.7 Multi-Audience Adaptation
 
-The ultimate communication skill is taking a single piece of analysis and presenting it effectively to completely different audiences. LLMs make this scalable by allowing you to generate audience-specific versions from a single source of truth.
+The ultimate communication skill is taking a single piece of analysis and presenting it effectively to completely different audiences. LLMs make this scalable by generating audience-specific versions from a single source of truth.
 
 ### Audience Profile Framework
 
@@ -149,9 +149,9 @@ The ultimate communication skill is taking a single piece of analysis and presen
 
 Figure 8-1. Multi-Audience Adaptation — a single technical report is transformed into audience-specific formats, each tailored in tone, detail level, and structure.
 
-Each audience profile defines three elements: a label (such as "C-Suite Executive"), generation guidelines (word limits, content focus, and formatting rules), and a target format (for example, "One-page executive brief" or "Technical specification"). The adaptation prompt applies these profile-specific rules to the source content, producing a version tailored in tone, detail level, and structure while preserving factual accuracy. To generate all versions at once, iterate through the defined profiles and call the adaptation function for each, producing a complete communication package from a single source of truth.
+Each audience profile defines three elements: a label (such as "C-Suite Executive"), generation guidelines (word limits, content focus, and formatting rules), and a target format (for example, "One-page executive brief" or "Technical specification"). The adaptation prompt applies these profile-specific rules to the source content. It produces a version tailored in tone, detail level, and structure while preserving factual accuracy. To generate all versions at once, iterate through the defined profiles and call the adaptation function for each, producing a complete communication package from a single source of truth.
 
-> **Warning:** When generating multiple audience versions from the same source, there is a risk of *information drift* — where the adapted versions subtly diverge in facts or emphasis. After generating all versions, use a verification prompt that compares them for factual consistency. Any discrepancies should be resolved by referring back to the original source.
+> **Warning:** When generating multiple audience versions from the same source, there is a risk of *information drift*, where the adapted versions subtly diverge in facts or emphasis. After generating all versions, use a verification prompt that compares them for factual consistency. Any discrepancies should be resolved by referring back to the original source.
 
 ### Verification Step
 
@@ -159,7 +159,7 @@ After generating all audience versions, run a consistency verification step. Thi
 
 ## Project: Report Generator
 
-Build a multi-format report generator that takes raw project data and meeting transcripts and produces a complete communication package: executive summary, status report, meeting minutes with action items, and a presentation outline — each adapted for the appropriate audience.
+Build a multi-format report generator that takes raw project data and meeting transcripts and produces a complete communication package: executive summary, status report, meeting minutes with action items, and a presentation outline, each adapted for the appropriate audience.
 
 ### Architecture
 
@@ -176,16 +176,16 @@ The main pipeline script accepts three inputs: a JSON file with project metrics,
 1.  Create a sample `project_data.json` with realistic sprint metrics.
 2.  Find or create a sample meeting transcript (even 2 to 3 paragraphs of simulated conversation work).
 3.  Run the pipeline and review each output for accuracy and appropriateness.
-4.  Compare the executive and developer versions of the status report — verify they contain the same facts but different framing.
+4.  Compare the executive and developer versions of the status report. Verify they contain the same facts but different framing.
 5.  Open the PowerPoint file and verify the slide structure matches the outline.
 
 ## Summary
 
--   **Communication is the BA's highest-leverage skill,** and LLMs provide an 80/20 acceleration — generating first drafts in seconds while the BA adds the crucial 20 percent of verification, context, and nuance.
+-   **Communication is the BA's highest-leverage skill.** LLMs provide an 80/20 acceleration, generating first drafts in seconds while the BA adds the crucial 20 percent of verification, context, and nuance.
 -   **Executive summaries** should follow the Pyramid Principle: conclusion first, then evidence, then detail. LLMs can generate this structure reliably.
 -   **Technical-to-business translation** is bidirectional and requires careful review to ensure precision is not lost during simplification.
 -   **Status report automation** combines structured project data with LLM narrative generation, potentially saving 2 to 4 hours per week.
--   **Meeting transcript processing** extracts decisions, action items, and risks — closing the gap between what is discussed and what is tracked.
+-   **Meeting transcript processing** extracts decisions, action items, and risks, closing the gap between what is discussed and what is tracked.
 -   **Presentation outlining** with structured JSON output can feed directly into PowerPoint or Google Slides generation.
 -   **Multi-audience adaptation** from a single source ensures consistency while tailoring tone, detail level, and format for each stakeholder group. Always verify consistency across versions.
 
@@ -199,7 +199,7 @@ The main pipeline script accepts three inputs: a JSON file with project metrics,
 
 #### Coding
 
-1.  Extend the `JiraDataCollector` to include a trend analysis — compare this sprint's metrics to the previous three sprints and include the trend in the status report.
+1.  Extend the `JiraDataCollector` to include a trend analysis. Compare this sprint's metrics to the previous three sprints and include the trend in the status report.
 2.  Write a function that takes meeting notes from three consecutive meetings and generates a "progress tracker" showing how action items evolved across meetings (created, progressed, completed, or stalled).
 3.  Build a "communication style detector" that analyses a stakeholder's previous emails and generates a profile of their preferred communication style (formal/informal, detail level, preferred length). Use this profile to personalise LLM-generated communications.
 

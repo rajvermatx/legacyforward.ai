@@ -7,11 +7,11 @@ order: 6
 part: "Part 02 Business Analysis"
 ---
 
-Part 2 — Business Analysis with LLMs
+Part 2: Business Analysis with LLMs
 
 # User Stories & Process Modeling
 
-Two of the most important BA deliverables are user stories and process models. User stories turn requirements into sprint-ready work items. Process models capture how the business actually operates — and where it needs to improve. In this chapter, you will learn how LLMs can accelerate both: generating, validating, and splitting user stories from requirements, and discovering, modelling, and optimising business processes from documents and data.
+Two of the most important BA deliverables are user stories and process models. User stories turn requirements into sprint-ready work items. Process models capture how the business actually operates and where it needs to improve. In this chapter, you will learn how LLMs can accelerate both: generating, validating, and splitting user stories from requirements, and discovering, modelling, and optimising business processes from documents and data.
 
 Reading time: ~45 min Projects: Agile Story Generator · Process Discovery Engine
 
@@ -33,13 +33,13 @@ Reading time: ~45 min Projects: Agile Story Generator · Process Discovery Engin
 
 ---
 
-## Part A — User Story Generation and Refinement
+## Part A: User Story Generation and Refinement
 
 ## 6.1 From Requirements to Stories
 
-Requirements and user stories serve different purposes. A requirement describes *what* the system must do; a user story describes *who* needs it, *what* they need, and *why*. The canonical template — "As a \[role\], I want \[capability\], so that \[benefit\]" — forces the author to think from the user's perspective.
+Requirements and user stories serve different purposes. A requirement describes *what* the system must do. A user story describes *who* needs it, *what* they need, and *why*. The canonical template, "As a \[role\], I want \[capability\], so that \[benefit\]," forces the author to think from the user's perspective.
 
-The translation from requirements to stories is not one-to-one. A single requirement may generate multiple stories (one per user role or interaction path), and multiple requirements may collapse into a single story when they describe facets of the same user goal.
+The translation from requirements to stories is not one-to-one. A single requirement may generate multiple stories, one per user role or interaction path. Multiple requirements may collapse into a single story when they describe facets of the same user goal.
 
 ### Why LLMs Excel at This Translation
 
@@ -68,7 +68,7 @@ The core generation step converts a requirement into one or more user stories. T
 
 ### Story Generation Approach
 
-The story generation prompt casts the LLM as a senior Product Owner and provides five explicit rules. First, each story must be atomic — delivering exactly one piece of user-visible functionality. Second, if the requirement implies multiple user roles, a separate story is created for each role. Third, compound requirements (those containing "and" joining distinct capabilities) are split into separate stories. Fourth, the "so that" clause must state a concrete business benefit rather than merely restating the capability. Fifth, every story receives a sequential ID and a link back to its source requirement.
+The story generation prompt casts the LLM as a senior Product Owner and provides five explicit rules. First, each story must be atomic, delivering exactly one piece of user-visible functionality. Second, if the requirement implies multiple user roles, a separate story is created for each role. Third, compound requirements (those containing "and" joining distinct capabilities) are split into separate stories. Fourth, the "so that" clause must state a concrete business benefit rather than merely restating the capability. Fifth, every story receives a sequential ID and a link back to its source requirement.
 
 The prompt also accepts contextual inputs: the project domain (for example, "Healthcare Portal" or "Financial Services Platform") and a list of known user roles. These help the LLM generate stories that use consistent role names aligned with your project's terminology.
 
@@ -140,30 +140,30 @@ The INVEST validation prompt sends the LLM each story along with its acceptance 
 | --- | --- | --- |
 | 4.0 – 5.0 | READY | Story can go directly to sprint planning |
 | 3.0 – 3.9 | NEEDS\_REFINEMENT | Address the specific failing criteria before planning |
-| 2.0 – 2.9 | NEEDS\_SPLIT | Story is likely too large or too dependent; split first |
+| 2.0 – 2.9 | NEEDS\_SPLIT | Story is likely too large or too dependent. Split first |
 | < 2.0 | REJECT | Story needs fundamental rework; return to requirements |
 
 > **Key Insight:** The "Testable" criterion is the most reliable LLM evaluation because it is objectively assessable from the acceptance criteria. The "Independent" criterion is the least reliable because it requires knowledge of the full backlog context. Always supply related stories when checking independence.
 
 ## 6.6 Story Mapping with AI
 
-Story mapping, popularised by Jeff Patton, arranges stories along two axes: the *user journey* (horizontal) and *priority* (vertical). It provides a bird's-eye view of the product and helps teams plan releases by drawing horizontal "release lines" across the map.
+Story mapping, popularised by Jeff Patton, arranges stories along two axes: the *user journey* (horizontal) and *priority* (vertical). It provides a bird's-eye view of the product. Teams plan releases by drawing horizontal "release lines" across the map.
 
 ### LLM-Assisted Story Mapping
 
 An LLM can help with two aspects of story mapping: (1) identifying the user activities and steps that form the horizontal backbone, and (2) placing stories under the correct activity at the right priority level.
 
-The story mapping prompt takes the full set of user stories and organises them into a two-level hierarchy. At the top level are **activities** — high-level user goals such as "Manage Account" or "Process Orders." Each activity contains **steps** (specific actions like "Register" or "Log In"), and each step contains the stories assigned to it, tagged with a priority level and a suggested release number. The model also generates a release plan grouping stories into releases: Must-Have stories go into Release 1, Should-Have into Release 2, and Could-Have into Release 3.
+The story mapping prompt takes the full set of user stories and organises them into a two-level hierarchy. At the top level are **activities**, high-level user goals such as "Manage Account" or "Process Orders." Each activity contains **steps** (specific actions like "Register" or "Log In"), and each step contains the stories assigned to it, tagged with a priority level and a suggested release number. The model also generates a release plan grouping stories into releases: Must-Have stories go into Release 1, Should-Have into Release 2, and Could-Have into Release 3.
 
 ### Visualising the Story Map
 
-The JSON output can be rendered as an interactive HTML table, exported to tools like Miro or Mural, or printed as a simple text-based grid organised by activity, step, and release tier. The visual format makes it easy for the team to spot gaps — steps where no stories exist but where a user would logically need functionality.
+The JSON output can be rendered as an interactive HTML table, exported to tools like Miro or Mural, or printed as a simple text-based grid organised by activity, step, and release tier. The visual format makes it easy for the team to spot gaps: steps where no stories exist but where a user would logically need functionality.
 
-> **Tip:** Feed the story map back to the LLM with the prompt "Identify any gaps in the user journey — steps where no stories exist but a user would logically need functionality." This is a powerful way to discover missing stories.
+> **Tip:** Feed the story map back to the LLM with the prompt "Identify any gaps in the user journey: steps where no stories exist but a user would logically need functionality." This is a powerful way to discover missing stories.
 
 ## 6.7 Backlog Grooming Assistant
 
-Backlog grooming (or refinement) is a recurring ceremony where the team reviews, re-prioritises, and refines upcoming stories. An LLM-powered grooming assistant can prepare for these sessions by pre-analysing the backlog and surfacing issues.
+Backlog grooming (or refinement) is a recurring ceremony where the team reviews, re-prioritises, and refines upcoming stories. An LLM-powered grooming assistant can prepare for these sessions by pre-analysing the backlog and surfacing issues before the meeting begins.
 
 ### Pre-Grooming Analysis
 
@@ -171,7 +171,7 @@ The pre-grooming prompt sends the full backlog to the LLM and asks it to produce
 
 ### Interactive Refinement Loop
 
-During the grooming session itself, the assistant operates in a conversational mode. It maintains the full backlog in its context window and responds to team questions: "Which stories depend on STORY-042?", "Suggest a rewrite for this vague story," or "What is the total point estimate for Release 2?" Decisions made during the session — such as splitting a story, changing priority, or deferring an item — are recorded with story ID, decision, and rationale. At the end of the session, the assistant generates meeting minutes summarising all decisions, action items, and responsible owners.
+During the grooming session itself, the assistant operates in a conversational mode. It maintains the full backlog in its context window and responds to team questions: "Which stories depend on STORY-042?", "Suggest a rewrite for this vague story," or "What is the total point estimate for Release 2?" Decisions made during the session (such as splitting a story, changing priority, or deferring an item) are recorded with story ID, decision, and rationale. At the end of the session, the assistant generates meeting minutes summarising all decisions, action items, and responsible owners.
 
 > **Warning:** The grooming assistant should augment, not replace, the Scrum Master. Use it to surface data and suggestions, but let the team make the decisions. Over-reliance on AI in ceremonies can reduce team engagement and ownership.
 
@@ -195,11 +195,11 @@ Create a sample `requirements.json` with 10 requirements covering different type
 
 ---
 
-## Part B — Process Modeling and Optimization
+## Part B: Process Modeling and Optimization
 
 ## 6.8 Understanding Business Processes
 
-A business process is a sequence of activities that transforms inputs into outputs to deliver value to a customer or stakeholder. Processes range from simple (expense approval) to complex (end-to-end order fulfilment spanning multiple departments and systems).
+A business process is a sequence of activities that transforms inputs into outputs to deliver value to a customer or stakeholder. Processes range from simple (expense approval) to complex, such as end-to-end order fulfilment spanning multiple departments and systems.
 
 ### Process Hierarchy
 
@@ -215,9 +215,9 @@ A business process is a sequence of activities that transforms inputs into outpu
 
 BPMN (Business Process Model and Notation) is the industry standard for visually representing business processes. The core elements are:
 
--   **Events:** Start (circle), Intermediate (double circle), End (thick circle) — represent triggers and outcomes.
+-   **Events:** Start (circle), Intermediate (double circle), End (thick circle). These represent triggers and outcomes.
 -   **Activities:** Tasks (rounded rectangles) and Sub-Processes (rounded rectangles with a "+" marker).
--   **Gateways:** Exclusive (X), Parallel (+), Inclusive (O) — control flow branching and merging.
+-   **Gateways:** Exclusive (X), Parallel (+), Inclusive (O). These control flow branching and merging.
 -   **Flows:** Sequence flows (solid arrows), Message flows (dashed arrows), Associations (dotted lines).
 -   **Swimlanes:** Pools and Lanes that represent participants and departments.
 
@@ -225,7 +225,7 @@ BPMN (Business Process Model and Notation) is the industry standard for visually
 
 ## 6.9 Process Discovery from Documents
 
-Process discovery is the act of understanding how work actually gets done. Traditional approaches involve interviews, workshops, and process mining from system logs. LLMs add a new capability: extracting process descriptions from the text-heavy documents that already exist in every organisation — SOPs, training manuals, email threads, and audit reports.
+Process discovery is the act of understanding how work actually gets done. Traditional approaches involve interviews, workshops, and process mining from system logs. LLMs add a new capability: extracting process descriptions from the text-heavy documents that already exist in every organisation. These include SOPs, training manuals, email threads, and audit reports.
 
 ### Process Extraction Approach
 
@@ -268,7 +268,7 @@ If full BPMN XML is overkill for your needs, ask the LLM to generate Mermaid flo
 
 ## 6.11 Bottleneck Identification
 
-A bottleneck is any step in a process that limits the throughput of the entire system. Traditional bottleneck analysis uses process mining on event logs. LLMs complement this by analysing qualitative data — interview transcripts, complaint tickets, and delay reports — to identify bottlenecks that may not appear in structured logs.
+A bottleneck is any step in a process that limits the throughput of the entire system. Traditional bottleneck analysis uses process mining on event logs. LLMs complement this by analysing qualitative data: interview transcripts, complaint tickets, and delay reports. This identifies bottlenecks that may not appear in structured logs.
 
 ### Quantitative Bottleneck Analysis
 
@@ -303,7 +303,7 @@ The optimisation prompt gives the LLM the full process description alongside the
 
 ## 6.13 As-Is to To-Be Mapping
 
-As-Is/To-Be mapping is the standard BA technique for visualising the current state of a process alongside the proposed future state. LLMs can generate the To-Be model by applying the optimisation recommendations to the As-Is process.
+As-Is/To-Be mapping is the standard BA technique for visualising the current state of a process alongside the proposed future state. LLMs generate the To-Be model by applying the optimisation recommendations to the As-Is process.
 
 ### Generating the To-Be Process
 
@@ -331,7 +331,7 @@ The impact analysis prompt assesses proposed changes across five dimensions: **p
 
 Visualise the results as a heatmap table with the five dimensions as rows and High, Medium, and Low impact counts as columns. This format lets decision-makers quickly identify which dimensions have the most critical impacts and where additional preparation is needed before the process change can proceed safely.
 
-> **Warning:** Change impact analysis is where LLMs are most likely to miss organisation-specific factors — union agreements, legacy system constraints, cultural resistance patterns. Always supplement LLM output with input from change management practitioners who know the organisation.
+> **Warning:** Change impact analysis is where LLMs are most likely to miss organisation-specific factors: union agreements, legacy system constraints, and cultural resistance patterns. Always supplement LLM output with input from change management practitioners who know the organisation.
 
 ## Project B: Process Discovery Engine
 
@@ -354,15 +354,15 @@ The pipeline follows the flow shown in Figure 6-3. Source documents (SOPs, manua
 ### User Stories
 
 -   **LLMs bridge the requirements-to-stories gap** by inferring roles, articulating benefits, and decomposing compound requirements into atomic stories.
--   **Acceptance criteria generation** in Gherkin format produces testable scenarios for happy paths, edge cases, and error conditions — but domain-specific edge cases still require human review.
+-   **Acceptance criteria generation** in Gherkin format produces testable scenarios for happy paths, edge cases, and error conditions. Domain-specific edge cases still require human review.
 -   **Nine splitting patterns** provide a systematic framework for breaking oversized stories into sprint-sized work items.
 -   **INVEST validation** gives each story a quality score, with "Testable" being the most reliable LLM assessment and "Independent" requiring the most human judgment.
 -   **Story mapping** with LLM assistance creates a visual product plan and reveals gaps in the user journey.
--   **Backlog grooming assistants** can pre-analyse the backlog, surface issues, and record decisions — but should augment, not replace, team ceremonies.
+-   **Backlog grooming assistants** can pre-analyse the backlog, surface issues, and record decisions. They should augment, not replace, team ceremonies.
 
 ### Process Modeling
 
--   **Process discovery from documents** allows LLMs to extract structured process descriptions from SOPs, manuals, and transcripts — providing a starting point that would take days to produce manually.
+-   **Process discovery from documents** allows LLMs to extract structured process descriptions from SOPs, manuals, and transcripts, providing a starting point that would take days to produce manually.
 -   **BPMN generation** produces machine-readable process models, though validation and visual inspection are essential before use.
 -   **Bottleneck identification** benefits most from combining quantitative metrics with qualitative LLM analysis of interviews and complaints.
 -   **Six optimisation categories** (Eliminate, Automate, Simplify, Parallelise, Outsource, Standardise) provide a systematic framework for improvement recommendations.

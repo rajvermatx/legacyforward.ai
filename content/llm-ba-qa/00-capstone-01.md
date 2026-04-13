@@ -11,7 +11,7 @@ Part 5 — Capstones
 
 # Capstone 1: Requirements-to-Test-Cases Pipeline
 
-You have learned how to craft prompts, parse requirements, generate test cases, and evaluate LLM outputs. Now you will wire all of those skills into one end-to-end pipeline that ingests a raw requirements document and produces a prioritized, fully traceable test suite — ready for review and execution.
+You have learned how to craft prompts, parse requirements, generate test cases, and evaluate LLM outputs. Now you will wire all of those skills into one end-to-end pipeline that ingests a raw requirements document and produces a prioritized, fully traceable test suite, ready for review and execution.
 
 Building time: ~2 hours Chapters used: 3, 5, 9, 15
 
@@ -31,7 +31,7 @@ Figure C1.1 — End-to-end pipeline architecture. Raw requirements flow through 
 
 The pipeline follows a four-stage architecture. Each stage is a self-contained Python module that reads structured input and writes structured output, making the system easy to test, debug, and extend.
 
-**Data contracts between stages:** Every stage communicates through Pydantic models. This ensures type safety, makes validation automatic, and gives you clear error messages when something goes wrong. The LLM never sees raw, unstructured data — it always receives a well-defined prompt with structured context.
+**Data contracts between stages:** Every stage communicates through Pydantic models. This ensures type safety, makes validation automatic, and gives you clear error messages when something goes wrong. The LLM never sees raw, unstructured data. It always receives a well-defined prompt with structured context.
 
 ```python
 from pydantic import BaseModel, Field
@@ -89,7 +89,7 @@ The ingestion module reads the requirements document and uses a regex pattern to
 
 ## Step 2: Core Processing Pipeline — Classify and Enrich
 
-With raw requirements extracted, the next stage uses an LLM to classify each requirement by type, assess testability, flag ambiguity, and assign a priority. This is where prompt engineering from Chapter 3 comes into play — you need the LLM to return structured JSON, not free-form text.
+With raw requirements extracted, the next stage uses an LLM to classify each requirement by type, assess testability, flag ambiguity, and assign a priority. This is where prompt engineering from Chapter 3 comes into play. You need the LLM to return structured JSON, not free-form text.
 
 ```python
 """modules/classify.py — Classify and enrich requirements using an LLM."""
@@ -165,7 +165,7 @@ def classify_all(requirements: list[dict]) -> list[dict]:
 
 ## Step 3: Generate Test Cases with Traceability
 
-This is the heart of the pipeline. For each classified requirement, the LLM generates one or more test cases — positive, negative, and boundary — with full traceability back to the source requirement. This draws directly on the techniques from Chapter 9 (Test Case Generation).
+This is the heart of the pipeline. For each classified requirement, the LLM generates one or more test cases (positive, negative, and boundary) with full traceability back to the source requirement. This draws directly on the techniques from Chapter 9 (Test Case Generation).
 
 ```python
 """modules/generate.py — Generate traceable test cases from classified requirements."""
@@ -260,7 +260,7 @@ def generate_all(requirements: list[dict]) -> list[dict]:
     return all_test_cases
 ```
 
-**Traceability by design:** Every test case carries a `requirement_ids` field that links it back to one or more source requirements. This is not just a nice-to-have — it is what makes the final coverage matrix possible and what auditors look for in regulated industries.
+**Traceability by design:** Every test case carries a `requirement_ids` field that links it back to one or more source requirements. This is not just a nice-to-have. It is what makes the final coverage matrix possible and what auditors look for in regulated industries.
 
 **Temperature 0.3:** Test case generation benefits from slight creativity (to think of edge cases) but must remain grounded. A moderate temperature strikes the right balance (Chapter 3).
 
@@ -355,10 +355,10 @@ The base pipeline is a solid portfolio piece. Here are ways to make it stand out
 -   **Support Jira integration.** Use the Jira REST API to pull requirements from epics and push generated test cases back as Zephyr or Xray test items. This shows you can integrate LLM tooling into existing workflows.
 -   **Implement batch processing with async calls.** Replace the sequential LLM calls with `asyncio.gather()` to process multiple requirements in parallel. This cuts pipeline execution time by 3-5x.
 -   **Add a feedback loop.** Let QA reviewers mark test cases as "accepted" or "needs revision." Feed the revision reasons back into the prompt for the next generation pass. This demonstrates human-in-the-loop AI, a concept hiring managers value highly.
--   **Track costs.** Log the token counts from each API call and compute the total cost per pipeline run. Include this in the report — it shows you think about LLM economics, not just functionality.
+-   **Track costs.** Log the token counts from each API call and compute the total cost per pipeline run. Include this in the report. It shows you think about LLM economics, not just functionality.
 -   **Version your prompts.** Store prompts in a separate YAML file with version numbers. When you change a prompt, bump the version and log which version generated each output. This is prompt-ops thinking, and it signals maturity.
 
-**Portfolio presentation tip:** When presenting this project, lead with the problem ("QA teams spend 4-6 hours per sprint writing test cases from requirements") and the result ("this pipeline reduces that to 15 minutes with 85% acceptance rate"). Show the traceability matrix — it is visually impressive and immediately communicates the value.
+**Portfolio presentation tip:** When presenting this project, lead with the problem ("QA teams spend 4-6 hours per sprint writing test cases from requirements") and the result ("this pipeline reduces that to 15 minutes with 85% acceptance rate"). Show the traceability matrix. It is visually impressive and immediately communicates the value.
 
 ## Summary
 
@@ -367,4 +367,4 @@ The base pipeline is a solid portfolio piece. Here are ways to make it stand out
 -   Low-temperature prompts with strict JSON output formatting produce reliable, parseable results from the LLM.
 -   The traceability matrix connects every test case to its source requirement, satisfying audit and compliance needs.
 -   Validation checks catch quality issues in generated test cases before they reach human reviewers.
--   The pipeline pattern — ingest, enrich, generate, validate, report — is reusable across many BA and QA automation scenarios.
+-   The pipeline pattern (ingest, enrich, generate, validate, report) is reusable across many BA and QA automation scenarios.
