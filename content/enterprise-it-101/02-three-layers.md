@@ -13,31 +13,31 @@ One of the most useful mental models for understanding enterprise technology is 
 
 ![Diagram](/diagrams/enterprise-it-101/ch02-three-layers.svg)
 
-Most enterprise complexity comes from the interactions between these layers — data flowing (or failing to flow) from one to another, systems designed in one layer being asked to do the job of another, or projects that underestimate how hard it is to move information across the boundaries.
+Most enterprise complexity comes from the interactions between these layers: data flowing (or failing to flow) from one to another, systems designed in one layer being asked to do the job of another, or projects that underestimate how hard it is to move information across the boundaries.
 
 ## Systems of Record
 
 A system of record is the authoritative source of truth for a particular type of data in an organization.
 
-When a customer places an order, somewhere in the enterprise there is a system that records that order — the canonical, official, definitive record. When an employee is hired, somewhere there is a system that holds the authoritative record of their employment. When a product is manufactured, somewhere there is a system that tracks the inventory. These are systems of record.
+When a customer places an order, somewhere in the enterprise there is a system that records that order: the canonical, official, definitive record. When an employee is hired, somewhere there is a system that holds the authoritative record of their employment. When a product is manufactured, somewhere there is a system that tracks the inventory. These are systems of record.
 
-Systems of record tend to share certain characteristics. They are old. They are stable. They are designed for reliability above all else — the most important thing they do is not lose data. They often have rigid data structures, because the structure of the data is part of the business contract: an order has these fields, a product has those fields, and changing the fields requires a careful process because everything downstream depends on them.
+Systems of record tend to share certain characteristics. They are old. They are stable. They are designed for reliability above all else. The most important thing they do is not lose data. They often have rigid data structures, because the structure of the data is part of the business contract: an order has these fields, a product has those fields, and changing the fields requires a careful process because everything downstream depends on them.
 
 The most common systems of record in large enterprises are enterprise resource planning systems (ERP), which we will cover in detail in Chapter 5. Other examples include core banking systems in financial services, electronic medical record systems in healthcare, and claims management systems in insurance.
 
-The critical thing to understand about systems of record is that they are authoritative. If the system of record says a customer has five hundred units of inventory, that is the official answer — regardless of what any other system might say. This authority comes with significant responsibility: these systems must be correct, they must be consistent, and they must be available.
+The critical thing to understand about systems of record is that they are authoritative. If the system of record says a customer has five hundred units of inventory, that is the official answer, regardless of what any other system might say. This authority comes with significant responsibility: these systems must be correct, they must be consistent, and they must be available.
 
 ## Systems of Engagement
 
 A system of engagement is what people actually interact with to do their work or to interact with the organization.
 
-The gap between systems of record and systems of engagement is often enormous. The system of record might be a mainframe application from 1985 that can only be accessed through a terminal emulator — essentially, a text-based interface that looks like a black screen with green or amber text. Almost no one in the organization can actually use this system directly. Instead, they use a system of engagement: a modern web application, a mobile app, a customer portal, a call center tool.
+The gap between systems of record and systems of engagement is often enormous. The system of record might be a mainframe application from 1985 that can only be accessed through a terminal emulator, essentially a text-based interface that looks like a black screen with green or amber text. Almost no one in the organization can actually use this system directly. Instead, they use a system of engagement: a modern web application, a mobile app, a customer portal, a call center tool.
 
-The system of engagement presents information in a way that humans can work with. It pulls data from the system of record, displays it in a readable format, and writes changes back. It is the face of the technology stack — the part that users see.
+The system of engagement presents information in a way that humans can work with. It pulls data from the system of record, displays it in a readable format, and writes changes back. It is the face of the technology stack: the part that users see.
 
-Customer relationship management (CRM) systems like Salesforce are a good example of a system of engagement. The customer's actual account record might live in an old banking or billing system, but the sales team interacts with the customer data through Salesforce — a modern, usable interface that reads from and writes to the underlying systems.
+Customer relationship management (CRM) systems like Salesforce are a good example of a system of engagement. The customer's actual account record might live in an old banking or billing system, but the sales team interacts with the customer data through Salesforce, a modern, usable interface that reads from and writes to the underlying systems.
 
-The challenge with systems of engagement is that they add a layer of complexity. Now you have two systems that need to stay in sync. Changes made in the system of engagement need to make it back to the system of record. Data in the system of record needs to be accessible to the system of engagement. And if there are multiple systems of engagement — a web portal, a mobile app, a call center tool — they all need to present consistent information.
+The challenge with systems of engagement is that they add a layer of complexity. Now you have two systems that need to stay in sync. Changes made in the system of engagement need to make it back to the system of record. Data in the system of record needs to be accessible to the system of engagement. And if there are multiple systems of engagement, such as a web portal, a mobile app, or a call center tool, they all need to present consistent information.
 
 ## Systems of Intelligence
 
@@ -45,9 +45,9 @@ A system of intelligence is a system that takes data from systems of record and 
 
 This layer has grown dramatically with the rise of data analytics, machine learning, and AI. Historically, "intelligence" in enterprise technology meant reporting: dashboards, data warehouses, business intelligence tools that helped executives understand what was happening in the business. Today it means much more: machine learning models that predict customer churn, algorithms that detect fraud, AI systems that automate decisions.
 
-Systems of intelligence are consumers of data. They do not typically create or manage the authoritative record — they read from it. Their value comes from what they can derive from the data: patterns, predictions, anomalies, recommendations.
+Systems of intelligence are consumers of data. They do not typically create or manage the authoritative record. They read from it. Their value comes from what they can derive from the data: patterns, predictions, anomalies, recommendations.
 
-The challenge for systems of intelligence is getting clean, consistent, complete data from the layers below. This is the source of almost every "AI project runs into data problems" story you will ever hear. The data in the system of record might be accurate for operational purposes but structured in ways that are difficult to analyze. There might be gaps — periods where data was not collected, or was collected differently. There might be inconsistencies between systems of record for different parts of the business.
+The challenge for systems of intelligence is getting clean, consistent, complete data from the layers below. This is the source of almost every "AI project runs into data problems" story you will ever hear. The data in the system of record might be accurate for operational purposes but structured in ways that are difficult to analyze. There might be gaps, periods where data was not collected or was collected differently. There might be inconsistencies between systems of record for different parts of the business.
 
 ## How Data Flows Between the Layers
 

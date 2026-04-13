@@ -21,7 +21,7 @@ This is what enterprise IT actually looks like. Not the clean architecture diagr
 
 Most books about AI in the enterprise assume you already understand the technology stack. They jump straight to machine learning models, vector databases, and agent frameworks. They treat the underlying infrastructure as a given.
 
-But for a lot of people — business leaders, product managers, career pivoters, consultants, and even technical people new to enterprise environments — the stack is not a given. It is a mystery. A slow-moving, highly political, surprisingly expensive mystery.
+But for many people, business leaders, product managers, career pivoters, consultants, and even technical people new to enterprise environments, the stack is not a given. It is a mystery. A slow-moving, highly political, surprisingly expensive mystery.
 
 This book explains the mystery.
 
@@ -31,13 +31,13 @@ It is not a technical manual. There is no code. There are no architecture diagra
 
 The book is organized in four parts.
 
-**Part One: The Foundation** covers the basics — what makes enterprise IT different from consumer technology, how systems are layered, what legacy actually means, why mainframes still exist, and how enterprise resource planning systems became the spine of global business.
+**Part One: The Foundation** covers the basics: what makes enterprise IT different from consumer technology, how systems are layered, what legacy actually means, why mainframes still exist, and how enterprise resource planning systems became the spine of global business.
 
-**Part Two: The Modern Layer** explains what got built on top of the foundation over the last twenty years — cloud computing, software-as-a-service, commercial off-the-shelf software, APIs, and the data infrastructure that sits beneath analytics and AI.
+**Part Two: The Modern Layer** explains what got built on top of the foundation over the last twenty years: cloud computing, software-as-a-service, commercial off-the-shelf software, APIs, and the data infrastructure that sits beneath analytics and AI.
 
 **Part Three: The IT Sprawl Problem** gets into how things get complicated. Every organization accumulates technology. Through acquisitions, through shadow IT, through good intentions and deferred decisions, the landscape grows in ways no one fully planned. This section explains how sprawl happens and what it costs.
 
-**Part Four: Where AI Lands** connects everything to the AI conversation. Why AI doesn't replace the stack — it runs on top of it. What data readiness actually means. Which systems are AI-ready and which are not. Why ripping and replacing is rarely the right answer. And where to start finding genuine AI value inside a complex, layered enterprise environment.
+**Part Four: Where AI Lands** connects everything to the AI conversation. Why AI does not replace the stack: it runs on top of it. What data readiness actually means. Which systems are AI-ready and which are not. Why ripping and replacing is rarely the right answer. And where to start finding genuine AI value inside a complex, layered enterprise environment.
 
 The book closes with three appendix chapters: a glossary of fifty terms every non-technical leader should know, a plain-language map of how the layers connect, and a checklist of questions to ask before committing to any AI initiative.
 
@@ -63,6 +63,6 @@ If you have spent your career in enterprise IT and already know this material, t
 
 Enterprise technology is not broken. It is the product of thousands of reasonable decisions made over decades by people who were solving real problems with the tools available at the time. The systems that seem ancient were state-of-the-art when they were built. The processes that seem inefficient exist because they prevent very specific, very expensive failures.
 
-Understanding enterprise IT means understanding why things are the way they are — not just that they are that way. That context is what separates people who can navigate the landscape from people who keep running into the same walls.
+Understanding enterprise IT means understanding why things are the way they are, not just that they are that way. That context is what separates people who can navigate the landscape from people who keep running into the same walls.
 
 Let us start at the foundation.

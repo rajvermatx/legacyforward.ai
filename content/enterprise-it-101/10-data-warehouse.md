@@ -9,7 +9,7 @@ part: "Part 02 The Modern Layer"
 
 # The Data Warehouse, the Lake, and the Swamp
 
-If the systems in the previous chapters are where enterprise data is created and managed, this chapter is about where it goes to be analyzed. The data warehouse, the data lake, and the related concepts around them are the infrastructure that sits between operational systems and the analytics and AI systems that need to learn from the data.
+The systems in the previous chapters are where enterprise data is created and managed. This chapter covers where it goes to be analyzed. The data warehouse, the data lake, and the related concepts around them form the infrastructure that sits between operational systems and the analytics and AI systems that need to learn from the data.
 
 ![Diagram](/diagrams/enterprise-it-101/ch10-data-landscape.svg)
 
@@ -19,19 +19,19 @@ Understanding this infrastructure — and the ways it tends to go wrong — is e
 
 The data warehouse has been around since the 1980s. The core idea is straightforward: take data from operational systems, transform it into a consistent, analysis-ready format, and load it into a central repository optimized for queries.
 
-Operational systems — the ERP, the CRM, the core banking system — are optimized for transactions. They are very good at recording individual events quickly and reliably. They are not particularly good at answering analytical questions: "What were our total sales by product category by region last quarter?" Answering that question requires aggregating data from many records, joining information from multiple tables, and performing calculations — operations that are slow and resource-intensive on systems designed for transactional throughput.
+Operational systems, including the ERP, the CRM, and the core banking system, are optimized for transactions. They are very good at recording individual events quickly and reliably. They are not particularly good at answering analytical questions: "What were our total sales by product category by region last quarter?" Answering that question requires aggregating data from many records, joining information from multiple tables, and performing calculations — operations that are slow and resource-intensive on systems designed for transactional throughput.
 
 The data warehouse solves this by maintaining a separate copy of the data, organized specifically for analytical queries. The data is transformed before it arrives — cleaned, standardized, and restructured — so that analysts and reporting tools can query it efficiently without affecting the performance of operational systems.
 
-The transformation process is called ETL: Extract, Transform, Load. Data is extracted from source systems, transformed into the target format, and loaded into the warehouse. ETL pipelines run on a schedule — often overnight — so the data in the warehouse may be a day old, or several days old, depending on the pipeline.
+The transformation process is called ETL: Extract, Transform, Load. Data is extracted from source systems, transformed into the target format, and loaded into the warehouse. ETL pipelines run on a schedule, often overnight, so the data in the warehouse may be a day old, or several days old, depending on the pipeline.
 
-Major data warehouse products include Snowflake, Google BigQuery, Amazon Redshift, and Microsoft Azure Synapse. These are the modern versions of technology that, in earlier generations, ran on dedicated hardware from vendors like Teradata and IBM.
+Major data warehouse products include Snowflake, Google BigQuery, Amazon Redshift, and Microsoft Azure Synapse. These are the modern versions of technology that ran, in earlier generations, on dedicated hardware from vendors like Teradata and IBM.
 
 ## The Data Lake
 
 The data warehouse model works well for structured, well-understood data — the kind that comes from transactional systems with defined schemas. But enterprises increasingly generate other kinds of data: emails, documents, audio recordings, images, sensor readings, log files, social media. None of this fits neatly into the structured format of a traditional data warehouse.
 
-The data lake emerged as a concept around 2010 as a response to this challenge. The basic idea: instead of transforming data before storing it, store everything in its raw form. The lake accepts any kind of data — structured, semi-structured, unstructured — and holds it in a central repository. Transformation and structure are applied when the data is read, not when it is written. This is sometimes described as "schema on read" rather than "schema on write."
+The data lake emerged as a concept around 2010 as a response to this challenge. The basic idea: instead of transforming data before storing it, store everything in its raw form. The lake accepts any kind of data, structured, semi-structured, or unstructured, and holds it in a central repository. Transformation and structure are applied when the data is read, not when it is written. This is sometimes described as "schema on read" rather than "schema on write."
 
 Data lakes are typically built on cheap, scalable storage — originally Hadoop distributed file systems, today usually cloud object storage like Amazon S3 or Google Cloud Storage. The cost of storing data in a lake is much lower than in a structured data warehouse, which makes it practical to store everything rather than selecting what is worth storing.
 
@@ -47,15 +47,15 @@ Organizations set up a data lake with good intentions. Teams start loading data 
 
 The data is there, technically. But it is not usable. And the time it takes to make it usable — understanding the provenance, assessing the quality, documenting the transformations — often exceeds the time it would have taken to never put it in the lake in the first place.
 
-The swamp problem is fundamentally a governance problem. Technology does not create data swamps. The absence of clear ownership, accountability, and process does.
+The swamp problem is fundamentally a governance problem. Technology does not create data swamps. The absence of clear ownership, accountability, and process creates them.
 
 ## The Modern Data Lakehouse
 
-The current direction in enterprise data infrastructure is toward a hybrid model called the data lakehouse: the scalable, cheap storage of a data lake combined with the structure, governance, and query performance of a data warehouse.
+The current direction in enterprise data infrastructure is toward a hybrid model called the data lakehouse. It combines the scalable, low-cost storage of a data lake with the structure, governance, and query performance of a data warehouse.
 
 Products like Databricks and modern versions of Snowflake and BigQuery support this approach. Data is stored in open formats on cheap storage, but with schemas, governance, and access controls applied. Analytical queries run efficiently against structured tables. Raw data is also accessible for exploratory work and machine learning.
 
-The lakehouse is not magic — it still requires governance discipline to avoid swamp conditions — but it represents a more mature approach to managing the full spectrum of enterprise data.
+The lakehouse is not magic. It still requires governance discipline to avoid swamp conditions. It does, however, represent a more mature approach to managing the full spectrum of enterprise data.
 
 ## What This Means for AI
 
@@ -65,4 +65,4 @@ Specifically: Is the data that the AI needs in the warehouse or lake? When was i
 
 Organizations with mature, well-governed data infrastructure have a significant advantage in AI initiatives. Organizations whose data infrastructure has drifted into swamp territory will spend most of their AI project time cleaning and understanding data rather than building and deploying models.
 
-This is not a comfortable truth, but it is an important one: the quality of your data infrastructure predicts the success of your AI projects better than the sophistication of your AI models.
+This is not a comfortable truth, but it is an important one. The quality of your data infrastructure predicts the success of your AI projects better than the sophistication of your AI models.

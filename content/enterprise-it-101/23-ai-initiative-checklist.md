@@ -9,7 +9,7 @@ part: "Appendix"
 
 # Questions to Ask Before Any AI Initiative
 
-The most expensive AI mistakes in enterprise environments happen because the wrong questions were asked — or the right questions were asked too late. This checklist is designed to surface the key risks, assumptions, and dependencies before significant resources are committed.
+The most expensive AI mistakes in enterprise environments happen because the wrong questions were asked, or the right questions were asked too late. This checklist is designed to surface the key risks, assumptions, and dependencies before significant resources are committed.
 
 Use it at the beginning of an AI initiative, when evaluating a vendor proposal, when reviewing a project plan, or any time an AI project seems like it is moving faster than the groundwork beneath it.
 
@@ -40,7 +40,7 @@ Be specific. What entities? What time range? What level of granularity?
 Name the specific systems. If you cannot name them, you do not yet know enough to plan the initiative.
 
 **7. Has anyone actually looked at the data?**
-Not "we have the data" — has someone opened it, queried it, and assessed its quality? Are there missing values? Duplicates? Inconsistent formats?
+Not "we have the data." Has someone opened it, queried it, and assessed its quality? Are there missing values? Duplicates? Inconsistent formats?
 
 **8. How old is the data? Is it current enough for the use case?**
 An AI model trained on data from five years ago may not reflect current patterns. How frequently does the data need to be refreshed?
@@ -110,10 +110,10 @@ AI models degrade over time as the data they were trained on becomes less repres
 Who is responsible for monitoring it, maintaining it, retraining it, and deciding when to retire it? If the answer is unclear, the system will become unmanaged technical debt.
 
 **25. What are the failure modes, and how will they be caught?**
-If the AI system produces systematically wrong outputs — biased recommendations, incorrect classifications, flawed predictions — how will that be detected? How quickly?
+If the AI system produces systematically wrong outputs, such as biased recommendations, incorrect classifications, or flawed predictions, how will that be detected? How quickly?
 
 **26. Are there bias or fairness concerns?**
-If the AI is making decisions that affect people — employees, customers, applicants — has the potential for biased outputs been considered and tested?
+If the AI is making decisions that affect people, such as employees, customers, or applicants, has the potential for biased outputs been considered and tested?
 
 **27. What is the exit plan if this does not work?**
 Not every AI initiative succeeds. If this one does not, what is the plan? Can the organization return to the previous process? Has the investment been sized appropriately for a risk that may not pay off?
@@ -122,6 +122,6 @@ Not every AI initiative succeeds. If this one does not, what is the plan? Can th
 
 ## How to Use This Checklist
 
-Not every question needs a complete answer before an initiative begins. Some answers will emerge during the project. The goal is not to require perfect answers upfront — it is to identify which questions do not have answers yet, and to treat the most critical unanswered questions as explicit risks that need to be managed.
+Not every question needs a complete answer before an initiative begins. Some answers will emerge during the project. The goal is not to require perfect answers upfront. It is to identify which questions do not have answers yet, and to treat the most critical unanswered questions as explicit risks that need to be managed.
 
 A project team that can honestly answer these questions is a team that understands what it is building and what it is building on top of. That understanding is the difference between AI initiatives that deliver on their promise and AI initiatives that deliver expensive lessons.

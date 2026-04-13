@@ -9,11 +9,11 @@ part: "Part 02 The Modern Layer"
 
 # COTS vs. Custom: The Build vs. Buy Decision
 
-One of the most consequential decisions in enterprise technology is one that happens constantly, at every level of the organization: should we buy a commercial product, or should we build something ourselves?
+One of the most consequential decisions in enterprise technology happens constantly, at every level of the organization: should we buy a commercial product, or should we build something ourselves?
 
 ![Diagram](/diagrams/enterprise-it-101/ch08-cots-vs-custom.svg)
 
-The commercial product option is called COTS — Commercial Off-The-Shelf software. The acronym emphasizes that it comes pre-built, ready to use, purchased from a vendor. SAP, Salesforce, Workday, ServiceNow — these are all COTS products. You buy them, configure them, and use them.
+The commercial product option is called COTS: Commercial Off-The-Shelf software. The acronym emphasizes that it comes pre-built, ready to use, purchased from a vendor. SAP, Salesforce, Workday, ServiceNow — these are all COTS products. You buy them, configure them, and use them.
 
 The alternative is custom development: building software specifically for your organization, designed to your exact specifications, maintained by your own (or contracted) engineering team.
 
@@ -47,9 +47,9 @@ Commercial software has real limitations, and there are situations where buildin
 
 The most common mistake is underestimating the cost and complexity of custom development and overestimating the uniqueness of the organization's needs.
 
-Teams that decide to build custom frequently do so because they believe their requirements are unique, the commercial products are not quite right, and building something custom will give them exactly what they need. What often happens is that the requirements turn out to be less unique than expected, the commercial products would have been adequate with some configuration, and the custom system takes three times as long and costs twice as much to build. Then, once it is built, it requires ongoing maintenance that consumes engineering capacity indefinitely.
+Teams that decide to build custom frequently do so because they believe their requirements are unique, the commercial products are not quite right, and building something custom will give them exactly what they need. What often happens is different. The requirements turn out to be less unique than expected. The commercial products would have been adequate with some configuration. The custom system takes three times as long and costs twice as much to build. Then, once it is built, it requires ongoing maintenance that consumes engineering capacity indefinitely.
 
-The second common mistake is "COTS plus heavy customization" — buying a commercial product and then modifying it so extensively that it no longer functions as a standard product. The organization gets some of the initial speed advantages of COTS but none of the long-term advantages, because the heavily customized product cannot be upgraded without re-doing all the customizations. This is how many organizations end up stuck on old versions of ERP and CRM systems.
+The second common mistake is "COTS plus heavy customization": buying a commercial product and then modifying it so extensively that it no longer functions as a standard product. The organization gets some of the initial speed advantages of COTS but none of the long-term advantages, because the heavily customized product cannot be upgraded without re-doing all the customizations. This is how many organizations end up stuck on old versions of ERP and CRM systems.
 
 ## What This Means for AI
 
@@ -57,4 +57,4 @@ The build-versus-buy question applies directly to AI. Organizations face it cons
 
 The same principles apply. If your need is common — AI-powered customer service, document summarization, demand forecasting — there are commercial products available that can be deployed relatively quickly. If your need is genuinely unique, or if the commercial products do not work with your specific data and systems, custom development may be necessary.
 
-What is different about AI is the rate of change. The commercial AI landscape is evolving extremely quickly. A commercial product that does not exist today may be available next year. Capabilities that required custom development in 2023 can be bought off the shelf in 2025. This argues for caution about large custom AI development investments — before committing to building something, it is worth asking whether a commercial product will solve the problem within the timeframe of the project.
+What is different about AI is the rate of change. The commercial AI landscape is evolving rapidly. A commercial product that does not exist today may be available next year. Capabilities that required custom development in 2023 can be bought off the shelf in 2025. This argues for caution about large custom AI development investments. Before committing to building something, ask whether a commercial product will solve the problem within the timeframe of the project.

@@ -11,7 +11,7 @@ part: "Appendix"
 
 **API (Application Programming Interface)** — A defined way for one piece of software to talk to another. APIs let systems exchange data and trigger actions without human involvement. When your CRM automatically pulls data from your billing system, it is using an API.
 
-**Batch processing** — Running a large set of transactions or data operations all at once, on a schedule, rather than one at a time as events occur. Payroll is a classic batch process — it does not calculate your pay every second; it runs once per pay period.
+**Batch processing** — Running a large set of transactions or data operations all at once, on a schedule, rather than one at a time as events occur. Payroll is a classic batch process. It does not calculate your pay every second. It runs once per pay period.
 
 **Business intelligence (BI)** — Tools and processes that help organizations analyze data and make decisions. Dashboards, reports, and data visualizations are BI outputs. Tableau, Power BI, and Looker are common BI tools.
 
@@ -25,21 +25,21 @@ part: "Appendix"
 
 **CRM (Customer Relationship Management)** — Software that manages an organization's interactions with customers. Salesforce is the most widely used CRM. It typically stores contact records, sales pipeline, and customer communication history.
 
-**Data catalog** — A centralized inventory of an organization's data assets — what data exists, where it lives, what it means, and who owns it. A good data catalog makes it possible to find and trust data quickly.
+**Data catalog** — A centralized inventory of an organization's data assets: what data exists, where it lives, what it means, and who owns it. A good data catalog makes it possible to find and trust data quickly.
 
 **Data governance** — The policies, processes, and accountabilities that define how data is managed: who can access it, how it can be used, who is responsible for its quality, and how long it is retained.
 
-**Data lake** — A storage system that holds large volumes of data in its raw, unprocessed form. Unlike a data warehouse, a data lake accepts any type of data — structured, semi-structured, and unstructured. Governance challenges frequently lead data lakes to become data swamps.
+**Data lake** — A storage system that holds large volumes of data in its raw, unprocessed form. Unlike a data warehouse, a data lake accepts any type of data, including structured, semi-structured, and unstructured. Governance challenges frequently lead data lakes to become data swamps.
 
 **Data lakehouse** — A hybrid approach combining the low-cost storage of a data lake with the structure, governance, and query performance of a data warehouse. Databricks pioneered the concept.
 
 **Data pipeline** — An automated process that moves data from one system to another, typically performing transformations along the way. Data pipelines are how data gets from operational systems into data warehouses and AI systems.
 
-**Data swamp** — A data lake that has accumulated data without adequate governance — no documentation, no quality controls, no catalog. Data is technically present but practically unusable.
+**Data swamp** — A data lake that has accumulated data without adequate governance: no documentation, no quality controls, no catalog. Data is technically present but practically unusable.
 
 **Data warehouse** — A database optimized for analytical queries rather than transactional processing. Data from operational systems is extracted, transformed, and loaded into the warehouse on a schedule, making it available for reporting and analysis.
 
-**ERP (Enterprise Resource Planning)** — A category of software that manages core business processes — finance, procurement, HR, supply chain, manufacturing — in an integrated system. SAP and Oracle are the dominant vendors.
+**ERP (Enterprise Resource Planning)** — A category of software that manages core business processes, including finance, procurement, HR, supply chain, and manufacturing, in an integrated system. SAP and Oracle are the dominant vendors.
 
 **ESB (Enterprise Service Bus)** — An integration platform that routes data between enterprise systems, handling format translation, message queuing, and routing logic. The traditional approach to enterprise integration middleware.
 
@@ -63,7 +63,7 @@ part: "Appendix"
 
 **Mainframe** — A type of computer designed for high-volume, high-reliability transaction processing. IBM mainframes still process the majority of the world's financial transactions.
 
-**Master data management (MDM)** — The discipline of creating and maintaining a single, authoritative record for key business entities — typically customers, products, and employees — across multiple systems.
+**Master data management (MDM)** — The discipline of creating and maintaining a single, authoritative record for key business entities, typically customers, products, and employees, across multiple systems.
 
 **Middleware** — Software that sits between two other systems and facilitates their communication. Integration platforms and enterprise service buses are forms of middleware.
 
@@ -79,7 +79,7 @@ part: "Appendix"
 
 **REST API** — The most common type of API in modern software. REST APIs use the same communication protocol as web browsers (HTTP) and are the standard for integrating modern cloud services.
 
-**SaaS (Software as a Service)** — Software delivered over the internet as a service, typically on a subscription basis. The provider manages everything — infrastructure, application, updates. Salesforce, Workday, and Microsoft 365 are SaaS products.
+**SaaS (Software as a Service)** — Software delivered over the internet as a service, typically on a subscription basis. The provider manages everything: infrastructure, application, and updates. Salesforce, Workday, and Microsoft 365 are SaaS products.
 
 **Shadow IT** — Technology that is in use within an organization but is not managed or sanctioned by the IT organization. Shadow IT emerges when official systems do not meet the needs of the people who need to work.
 
@@ -93,14 +93,14 @@ part: "Appendix"
 
 **System of intelligence** — A system that analyzes data to produce insights, predictions, or automated decisions. Data warehouses, machine learning platforms, and AI systems are systems of intelligence.
 
-**System of record** — The authoritative source of truth for a particular type of data. The ERP is typically the system of record for financial and inventory data; the HR system is the system of record for employee data.
+**System of record** — The authoritative source of truth for a particular type of data. The ERP is typically the system of record for financial and inventory data. The HR system is the system of record for employee data.
 
 **Technical debt** — Deferred investment in technology quality, architecture, or infrastructure that creates ongoing cost and risk. Like financial debt, technical debt accrues interest over time.
 
-**Uptime** — The percentage of time a system is operational and available. Enterprise systems that process critical operations are typically required to achieve very high uptime — 99.9% or higher — measured in minutes of downtime per year.
+**Uptime** — The percentage of time a system is operational and available. Enterprise systems that process critical operations are typically required to achieve very high uptime, 99.9% or higher, measured in minutes of downtime per year.
 
 **Vendor lock-in** — The condition where the cost of switching from a vendor's technology is so high that it constrains the organization's choices. Lock-in forms through data portability limitations, process dependencies, integration complexity, and skills concentration.
 
-**Virtualization** — The creation of virtual versions of hardware resources — servers, storage, networks — that can be managed independently of the underlying physical hardware. Virtualization is the technology foundation of cloud computing.
+**Virtualization** — The creation of virtual versions of hardware resources, such as servers, storage, and networks, that can be managed independently of the underlying physical hardware. Virtualization is the technology foundation of cloud computing.
 
 **VSAM (Virtual Storage Access Method)** — A file storage method used on IBM mainframes. VSAM datasets are a common way that mainframe systems store and access data. Integrating with VSAM data requires mainframe-specific knowledge and tooling.
