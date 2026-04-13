@@ -89,7 +89,7 @@ export default function CoachPage() {
     : "text-slate-300";
 
   return (
-    <div className="h-screen flex bg-white">
+    <div className="flex bg-white" style={{ height: "calc(100vh - 64px)" }}>
       <Sidebar />
 
       {/* Main Chat Area */}

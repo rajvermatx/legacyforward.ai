@@ -138,7 +138,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="flex h-screen bg-white">
+    <div className="flex bg-white" style={{ height: "calc(100vh - 64px)" }}>
       {/* Sidebar - Progress */}
       <div className="hidden md:flex w-64 flex-col border-r border-slate-200 bg-slate-50 p-6">
         <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Career Navigator</div>
