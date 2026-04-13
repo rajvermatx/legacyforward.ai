@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
-import { LogoWordmark } from "@/components/Logo";
 
 const NAV_ITEMS = [
   { href: "/app/dashboard", label: "Dashboard", icon: (
@@ -38,12 +37,9 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden md:flex w-64 flex-col h-screen sticky top-0 bg-navy-900 border-r border-navy-800">
-      {/* Logo */}
-      <div className="px-5 py-5 border-b border-navy-800">
-        <Link href="/app/dashboard">
-          <LogoWordmark />
-        </Link>
-        <p className="text-[10px] text-teal-400 uppercase tracking-widest font-semibold mt-1.5 ml-0.5">
+      {/* Header */}
+      <div className="px-5 py-4 border-b border-navy-800">
+        <p className="text-[10px] text-teal-400 uppercase tracking-widest font-semibold ml-0.5">
           Career Navigator
         </p>
       </div>
