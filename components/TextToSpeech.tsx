@@ -1,15 +1,14 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 
-export default function TextToSpeech() {
+function TextToSpeechInner() {
   const [state, setState] = useState<"idle" | "playing" | "paused">("idle");
-  const [mounted, setMounted] = useState(false);
   const keepAliveRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const textRef = useRef<string>("");
 
   useEffect(() => {
-    setMounted(true);
     if ("speechSynthesis" in window) {
       // Pre-load voices (required on Android Chrome and iOS Safari)
       const load = () => window.speechSynthesis.getVoices();
@@ -22,7 +21,6 @@ export default function TextToSpeech() {
     };
   }, []);
 
-  if (!mounted) return null;
   if (!("speechSynthesis" in window)) return null;
 
   function startKeepAlive() {
@@ -138,3 +136,7 @@ export default function TextToSpeech() {
     </div>
   );
 }
+
+// Export as a dynamic component with SSR disabled so it never runs on the server.
+// This eliminates the hydration mismatch from the mounted/window check.
+export default dynamic(() => Promise.resolve(TextToSpeechInner), { ssr: false });
