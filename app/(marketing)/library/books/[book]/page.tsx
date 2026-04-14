@@ -17,6 +17,7 @@ const bookDefs: Record<string, BookDef> = {
   "llm-ba-qa": { section: "llm-ba-qa", title: "The Analyst's AI Toolkit", accentColor: "green" },
   "graph-ai": { section: "graph-ai", title: "Graph Databases for AI", accentColor: "rose" },
   "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", accentColor: "amber" },
+  "legacyforward-guide": { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation", accentColor: "teal" },
 };
 
 export async function generateStaticParams() {
