@@ -1,97 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <defs>
+    <radialGradient id="bgGlow-ag" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#0a2a2a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="coreGlow-ag" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="outerGlow-ag" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e6fa8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
 
-  <!-- Background -->
-  <rect width="600" height="800" fill="#0f172a"/>
+  <rect width="600" height="800" fill="url(#bgGlow-ag)"/>
+  <rect width="600" height="200" fill="#060d1a" opacity="0.35"/>
 
-  <!-- Top geometric accent: teal corner triangle -->
-  <polygon points="0,0 160,0 0,120" fill="#14b8a6" opacity="0.18"/>
-
-  <!-- Bottom geometric accent: teal corner triangle -->
-  <polygon points="600,800 440,800 600,680" fill="#14b8a6" opacity="0.18"/>
-
-  <!-- ── SERIES BRANDING ── -->
-  <text x="300" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.3em">THE LEGACYFORWARD.AI FRAMEWORK</text>
-  <line x1="260" y1="26" x2="340" y2="26" stroke="#14b8a6" stroke-width="2"/>
-
-  <!-- ── HEADER (top 20%) ── -->
-  <!-- Compass logo, centered, scaled to 48x48 at (276,36) -->
-  <g transform="translate(276,36) scale(1.5)">
-    <!-- Rounded square background -->
-    <rect width="32" height="32" rx="6" fill="#1e293b"/>
-    <!-- Compass circle -->
-    <circle cx="16" cy="16" r="10" fill="none" stroke="#334155" stroke-width="1.5"/>
-    <!-- Cardinal marks -->
-    <line x1="16" y1="5" x2="16" y2="7.5" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="16" y1="24.5" x2="16" y2="27" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="5" y1="16" x2="7.5" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="24.5" y1="16" x2="27" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Needle NE -->
-    <line x1="13" y1="19" x2="22" y2="10" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Nodes -->
-    <circle cx="22" cy="10" r="2" fill="#14b8a6"/>
-    <circle cx="16" cy="16" r="2" fill="white"/>
-    <circle cx="13" cy="19" r="1.5" fill="#475569"/>
-  </g>
-
-  <!-- CareerAlign wordmark -->
-  <text x="300" y="116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="white" text-anchor="middle" opacity="0.9">CAREERALIGN</text>
-
-  <!-- ── ACCENT STRIPE ── -->
-  <rect x="0" y="150" width="600" height="8" fill="#14b8a6"/>
-
-  <!-- ── MAIN CONTENT (center 50%) ── -->
-
-  <!-- Decorative left accent bar -->
-  <rect x="60" y="220" width="4" height="220" fill="#14b8a6" rx="2"/>
+  <!-- Wordmark -->
+  <text x="190" y="52" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" fill="white" letter-spacing="-0.5">Legacy</text>
+  <text x="280" y="52" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" fill="#2dd4bf" letter-spacing="-0.5">Forward</text>
+  <rect x="385" y="34" width="32" height="20" rx="4" fill="#14b8a6"/>
+  <text x="394" y="49" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="white">AI</text>
 
   <!-- Title -->
-  <text x="88" y="278" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="white" letter-spacing="-1">Agentic AI</text>
+  <text x="300" y="110" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="62" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">AGENTIC AI</text>
+  <text x="300" y="166" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" font-weight="700" fill="#2dd4bf" text-anchor="middle" letter-spacing="1">BUILD · SHIP · PORTFOLIO</text>
+  <line x1="140" y1="180" x2="460" y2="180" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/>
 
   <!-- Subtitle -->
-  <text x="88" y="328" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="600" fill="#14b8a6" letter-spacing="0.5">Build, Ship, Portfolio</text>
+  <text x="300" y="208" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#93c5fd" text-anchor="middle" letter-spacing="0.5">From First Agent to Production Systems</text>
+  <text x="300" y="230" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#64748b" text-anchor="middle" letter-spacing="0.3">The engineer's complete guide to agentic systems</text>
 
-  <!-- Divider dot row -->
-  <circle cx="88" cy="360" r="3" fill="#14b8a6"/>
-  <circle cx="104" cy="360" r="2" fill="#14b8a6" opacity="0.5"/>
-  <circle cx="116" cy="360" r="2" fill="#14b8a6" opacity="0.3"/>
+  <!-- Hero: Agent loop -->
+  <!-- Outer glow -->
+  <ellipse cx="300" cy="480" rx="250" ry="190" fill="url(#outerGlow-ag)"/>
+  <ellipse cx="300" cy="480" rx="150" ry="130" fill="url(#coreGlow-ag)"/>
 
-  <!-- Tagline -->
-  <text x="88" y="400" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="14" fill="#94a3b8" letter-spacing="0.3">19 chapters from first agent to production</text>
+  <!-- Orbit ring -->
+  <circle cx="300" cy="480" r="155" fill="none" stroke="#14b8a6" stroke-width="1" stroke-dasharray="8,5" opacity="0.25"/>
+  <circle cx="300" cy="480" r="105" fill="none" stroke="#14b8a6" stroke-width="0.8" stroke-dasharray="5,4" opacity="0.20"/>
 
-  <!-- Chapter grid decoration -->
-  <g opacity="0.12">
-    <rect x="88" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="116" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="144" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="172" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="200" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="228" y="430" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="88" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="116" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="144" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="172" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="200" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="228" y="458" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="88" y="486" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="116" y="486" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="144" y="486" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="172" y="486" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="200" y="486" width="22" height="22" rx="3" fill="#14b8a6"/>
-    <rect x="228" y="486" width="22" height="22" rx="3" fill="#14b8a6" opacity="0.5"/>
+  <!-- ReAct arc arrows (clockwise) -->
+  <!-- Think → Act arc top -->
+  <path d="M 220 345 Q 300 310 380 345" fill="none" stroke="#14b8a6" stroke-width="1.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <polygon points="378,340 386,348 374,350" fill="#14b8a6" opacity="0.6"/>
+  <!-- Act → Observe arc right -->
+  <path d="M 445 400 Q 480 480 445 560" fill="none" stroke="#2dd4bf" stroke-width="1.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <polygon points="448,558 440,566 436,553" fill="#2dd4bf" opacity="0.6"/>
+  <!-- Observe → Think arc bottom-left -->
+  <path d="M 380 615 Q 300 650 220 615" fill="none" stroke="#14b8a6" stroke-width="1.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <polygon points="222,620 214,612 226,608" fill="#14b8a6" opacity="0.6"/>
+  <!-- Think → ... arc left -->
+  <path d="M 155 560 Q 120 480 155 400" fill="none" stroke="#2dd4bf" stroke-width="1.8" stroke-dasharray="6,3" opacity="0.5"/>
+  <polygon points="152,402 160,394 164,407" fill="#2dd4bf" opacity="0.6"/>
+
+  <!-- Central Agent brain node -->
+  <circle cx="300" cy="480" r="52" fill="#061a1a" stroke="#14b8a6" stroke-width="2.5"/>
+  <circle cx="300" cy="480" r="44" fill="#0a2a2a" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+  <!-- Brain circuit lines inside -->
+  <line x1="278" y1="465" x2="322" y2="465" stroke="#14b8a6" stroke-width="1.2" opacity="0.7"/>
+  <line x1="270" y1="480" x2="330" y2="480" stroke="#14b8a6" stroke-width="1.2" opacity="0.7"/>
+  <line x1="278" y1="495" x2="322" y2="495" stroke="#14b8a6" stroke-width="1.2" opacity="0.7"/>
+  <line x1="285" y1="458" x2="285" y2="502" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+  <line x1="300" y1="455" x2="300" y2="505" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+  <line x1="315" y1="458" x2="315" y2="502" stroke="#14b8a6" stroke-width="1" opacity="0.5"/>
+  <text x="300" y="476" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="700" fill="#14b8a6" text-anchor="middle" letter-spacing="1">AGENT</text>
+  <text x="300" y="492" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#2dd4bf" text-anchor="middle" letter-spacing="0.5">THINK · ACT · OBSERVE</text>
+  <!-- Core pulse -->
+  <circle cx="300" cy="480" r="60" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.2"/>
+  <circle cx="300" cy="480" r="72" fill="none" stroke="#14b8a6" stroke-width="0.6" opacity="0.12"/>
+
+  <!-- Orbiting tool nodes -->
+  <!-- Top: Search -->
+  <g transform="translate(268, 300)">
+    <circle cx="32" cy="32" r="28" fill="#061828" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="9" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <line x1="32" y1="32" x2="38" y2="38" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="32" y="54" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#60a5fa" text-anchor="middle">SEARCH</text>
   </g>
+  <line x1="296" y1="356" x2="300" y2="428" stroke="#3b82f6" stroke-width="1" opacity="0.4"/>
 
-  <!-- ── FOOTER (bottom 20%) ── -->
-  <rect x="0" y="640" width="600" height="1" fill="#14b8a6" opacity="0.4"/>
-  <rect x="0" y="641" width="600" height="1" fill="#14b8a6" opacity="0.15"/>
+  <!-- Right: Code -->
+  <g transform="translate(416, 448)">
+    <circle cx="32" cy="32" r="28" fill="#061828" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="22" y="30" font-family="'Courier New', monospace" font-size="11" fill="#c084fc">&lt;/&gt;</text>
+    <text x="32" y="54" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#c084fc" text-anchor="middle">CODE</text>
+  </g>
+  <line x1="416" y1="480" x2="352" y2="480" stroke="#a855f7" stroke-width="1" opacity="0.4"/>
 
-  <!-- Author -->
-  <text x="300" y="680" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.85">CareerAlign</text>
+  <!-- Bottom: Memory -->
+  <g transform="translate(268, 595)">
+    <circle cx="32" cy="32" r="28" fill="#061828" stroke="#f59e0b" stroke-width="1.5"/>
+    <ellipse cx="32" cy="27" rx="12" ry="6" fill="none" stroke="#fbbf24" stroke-width="1.5"/>
+    <ellipse cx="32" cy="32" rx="12" ry="6" fill="none" stroke="#fbbf24" stroke-width="1"/>
+    <ellipse cx="32" cy="37" rx="12" ry="6" fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.6"/>
+    <text x="32" y="54" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#fbbf24" text-anchor="middle">MEMORY</text>
+  </g>
+  <line x1="296" y1="595" x2="300" y2="532" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
 
-  <!-- Book number -->
-  <text x="300" y="725" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.2em">THE CHAOS TO CLARITY AI SERIES · BOOK 4 OF 6</text>
+  <!-- Left: Human -->
+  <g transform="translate(148, 448)">
+    <circle cx="32" cy="32" r="28" fill="#061828" stroke="#22c55e" stroke-width="1.5"/>
+    <circle cx="32" cy="22" r="7" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    <path d="M18,42 Q32,34 46,42" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="32" y="54" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" fill="#4ade80" text-anchor="middle">HUMAN</text>
+  </g>
+  <line x1="176" y1="480" x2="248" y2="480" stroke="#22c55e" stroke-width="1" opacity="0.4"/>
 
-  <!-- URL -->
-  <text x="300" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle" letter-spacing="1">careeralign.com</text>
+  <!-- Top-right: API -->
+  <g transform="translate(388, 320)">
+    <circle cx="28" cy="28" r="24" fill="#061828" stroke="#f43f5e" stroke-width="1.2"/>
+    <text x="28" y="24" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="700" fill="#fb7185" text-anchor="middle">API</text>
+    <rect x="14" y="28" width="28" height="5" rx="2" fill="#fb7185" opacity="0.4"/>
+    <rect x="18" y="36" width="20" height="5" rx="2" fill="#fb7185" opacity="0.3"/>
+    <text x="28" y="46" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#fb7185" text-anchor="middle">TOOLS</text>
+  </g>
+  <line x1="388" y1="360" x2="340" y2="432" stroke="#f43f5e" stroke-width="1" opacity="0.35"/>
 
+  <!-- Footer -->
+  <line x1="60" y1="690" x2="540" y2="690" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="300" y="722" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#cbd5e1" text-anchor="middle" letter-spacing="1">By: Samira &amp; Rajesh Verma</text>
+  <text x="300" y="752" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle" letter-spacing="0.2em">THE LEGACYFORWARD.AI SERIES · BOOK 5 OF 7</text>
 </svg>

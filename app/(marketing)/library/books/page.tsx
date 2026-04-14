@@ -16,6 +16,7 @@ const bookDefs = [
   { section: "llm-ba-qa", title: "The Analyst's AI Toolkit", desc: "LLMs for requirements, testing, defect analysis, and stakeholder communication.", href: "/library/books/llm-ba-qa", audience: "BAs & QAs", color: "bg-green-500" },
   { section: "graph-ai", title: "Graph Databases for AI", desc: "From SQL to knowledge graphs — GraphRAG, graph-aware agents, and production.", href: "/library/books/graph-ai", audience: "Data Practitioners", color: "bg-rose-500" },
   { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", desc: "Legacy systems, IT sprawl, cloud, APIs, and where AI lands — in plain language. For anyone who needs to understand the landscape before they touch AI.", href: "/library/books/enterprise-it-101", audience: "All Practitioners", color: "bg-amber-500" },
+  { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation", desc: "The complete LegacyForward.ai framework — Signal Capture, Grounded Delivery, and Legacy Coexistence — for practitioners building AI in real enterprise environments.", href: "/library/books/legacyforward-guide", audience: "All Roles", color: "bg-teal-600" },
 ];
 
 function getBookStats() {

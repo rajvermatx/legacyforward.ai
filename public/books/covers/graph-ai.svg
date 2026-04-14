@@ -1,103 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <defs>
+    <radialGradient id="bgGlow-gr" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#2a0a1a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="coreGlow-gr" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="outerGlow-gr" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9f1239" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#060d1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
 
-  <!-- Background -->
-  <rect width="600" height="800" fill="#0f172a"/>
+  <rect width="600" height="800" fill="url(#bgGlow-gr)"/>
+  <rect width="600" height="200" fill="#060d1a" opacity="0.35"/>
 
-  <!-- Graph network decoration (nodes + edges) -->
-  <!-- Edges -->
-  <line x1="480" y1="220" x2="540" y2="300" stroke="#f43f5e" stroke-width="1.2" opacity="0.15"/>
-  <line x1="480" y1="220" x2="420" y2="300" stroke="#f43f5e" stroke-width="1.2" opacity="0.15"/>
-  <line x1="540" y1="300" x2="500" y2="380" stroke="#f43f5e" stroke-width="1.2" opacity="0.15"/>
-  <line x1="420" y1="300" x2="500" y2="380" stroke="#f43f5e" stroke-width="1.2" opacity="0.15"/>
-  <line x1="420" y1="300" x2="360" y2="240" stroke="#f43f5e" stroke-width="1.2" opacity="0.10"/>
-  <!-- Nodes -->
-  <circle cx="480" cy="220" r="7" fill="#f43f5e" opacity="0.20"/>
-  <circle cx="540" cy="300" r="5" fill="#f43f5e" opacity="0.18"/>
-  <circle cx="420" cy="300" r="6" fill="#f43f5e" opacity="0.18"/>
-  <circle cx="500" cy="380" r="8" fill="#f43f5e" opacity="0.16"/>
-  <circle cx="360" cy="240" r="4" fill="#f43f5e" opacity="0.12"/>
+  <!-- Wordmark -->
+  <text x="190" y="52" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" fill="white" letter-spacing="-0.5">Legacy</text>
+  <text x="280" y="52" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="700" fill="#2dd4bf" letter-spacing="-0.5">Forward</text>
+  <rect x="385" y="34" width="32" height="20" rx="4" fill="#14b8a6"/>
+  <text x="394" y="49" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="white">AI</text>
 
-  <!-- Lower network -->
-  <line x1="100" y1="560" x2="60" y2="630" stroke="#f43f5e" stroke-width="1.2" opacity="0.13"/>
-  <line x1="100" y1="560" x2="160" y2="620" stroke="#f43f5e" stroke-width="1.2" opacity="0.13"/>
-  <line x1="160" y1="620" x2="200" y2="560" stroke="#f43f5e" stroke-width="1.2" opacity="0.10"/>
-  <circle cx="100" cy="560" r="6" fill="#f43f5e" opacity="0.16"/>
-  <circle cx="60" cy="630" r="4" fill="#f43f5e" opacity="0.14"/>
-  <circle cx="160" cy="620" r="5" fill="#f43f5e" opacity="0.14"/>
-  <circle cx="200" cy="560" r="4" fill="#f43f5e" opacity="0.12"/>
-
-  <!-- Corner accent -->
-  <polygon points="0,0 200,0 0,150" fill="#f43f5e" opacity="0.10"/>
-
-  <!-- ── SERIES BRANDING ── -->
-  <text x="300" y="18" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.3em">THE LEGACYFORWARD.AI FRAMEWORK</text>
-  <line x1="260" y1="26" x2="340" y2="26" stroke="#f43f5e" stroke-width="2"/>
-
-  <!-- ── HEADER ── -->
-  <g transform="translate(276,36) scale(1.5)">
-    <rect width="32" height="32" rx="6" fill="#1e293b"/>
-    <circle cx="16" cy="16" r="10" fill="none" stroke="#334155" stroke-width="1.5"/>
-    <line x1="16" y1="5" x2="16" y2="7.5" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="16" y1="24.5" x2="16" y2="27" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="5" y1="16" x2="7.5" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="24.5" y1="16" x2="27" y2="16" stroke="#475569" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="13" y1="19" x2="22" y2="10" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="22" cy="10" r="2" fill="#f43f5e"/>
-    <circle cx="16" cy="16" r="2" fill="white"/>
-    <circle cx="13" cy="19" r="1.5" fill="#475569"/>
-  </g>
-
-  <text x="300" y="116" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="white" text-anchor="middle" opacity="0.9">CAREERALIGN</text>
-
-  <!-- ── ACCENT STRIPE ── -->
-  <rect x="0" y="150" width="600" height="8" fill="#f43f5e"/>
-
-  <!-- ── MAIN CONTENT ── -->
-
-  <rect x="60" y="210" width="4" height="240" fill="#f43f5e" rx="2"/>
-
-  <!-- Title line 1 -->
-  <text x="88" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="white" letter-spacing="-1">Graph Databases</text>
-  <!-- Title line 2 -->
-  <text x="88" y="322" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="46" font-weight="800" fill="white" letter-spacing="-1">for AI</text>
+  <!-- Title -->
+  <text x="300" y="118" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="64" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">GRAPH</text>
+  <text x="300" y="178" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">DATABASES</text>
+  <text x="300" y="228" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="48" font-weight="900" fill="#fb7185" text-anchor="middle" letter-spacing="-1">FOR AI</text>
+  <line x1="150" y1="242" x2="450" y2="242" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round"/>
 
   <!-- Subtitle -->
-  <text x="88" y="364" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#f43f5e" letter-spacing="0.3">From SQL to Knowledge Graphs</text>
+  <text x="300" y="268" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#93c5fd" text-anchor="middle" letter-spacing="0.5">From SQL to Knowledge Graphs</text>
+  <text x="300" y="290" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#64748b" text-anchor="middle" letter-spacing="0.3">The data practitioner's path to graph-powered AI</text>
 
-  <!-- Divider -->
-  <line x1="88" y1="386" x2="320" y2="386" stroke="#f43f5e" stroke-width="1" opacity="0.4"/>
+  <!-- Hero: Knowledge graph constellation -->
+  <ellipse cx="300" cy="490" rx="250" ry="175" fill="url(#outerGlow-gr)"/>
+  <ellipse cx="300" cy="490" rx="150" ry="120" fill="url(#coreGlow-gr)"/>
 
-  <!-- Tagline -->
-  <text x="88" y="408" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" fill="#94a3b8" letter-spacing="0.3">19 chapters from relational to graph-powered AI</text>
+  <!-- Graph edges (draw first, under nodes) -->
+  <line x1="300" y1="430" x2="195" y2="370" stroke="#f43f5e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="300" y1="430" x2="405" y2="370" stroke="#f43f5e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="300" y1="430" x2="195" y2="510" stroke="#fb7185" stroke-width="1.2" opacity="0.45"/>
+  <line x1="300" y1="430" x2="405" y2="510" stroke="#fb7185" stroke-width="1.2" opacity="0.45"/>
+  <line x1="300" y1="430" x2="300" y2="555" stroke="#f43f5e" stroke-width="1.5" opacity="0.5"/>
+  <line x1="195" y1="370" x2="130" y2="430" stroke="#f43f5e" stroke-width="1" opacity="0.35"/>
+  <line x1="405" y1="370" x2="470" y2="430" stroke="#f43f5e" stroke-width="1" opacity="0.35"/>
+  <line x1="195" y1="510" x2="130" y2="570" stroke="#fb7185" stroke-width="1" opacity="0.30"/>
+  <line x1="405" y1="510" x2="470" y2="570" stroke="#fb7185" stroke-width="1" opacity="0.30"/>
+  <line x1="195" y1="370" x2="240" y2="315" stroke="#f43f5e" stroke-width="0.8" opacity="0.25"/>
+  <line x1="405" y1="370" x2="360" y2="315" stroke="#f43f5e" stroke-width="0.8" opacity="0.25"/>
+  <line x1="300" y1="555" x2="240" y2="610" stroke="#fb7185" stroke-width="0.8" opacity="0.25"/>
+  <line x1="300" y1="555" x2="360" y2="610" stroke="#fb7185" stroke-width="0.8" opacity="0.25"/>
+  <!-- Cross edges -->
+  <line x1="195" y1="370" x2="405" y2="510" stroke="#f43f5e" stroke-width="0.8" opacity="0.18" stroke-dasharray="4,3"/>
+  <line x1="405" y1="370" x2="195" y2="510" stroke="#f43f5e" stroke-width="0.8" opacity="0.18" stroke-dasharray="4,3"/>
 
-  <!-- SQL to Graph visual -->
-  <g opacity="0.20">
-    <!-- SQL table left -->
-    <rect x="88" y="438" width="120" height="80" rx="4" fill="#334155"/>
-    <rect x="88" y="438" width="120" height="20" rx="4" fill="#f43f5e"/>
-    <rect x="88" y="458" width="120" height="1" fill="#475569"/>
-    <rect x="92" y="464" width="80" height="6" rx="2" fill="#475569"/>
-    <rect x="92" y="476" width="60" height="6" rx="2" fill="#475569"/>
-    <rect x="92" y="488" width="70" height="6" rx="2" fill="#475569"/>
-    <!-- Arrow -->
-    <line x1="218" y1="478" x2="258" y2="478" stroke="#f43f5e" stroke-width="2"/>
-    <polygon points="258,474 266,478 258,482" fill="#f43f5e"/>
-    <!-- Graph right -->
-    <circle cx="310" cy="460" r="14" fill="#f43f5e" opacity="0.6"/>
-    <circle cx="350" cy="490" r="10" fill="#f43f5e" opacity="0.5"/>
-    <circle cx="290" cy="498" r="10" fill="#f43f5e" opacity="0.5"/>
-    <line x1="310" y1="460" x2="350" y2="490" stroke="#f43f5e" stroke-width="1.5"/>
-    <line x1="310" y1="460" x2="290" y2="498" stroke="#f43f5e" stroke-width="1.5"/>
-    <line x1="350" y1="490" x2="290" y2="498" stroke="#f43f5e" stroke-width="1.5"/>
+  <!-- Central hub node (largest) -->
+  <circle cx="300" cy="430" r="42" fill="#1a0814" stroke="#f43f5e" stroke-width="2.5"/>
+  <circle cx="300" cy="430" r="34" fill="#2a0a1a" stroke="#f43f5e" stroke-width="1" opacity="0.5"/>
+  <text x="300" y="425" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" fill="#fb7185" text-anchor="middle" letter-spacing="1">KNOWLEDGE</text>
+  <text x="300" y="440" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="700" fill="#fb7185" text-anchor="middle" letter-spacing="1">GRAPH</text>
+  <circle cx="300" cy="430" r="50" fill="none" stroke="#f43f5e" stroke-width="0.8" opacity="0.25"/>
+  <circle cx="300" cy="430" r="62" fill="none" stroke="#f43f5e" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Secondary nodes -->
+  <!-- Top-left: Entity -->
+  <circle cx="195" cy="370" r="26" fill="#1a0814" stroke="#f43f5e" stroke-width="1.8"/>
+  <text x="195" y="368" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="700" fill="#fb7185" text-anchor="middle">ENTITY</text>
+  <text x="195" y="380" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#f43f5e" text-anchor="middle" opacity="0.7">:Person</text>
+
+  <!-- Top-right: Relationship -->
+  <circle cx="405" cy="370" r="26" fill="#1a0814" stroke="#f43f5e" stroke-width="1.8"/>
+  <text x="405" y="368" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" font-weight="700" fill="#fb7185" text-anchor="middle">RELATES</text>
+  <text x="405" y="380" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#f43f5e" text-anchor="middle" opacity="0.7">:KNOWS</text>
+
+  <!-- Left: Property -->
+  <circle cx="130" cy="430" r="20" fill="#1a0814" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="130" cy="430" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#fb7185" text-anchor="middle">
+    <tspan x="130" y="427">PROP</tspan>
+    <tspan x="130" dy="10">ERTY</tspan>
+  </text>
+
+  <!-- Right: Index -->
+  <circle cx="470" cy="430" r="20" fill="#1a0814" stroke="#fb7185" stroke-width="1.2"/>
+  <text x="470" y="434" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#fb7185" text-anchor="middle">INDEX</text>
+
+  <!-- Bottom-left: Cypher -->
+  <circle cx="195" cy="510" r="22" fill="#1a0814" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="195" y="507" font-family="'Courier New', monospace" font-size="8" fill="#fb7185" text-anchor="middle">MATCH</text>
+  <text x="195" y="518" font-family="'Courier New', monospace" font-size="7" fill="#f43f5e" text-anchor="middle" opacity="0.7">(n)--&gt;(m)</text>
+
+  <!-- Bottom-right: Vector -->
+  <circle cx="405" cy="510" r="22" fill="#1a0814" stroke="#f43f5e" stroke-width="1.5"/>
+  <text x="405" y="507" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="700" fill="#fb7185" text-anchor="middle">VECTOR</text>
+  <text x="405" y="518" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#f43f5e" text-anchor="middle" opacity="0.7">GraphRAG</text>
+
+  <!-- Bottom center: Traversal -->
+  <circle cx="300" cy="555" r="24" fill="#1a0814" stroke="#f43f5e" stroke-width="1.8"/>
+  <text x="300" y="552" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="700" fill="#fb7185" text-anchor="middle">TRAVERSE</text>
+  <text x="300" y="563" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#f43f5e" text-anchor="middle" opacity="0.7">multi-hop</text>
+
+  <!-- Outer small nodes -->
+  <circle cx="130" cy="570" r="12" fill="#1a0814" stroke="#f43f5e" stroke-width="1" opacity="0.8"/>
+  <text x="130" y="574" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#fb7185" text-anchor="middle" opacity="0.8">SQL</text>
+  <circle cx="470" cy="570" r="12" fill="#1a0814" stroke="#f43f5e" stroke-width="1" opacity="0.8"/>
+  <text x="470" y="574" font-family="'Helvetica Neue', Arial, sans-serif" font-size="7" fill="#fb7185" text-anchor="middle" opacity="0.8">Neo4j</text>
+  <circle cx="240" cy="315" r="10" fill="#1a0814" stroke="#fb7185" stroke-width="1" opacity="0.6"/>
+  <circle cx="360" cy="315" r="10" fill="#1a0814" stroke="#fb7185" stroke-width="1" opacity="0.6"/>
+  <circle cx="240" cy="610" r="10" fill="#1a0814" stroke="#fb7185" stroke-width="1" opacity="0.5"/>
+  <circle cx="360" cy="610" r="10" fill="#1a0814" stroke="#fb7185" stroke-width="1" opacity="0.5"/>
+
+  <!-- SQL → Graph arrow (bottom-left corner decoration) -->
+  <g transform="translate(58, 610)" opacity="0.5">
+    <rect x="0" y="10" width="44" height="34" rx="2" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <rect x="0" y="10" width="44" height="10" rx="2" fill="#334155" opacity="0.8"/>
+    <rect x="4" y="24" width="20" height="4" rx="1" fill="#475569" opacity="0.6"/>
+    <rect x="4" y="32" width="30" height="4" rx="1" fill="#475569" opacity="0.4"/>
+    <line x1="48" y1="27" x2="62" y2="27" stroke="#f43f5e" stroke-width="1.5"/>
+    <polygon points="60,23 68,27 60,31" fill="#f43f5e"/>
   </g>
 
-  <!-- ── FOOTER ── -->
-  <rect x="0" y="640" width="600" height="1" fill="#f43f5e" opacity="0.4"/>
-  <rect x="0" y="641" width="600" height="1" fill="#f43f5e" opacity="0.15"/>
-
-  <text x="300" y="680" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="white" text-anchor="middle" letter-spacing="2" opacity="0.85">CareerAlign</text>
-  <text x="300" y="725" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle" letter-spacing="0.2em">THE CHAOS TO CLARITY AI SERIES · BOOK 6 OF 6</text>
-  <text x="300" y="760" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="middle" letter-spacing="1">careeralign.com</text>
-
+  <!-- Footer -->
+  <line x1="60" y1="690" x2="540" y2="690" stroke="#1e3a5f" stroke-width="1"/>
+  <text x="300" y="722" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="500" fill="#cbd5e1" text-anchor="middle" letter-spacing="1">By: Samira &amp; Rajesh Verma</text>
+  <text x="300" y="752" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="10" fill="#475569" text-anchor="middle" letter-spacing="0.2em">THE LEGACYFORWARD.AI SERIES · BOOK 7 OF 7</text>
 </svg>
