@@ -10,6 +10,8 @@ badges: ["Reference", "All Roles"]
 
 # Quick Reference
 
+![Kill Early: The Cost of Delay — relative cost by stage](/diagrams/legacyforward-guide/08-quick-reference-1.svg)
+
 ## The LegacyForward.ai Framework at a Glance
 
 | Pillar | Core Question | Stages / Phases | Gate Types | Key Anti-Patterns |

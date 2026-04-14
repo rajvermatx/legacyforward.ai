@@ -10,6 +10,8 @@ badges: ["Legacy Coexistence", "Architecture Patterns"]
 
 # Legacy Coexistence: The Five Patterns
 
+![The Five Coexistence Patterns: complexity ladder from Data Exhaust to Legacy-Aware Agent](/diagrams/legacyforward-guide/05-legacy-coexistence-patterns-1.svg)
+
 ## The Legacy Reality
 
 Every enterprise AI strategy that ignores existing systems is a fantasy.

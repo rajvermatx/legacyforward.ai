@@ -1,0 +1,97 @@
+<svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-sc2" viewBox="0 0 10 7" refX="10" refY="3.5"
+            markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="22" font-family="system-ui, sans-serif" font-size="15"
+        font-weight="700" fill="#1e293b" text-anchor="middle"
+        dominant-baseline="central">Value Assessment Framework: Three Stages</text>
+
+  <!-- Box 1: Hypothesis (teal) — x=20, width=148 -->
+  <rect x="20" y="54" width="148" height="72" rx="8"
+        fill="#ccfbf1" stroke="#0d9488" stroke-width="2" />
+  <text x="94" y="80" font-family="system-ui, sans-serif" font-size="13"
+        font-weight="700" fill="#0d9488" text-anchor="middle"
+        dominant-baseline="central">Hypothesis</text>
+  <text x="94" y="100" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">One sentence</text>
+  <text x="94" y="114" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">value statement</text>
+
+  <!-- Arrow to gate 1 -->
+  <path d="M168 90 L200 90" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-sc2)" />
+
+  <!-- Gate 1 diamond — center x=224, y=90 -->
+  <polygon points="224,70 252,90 224,110 196,90"
+           fill="#F8F7F4" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="224" y="87" font-family="system-ui, sans-serif" font-size="8"
+        font-weight="700" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">GO /</text>
+  <text x="224" y="98" font-family="system-ui, sans-serif" font-size="8"
+        font-weight="700" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">NO-GO</text>
+
+  <!-- Arrow from gate 1 to box 2 -->
+  <path d="M252 90 L278 90" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-sc2)" />
+
+  <!-- Box 2: Validation (blue) — x=278, width=160 -->
+  <rect x="278" y="54" width="160" height="72" rx="8"
+        fill="#E6F1FB" stroke="#185FA5" stroke-width="2" />
+  <text x="358" y="80" font-family="system-ui, sans-serif" font-size="13"
+        font-weight="700" fill="#185FA5" text-anchor="middle"
+        dominant-baseline="central">Validation</text>
+  <text x="358" y="100" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">Data · Feasibility</text>
+  <text x="358" y="114" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">Org · Economic</text>
+
+  <!-- Arrow to gate 2 -->
+  <path d="M438 90 L462 90" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-sc2)" />
+
+  <!-- Gate 2 diamond — center x=488, y=90 -->
+  <polygon points="488,66 520,90 488,114 456,90"
+           fill="#F8F7F4" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="488" y="83" font-family="system-ui, sans-serif" font-size="7.5"
+        font-weight="700" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">GO /</text>
+  <text x="488" y="93" font-family="system-ui, sans-serif" font-size="7.5"
+        font-weight="700" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">PIVOT /</text>
+  <text x="488" y="103" font-family="system-ui, sans-serif" font-size="7.5"
+        font-weight="700" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">KILL</text>
+
+  <!-- Arrow from gate 2 to box 3 -->
+  <path d="M520 90 L542 90" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-sc2)" />
+
+  <!-- Box 3: Tracking (green) — x=542, width=118 -->
+  <rect x="542" y="54" width="118" height="72" rx="8"
+        fill="#f0fdf4" stroke="#16a34a" stroke-width="2" />
+  <text x="601" y="80" font-family="system-ui, sans-serif" font-size="13"
+        font-weight="700" fill="#16a34a" text-anchor="middle"
+        dominant-baseline="central">Tracking</text>
+  <text x="601" y="100" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">Leading · Lagging</text>
+  <text x="601" y="114" font-family="system-ui, sans-serif" font-size="10"
+        fill="#475569" text-anchor="middle" dominant-baseline="central">Kill Triggers</text>
+
+  <!-- Stage labels below -->
+  <text x="94" y="158" font-family="system-ui, sans-serif" font-size="10"
+        fill="#64748b" text-anchor="middle" dominant-baseline="central">Stage 1</text>
+  <text x="358" y="158" font-family="system-ui, sans-serif" font-size="10"
+        fill="#64748b" text-anchor="middle" dominant-baseline="central">Stage 2</text>
+  <text x="601" y="158" font-family="system-ui, sans-serif" font-size="10"
+        fill="#64748b" text-anchor="middle" dominant-baseline="central">Stage 3</text>
+
+  <!-- Subtitle note -->
+  <text x="340" y="194" font-family="system-ui, sans-serif" font-size="10"
+        fill="#94a3b8" text-anchor="middle" dominant-baseline="central">Each gate is an explicit decision point — not a milestone</text>
+</svg>

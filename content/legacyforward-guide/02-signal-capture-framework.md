@@ -10,6 +10,8 @@ badges: ["Signal Capture", "Portfolio Governance"]
 
 # Signal Capture: The Value Assessment Framework
 
+![Value Assessment Framework: Hypothesis → Validation → Tracking](/diagrams/legacyforward-guide/02-signal-capture-framework-1.svg)
+
 ## The Three Stages
 
 Signal Capture is implemented through a three-stage Value Assessment Framework. The stages are sequential. Skipping a stage is not an efficiency gain — it is how organizations waste money on initiatives that should never have been funded.

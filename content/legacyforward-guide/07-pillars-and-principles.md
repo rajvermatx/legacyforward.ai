@@ -10,6 +10,8 @@ badges: ["Framework Integration", "Core Principles"]
 
 # How the Pillars Connect: Feedback Loop and Core Principles
 
+![The LegacyForward.ai Feedback Loop: Signal Capture → Grounded Delivery → Legacy Coexistence → Operate](/diagrams/legacyforward-guide/07-pillars-and-principles-1.svg)
+
 ## The Feedback Loop
 
 The three pillars are not a linear process. They form a closed feedback loop that continuously improves the organization's ability to identify, deliver, and operate AI value.

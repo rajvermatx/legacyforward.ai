@@ -1,0 +1,89 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-lc1" viewBox="0 0 10 7" refX="10" refY="3.5"
+            markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="22" font-family="system-ui, sans-serif" font-size="15"
+        font-weight="700" fill="#1e293b" text-anchor="middle"
+        dominant-baseline="central">The Five Coexistence Patterns</text>
+
+  <!-- Left axis: Complexity arrow (bottom to top) -->
+  <path d="M54 370 L54 52" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-lc1)" />
+  <text x="20" y="210" font-family="system-ui, sans-serif" font-size="11"
+        font-weight="600" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central" transform="rotate(-90,20,210)">Complexity ↑</text>
+
+  <!-- Right axis: Capability arrow (bottom to top) -->
+  <path d="M626 370 L626 52" fill="none" stroke="#14b8a6" stroke-width="1.5"
+        marker-end="url(#arrow-lc1)" />
+  <text x="660" y="210" font-family="system-ui, sans-serif" font-size="11"
+        font-weight="600" fill="#14b8a6" text-anchor="middle"
+        dominant-baseline="central" transform="rotate(90,660,210)">Capability ↑</text>
+
+  <!-- Pattern bars — bottom to top, increasing teal saturation -->
+
+  <!-- 1. Data Exhaust (lightest, bottom) — y=345 -->
+  <rect x="70" y="338" width="544" height="36" rx="6"
+        fill="#f0fdfa" stroke="#5eead4" stroke-width="1.5" />
+  <text x="210" y="356" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="700" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">Data Exhaust</text>
+  <text x="430" y="356" font-family="system-ui, sans-serif" font-size="11"
+        fill="#475569" text-anchor="middle"
+        dominant-baseline="central">Batch · No legacy modification</text>
+
+  <!-- 2. Sidecar — y=288 -->
+  <rect x="70" y="281" width="544" height="36" rx="6"
+        fill="#ccfbf1" stroke="#2dd4bf" stroke-width="1.5" />
+  <text x="210" y="299" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="700" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">Sidecar</text>
+  <text x="430" y="299" font-family="system-ui, sans-serif" font-size="11"
+        fill="#475569" text-anchor="middle"
+        dominant-baseline="central">Near-real-time · Observe only</text>
+
+  <!-- 3. Gateway — y=231 -->
+  <rect x="70" y="224" width="544" height="36" rx="6"
+        fill="#99f6e4" stroke="#14b8a6" stroke-width="1.5" />
+  <text x="210" y="242" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="700" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">Gateway</text>
+  <text x="430" y="242" font-family="system-ui, sans-serif" font-size="11"
+        fill="#1e293b" text-anchor="middle"
+        dominant-baseline="central">Real-time · Translation layer</text>
+
+  <!-- 4. Shadow Pipeline — y=174 -->
+  <rect x="70" y="167" width="544" height="36" rx="6"
+        fill="#2dd4bf" stroke="#0d9488" stroke-width="1.5" />
+  <text x="210" y="185" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="700" fill="#ffffff" text-anchor="middle"
+        dominant-baseline="central">Shadow Pipeline</text>
+  <text x="430" y="185" font-family="system-ui, sans-serif" font-size="11"
+        fill="#ffffff" text-anchor="middle"
+        dominant-baseline="central">Parallel · Gradual cutover</text>
+
+  <!-- 5. Legacy-Aware Agent (darkest, top) — y=117 -->
+  <rect x="70" y="110" width="544" height="36" rx="6"
+        fill="#0d9488" stroke="#0f766e" stroke-width="1.5" />
+  <text x="210" y="128" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="700" fill="#ffffff" text-anchor="middle"
+        dominant-baseline="central">Legacy-Aware Agent</text>
+  <text x="430" y="128" font-family="system-ui, sans-serif" font-size="11"
+        fill="#ccfbf1" text-anchor="middle"
+        dominant-baseline="central">Autonomous · Full legacy awareness</text>
+
+  <!-- "Simplest" label at bottom -->
+  <text x="340" y="385" font-family="system-ui, sans-serif" font-size="10"
+        fill="#94a3b8" text-anchor="middle"
+        dominant-baseline="central">← Simplest · Start Here</text>
+
+  <!-- "Most Complex" label at top -->
+  <text x="340" y="56" font-family="system-ui, sans-serif" font-size="10"
+        fill="#94a3b8" text-anchor="middle"
+        dominant-baseline="central">Most Complex · Choose When Ready →</text>
+</svg>

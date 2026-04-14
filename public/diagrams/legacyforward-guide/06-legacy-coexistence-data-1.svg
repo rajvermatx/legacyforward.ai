@@ -1,0 +1,113 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-lc2" viewBox="0 0 10 7" refX="10" refY="3.5"
+            markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+    </marker>
+    <marker id="arrow-lc2r" viewBox="0 0 10 7" refX="10" refY="3.5"
+            markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#0d9488" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="340" y="22" font-family="system-ui, sans-serif" font-size="15"
+        font-weight="700" fill="#1e293b" text-anchor="middle"
+        dominant-baseline="central">Data Flow Across Legacy Boundary</text>
+
+  <!-- LEFT column background: Legacy Environment (dark) -->
+  <rect x="20" y="44" width="268" height="300" rx="10"
+        fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+  <text x="154" y="66" font-family="system-ui, sans-serif" font-size="13"
+        font-weight="700" fill="#94a3b8" text-anchor="middle"
+        dominant-baseline="central">Legacy Environment</text>
+
+  <!-- LEFT items -->
+  <rect x="36" y="82" width="236" height="40" rx="6"
+        fill="#334155" stroke="#475569" stroke-width="1" />
+  <text x="154" y="102" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#cbd5e1" text-anchor="middle"
+        dominant-baseline="central">EBCDIC Data</text>
+
+  <rect x="36" y="132" width="236" height="40" rx="6"
+        fill="#334155" stroke="#475569" stroke-width="1" />
+  <text x="154" y="152" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#cbd5e1" text-anchor="middle"
+        dominant-baseline="central">Batch Extracts</text>
+
+  <rect x="36" y="182" width="236" height="40" rx="6"
+        fill="#334155" stroke="#475569" stroke-width="1" />
+  <text x="154" y="202" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#cbd5e1" text-anchor="middle"
+        dominant-baseline="central">Fixed-Width Records</text>
+
+  <rect x="36" y="232" width="236" height="40" rx="6"
+        fill="#334155" stroke="#475569" stroke-width="1" />
+  <text x="154" y="252" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#cbd5e1" text-anchor="middle"
+        dominant-baseline="central">Proprietary Formats</text>
+
+  <!-- Boundary line -->
+  <line x1="336" y1="44" x2="336" y2="344" stroke="#64748b"
+        stroke-width="3" stroke-dasharray="8 4" />
+  <text x="336" y="358" font-family="system-ui, sans-serif" font-size="10"
+        font-weight="600" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">Legacy Boundary</text>
+
+  <!-- RIGHT column background: AI System (light) -->
+  <rect x="392" y="44" width="268" height="300" rx="10"
+        fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5" />
+  <text x="526" y="66" font-family="system-ui, sans-serif" font-size="13"
+        font-weight="700" fill="#0d9488" text-anchor="middle"
+        dominant-baseline="central">AI System</text>
+
+  <!-- RIGHT items -->
+  <rect x="408" y="82" width="236" height="40" rx="6"
+        fill="#ccfbf1" stroke="#14b8a6" stroke-width="1" />
+  <text x="526" y="102" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">Vector Store</text>
+
+  <rect x="408" y="132" width="236" height="40" rx="6"
+        fill="#ccfbf1" stroke="#14b8a6" stroke-width="1" />
+  <text x="526" y="152" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">Analytics Pipeline</text>
+
+  <rect x="408" y="182" width="236" height="40" rx="6"
+        fill="#ccfbf1" stroke="#14b8a6" stroke-width="1" />
+  <text x="526" y="202" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">AI Model</text>
+
+  <rect x="408" y="232" width="236" height="40" rx="6"
+        fill="#ccfbf1" stroke="#14b8a6" stroke-width="1" />
+  <text x="526" y="252" font-family="system-ui, sans-serif" font-size="12"
+        font-weight="600" fill="#0f766e" text-anchor="middle"
+        dominant-baseline="central">API Output</text>
+
+  <!-- Crossing arrows with labels -->
+  <!-- Arrow 1: Format Translation — y=102 -->
+  <path d="M272 102 L408 102" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-lc2)" />
+  <rect x="298" y="88" width="84" height="16" rx="3" fill="#ffffff" />
+  <text x="340" y="96" font-family="system-ui, sans-serif" font-size="9"
+        font-weight="600" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">Format Translation</text>
+
+  <!-- Arrow 2: Governance — y=192 -->
+  <path d="M272 192 L408 192" fill="none" stroke="#64748b" stroke-width="1.5"
+        marker-end="url(#arrow-lc2)" />
+  <rect x="304" y="180" width="72" height="16" rx="3" fill="#ffffff" />
+  <text x="340" y="188" font-family="system-ui, sans-serif" font-size="9"
+        font-weight="600" fill="#64748b" text-anchor="middle"
+        dominant-baseline="central">Governance</text>
+
+  <!-- Arrow 3: Lineage Tracking — y=252 -->
+  <path d="M272 252 L408 252" fill="none" stroke="#0d9488" stroke-width="1.5"
+        marker-end="url(#arrow-lc2r)" />
+  <rect x="294" y="240" width="92" height="16" rx="3" fill="#ffffff" />
+  <text x="340" y="248" font-family="system-ui, sans-serif" font-size="9"
+        font-weight="600" fill="#0d9488" text-anchor="middle"
+        dominant-baseline="central">Lineage Tracking</text>
+</svg>

@@ -10,6 +10,8 @@ badges: ["Legacy Coexistence", "Data Architecture"]
 
 # Legacy Coexistence: Data Challenges and Anti-Patterns
 
+![Data flow across the legacy boundary: format translation, governance, and lineage](/diagrams/legacyforward-guide/06-legacy-coexistence-data-1.svg)
+
 ## Data Challenges in Legacy Environments
 
 AI value depends on data. Legacy environments present data challenges that must be addressed architecturally, not ad hoc.

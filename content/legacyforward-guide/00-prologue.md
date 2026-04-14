@@ -10,6 +10,8 @@ badges: ["Framework Overview", "All Roles"]
 
 # From Chaos to Clarity
 
+![The Three Pillars: Signal Capture, Grounded Delivery, Legacy Coexistence](/diagrams/legacyforward-guide/00-prologue-1.svg)
+
 ## The Problem Is Not AI. It Is How Enterprises Are Approaching It.
 
 AI is real. The capabilities are genuine. The value is achievable. And yet, the majority of enterprise AI initiatives fail to deliver meaningful returns. Not because the technology does not work. Because the organizations deploying it are making predictable, avoidable mistakes — and repeating them at scale.

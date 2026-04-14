@@ -10,6 +10,8 @@ badges: ["Grounded Delivery", "Delivery Methodology"]
 
 # Grounded Delivery: The Five Phases
 
+![Grounded Delivery: Frame → Explore → Shape → Harden → Operate](/diagrams/legacyforward-guide/03-grounded-delivery-phases-1.svg)
+
 ## Why Agile Breaks for AI
 
 Agile works for deterministic systems. Software has rules. The same function called with the same input produces the same output every time. Agile's foundational constructs — user stories with binary acceptance criteria, sprint velocity estimates, regression test suites — all depend on this property.

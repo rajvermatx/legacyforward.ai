@@ -10,6 +10,8 @@ badges: ["Signal Capture", "Value Hypothesis"]
 
 # Signal Capture: Finding Net New Value
 
+![Transformation vs Automation: Two paths from an AI opportunity](/diagrams/legacyforward-guide/01-signal-capture-value-1.svg)
+
 ## The Core Question
 
 Signal Capture is a discipline for identifying where AI creates outcomes that are impossible by any other means — and for killing initiatives that cannot make that case.
