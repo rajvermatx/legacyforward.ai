@@ -13,8 +13,6 @@ Part 1 — Foundations
 
 A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things. The failure was not a bug. It was an architecture that was never designed for agency.
 
-Reading time: ~20 min Project: Autonomy Classifier Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Define agentic AI and distinguish it from conventional AI systems
@@ -354,17 +352,14 @@ print(f"\n{assessment.explanation}")
 
 Apply the Autonomy Classifier to systems in your chosen domain. Each variant includes three system descriptions to classify — one that should score as a Chain, one as an Agent, and one as a Multi-Agent system.
 
-Tech / Software CI/CD pipeline, coding assistant, incident responder
-
-Healthcare Triage chatbot, diagnosis support, care coordinator
-
-Finance Report generator, trading advisor, compliance monitor
-
-Education Quiz generator, tutoring system, curriculum planner
-
-E-commerce Product describer, shopping assistant, fulfillment agent
-
-Legal Contract summarizer, research agent, negotiation system
+| Domain | Chain | Agent | Multi-Agent |
+| --- | --- | --- | --- |
+| Tech / Software | CI/CD pipeline | Coding assistant | Incident responder |
+| Healthcare | Triage chatbot | Diagnosis support | Care coordinator |
+| Finance | Report generator | Trading advisor | Compliance monitor |
+| Education | Quiz generator | Tutoring system | Curriculum planner |
+| E-commerce | Product describer | Shopping assistant | Fulfillment agent |
+| Legal | Contract summarizer | Research agent | Negotiation system |
 
 ## Summary
 
