@@ -672,14 +672,8 @@ RAG solves the fundamental limitation of parametric knowledge in language models
 
 ### Exercises
 
-#### Conceptual
-
-**Chunking trade-offs.** Your RAG pipeline uses 512-token chunks, but users report that answers to questions spanning multiple sections are incomplete. You consider doubling chunk size to 1024 tokens. Analyze the trade-offs: what improves, what degrades, and what alternative approach (not changing chunk size) could address the problem while preserving retrieval precision?
-
-#### Coding
-
-**Incremental indexing.** Implement a document versioning system for your vector store. When a source document is updated, your system should: detect which chunks have changed (using content hashing), delete stale chunk embeddings, embed and index only the new or modified chunks, and update metadata timestamps. Benchmark the time savings compared to full re-indexing on a corpus of 100+ documents.
-
-#### Design
-
-**Multi-tenant RAG.** Design a RAG architecture for a SaaS platform where each customer has their own document corpus but shares the same embedding model and generation infrastructure. Address: data isolation (customer A must never see customer B’s documents in retrieval results), per-tenant index management, cost allocation, and what happens when one customer’s corpus grows to 10x the size of the average tenant. Sketch the data model and the query flow.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Chunking trade-offs** | Your RAG pipeline uses 512-token chunks, but users report that answers to questions spanning multiple sections are incomplete. You consider doubling chunk size to 1024 tokens. Analyze the trade-offs: what improves, what degrades, and what alternative approach (not changing chunk size) could address the problem while preserving retrieval precision? |
+| Coding | **Incremental indexing** | Implement a document versioning system for your vector store. When a source document is updated, your system should: detect which chunks have changed (using content hashing), delete stale chunk embeddings, embed and index only the new or modified chunks, and update metadata timestamps. Benchmark the time savings compared to full re-indexing on a corpus of 100+ documents. |
+| Design | **Multi-tenant RAG** | Design a RAG architecture for a SaaS platform where each customer has their own document corpus but shares the same embedding model and generation infrastructure. Address: data isolation (customer A must never see customer B’s documents in retrieval results), per-tenant index management, cost allocation, and what happens when one customer’s corpus grows to 10x the size of the average tenant. Sketch the data model and the query flow. |

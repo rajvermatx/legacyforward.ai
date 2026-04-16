@@ -515,14 +515,8 @@ Build a multi-tier memory system that combines conversation buffer, summary comp
 
 ### Exercises
 
-#### Conceptual
-
-A customer support agent uses a 10-message sliding window. A user reports a bug in message 2, discusses workarounds in messages 3–8, then asks “Can you summarize the bug I reported?” in message 14. Explain why the agent fails. Design a memory architecture that handles this scenario using no more than 4,000 tokens of context per call.
-
-#### Coding
-
-Implement a `MemoryManager` class that combines `TokenWindowMemory` and `SummaryMemory`. When the token window overflows, the oldest messages should be summarized (not discarded). Write tests that verify: (a) the summary contains specific numbers mentioned in compressed messages, and (b) total token count stays below the configured limit.
-
-#### Design
-
-You are building a tutoring agent that works with students over an entire semester. Students revisit topics, forget material, and gradually improve. Design a memory system that tracks: what the student knows, what they struggle with, what has been taught, and which explanations worked. Specify which memory type (buffer, summary, vector, episodic, semantic) handles each requirement and justify your choices.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Sliding window failure** | A customer support agent uses a 10-message sliding window. A user reports a bug in message 2, discusses workarounds in messages 3–8, then asks “Can you summarize the bug I reported?” in message 14. Explain why the agent fails. Design a memory architecture that handles this scenario using no more than 4,000 tokens of context per call. |
+| Coding | **MemoryManager implementation** | Implement a `MemoryManager` class that combines `TokenWindowMemory` and `SummaryMemory`. When the token window overflows, the oldest messages should be summarized (not discarded). Write tests that verify: (a) the summary contains specific numbers mentioned in compressed messages, and (b) total token count stays below the configured limit. |
+| Design | **Semester-long tutoring memory** | You are building a tutoring agent that works with students over an entire semester. Students revisit topics, forget material, and gradually improve. Design a memory system that tracks: what the student knows, what they struggle with, what has been taught, and which explanations worked. Specify which memory type (buffer, summary, vector, episodic, semantic) handles each requirement and justify your choices. |

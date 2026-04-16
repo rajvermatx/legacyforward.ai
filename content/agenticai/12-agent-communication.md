@@ -663,14 +663,8 @@ Agent communication is the infrastructure that determines whether a multi-agent 
 
 ### Exercises
 
-#### Conceptual
-
-**Pattern selection.** You are building a multi-agent system with eight agents that process incoming customer support tickets. Three agents classify tickets, two agents draft responses, two agents review drafts, and one agent handles escalation. For each pair of interacting agent types, identify the most appropriate communication pattern (broadcast, request/reply, pub/sub, or shared state) and justify your choice. What changes if the system scales to 50 agents?
-
-#### Coding
-
-**Deadlock breaker.** Implement a deadlock detection mechanism for a request/reply system. Two agents can deadlock if Agent A sends a request to Agent B and waits, while Agent B has already sent a request to Agent A and is also waiting. Your solution should detect this circular dependency within 5 seconds and break it by canceling the lower-priority request. Write tests that demonstrate both the detection and the resolution.
-
-#### Design
-
-**Cross-system agent federation.** Two organizations each run their own multi-agent systems and want their agents to collaborate on a joint project. Design a federation protocol that addresses: message format translation between the two systems, trust boundaries (which agents can communicate across organizations), rate limiting to prevent one system from overwhelming the other, and audit logging for cross-boundary messages. Sketch the gateway architecture and the message flow for a typical cross-system request.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Pattern selection** | You are building a multi-agent system with eight agents that process incoming customer support tickets. Three agents classify tickets, two agents draft responses, two agents review drafts, and one agent handles escalation. For each pair of interacting agent types, identify the most appropriate communication pattern (broadcast, request/reply, pub/sub, or shared state) and justify your choice. What changes if the system scales to 50 agents? |
+| Coding | **Deadlock breaker** | Implement a deadlock detection mechanism for a request/reply system. Two agents can deadlock if Agent A sends a request to Agent B and waits, while Agent B has already sent a request to Agent A and is also waiting. Your solution should detect this circular dependency within 5 seconds and break it by canceling the lower-priority request. Write tests that demonstrate both the detection and the resolution. |
+| Design | **Cross-system agent federation** | Two organizations each run their own multi-agent systems and want their agents to collaborate on a joint project. Design a federation protocol that addresses: message format translation between the two systems, trust boundaries (which agents can communicate across organizations), rate limiting to prevent one system from overwhelming the other, and audit logging for cross-boundary messages. Sketch the gateway architecture and the message flow for a typical cross-system request. |

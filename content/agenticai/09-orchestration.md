@@ -628,16 +628,10 @@ Orchestration is the discipline of making agent workflows explicit, inspectable,
 
 ### Exercises
 
-#### Conceptual
-
-**Failure mode analysis.** You have a five-node workflow where nodes 2 and 3 run in parallel (fan-out from node 1, fan-in at node 4). Node 3 consistently times out after 30 seconds for 5% of requests. Design three different strategies for handling this: (a) fail the entire workflow, (b) proceed with partial data, (c) retry with exponential backoff. For each strategy, describe the trade-offs in terms of latency, correctness, and user experience. Which would you choose for a customer-facing application, and why?
-
-#### Coding
-
-**Graph visualization.** Write a function that takes a compiled LangGraph and outputs a Mermaid diagram string. The function should represent nodes as rectangles, conditional edges as diamond decision points, and interrupt points with a distinct color. Test it on a graph with at least five nodes and two conditional edges. Bonus: add the ability to overlay a specific execution trace, highlighting the path that was taken in a different color.
-
-#### Design
-
-**Multi-tenant orchestration.** Design an orchestration platform where different teams can define their own workflows using a shared pool of agent nodes. Address: how teams compose graphs from a node registry, how state schemas are validated when connecting nodes from different teams, how you prevent one team’s long-running workflow from starving another team’s resources, and how you version workflows so that in-flight executions continue on the old graph while new executions use the updated graph.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Failure mode analysis** | You have a five-node workflow where nodes 2 and 3 run in parallel (fan-out from node 1, fan-in at node 4). Node 3 consistently times out after 30 seconds for 5% of requests. Design three different strategies for handling this: (a) fail the entire workflow, (b) proceed with partial data, (c) retry with exponential backoff. For each strategy, describe the trade-offs in terms of latency, correctness, and user experience. Which would you choose for a customer-facing application, and why? |
+| Coding | **Graph visualization** | Write a function that takes a compiled LangGraph and outputs a Mermaid diagram string. The function should represent nodes as rectangles, conditional edges as diamond decision points, and interrupt points with a distinct color. Test it on a graph with at least five nodes and two conditional edges. Bonus: add the ability to overlay a specific execution trace, highlighting the path that was taken in a different color. |
+| Design | **Multi-tenant orchestration** | Design an orchestration platform where different teams can define their own workflows using a shared pool of agent nodes. Address: how teams compose graphs from a node registry, how state schemas are validated when connecting nodes from different teams, how you prevent one team’s long-running workflow from starving another team’s resources, and how you version workflows so that in-flight executions continue on the old graph while new executions use the updated graph. |
 
 > **See also:** For how orchestration patterns fit into enterprise-scale GenAI platforms, see *The AI-First Enterprise*, Chapter 10: GenAI Architectures.

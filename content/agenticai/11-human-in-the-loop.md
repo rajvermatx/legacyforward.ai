@@ -688,14 +688,8 @@ Human-in-the-loop is not an admission that agents are unreliable. It is an engin
 
 ### Exercises
 
-#### Conceptual
-
-**Threshold trade-offs.** Your agent auto-approves customer refunds when confidence exceeds 0.85. After two weeks, you find that 3% of auto-approved refunds were fraudulent (the customer had already received a chargeback). The fraud team wants to raise the threshold to 0.95, which would route 60% of all refund requests to human review. Analyze the trade-offs: what is the cost of each false positive (unnecessary human review) versus each false negative (approved fraud)? Propose a solution that does not simply move the threshold.
-
-#### Coding
-
-**Multi-interrupt workflow.** Build a LangGraph workflow with three sequential interrupt points: (1) plan approval, (2) resource allocation approval, and (3) execution approval. Each interrupt should present different context to the reviewer. Implement the workflow so that rejection at any stage rolls back all previously approved steps. Demonstrate the workflow with a test scenario where the second interrupt is rejected, and verify that the first step’s effects are reversed.
-
-#### Design
-
-**Adaptive autonomy system.** Design a system that automatically adjusts an agent’s autonomy level based on its track record. Define the data model for tracking agent decisions and outcomes, the algorithm for computing a trust score, the rules for promoting or demoting autonomy levels, and the safeguards that prevent the system from granting too much autonomy too quickly. Include a circuit breaker that reverts to full human oversight if the error rate spikes above a threshold within any rolling window.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Threshold trade-offs** | Your agent auto-approves customer refunds when confidence exceeds 0.85. After two weeks, you find that 3% of auto-approved refunds were fraudulent (the customer had already received a chargeback). The fraud team wants to raise the threshold to 0.95, which would route 60% of all refund requests to human review. Analyze the trade-offs: what is the cost of each false positive (unnecessary human review) versus each false negative (approved fraud)? Propose a solution that does not simply move the threshold. |
+| Coding | **Multi-interrupt workflow** | Build a LangGraph workflow with three sequential interrupt points: (1) plan approval, (2) resource allocation approval, and (3) execution approval. Each interrupt should present different context to the reviewer. Implement the workflow so that rejection at any stage rolls back all previously approved steps. Demonstrate the workflow with a test scenario where the second interrupt is rejected, and verify that the first step’s effects are reversed. |
+| Design | **Adaptive autonomy system** | Design a system that automatically adjusts an agent’s autonomy level based on its track record. Define the data model for tracking agent decisions and outcomes, the algorithm for computing a trust score, the rules for promoting or demoting autonomy levels, and the safeguards that prevent the system from granting too much autonomy too quickly. Include a circuit breaker that reverts to full human oversight if the error rate spikes above a threshold within any rolling window. |

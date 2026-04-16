@@ -880,16 +880,10 @@ Tool use is the mechanism that transforms language models from text generators i
 
 ### Exercises
 
-#### Conceptual
-
-**The description is the interface.** You have a tool called `query_database` with the description `"Query the database."` The model frequently calls it with SQL strings even though it expects a structured filter object. Rewrite the description (and if necessary the schema) so the model uses it correctly. Explain why the original description caused the problem.
-
-#### Coding
-
-**Parallel tool execution.** Modify the dispatcher to execute multiple tool calls concurrently using `asyncio.gather`. Benchmark the latency improvement when an agent makes 3 independent tool calls (e.g., search + weather + calendar) versus sequential execution. Handle the case where one call fails but others succeed.
-
-#### Design
-
-**Tool permission model.** Design a permission system for a multi-tenant agent platform where different users have access to different tools. Sketch the data model, the enforcement point in the dispatcher, and how you would handle a tool call that the current user is not authorized to make (the model requested it, but the user lacks permission). Consider: should the model even see tools the user cannot use?
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **The description is the interface** | You have a tool called `query_database` with the description `"Query the database."` The model frequently calls it with SQL strings even though it expects a structured filter object. Rewrite the description (and if necessary the schema) so the model uses it correctly. Explain why the original description caused the problem. |
+| Coding | **Parallel tool execution** | Modify the dispatcher to execute multiple tool calls concurrently using `asyncio.gather`. Benchmark the latency improvement when an agent makes 3 independent tool calls (e.g., search + weather + calendar) versus sequential execution. Handle the case where one call fails but others succeed. |
+| Design | **Tool permission model** | Design a permission system for a multi-tenant agent platform where different users have access to different tools. Sketch the data model, the enforcement point in the dispatcher, and how you would handle a tool call that the current user is not authorized to make (the model requested it, but the user lacks permission). Consider: should the model even see tools the user cannot use? |
 
 > **See also:** For enterprise-level API gateway patterns and how tool integrations fit into broader system architecture, see *The AI-First Enterprise*, Chapter 5: AI Integration Patterns.

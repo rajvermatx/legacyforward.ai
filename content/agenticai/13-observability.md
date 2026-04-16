@@ -811,14 +811,8 @@ Agent observability is the difference between operating a production system and 
 
 ### Exercises
 
-#### Conceptual
-
-An agent that summarizes customer support tickets has been producing shorter summaries over the past week. No errors are logged, latency is stable, and token usage has decreased. Explain why traditional monitoring would not catch this issue, identify which observability signals would reveal it, and propose an alert rule that would detect this drift.
-
-#### Coding
-
-Write a `TraceSampler` class that implements head-based sampling for agent traces. The sampler should keep 100% of traces containing errors, 100% of traces where step count exceeds a configurable threshold, and a configurable percentage (default 10%) of all other traces. Include unit tests that verify each sampling rule.
-
-#### Design
-
-Design an observability architecture for a multi-agent system where five specialized agents collaborate to process insurance claims. Each agent has its own tools and LLM calls, and agents communicate through a shared message bus. Sketch the trace structure, identify which metrics are per-agent vs. system-wide, and explain how you would correlate traces across agents handling the same claim.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Summary quality drift** | An agent that summarizes customer support tickets has been producing shorter summaries over the past week. No errors are logged, latency is stable, and token usage has decreased. Explain why traditional monitoring would not catch this issue, identify which observability signals would reveal it, and propose an alert rule that would detect this drift. |
+| Coding | **TraceSampler implementation** | Write a `TraceSampler` class that implements head-based sampling for agent traces. The sampler should keep 100% of traces containing errors, 100% of traces where step count exceeds a configurable threshold, and a configurable percentage (default 10%) of all other traces. Include unit tests that verify each sampling rule. |
+| Design | **Multi-agent observability architecture** | Design an observability architecture for a multi-agent system where five specialized agents collaborate to process insurance claims. Each agent has its own tools and LLM calls, and agents communicate through a shared message bus. Sketch the trace structure, identify which metrics are per-agent vs. system-wide, and explain how you would correlate traces across agents handling the same claim. |

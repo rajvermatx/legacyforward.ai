@@ -773,14 +773,8 @@ The key architectural insight is that the thought step is not decoration — it 
 
 ### Exercises
 
-#### Conceptual
-
-**Reasoning traces as debugging tools.** An agent is asked to find the GDP per capita of three countries and rank them. It correctly finds all three GDPs but returns the wrong ranking. You have the full reasoning trace. Where in the trace would you look first, and what pattern would indicate the bug? Describe at least two distinct failure modes that could produce a correct-data, wrong-ranking result.
-
-#### Coding
-
-**Add a "memory" tool.** Extend the ReAct agent with a `note_to_self` tool that saves a key-value pair to a Python dictionary, and a `recall` tool that retrieves a value by key. Modify the system prompt to encourage the agent to use these tools for intermediate results. Test it on a five-step research task and compare the trace length and accuracy against the base agent. Does explicit memory reduce the number of redundant tool calls?
-
-#### Design
-
-**Design a confidence-aware agent.** Sketch the architecture for a ReAct agent that assigns a confidence score (0.0 to 1.0) to its own answers. The agent should: (a) state its confidence at each thought step, (b) automatically seek additional evidence when confidence is below 0.7, and (c) include the final confidence score in its output. What changes to the system prompt, stopping conditions, and output format would you need? What are the risks of an agent that over-reports or under-reports its own confidence?
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Reasoning traces as debugging tools** | An agent is asked to find the GDP per capita of three countries and rank them. It correctly finds all three GDPs but returns the wrong ranking. You have the full reasoning trace. Where in the trace would you look first, and what pattern would indicate the bug? Describe at least two distinct failure modes that could produce a correct-data, wrong-ranking result. |
+| Coding | **Add a "memory" tool** | Extend the ReAct agent with a `note_to_self` tool that saves a key-value pair to a Python dictionary, and a `recall` tool that retrieves a value by key. Modify the system prompt to encourage the agent to use these tools for intermediate results. Test it on a five-step research task and compare the trace length and accuracy against the base agent. Does explicit memory reduce the number of redundant tool calls? |
+| Design | **Confidence-aware agent** | Sketch the architecture for a ReAct agent that assigns a confidence score (0.0 to 1.0) to its own answers. The agent should: (a) state its confidence at each thought step, (b) automatically seek additional evidence when confidence is below 0.7, and (c) include the final confidence score in its output. What changes to the system prompt, stopping conditions, and output format would you need? What are the risks of an agent that over-reports or under-reports its own confidence? |

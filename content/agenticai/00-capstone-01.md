@@ -583,14 +583,8 @@ This capstone combined patterns from earlier chapters — RAG pipelines (Chapter
 
 ### Exercises
 
-#### Conceptual
-
-The synthesis agent sometimes produces a section that makes a claim without a `[src-XXX]` citation marker. The citation agent flags this as unsupported. Describe two prompt-engineering strategies that would reduce the frequency of uncited claims in the synthesis output without making the text unreadable.
-
-#### Coding
-
-Extend the `search_all` function to accept a `domain_filter` parameter (e.g., `site:arxiv.org` or `site:sec.gov`) that restricts web search results to a specific set of trusted domains. Write tests that verify the filter is applied correctly and that results from untrusted domains are excluded.
-
-#### Design
-
-The current architecture processes all sources through a single vector store. For a research question that spans two distinct topics (e.g., “Compare the AI strategies of the US and EU”), this means US-related chunks and EU-related chunks are mixed together in retrieval. Design an alternative architecture that uses topic-partitioned vector stores and explain how the analysis agent would decide which partition to query for each sub-question.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Uncited claims** | The synthesis agent sometimes produces a section that makes a claim without a `[src-XXX]` citation marker. The citation agent flags this as unsupported. Describe two prompt-engineering strategies that would reduce the frequency of uncited claims in the synthesis output without making the text unreadable. |
+| Coding | **Domain filter** | Extend the `search_all` function to accept a `domain_filter` parameter (e.g., `site:arxiv.org` or `site:sec.gov`) that restricts web search results to a specific set of trusted domains. Write tests that verify the filter is applied correctly and that results from untrusted domains are excluded. |
+| Design | **Topic-partitioned vector stores** | The current architecture processes all sources through a single vector store. For a research question that spans two distinct topics (e.g., “Compare the AI strategies of the US and EU”), this means US-related chunks and EU-related chunks are mixed together in retrieval. Design an alternative architecture that uses topic-partitioned vector stores and explain how the analysis agent would decide which partition to query for each sub-question. |

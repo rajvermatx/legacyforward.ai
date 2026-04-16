@@ -916,14 +916,8 @@ Implement the full support pipeline for one of the domains below. Ingest at leas
 
 ### Exercises
 
-#### Conceptual
-
-A customer writes: “I have been waiting two weeks for a refund that your agent promised me last month. I am considering filing a complaint with the consumer protection bureau.” Walk through how the sentiment analyzer should score this message (level, frustration\_score, signals) and what escalation decision the router should make. What information should the handoff package include for the human agent?
-
-#### Coding
-
-The current chunking strategy uses a fixed 800-token size. Implement an adaptive chunker that detects document structure (headings, numbered lists, FAQ pairs) and creates chunks that respect semantic boundaries. Compare retrieval precision against the fixed-size chunker on a test set of 10 questions with known correct source articles.
-
-#### Design
-
-Design a feedback pipeline where every escalated ticket that a human agent resolves generates a training signal. Specify: what data you capture from the human resolution, how you use it to update the knowledge base, and how you retrain or adjust the retrieval and generation components. Include a diagram of the data flow and describe how you prevent feedback loops where the model reinforces its own mistakes.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Sentiment and escalation analysis** | A customer writes: “I have been waiting two weeks for a refund that your agent promised me last month. I am considering filing a complaint with the consumer protection bureau.” Walk through how the sentiment analyzer should score this message (level, frustration\_score, signals) and what escalation decision the router should make. What information should the handoff package include for the human agent? |
+| Coding | **Adaptive chunker** | The current chunking strategy uses a fixed 800-token size. Implement an adaptive chunker that detects document structure (headings, numbered lists, FAQ pairs) and creates chunks that respect semantic boundaries. Compare retrieval precision against the fixed-size chunker on a test set of 10 questions with known correct source articles. |
+| Design | **Feedback pipeline** | Design a feedback pipeline where every escalated ticket that a human agent resolves generates a training signal. Specify: what data you capture from the human resolution, how you use it to update the knowledge base, and how you retrain or adjust the retrieval and generation components. Include a diagram of the data flow and describe how you prevent feedback loops where the model reinforces its own mistakes. |

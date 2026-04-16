@@ -918,14 +918,8 @@ The most important lesson is that reasoning strategy should not be fixed. Differ
 
 ### Exercises
 
-#### Conceptual
-
-**Reasoning cost analysis.** You are building an agent that processes 10,000 customer support tickets per day. Each ticket requires a reasoning step to classify priority (high/medium/low) and route to the right team. Using GPT-4o at $5/1M input tokens and $15/1M output tokens, calculate the daily cost difference between: (a) direct prompting, (b) zero-shot CoT, and (c) 3-sample self-consistency. Assume average input is 200 tokens, direct output is 20 tokens, CoT output is 150 tokens. At what error rate does the cost of self-consistency become justified if each misrouted ticket costs $12 in human time to fix?
-
-#### Coding
-
-**Adaptive reasoning engine.** Extend the Reasoning Engine to include a feedback loop: after the answer is used (simulated by a correctness signal), update a local database tracking which strategy worked best for which task type. Over time, the engine should learn that "arithmetic with 4+ variables" needs self-consistency while "simple classification" is fine with direct prompting. Implement this with a SQLite database storing (task\_embedding, strategy, was\_correct) tuples and a nearest-neighbor lookup for strategy selection.
-
-#### Design
-
-**Reasoning for a medical triage agent.** Design the reasoning architecture for an agent that triages emergency room patients based on described symptoms. The agent must: (1) never miss a life-threatening condition, (2) produce an auditable reasoning trace for legal compliance, (3) operate within 5 seconds per patient. Which combination of reasoning strategies would you use? Where would you use CoT vs. self-consistency vs. reflection? How would you handle the case where the model is uncertain about a potentially critical symptom? Draw the decision flowchart and justify each strategy choice in terms of the safety/latency/cost tradeoffs.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Reasoning cost analysis** | You are building an agent that processes 10,000 customer support tickets per day. Each ticket requires a reasoning step to classify priority (high/medium/low) and route to the right team. Using GPT-4o at $5/1M input tokens and $15/1M output tokens, calculate the daily cost difference between: (a) direct prompting, (b) zero-shot CoT, and (c) 3-sample self-consistency. Assume average input is 200 tokens, direct output is 20 tokens, CoT output is 150 tokens. At what error rate does the cost of self-consistency become justified if each misrouted ticket costs $12 in human time to fix? |
+| Coding | **Adaptive reasoning engine** | Extend the Reasoning Engine to include a feedback loop: after the answer is used (simulated by a correctness signal), update a local database tracking which strategy worked best for which task type. Over time, the engine should learn that "arithmetic with 4+ variables" needs self-consistency while "simple classification" is fine with direct prompting. Implement this with a SQLite database storing (task\_embedding, strategy, was\_correct) tuples and a nearest-neighbor lookup for strategy selection. |
+| Design | **Reasoning for a medical triage agent** | Design the reasoning architecture for an agent that triages emergency room patients based on described symptoms. The agent must: (1) never miss a life-threatening condition, (2) produce an auditable reasoning trace for legal compliance, (3) operate within 5 seconds per patient. Which combination of reasoning strategies would you use? Where would you use CoT vs. self-consistency vs. reflection? How would you handle the case where the model is uncertain about a potentially critical symptom? Draw the decision flowchart and justify each strategy choice in terms of the safety/latency/cost tradeoffs. |

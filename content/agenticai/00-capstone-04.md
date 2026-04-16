@@ -588,14 +588,8 @@ We built a supervisor-worker ETL architecture where each stage, schema inference
 
 ### Exercises
 
-#### Conceptual
-
-A source changes its date column from `YYYY-MM-DD` to Unix epoch timestamps. Walk through how each agent responds. At what severity level should this drift be classified, and why?
-
-#### Coding
-
-Extend `QualityCheckerAgent` with a referential integrity check: given a set of valid foreign-key values (e.g., country codes), validate that every record’s field appears in the allowed set. Write the rule, integrate it, and test with invalid values.
-
-#### Design
-
-Your pipeline processes data from eight sources on different schedules. Design a scheduling layer on top of the supervisor that handles concurrent runs, prevents duplicate processing, and provides a unified health dashboard. Sketch the architecture and key data structures.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Schema drift response** | A source changes its date column from `YYYY-MM-DD` to Unix epoch timestamps. Walk through how each agent responds. At what severity level should this drift be classified, and why? |
+| Coding | **Referential integrity check** | Extend `QualityCheckerAgent` with a referential integrity check: given a set of valid foreign-key values (e.g., country codes), validate that every record’s field appears in the allowed set. Write the rule, integrate it, and test with invalid values. |
+| Design | **Scheduling layer** | Your pipeline processes data from eight sources on different schedules. Design a scheduling layer on top of the supervisor that handles concurrent runs, prevents duplicate processing, and provides a unified health dashboard. Sketch the architecture and key data structures. |

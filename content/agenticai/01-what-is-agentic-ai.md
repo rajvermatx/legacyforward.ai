@@ -373,16 +373,10 @@ This chapter established the conceptual foundation for everything that follows i
 
 ### Exercises
 
-#### Conceptual
-
-**Agency audit.** Choose three AI-powered products you use regularly (e.g., a writing assistant, a search engine, a recommendation system). For each one, evaluate it against the four properties of agency. Where does each fall on the autonomy spectrum? Are any of them marketed as "agents" despite lacking one or more agency properties? Write a one-paragraph assessment for each.
-
-#### Coding
-
-**Batch classifier with visualization.** Extend the Autonomy Classifier to accept a JSON file containing multiple system descriptions. For each description, produce the classification and scores. Then generate a visualization (using matplotlib or a simple HTML report) that plots all systems on the autonomy spectrum, with the four property scores shown as a radar chart for each system. This will be useful in later chapters when we need to decide which architectural pattern to apply.
-
-#### Design
-
-**Agency migration plan.** Think of a real system at your organization (or a hypothetical one) that is currently a script or chain but would benefit from being more agentic. Design a migration plan that answers: (1) What specific capabilities does agency unlock? (2) What is the minimum viable level of agency needed? (3) What new failure modes must be mitigated? (4) How will you test and observe the agentic behavior? (5) What is the rollback plan if the agent performs worse than the current system? Present your plan as a one-page architecture decision record (ADR).
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Agency audit** | Choose three AI-powered products you use regularly (e.g., a writing assistant, a search engine, a recommendation system). For each one, evaluate it against the four properties of agency. Where does each fall on the autonomy spectrum? Are any of them marketed as "agents" despite lacking one or more agency properties? Write a one-paragraph assessment for each. |
+| Coding | **Batch classifier with visualization** | Extend the Autonomy Classifier to accept a JSON file containing multiple system descriptions. For each description, produce the classification and scores. Then generate a visualization (using matplotlib or a simple HTML report) that plots all systems on the autonomy spectrum, with the four property scores shown as a radar chart for each system. |
+| Design | **Agency migration plan** | Think of a real system at your organization (or a hypothetical one) that is currently a script or chain but would benefit from being more agentic. Design a migration plan that answers: (1) What capabilities does agency unlock? (2) What is the minimum viable level of agency needed? (3) What new failure modes must be mitigated? (4) How will you test and observe the agentic behavior? (5) What is the rollback plan if the agent performs worse? Present as a one-page ADR. |
 
 > **See also:** For how AI agents fit into enterprise architecture and large-scale orchestration strategies, see *The AI-First Enterprise*, Chapter 11: AI Agents and Orchestration.

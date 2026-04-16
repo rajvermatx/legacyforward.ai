@@ -736,14 +736,8 @@ The supervisor-worker pattern brings organizational structure to multi-agent sys
 
 ### Exercises
 
-#### Conceptual
-
-**Failure cascades.** Your supervisor decomposes a request into five tasks: T1 and T2 run in parallel with no dependencies; T3 depends on T1; T4 depends on T2; T5 depends on both T3 and T4. If T1 fails permanently after retries, what happens to T3 and T5? What is the best outcome the supervisor can deliver? Design an aggregation strategy that maximizes the value of partial results in this scenario.
-
-#### Coding
-
-**Dynamic worker scaling.** Extend the supervisor to dynamically spawn workers based on the plan. Instead of a fixed worker registry, the supervisor should analyze each task, determine the required tools and system prompt, and instantiate a worker on the fly. Implement a worker factory that takes a task description and returns a configured Worker instance. Benchmark the overhead of dynamic instantiation vs. a static registry on a plan with 10 tasks.
-
-#### Design
-
-**Nested supervisors.** Some workflows are too complex for a single level of supervision. Design a two-level supervisor hierarchy where a top-level supervisor delegates to mid-level supervisors, each managing their own workers. Define the interface between supervisor levels, how errors propagate upward, and how the top-level supervisor aggregates results from multiple sub-supervisors. Sketch the message flow for a request that requires research, data analysis, and report generation, where each of these is its own supervised sub-workflow.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Failure cascades** | Your supervisor decomposes a request into five tasks: T1 and T2 run in parallel with no dependencies; T3 depends on T1; T4 depends on T2; T5 depends on both T3 and T4. If T1 fails permanently after retries, what happens to T3 and T5? What is the best outcome the supervisor can deliver? Design an aggregation strategy that maximizes the value of partial results in this scenario. |
+| Coding | **Dynamic worker scaling** | Extend the supervisor to dynamically spawn workers based on the plan. Instead of a fixed worker registry, the supervisor should analyze each task, determine the required tools and system prompt, and instantiate a worker on the fly. Implement a worker factory that takes a task description and returns a configured Worker instance. Benchmark the overhead of dynamic instantiation vs. a static registry on a plan with 10 tasks. |
+| Design | **Nested supervisors** | Some workflows are too complex for a single level of supervision. Design a two-level supervisor hierarchy where a top-level supervisor delegates to mid-level supervisors, each managing their own workers. Define the interface between supervisor levels, how errors propagate upward, and how the top-level supervisor aggregates results from multiple sub-supervisors. Sketch the message flow for a request that requires research, data analysis, and report generation, where each of these is its own supervised sub-workflow. |

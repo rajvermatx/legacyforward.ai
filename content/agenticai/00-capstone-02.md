@@ -420,14 +420,8 @@ This capstone assembled a complete automated PR review agent combining determini
 
 ### Exercises
 
-#### Conceptual
-
-**Confidence Calibration.** The security scanner assigns `pickle.loads` a confidence of 0.95 and high-entropy strings 0.70. A team finds 30% of entropy findings are false positives (UUID constants) while pickle findings are 100% correct. How would you adjust scores, and what data would you collect to automate calibration?
-
-#### Coding
-
-**Multi-Language Support.** The style checker handles only Python via `ast`. Extend it to JavaScript/TypeScript using tree-sitter. Implement three rules: arrow function consistency, unused imports, and missing error handling in async/await chains. Match the existing `StyleFinding` schema.
-
-#### Design
-
-**Rate Limiting and Cost Budgets.** A monorepo with 50 developers generates 200 PRs/day. Each review uses ~15k input and ~3k output tokens. Design a system to stay within $500/month: consider per-PR token caps, priority queues for security paths, caching for unchanged files, and graceful degradation when budget is exhausted.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Confidence Calibration** | The security scanner assigns `pickle.loads` a confidence of 0.95 and high-entropy strings 0.70. A team finds 30% of entropy findings are false positives (UUID constants) while pickle findings are 100% correct. How would you adjust scores, and what data would you collect to automate calibration? |
+| Coding | **Multi-Language Support** | The style checker handles only Python via `ast`. Extend it to JavaScript/TypeScript using tree-sitter. Implement three rules: arrow function consistency, unused imports, and missing error handling in async/await chains. Match the existing `StyleFinding` schema. |
+| Design | **Rate Limiting and Cost Budgets** | A monorepo with 50 developers generates 200 PRs/day. Each review uses ~15k input and ~3k output tokens. Design a system to stay within $500/month: consider per-PR token caps, priority queues for security paths, caching for unchanged files, and graceful degradation when budget is exhausted. |

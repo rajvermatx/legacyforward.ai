@@ -761,16 +761,10 @@ Deploying an agentic service is fundamentally different from deploying a traditi
 
 ### Exercises
 
-#### Conceptual
-
-**Canary vs. blue-green.** Your team debates whether to use canary deployments (gradually shifting traffic from 5% to 100%) or blue-green deployments (switching all traffic at once between two identical environments) for your agent service. Analyze the trade-offs of each strategy specifically for agentic workloads. Consider: how does the non-deterministic nature of LLM outputs affect your ability to detect regressions during a canary rollout? When would blue-green be safer despite its higher infrastructure cost?
-
-#### Coding
-
-**Semantic response cache.** Implement a caching layer that embeds incoming user queries, searches for semantically similar cached queries (cosine similarity above 0.95), and returns the cached response if found. Track cache hit rate, average similarity score of hits, and estimated cost savings. Include a cache invalidation strategy that expires entries when the prompt template version changes or after a configurable TTL.
-
-#### Design
-
-**Multi-region agent deployment.** Design a deployment architecture for an agent service that must serve users across three geographic regions with sub-2-second p95 latency. Address: where do you place the LLM provider calls (regional proxies or centralized?), how do you replicate the vector store across regions, how do you handle conversation state for users who travel between regions, and how do you manage prompt template deployments that must be consistent across all regions simultaneously? Sketch the architecture and identify the consistency trade-offs.
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Canary vs. blue-green** | Your team debates whether to use canary deployments (gradually shifting traffic from 5% to 100%) or blue-green deployments (switching all traffic at once between two identical environments) for your agent service. Analyze the trade-offs of each strategy specifically for agentic workloads. Consider: how does the non-deterministic nature of LLM outputs affect your ability to detect regressions during a canary rollout? When would blue-green be safer despite its higher infrastructure cost? |
+| Coding | **Semantic response cache** | Implement a caching layer that embeds incoming user queries, searches for semantically similar cached queries (cosine similarity above 0.95), and returns the cached response if found. Track cache hit rate, average similarity score of hits, and estimated cost savings. Include a cache invalidation strategy that expires entries when the prompt template version changes or after a configurable TTL. |
+| Design | **Multi-region agent deployment** | Design a deployment architecture for an agent service that must serve users across three geographic regions with sub-2-second p95 latency. Address: where do you place the LLM provider calls (regional proxies or centralized?), how do you replicate the vector store across regions, how do you handle conversation state for users who travel between regions, and how do you manage prompt template deployments that must be consistent across all regions simultaneously? Sketch the architecture and identify the consistency trade-offs. |
 
 > **See also:** For enterprise approaches to LLM cost optimization, inference infrastructure, and performance benchmarking at scale, see *The AI-First Enterprise*, Chapter 12: Cost and Performance.

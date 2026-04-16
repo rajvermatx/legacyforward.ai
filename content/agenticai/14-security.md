@@ -707,14 +707,8 @@ Securing agentic AI systems requires a fundamentally different mindset from trad
 
 ### Exercises
 
-#### Conceptual
-
-**Instruction hierarchy.** OpenAI and Anthropic have proposed “instruction hierarchy” as a mitigation for prompt injection: system instructions take precedence over user messages, which take precedence over tool outputs. Analyze the strengths and limitations of this approach. Under what conditions does it fail? How does it interact with indirect injection through RAG documents? What additional defenses would you layer on top of instruction hierarchy?
-
-#### Coding
-
-**Red team harness.** Build an automated red-teaming tool that generates prompt injection attacks against a target agent. Your tool should implement at least five attack strategies (role override, delimiter escape, encoding evasion, multi-turn erosion, indirect injection via tool output). For each attack, record whether it bypassed input validation, changed the agent’s behavior, or triggered data exfiltration. Report success rates per strategy and identify which defense layers caught which attacks.
-
-#### Design
-
-**Zero-trust agent architecture.** Design an agent system where no single component is trusted. The model does not have direct access to any tool. All tool calls pass through an authorization proxy. The authorization proxy does not trust the model’s stated intent. It validates every request against an explicit policy. The output renderer does not trust the model’s output. It sanitizes everything. Sketch the architecture, define the interfaces between components, and identify the trust boundaries. What are the latency and cost implications of this design?
+| Type | Exercise | Description |
+| --- | --- | --- |
+| Conceptual | **Instruction hierarchy** | OpenAI and Anthropic have proposed “instruction hierarchy” as a mitigation for prompt injection: system instructions take precedence over user messages, which take precedence over tool outputs. Analyze the strengths and limitations of this approach. Under what conditions does it fail? How does it interact with indirect injection through RAG documents? What additional defenses would you layer on top of instruction hierarchy? |
+| Coding | **Red team harness** | Build an automated red-teaming tool that generates prompt injection attacks against a target agent. Your tool should implement at least five attack strategies (role override, delimiter escape, encoding evasion, multi-turn erosion, indirect injection via tool output). For each attack, record whether it bypassed input validation, changed the agent’s behavior, or triggered data exfiltration. Report success rates per strategy and identify which defense layers caught which attacks. |
+| Design | **Zero-trust agent architecture** | Design an agent system where no single component is trusted. The model does not have direct access to any tool. All tool calls pass through an authorization proxy. The authorization proxy does not trust the model’s stated intent. It validates every request against an explicit policy. The output renderer does not trust the model’s output. It sanitizes everything. Sketch the architecture, define the interfaces between components, and identify the trust boundaries. What are the latency and cost implications of this design? |
