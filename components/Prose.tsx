@@ -85,7 +85,7 @@ const components = {
   ),
   // h4 headings are sub-section labels
   h4: ({ children }: { children?: ReactNode }) => (
-    <h4 className="mt-6 mb-2 text-base font-semibold text-navy-900 uppercase tracking-wide">
+    <h4 className="mt-6 mb-2 text-base font-semibold text-slate-500">
       {children}
     </h4>
   ),
