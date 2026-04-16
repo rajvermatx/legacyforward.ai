@@ -31,8 +31,8 @@ export default function BookSidebar({ chapters, currentSlug, basePath, bookTitle
       <Link href={basePath} className="text-sm font-bold text-teal-600 hover:underline" onClick={onLinkClick}>
         {bookTitle}
       </Link>
-      {groups.map((group) => (
-        <div key={group.part || "default"}>
+      {groups.map((group, i) => (
+        <div key={group.part || `group-${i}`}>
           {group.part && (
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mt-4 mb-2">
               {group.part}
