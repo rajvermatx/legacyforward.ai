@@ -83,11 +83,11 @@ const components = {
       <div className="flex-1 h-px bg-slate-200" />
     </div>
   ),
-  // h4 headings become card-style pill labels
+  // h4 headings are sub-section labels
   h4: ({ children }: { children?: ReactNode }) => (
-    <div className="not-prose mt-8 mb-3 inline-block bg-navy-900 text-white text-sm font-semibold px-4 py-1.5 rounded">
+    <h4 className="mt-6 mb-2 text-base font-semibold text-navy-900 uppercase tracking-wide">
       {children}
-    </div>
+    </h4>
   ),
   // Tables get a card wrapper
   table: ({ children }: { children?: ReactNode }) => (
