@@ -13,8 +13,6 @@ Part 1 — Foundations
 
 A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never instrumented token counts because they did not understand the request lifecycle well enough to know where costs accumulate. This chapter closes that gap.
 
-Reading time: ~25 min Project: LLM Explorer Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### Learning Objectives
 
 -   Explain how text becomes tokens and why tokenization choices affect cost, latency, and context limits
@@ -368,17 +366,14 @@ Build an interactive command-line tool that lets you experiment with every LLM p
 
 ### Domain Variants
 
-Tech / Software Tools: GitHub API, CI/CD status, code search
-
-Healthcare Tools: Drug interaction check, ICD-10 lookup, lab results
-
-Finance Tools: Stock price, SEC filing search, risk calculator
-
-Education Tools: Curriculum search, grade calculator, LMS query
-
-E-commerce Tools: Product search, inventory check, price comparison
-
-Legal Tools: Case law search, contract clause lookup, statute finder
+| Domain | Example Tools |
+| --- | --- |
+| Tech / Software | GitHub API, CI/CD status, code search |
+| Healthcare | Drug interaction check, ICD-10 lookup, lab results |
+| Finance | Stock price, SEC filing search, risk calculator |
+| Education | Curriculum search, grade calculator, LMS query |
+| E-commerce | Product search, inventory check, price comparison |
+| Legal | Case law search, contract clause lookup, statute finder |
 
 ### Stretch Goals
 
@@ -404,14 +399,14 @@ Tool calling is the mechanism that elevates LLMs from text generators to agents:
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Token budget analysis.** You are designing an agent that processes customer support tickets. Each ticket contains an average of 350 words of customer text, your system message is 200 tokens, and each tool call adds approximately 150 tokens of result. The agent averages 3 tool calls per ticket. Calculate the total input tokens consumed per ticket by the final inference pass. Then calculate the daily cost at 10,000 tickets/day using GPT-4o pricing ($2.50 per million input tokens). How much would you save by compressing the system message to 80 tokens and summarizing tool results to 60 tokens each?
 
-Coding
+#### Coding
 
 **Temperature sweep experiment.** Write a script that sends the same prompt to GPT-4o at seven temperature values: 0, 0.2, 0.5, 0.7, 1.0, 1.5, and 2.0. For each temperature, make 10 identical requests and measure: (a) the number of unique responses, (b) the average response length in tokens, and (c) the semantic similarity between responses (use an embedding model to compute pairwise cosine similarity). Plot the results showing how each metric changes with temperature. What temperature produces the best trade-off between consistency and diversity for a code-generation task versus a creative-writing task?
 
-Design
+#### Design
 
 **Model routing architecture.** Design a model routing system for a multi-tenant SaaS platform where each customer has a different quality/cost preference. The system should classify incoming requests by complexity (simple factual lookup, moderate reasoning, complex multi-step analysis) and route them to the appropriate model tier. Specify: (1) what features the classifier uses, (2) how you would train or configure the classifier, (3) the fallback strategy when the cheap model's output fails a quality check, and (4) how you would expose cost/quality controls to tenants. Draw the architecture diagram and estimate the cost savings compared to routing everything through GPT-4o.

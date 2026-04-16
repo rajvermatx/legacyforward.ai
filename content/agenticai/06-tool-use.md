@@ -13,8 +13,6 @@ Part 2: Core Patterns
 
 An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist. All of this happens with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.
 
-Reading time: ~25 min Project: Tool Registry Framework Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why agents hallucinate actions and how tool use solves the grounding problem
@@ -858,17 +856,14 @@ Build an extensible tool registry system with auto-discovery. Your framework sho
 
 ### Domain Variants
 
-DevOps Toolkit Tech / Software — Git, CI/CD, log search, deployment tools
-
-Clinical Decision Support Healthcare — Lab lookup, drug interaction check, protocol search
-
-Trading Assistant Finance — Market data, portfolio queries, risk calculation
-
-Learning Platform Education — Curriculum search, progress tracking, quiz generation
-
-Store Operations E-commerce — Inventory, pricing, order management, shipping
-
-Legal Research Legal — Case law search, contract analysis, compliance check
+| Variant | Domain | Example Tools |
+| --- | --- | --- |
+| DevOps Toolkit | Tech / Software | Git, CI/CD, log search, deployment tools |
+| Clinical Decision Support | Healthcare | Lab lookup, drug interaction check, protocol search |
+| Trading Assistant | Finance | Market data, portfolio queries, risk calculation |
+| Learning Platform | Education | Curriculum search, progress tracking, quiz generation |
+| Store Operations | E-commerce | Inventory, pricing, order management, shipping |
+| Legal Research | Legal | Case law search, contract analysis, compliance check |
 
 ## Summary
 
@@ -885,15 +880,15 @@ Tool use is the mechanism that transforms language models from text generators i
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **The description is the interface.** You have a tool called `query_database` with the description `"Query the database."` The model frequently calls it with SQL strings even though it expects a structured filter object. Rewrite the description (and if necessary the schema) so the model uses it correctly. Explain why the original description caused the problem.
 
-Coding
+#### Coding
 
 **Parallel tool execution.** Modify the dispatcher to execute multiple tool calls concurrently using `asyncio.gather`. Benchmark the latency improvement when an agent makes 3 independent tool calls (e.g., search + weather + calendar) versus sequential execution. Handle the case where one call fails but others succeed.
 
-Design
+#### Design
 
 **Tool permission model.** Design a permission system for a multi-tenant agent platform where different users have access to different tools. Sketch the data model, the enforcement point in the dispatcher, and how you would handle a tool call that the current user is not authorized to make (the model requested it, but the user lacks permission). Consider: should the model even see tools the user cannot use?
 

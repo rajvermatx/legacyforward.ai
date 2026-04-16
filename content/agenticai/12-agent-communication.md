@@ -13,8 +13,6 @@ Part 3: Multi-Agent Systems
 
 Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation. Each followed its instructions perfectly. The failure is that they never talked to each other. Multi-agent systems do not fail because individual agents are incompetent. They fail because communication between agents is absent, ambiguous, or structurally broken.
 
-Reading time: ~22 min Project: Agent Messenger Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   How broadcast, request/reply, and pub/sub message passing patterns shape agent interactions and when each topology is appropriate
@@ -644,17 +642,14 @@ Build a multi-agent communication system where at least three agents collaborate
 
 ### Domain Variants
 
-Code Review Pipeline Tech / Software: Agents review code for style, security, performance, then negotiate a final verdict
-
-Clinical Case Conference Healthcare: Specialist agents discuss diagnosis and treatment, resolve conflicting recommendations
-
-Investment Committee Finance: Analyst agents debate buy/sell/hold, present evidence, vote on final recommendation
-
-Essay Workshop Education: Agents take roles of writer, critic, and fact-checker to collaboratively improve a draft
-
-Product Listing Optimizer E-commerce: SEO, copywriting, and compliance agents negotiate product descriptions
-
-Contract Negotiation Legal: Agents represent parties, exchange proposals, flag risks, converge on acceptable terms
+| Variant | Domain | Communication Scenario |
+| --- | --- | --- |
+| Code Review Pipeline | Tech / Software | Agents review code for style, security, performance, then negotiate a final verdict |
+| Clinical Case Conference | Healthcare | Specialist agents discuss diagnosis and treatment, resolve conflicting recommendations |
+| Investment Committee | Finance | Analyst agents debate buy/sell/hold, present evidence, vote on final recommendation |
+| Essay Workshop | Education | Agents take roles of writer, critic, and fact-checker to collaboratively improve a draft |
+| Product Listing Optimizer | E-commerce | SEO, copywriting, and compliance agents negotiate product descriptions |
+| Contract Negotiation | Legal | Agents represent parties, exchange proposals, flag risks, converge on acceptable terms |
 
 ## Summary
 
@@ -668,14 +663,14 @@ Agent communication is the infrastructure that determines whether a multi-agent 
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Pattern selection.** You are building a multi-agent system with eight agents that process incoming customer support tickets. Three agents classify tickets, two agents draft responses, two agents review drafts, and one agent handles escalation. For each pair of interacting agent types, identify the most appropriate communication pattern (broadcast, request/reply, pub/sub, or shared state) and justify your choice. What changes if the system scales to 50 agents?
 
-Coding
+#### Coding
 
 **Deadlock breaker.** Implement a deadlock detection mechanism for a request/reply system. Two agents can deadlock if Agent A sends a request to Agent B and waits, while Agent B has already sent a request to Agent A and is also waiting. Your solution should detect this circular dependency within 5 seconds and break it by canceling the lower-priority request. Write tests that demonstrate both the detection and the resolution.
 
-Design
+#### Design
 
 **Cross-system agent federation.** Two organizations each run their own multi-agent systems and want their agents to collaborate on a joint project. Design a federation protocol that addresses: message format translation between the two systems, trust boundaries (which agents can communicate across organizations), rate limiting to prevent one system from overwhelming the other, and audit logging for cross-boundary messages. Sketch the gateway architecture and the message flow for a typical cross-system request.

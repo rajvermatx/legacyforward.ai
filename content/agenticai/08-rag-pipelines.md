@@ -13,8 +13,6 @@ Part 2: Core Patterns
 
 A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundred support tickets later, someone discovers the agent was answering from training data that predates the policy change. RAG exists because models do not know what they do not know, and they will never tell you they are guessing.
 
-Reading time: ~30 min Project: RAG Pipeline Builder Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why retrieval-augmented generation solves the stale knowledge and hallucination problems that parametric memory cannot
@@ -653,17 +651,14 @@ Build a complete, end-to-end RAG pipeline that ingests documents from at least t
 
 ### Domain Variants
 
-Developer Docs Search Tech / Software — API docs, READMEs, changelogs, Stack Overflow
-
-Clinical Knowledge Base Healthcare — Drug monographs, clinical guidelines, patient education
-
-Financial Analyst Assistant Finance — Earnings reports, SEC filings, market research notes
-
-Course Material Tutor Education — Textbook chapters, lecture notes, past exams
-
-Product Support Agent E-commerce — Product specs, return policies, shipping FAQs
-
-Legal Research Assistant Legal — Case law, statutes, contract templates, compliance docs
+| Variant | Domain | Knowledge Sources |
+| --- | --- | --- |
+| Developer Docs Search | Tech / Software | API docs, READMEs, changelogs, Stack Overflow |
+| Clinical Knowledge Base | Healthcare | Drug monographs, clinical guidelines, patient education |
+| Financial Analyst Assistant | Finance | Earnings reports, SEC filings, market research notes |
+| Course Material Tutor | Education | Textbook chapters, lecture notes, past exams |
+| Product Support Agent | E-commerce | Product specs, return policies, shipping FAQs |
+| Legal Research Assistant | Legal | Case law, statutes, contract templates, compliance docs |
 
 ## Summary
 
@@ -677,14 +672,14 @@ RAG solves the fundamental limitation of parametric knowledge in language models
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Chunking trade-offs.** Your RAG pipeline uses 512-token chunks, but users report that answers to questions spanning multiple sections are incomplete. You consider doubling chunk size to 1024 tokens. Analyze the trade-offs: what improves, what degrades, and what alternative approach (not changing chunk size) could address the problem while preserving retrieval precision?
 
-Coding
+#### Coding
 
 **Incremental indexing.** Implement a document versioning system for your vector store. When a source document is updated, your system should: detect which chunks have changed (using content hashing), delete stale chunk embeddings, embed and index only the new or modified chunks, and update metadata timestamps. Benchmark the time savings compared to full re-indexing on a corpus of 100+ documents.
 
-Design
+#### Design
 
 **Multi-tenant RAG.** Design a RAG architecture for a SaaS platform where each customer has their own document corpus but shares the same embedding model and generation infrastructure. Address: data isolation (customer A must never see customer B’s documents in retrieval results), per-tenant index management, cost allocation, and what happens when one customer’s corpus grows to 10x the size of the average tenant. Sketch the data model and the query flow.

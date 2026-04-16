@@ -13,8 +13,6 @@ Part 2: Core Patterns
 
 An agent that forgets what you said three messages ago is not an assistant. It is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.
 
-Reading time: ~25 min Project: Memory Manager Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why stateless LLM calls create agents that forget — and how memory solves this
@@ -494,17 +492,16 @@ Build a multi-tier memory system that combines conversation buffer, summary comp
 -   Hybrid retrieval with recency, relevance, and importance scoring
 -   Pre-prompt injection that assembles context from all layers
 
-Tech / Software Code context memory — remembers project architecture, past debugging sessions, coding preferences
+### Domain Variants
 
-Healthcare Patient interaction memory — tracks symptoms, allergies, medication history across visits
-
-Finance Client portfolio memory — remembers risk tolerance, investment goals, past advice
-
-Education Student learning memory — tracks mastery levels, misconceptions, learning pace
-
-E-commerce Shopper preference memory — stores size, style, budget, past purchases
-
-Legal Case research memory — remembers cited precedents, argument history, client details
+| Domain | Memory Scenario |
+| --- | --- |
+| Tech / Software | Code context memory — remembers project architecture, past debugging sessions, coding preferences |
+| Healthcare | Patient interaction memory — tracks symptoms, allergies, medication history across visits |
+| Finance | Client portfolio memory — remembers risk tolerance, investment goals, past advice |
+| Education | Student learning memory — tracks mastery levels, misconceptions, learning pace |
+| E-commerce | Shopper preference memory — stores size, style, budget, past purchases |
+| Legal | Case research memory — remembers cited precedents, argument history, client details |
 
 * * *
 
@@ -518,14 +515,14 @@ Legal Case research memory — remembers cited precedents, argument history, cli
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 A customer support agent uses a 10-message sliding window. A user reports a bug in message 2, discusses workarounds in messages 3–8, then asks “Can you summarize the bug I reported?” in message 14. Explain why the agent fails. Design a memory architecture that handles this scenario using no more than 4,000 tokens of context per call.
 
-Coding
+#### Coding
 
 Implement a `MemoryManager` class that combines `TokenWindowMemory` and `SummaryMemory`. When the token window overflows, the oldest messages should be summarized (not discarded). Write tests that verify: (a) the summary contains specific numbers mentioned in compressed messages, and (b) total token count stays below the configured limit.
 
-Design
+#### Design
 
 You are building a tutoring agent that works with students over an entire semester. Students revisit topics, forget material, and gradually improve. Design a memory system that tracks: what the student knows, what they struggle with, what has been taught, and which explanations worked. Specify which memory type (buffer, summary, vector, episodic, semantic) handles each requirement and justify your choices.

@@ -13,8 +13,6 @@ Part 4: Production
 
 The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that still loaded the old prompt template, and the cost dashboard showed $1,200 in token spend overnight, ten times the daily budget. Nothing was technically “broken.” Every component worked in isolation. The system failed because nobody had designed the space between the components: the pipeline that builds, the container that runs, the orchestrator that scales, and the monitors that tell you when reality diverges from your assumptions.
 
-Reading time: ~25 min Project: Deploy Pipeline Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Containerize an agentic application so it runs identically across development, staging, and production environments
@@ -763,15 +761,15 @@ Deploying an agentic service is fundamentally different from deploying a traditi
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Canary vs. blue-green.** Your team debates whether to use canary deployments (gradually shifting traffic from 5% to 100%) or blue-green deployments (switching all traffic at once between two identical environments) for your agent service. Analyze the trade-offs of each strategy specifically for agentic workloads. Consider: how does the non-deterministic nature of LLM outputs affect your ability to detect regressions during a canary rollout? When would blue-green be safer despite its higher infrastructure cost?
 
-Coding
+#### Coding
 
 **Semantic response cache.** Implement a caching layer that embeds incoming user queries, searches for semantically similar cached queries (cosine similarity above 0.95), and returns the cached response if found. Track cache hit rate, average similarity score of hits, and estimated cost savings. Include a cache invalidation strategy that expires entries when the prompt template version changes or after a configurable TTL.
 
-Design
+#### Design
 
 **Multi-region agent deployment.** Design a deployment architecture for an agent service that must serve users across three geographic regions with sub-2-second p95 latency. Address: where do you place the LLM provider calls (regional proxies or centralized?), how do you replicate the vector store across regions, how do you handle conversation state for users who travel between regions, and how do you manage prompt template deployments that must be consistent across all regions simultaneously? Sketch the architecture and identify the consistency trade-offs.
 

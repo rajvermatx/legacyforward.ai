@@ -13,8 +13,6 @@ Part 5 — Capstones
 
 Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today: each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that detects schema drift, validates quality, transforms data, and heals its own failures, replacing the manual triage loop with a supervisor-worker architecture that keeps pipelines healthy around the clock.
 
-Reading time: ~25 min Project: Self-Healing ETL Agent Variants: Healthcare, Finance, E-commerce, IoT, Government, Media
-
 ### What You Will Learn
 
 -   Design a supervisor-worker agent architecture for multi-stage data pipeline orchestration
@@ -567,17 +565,14 @@ Build and deploy a complete pipeline orchestrator with schema inference, quality
 
 **Pick one domain variant:**
 
-Healthcare Claims CPT code validation, billing anomaly detection, heal rejected claims with missing diagnosis codes
-
-Financial Transactions Trading data feeds, market-hours and price-bound validation, currency format drift correction
-
-E-commerce Orders Multi-vendor order aggregation, SKU normalization, duplicate shipment resolution
-
-IoT Sensor Data Factory telemetry, calibration drift detection, missing-reading imputation
-
-Government Records Cross-agency reconciliation, SSN/TIN format validation, PII anomaly quarantine
-
-Media Analytics Ad-impression logs, timestamp-zone normalization, campaign ID schema healing
+| Domain Variant | Pipeline Scenarios |
+| --- | --- |
+| Healthcare Claims | CPT code validation, billing anomaly detection, heal rejected claims with missing diagnosis codes |
+| Financial Transactions | Trading data feeds, market-hours and price-bound validation, currency format drift correction |
+| E-commerce Orders | Multi-vendor order aggregation, SKU normalization, duplicate shipment resolution |
+| IoT Sensor Data | Factory telemetry, calibration drift detection, missing-reading imputation |
+| Government Records | Cross-agency reconciliation, SSN/TIN format validation, PII anomaly quarantine |
+| Media Analytics | Ad-impression logs, timestamp-zone normalization, campaign ID schema healing |
 
 ## Summary
 
@@ -593,14 +588,14 @@ We built a supervisor-worker ETL architecture where each stage, schema inference
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 A source changes its date column from `YYYY-MM-DD` to Unix epoch timestamps. Walk through how each agent responds. At what severity level should this drift be classified, and why?
 
-Coding
+#### Coding
 
 Extend `QualityCheckerAgent` with a referential integrity check: given a set of valid foreign-key values (e.g., country codes), validate that every record’s field appears in the allowed set. Write the rule, integrate it, and test with invalid values.
 
-Design
+#### Design
 
 Your pipeline processes data from eight sources on different schedules. Design a scheduling layer on top of the supervisor that handles concurrent runs, prevents duplicate processing, and provides a unified health dashboard. Sketch the architecture and key data structures.

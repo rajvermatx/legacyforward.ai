@@ -13,8 +13,6 @@ Part 4: Production
 
 Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cites the bank’s lending criteria. The problem: the agent’s retrieval step started returning an outdated policy document after a vector store reindex, and the model dutifully followed it. Six hours, four hundred rejected applications, zero exceptions. You discover it at 8 AM when the lending team notices the approval rate dropped to zero. This is not a crash. It is a silent behavioral drift that only observability can catch.
 
-Reading time: ~25 min Project: Agent Observatory Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why traditional monitoring fails for agent systems and what observability must cover instead
@@ -813,14 +811,14 @@ Agent observability is the difference between operating a production system and 
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 An agent that summarizes customer support tickets has been producing shorter summaries over the past week. No errors are logged, latency is stable, and token usage has decreased. Explain why traditional monitoring would not catch this issue, identify which observability signals would reveal it, and propose an alert rule that would detect this drift.
 
-Coding
+#### Coding
 
 Write a `TraceSampler` class that implements head-based sampling for agent traces. The sampler should keep 100% of traces containing errors, 100% of traces where step count exceeds a configurable threshold, and a configurable percentage (default 10%) of all other traces. Include unit tests that verify each sampling rule.
 
-Design
+#### Design
 
 Design an observability architecture for a multi-agent system where five specialized agents collaborate to process insurance claims. Each agent has its own tools and LLM calls, and agents communicate through a shared message bus. Sketch the trace structure, identify which metrics are per-agent vs. system-wide, and explain how you would correlate traces across agents handling the same claim.

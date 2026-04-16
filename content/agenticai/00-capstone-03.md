@@ -13,8 +13,6 @@ Part 5 — Capstones
 
 Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowledge base — hundreds of articles, runbooks, and policy documents — sits in a wiki that nobody searches correctly. This capstone builds the system that breaks that spiral: a RAG-powered support agent that retrieves the right documentation, drafts accurate responses, detects frustration before it escalates, and hands off to humans when the situation demands judgment that software should not fake.
 
-Reading time: ~25 min Project: Support Agent Pipeline Variants: SaaS, Healthcare, Finance, E-commerce, Telecom, Education
-
 ### What You Will Learn
 
 -   How to architect a multi-stage support pipeline combining RAG, memory, sentiment analysis, and human escalation
@@ -899,17 +897,14 @@ The state machine enforces valid transitions. A resolved ticket can only become 
 
 Implement the full support pipeline for one of the domains below. Ingest at least 20 knowledge base articles, implement conversation memory, wire up sentiment analysis with escalation routing, and add CSAT tracking. Your system should handle at least three end-to-end scenarios: a simple question answered by auto-reply, a frustrated customer escalated to a human, and a returning customer whose history informs the response.
 
-SaaS Platform Support Subscription billing, API errors, feature requests, account recovery
-
-Healthcare Patient Portal Appointment scheduling, insurance queries, prescription refills, lab results
-
-Financial Services Help Desk Transaction disputes, account security, loan inquiries, regulatory compliance
-
-E-commerce Customer Service Order tracking, returns, product questions, shipping issues, promotions
-
-Telecom Support Center Service outages, plan changes, device troubleshooting, coverage inquiries
-
-EdTech Student Support Course enrollment, technical issues, grade disputes, certification queries
+| Variant | Domain Topics |
+| --- | --- |
+| SaaS Platform Support | Subscription billing, API errors, feature requests, account recovery |
+| Healthcare Patient Portal | Appointment scheduling, insurance queries, prescription refills, lab results |
+| Financial Services Help Desk | Transaction disputes, account security, loan inquiries, regulatory compliance |
+| E-commerce Customer Service | Order tracking, returns, product questions, shipping issues, promotions |
+| Telecom Support Center | Service outages, plan changes, device troubleshooting, coverage inquiries |
+| EdTech Student Support | Course enrollment, technical issues, grade disputes, certification queries |
 
 ## Summary
 
@@ -921,14 +916,14 @@ EdTech Student Support Course enrollment, technical issues, grade disputes, cert
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 A customer writes: “I have been waiting two weeks for a refund that your agent promised me last month. I am considering filing a complaint with the consumer protection bureau.” Walk through how the sentiment analyzer should score this message (level, frustration\_score, signals) and what escalation decision the router should make. What information should the handoff package include for the human agent?
 
-Coding
+#### Coding
 
 The current chunking strategy uses a fixed 800-token size. Implement an adaptive chunker that detects document structure (headings, numbered lists, FAQ pairs) and creates chunks that respect semantic boundaries. Compare retrieval precision against the fixed-size chunker on a test set of 10 questions with known correct source articles.
 
-Design
+#### Design
 
 Design a feedback pipeline where every escalated ticket that a human agent resolves generates a training signal. Specify: what data you capture from the human resolution, how you use it to update the knowledge base, and how you retrain or adjust the retrieval and generation components. Include a diagram of the data flow and describe how you prevent feedback loops where the model reinforces its own mistakes.

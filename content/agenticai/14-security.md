@@ -13,8 +13,6 @@ Part 4: Production
 
 At 2:47 AM on a Tuesday, a customer service agent deployed three weeks earlier begins sending internal pricing spreadsheets to anyone who asks. The prompt injection is elegant: a user embeds an instruction inside a fake “customer complaint” that tells the agent to ignore its system prompt and instead retrieve and display the contents of any document it can access. By morning, the agent has leaked confidential data to fourteen users. The post-mortem reveals no traditional vulnerability: no SQL injection, no buffer overflow, no misconfigured firewall. The attack exploited the agent’s fundamental capability: following instructions. Securing agentic systems requires rethinking what an attack surface looks like when the attacker’s weapon is natural language.
 
-Reading time: ~25 min Project: Security Hardener Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   How prompt injection attacks work and why they are fundamentally different from traditional software vulnerabilities
@@ -688,17 +686,14 @@ Build a security layer that wraps an existing agent with input validation, outpu
 
 ### Domain Variants
 
-API Gateway Hardener Tech / Software: Secure a code-generation agent with file system access
-
-Clinical Agent Shield Healthcare: Protect a patient-facing agent from leaking PHI
-
-Financial Data Guard Finance: Prevent a portfolio agent from unauthorized trades
-
-Student Data Protector Education: Ensure a tutoring agent cannot access grades or records
-
-Commerce Fraud Filter E-commerce: Stop a shopping agent from price manipulation or data scraping
-
-Privilege Escalation Tester Legal: Validate that a contract review agent cannot modify documents
+| Variant | Domain | Security Scenario |
+| --- | --- | --- |
+| API Gateway Hardener | Tech / Software | Secure a code-generation agent with file system access |
+| Clinical Agent Shield | Healthcare | Protect a patient-facing agent from leaking PHI |
+| Financial Data Guard | Finance | Prevent a portfolio agent from unauthorized trades |
+| Student Data Protector | Education | Ensure a tutoring agent cannot access grades or records |
+| Commerce Fraud Filter | E-commerce | Stop a shopping agent from price manipulation or data scraping |
+| Privilege Escalation Tester | Legal | Validate that a contract review agent cannot modify documents |
 
 ## Summary
 
@@ -712,14 +707,14 @@ Securing agentic AI systems requires a fundamentally different mindset from trad
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Instruction hierarchy.** OpenAI and Anthropic have proposed “instruction hierarchy” as a mitigation for prompt injection: system instructions take precedence over user messages, which take precedence over tool outputs. Analyze the strengths and limitations of this approach. Under what conditions does it fail? How does it interact with indirect injection through RAG documents? What additional defenses would you layer on top of instruction hierarchy?
 
-Coding
+#### Coding
 
 **Red team harness.** Build an automated red-teaming tool that generates prompt injection attacks against a target agent. Your tool should implement at least five attack strategies (role override, delimiter escape, encoding evasion, multi-turn erosion, indirect injection via tool output). For each attack, record whether it bypassed input validation, changed the agent’s behavior, or triggered data exfiltration. Report success rates per strategy and identify which defense layers caught which attacks.
 
-Design
+#### Design
 
 **Zero-trust agent architecture.** Design an agent system where no single component is trusted. The model does not have direct access to any tool. All tool calls pass through an authorization proxy. The authorization proxy does not trust the model’s stated intent. It validates every request against an explicit policy. The output renderer does not trust the model’s output. It sanitizes everything. Sketch the architecture, define the interfaces between components, and identify the trust boundaries. What are the latency and cost implications of this design?

@@ -13,8 +13,6 @@ Part 5 — Capstones
 
 A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The analyst is not slow. The process is. Manual research does not scale because humans are sequential synthesizers working against a combinatorial information space. Every additional source doubles the cross-referencing burden, every conflicting data point demands a judgment call with no audit trail, and every citation must be tracked by hand. Errors compound silently: a misattributed statistic, a stale figure, a missing counterargument. The final report carries an air of authority it has not earned. This capstone builds the system that replaces that morning ritual: a multi-agent research assistant that plans queries, searches the web in parallel, analyzes documents through RAG, synthesizes findings across sources, and produces a cited report ready for human review.
 
-Reading time: ~25 min Project: Multi-Agent Research System Variants: Tech, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Design a supervisor-worker architecture where a planning agent delegates to specialist agents for search, analysis, synthesis, and citation
@@ -585,14 +583,14 @@ This capstone combined patterns from earlier chapters — RAG pipelines (Chapter
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 The synthesis agent sometimes produces a section that makes a claim without a `[src-XXX]` citation marker. The citation agent flags this as unsupported. Describe two prompt-engineering strategies that would reduce the frequency of uncited claims in the synthesis output without making the text unreadable.
 
-Coding
+#### Coding
 
 Extend the `search_all` function to accept a `domain_filter` parameter (e.g., `site:arxiv.org` or `site:sec.gov`) that restricts web search results to a specific set of trusted domains. Write tests that verify the filter is applied correctly and that results from untrusted domains are excluded.
 
-Design
+#### Design
 
 The current architecture processes all sources through a single vector store. For a research question that spans two distinct topics (e.g., “Compare the AI strategies of the US and EU”), this means US-related chunks and EU-related chunks are mixed together in retrieval. Design an alternative architecture that uses topic-partitioned vector stores and explain how the analysis agent would decide which partition to query for each sub-question.

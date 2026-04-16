@@ -13,8 +13,6 @@ Part 3: Multi-Agent Systems
 
 The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report, all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the financial data, forget it was supposed to draft a report, and eventually time out after burning forty dollars in API calls. The problem was not intelligence. The problem was asking one agent to hold an entire workflow in its head at once. The supervisor-worker pattern exists because the same principle that makes human organizations effective applies to agents: a coordinator who plans and delegates will outperform a single generalist who tries to do everything alone.
 
-Reading time: ~25 min Project: Task Delegation System Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   How the supervisor-worker pattern separates planning from execution to manage complex multi-step workflows
@@ -717,17 +715,14 @@ Build a supervisor-worker system where a supervisor agent decomposes user reques
 
 ### Domain Variants
 
-Competitive Intelligence Report Tech / Software: Research competitors, analyze features, draft comparison report
-
-Patient Case Summarizer Healthcare: Gather records, analyze trends, produce clinical summary
-
-Portfolio Rebalancing Advisor Finance: Pull market data, run allocation analysis, draft recommendations
-
-Curriculum Builder Education: Research topics, structure learning objectives, generate materials
-
-Product Launch Planner E-commerce: Market research, pricing analysis, launch copy generation
-
-Contract Review Pipeline Legal: Extract clauses, check compliance, produce risk assessment report
+| Variant | Domain | Task Description |
+| --- | --- | --- |
+| Competitive Intelligence Report | Tech / Software | Research competitors, analyze features, draft comparison report |
+| Patient Case Summarizer | Healthcare | Gather records, analyze trends, produce clinical summary |
+| Portfolio Rebalancing Advisor | Finance | Pull market data, run allocation analysis, draft recommendations |
+| Curriculum Builder | Education | Research topics, structure learning objectives, generate materials |
+| Product Launch Planner | E-commerce | Market research, pricing analysis, launch copy generation |
+| Contract Review Pipeline | Legal | Extract clauses, check compliance, produce risk assessment report |
 
 ## Summary
 
@@ -741,14 +736,14 @@ The supervisor-worker pattern brings organizational structure to multi-agent sys
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Failure cascades.** Your supervisor decomposes a request into five tasks: T1 and T2 run in parallel with no dependencies; T3 depends on T1; T4 depends on T2; T5 depends on both T3 and T4. If T1 fails permanently after retries, what happens to T3 and T5? What is the best outcome the supervisor can deliver? Design an aggregation strategy that maximizes the value of partial results in this scenario.
 
-Coding
+#### Coding
 
 **Dynamic worker scaling.** Extend the supervisor to dynamically spawn workers based on the plan. Instead of a fixed worker registry, the supervisor should analyze each task, determine the required tools and system prompt, and instantiate a worker on the fly. Implement a worker factory that takes a task description and returns a configured Worker instance. Benchmark the overhead of dynamic instantiation vs. a static registry on a plan with 10 tasks.
 
-Design
+#### Design
 
 **Nested supervisors.** Some workflows are too complex for a single level of supervision. Design a two-level supervisor hierarchy where a top-level supervisor delegates to mid-level supervisors, each managing their own workers. Define the interface between supervisor levels, how errors propagate upward, and how the top-level supervisor aggregates results from multiple sub-supervisors. Sketch the message flow for a request that requires research, data analysis, and report generation, where each of these is its own supervised sub-workflow.

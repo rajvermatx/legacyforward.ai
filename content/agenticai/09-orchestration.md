@@ -13,8 +13,6 @@ Part 3: Multi-Agent Systems
 
 The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit of $15,000. But the fraud scorer timed out, and no one had programmed what should happen next. The system approved the claim without a fraud check. Forty-seven similar claims later, an auditor discovered that every one came from the same body shop, with identical damage photos rotated by a few degrees. The agent did exactly what it was told. The problem was that nobody told it what to do when a step fails. Orchestration is the discipline of making that impossible.
 
-Reading time: ~25 min Project: Workflow Orchestrator Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why ad-hoc agent chaining fails at scale and how state machines impose the structure production systems need
@@ -630,15 +628,15 @@ Orchestration is the discipline of making agent workflows explicit, inspectable,
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Failure mode analysis.** You have a five-node workflow where nodes 2 and 3 run in parallel (fan-out from node 1, fan-in at node 4). Node 3 consistently times out after 30 seconds for 5% of requests. Design three different strategies for handling this: (a) fail the entire workflow, (b) proceed with partial data, (c) retry with exponential backoff. For each strategy, describe the trade-offs in terms of latency, correctness, and user experience. Which would you choose for a customer-facing application, and why?
 
-Coding
+#### Coding
 
 **Graph visualization.** Write a function that takes a compiled LangGraph and outputs a Mermaid diagram string. The function should represent nodes as rectangles, conditional edges as diamond decision points, and interrupt points with a distinct color. Test it on a graph with at least five nodes and two conditional edges. Bonus: add the ability to overlay a specific execution trace, highlighting the path that was taken in a different color.
 
-Design
+#### Design
 
 **Multi-tenant orchestration.** Design an orchestration platform where different teams can define their own workflows using a shared pool of agent nodes. Address: how teams compose graphs from a node registry, how state schemas are validated when connecting nodes from different teams, how you prevent one team’s long-running workflow from starving another team’s resources, and how you version workflows so that in-flight executions continue on the old graph while new executions use the updated graph.
 

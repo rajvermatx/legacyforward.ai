@@ -13,8 +13,6 @@ Part 5 — Capstones
 
 Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interpolation on line 247. Code reviews are simultaneously the most important quality gate in software development and the most inconsistent. This capstone builds an automated PR reviewer that combines static analysis, security scanning, style enforcement, and LLM-generated natural-language feedback into a single agent pipeline: the kind of system that ships in your portfolio and demonstrates every pattern from Parts 1 through 4.
 
-Reading time: ~25 min Project: Automated PR Reviewer Variants: DevOps, FinTech, Healthcare, Open Source, Mobile, Data Engineering
-
 ### What You Will Learn
 
 -   Design an orchestrator agent that delegates code analysis to specialist worker agents
@@ -422,14 +420,14 @@ This capstone assembled a complete automated PR review agent combining determini
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Confidence Calibration.** The security scanner assigns `pickle.loads` a confidence of 0.95 and high-entropy strings 0.70. A team finds 30% of entropy findings are false positives (UUID constants) while pickle findings are 100% correct. How would you adjust scores, and what data would you collect to automate calibration?
 
-Coding
+#### Coding
 
 **Multi-Language Support.** The style checker handles only Python via `ast`. Extend it to JavaScript/TypeScript using tree-sitter. Implement three rules: arrow function consistency, unused imports, and missing error handling in async/await chains. Match the existing `StyleFinding` schema.
 
-Design
+#### Design
 
 **Rate Limiting and Cost Budgets.** A monorepo with 50 developers generates 200 PRs/day. Each review uses ~15k input and ~3k output tokens. Design a system to stay within $500/month: consider per-PR token caps, priority queues for security paths, caching for unchanged files, and graceful degradation when budget is exhausted.

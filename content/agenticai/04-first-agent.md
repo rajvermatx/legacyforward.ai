@@ -13,8 +13,6 @@ Part 1 — Foundations
 
 An LLM that calls tools without thinking is just a random function caller with good grammar. In this chapter, you build the loop that turns a language model into something that actually reasons.
 
-Reading time: ~30 min Project: ReAct Agent Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Why naive "call a tool every turn" agents produce unreliable results
@@ -745,17 +743,14 @@ Build a from-scratch ReAct agent that accepts a configurable set of tools and so
 
 ### Domain Variants
 
-Tech / Software Tools: GitHub API search, code snippet executor, documentation lookup
-
-Healthcare Tools: PubMed search, drug interaction checker, ICD-10 code lookup
-
-Finance Tools: stock price lookup, SEC filing search, financial calculator
-
-Education Tools: curriculum search, learning objective mapper, quiz generator
-
-E-commerce Tools: product catalog search, price comparison, review analyzer
-
-Legal Tools: case law search, statute lookup, contract clause extractor
+| Domain | Example Tools |
+| --- | --- |
+| Tech / Software | GitHub API search, code snippet executor, documentation lookup |
+| Healthcare | PubMed search, drug interaction checker, ICD-10 code lookup |
+| Finance | Stock price lookup, SEC filing search, financial calculator |
+| Education | Curriculum search, learning objective mapper, quiz generator |
+| E-commerce | Product catalog search, price comparison, review analyzer |
+| Legal | Case law search, statute lookup, contract clause extractor |
 
 ### Stretch Goals
 
@@ -778,14 +773,14 @@ The key architectural insight is that the thought step is not decoration — it 
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Reasoning traces as debugging tools.** An agent is asked to find the GDP per capita of three countries and rank them. It correctly finds all three GDPs but returns the wrong ranking. You have the full reasoning trace. Where in the trace would you look first, and what pattern would indicate the bug? Describe at least two distinct failure modes that could produce a correct-data, wrong-ranking result.
 
-Coding
+#### Coding
 
 **Add a "memory" tool.** Extend the ReAct agent with a `note_to_self` tool that saves a key-value pair to a Python dictionary, and a `recall` tool that retrieves a value by key. Modify the system prompt to encourage the agent to use these tools for intermediate results. Test it on a five-step research task and compare the trace length and accuracy against the base agent. Does explicit memory reduce the number of redundant tool calls?
 
-Design
+#### Design
 
 **Design a confidence-aware agent.** Sketch the architecture for a ReAct agent that assigns a confidence score (0.0 to 1.0) to its own answers. The agent should: (a) state its confidence at each thought step, (b) automatically seek additional evidence when confidence is below 0.7, and (c) include the final confidence score in its output. What changes to the system prompt, stopping conditions, and output format would you need? What are the risks of an agent that over-reports or under-reports its own confidence?

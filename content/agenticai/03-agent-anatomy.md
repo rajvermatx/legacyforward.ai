@@ -13,8 +13,6 @@ Part 1 — Foundations
 
 A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp. The architecture was hollow. This chapter opens the hood.
 
-Reading time: ~22 min Project: Agent Blueprint Analyzer Variants: Tech / Software, Healthcare, Finance, Education, E-commerce, Legal
-
 ### What You Will Learn
 
 -   Name and define the four pillars of every agent: perception, memory, reasoning, and action
@@ -499,17 +497,14 @@ if __name__ == "__main__":
 
 ### Domain Variants
 
-Blueprint Analyzer for DevOps Agents Tech / Software
-
-Clinical Workflow Agent Auditor Healthcare
-
-Trading Bot Architecture Reviewer Finance
-
-Tutoring Agent Design Analyzer Education
-
-Shopping Assistant Blueprint Audit E-commerce
-
-Legal Research Agent Evaluator Legal
+| Variant | Domain |
+| --- | --- |
+| Blueprint Analyzer for DevOps Agents | Tech / Software |
+| Clinical Workflow Agent Auditor | Healthcare |
+| Trading Bot Architecture Reviewer | Finance |
+| Tutoring Agent Design Analyzer | Education |
+| Shopping Assistant Blueprint Audit | E-commerce |
+| Legal Research Agent Evaluator | Legal |
 
 ## Summary
 
@@ -525,14 +520,14 @@ Every agent — from a simple chatbot to a multi-agent research swarm — is com
 
 ### Exercises
 
-Conceptual
+#### Conceptual
 
 **Pillar audit.** Pick any AI-powered product you use regularly (a coding assistant, a customer-support chatbot, a smart-home controller). For each of the four pillars, describe how you think it is implemented. Identify which pillar appears to be the weakest based on the product's failure modes. Write a one-page analysis.
 
-Coding
+#### Coding
 
 **Memory-enhanced agent.** Take the `MinimalAgent` class from this chapter and add vector memory using ChromaDB or a similar lightweight vector store. Store every user message and agent response as embeddings. Before each reasoning call, retrieve the three most relevant past interactions and include them in the prompt as "relevant history." Test with a 20-turn conversation and verify that the agent recalls facts from early in the conversation that would have been lost from the buffer window.
 
-Design
+#### Design
 
 **Dynamic tool belt design.** Design (on paper or in a design document) a tool belt management system for an enterprise customer-service agent. The agent serves three tiers of customers (free, premium, enterprise) and the available tools differ by tier. Specify: how tool availability is determined per request, how the tool registry is structured, how you handle the case where the LLM tries to invoke a tool that was available in a previous turn but is no longer available (e.g., the user's session tier was recalculated). Include a diagram and pseudocode.
