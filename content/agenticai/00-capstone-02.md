@@ -1,5 +1,5 @@
 ---
-title: "Code Review Agent"
+title: "Capstone 2: Code Review Agent"
 slug: "capstone-02"
 description: "Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interp"
 section: "agenticai"
@@ -9,7 +9,7 @@ part: "Part 05 Capstones"
 
 Part 5 — Capstones
 
-# Code Review Agent
+# Capstone 2: Code Review Agent
 
 Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interpolation on line 247. Code reviews are simultaneously the most important quality gate in software development and the most inconsistent. This capstone builds an automated PR reviewer that combines static analysis, security scanning, style enforcement, and LLM-generated natural-language feedback into a single agent pipeline: the kind of system that ships in your portfolio and demonstrates every pattern from Parts 1 through 4.
 

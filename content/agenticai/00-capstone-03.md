@@ -1,5 +1,5 @@
 ---
-title: "Customer Support System"
+title: "Capstone 3: Customer Support System"
 slug: "capstone-03"
 description: "Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowled"
 section: "agenticai"
@@ -9,7 +9,7 @@ part: "Part 05 Capstones"
 
 Part 5 — Capstones
 
-# Customer Support System
+# Capstone 3: Customer Support System
 
 Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowledge base — hundreds of articles, runbooks, and policy documents — sits in a wiki that nobody searches correctly. This capstone builds the system that breaks that spiral: a RAG-powered support agent that retrieves the right documentation, drafts accurate responses, detects frustration before it escalates, and hands off to humans when the situation demands judgment that software should not fake.
 
