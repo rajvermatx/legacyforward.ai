@@ -27,7 +27,7 @@ This distinction matters enormously. The most exciting AI application might requ
 
 A less exciting AI application, one that works with data that is already clean and accessible, fits into an existing process without requiring redesign, and solves a problem the business actually feels acutely, might take months, cost a fraction of the ambitious project, and has a high chance of delivering real value.
 
-The less exciting project is almost always the better starting point. Success builds credibility. Credibility builds organizational capacity for more ambitious work. An enterprise AI practice built on a series of successful smaller applications is far more durable than one that staked everything on a transformational flagship project.
+The less exciting project is almost always the better starting point. Success builds credibility, and credibility builds organizational capacity for more ambitious work. An enterprise AI practice built on a series of successful smaller applications is far more durable than one that staked everything on a transformational flagship project.
 
 ## Four Criteria for a Good Starting Point
 

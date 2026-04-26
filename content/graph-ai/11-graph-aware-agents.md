@@ -36,7 +36,7 @@ Standard database queries retrieve rows that match criteria. Graph queries follo
 
 ## 02. The Four Essential Graph Tools
 
-You do not need twenty graph tools. You need four. Each handles a distinct reasoning pattern.
+You do not need twenty graph tools — you need four, each handling a distinct reasoning pattern.
 
 ### Tool 1: Cypher Query Tool
 

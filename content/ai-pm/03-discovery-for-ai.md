@@ -16,9 +16,9 @@ badges:
 
 ## The Fundamental Research Problem
 
+User research for a new feature usually starts with a simple premise: go talk to users, understand their pain, show them concepts, gather feedback. This approach works well when the feature exists in a category users understand, a new filter, a redesigned dashboard, a faster workflow. Users can relate it to things they have experienced before and give you useful reactions.
 
 ![Diagram](/diagrams/ai-pm/ch03-1.svg)
-User research for a new feature usually starts with a simple premise: go talk to users, understand their pain, show them concepts, gather feedback. This approach works well when the feature exists in a category users understand, a new filter, a redesigned dashboard, a faster workflow. Users can relate it to things they have experienced before and give you useful reactions.
 
 AI features break this premise in a specific way: most users do not have an accurate mental model of what AI can and cannot do. They have a mental model, usually assembled from product demos, science fiction, and media coverage, but it is reliably wrong in ways that will lead your research astray if you do not account for it.
 

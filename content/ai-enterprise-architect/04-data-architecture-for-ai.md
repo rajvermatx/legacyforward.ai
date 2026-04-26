@@ -194,7 +194,7 @@ In **Phase 3, Governance**, the team established the controls and documentation 
 
 In **Phase 4, Operations**, the team built the ongoing monitoring and maintenance processes that would keep the system healthy over time. They automated data quality checks on the RAG knowledge base so that stale or inconsistent documents would be flagged before they could mislead customers. They set up drift detection on the ML models to catch situations where the model’s performance was degrading because the real world had changed in ways the training data didn’t reflect. And they established a monthly data review cadence with the compliance team to ensure ongoing alignment with regulatory requirements.
 
-The lesson here is one that every enterprise architect working on AI needs to internalize: the chatbot was “done” in 3 months, but the data architecture work took 9 months. This is normal. It is not a sign that something went wrong. It is a sign that the team did it right. The organizations that try to skip or shortcut the data work end up with AI systems that are impressive in demos and unreliable in production.
+The lesson here is one that every enterprise architect working on AI needs to internalize: the chatbot was “done” in 3 months, but the data architecture work took 9 months. This is normal — not a sign that something went wrong, but a sign that the team did it right. The organizations that try to skip or shortcut the data work end up with AI systems that are impressive in demos and unreliable in production.
 
 ## Key Takeaways
 

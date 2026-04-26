@@ -29,7 +29,7 @@ Every journey starts somewhere, and in the world of GenAI architecture, this is 
 
 ![](/diagrams/ai-enterprise-architect/chapters/ch10-00.svg)
 
-The components here are intentionally minimal: an API endpoint that accepts user input, a system prompt that defines how the model should behave, and a connection to an LLM provider like OpenAI, Anthropic, or Google. That is it. There is no database, no retrieval layer, no memory of previous conversations. Each request stands entirely on its own.
+The components here are intentionally minimal: an API endpoint that accepts user input, a system prompt that defines how the model should behave, and a connection to an LLM provider like OpenAI, Anthropic, or Google. There is no database, no retrieval layer, no memory of previous conversations. Each request stands entirely on its own.
 
 This pattern is ideal for internal tools, rapid prototypes, and single-purpose AI features where conversational continuity is not important. Think of a Slack bot that rewrites emails in a more professional tone, or an internal tool that generates SQL queries from natural language descriptions. These are situations where the user sends a request, gets a response, and moves on.
 

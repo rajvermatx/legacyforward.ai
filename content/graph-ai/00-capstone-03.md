@@ -22,11 +22,11 @@ badges:
 
 ## The Scenario
 
-
-![Diagram 1](/diagrams/graph-ai/capstone-03.svg)
 A mid-size enterprise has 200+ applications, 50+ infrastructure components, and a CMDB (Configuration Management Database) that lives in a spreadsheet that was last updated 6 months ago. When an incident hits a critical system, the operations team calls around asking "Does your app use the payment gateway?" and "Are you connected to the Oracle database on server DB-PROD-03?"
 
 The goal: ingest the service catalog and dependency data into a graph, then build an agent that answers impact questions such as "What breaks if X goes down?" with a complete blast radius report.
+
+![Diagram 1](/diagrams/graph-ai/capstone-03.svg)
 
 ### What We Are Building
 

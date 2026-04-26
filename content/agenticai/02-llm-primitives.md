@@ -59,7 +59,7 @@ print(f"Decoded: {[encoding.decode([t]) for t in tokens]}")
 
 The Completion API is the single interface through which all LLM-powered applications communicate with the model. Despite the variety of things LLMs appear to do — answer questions, write code, analyze documents, call tools — every capability routes through the same endpoint: you send a list of messages, the model returns a completion. Understanding this interface at the protocol level is essential because every agent framework, every RAG pipeline, and every chat application is ultimately a wrapper around this one API call.
 
-A completion request consists of three main components: a model identifier, an array of messages, and a set of optional parameters that control the model's behavior. The messages array is an ordered conversation history where each message has a `role` (system, user, or assistant) and `content`. The model does not remember previous requests. It is stateless. Every call must include the full conversation context you want the model to consider. This statelessness is not a limitation but a design choice that gives you complete control over what the model sees.
+A completion request consists of three main components: a model identifier, an array of messages, and a set of optional parameters that control the model's behavior. The messages array is an ordered conversation history where each message has a `role` (system, user, or assistant) and `content`. The model does not remember previous requests — it is stateless, and every call must include the full conversation context you want the model to consider. This statelessness is not a limitation but a design choice that gives you complete control over what the model sees.
 
 ```
 from openai import OpenAI

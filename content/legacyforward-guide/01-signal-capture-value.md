@@ -10,6 +10,10 @@ badges: ["Signal Capture", "Value Hypothesis"]
 
 # Signal Capture: Finding Net New Value
 
+Signal Capture is the first pillar of the LegacyForward.ai framework — the discipline for identifying where AI creates outcomes that are genuinely impossible by any other means, and for killing initiatives that cannot make that case before they consume development budget.
+
+Most enterprise AI portfolios fail not because the technology is wrong, but because no one asked a hard enough question at the start. Signal Capture exists to ask it: not "how can we use AI here?" but "where does AI create net new value that nothing else can?"
+
 ![Transformation vs Automation: Two paths from an AI opportunity](/diagrams/legacyforward-guide/01-signal-capture-value-1.svg)
 
 ## The Core Question

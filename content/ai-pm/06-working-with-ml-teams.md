@@ -14,9 +14,9 @@ badges:
 
 ## The Translation Gap
 
+Most product managers have developed a working relationship with software engineers over years of practice. You have learned how to write requirements that are actionable, how to ask for estimates without creating false precision, how to scope down without demoralizing the team, and how to translate user needs into technical work without dictating implementation.
 
 ![Diagram](/diagrams/ai-pm/ch06-1.svg)
-Most product managers have developed a working relationship with software engineers over years of practice. You have learned how to write requirements that are actionable, how to ask for estimates without creating false precision, how to scope down without demoralizing the team, and how to translate user needs into technical work without dictating implementation.
 
 ML engineers and data scientists are different enough from software engineers that this accumulated instinct does not fully transfer. The gaps are in specific places that are predictable and addressable once you know where to look.
 

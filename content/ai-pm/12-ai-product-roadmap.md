@@ -14,9 +14,9 @@ badges:
 
 ## The Problem With Promising Dates
 
+A traditional product roadmap is built on a comfortable fiction: that if we invest enough effort and time into a feature, it will work as intended by the date we specify. Engineering can estimate complexity. Design can scope the work. With enough sprints, we get to the destination.
 
 ![Diagram](/diagrams/ai-pm/ch12-1.svg)
-A traditional product roadmap is built on a comfortable fiction: that if we invest enough effort and time into a feature, it will work as intended by the date we specify. Engineering can estimate complexity. Design can scope the work. With enough sprints, we get to the destination.
 
 AI features break this fiction. You can invest exactly the right amount of time and engineering effort into an AI feature and still not have something that works well enough to ship, because the quality of an AI feature is determined by a combination of factors that do not respond predictably to investment: the quality of your training data, the capability ceiling of current models, the difficulty of the underlying task, and the gap between your evaluation suite and the real world.
 

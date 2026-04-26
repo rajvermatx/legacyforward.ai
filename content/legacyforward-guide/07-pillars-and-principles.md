@@ -10,6 +10,10 @@ badges: ["Framework Integration", "Core Principles"]
 
 # How the Pillars Connect: Feedback Loop and Core Principles
 
+The three pillars of LegacyForward.ai are not independent modules to be applied selectively. Signal Capture, Grounded Delivery, and Legacy Coexistence form a closed feedback loop — each pillar informs the others, and the evidence produced in one continuously sharpens the inputs to the next.
+
+Understanding how the pillars connect is what separates organizations that apply the framework as a checklist from those that use it to build genuine learning systems around AI delivery.
+
 ![The LegacyForward.ai Feedback Loop: Signal Capture → Grounded Delivery → Legacy Coexistence → Operate](/diagrams/legacyforward-guide/07-pillars-and-principles-1.svg)
 
 ## The Feedback Loop
@@ -65,7 +69,7 @@ The hardest kill decision is the one where an executive sponsor is invested in t
 
 ### 2. Non-Deterministic by Default
 
-AI systems are not software. They do not fail the same way. They do not succeed the same way. Every process, tool, and governance model that touches an AI system must be designed with non-determinism as the baseline assumption — not as an exception to handle.
+AI systems are not software — they do not fail the same way, and they do not succeed the same way. Every process, tool, and governance model that touches an AI system must be designed with non-determinism as the baseline assumption, not as an exception to handle.
 
 Quality is a distribution, not a binary. Testing is evaluation, not assertion. Done is an ongoing state, not a completion event. Progress is measured in evidence, not story points. These are not philosophical preferences. They are engineering requirements for systems whose outputs cannot be predicted with certainty.
 
@@ -83,7 +87,7 @@ Technology-first portfolios produce impressive demos and disappointing returns. 
 
 ### 5. Operate Forever
 
-Deploying an AI system without operating it is not deployment — it is abandonment with a delayed start date. AI systems degrade. Models drift. Data distributions shift. Prompt performance erodes. An AI system in production without ongoing monitoring, evaluation, and governance will produce subtly wrong outputs that nobody formally notices until the damage is significant.
+Deploying an AI system without operating it is not deployment — it is abandonment with a delayed start date. AI systems degrade over time: models drift, data distributions shift, and prompt performance erodes. An AI system in production without ongoing monitoring, evaluation, and governance will produce subtly wrong outputs that nobody formally notices until the damage is significant.
 
 The operational commitment must be made before deployment, not after. If the organization is not willing to maintain an AI system in production as a permanent operational discipline, the system should not be deployed.
 

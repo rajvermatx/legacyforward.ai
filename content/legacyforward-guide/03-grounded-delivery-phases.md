@@ -10,11 +10,15 @@ badges: ["Grounded Delivery", "Delivery Methodology"]
 
 # Grounded Delivery: The Five Phases
 
+Grounded Delivery is the second pillar of the LegacyForward.ai framework — a five-phase delivery methodology designed specifically for non-deterministic AI systems. It does not replace engineering discipline; it replaces the Agile assumptions that break when applied to systems whose outputs cannot be predicted with certainty.
+
+The five phases — Frame, Explore, Shape, Harden, Operate — address the full lifecycle of an AI initiative, from defining what "good" looks like before a line of code is written to monitoring quality in production as a permanent operational discipline.
+
 ![Grounded Delivery: Frame → Explore → Shape → Harden → Operate](/diagrams/legacyforward-guide/03-grounded-delivery-phases-1.svg)
 
 ## Why Agile Breaks for AI
 
-Agile works for deterministic systems. Software has rules. The same function called with the same input produces the same output every time. Agile's foundational constructs — user stories with binary acceptance criteria, sprint velocity estimates, regression test suites — all depend on this property.
+Agile works for deterministic systems, where software follows rules and the same function called with the same input produces the same output every time. Agile's foundational constructs — user stories with binary acceptance criteria, sprint velocity estimates, regression test suites — all depend on that property.
 
 AI systems are non-deterministic. The same prompt, applied to the same document, at different times, can produce different outputs. Not because of a bug. Because of how large language models and probabilistic systems work. An answer that is correct ninety-four times can be wrong on the ninety-fifth with no error code, no warning, and no traceable root cause.
 
@@ -29,7 +33,7 @@ Here is what breaks when you apply Agile to AI:
 | The build phase follows the design phase | AI development is iterative discovery — you cannot design what you have not yet explored |
 | Definition of Done is fixed at sprint start | AI quality thresholds evolve as the team learns what "good" means for this specific use case |
 
-> **Think of it like this:** Agile is a production line. You design the car, break the design into parts, build the parts, assemble the car, test it, ship it. Grounded Delivery is more like running a clinical trial. You have a hypothesis. You design experiments. You analyze results. You define what "works" based on evidence, not requirements. You establish ongoing monitoring because the treatment that works today may not work the same way next year.
+> **Think of it like this:** Agile is a production line. You design the car, break the design into parts, build the parts, assemble the car, test it, and ship it. Grounded Delivery is more like running a clinical trial. You form a hypothesis, design structured experiments, analyze the results, and define what "works" based on evidence rather than requirements. You establish ongoing monitoring because the treatment that works today may not work the same way next year.
 
 Grounded Delivery replaces Agile's deterministic machinery with five phases designed for the reality of AI systems: Frame, Explore, Shape, Harden, Operate.
 
@@ -75,7 +79,7 @@ The Frame phase does not define what to build. It defines what value to pursue a
 Explore is not a spike. It is not a two-week experiment wedged into a sprint. It is a full delivery phase with its own objectives, activities, and gate criteria. The purpose is to discover what is possible, what is not possible, and what is possible under which conditions — before anyone writes production code.
 
 **Activities:**
-- Run structured experiments against production-representative data. Not curated subsets. Not synthetic data. Real data, including the edge cases and outliers that curated data hides.
+- Run structured experiments against production-representative data — not curated subsets or synthetic data, but real data that includes the edge cases and outliers that curated data hides.
 - Build and iterate the evaluation dataset. The evaluation dataset is the most important asset produced in Explore — it defines what "good" means for this specific use case and becomes the quality benchmark for everything that follows.
 - Explore multiple technical approaches. Do not commit to the first approach that produces a promising demo. Explore competing architectures, model configurations, and prompt strategies. Document what each approach can and cannot do.
 - Validate legacy data access. Can the initiative actually access the data it needs from the legacy systems that hold it? In what format? At what latency? Does the actual data quality match the assumed data quality?

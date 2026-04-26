@@ -14,9 +14,9 @@ badges:
 
 ## The Feature That Costs Money Every Time Someone Uses It
 
+Traditional software features have a comforting economic property: once they are built, the marginal cost of an additional user using them is effectively zero. A user runs a search, applies a filter, exports a spreadsheet. The servers are running anyway, the engineering is amortized across the user base, the cost per interaction is fractions of a cent. This is why software businesses have such attractive unit economics. You build it once and the incremental usage is almost free.
 
 ![Diagram](/diagrams/ai-pm/ch10-1.svg)
-Traditional software features have a comforting economic property: once they are built, the marginal cost of an additional user using them is effectively zero. A user runs a search, applies a filter, exports a spreadsheet. The servers are running anyway, the engineering is amortized across the user base, the cost per interaction is fractions of a cent. This is why software businesses have such attractive unit economics. You build it once and the incremental usage is almost free.
 
 AI features break this model entirely.
 
@@ -82,7 +82,7 @@ Run this accounting before you set a price. If you do not know your fully-loaded
 
 ### Included in Base Subscription
 
-AI features are part of the product. No additional charge. No usage limits communicated to the user. The cost is absorbed into the subscription price.
+AI features are part of the product, with no additional charge and no usage limits communicated to the user. The cost is absorbed into the subscription price.
 
 **When this works:**
 - AI feature usage per user is low and predictable

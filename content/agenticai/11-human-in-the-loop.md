@@ -27,11 +27,11 @@ It was 2:47 AM when the automated procurement agent placed a $2.3 million order 
 
 The procurement disaster in the opening is not hypothetical. It is a composite of real incidents reported across organizations deploying autonomous agents in 2024 and 2025. The pattern repeats: an agent operates correctly within its knowledge boundary, encounters a situation that requires context it does not have, and takes an irreversible action. The cost of that action exceeds what any amount of post-hoc monitoring can recover.
 
-Fully autonomous agents are appropriate when three conditions hold simultaneously: the action is reversible, the cost of error is low, and the domain is well-bounded. Sending a draft email for review? Autonomous is fine. Executing a financial trade, modifying patient records, or deploying code to production? These require a human in the loop, not because the agent is incompetent, but because the consequences of edge-case failures exceed the value of speed.
+Fully autonomous agents are appropriate when three conditions hold simultaneously: the action is reversible, the cost of error is low, and the domain is well-bounded. Sending a draft email for review is fine to handle autonomously. Executing a financial trade, modifying patient records, or deploying code to production? These require a human in the loop, not because the agent is incompetent, but because the consequences of edge-case failures exceed the value of speed.
 
 **The autonomy spectrum.** Human-in-the-loop is not a binary switch. It is a spectrum with at least four levels:
 
-1.  **Full human control.** The agent drafts. The human executes. Every action requires explicit approval. Suitable for regulated environments where audit trails are mandatory.
+1.  **Full human control.** The agent drafts and the human executes — every action requires explicit approval. Suitable for regulated environments where audit trails are mandatory.
 2.  **Approval gates.** The agent executes routine actions autonomously but pauses at predefined decision points for human review. The 80/20 approach: most actions flow through, high-stakes ones get human eyes.
 3.  **Exception-based oversight.** The agent runs autonomously and escalates only when it detects uncertainty, anomalies, or policy violations. Humans handle the edge cases. This requires the agent to know what it does not know.
 4.  **Full autonomy with audit.** The agent operates independently, and humans review logs after the fact. Appropriate only when all actions are reversible and the blast radius of errors is contained.
@@ -387,7 +387,7 @@ def _urgency_level(seconds_pending: float,
 
 ## 11.7 Resuming After Interruption
 
-The hardest engineering problem in human-in-the-loop is not pausing. It is resuming. When a human approves an action, the agent must pick up exactly where it left off with the full state of its reasoning intact. When a human rejects an action, the agent must gracefully handle the denial and either try an alternative or report failure.
+The hardest engineering problem in human-in-the-loop is not pausing but resuming. When a human approves an action, the agent must pick up exactly where it left off with the full state of its reasoning intact. When a human rejects an action, the agent must gracefully handle the denial and either try an alternative or report failure.
 
 **State persistence.** Before pausing, the agent must serialize its complete state: the conversation history, tool call results accumulated so far, the current position in the execution graph, and any intermediate variables. This state must survive process restarts, because the human might not respond for hours.
 

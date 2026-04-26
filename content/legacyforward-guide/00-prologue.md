@@ -10,11 +10,15 @@ badges: ["Framework Overview", "All Roles"]
 
 # From Chaos to Clarity
 
+The majority of enterprise AI initiatives fail to deliver meaningful returns — not because the technology does not work, but because the organizations deploying it are making predictable, avoidable mistakes and repeating them at scale. The capabilities are genuine and the value is achievable, yet five recurring failure patterns continue to define the current state of enterprise AI.
+
+LegacyForward.ai is a practitioner framework built to break that pattern — three pillars that address each failure mode directly, in the environment enterprises actually operate in rather than the one they wish they had.
+
 ![The Three Pillars: Signal Capture, Grounded Delivery, Legacy Coexistence](/diagrams/legacyforward-guide/00-prologue-1.svg)
 
 ## The Problem Is Not AI. It Is How Enterprises Are Approaching It.
 
-AI is real. The capabilities are genuine. The value is achievable. And yet, the majority of enterprise AI initiatives fail to deliver meaningful returns. Not because the technology does not work. Because the organizations deploying it are making predictable, avoidable mistakes — and repeating them at scale.
+The capabilities are genuine and the value is achievable. And yet, the majority of enterprise AI initiatives fail to deliver meaningful returns — not because the technology does not work, but because the organizations deploying it are making predictable, avoidable mistakes and repeating them at scale.
 
 Here are the five failure patterns that define the current state of enterprise AI:
 
@@ -22,7 +26,7 @@ Here are the five failure patterns that define the current state of enterprise A
 
 **2. Wrong delivery method.** Traditional Agile was designed for deterministic systems: the same input produces the same output, every time. AI systems are non-deterministic. A prompt that produces a correct answer ninety-four times can produce a wrong answer on the ninety-fifth with no warning, no error code, and no traceable root cause. Sprint velocity, binary acceptance criteria, and regression testing — the foundations of Agile — all break against this reality. Teams apply the wrong tools and wonder why their AI projects behave differently from their software projects.
 
-**3. Legacy reality is ignored.** Every vendor pitch, every conference demo, every agent framework tutorial makes the same assumption: you are building on a clean slate. Fresh APIs. Cloud-native infrastructure. Modern data stores. This world does not exist inside any enterprise that has been operating for more than a decade. The mainframe is still running. The integration layer is held together with FTP drops and batch jobs. The data lives in six systems that do not agree with each other. AI strategies that do not account for this reality fail when they collide with it — which is always in production, and always late.
+**3. Legacy reality is ignored.** Every vendor pitch, every conference demo, every agent framework tutorial makes the same assumption: you are building on a clean slate — fresh APIs, cloud-native infrastructure, and modern data stores. This world does not exist inside any enterprise that has been operating for more than a decade. The mainframe is still running. The integration layer is held together with FTP drops and batch jobs. The data lives in six systems that do not agree with each other. AI strategies that do not account for this reality fail when they collide with it — which is always in production, and always late.
 
 **4. Agent fantasy.** A senior leader watches two demos, reads three articles, and concludes that autonomous AI agents will replace half the workforce by next quarter. They sponsor initiatives with no value hypothesis, no integration plan, and no understanding of what it actually takes to deploy, govern, monitor, and trust an autonomous system in a production environment. The result is a series of expensive, high-visibility failures that damage organizational trust in AI broadly.
 
@@ -50,7 +54,7 @@ These three pillars are not independent modules. They form a closed feedback loo
 
 ## Who This Is For
 
-The LegacyForward.ai framework is for every role that participates in enterprise AI transformation. Not just technologists. Every role.
+The LegacyForward.ai framework is for every role that participates in enterprise AI transformation — not just technologists, but every role that influences, funds, builds, or operates AI initiatives.
 
 **Technology leaders and architects** use Signal Capture to challenge AI proposals before they reach development, Grounded Delivery to design delivery processes that account for non-determinism, and Legacy Coexistence to build integration architectures that actually survive production.
 

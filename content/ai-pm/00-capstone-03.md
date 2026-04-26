@@ -14,8 +14,6 @@ badges:
 
 ## The Scenario
 
-
-![Diagram](/diagrams/ai-pm/capstone-03.svg)
 You are the senior PM at **Verity**, a legal tech company serving mid-market law firms. Eight months ago, the VP of Product greenlit an AI-powered contract review feature — "SmartReview" — that was supposed to automatically identify non-standard clauses, flag missing provisions, and suggest edits aligned with the firm's preferred terms.
 
 The pilot was originally planned for 3 months with 10 law firm customers. It is now month 8, with a team of 4 engineers, 1 ML engineer, and a data scientist dedicated to the project.
@@ -25,6 +23,8 @@ The team lead presents at the quarterly review:
 > "SmartReview has shown really promising results. Our pilot users say they like the interface. We've improved our clause detection accuracy from 54% to 71% over the past 6 months. We think we're close to a breakthrough. We'd like another 6 months to get to 85%+ accuracy before we expand."
 
 Your VP asks you: "What do you think? Should we keep going?"
+
+![Diagram](/diagrams/ai-pm/capstone-03.svg)
 
 ---
 
@@ -100,7 +100,7 @@ The accuracy trajectory has flattened well below the target. Pilot customer rete
 
 ## Step 2: Evaluate Sunk Cost vs. Future Value
 
-The hardest part of this decision is the sunk cost. Eight months. A 6-person team. Significant infrastructure investment. Real customer relationships. It feels like killing the project wastes all of that.
+The hardest part of this decision is the sunk cost: eight months, a 6-person team, significant infrastructure investment, and real customer relationships. It feels like killing the project wastes all of that.
 
 It does not. This is the sunk cost fallacy, and it is one of the most reliable destroyers of PM credibility.
 
@@ -154,7 +154,7 @@ Do not bury the recommendation at the end. Decision-makers lose respect for PMs 
 
 **2. The evidence, without editorializing.**
 
-Present the data from Step 1. No dramatic framing. Just: here is what we targeted, here is where we are, here is the trajectory. Let the numbers speak.
+Present the data from Step 1 without dramatic framing — just: here is what we targeted, here is where we are, here is the trajectory. Let the numbers speak.
 
 **3. The forward path, not just the closedown.**
 

@@ -14,9 +14,9 @@ badges:
 
 ## The Question Nobody Wants to Ask
 
+There is a certain kind of product meeting that happens dozens of times each week inside technology companies. Someone — a VP, a founder, a well-meaning senior engineer — says some version of the following: "We should add AI to this." Maybe they saw a competitor demo. Maybe they read a press release. Maybe they just got back from a conference. The idea sounds exciting, it gets into the roadmap, and three months later a team is deep in the weeds of a feature that was never properly stress-tested at the idea level.
 
 ![Diagram](/diagrams/ai-pm/ch01-1.svg)
-There is a certain kind of product meeting that happens dozens of times each week inside technology companies. Someone — a VP, a founder, a well-meaning senior engineer — says some version of the following: "We should add AI to this." Maybe they saw a competitor demo. Maybe they read a press release. Maybe they just got back from a conference. The idea sounds exciting, it gets into the roadmap, and three months later a team is deep in the weeds of a feature that was never properly stress-tested at the idea level.
 
 The most valuable skill a product manager can develop right now is the ability to stop that meeting — respectfully, rigorously, with data — and ask the question that saves companies millions of dollars and months of engineering time: *Does this problem actually need AI?*
 

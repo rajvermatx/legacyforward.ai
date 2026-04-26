@@ -120,7 +120,7 @@ What makes prompt templates architecturally significant is the outsized impact t
 
 ### Architectural Concerns
 
-Version control for prompt templates is not optional. It is essential. Every prompt template should be versioned in your source control system alongside your code, because a seemingly minor wording change can completely alter system behavior. Imagine changing one sentence in a classification prompt and suddenly having your system categorize customer complaints into the wrong buckets. Without version history, debugging that kind of regression becomes a nightmare.
+Version control for prompt templates is not optional — it is essential. Every prompt template should be versioned in your source control system alongside your code, because a seemingly minor wording change can completely alter system behavior. Imagine changing one sentence in a classification prompt and suddenly having your system categorize customer complaints into the wrong buckets. Without version history, debugging that kind of regression becomes a nightmare.
 
 Testing prompts requires a different mindset than testing traditional code. Unit tests alone are not sufficient, because the output of a prompt is probabilistic and nuanced. What you need are evaluation suites — curated sets of test inputs with expected outputs, scored against quality metrics. Think of it as the difference between testing whether a function returns the right number and testing whether a translation reads naturally to a native speaker. The tooling for this is still maturing, but the discipline needs to be in place from the start.
 

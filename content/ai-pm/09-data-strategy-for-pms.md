@@ -14,13 +14,13 @@ badges:
 
 ## The PM Who Did Not Ask About the Data
 
+There is a pattern that plays out in AI product failures with remarkable consistency. A team gets excited about a feature. The idea is strong. The AI capability exists. Engineering scopes the work. The feature gets prioritized. Development begins. And then, somewhere around week four or six, a data engineer says: "Wait. Do we actually have what we need to power this thing?"
 
 ![Diagram](/diagrams/ai-pm/ch09-1.svg)
-There is a pattern that plays out in AI product failures with remarkable consistency. A team gets excited about a feature. The idea is strong. The AI capability exists. Engineering scopes the work. The feature gets prioritized. Development begins. And then, somewhere around week four or six, a data engineer says: "Wait. Do we actually have what we need to power this thing?"
 
 In the best case, the answer is "mostly yes, but we need to do three months of cleanup work first." In the worst case, the answer is "no, and the data we would need does not exist and would take a year to collect."
 
-Both are expensive. Both were avoidable. Both happened because no one asked the right questions at the beginning.
+Both outcomes are expensive, both were avoidable, and both happened because no one asked the right questions at the beginning.
 
 Data strategy for AI is not primarily a technical discipline. The engineers will handle the pipelines, the schema design, the ETL jobs. What only you, the product manager, can do is ask the questions that determine whether the right data will ever exist in the first place, and make the product decisions that ensure it gets created. That is the whole job. You do not need to write a single SQL query.
 

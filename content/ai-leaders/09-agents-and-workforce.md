@@ -89,7 +89,7 @@ Agents can trigger API calls, cloud compute, or third-party service charges at a
 
 One company's sales prospecting agent, triggered by a misconfigured automation, sent 14,000 outbound emails over a weekend before anyone noticed. The cost was not just the compute — it was the brand damage and the CAN-SPAM compliance exposure.
 
-Governance response: Spending limits. Rate limits. Human approval thresholds. Mandatory monitoring alerts for unusual activity patterns.
+Governance response: spending limits, rate limits, human approval thresholds, and mandatory monitoring alerts for unusual activity patterns.
 
 **2. Unauthorized Actions**
 

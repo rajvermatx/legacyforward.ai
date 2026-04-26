@@ -14,8 +14,6 @@ badges:
 
 ## The Scenario
 
-
-![Diagram](/diagrams/ai-pm/capstone-01.svg)
 You are the product manager for **Fieldwork**, a B2B SaaS platform used by 2,400 mid-market operations teams to manage field service scheduling, dispatch, and reporting. Average contract value is $18,000/year. Current NPS is 42. Your support team handles approximately 1,800 tickets per month.
 
 The CEO returns from a conference and sends you this message on a Monday morning:
@@ -23,6 +21,8 @@ The CEO returns from a conference and sends you this message on a Monday morning
 > "Talked to three peers this weekend who've deployed AI chatbots for support. One company cut support tickets by 40%. We need to ship this in 90 days. Let's make it happen."
 
 Your job: figure out whether this is worth doing, how to do it right, and what to deliver at each stage.
+
+![Diagram](/diagrams/ai-pm/capstone-01.svg)
 
 ---
 
@@ -94,7 +94,7 @@ A one-page recommendation memo to the CEO:
 
 ### Kill Criteria
 
-Define these before you start. Write them down. Share them with the CEO.
+Define these before you start, write them down, and share them with the CEO.
 
 | Criterion | Kill threshold | Measurement |
 |---|---|---|

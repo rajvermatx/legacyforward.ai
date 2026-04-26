@@ -14,8 +14,6 @@ badges:
 
 ## The Scenario
 
-
-![Diagram](/diagrams/ai-pm/capstone-04.svg)
 You are the VP of Product at **Meridian**, a B2B SaaS company with $28M ARR serving mid-market HR teams. Your product helps companies manage employee onboarding, compliance training, and performance reviews.
 
 The board has added a 30-minute item to next quarter's meeting: "AI Product Strategy Update." The request came from two board members who are also investors in AI-native competitors. They want to understand where Meridian is headed.
@@ -23,6 +21,8 @@ The board has added a 30-minute item to next quarter's meeting: "AI Product Stra
 You have 30 minutes, a room of 8 board members with backgrounds in finance, operations, and enterprise software (not AI), and a company that has shipped two AI features in the last 12 months with mixed results.
 
 Your job: structure a presentation that is honest, forward-looking, and inspires confidence without overpromising.
+
+![Diagram](/diagrams/ai-pm/capstone-04.svg)
 
 ---
 
@@ -236,4 +236,4 @@ Use this as a leave-behind for board members, or as the spine of your internal A
 
 This one-pager should be able to stand alone. If a board member forwards it to a colleague who was not in the room, they should be able to understand your strategy, your current state, and your forward direction without the presentation deck.
 
-The best board presentations do not just inform. They create alignment. When you leave the room, every board member should have the same understanding of where you are going, why you are going there, and what success looks like. That alignment, more than any individual slide, is what makes the 30 minutes worthwhile.
+The best board presentations do not just inform — they create alignment. When you leave the room, every board member should have the same understanding of where you are going, why you are going there, and what success looks like. That alignment, more than any individual slide, is what makes the 30 minutes worthwhile.

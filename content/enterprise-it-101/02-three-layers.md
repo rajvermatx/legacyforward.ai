@@ -21,7 +21,7 @@ A system of record is the authoritative source of truth for a particular type of
 
 When a customer places an order, somewhere in the enterprise there is a system that records that order: the canonical, official, definitive record. When an employee is hired, somewhere there is a system that holds the authoritative record of their employment. When a product is manufactured, somewhere there is a system that tracks the inventory. These are systems of record.
 
-Systems of record tend to share certain characteristics. They are old. They are stable. They are designed for reliability above all else. The most important thing they do is not lose data. They often have rigid data structures, because the structure of the data is part of the business contract: an order has these fields, a product has those fields, and changing the fields requires a careful process because everything downstream depends on them.
+Systems of record tend to share certain characteristics: they are old, they are stable, and they are designed for reliability above all else. The most important thing they do is not lose data. They often have rigid data structures, because the structure of the data is part of the business contract: an order has these fields, a product has those fields, and changing the fields requires a careful process because everything downstream depends on them.
 
 The most common systems of record in large enterprises are enterprise resource planning systems (ERP), which we will cover in detail in Chapter 5. Other examples include core banking systems in financial services, electronic medical record systems in healthcare, and claims management systems in insurance.
 

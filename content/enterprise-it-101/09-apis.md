@@ -19,7 +19,7 @@ That is it. An API is an agreement between two systems about how they will commu
 
 ## A Simple Analogy
 
-Think of a restaurant. The kitchen is one system. You are another. The waiter is the API.
+Think of a restaurant: the kitchen is one system, you are another, and the waiter is the API.
 
 You do not walk into the kitchen and start cooking. You interact with the waiter. You say what you want, in the format the restaurant expects: you look at a menu and give your order verbally or in writing. The waiter carries that request to the kitchen. The kitchen does its work and sends back a response, the food, through the same channel.
 
@@ -39,7 +39,7 @@ This diversity of API types is one of the practical challenges in enterprise int
 
 In consumer technology, APIs are often treated as products. Google's Maps API, Stripe's payment API, Twilio's messaging API — these are carefully documented, stable, versioned, and treated as revenue-generating products in their own right. When they change, there is a formal deprecation process with advance notice.
 
-In enterprise technology, APIs are often an afterthought. A system exposes an API because it needs to connect to something else, not because the API is designed for broad reuse. Documentation is incomplete. The API is not versioned, so changes can break integrations without warning. Performance and availability are not guaranteed in the way they would be for a commercial API product.
+In enterprise technology, APIs are often an afterthought. A system exposes an API because it needs to connect to something else, not because the API is designed for broad reuse. Documentation is incomplete, the API is not versioned so changes can break integrations without warning, and performance and availability are not guaranteed in the way they would be for a commercial API product.
 
 The result is that enterprise integrations are fragile. They work when conditions are exactly right, and they break when something changes: the underlying system is updated, the data format shifts, the authentication mechanism changes, or the system is simply unavailable when the integration tries to connect.
 

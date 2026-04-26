@@ -153,7 +153,7 @@ As LLMs have entered the mainstream, a fog of misconceptions has settled around 
 
 **Misconception 1: "LLMs will replace BAs and QAs"**
 
-This is the fear that drives resistance. The reality is more nuanced. LLMs excel at generating and transforming text, but they cannot conduct a stakeholder interview, navigate organizational politics, exercise judgment about what requirements matter most, or understand the implicit context that makes a requirement feasible or infeasible. LLMs will replace analysts who refuse to learn them, not analysts who embrace them. The role evolves. It does not disappear.
+This is the fear that drives resistance. The reality is more nuanced. LLMs excel at generating and transforming text, but they cannot conduct a stakeholder interview, navigate organizational politics, exercise judgment about what requirements matter most, or understand the implicit context that makes a requirement feasible or infeasible. LLMs will replace analysts who refuse to learn them, not analysts who embrace them. The role evolves rather than disappears.
 
 **Misconception 2: "You need to be a programmer to use LLMs"**
 
@@ -271,7 +271,7 @@ Modify the `activities` list to reflect your actual work. Run the script and ide
 
 **Step 3: Define Your Learning Goals**
 
-Based on your assessment, write a brief paragraph (3-5 sentences) describing which analyst activities you want to augment with LLMs by the end of this book, and what success would look like for each. Keep this document. You will revisit it in the capstone project.
+Based on your assessment, write a brief paragraph (3-5 sentences) describing which analyst activities you want to augment with LLMs by the end of this book, and what success would look like for each. Keep this document — you will revisit it in the capstone project.
 
 ## Summary
 

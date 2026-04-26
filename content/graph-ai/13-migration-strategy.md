@@ -24,7 +24,7 @@ Nobody is asking you to rip out Oracle. Here is how to add graphs incrementally 
 
 Every year, someone proposes ripping out the relational database and replacing it with something new. Every year, that proposal dies. It should. Your relational database has 15 years of battle-tested stored procedures, 200 reports built on top of it, an operations team that knows how to back it up and restore it at 3am, and a vendor support contract that someone in procurement spent 6 months negotiating.
 
-Graph databases do not replace relational databases. They augment them. You add a graph alongside your existing systems, feed it the data that benefits most from graph representation, and query the graph for questions that relational databases answer poorly or not at all.
+Graph databases do not replace relational databases — they augment them. You add a graph alongside your existing systems, feed it the data that benefits most from graph representation, and query the graph for questions that relational databases answer poorly or not at all.
 
 > **Think of it like this:** You do not tear down your house to add a workshop. You build the workshop in the backyard and run power from the main panel. The house keeps doing what the house does. The workshop handles what the house was never designed for — and they share electricity.
 

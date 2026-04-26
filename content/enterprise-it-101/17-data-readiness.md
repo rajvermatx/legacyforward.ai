@@ -11,11 +11,11 @@ part: "Part 04 Where AI Lands"
 
 "We have the data" is one of the most optimistic, and frequently incorrect, statements made at the beginning of an enterprise AI initiative.
 
-![Diagram](/diagrams/enterprise-it-101/ch17-data-readiness.svg)
-
 Every enterprise has data. Large enterprises have enormous amounts of it. Transaction records going back decades. Customer records in the millions. Operational data from every system that has ever run in the organization. The data exists.
 
 What most enterprises do not have is data that is ready to use for AI. The gap between "we have the data" and "the data is ready" is where most AI projects run into their first serious problems. Projects often fail or take significantly longer than expected at this stage.
+
+![Diagram](/diagrams/enterprise-it-101/ch17-data-readiness.svg)
 
 ## The Four Dimensions of Data Readiness
 
@@ -66,6 +66,6 @@ For comparison: a mature organization with strong data readiness for a given AI 
 - A data governance structure that defines ownership, approved uses, and privacy controls
 - A data catalog that explains what each dataset contains, what its provenance is, and who to contact with questions
 
-Most enterprises are not here. That is fine. These capabilities take time and investment to build. But the gap between where an organization is and where it needs to be for AI is the most honest measure of how ready it actually is for enterprise AI initiatives.
+Most enterprises are not here, and that is fine — these capabilities take time and investment to build. But the gap between where an organization is and where it needs to be for AI is the most honest measure of how ready it actually is for enterprise AI initiatives.
 
 Data readiness is not glamorous. It does not make for exciting board presentations. But it is the foundation on which every AI initiative either stands or collapses.

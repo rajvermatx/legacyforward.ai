@@ -210,7 +210,7 @@ In a relational database, when you write `JOIN employees e ON e.employee_id = mc
 
 That index lookup has a cost, and it is proportional to the size of the index (typically O(log n) for a B-tree). As your employees table grows from 1,000 to 1,000,000 rows, each lookup gets slower. The degradation is not dramatic, but it is consistent.
 
-In a graph database, the relationship between an employee and their manager is stored as a direct pointer. When you traverse from an employee to their manager, the database follows that pointer directly to the manager record. No index lookup. No table scan. The cost of that traversal is O(1): constant time, regardless of how many employees exist in the database.
+In a graph database, the relationship between an employee and their manager is stored as a direct pointer. When you traverse from an employee to their manager, the database follows that pointer directly to the manager record. There is no index lookup and no table scan. The cost of that traversal is O(1): constant time, regardless of how many employees exist in the database.
 
 ```text
 Relational (each hop requires an index lookup):
@@ -262,7 +262,7 @@ RETURN approver.name, manager.name, vendor.name,
        sub.name, finding.text, finding.severity
 ```
 
-This is not just shorter. It is structurally different. The `REPORTS_TO*1..10` syntax says "follow the REPORTS_TO relationship up to 10 hops." The database does not recursively join a table against itself. It walks pointers. The `FULFILLED_BY` and `SUBCONTRACTS` relationships are traversed directly, not computed through key matching.
+This is not just shorter — it is structurally different. The `REPORTS_TO*1..10` syntax says "follow the REPORTS_TO relationship up to 10 hops," and the database does not recursively join a table against itself but walks pointers directly. The `FULFILLED_BY` and `SUBCONTRACTS` relationships are traversed directly, not computed through key matching.
 
 The performance characteristics are fundamentally different:
 
@@ -362,7 +362,7 @@ All three of these are signs that your data has outgrown the relational model fo
 
 The rest of this book is structured around a practical migration path. You do not need to abandon your relational databases. You do not need to learn an entirely new way of thinking about data. You need to learn which parts of your data model are hitting the JOIN wall, how to move those parts into a graph, and how to connect the graph to your existing systems. As we will see in Chapter 3, your AI systems have an enormous appetite for connected data.
 
-In the next chapter, we will look at how graph databases actually store and retrieve data, explained in terms of the relational concepts you already know. Nodes are rows. Relationships are pre-computed JOINs. Properties are columns. Once you see the mapping, the learning curve flattens considerably.
+In the next chapter, we will look at how graph databases actually store and retrieve data, explained in terms of the relational concepts you already know. Nodes are rows, relationships are pre-computed JOINs, and properties are columns. Once you see the mapping, the learning curve flattens considerably.
 
 ## 11. Chapter Checklist
 

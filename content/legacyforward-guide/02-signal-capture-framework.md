@@ -10,6 +10,10 @@ badges: ["Signal Capture", "Portfolio Governance"]
 
 # Signal Capture: The Value Assessment Framework
 
+Identifying where AI creates net new value is the first discipline. The second is ensuring that identification holds up under scrutiny — that a plausible story does not get funded as though it were a proven one. The Value Assessment Framework provides the structure for that scrutiny through three sequential stages: Hypothesis, Validation, and Tracking.
+
+Each stage has a gate. Skipping a stage does not save time — it converts a correctable mistake into an expensive one discovered in production.
+
 ![Value Assessment Framework: Hypothesis → Validation → Tracking](/diagrams/legacyforward-guide/02-signal-capture-framework-1.svg)
 
 ## The Three Stages

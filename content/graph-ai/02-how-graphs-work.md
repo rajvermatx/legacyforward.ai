@@ -25,7 +25,7 @@ I get tables. Show me what is different, in terms I already understand.
 ![Diagram 1](/diagrams/graph-ai/ch02-01.svg)
 
 ![Diagram 2](/diagrams/graph-ai/ch02-02.svg)
-If you have spent your career in the relational world, you have a deeply ingrained mental model for how data is stored. Tables have rows. Rows have columns. Tables are connected through foreign keys. Queries use JOINs to follow those foreign keys and combine data from multiple tables.
+If you have spent your career in the relational world, you have a deeply ingrained mental model for how data is stored. Tables have rows, rows have columns, and tables are connected through foreign keys. Queries use JOINs to follow those foreign keys and combine data from multiple tables.
 
 Graph databases use different vocabulary for the same fundamental concepts, and the fastest way to learn is to map one vocabulary to the other.
 

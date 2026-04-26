@@ -13,7 +13,7 @@ One of the most practical questions in enterprise AI is not "what can AI do?" bu
 
 ![Diagram](/diagrams/enterprise-it-101/ch18-ai-ready-systems.svg)
 
-Some systems are well-suited to AI integration. They have modern APIs, clean data, documented business rules, and stable interfaces. Others are not. They use proprietary protocols, have poor data quality, and are difficult to change or integrate with. Understanding the difference upfront saves enormous time and prevents the common pattern of starting an AI project with enthusiasm and then discovering mid-stream that the foundational systems are not ready.
+Some systems are well-suited to AI integration — they have modern APIs, clean data, documented business rules, and stable interfaces. Others are not, relying instead on proprietary protocols, poor data quality, and interfaces that are difficult to change or integrate with. Understanding the difference upfront saves enormous time and prevents the common pattern of starting an AI project with enthusiasm and then discovering mid-stream that the foundational systems are not ready.
 
 ## Characteristics of AI-Ready Systems
 

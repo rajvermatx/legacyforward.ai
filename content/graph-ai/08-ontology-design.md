@@ -86,7 +86,7 @@ RETURN p.name, d.name, v.name, c.name
 
 ## 03. Iterative Design: Start Small, Validate, Expand
 
-Ontology design is not a waterfall process. It is iterative. You build a small ontology, load real data, discover what is missing, and then expand.
+Ontology design is not a waterfall process — it is iterative. You build a small ontology, load real data, discover what is missing, and then expand.
 
 ### Iteration 1: The Starter (Day 1-2)
 

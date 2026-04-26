@@ -55,7 +55,7 @@ A typical enterprise project accumulates defects at an alarming rate. Consider t
 | Average time to triage a defect | 5 min | 5 min | 5 min |
 | Total triage cost per sprint | 1.5 hrs | 6 hrs | 40+ hrs |
 
-The cost is not just time. It is **decision quality**. When a QA lead triages 50 defects in a one-hour meeting, each defect gets barely a minute of attention. Severity is assigned inconsistently. Duplicates slip through. High-impact bugs get buried under a pile of cosmetic issues.
+The cost is not just time. It is **decision quality**. When a QA lead triages 50 defects in a one-hour meeting, each defect gets barely a minute of attention. Severity is assigned inconsistently, duplicates slip through, and high-impact bugs get buried under a pile of cosmetic issues.
 
 LLMs can process the full text of a defect report: title, description, steps to reproduce, stack traces, and screenshots-to-text. They make classification decisions in seconds. This does not eliminate the need for human judgment, but it provides a strong first pass that reduces the time and cognitive load of triage.
 

@@ -14,9 +14,9 @@ badges:
 
 ## Why Evaluation Is a Product Responsibility
 
+Most PMs think of evaluation as an engineering concern, the ML team's job to figure out how accurate the model is. This is a misallocation of responsibility that reliably produces problems.
 
 ![Diagram](/diagrams/ai-pm/ch07-1.svg)
-Most PMs think of evaluation as an engineering concern, the ML team's job to figure out how accurate the model is. This is a misallocation of responsibility that reliably produces problems.
 
 The evaluation dataset defines what "correct" means for your AI feature. It encodes the specific quality standard that your product requires. It reflects the use cases that matter to your users, the edge cases your product needs to handle gracefully, and the error types your product cannot tolerate. None of these are engineering questions. They are product questions.
 

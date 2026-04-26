@@ -26,7 +26,7 @@ Your QA team knows how to test relational databases. They write SQL assertions, 
 
 Three things make graph testing harder than relational testing:
 
-1. **Schema flexibility.** Neo4j does not enforce a rigid schema. A node can have any properties, and missing properties do not throw errors. They return null. A test must check not just that data exists but that it has the expected shape.
+1. **Schema flexibility.** Neo4j does not enforce a rigid schema. A node can have any properties, and missing properties do not throw errors — they return null. A test must check not just that data exists but that it has the expected shape.
 
 2. **Traversal depth.** A query that traverses 4 relationships is correct only if every hop lands on the right node. One wrong relationship in the middle of the path corrupts the entire result.
 

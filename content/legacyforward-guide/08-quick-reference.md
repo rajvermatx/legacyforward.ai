@@ -10,6 +10,10 @@ badges: ["Reference", "All Roles"]
 
 # Quick Reference
 
+This chapter consolidates the LegacyForward.ai framework into summary tables — one reference point for the core questions, phases, gates, patterns, and principles across all three pillars. Use it alongside the detailed chapters, not instead of them.
+
+The diagram below illustrates the cost-of-delay principle that underpins the Kill Early discipline: the later an initiative is terminated, the more it costs to stop it, and the less value the organization recovers.
+
 ![Kill Early: The Cost of Delay — relative cost by stage](/diagrams/legacyforward-guide/08-quick-reference-1.svg)
 
 ## The LegacyForward.ai Framework at a Glance

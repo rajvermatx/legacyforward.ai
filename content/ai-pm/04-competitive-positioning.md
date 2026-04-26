@@ -14,9 +14,9 @@ badges:
 
 ## The Commodity Trap
 
+Here is the competitive situation most product teams face in 2025 and beyond: your company wants to add an AI feature, your primary competitor also wants to add an AI feature, and both of you are going to use the same handful of foundation model APIs to build it. You will both call the OpenAI API, or the Anthropic API, or Google's Gemini API. You will both be working from the same underlying model capabilities.
 
 ![Diagram](/diagrams/ai-pm/ch04-1.svg)
-Here is the competitive situation most product teams face in 2025 and beyond: your company wants to add an AI feature, your primary competitor also wants to add an AI feature, and both of you are going to use the same handful of foundation model APIs to build it. You will both call the OpenAI API, or the Anthropic API, or Google's Gemini API. You will both be working from the same underlying model capabilities.
 
 So what is your moat?
 

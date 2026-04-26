@@ -23,7 +23,7 @@ Your enterprise already has hundreds of systems in production: ERPs, CRMs, data 
 
 
 
-This chapter walks through the integration patterns that show up again and again in real-world enterprise AI deployments. Think of these as blueprints, not rigid prescriptions, but starting points that you can adapt to your own organization’s needs. Some of them will feel familiar because they echo patterns you already know from service-oriented architecture and data engineering. That is intentional. AI is not as alien as it sometimes sounds. Most of the hard problems are the same integration problems architects have been solving for decades, just with a new kind of component in the mix.
+This chapter walks through the integration patterns that show up again and again in real-world enterprise AI deployments. Think of these as blueprints, not rigid prescriptions, but starting points that you can adapt to your own organization’s needs. Some of them will feel familiar because they echo patterns you already know from service-oriented architecture and data engineering — that is intentional. AI is not as alien as it sometimes sounds. Most of the hard problems are the same integration problems architects have been solving for decades, just with a new kind of component in the mix.
 
 ## Pattern 1: AI as a Microservice
 

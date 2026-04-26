@@ -14,9 +14,9 @@ badges:
 
 ## Why Story Points Don't Work
 
+Story points are an estimation tool designed for a specific kind of work: development tasks where the effort is uncertain but the outcome is known. Given a well-defined requirement, how much effort will it take to build a system that satisfies it? The uncertainty is in the effort; the output is specified.
 
 ![Diagram](/diagrams/ai-pm/ch05-1.svg)
-Story points are an estimation tool designed for a specific kind of work: development tasks where the effort is uncertain but the outcome is known. Given a well-defined requirement, how much effort will it take to build a system that satisfies it? The uncertainty is in the effort; the output is specified.
 
 AI feature development inverts this. The outcome is uncertain in ways that the effort cannot resolve. You can spend three weeks building a classification model and discover, at the end of week three, that the available data does not support the required accuracy level. That is not a story point estimation failure. It is a discovery that the approach does not work, and no amount of better estimation would have revealed it earlier.
 
@@ -114,7 +114,7 @@ Harden is where many teams discover the gap between evaluation quality and produ
 
 **Gate decision (quarterly):** Is the feature still delivering its intended value? Is the ongoing investment in quality maintenance proportionate to the business benefit? Options: Continue, Invest (increase investment due to strategic importance), Harvest (reduce maintenance to minimum viable monitoring), Sunset (retire the feature).
 
-The Operate phase is often treated as maintenance, a reduced-investment, reduced-attention state after the excitement of launch. This is a mistake for AI features. Model quality drifts. User patterns shift. Foundation model providers update their APIs in ways that change behavior. An AI feature in Operate requires ongoing, active attention, less than Shape, but more than a traditional software feature in maintenance.
+The Operate phase is often treated as maintenance, a reduced-investment, reduced-attention state after the excitement of launch. This is a mistake for AI features — model quality drifts, user patterns shift, and foundation model providers update their APIs in ways that change behavior. An AI feature in Operate requires ongoing, active attention, less than Shape, but more than a traditional software feature in maintenance.
 
 ## Time-Boxing Research vs. Committing to Scope
 
@@ -148,7 +148,7 @@ Effective Explore progress reporting covers:
 
 AI development conversations frequently produce what PMs sometimes call "the engineer's three-word answer": it depends. The sprint will take two weeks, or it might take eight, depending on the data quality. The feature will reach 90% accuracy, or it might reach 80%, depending on the edge case distribution. This is difficult to plan around.
 
-The productive response to "it depends" is not frustration. It is precision. Ask: "What does it depend on, specifically? What would we need to know or do to reduce that dependency?" This converts an unhelpful hedge into a concrete research question. The question then becomes: "Can we answer that question cheaply before we commit to scope?"
+The productive response to "it depends" is not frustration but precision. Ask: "What does it depend on, specifically? What would we need to know or do to reduce that dependency?" This converts an unhelpful hedge into a concrete research question. The question then becomes: "Can we answer that question cheaply before we commit to scope?"
 
 This is the function of the Frame and Explore phases: to systematically answer the "it depends" questions before the Shape phase commits to scope. If you go into Shape with major "it depends" questions unresolved, you are committing to scope under uncertainty, which produces exactly the planning failures that make AI development feel chaotic.
 

@@ -594,7 +594,7 @@ Your graph will likely need to stay in sync with your relational database (the "
 
 ### Step 5: Start Small
 
-Pick one pain point. Build the graph for that one use case. Prove it works. Then expand.
+Pick one pain point, build the graph for that use case, prove it works, and then expand.
 
 ## 10. Chapter Checklist
 

@@ -29,7 +29,7 @@ Consider a straightforward question: *"A store sells apples at $1.50 each. You h
 
 When you send this to a language model with no reasoning guidance, something interesting happens. The model often answers immediately — "Buy 3 apples ($4.50) and 7 oranges ($14.00), total $18.50" — and it happens to be correct. But change the numbers slightly, add a constraint (say, you also need at least one banana at $1.25), and the model begins making arithmetic errors or ignoring constraints entirely. It is not that the model cannot do math. It is that the model is pattern-matching to a plausible-sounding answer rather than working through the problem systematically.
 
-This is the core failure mode of **direct prompting**: the model compresses multi-step reasoning into a single forward pass. For the model, producing the token "7" (oranges) requires simultaneously holding the apple cost, the remaining budget, the orange price, and the integer division, all in the residual stream at the same layer. Sometimes this works. Often it does not. When it fails, it fails silently, with the same confident tone as when it succeeds.
+This is the core failure mode of **direct prompting**: the model compresses multi-step reasoning into a single forward pass. For the model, producing the token "7" (oranges) requires simultaneously holding the apple cost, the remaining budget, the orange price, and the integer division, all in the residual stream at the same layer. Sometimes this works, but often it does not — and when it fails, it fails silently, with the same confident tone as when it succeeds.
 
 Here is what this failure looks like in agent code:
 

@@ -48,7 +48,7 @@ Consider a typical BA workflow: gathering requirements from a stakeholder interv
 | Error handling | User must notice and correct errors | Built-in validation and fallback logic |
 | Auditability | No history unless manually saved | Full conversation logs with timestamps |
 
-The shift from one-off prompts to custom assistants is the difference between using a calculator and using a spreadsheet. Both do math. Only one remembers your data, applies formulas across cells, and updates automatically.
+The shift from one-off prompts to custom assistants is the difference between using a calculator and using a spreadsheet. Both do math, but only one remembers your data, applies formulas across cells, and updates automatically.
 
 > **Start with the workflow, not the technology.** Before writing any code, map out the manual workflow you want to automate. Identify the inputs, outputs, decision points, and external systems involved. The most common mistake is building an assistant that is impressive in a demo but does not match how people actually work. Shadow a BA or QA analyst for a day and document every step they take. Then decide which steps the assistant should handle.
 

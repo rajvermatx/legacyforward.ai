@@ -10,6 +10,10 @@ badges: ["Legacy Coexistence", "Architecture Patterns"]
 
 # Legacy Coexistence: The Five Patterns
 
+Legacy Coexistence is the third pillar of the LegacyForward.ai framework — five architectural patterns for deploying AI alongside the enterprise systems that will not be replaced. It starts from a premise that most AI strategies ignore: the enterprise environment that will host your AI is not the one in the vendor demo, and pretending otherwise is how integration failures happen in production.
+
+The five patterns — Data Exhaust, Sidecar, Gateway, Shadow Pipeline, and Legacy-Aware Agent — span a range of complexity and latency requirements. They are not mutually exclusive, and most real initiatives combine more than one.
+
 ![The Five Coexistence Patterns: complexity ladder from Data Exhaust to Legacy-Aware Agent](/diagrams/legacyforward-guide/05-legacy-coexistence-patterns-1.svg)
 
 ## The Legacy Reality
@@ -20,13 +24,13 @@ Legacy systems are not technical debt waiting to be retired. They are load-beari
 
 The mainframe is still running. It processes every transaction. It has been running for thirty years. It will be running in ten more. The business logic encoded in its COBOL programs is the actual source of truth for how the organization operates — not the documentation, not the wiki, not the architecture diagrams. The mainframe.
 
-The integration layer is held together with duct tape. SOAP endpoints. Flat file transfers. Batch jobs that run at 2 AM. FTP drops. MQ queues. Point-to-point integrations that nobody fully maps because the person who built them retired in 2014.
+The integration layer is held together with duct tape: SOAP endpoints, flat file transfers, batch jobs that run at 2 AM, FTP drops, MQ queues, and point-to-point integrations that nobody fully maps because the person who built them retired in 2014.
 
 The data is everywhere and nowhere. Customer data lives in six systems that do not agree with each other. The "golden record" project from three years ago covers sixty percent of the data and has not been updated since the team was reassigned. The data warehouse is eighteen months behind the operational systems.
 
 The "modern" systems are already legacy. That microservices platform deployed four years ago has its own technical debt, its own integration patterns, and its own undocumented behaviors. Legacy is not an age — it is a state. Any system that is in production, has accumulated institutional knowledge, and cannot be easily replaced is legacy.
 
-This is the environment into which enterprises are deploying AI. Not the demo environment. The real one.
+This is the real enterprise environment — not the demo environment — into which enterprises are actually deploying AI.
 
 ---
 
@@ -34,13 +38,13 @@ This is the environment into which enterprises are deploying AI. Not the demo en
 
 The instinct when confronting legacy is to replace it. Modernize. Migrate. Re-platform. This instinct has a poor track record.
 
-**The scope expands until it collapses.** A mainframe modernization project starts with one application. Discovery reveals dependencies. The one application connects to forty others. The project scope triples. The timeline extends. Eventually the initiative is killed, descoped to meaninglessness, or declared a success while the mainframe continues running in parallel — which is the definition of the outcome modernization was supposed to prevent.
+**The scope expands until it collapses.** A mainframe modernization project starts with one application, but discovery reveals dependencies that connect it to forty others. The project scope triples, the timeline stretches, and eventually the initiative is killed, descoped to meaninglessness, or declared a success while the mainframe continues running in parallel — which is the definition of the outcome modernization was supposed to prevent.
 
 **The business logic is the system.** Legacy systems do not just store data and execute transactions. They encode decades of business rules, regulatory requirements, exception handling, and edge case logic that was never formally documented. Replacing the system means reverse-engineering all of that logic — and the organization discovers that nobody fully understands what the system does until they try to replicate it and fail.
 
 **The risk is existential.** When a legacy system processes every transaction or serves as the system of record for regulatory reporting, failure is not an inconvenience. It is an existential event. No CIO should bet the enterprise on a big-bang migration.
 
-**The economics do not work.** Full modernization of a complex legacy landscape costs hundreds of millions and takes years. The ROI calculation assumes the new system will be complete before the old one is decommissioned. It never is. The result is running two systems in parallel indefinitely.
+**The economics do not work.** Full modernization of a complex legacy landscape costs hundreds of millions and takes years. The ROI calculation assumes the new system will be complete before the old one is decommissioned — but that assumption rarely holds, and the result is running two systems in parallel indefinitely.
 
 | Dimension | Rip-and-Replace | Legacy Coexistence |
 |---|---|---|
@@ -102,7 +106,7 @@ Legacy Coexistence is not a single pattern. It is a catalog of patterns selected
 
 ### Pattern 4: Shadow Pipeline
 
-**What it is.** The AI system runs in parallel with the legacy system, processing the same inputs and producing its own outputs. Both outputs are compared. Over time, as confidence builds, traffic is gradually shifted to the AI system.
+**What it is.** The AI system runs in parallel with the legacy system, processing the same inputs and producing its own outputs. Both outputs are compared, and over time, as confidence builds, production traffic is gradually shifted to the AI system.
 
 **When to use it.** AI will eventually replace a legacy process, but the transition must be gradual and evidence-based. The value hypothesis involves demonstrating that AI output is equivalent to or better than legacy output, validated against the legacy system's known-correct results.
 

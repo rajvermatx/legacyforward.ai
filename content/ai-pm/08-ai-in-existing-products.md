@@ -14,9 +14,9 @@ badges:
 
 ## The Retrofit Problem
 
+Building an AI feature into a greenfield product is a luxury most product managers never get. The more common situation, and the harder one, is that you are working with a product that already exists, already has users, already has data models and API contracts and a decade of design decisions baked into its architecture. And now someone wants you to add AI to it.
 
 ![Diagram](/diagrams/ai-pm/ch08-1.svg)
-Building an AI feature into a greenfield product is a luxury most product managers never get. The more common situation, and the harder one, is that you are working with a product that already exists, already has users, already has data models and API contracts and a decade of design decisions baked into its architecture. And now someone wants you to add AI to it.
 
 This is not the same problem as building AI-native. The mental models are different. The risks are different. The relationship with your users is different. An AI-native product can make AI the organizing principle around which everything else is built. A retrofit must make AI a guest in a house that was designed for someone else.
 
@@ -107,7 +107,7 @@ The key discipline here is defining your **rollout pause criteria** before you b
 - If cost per user exceeds Z, we pause and re-evaluate the economics.
 - If we receive more than N escalations in a 24-hour period, we pause.
 
-These are your automatic circuit breakers. Write them down. Share them with stakeholders before rollout begins.
+These are your automatic circuit breakers — write them down and share them with stakeholders before rollout begins.
 
 ## User Opt-In vs. Default-On Decisions
 

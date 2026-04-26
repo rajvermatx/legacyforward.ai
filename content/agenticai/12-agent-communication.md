@@ -126,7 +126,7 @@ class RequestReplyBus:
         return await self._inboxes[agent_id].get()
 ```
 
-Request/reply is appropriate when one agent needs specific information that only another agent can provide. It fails when the responding agent is slow, overloaded, or dead. The requesting agent blocks. Always set timeouts. Always handle the timeout case explicitly. A multi-agent system where one slow agent blocks all others is worse than a single-agent system.
+Request/reply is appropriate when one agent needs specific information that only another agent can provide. It fails when the responding agent is slow, overloaded, or dead. The requesting agent blocks, so always set timeouts and always handle the timeout case explicitly. A multi-agent system where one slow agent blocks all others is worse than a single-agent system.
 
 ### Publish/Subscribe
 
@@ -307,7 +307,7 @@ finding = AgentMessage(
 )
 ```
 
-The structured version is longer, but it is unambiguous. The receiving agent knows exactly which metric, which period, the magnitude of the deviation, and what the sender recommends. No interpretation required. No information lost.
+The structured version is longer, but it is unambiguous. The receiving agent knows exactly which metric, which period, the magnitude of the deviation, and what the sender recommends. No interpretation is required and no information is lost.
 
 Three principles for message format design:
 

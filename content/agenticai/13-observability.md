@@ -40,7 +40,7 @@ Agents break every one of those assumptions. A single user request triggers a ch
 
 ## 13.2 Traces and Spans
 
-A **trace** represents one complete agent run from initial request to final response. A trace is composed of spans, which are individual units of work. Each span captures an operation: an LLM call, a tool invocation, or a retrieval query. Spans nest hierarchically. The root span covers the entire run. Child spans cover individual steps. Grandchild spans cover sub-operations like the HTTP request inside a web-search tool.
+A **trace** represents one complete agent run from initial request to final response. A trace is composed of spans, which are individual units of work. Each span captures an operation: an LLM call, a tool invocation, or a retrieval query. Spans nest hierarchically: the root span covers the entire run, child spans cover individual steps, and grandchild spans cover sub-operations like the HTTP request inside a web-search tool.
 
 ```
 from opentelemetry import trace

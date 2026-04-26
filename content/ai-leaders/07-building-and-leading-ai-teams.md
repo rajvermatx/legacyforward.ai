@@ -63,7 +63,7 @@ Could you upskill this? Yes. This is the most upskillable role on the list. A ta
 
 What they do in plain English: They build the systems — connecting AI models to your data, your workflows, and your interfaces. They are not training AI from scratch. They are configuring, integrating, and customizing existing AI platforms.
 
-Background that works: Software engineers with 3+ years of experience. Cloud platform engineers. Backend developers. The specific AI skills are learnable relatively quickly; the foundational engineering discipline is what takes years.
+Background that works: software engineers with 3+ years of experience, cloud platform engineers, and backend developers. The specific AI skills are learnable relatively quickly; the foundational engineering discipline is what takes years.
 
 Salary range (2026): $160,000 – $260,000 total compensation.
 

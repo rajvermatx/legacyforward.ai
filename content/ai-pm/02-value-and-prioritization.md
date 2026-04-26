@@ -16,9 +16,9 @@ badges:
 
 ## Why a Hypothesis, Not a Requirement
 
+Product requirements documents describe what to build. A value hypothesis describes why building it would matter — and under what conditions that belief would be proven wrong.
 
 ![Diagram](/diagrams/ai-pm/ch02-1.svg)
-Product requirements documents describe what to build. A value hypothesis describes why building it would matter — and under what conditions that belief would be proven wrong.
 
 The distinction is not semantic. When you write a requirement, you are implicitly asserting that the problem is understood and the solution is known. When you write a hypothesis, you are acknowledging that you are working under uncertainty and committing to a structured process for resolving it. In traditional software development, many features are understood well enough that the requirement framing is appropriate. In AI feature development, almost nothing is understood well enough at the outset.
 
@@ -94,7 +94,7 @@ Why this is weak: "improve satisfaction" is not a behavioral outcome, "find what
 
 ---
 
-The pattern that separates strong from weak hypotheses is not confidence. It is specificity. A strong hypothesis makes a claim you could be wrong about and tells you how you would know.
+The pattern that separates strong from weak hypotheses is not confidence but specificity. A strong hypothesis makes a claim you could be wrong about and tells you how you would know.
 
 ## The 4 Validation Dimensions
 

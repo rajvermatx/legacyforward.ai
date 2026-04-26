@@ -24,7 +24,7 @@ It is in production. Three things will wake you up at 3am if you do not monitor 
 
 After running graph databases in production across multiple organizations, three categories of failure account for the vast majority of 3am pages:
 
-1. **Query latency spikes.** A query that ran in 200ms starts taking 15 seconds. Users see timeouts. The cause is usually an unindexed property lookup, a Cartesian product in a Cypher query, or a traversal that hit a supernode: a single node with 100,000 or more relationships.
+1. **Query latency spikes.** A query that ran in 200ms starts taking 15 seconds, and users see timeouts. The cause is usually an unindexed property lookup, a Cartesian product in a Cypher query, or a traversal that hit a supernode: a single node with 100,000 or more relationships.
 
 2. **Graph size growth.** The graph was designed for 1 million nodes. It now has 50 million because someone added a data source without considering cardinality. Memory is exhausted, queries slow to a crawl, and the page cache starts evicting.
 

@@ -153,7 +153,7 @@ What the chart does not show you is the vendor ecosystem that forms around each 
 
 Before decoding specific claims, it is worth understanding why vendor demonstrations are structurally misleading, not dishonestly, but by design.
 
-A vendor demo is a rehearsed performance. The vendor has spent weeks or months identifying inputs that produce the most impressive outputs, curating example data that makes the system look its best, and removing from the demo script any scenario where the system performs poorly. This is not fraud. It is marketing. But it creates a systematic gap between what you see in the demo room and what you will experience in production.
+A vendor demo is a rehearsed performance. The vendor has spent weeks or months identifying inputs that produce the most impressive outputs, curating example data that makes the system look its best, and removing from the demo script any scenario where the system performs poorly. This is not fraud but marketing — and it creates a systematic gap between what you see in the demo room and what you will experience in production.
 
 The demo environment also has none of the friction of your actual environment. It does not connect to your legacy CRM with its 47 custom fields. It does not comply with your data residency requirements. It uses perfectly formatted, complete, consistent data, nothing like the real data in your systems.
 

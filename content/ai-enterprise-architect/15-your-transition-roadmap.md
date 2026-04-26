@@ -23,7 +23,7 @@ We have spent fourteen chapters talking about technology, architecture patterns,
 
 You have been an Enterprise Architect, perhaps for years, perhaps for decades. You have designed systems that process millions of transactions, guided organizations through cloud migrations, and navigated the tangled politics of technology decisions in large, complex enterprises. You have earned your stripes. And now you are looking at a landscape that is shifting underneath your feet, wondering how to evolve your career so that you are not just relevant, but leading the charge.
 
-The good news is that you are not starting from zero. Not even close. The transition from Enterprise Architect to AI Enterprise Architect is not a career change. It is a career expansion. Think of it less like learning a new profession and more like a jazz musician picking up a new instrument. The theory of music is the same. The ear is already trained. You just need to learn where the keys are and practice until your fingers find them naturally.
+The good news is that you are not starting from zero, or anything close to it. The transition from Enterprise Architect to AI Enterprise Architect is not a career change. It is a career expansion. Think of it less like learning a new profession and more like a jazz musician picking up a new instrument. The theory of music is the same. The ear is already trained. You just need to learn where the keys are and practice until your fingers find them naturally.
 
 This chapter gives you a concrete, honest, and practical roadmap for making that transition. No hand-waving, no vague advice about “staying curious.” Just a plan you can start executing on Monday morning.
 
@@ -133,7 +133,7 @@ If you are wondering where to start building your coalition, begin with the data
 
 ### Pitfall 4: Over-Engineering the First Project
 
-Your instincts as an Enterprise Architect will tempt you to design a comprehensive, scalable, enterprise-grade AI platform for your first project. Resist that temptation. Your first AI project should be almost embarrassingly simple. An internal Q&A chatbot that answers questions about company documentation using RAG. A document classification system that routes incoming requests to the right department. A meeting summarization tool that saves people thirty minutes a day.
+Your instincts as an Enterprise Architect will tempt you to design a comprehensive, scalable, enterprise-grade AI platform for your first project. Resist that temptation — your first AI project should be almost embarrassingly simple. An internal Q&A chatbot that answers questions about company documentation using RAG. A document classification system that routes incoming requests to the right department. A meeting summarization tool that saves people thirty minutes a day.
 
 What your first project should not be is an AI-powered autonomous decision engine with multi-agent orchestration, real-time learning, and cross-domain knowledge synthesis. That project will take a year, consume enormous political capital, and probably fail: not because the technology is not ready, but because the organization is not ready for it yet.
 

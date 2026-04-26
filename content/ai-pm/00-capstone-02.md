@@ -14,8 +14,6 @@ badges:
 
 ## The Scenario
 
-
-![Diagram](/diagrams/ai-pm/capstone-02.svg)
 You are the PM for **Paragon**, a document management SaaS platform serving 3,200 paying customers. Your flagship AI feature — document analysis, which extracts key clauses, flags risks, and generates summaries for legal and procurement documents — launched six months ago.
 
 The pricing was set optimistically: unlimited document analysis is included in your $29/month Professional plan and your $89/month Business plan.
@@ -25,6 +23,8 @@ The VP of Finance sends you a message:
 > "Our AI infrastructure costs hit $47,000 last month. Professional plan revenue for the same period was $68,960 (2,378 customers × $29). After support, infrastructure overhead, and the $47K AI cost, Professional is operating at negative margin. We need to fix this."
 
 Your job: figure out what to do.
+
+![Diagram](/diagrams/ai-pm/capstone-02.svg)
 
 ---
 

@@ -16,11 +16,11 @@ badges:
 
 ## Why AI Features Need Different Operations
 
+Traditional software features fail in obvious ways. A server goes down and users cannot load the page. A bug causes the checkout flow to throw an error. A form field stops saving data. These failures are binary, detectable, and usually self-evident — your alerting fires, an engineer gets paged, and the failure is investigated and fixed.
 
 ![Diagram](/diagrams/ai-pm/ch11-1.svg)
-Traditional software features fail in obvious ways. A server goes down and users cannot load the page. A bug causes the checkout flow to throw an error. A form field stops saving data. These failures are binary, detectable, and usually self-evident. Your alerting fires. An engineer gets paged. The failure is investigated and fixed.
 
-AI features fail in subtle ways. The system is up. The API is responding. The feature is loading perfectly. But the outputs have gotten worse, gradually and quietly, without anyone noticing, and users have started to silently disengage. No alert fires. No engineer gets paged. The product just slowly becomes less useful, and by the time you notice, you have lost months of user trust.
+AI features fail in subtle ways. The system is up, the API is responding, and the feature is loading perfectly — but the outputs have gotten worse, gradually and quietly, without anyone noticing, and users have started to silently disengage. No alert fires and no engineer gets paged. The product just slowly becomes less useful, and by the time you notice, you have lost months of user trust.
 
 And then, if the feature succeeds: the costs report comes in, and someone in finance sends a message: "We need to talk about the AI line item." Usage grew. But AI cost does not scale like database storage or CDN bandwidth. It scales differently, often faster, with different breakpoints, and with surprises that traditional infrastructure scaling never produced.
 
