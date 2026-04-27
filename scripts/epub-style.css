@@ -32,9 +32,10 @@ div.rights {
 }
 
 /* ── TOC ────────────────────────────────────────────────────────────── */
-/* Hide the pandoc-generated number span inside TOC links — the <ol>
-   already provides list counters, so the span causes double-numbering */
-nav#toc .section-header-number {
+/* Hide chapter-level number spans in the TOC — the <ol> already provides
+   list counters so top-level spans cause double-numbering ("1. 1 Title").
+   Section-level spans (1.1, 1.2…) are kept visible. */
+nav#toc > ol > li > a .section-header-number {
   display: none;
 }
 
