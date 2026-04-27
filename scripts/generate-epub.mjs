@@ -25,6 +25,13 @@ if (!existsSync(CONTENT_DIR)) {
   process.exit(1);
 }
 
+// Books whose H2 headings are already numbered in the markdown (e.g. "## 1.1 Title").
+// For these: suppress --number-sections to avoid double-numbering, and keep TOC at depth 1.
+const PRE_NUMBERED_BOOKS = new Set(['agenticai', 'graph-ai', 'llm-ba-qa', 'ai-enterprise-architect', 'ai-pm']);
+
+const numberSections = !PRE_NUMBERED_BOOKS.has(section);
+const tocDepth = PRE_NUMBERED_BOOKS.has(section) ? 1 : 2;
+
 const TEMP_DIR = join(ROOT, `.epub-tmp-${section}`);
 const OUTPUT_DIR = join(ROOT, 'public', 'books', 'epub');
 const OUTPUT = join(OUTPUT_DIR, `${section}.epub`);
@@ -71,6 +78,8 @@ mkdirSync(TEMP_DIR, { recursive: true });
 
 const orderedFiles = getOrderedFiles();
 console.log(`\nGenerating EPUB for: ${section} (${orderedFiles.length} files)`);
+console.log(`  Chapter numbering: ${numberSections ? 'auto' : 'pre-numbered in source'}`);
+console.log(`  TOC depth: ${tocDepth}`);
 console.log('Processing chapters...');
 
 const tempFiles = [];
@@ -108,9 +117,9 @@ const cmd = [
   `--output "${OUTPUT}"`,
   coverFlag,
   `--css "${CSS}"`,
-  '--number-sections',
+  numberSections ? '--number-sections' : '',
   '--toc',
-  '--toc-depth=2',
+  `--toc-depth=${tocDepth}`,
   '--split-level=1',
 ].filter(Boolean).join(' \\\n  ');
 

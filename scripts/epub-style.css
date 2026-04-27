@@ -1,7 +1,37 @@
 /* LegacyForward.ai — Professional EPUB Stylesheet
    O'Reilly/Manning style: serif body, sans-serif headings, navy accent */
 
-/* Body */
+/* ── Title page ─────────────────────────────────────────────────────── */
+section.titlepage {
+  text-align: center;
+  padding: 4em 1em;
+}
+
+h1.title {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #1e3a5f;
+  border: none;
+  margin: 0 0 0.6em 0;
+  page-break-before: avoid;
+}
+
+p.author {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1em;
+  color: #4a5568;
+  margin: 0.3em 0;
+}
+
+div.rights {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85em;
+  color: #718096;
+  margin-top: 3em;
+}
+
+/* ── Body ───────────────────────────────────────────────────────────── */
 body {
   font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
   font-size: 1em;
@@ -9,30 +39,25 @@ body {
   margin: 0 1.5em;
 }
 
-/* Chapter title (H1) */
+/* ── Chapter title (H1) ─────────────────────────────────────────────── */
 h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 1.8em;
   font-weight: 700;
-  margin-top: 3em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em;
-  page-break-before: always;
   border-bottom: 2px solid #1e3a5f;
   padding-bottom: 0.3em;
   color: #1e3a5f;
 }
 
-h1:first-of-type {
-  page-break-before: avoid;
-}
-
-/* Chapter number — pandoc wraps it in .header-section-number */
+/* Chapter number — pandoc wraps in .header-section-number */
 h1 .header-section-number {
   color: #4a6fa5;
   margin-right: 0.4em;
 }
 
-/* Section headings */
+/* ── Section headings ───────────────────────────────────────────────── */
 h2 {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 1.35em;
@@ -65,14 +90,14 @@ h4 {
   color: #4a5568;
 }
 
-/* Paragraphs */
+/* ── Paragraphs ─────────────────────────────────────────────────────── */
 p {
   margin-top: 0;
   margin-bottom: 0.8em;
   text-align: left;
 }
 
-/* Blockquotes */
+/* ── Blockquotes ────────────────────────────────────────────────────── */
 blockquote {
   border-left: 3px solid #cbd5e0;
   padding-left: 1em;
@@ -81,7 +106,7 @@ blockquote {
   font-style: italic;
 }
 
-/* Lists */
+/* ── Lists ──────────────────────────────────────────────────────────── */
 ul, ol {
   margin: 0.5em 0 0.8em 0;
   padding-left: 1.5em;
@@ -91,7 +116,7 @@ li {
   margin-bottom: 0.3em;
 }
 
-/* Inline code */
+/* ── Code ───────────────────────────────────────────────────────────── */
 code {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.9em;
@@ -100,7 +125,6 @@ code {
   border-radius: 3px;
 }
 
-/* Code blocks */
 pre {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.85em;
@@ -119,7 +143,7 @@ pre code {
   font-size: 1em;
 }
 
-/* Tables */
+/* ── Tables ─────────────────────────────────────────────────────────── */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -146,7 +170,7 @@ tr:nth-child(even) td {
   background: #f7fafc;
 }
 
-/* Images (diagrams) */
+/* ── Images ─────────────────────────────────────────────────────────── */
 img {
   max-width: 100%;
   height: auto;
@@ -154,20 +178,32 @@ img {
   margin: 1.5em auto;
 }
 
-/* Horizontal rule — used between sections */
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85em;
+  color: #718096;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* ── Rules ──────────────────────────────────────────────────────────── */
 hr {
   border: none;
   border-top: 1px solid #e2e8f0;
   margin: 2em 0;
 }
 
-/* Strong / bold */
+/* ── Inline ─────────────────────────────────────────────────────────── */
 strong {
   font-weight: 700;
   color: #1a202c;
 }
 
-/* Emphasis */
 em {
   font-style: italic;
 }
