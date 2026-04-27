@@ -32,8 +32,8 @@ div.rights {
 }
 
 /* ── TOC ────────────────────────────────────────────────────────────── */
-/* TOC: suppress all <ol> list counters — numbering comes from the
-   .section-header-number spans that pandoc embeds in each link */
+/* TOC: suppress <ol> list counters — numbering comes entirely from the
+   .section-header-number spans pandoc embeds in each link */
 nav#toc ol {
   list-style: none;
   padding-left: 1em;
@@ -41,11 +41,6 @@ nav#toc ol {
 }
 nav#toc > ol {
   padding-left: 0;
-}
-/* Hide the top-level chapter number span — the chapter title alone is
-   enough at that level; sections below show 1.1, 1.2 etc. from their spans */
-nav#toc > ol > li > a .section-header-number {
-  display: none;
 }
 
 /* ── Body ───────────────────────────────────────────────────────────── */
