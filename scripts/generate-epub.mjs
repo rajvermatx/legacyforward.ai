@@ -98,6 +98,7 @@ for (const filename of orderedFiles) {
 
 // Build Pandoc command
 const coverFlag = existsSync(COVER) ? `--epub-cover-image="${COVER}"` : '';
+const CSS = join(ROOT, 'scripts', 'epub-style.css');
 const fileArgs = tempFiles.map(f => `"${f}"`).join(' \\\n  ');
 
 const cmd = [
@@ -106,8 +107,10 @@ const cmd = [
   fileArgs,
   `--output "${OUTPUT}"`,
   coverFlag,
+  `--css "${CSS}"`,
+  '--number-sections',
   '--toc',
-  '--toc-depth=1',
+  '--toc-depth=2',
   '--split-level=1',
 ].filter(Boolean).join(' \\\n  ');
 
