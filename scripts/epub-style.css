@@ -31,6 +31,13 @@ div.rights {
   margin-top: 3em;
 }
 
+/* ── TOC ────────────────────────────────────────────────────────────── */
+/* Hide the pandoc-generated number span inside TOC links — the <ol>
+   already provides list counters, so the span causes double-numbering */
+nav#toc .section-header-number {
+  display: none;
+}
+
 /* ── Body ───────────────────────────────────────────────────────────── */
 body {
   font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;
@@ -53,7 +60,7 @@ h1 {
 
 /* Chapter number — pandoc wraps in .header-section-number */
 h1 .header-section-number {
-  color: #4a6fa5;
+  color: #1e3a5f;
   margin-right: 0.4em;
 }
 
