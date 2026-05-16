@@ -47,6 +47,10 @@ Paragraphs and documents are also complete semantic units, but they are composit
 
 3. *Intra-sentence structure is not preserved.* SONAR produces one embedding per sentence, not one embedding per word or per token. If your task requires reasoning about the internal structure of a sentence — which word is the subject, which clause is the condition — SONAR does not help. Tasks requiring syntactic analysis or token-level reasoning belong with LLMs.
 
+![SONAR Concept Space — cross-lingual semantic clustering across 200 languages](/diagrams/large-concept-models/ch03-sonar-concept-space.svg)
+
+*Figure 3.1 — SONAR's concept space shown as a 2D projection. Semantically equivalent sentences in English, French, German, and Japanese cluster as neighbors. Semantically different concepts (Payment Obligation vs. Force Majeure) are spatially separated by their semantic distance.*
+
 ## 3.3 Cross-Lingual Alignment in Practice
 
 The claim that SONAR produces cross-lingually aligned embeddings is easy to state and worth verifying empirically before building production systems on it. Here is what alignment means in practice and how to measure it.

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340">
+  <defs>
+    <marker id="arr-main" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#14b8a6"/>
+    </marker>
+    <marker id="arr-violet" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="340" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">THE LARGE CONCEPT MODEL PIPELINE</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">Reasoning happens in concept space — tokens only appear at input and output</text>
+
+  <!-- ── Stage 1: Input Text ── -->
+  <rect x="32" y="78" width="148" height="84" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="106" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">INPUT TEXT</text>
+  <text x="106" y="118" text-anchor="middle" font-size="20">📄</text>
+  <text x="106" y="144" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Any language</text>
+  <text x="106" y="158" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Any length</text>
+
+  <!-- Arrow 1 -->
+  <line x1="182" y1="120" x2="218" y2="120" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-main)"/>
+
+  <!-- ── Stage 2: SONAR Encoder ── -->
+  <rect x="220" y="68" width="148" height="104" rx="10" fill="#ecfeff" stroke="#06b6d4" stroke-width="2"/>
+  <text x="294" y="90" text-anchor="middle" font-size="10" font-weight="700" fill="#0891b2" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">SONAR ENCODER</text>
+  <text x="294" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#0e7490" font-family="Space Grotesk, sans-serif">Sentence → Vector</text>
+  <text x="294" y="126" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">200 languages unified</text>
+  <text x="294" y="142" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">into shared concept space</text>
+  <text x="294" y="160" text-anchor="middle" font-size="10" fill="#0891b2" font-family="Nunito, sans-serif">1,024-dim embeddings</text>
+
+  <!-- Arrow 2 — into concept space -->
+  <line x1="370" y1="120" x2="406" y2="120" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-violet)"/>
+
+  <!-- ── Stage 3: Concept Space ── -->
+  <rect x="408" y="58" width="168" height="124" rx="10" fill="#f5f3ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="492" y="80" text-anchor="middle" font-size="10" font-weight="700" fill="#7c3aed" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">CONCEPT MODEL</text>
+  <text x="492" y="98" text-anchor="middle" font-size="11" font-weight="600" fill="#6d28d9" font-family="Space Grotesk, sans-serif">Reasoning in vector space</text>
+  <!-- dots suggesting embeddings -->
+  <circle cx="452" cy="120" r="5" fill="#a855f7" opacity="0.7"/>
+  <circle cx="472" cy="112" r="4" fill="#a855f7" opacity="0.5"/>
+  <circle cx="490" cy="128" r="6" fill="#7c3aed" opacity="0.8"/>
+  <circle cx="512" cy="114" r="4" fill="#a855f7" opacity="0.5"/>
+  <circle cx="530" cy="122" r="5" fill="#a855f7" opacity="0.7"/>
+  <circle cx="465" cy="135" r="3" fill="#c4b5fd" opacity="0.6"/>
+  <circle cx="500" cy="108" r="3" fill="#c4b5fd" opacity="0.6"/>
+  <circle cx="520" cy="136" r="3" fill="#c4b5fd" opacity="0.6"/>
+  <text x="492" y="160" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">No tokens. No language.</text>
+  <text x="492" y="174" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Pure semantic geometry.</text>
+
+  <!-- Arrow 3 — out of concept space -->
+  <line x1="578" y1="120" x2="614" y2="120" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arr-teal)"/>
+
+  <!-- ── Stage 4: SONAR Decoder ── -->
+  <rect x="616" y="68" width="148" height="104" rx="10" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2"/>
+  <text x="690" y="90" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">SONAR DECODER</text>
+  <text x="690" y="108" text-anchor="middle" font-size="11" font-weight="600" fill="#0f766e" font-family="Space Grotesk, sans-serif">Vector → Sentence</text>
+  <text x="690" y="126" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Target language chosen</text>
+  <text x="690" y="142" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">at decode time — not</text>
+  <text x="690" y="158" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">constrained by input</text>
+
+  <!-- Arrow 4 -->
+  <line x1="766" y1="120" x2="802" y2="120" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-main)"/>
+
+  <!-- ── Stage 5: Output ── -->
+  <rect x="804" y="78" width="82" height="84" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="845" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">OUTPUT</text>
+  <text x="845" y="118" text-anchor="middle" font-size="20">📝</text>
+  <text x="845" y="144" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Any language</text>
+  <text x="845" y="158" text-anchor="middle" font-size="10" fill="#22c55e" font-family="Nunito, sans-serif" font-weight="600">Coherent</text>
+
+  <!-- ── Enterprise Analogues Row ── -->
+  <rect x="32" y="200" width="852" height="62" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="220" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="2">ENTERPRISE ANALOGUES</text>
+
+  <!-- ETL -->
+  <rect x="220" y="227" width="148" height="24" rx="4" fill="#ecfeff" stroke="#06b6d4" stroke-width="1"/>
+  <text x="294" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#0891b2" font-family="Space Grotesk, sans-serif">ETL Layer</text>
+
+  <!-- Data Warehouse -->
+  <rect x="408" y="227" width="168" height="24" rx="4" fill="#f5f3ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="492" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#7c3aed" font-family="Space Grotesk, sans-serif">Semantic Data Warehouse</text>
+
+  <!-- Reporting -->
+  <rect x="616" y="227" width="148" height="24" rx="4" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1"/>
+  <text x="690" y="243" text-anchor="middle" font-size="10" font-weight="600" fill="#0f766e" font-family="Space Grotesk, sans-serif">Reporting Layer</text>
+
+  <!-- ── Key Insight ── -->
+  <rect x="32" y="279" width="852" height="44" rx="8" fill="#0f172a"/>
+  <text x="450" y="297" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">KEY INSIGHT</text>
+  <text x="450" y="313" text-anchor="middle" font-size="11" fill="#94a3b8" font-family="Nunito, sans-serif">Between encoding and decoding, no tokens exist. Language is a rendering decision, not a reasoning constraint.</text>
+</svg>

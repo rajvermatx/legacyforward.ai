@@ -22,6 +22,10 @@ This chapter puts the two architectures side by side with the rigor of an infras
 - Apply the Task Unit Test as a structured decision tool
 - Identify the boundary conditions where the choice between LLMs and LCMs is genuinely ambiguous
 
+![LLM vs. LCM — Architectural Comparison](/diagrams/large-concept-models/ch05-llm-vs-lcm.svg)
+
+*Figure 5.1 — Side-by-side architectural comparison. Same transformer foundation, different representational unit. LLM weaknesses (red) map directly to LCM strengths (green) for concept-level tasks.*
+
 ## 5.1 Input Representation
 
 The first architectural difference is how the two systems represent their inputs.

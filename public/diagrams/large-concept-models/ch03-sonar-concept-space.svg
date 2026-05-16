@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+  <defs>
+    <marker id="arr-sm" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="360" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">SONAR CONCEPT SPACE — CROSS-LINGUAL ALIGNMENT</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">Semantically equivalent sentences cluster together regardless of language</text>
+
+  <!-- Concept space background -->
+  <rect x="32" y="64" width="570" height="264" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="317" y="84" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="2">1,024-DIMENSIONAL CONCEPT SPACE (2D PROJECTION)</text>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="42" y1="160" x2="592" y2="160" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="42" y1="220" x2="592" y2="220" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="42" y1="280" x2="592" y2="280" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="160" y1="74" x2="160" y2="318" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="317" y1="74" x2="317" y2="318" stroke="#f1f5f9" stroke-width="1"/>
+  <line x1="474" y1="74" x2="474" y2="318" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- ── Cluster 1: Payment obligation ── -->
+  <!-- cluster halo -->
+  <circle cx="148" cy="148" r="46" fill="#fef9c3" opacity="0.5"/>
+  <text x="148" y="96" text-anchor="middle" font-size="9" font-weight="700" fill="#92400e" font-family="Space Grotesk, sans-serif" letter-spacing="1">PAYMENT OBLIGATION</text>
+
+  <!-- EN dot -->
+  <circle cx="140" cy="138" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="140" y="141" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">EN</text>
+  <!-- FR dot -->
+  <circle cx="162" cy="128" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <text x="162" y="131" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">FR</text>
+  <!-- DE dot -->
+  <circle cx="135" cy="156" r="9" fill="#22c55e" stroke="#ffffff" stroke-width="2"/>
+  <text x="135" y="159" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">DE</text>
+  <!-- JA dot -->
+  <circle cx="160" cy="153" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+  <text x="160" y="156" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">JA</text>
+
+  <!-- mini quote EN -->
+  <text x="60" y="116" font-size="8.5" fill="#475569" font-family="Nunito, sans-serif" font-style="italic">"Payment is due within 30 days"</text>
+  <!-- mini quote FR -->
+  <text x="60" y="104" font-size="8.5" fill="#475569" font-family="Nunito, sans-serif" font-style="italic">"Le paiement est dû dans 30 jours"</text>
+
+  <!-- ── Cluster 2: Non-compete clause ── -->
+  <circle cx="430" cy="135" r="46" fill="#f0fdf4" opacity="0.6"/>
+  <text x="430" y="83" text-anchor="middle" font-size="9" font-weight="700" fill="#166534" font-family="Space Grotesk, sans-serif" letter-spacing="1">NON-COMPETE CLAUSE</text>
+
+  <circle cx="420" cy="124" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="420" y="127" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">EN</text>
+  <circle cx="442" cy="118" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <text x="442" y="121" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">FR</text>
+  <circle cx="416" cy="142" r="9" fill="#22c55e" stroke="#ffffff" stroke-width="2"/>
+  <text x="416" y="145" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">DE</text>
+  <circle cx="438" cy="146" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+  <text x="438" y="149" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">JA</text>
+
+  <!-- ── Cluster 3: Revenue reporting ── -->
+  <circle cx="250" cy="260" r="44" fill="#f5f3ff" opacity="0.6"/>
+  <text x="250" y="212" text-anchor="middle" font-size="9" font-weight="700" fill="#5b21b6" font-family="Space Grotesk, sans-serif" letter-spacing="1">REVENUE REPORTING</text>
+
+  <circle cx="240" cy="250" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="240" y="253" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">EN</text>
+  <circle cx="260" cy="243" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <text x="260" y="246" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">FR</text>
+  <circle cx="238" cy="267" r="9" fill="#22c55e" stroke="#ffffff" stroke-width="2"/>
+  <text x="238" y="270" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">DE</text>
+  <circle cx="262" cy="268" r="9" fill="#ef4444" stroke="#ffffff" stroke-width="2"/>
+  <text x="262" y="271" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">JA</text>
+
+  <!-- ── Cluster 4: Force majeure (distant from cluster 1) ── -->
+  <circle cx="500" cy="270" r="40" fill="#ecfeff" opacity="0.6"/>
+  <text x="500" y="224" text-anchor="middle" font-size="9" font-weight="700" fill="#0e7490" font-family="Space Grotesk, sans-serif" letter-spacing="1">FORCE MAJEURE</text>
+
+  <circle cx="490" cy="260" r="9" fill="#f59e0b" stroke="#ffffff" stroke-width="2"/>
+  <text x="490" y="263" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">EN</text>
+  <circle cx="512" cy="256" r="9" fill="#3b82f6" stroke="#ffffff" stroke-width="2"/>
+  <text x="512" y="259" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">FR</text>
+  <circle cx="492" cy="278" r="9" fill="#22c55e" stroke="#ffffff" stroke-width="2"/>
+  <text x="492" y="281" text-anchor="middle" font-size="7" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">DE</text>
+
+  <!-- Distance annotation between cluster 1 and 4 -->
+  <line x1="194" y1="158" x2="464" y2="258" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr-sm)"/>
+  <text x="330" y="196" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif" transform="rotate(-20, 330, 196)">semantic distance</text>
+
+  <!-- ── Legend ── -->
+  <rect x="614" y="64" width="254" height="264" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="741" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif">HOW SONAR WORKS</text>
+
+  <!-- Language legend -->
+  <text x="634" y="110" font-size="10" font-weight="700" fill="#475569" font-family="Space Grotesk, sans-serif">Language color codes:</text>
+  <circle cx="644" cy="126" r="7" fill="#f59e0b"/>
+  <text x="658" y="130" font-size="10" fill="#475569" font-family="Nunito, sans-serif">English</text>
+  <circle cx="714" cy="126" r="7" fill="#3b82f6"/>
+  <text x="728" y="130" font-size="10" fill="#475569" font-family="Nunito, sans-serif">French</text>
+  <circle cx="644" cy="144" r="7" fill="#22c55e"/>
+  <text x="658" y="148" font-size="10" fill="#475569" font-family="Nunito, sans-serif">German</text>
+  <circle cx="714" cy="144" r="7" fill="#ef4444"/>
+  <text x="728" y="148" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Japanese</text>
+
+  <!-- Divider -->
+  <line x1="630" y1="160" x2="858" y2="160" stroke="#f1f5f9" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="630" y="170" width="24" height="24" rx="12" fill="#a855f7"/>
+  <text x="642" y="186" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">1</text>
+  <text x="664" y="179" font-size="10" font-weight="600" fill="#0f172a" font-family="Space Grotesk, sans-serif">Encode sentence</text>
+  <text x="664" y="192" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">SONAR maps any language</text>
+  <text x="664" y="204" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">to a 1,024-dim vector</text>
+
+  <!-- Step 2 -->
+  <rect x="630" y="218" width="24" height="24" rx="12" fill="#a855f7"/>
+  <text x="642" y="234" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">2</text>
+  <text x="664" y="227" font-size="10" font-weight="600" fill="#0f172a" font-family="Space Grotesk, sans-serif">Same meaning = same region</text>
+  <text x="664" y="240" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">EN/FR/DE/JA equivalents</text>
+  <text x="664" y="252" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">cluster as neighbors</text>
+
+  <!-- Step 3 -->
+  <rect x="630" y="266" width="24" height="24" rx="12" fill="#a855f7"/>
+  <text x="642" y="282" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">3</text>
+  <text x="664" y="275" font-size="10" font-weight="600" fill="#0f172a" font-family="Space Grotesk, sans-serif">Different meaning = distance</text>
+  <text x="664" y="288" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">Clusters are separated by</text>
+  <text x="664" y="300" font-size="9.5" fill="#64748b" font-family="Nunito, sans-serif">semantic dissimilarity</text>
+
+  <!-- ── Key stat ── -->
+  <rect x="614" y="340" width="254" height="0" rx="0" fill="none"/>
+
+  <!-- Bottom bar -->
+  <rect x="32" y="334" width="836" height="14" rx="4" fill="#0f172a" opacity="0"/>
+  <text x="450" y="350" text-anchor="middle" font-size="10" fill="#64748b" font-family="Nunito, sans-serif">200 languages share one concept space — no translation required between encoding and reasoning</text>
+</svg>

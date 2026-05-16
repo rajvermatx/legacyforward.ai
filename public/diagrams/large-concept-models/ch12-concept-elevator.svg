@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <marker id="arr-dk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr-vio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#14b8a6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="380" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">HYBRID PATTERN 2 — CONCEPT ELEVATOR</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">LLM manages conversation — LCM handles heavy reasoning — LLM surfaces results naturally</text>
+
+  <!-- Layer labels (left margin) -->
+  <text x="22" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" transform="rotate(-90, 22, 120)" letter-spacing="2">TOKEN LAYER</text>
+  <text x="22" y="220" text-anchor="middle" font-size="9" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" transform="rotate(-90, 22, 220)" letter-spacing="2">CONCEPT LAYER</text>
+
+  <!-- ── LLM Conversation Manager ── -->
+  <rect x="40" y="72" width="170" height="96" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="125" y="94" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="0.5">LLM CONV. MANAGER</text>
+  <text x="125" y="112" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Parses user intent</text>
+  <text x="125" y="126" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Extracts query sentences</text>
+  <text x="125" y="140" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Manages turn history</text>
+  <text x="125" y="158" text-anchor="middle" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif" font-style="italic">Stays at token level</text>
+
+  <!-- Down arrow: LLM → Elevator -->
+  <line x1="125" y1="170" x2="125" y2="198" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <text x="140" y="186" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif">elevate</text>
+
+  <!-- ── Concept Elevator ── -->
+  <rect x="40" y="200" width="170" height="72" rx="10" fill="#f5f3ff" stroke="#a855f7" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="125" y="222" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="0.5">CONCEPT ELEVATOR</text>
+  <text x="125" y="240" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">SONAR encode query</text>
+  <text x="125" y="254" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">→ concept vectors</text>
+  <text x="125" y="264" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif" font-style="italic">Interface between layers</text>
+
+  <!-- Arrow right: Elevator → LCM Core -->
+  <line x1="212" y1="236" x2="270" y2="236" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+
+  <!-- ── LCM Reasoning Core ── -->
+  <rect x="272" y="190" width="200" height="116" rx="10" fill="#f5f3ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="372" y="212" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="0.5">LCM REASONING CORE</text>
+  <text x="372" y="230" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Semantic similarity search</text>
+  <text x="372" y="244" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Contradiction detection</text>
+  <text x="372" y="258" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Multi-doc synthesis</text>
+  <text x="372" y="272" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Global coherence check</text>
+  <text x="372" y="292" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif" font-style="italic">Pure concept space — no tokens</text>
+
+  <!-- Arrow right: LCM → Concept Descender -->
+  <line x1="474" y1="236" x2="534" y2="236" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+
+  <!-- ── Concept Descender ── -->
+  <rect x="536" y="200" width="170" height="72" rx="10" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="621" y="222" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="0.5">CONCEPT DESCENDER</text>
+  <text x="621" y="240" text-anchor="middle" font-size="10" fill="#0f766e" font-family="Nunito, sans-serif">SONAR decode result</text>
+  <text x="621" y="254" text-anchor="middle" font-size="10" fill="#0f766e" font-family="Nunito, sans-serif">→ natural language</text>
+  <text x="621" y="264" text-anchor="middle" font-size="9" fill="#14b8a6" font-family="Nunito, sans-serif" font-style="italic">Back to token surface</text>
+
+  <!-- Up arrow: Descender → LLM Polisher -->
+  <line x1="621" y1="198" x2="621" y2="170" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arr-teal)"/>
+  <text x="636" y="187" font-size="9" fill="#14b8a6" font-family="Nunito, sans-serif">lower</text>
+
+  <!-- ── LLM Polisher ── -->
+  <rect x="536" y="72" width="170" height="96" rx="10" fill="#f0fdfa" stroke="#14b8a6" stroke-width="2"/>
+  <text x="621" y="94" text-anchor="middle" font-size="10" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="0.5">LLM POLISHER</text>
+  <text x="621" y="112" text-anchor="middle" font-size="10" fill="#0f766e" font-family="Nunito, sans-serif">Adds conversational tone</text>
+  <text x="621" y="126" text-anchor="middle" font-size="10" fill="#0f766e" font-family="Nunito, sans-serif">Formats for user context</text>
+  <text x="621" y="140" text-anchor="middle" font-size="10" fill="#0f766e" font-family="Nunito, sans-serif">Cites sources</text>
+  <text x="621" y="158" text-anchor="middle" font-size="9" fill="#14b8a6" font-family="Nunito, sans-serif" font-style="italic">Human-facing language</text>
+
+  <!-- Arrow → Final Output -->
+  <line x1="708" y1="120" x2="748" y2="120" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-dk)"/>
+
+  <!-- ── Output ── -->
+  <rect x="750" y="88" width="120" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="810" y="112" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Space Grotesk, sans-serif" letter-spacing="1">RESPONSE</text>
+  <text x="810" y="130" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Coherent answer</text>
+  <text x="810" y="144" text-anchor="middle" font-size="9" fill="#22c55e" font-family="Nunito, sans-serif" font-weight="600">LCM-quality reasoning</text>
+
+  <!-- Divider line between token/concept layers -->
+  <line x1="40" y1="188" x2="860" y2="188" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="860" y="186" text-anchor="end" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">token / concept boundary</text>
+
+  <!-- ── Bottom characteristics ── -->
+  <rect x="40" y="300" width="820" height="60" rx="8" fill="#0f172a"/>
+  <text x="450" y="320" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">PATTERN CHARACTERISTICS</text>
+
+  <text x="60" y="344" font-size="10" fill="#22c55e" font-family="Nunito, sans-serif" font-weight="600">Best for:</text>
+  <text x="110" y="344" font-size="10" fill="#94a3b8" font-family="Nunito, sans-serif">Interactive Q&amp;A over large corpora — user sees chat, LCM does the reasoning</text>
+
+  <text x="60" y="356" font-size="10" fill="#ef4444" font-family="Nunito, sans-serif" font-weight="600">Risk:</text>
+  <text x="92" y="356" font-size="10" fill="#94a3b8" font-family="Nunito, sans-serif">Elevator/Descender latency adds 200–400ms — user-facing response times require caching</text>
+</svg>

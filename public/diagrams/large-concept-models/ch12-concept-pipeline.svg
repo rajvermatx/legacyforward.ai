@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+  <defs>
+    <marker id="arr-dk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arr-vio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="360" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">HYBRID PATTERN 3 — CONCEPT PIPELINE</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">LCM batch-processes documents offline — LLM serves interactive Q&amp;A against pre-reasoned output</text>
+
+  <!-- ── Offline Batch: LCM ── -->
+  <!-- Outer container -->
+  <rect x="32" y="68" width="490" height="172" rx="10" fill="#f5f3ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="277" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">OFFLINE BATCH — LCM STAGE (runs nightly / on-demand)</text>
+
+  <!-- Step 1: Document corpus -->
+  <rect x="48" y="100" width="130" height="126" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="113" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1">DOC CORPUS</text>
+  <text x="113" y="137" text-anchor="middle" font-size="22">📚</text>
+  <text x="113" y="162" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Contracts, filings,</text>
+  <text x="113" y="176" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">regulations, reports</text>
+  <text x="113" y="196" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Any language</text>
+  <text x="113" y="210" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Any volume</text>
+
+  <!-- Arrow 1 -->
+  <line x1="180" y1="163" x2="212" y2="163" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+
+  <!-- Step 2: LCM Analysis -->
+  <rect x="214" y="100" width="138" height="126" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="283" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1">LCM ANALYSIS</text>
+  <text x="283" y="138" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">SONAR encode all</text>
+  <text x="283" y="152" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Cluster by concept</text>
+  <text x="283" y="166" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Detect conflicts</text>
+  <text x="283" y="180" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Score coherence</text>
+  <text x="283" y="196" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif">No context window</text>
+  <text x="283" y="210" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif">constraint</text>
+
+  <!-- Arrow 2 -->
+  <line x1="354" y1="163" x2="386" y2="163" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+
+  <!-- Step 3: Structured report -->
+  <rect x="388" y="100" width="118" height="126" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="447" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1">STRUCTURED</text>
+  <text x="447" y="132" text-anchor="middle" font-size="9" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1">REPORT</text>
+  <text x="447" y="150" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Concept clusters</text>
+  <text x="447" y="164" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Conflict index</text>
+  <text x="447" y="178" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Summary vectors</text>
+  <text x="447" y="194" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif">Stored in vector DB</text>
+  <text x="447" y="208" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif">+ metadata store</text>
+
+  <!-- Bridge arrow -->
+  <line x1="524" y1="163" x2="556" y2="163" stroke="#475569" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-dk)"/>
+  <text x="540" y="152" text-anchor="middle" font-size="8" fill="#94a3b8" font-family="Nunito, sans-serif">pre-computed</text>
+  <text x="540" y="173" text-anchor="middle" font-size="8" fill="#94a3b8" font-family="Nunito, sans-serif">handoff</text>
+
+  <!-- ── Online Interactive: LLM ── -->
+  <rect x="558" y="68" width="310" height="172" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="713" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">ONLINE INTERACTIVE — LLM STAGE (real-time)</text>
+
+  <!-- User query -->
+  <rect x="574" y="100" width="118" height="126" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="633" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="1">USER QUERY</text>
+  <text x="633" y="138" text-anchor="middle" font-size="20">💬</text>
+  <text x="633" y="162" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">"What conflicts</text>
+  <text x="633" y="176" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">exist between</text>
+  <text x="633" y="190" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">EU and US rules?"</text>
+
+  <!-- Arrow into LLM Q&A -->
+  <line x1="694" y1="163" x2="716" y2="163" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+
+  <!-- LLM interactive -->
+  <rect x="718" y="100" width="136" height="126" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="786" y="120" text-anchor="middle" font-size="9" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="1">LLM Q&amp;A</text>
+  <text x="786" y="138" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Retrieves relevant</text>
+  <text x="786" y="152" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">LCM output chunks</text>
+  <text x="786" y="166" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Generates answer</text>
+  <text x="786" y="180" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">in natural language</text>
+  <text x="786" y="196" text-anchor="middle" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif">Fast — pre-computed</text>
+  <text x="786" y="210" text-anchor="middle" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif">context available</text>
+
+  <!-- ── Bottom characteristics ── -->
+  <rect x="32" y="258" width="836" height="82" rx="8" fill="#0f172a"/>
+  <text x="450" y="278" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">PATTERN CHARACTERISTICS</text>
+
+  <rect x="52" y="286" width="244" height="44" rx="5" fill="#a855f7" opacity="0.15" stroke="#a855f7" stroke-width="1"/>
+  <text x="174" y="303" text-anchor="middle" font-size="9" font-weight="700" fill="#d8b4fe" font-family="Space Grotesk, sans-serif">BEST FOR</text>
+  <text x="174" y="318" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Large static corpora queried repeatedly</text>
+  <text x="174" y="330" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">(legal, compliance, policy, research)</text>
+
+  <rect x="312" y="286" width="244" height="44" rx="5" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+  <text x="434" y="303" text-anchor="middle" font-size="9" font-weight="700" fill="#fca5a5" font-family="Space Grotesk, sans-serif">TRADE-OFF</text>
+  <text x="434" y="318" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">LCM batch run must precede queries</text>
+  <text x="434" y="330" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Stale if corpus updates frequently</text>
+
+  <rect x="572" y="286" width="276" height="44" rx="5" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <text x="710" y="303" text-anchor="middle" font-size="9" font-weight="700" fill="#86efac" font-family="Space Grotesk, sans-serif">ADVANTAGE</text>
+  <text x="710" y="318" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Interactive latency is LLM-only (fast)</text>
+  <text x="710" y="330" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">LCM cost amortized across all queries</text>
+</svg>

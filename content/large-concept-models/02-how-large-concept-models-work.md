@@ -25,6 +25,10 @@ This chapter builds that mental model. By the end, you will be able to explain h
 
 ## 2.1 The Three-Component Pipeline
 
+![The Large Concept Model Pipeline — SONAR encoder, concept model, SONAR decoder](/diagrams/large-concept-models/ch02-lcm-pipeline.svg)
+
+*Figure 2.1 — The LCM pipeline. Tokens appear only at input and output; all reasoning happens in concept space. The enterprise analogue maps directly to ETL → data warehouse → reporting layer.*
+
 A Large Concept Model is a pipeline with three stages. Meta AI's foundational 2024 paper introduced this architecture as a response to the limitations of token-level generation on tasks that require long-form coherence and cross-lingual reasoning.
 
 **Stage 1: The concept encoder.** The encoder takes raw text — a sentence, a paragraph, a document — and converts it into a dense, fixed-size vector in concept space. This vector is called a concept embedding. It encodes the meaning of the input, not its surface form. The encoder is a pretrained model called SONAR (covered in depth in Chapter 3). SONAR was trained on 200 languages, which means its concept space is shared across languages: an English sentence and its French translation produce concept embeddings that are close neighbors in concept space, not distant strangers.

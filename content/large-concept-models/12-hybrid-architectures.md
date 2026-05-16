@@ -35,6 +35,10 @@ The three patterns differ in where the LLM-LCM boundary sits and what crosses th
 
 ## 12.2 Pattern 1: The Concept Router
 
+![Hybrid Pattern 1 — Concept Router](/diagrams/large-concept-models/ch12-concept-router.svg)
+
+*Figure 12.1 — The Concept Router. An LLM classifier applies the Task Unit Test to incoming requests and routes to either the LLM or LCM execution path. Cost is paid for LCM only when the task genuinely warrants it.*
+
 **When to use it.** A knowledge management application serves two types of user requests: short-document Q&A (LLM-appropriate) and cross-document synthesis (LCM-appropriate). A single entry point must route both.
 
 **Architecture:**
@@ -90,6 +94,10 @@ def route_request(user_request: str, llm) -> RoutingDecision:
 **Decision tree entry point.** Use the concept router when: your application handles mixed task types, you have a single conversational entry point, and users should not need to know whether their request is being handled by an LLM or an LCM.
 
 ## 12.3 Pattern 2: The Concept Elevator
+
+![Hybrid Pattern 2 — Concept Elevator](/diagrams/large-concept-models/ch12-concept-elevator.svg)
+
+*Figure 12.2 — The Concept Elevator. An LLM manages the conversation at the token layer; an LCM handles heavy reasoning in concept space. The elevator and descender components bridge the two layers. Users experience a chat interface backed by concept-level reasoning.*
 
 **When to use it.** A customer-facing research assistant has a conversational interface but occasionally needs to synthesize across large document corpora in response to complex user queries. The base user experience is conversational (LLM-appropriate), but specific query types require concept-level reasoning.
 
@@ -167,6 +175,10 @@ def concept_elevator_pipeline(user_request: str, documents, llm, lcm):
 **Decision tree entry point.** Use the concept elevator when: your primary application is conversational, concept-level reasoning is a minority of requests, and user experience continuity across LLM and LCM tasks matters.
 
 ## 12.4 Pattern 3: The Concept Pipeline
+
+![Hybrid Pattern 3 — Concept Pipeline](/diagrams/large-concept-models/ch12-concept-pipeline.svg)
+
+*Figure 12.3 — The Concept Pipeline. LCM batch-processes the document corpus offline, producing a structured analysis report. The LLM serves fast, interactive Q&A against the pre-reasoned output. LCM cost is amortized across all subsequent queries.*
 
 **When to use it.** A regulatory compliance platform uses the LCM to perform cross-jurisdiction contradiction detection (Chapter 9) and feeds the structured results to an LLM that answers analyst questions about specific contradictions. The LCM runs as a batch process; the LLM provides the interactive Q&A layer.
 

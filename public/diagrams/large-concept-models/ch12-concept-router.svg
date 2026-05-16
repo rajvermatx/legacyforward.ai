@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+  <defs>
+    <marker id="arr-dk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#3b82f6"/>
+    </marker>
+    <marker id="arr-vio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="360" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">HYBRID PATTERN 1 — CONCEPT ROUTER</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">LLM classifies task unit → routes to token-level LLM or concept-level LCM execution path</text>
+
+  <!-- ── Input ── -->
+  <rect x="32" y="76" width="120" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="92" y="101" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Space Grotesk, sans-serif" letter-spacing="1">REQUEST</text>
+  <text x="92" y="118" text-anchor="middle" font-size="20">📨</text>
+  <text x="92" y="136" text-anchor="middle" font-size="9" fill="#475569" font-family="Nunito, sans-serif">User task</text>
+
+  <!-- Arrow into router -->
+  <line x1="154" y1="108" x2="194" y2="108" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-dk)"/>
+
+  <!-- ── Router (LLM) ── -->
+  <rect x="196" y="64" width="168" height="88" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="280" y="86" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="1">LLM ROUTER</text>
+  <text x="280" y="104" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Classifies task unit:</text>
+  <text x="280" y="118" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">token-level or concept-level?</text>
+  <text x="280" y="136" text-anchor="middle" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif" font-style="italic">Task Unit Test heuristic</text>
+
+  <!-- Arrow → LLM path (upper) -->
+  <line x1="366" y1="90" x2="440" y2="90" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <text x="403" y="82" text-anchor="middle" font-size="9" fill="#3b82f6" font-family="Nunito, sans-serif" font-weight="600">token-level</text>
+
+  <!-- Arrow → LCM path (lower) -->
+  <line x1="366" y1="130" x2="440" y2="180" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+  <text x="398" y="168" text-anchor="middle" font-size="9" fill="#a855f7" font-family="Nunito, sans-serif" font-weight="600">concept-level</text>
+
+  <!-- ── LLM Execution ── -->
+  <rect x="442" y="64" width="180" height="72" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="532" y="86" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif" letter-spacing="1">LLM EXECUTION</text>
+  <text x="532" y="104" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Standard inference path</text>
+  <text x="532" y="118" text-anchor="middle" font-size="10" fill="#1e40af" font-family="Nunito, sans-serif">Token generation, RAG, chat</text>
+
+  <!-- ── LCM Execution ── -->
+  <rect x="442" y="164" width="180" height="88" rx="10" fill="#f5f3ff" stroke="#a855f7" stroke-width="2"/>
+  <text x="532" y="186" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif" letter-spacing="1">LCM EXECUTION</text>
+  <text x="532" y="204" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">SONAR encode</text>
+  <text x="532" y="218" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">Concept-space reasoning</text>
+  <text x="532" y="232" text-anchor="middle" font-size="10" fill="#5b21b6" font-family="Nunito, sans-serif">SONAR decode</text>
+
+  <!-- Arrows → Response -->
+  <line x1="624" y1="100" x2="700" y2="140" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arr-blue)"/>
+  <line x1="624" y1="208" x2="700" y2="168" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arr-vio)"/>
+
+  <!-- ── Response ── -->
+  <rect x="702" y="116" width="164" height="64" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="784" y="140" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Space Grotesk, sans-serif" letter-spacing="1">RESPONSE</text>
+  <text x="784" y="158" text-anchor="middle" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Unified output</text>
+  <text x="784" y="172" text-anchor="middle" font-size="9" fill="#22c55e" font-family="Nunito, sans-serif" font-weight="600">Right model, right task</text>
+
+  <!-- ── Bottom: characteristics ── -->
+  <rect x="32" y="278" width="836" height="62" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="298" text-anchor="middle" font-size="10" font-weight="700" fill="#475569" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">PATTERN CHARACTERISTICS</text>
+
+  <rect x="52" y="306" width="180" height="24" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="142" y="322" text-anchor="middle" font-size="10" fill="#1d4ed8" font-family="Nunito, sans-serif">Best for: mixed workloads</text>
+
+  <rect x="248" y="306" width="180" height="24" rx="5" fill="#fef9c3" stroke="#fde68a" stroke-width="1"/>
+  <text x="338" y="322" text-anchor="middle" font-size="10" fill="#92400e" font-family="Nunito, sans-serif">Risk: router misclassification</text>
+
+  <rect x="444" y="306" width="180" height="24" rx="5" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="534" y="322" text-anchor="middle" font-size="10" fill="#6d28d9" font-family="Nunito, sans-serif">Latency: single hop overhead</text>
+
+  <rect x="640" y="306" width="208" height="24" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="744" y="322" text-anchor="middle" font-size="10" fill="#166534" font-family="Nunito, sans-serif">Cost: pays LCM only when needed</text>
+</svg>

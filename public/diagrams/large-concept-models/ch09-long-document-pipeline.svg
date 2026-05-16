@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380">
+  <defs>
+    <marker id="arr-main" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0f172a"/>
+    </marker>
+    <marker id="arr-vio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+    <marker id="arr-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#14b8a6"/>
+    </marker>
+    <marker id="arr-amber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="380" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">LONG-DOCUMENT REASONING PIPELINE</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">Four-stage LCM pattern — encode once, index semantically, reason globally, surface coherently</text>
+
+  <!-- ── Stage 1: Encode ── -->
+  <rect x="32" y="72" width="185" height="196" rx="10" fill="#ffffff" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="32" y="72" width="185" height="34" rx="10" fill="#06b6d4"/>
+  <rect x="32" y="92" width="185" height="14" fill="#06b6d4"/>
+  <text x="124" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">STAGE 1 — ENCODE</text>
+
+  <text x="52" y="124" font-size="9" font-weight="700" fill="#0891b2" font-family="Space Grotesk, sans-serif" letter-spacing="1">INPUT</text>
+  <text x="52" y="139" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Long documents</text>
+  <text x="52" y="153" font-size="10" fill="#475569" font-family="Nunito, sans-serif">(any language)</text>
+
+  <line x1="52" y1="162" x2="202" y2="162" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="52" y="180" font-size="9" font-weight="700" fill="#0891b2" font-family="Space Grotesk, sans-serif" letter-spacing="1">PROCESS</text>
+  <text x="52" y="195" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Sentence segmentation</text>
+  <text x="52" y="209" font-size="10" fill="#475569" font-family="Nunito, sans-serif">SONAR encode each</text>
+  <text x="52" y="223" font-size="10" fill="#06b6d4" font-family="Nunito, sans-serif" font-weight="600">→ 1,024-dim vectors</text>
+
+  <line x1="52" y1="232" x2="202" y2="232" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="52" y="250" font-size="9" font-weight="700" fill="#0891b2" font-family="Space Grotesk, sans-serif" letter-spacing="1">COST</text>
+  <text x="52" y="263" font-size="10" fill="#475569" font-family="Nunito, sans-serif">O(n sentences)</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="219" y1="170" x2="255" y2="170" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-main)"/>
+
+  <!-- ── Stage 2: Index ── -->
+  <rect x="257" y="72" width="185" height="196" rx="10" fill="#ffffff" stroke="#a855f7" stroke-width="2"/>
+  <rect x="257" y="72" width="185" height="34" rx="10" fill="#a855f7"/>
+  <rect x="257" y="92" width="185" height="14" fill="#a855f7"/>
+  <text x="349" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">STAGE 2 — INDEX</text>
+
+  <text x="277" y="124" font-size="9" font-weight="700" fill="#7c3aed" font-family="Space Grotesk, sans-serif" letter-spacing="1">STORE</text>
+  <text x="277" y="139" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Vector DB (Qdrant /</text>
+  <text x="277" y="153" font-size="10" fill="#475569" font-family="Nunito, sans-serif">ChromaDB / Pinecone)</text>
+
+  <line x1="277" y1="162" x2="427" y2="162" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="277" y="180" font-size="9" font-weight="700" fill="#7c3aed" font-family="Space Grotesk, sans-serif" letter-spacing="1">METADATA</text>
+  <text x="277" y="195" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Doc ID, section, page</text>
+  <text x="277" y="209" font-size="10" fill="#475569" font-family="Nunito, sans-serif">language, jurisdiction</text>
+  <text x="277" y="223" font-size="10" fill="#a855f7" font-family="Nunito, sans-serif" font-weight="600">→ Semantic retrieval</text>
+
+  <line x1="277" y1="232" x2="427" y2="232" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="277" y="250" font-size="9" font-weight="700" fill="#7c3aed" font-family="Space Grotesk, sans-serif" letter-spacing="1">KEY PROPERTY</text>
+  <text x="277" y="263" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Cross-lingual ANN search</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="444" y1="170" x2="480" y2="170" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-main)"/>
+
+  <!-- ── Stage 3: Reason ── -->
+  <rect x="482" y="72" width="185" height="196" rx="10" fill="#ffffff" stroke="#14b8a6" stroke-width="2"/>
+  <rect x="482" y="72" width="185" height="34" rx="10" fill="#14b8a6"/>
+  <rect x="482" y="92" width="185" height="14" fill="#14b8a6"/>
+  <text x="574" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">STAGE 3 — REASON</text>
+
+  <text x="502" y="124" font-size="9" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="1">OPERATIONS</text>
+  <text x="502" y="139" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Semantic similarity</text>
+  <text x="502" y="153" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Contradiction detection</text>
+
+  <line x1="502" y1="162" x2="652" y2="162" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="502" y="180" font-size="9" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="1">IN CONCEPT SPACE</text>
+  <text x="502" y="195" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Cluster related ideas</text>
+  <text x="502" y="209" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Identify gaps / conflicts</text>
+  <text x="502" y="223" font-size="10" fill="#14b8a6" font-family="Nunito, sans-serif" font-weight="600">→ Structured finding set</text>
+
+  <line x1="502" y1="232" x2="652" y2="232" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="502" y="250" font-size="9" font-weight="700" fill="#0f766e" font-family="Space Grotesk, sans-serif" letter-spacing="1">NO CONTEXT LIMIT</text>
+  <text x="502" y="263" font-size="10" fill="#475569" font-family="Nunito, sans-serif">All docs in vector space</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="669" y1="170" x2="705" y2="170" stroke="#0f172a" stroke-width="1.5" marker-end="url(#arr-main)"/>
+
+  <!-- ── Stage 4: Surface ── -->
+  <rect x="707" y="72" width="161" height="196" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="707" y="72" width="161" height="34" rx="10" fill="#f59e0b"/>
+  <rect x="707" y="92" width="161" height="14" fill="#f59e0b"/>
+  <text x="787" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Space Grotesk, sans-serif">STAGE 4 — SURFACE</text>
+
+  <text x="727" y="124" font-size="9" font-weight="700" fill="#92400e" font-family="Space Grotesk, sans-serif" letter-spacing="1">DECODE</text>
+  <text x="727" y="139" font-size="10" fill="#475569" font-family="Nunito, sans-serif">SONAR decoder</text>
+  <text x="727" y="153" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Target language chosen</text>
+
+  <line x1="727" y1="162" x2="858" y2="162" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="727" y="180" font-size="9" font-weight="700" fill="#92400e" font-family="Space Grotesk, sans-serif" letter-spacing="1">OUTPUT OPTIONS</text>
+  <text x="727" y="195" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Structured report</text>
+  <text x="727" y="209" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Conflict matrix</text>
+  <text x="727" y="223" font-size="10" fill="#f59e0b" font-family="Nunito, sans-serif" font-weight="600">→ Analyst-ready</text>
+
+  <line x1="727" y1="232" x2="858" y2="232" stroke="#e2e8f0" stroke-width="1"/>
+
+  <text x="727" y="250" font-size="9" font-weight="700" fill="#92400e" font-family="Space Grotesk, sans-serif" letter-spacing="1">LANGUAGE</text>
+  <text x="727" y="263" font-size="10" fill="#475569" font-family="Nunito, sans-serif">Any target language</text>
+
+  <!-- ── Worked Example ── -->
+  <rect x="32" y="286" width="836" height="74" rx="8" fill="#0f172a"/>
+  <text x="450" y="306" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">WORKED EXAMPLE — COMPLIANCE ANALYSIS ACROSS 12 JURISDICTIONS</text>
+
+  <rect x="52" y="314" width="180" height="36" rx="5" fill="#06b6d4" opacity="0.2" stroke="#06b6d4" stroke-width="1"/>
+  <text x="142" y="329" text-anchor="middle" font-size="9" font-weight="700" fill="#67e8f9" font-family="Space Grotesk, sans-serif">ENCODE</text>
+  <text x="142" y="343" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">12 regulatory PDFs → vectors</text>
+
+  <rect x="248" y="314" width="180" height="36" rx="5" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="1"/>
+  <text x="338" y="329" text-anchor="middle" font-size="9" font-weight="700" fill="#d8b4fe" font-family="Space Grotesk, sans-serif">INDEX</text>
+  <text x="338" y="343" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Qdrant with jurisdiction metadata</text>
+
+  <rect x="444" y="314" width="180" height="36" rx="5" fill="#14b8a6" opacity="0.2" stroke="#14b8a6" stroke-width="1"/>
+  <text x="534" y="329" text-anchor="middle" font-size="9" font-weight="700" fill="#5eead4" font-family="Space Grotesk, sans-serif">REASON</text>
+  <text x="534" y="343" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Conflict detection across all 12</text>
+
+  <rect x="640" y="314" width="208" height="36" rx="5" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="1"/>
+  <text x="744" y="329" text-anchor="middle" font-size="9" font-weight="700" fill="#fcd34d" font-family="Space Grotesk, sans-serif">SURFACE</text>
+  <text x="744" y="343" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Nunito, sans-serif">Conflict matrix in English + French</text>
+</svg>

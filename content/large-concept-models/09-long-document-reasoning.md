@@ -27,6 +27,10 @@ This chapter covers the LCM architecture for long-document reasoning: how to enc
 
 ## 9.1 The Architecture Pattern
 
+![Long-Document Reasoning Pipeline — four-stage LCM pattern](/diagrams/large-concept-models/ch09-long-document-pipeline.svg)
+
+*Figure 9.1 — The four-stage LCM pattern for long-document reasoning. Documents are encoded once, indexed semantically, reasoned over in concept space (with no context window constraint), and surfaced as structured, analyst-ready output.*
+
 Long-document reasoning with LCMs follows a consistent four-stage architecture: encode, index, reason, and surface.
 
 **Stage 1: Encode.** Every sentence in every document is encoded by SONAR into a concept embedding. Sentences that span multiple propositions (common in legal and regulatory text) are split at clause boundaries before encoding. The output is a structured corpus: for each document, a list of (sentence_text, concept_embedding, document_id, section_id, sentence_index) tuples. This corpus is the working representation of the document set for all subsequent operations.

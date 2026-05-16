@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360">
+  <defs>
+    <marker id="arr-dk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arr-grn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-vio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="360" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#0f172a" font-family="Space Grotesk, sans-serif" letter-spacing="0.3">THE TASK UNIT TEST</text>
+  <text x="450" y="52" text-anchor="middle" font-size="11" fill="#64748b" font-family="Nunito, sans-serif">Three questions that determine whether a task warrants LCM consideration</text>
+
+  <!-- ── Question 1 ── -->
+  <!-- Q box -->
+  <rect x="32" y="70" width="260" height="58" rx="8" fill="#0f172a"/>
+  <text x="42" y="90" font-size="9" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">QUESTION 1</text>
+  <text x="42" y="107" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">What is the natural unit</text>
+  <text x="42" y="121" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">of your task?</text>
+
+  <!-- Arrow down -->
+  <line x1="162" y1="130" x2="162" y2="152" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-dk)"/>
+
+  <!-- Answer: LLM -->
+  <rect x="32" y="154" width="112" height="46" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="88" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif">TOKEN / PASSAGE</text>
+  <text x="88" y="188" text-anchor="middle" font-size="9" fill="#1e40af" font-family="Nunito, sans-serif">→ Use LLM</text>
+
+  <!-- Answer: LCM -->
+  <rect x="152" y="154" width="140" height="46" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="222" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif">CONCEPT / IDEA</text>
+  <text x="222" y="188" text-anchor="middle" font-size="9" fill="#5b21b6" font-family="Nunito, sans-serif">→ Consider LCM ✓</text>
+
+  <!-- ── Question 2 ── -->
+  <rect x="320" y="70" width="260" height="58" rx="8" fill="#0f172a"/>
+  <text x="330" y="90" font-size="9" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">QUESTION 2</text>
+  <text x="330" y="107" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">Does meaning change when</text>
+  <text x="330" y="121" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">surface form changes?</text>
+
+  <line x1="450" y1="130" x2="450" y2="152" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-dk)"/>
+
+  <rect x="320" y="154" width="112" height="46" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="376" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif">NO</text>
+  <text x="376" y="188" text-anchor="middle" font-size="9" fill="#1e40af" font-family="Nunito, sans-serif">→ Use LLM</text>
+
+  <rect x="440" y="154" width="140" height="46" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="510" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif">YES</text>
+  <text x="510" y="188" text-anchor="middle" font-size="9" fill="#5b21b6" font-family="Nunito, sans-serif">→ Consider LCM ✓</text>
+
+  <!-- ── Question 3 ── -->
+  <rect x="608" y="70" width="260" height="58" rx="8" fill="#0f172a"/>
+  <text x="618" y="90" font-size="9" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">QUESTION 3</text>
+  <text x="618" y="107" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">Does global consistency</text>
+  <text x="618" y="121" font-size="11" font-weight="600" fill="#ffffff" font-family="Nunito, sans-serif">matter more than local fluency?</text>
+
+  <line x1="738" y1="130" x2="738" y2="152" stroke="#475569" stroke-width="1.5" marker-end="url(#arr-dk)"/>
+
+  <rect x="608" y="154" width="112" height="46" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text x="664" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8" font-family="Space Grotesk, sans-serif">NO</text>
+  <text x="664" y="188" text-anchor="middle" font-size="9" fill="#1e40af" font-family="Nunito, sans-serif">→ Use LLM</text>
+
+  <rect x="728" y="154" width="140" height="46" rx="6" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1.5"/>
+  <text x="798" y="173" text-anchor="middle" font-size="10" font-weight="700" fill="#6d28d9" font-family="Space Grotesk, sans-serif">YES</text>
+  <text x="798" y="188" text-anchor="middle" font-size="9" fill="#5b21b6" font-family="Nunito, sans-serif">→ Consider LCM ✓</text>
+
+  <!-- ── Scoring ── -->
+  <rect x="32" y="222" width="836" height="60" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="450" y="242" text-anchor="middle" font-size="10" font-weight="700" fill="#475569" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">SCORING</text>
+
+  <rect x="52" y="250" width="180" height="22" rx="5" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="142" y="264" text-anchor="middle" font-size="10" fill="#1d4ed8" font-family="Nunito, sans-serif">0–1 checks → <tspan font-weight="700">Use LLM</tspan></text>
+
+  <rect x="248" y="250" width="180" height="22" rx="5" fill="#fffbeb" stroke="#fcd34d" stroke-width="1"/>
+  <text x="338" y="264" text-anchor="middle" font-size="10" fill="#92400e" font-family="Nunito, sans-serif">2 checks → <tspan font-weight="700">Consider hybrid</tspan></text>
+
+  <rect x="444" y="250" width="180" height="22" rx="5" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="534" y="264" text-anchor="middle" font-size="10" fill="#6d28d9" font-family="Nunito, sans-serif">3 checks → <tspan font-weight="700">Strong LCM candidate</tspan></text>
+
+  <rect x="640" y="250" width="218" height="22" rx="5" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="749" y="264" text-anchor="middle" font-size="10" fill="#166534" font-family="Nunito, sans-serif">Cross-lingual too → <tspan font-weight="700">LCM required</tspan></text>
+
+  <!-- ── Example tasks ── -->
+  <rect x="32" y="294" width="836" height="54" rx="8" fill="#0f172a"/>
+  <text x="450" y="313" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">TASK EXAMPLES</text>
+
+  <text x="52" y="332" font-size="10" fill="#ef4444" font-family="Nunito, sans-serif" font-weight="600">✗ LLM</text>
+  <text x="88" y="332" font-size="10" fill="#94a3b8" font-family="Nunito, sans-serif">Code review, chatbot, short-doc Q&amp;A, email summary</text>
+
+  <text x="52" y="346" font-size="10" fill="#a855f7" font-family="Nunito, sans-serif" font-weight="600">✓ LCM</text>
+  <text x="88" y="346" font-size="10" fill="#94a3b8" font-family="Nunito, sans-serif">Cross-jurisdiction policy comparison, multilingual synthesis, 5-year roadmap, contradiction detection</text>
+</svg>

@@ -55,6 +55,10 @@ When an LLM hits the token ceiling, it fails in three characteristic ways. Each 
 
 ## 1.4 The Task Unit Test
 
+![Task Unit Test — three questions that determine whether a task warrants LCM consideration](/diagrams/large-concept-models/ch01-task-unit-test.svg)
+
+*Figure 1.1 — The Task Unit Test. Three questions map any enterprise task to an LLM or LCM recommendation. Score all three "yes" for a strong LCM candidate.*
+
 Not every enterprise task hits the token ceiling. Many tasks — perhaps most tasks — are better served by LLMs, and the overhead of LCM adoption is not justified. The Task Unit Test is a three-question diagnostic that identifies whether a given task warrants LCM consideration.
 
 **Question 1: What is the natural unit of your task?** Is it a token (code completion, autocorrect), a sentence (classification, sentiment analysis), a passage (RAG retrieval, question answering), or a concept (cross-document comparison, multi-document synthesis, hierarchical planning)? Tasks whose natural unit is a concept or above are candidates for LCM consideration. Tasks whose natural unit is a token, sentence, or passage are generally better served by LLMs.
