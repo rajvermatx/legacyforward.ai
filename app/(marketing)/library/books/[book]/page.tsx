@@ -18,6 +18,7 @@ const bookDefs: Record<string, BookDef> = {
   "graph-ai": { section: "graph-ai", title: "Graph Databases for AI", accentColor: "rose" },
   "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", accentColor: "amber" },
   "legacyforward-guide": { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation", accentColor: "teal" },
+  "large-concept-models": { section: "large-concept-models", title: "Large Concept Models: The Practitioner's Guide to Concept-Level AI for Enterprise Teams", accentColor: "violet" },
 };
 
 export async function generateStaticParams() {

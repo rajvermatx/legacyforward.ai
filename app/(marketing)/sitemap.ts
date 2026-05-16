@@ -21,6 +21,9 @@ const sectionHrefMap: Record<string, (slug: string) => string> = {
   "ai-pm": (slug) => `/library/books/ai-pm/${slug}`,
   "ai-leaders": (slug) => `/library/books/ai-leaders/${slug}`,
   "graph-ai": (slug) => `/library/books/graph-ai/${slug}`,
+  "enterprise-it-101": (slug) => `/library/books/enterprise-it-101/${slug}`,
+  "legacyforward-guide": (slug) => `/library/books/legacyforward-guide/${slug}`,
+  "large-concept-models": (slug) => `/library/books/large-concept-models/${slug}`,
   cheatsheets: (slug) => `/library/cheatsheets/${slug}`,
 };
 
@@ -41,6 +44,9 @@ const staticPages = [
   "/library/books/ai-enterprise-architect",
   "/library/books/llm-ba-qa",
   "/library/books/graph-ai",
+  "/library/books/enterprise-it-101",
+  "/library/books/legacyforward-guide",
+  "/library/books/large-concept-models",
   "/library/toolkit",
   "/library/toolkit/blueprints",
   "/library/toolkit/agentic-designs",
