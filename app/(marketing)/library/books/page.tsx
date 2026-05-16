@@ -18,6 +18,7 @@ const bookDefs = [
   { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", desc: "Legacy systems, IT sprawl, cloud, APIs, and where AI lands — in plain language. For anyone who needs to understand the landscape before they touch AI.", href: "/library/books/enterprise-it-101", audience: "All Practitioners", color: "bg-amber-500" },
   { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation", desc: "The complete LegacyForward.ai framework — Signal Capture, Grounded Delivery, and Legacy Coexistence — for practitioners building AI in real enterprise environments.", href: "/library/books/legacyforward-guide", audience: "All Roles", color: "bg-teal-600" },
   { section: "large-concept-models", title: "Large Concept Models", desc: "When to use LCMs vs. LLMs — SONAR embeddings, concept-space reasoning, hybrid architectures, evaluation, and a transition roadmap for enterprise teams.", href: "/library/books/large-concept-models", audience: "Architects & Engineers", color: "bg-violet-600" },
+  { section: "legacyforward-compendium", title: "The LegacyForward Compendium", desc: "62 chapters synthesizing all nine practitioner books into a single sequenced journey — IT foundations, AI strategy, agentic systems, knowledge graphs, and large concept models.", href: "/library/books/legacyforward-compendium", audience: "All Practitioners", color: "bg-violet-700" },
 ];
 
 function getBookStats() {
