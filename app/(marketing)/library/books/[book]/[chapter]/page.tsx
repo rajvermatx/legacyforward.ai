@@ -28,7 +28,7 @@ const bookDefs: Record<string, BookDef> = {
   "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained" },
   "legacyforward-guide": { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation" },
   "large-concept-models": { section: "large-concept-models", title: "Large Concept Models: The Practitioner's Guide to Concept-Level AI for Enterprise Teams" },
-  "legacyforward-compendium": { section: "legacyforward-compendium", title: "The LegacyForward Compendium: The Complete Enterprise AI Practitioner" },
+  "legacyforward-compendium": { section: "legacyforward-compendium", title: "LegacyForward: AI Beyond the Demo" },
 };
 
 export async function generateStaticParams() {

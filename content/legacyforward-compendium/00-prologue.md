@@ -1,5 +1,5 @@
 ---
-title: "The Complete Enterprise AI Practitioner"
+title: "AI Beyond the Demo — How AI Actually Works in Enterprises"
 slug: "compendium-prologue"
 description: "How nine practitioner books become one sequenced journey — and how to use this compendium to navigate it."
 section: "legacyforward-compendium"
@@ -9,7 +9,7 @@ part: "Prologue"
 
 Prologue
 
-# The Complete Enterprise AI Practitioner
+# AI Beyond the Demo — How AI Actually Works in Enterprises
 
 This compendium exists because enterprise AI is not one problem. It is at least nine.
 
