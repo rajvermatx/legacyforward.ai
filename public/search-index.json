@@ -210,6 +210,531 @@
     "href": "/library/books/agenticai/deployment"
   },
   {
+    "title": "AI Beyond the Demo — How AI Actually Works in Enterprises",
+    "slug": "compendium-prologue",
+    "section": "ai-beyond-the-demo",
+    "description": "How nine practitioner books become one sequenced journey — and how to use this compendium to navigate it.",
+    "href": "/library/books/ai-beyond-the-demo/compendium-prologue"
+  },
+  {
+    "title": "Why the IT Stack Determines AI Success",
+    "slug": "why-enterprise-it-matters",
+    "section": "ai-beyond-the-demo",
+    "description": "AI does not arrive in a clean room. It lands on top of forty years of accumulated technology decisions, and those decisions determine what is possible before a single line of AI code is written.",
+    "href": "/library/books/ai-beyond-the-demo/why-enterprise-it-matters"
+  },
+  {
+    "title": "The Three Layers: Record, Engagement, Intelligence",
+    "slug": "three-layers",
+    "section": "ai-beyond-the-demo",
+    "description": "Enterprise IT organizes into three functional layers. Understanding which layer a system lives in determines what AI can do with it, how it can access it, and what governance it inherits.",
+    "href": "/library/books/ai-beyond-the-demo/three-layers"
+  },
+  {
+    "title": "Legacy Systems — What They Are and Why They Stay",
+    "slug": "legacy-systems",
+    "section": "ai-beyond-the-demo",
+    "description": "Legacy systems are not failures. They are systems that worked well enough to become indispensable. Understanding why they stay is the prerequisite for designing AI that coexists with them.",
+    "href": "/library/books/ai-beyond-the-demo/legacy-systems"
+  },
+  {
+    "title": "Cloud, SaaS, and the Sprawl Problem",
+    "slug": "cloud-saas-sprawl",
+    "section": "ai-beyond-the-demo",
+    "description": "The modern enterprise runs on dozens of SaaS tools, multiple cloud environments, and data scattered across all of them. Understanding sprawl is not optional for AI practitioners — it is the map of the problem space.",
+    "href": "/library/books/ai-beyond-the-demo/cloud-saas-sprawl"
+  },
+  {
+    "title": "Data Readiness — The Prerequisite Nobody Talks About",
+    "slug": "data-readiness",
+    "section": "ai-beyond-the-demo",
+    "description": "Data readiness is the single most consistently underestimated factor in enterprise AI. The question is not whether you have data — every enterprise has data. The question is whether you have data the AI can use.",
+    "href": "/library/books/ai-beyond-the-demo/data-readiness"
+  },
+  {
+    "title": "Integration Patterns for AI-Ready Systems",
+    "slug": "integration-patterns",
+    "section": "ai-beyond-the-demo",
+    "description": "How AI connects to enterprise systems — the four integration patterns, when to use each, and the failure modes that appear when the wrong pattern is chosen.",
+    "href": "/library/books/ai-beyond-the-demo/integration-patterns"
+  },
+  {
+    "title": "Technical Debt as an AI Blocker",
+    "slug": "technical-debt-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "Technical debt does not just slow down software development. It directly blocks AI initiatives — through inaccessible data, unreliable integrations, and missing governance infrastructure. Understanding where debt concentrates reveals where AI will struggle.",
+    "href": "/library/books/ai-beyond-the-demo/technical-debt-ai"
+  },
+  {
+    "title": "AI Doesn't Replace the Stack — It Runs on Top of It",
+    "slug": "ai-on-top-of-the-stack",
+    "section": "ai-beyond-the-demo",
+    "description": "The mental model that trips up most enterprise AI initiatives is the replacement model. AI does not replace enterprise IT — it runs on top of it, consumes its data, and returns results that flow back through it.",
+    "href": "/library/books/ai-beyond-the-demo/ai-on-top-of-the-stack"
+  },
+  {
+    "title": "The Coexistence Imperative — Why Rip-and-Replace Fails",
+    "slug": "coexistence-imperative",
+    "section": "ai-beyond-the-demo",
+    "description": "Rip-and-replace is the most expensive, highest-risk, and least successful strategy in enterprise technology. AI initiatives that require it consistently fail. Understanding why coexistence is not a compromise but an architectural requirement changes how AI is designed.",
+    "href": "/library/books/ai-beyond-the-demo/coexistence-imperative"
+  },
+  {
+    "title": "Finding the Signal in the Sprawl",
+    "slug": "where-to-start",
+    "section": "ai-beyond-the-demo",
+    "description": "Given a complex IT landscape with legacy systems, data sprawl, and accumulated technical debt, where does an AI initiative actually begin? The answer is not 'with the most ambitious use case' — it is with the clearest signal.",
+    "href": "/library/books/ai-beyond-the-demo/where-to-start"
+  },
+  {
+    "title": "What AI Actually Does (and What It Doesn't)",
+    "slug": "what-ai-actually-does",
+    "section": "ai-beyond-the-demo",
+    "description": "Before strategy, before investment, before governance — a clear-eyed account of what AI systems actually do, where they are genuinely capable, and where vendor claims exceed the technology.",
+    "href": "/library/books/ai-beyond-the-demo/what-ai-actually-does"
+  },
+  {
+    "title": "Why AI Projects Fail — and What Vendors Won't Tell You",
+    "slug": "why-projects-fail",
+    "section": "ai-beyond-the-demo",
+    "description": "The failure rate for enterprise AI projects remains stubbornly high. The causes are consistent, the warning signs are visible early, and they have almost nothing to do with the model.",
+    "href": "/library/books/ai-beyond-the-demo/why-projects-fail"
+  },
+  {
+    "title": "AI Strategy That Actually Works",
+    "slug": "ai-strategy",
+    "section": "ai-beyond-the-demo",
+    "description": "AI strategy fails when it is a collection of use case ideas. It succeeds when it connects AI capability to business value, organizational readiness, and a realistic delivery model.",
+    "href": "/library/books/ai-beyond-the-demo/ai-strategy"
+  },
+  {
+    "title": "Making AI Investment Decisions",
+    "slug": "investment-decisions",
+    "section": "ai-beyond-the-demo",
+    "description": "AI investment decisions are harder than traditional software investment decisions because the outputs are probabilistic, the costs are variable, and the value attribution is non-trivial. Here is how to make them well.",
+    "href": "/library/books/ai-beyond-the-demo/investment-decisions"
+  },
+  {
+    "title": "Organizational Readiness — the Human Side of AI",
+    "slug": "organizational-readiness",
+    "section": "ai-beyond-the-demo",
+    "description": "Technology readiness and organizational readiness are not the same thing. Organizations that are technically ready for AI but organizationally unprepared consistently fail to deliver value.",
+    "href": "/library/books/ai-beyond-the-demo/organizational-readiness"
+  },
+  {
+    "title": "AI Risk, Regulation, and Responsible AI",
+    "slug": "risk-governance",
+    "section": "ai-beyond-the-demo",
+    "description": "AI risk is not hypothetical. It is operational, reputational, and regulatory. The organizations that manage it well treat responsible AI as architecture, not as policy.",
+    "href": "/library/books/ai-beyond-the-demo/risk-governance"
+  },
+  {
+    "title": "Is This Worth Building? — Value Hypothesis and Portfolio Prioritization",
+    "slug": "is-this-worth-building",
+    "section": "ai-beyond-the-demo",
+    "description": "The most important question in AI product management is the first one: is this worth building? Most teams answer it too quickly. Here is the discipline for answering it rigorously.",
+    "href": "/library/books/ai-beyond-the-demo/is-this-worth-building"
+  },
+  {
+    "title": "Discovery for AI Features — Finding Real Problems",
+    "slug": "discovery-for-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "AI product discovery is different from traditional product discovery. The questions are different, the failure modes are different, and the artifacts that come out of it are different.",
+    "href": "/library/books/ai-beyond-the-demo/discovery-for-ai"
+  },
+  {
+    "title": "Measuring AI Success — Metrics That Matter",
+    "slug": "measuring-success",
+    "section": "ai-beyond-the-demo",
+    "description": "Model metrics and business metrics are not the same thing. The organizations that measure AI success well measure what the AI does for the business, not how well the model performs in isolation.",
+    "href": "/library/books/ai-beyond-the-demo/measuring-success"
+  },
+  {
+    "title": "Building and Leading AI Teams",
+    "slug": "ai-teams",
+    "section": "ai-beyond-the-demo",
+    "description": "AI teams fail for organizational reasons more often than technical ones. The roles, the structures, and the leadership behaviors that produce AI teams that ship.",
+    "href": "/library/books/ai-beyond-the-demo/ai-teams"
+  },
+  {
+    "title": "How LLMs Work — No PhD Required",
+    "slug": "how-llms-work",
+    "section": "ai-beyond-the-demo",
+    "description": "Large language models are not magic and they are not mysterious. Understanding how they work at a functional level — what they are doing when they generate text — makes you a better practitioner whether you are a PM, BA, or engineer.",
+    "href": "/library/books/ai-beyond-the-demo/how-llms-work"
+  },
+  {
+    "title": "Prompt Engineering Fundamentals",
+    "slug": "prompt-engineering",
+    "section": "ai-beyond-the-demo",
+    "description": "Prompt engineering is not a hack or a workaround — it is the primary interface between human intent and model behavior. The practitioners who do it well ship AI that works; the ones who skip it ship AI that surprises them.",
+    "href": "/library/books/ai-beyond-the-demo/prompt-engineering"
+  },
+  {
+    "title": "LLM Primitives — Tokens, Context, and Temperature",
+    "slug": "llm-primitives",
+    "section": "ai-beyond-the-demo",
+    "description": "The building blocks that every practitioner must understand before building LLM-powered applications: tokens, context windows, embeddings, completions, and the parameters that control them.",
+    "href": "/library/books/ai-beyond-the-demo/llm-primitives"
+  },
+  {
+    "title": "RAG Pipelines — Giving Models Access to Your Data",
+    "slug": "rag-pipelines",
+    "section": "ai-beyond-the-demo",
+    "description": "Retrieval-Augmented Generation is the most impactful enterprise AI pattern available today. It solves the knowledge cutoff problem, the hallucination problem, and the proprietary data problem simultaneously.",
+    "href": "/library/books/ai-beyond-the-demo/rag-pipelines"
+  },
+  {
+    "title": "LLM-Powered Requirements Elicitation",
+    "slug": "requirements-elicitation",
+    "section": "ai-beyond-the-demo",
+    "description": "LLMs change requirements elicitation by enabling faster synthesis of stakeholder input, richer scenario exploration, and automated gap analysis. Here is how to use them without outsourcing judgment.",
+    "href": "/library/books/ai-beyond-the-demo/requirements-elicitation"
+  },
+  {
+    "title": "AI-Powered Test Case Generation",
+    "slug": "test-generation",
+    "section": "ai-beyond-the-demo",
+    "description": "Generating test cases is one of the highest-ROI applications of LLMs for QA teams. LLMs produce comprehensive test suites faster than manual authoring while surfacing edge cases that human testers miss.",
+    "href": "/library/books/ai-beyond-the-demo/test-generation"
+  },
+  {
+    "title": "Evaluation-Driven Development",
+    "slug": "evaluation-driven-development",
+    "section": "ai-beyond-the-demo",
+    "description": "AI features cannot be shipped without evaluation frameworks. Unlike traditional software, LLM outputs are probabilistic — the same code that passes unit tests today may produce different outputs tomorrow. Evaluation-driven development makes this manageable.",
+    "href": "/library/books/ai-beyond-the-demo/evaluation-driven-development"
+  },
+  {
+    "title": "Working with ML Engineering Teams",
+    "slug": "working-with-ml-teams",
+    "section": "ai-beyond-the-demo",
+    "description": "ML engineers and product practitioners speak different languages and operate under different constraints. The practitioners who learn to bridge this gap ship AI features faster and with fewer painful rework cycles.",
+    "href": "/library/books/ai-beyond-the-demo/working-with-ml-teams"
+  },
+  {
+    "title": "Adding AI to Existing Products",
+    "slug": "adding-ai-to-products",
+    "section": "ai-beyond-the-demo",
+    "description": "Most AI product work is not building new AI-native products — it is adding AI capabilities to products that already exist. The patterns for doing this well are different from greenfield AI development, and the failure modes are distinct.",
+    "href": "/library/books/ai-beyond-the-demo/adding-ai-to-products"
+  },
+  {
+    "title": "Data Strategy for Product Managers",
+    "slug": "data-strategy-for-pms",
+    "section": "ai-beyond-the-demo",
+    "description": "AI products are data products. A PM who cannot think clearly about data quality, data pipelines, and data governance cannot effectively manage an AI feature — they will be surprised by problems that were predictable from the data.",
+    "href": "/library/books/ai-beyond-the-demo/data-strategy-for-pms"
+  },
+  {
+    "title": "Pricing and Packaging AI Features",
+    "slug": "pricing-ai-features",
+    "section": "ai-beyond-the-demo",
+    "description": "AI features have fundamentally different cost structures than traditional software features — inference costs scale with usage in ways that subscription pricing models were not designed for. Getting pricing wrong can make a successful AI feature economically destructive.",
+    "href": "/library/books/ai-beyond-the-demo/pricing-ai-features"
+  },
+  {
+    "title": "Operating AI at Scale",
+    "slug": "operating-ai-at-scale",
+    "section": "ai-beyond-the-demo",
+    "description": "The operational challenges of AI at scale are categorically different from traditional software operations. Drift, degradation, and external dependency failures require monitoring and response strategies that most operations teams have never needed before.",
+    "href": "/library/books/ai-beyond-the-demo/operating-ai-at-scale"
+  },
+  {
+    "title": "The AI Landscape — An Architect's Map",
+    "slug": "ai-landscape-for-architects",
+    "section": "ai-beyond-the-demo",
+    "description": "Enterprise architects face an AI landscape that is expanding faster than any previous technology wave. This chapter provides the conceptual map architects need to orient decisions — which AI capabilities exist, how they relate to each other, and where the architectural leverage points are.",
+    "href": "/library/books/ai-beyond-the-demo/ai-landscape-for-architects"
+  },
+  {
+    "title": "New Building Blocks — AI Components for Your Architecture",
+    "slug": "new-building-blocks",
+    "section": "ai-beyond-the-demo",
+    "description": "AI-first architecture introduces a new set of components that do not exist in traditional enterprise system design — vector databases, embedding pipelines, prompt registries, evaluation harnesses. Architects who understand these building blocks design systems that work; those who do not design systems that surprise them.",
+    "href": "/library/books/ai-beyond-the-demo/new-building-blocks"
+  },
+  {
+    "title": "Data Architecture for AI",
+    "slug": "data-architecture-for-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "AI capability is bounded by data architecture. The organizations that win with AI are not the ones with the most advanced models — they are the ones whose data is accessible, governable, and connected. Data architecture for AI is a strategic investment, not a technical prerequisite.",
+    "href": "/library/books/ai-beyond-the-demo/data-architecture-for-ai"
+  },
+  {
+    "title": "GenAI Architecture Patterns — From Chat to Enterprise",
+    "slug": "genai-architecture-patterns",
+    "section": "ai-beyond-the-demo",
+    "description": "Generative AI applications in the enterprise follow a small set of recurring architectural patterns. Understanding these patterns — and their tradeoffs — allows architects to match solutions to problems rather than building bespoke architectures for every use case.",
+    "href": "/library/books/ai-beyond-the-demo/genai-architecture-patterns"
+  },
+  {
+    "title": "MLOps and AI Governance",
+    "slug": "mlops-and-governance",
+    "section": "ai-beyond-the-demo",
+    "description": "MLOps is the engineering discipline that makes AI systems operable at enterprise scale. Without it, models live in notebooks and die in staging. With it, AI capabilities become reliable, auditable, and improvable production assets.",
+    "href": "/library/books/ai-beyond-the-demo/mlops-and-governance"
+  },
+  {
+    "title": "Responsible AI Architecture",
+    "slug": "responsible-ai-architecture",
+    "section": "ai-beyond-the-demo",
+    "description": "Responsible AI is not a values statement — it is an architectural property that must be designed in. Fairness, explainability, privacy, and safety are technical choices that architects make. Organizations that treat them as add-ons after deployment face remediation costs that dwarf the cost of building them correctly from the start.",
+    "href": "/library/books/ai-beyond-the-demo/responsible-ai-architecture"
+  },
+  {
+    "title": "Cloud Platforms for AI",
+    "slug": "cloud-platforms-for-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "AWS, Azure, and GCP each offer distinct AI service portfolios, managed infrastructure, and native integrations. Platform choice is a long-term architectural commitment — architects who understand the tradeoffs make better decisions than those who follow market momentum.",
+    "href": "/library/books/ai-beyond-the-demo/cloud-platforms-for-ai"
+  },
+  {
+    "title": "Migration Strategies — AI-Enabling Existing Systems",
+    "slug": "migration-strategies",
+    "section": "ai-beyond-the-demo",
+    "description": "Most enterprise AI value will be extracted not from new systems but from AI-enabled existing systems. The migration strategies that make this possible are different from traditional application migration, and the failure modes are distinct.",
+    "href": "/library/books/ai-beyond-the-demo/migration-strategies"
+  },
+  {
+    "title": "Cost and Performance Engineering for AI",
+    "slug": "cost-and-performance",
+    "section": "ai-beyond-the-demo",
+    "description": "AI inference costs are not fixed — they are engineering decisions. Teams that treat cost and performance as afterthoughts discover at scale that they have built capabilities they cannot afford to run. Cost engineering applied early produces AI systems that are both capable and economically sustainable.",
+    "href": "/library/books/ai-beyond-the-demo/cost-and-performance"
+  },
+  {
+    "title": "Security in Agentic and AI Systems",
+    "slug": "security-for-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "AI systems introduce new attack surfaces that traditional security frameworks do not cover. Prompt injection, data exfiltration through model outputs, and autonomous agent actions create risks that require AI-specific security architecture alongside conventional security controls.",
+    "href": "/library/books/ai-beyond-the-demo/security-for-ai"
+  },
+  {
+    "title": "Observability — Seeing Inside the Black Box",
+    "slug": "observability",
+    "section": "ai-beyond-the-demo",
+    "description": "AI systems fail in ways that traditional monitoring cannot detect — gradual quality degradation, input distribution shift, hallucination clusters. Observability for AI requires instrumentation that surfaces these failures before users are affected.",
+    "href": "/library/books/ai-beyond-the-demo/observability"
+  },
+  {
+    "title": "Your AI Transition Roadmap — EA to AI EA",
+    "slug": "transition-roadmap",
+    "section": "ai-beyond-the-demo",
+    "description": "Enterprise architects who want to lead AI programs rather than be displaced by them must actively build an AI-augmented practice. This chapter is the roadmap — what to learn, what to delegate, and how to position existing EA skills as amplified rather than obsoleted by AI.",
+    "href": "/library/books/ai-beyond-the-demo/transition-roadmap"
+  },
+  {
+    "title": "What Is Agentic AI?",
+    "slug": "what-is-agentic-ai",
+    "section": "ai-beyond-the-demo",
+    "description": "Agentic AI moves beyond question-answering to goal-directed action. Understanding what agents actually are — and what distinguishes them from chatbots and automation scripts — is the prerequisite for building and evaluating them effectively.",
+    "href": "/library/books/ai-beyond-the-demo/what-is-agentic-ai"
+  },
+  {
+    "title": "Agent Anatomy — Memory, Tools, Reasoning",
+    "slug": "agent-anatomy",
+    "section": "ai-beyond-the-demo",
+    "description": "Every agent is built from the same three components: memory systems that give it context, tools that give it capability, and a reasoning loop that connects them. Understanding how these components work and interact is what distinguishes architects who build reliable agents from those who build unpredictable ones.",
+    "href": "/library/books/ai-beyond-the-demo/agent-anatomy"
+  },
+  {
+    "title": "Reasoning Patterns — ReAct, CoT, Plan-and-Execute",
+    "slug": "reasoning-patterns",
+    "section": "ai-beyond-the-demo",
+    "description": "The reasoning pattern an agent uses determines how it approaches complex tasks. Different patterns have different strengths, failure modes, and computational costs. Choosing the right reasoning pattern for the task type is as important as choosing the right model.",
+    "href": "/library/books/ai-beyond-the-demo/reasoning-patterns"
+  },
+  {
+    "title": "Tool Use — Giving Agents Access to the World",
+    "slug": "tool-use",
+    "section": "ai-beyond-the-demo",
+    "description": "Tools are what separate AI agents from AI chatbots. The design decisions in tool architecture — what tools to expose, how to define them, how to handle failures — determine whether agents are reliable enough to trust with consequential tasks.",
+    "href": "/library/books/ai-beyond-the-demo/tool-use"
+  },
+  {
+    "title": "Orchestration — Multi-Agent Systems",
+    "slug": "orchestration",
+    "section": "ai-beyond-the-demo",
+    "description": "Single agents have capability limits. Multi-agent systems — where specialized agents collaborate under orchestration — can accomplish tasks that no single agent can handle reliably. Orchestration is the architectural discipline that makes multi-agent collaboration predictable.",
+    "href": "/library/books/ai-beyond-the-demo/orchestration"
+  },
+  {
+    "title": "The Supervisor-Worker Pattern",
+    "slug": "supervisor-worker",
+    "section": "ai-beyond-the-demo",
+    "description": "The supervisor-worker pattern is the most common and most battle-tested multi-agent architecture. A supervisor agent decomposes goals and routes to specialized workers; workers execute within their domain and report back. Understanding this pattern deeply is the prerequisite for building reliable multi-agent systems.",
+    "href": "/library/books/ai-beyond-the-demo/supervisor-worker"
+  },
+  {
+    "title": "Human-in-the-Loop — When Agents Need Humans",
+    "slug": "human-in-the-loop",
+    "section": "ai-beyond-the-demo",
+    "description": "The goal of human-in-the-loop design is not to keep humans involved everywhere — it is to keep humans involved in exactly the right places. Getting this wrong in either direction produces either agents that are no better than manual processes or agents that cause harm at the speed of automation.",
+    "href": "/library/books/ai-beyond-the-demo/human-in-the-loop"
+  },
+  {
+    "title": "Deploying Agents to Production",
+    "slug": "deployment",
+    "section": "ai-beyond-the-demo",
+    "description": "Deploying an agent to production is qualitatively different from deploying a traditional application. Agents are stateful, long-running, and non-deterministic — production deployment must account for these characteristics with infrastructure patterns that traditional DevOps playbooks do not cover.",
+    "href": "/library/books/ai-beyond-the-demo/deployment"
+  },
+  {
+    "title": "The JOIN Wall — Why Relational Databases Hit Limits",
+    "slug": "the-join-wall",
+    "section": "ai-beyond-the-demo",
+    "description": "Relational databases are the backbone of enterprise data architecture — but they hit a wall when the data is highly connected and the queries require traversing many relationships. Understanding where relational databases fail explains why graph databases exist and when to use them.",
+    "href": "/library/books/ai-beyond-the-demo/the-join-wall"
+  },
+  {
+    "title": "How Graph Databases Actually Work",
+    "slug": "how-graphs-work",
+    "section": "ai-beyond-the-demo",
+    "description": "Graph databases are not mysterious. They store nodes and edges, query them with graph query languages, and optimize for traversal operations. Practitioners who understand how they work can design with them effectively rather than treating them as black boxes.",
+    "href": "/library/books/ai-beyond-the-demo/how-graphs-work"
+  },
+  {
+    "title": "Building Knowledge Graphs from Documents",
+    "slug": "knowledge-graphs-from-docs",
+    "section": "ai-beyond-the-demo",
+    "description": "Enterprise knowledge is locked in documents. Knowledge graph construction — extracting entities and relationships from unstructured text and representing them as a queryable graph — is one of the highest-value applications of LLMs for enterprise data architecture.",
+    "href": "/library/books/ai-beyond-the-demo/knowledge-graphs-from-docs"
+  },
+  {
+    "title": "GraphRAG — Beyond Vector Search",
+    "slug": "graphrag",
+    "section": "ai-beyond-the-demo",
+    "description": "Standard RAG retrieves documents by semantic similarity. GraphRAG retrieves knowledge by traversing relationships between concepts. For questions that require understanding how entities relate — not just what individual documents say — GraphRAG is the architecture that delivers where standard RAG fails.",
+    "href": "/library/books/ai-beyond-the-demo/graphrag"
+  },
+  {
+    "title": "Graph-Aware Agents",
+    "slug": "graph-aware-agents",
+    "section": "ai-beyond-the-demo",
+    "description": "Agents with access to knowledge graph tools can reason about relationships in ways that document-only agents cannot. Graph-aware agents are the architecture for enterprise AI that must navigate complex organizational, regulatory, and operational networks.",
+    "href": "/library/books/ai-beyond-the-demo/graph-aware-agents"
+  },
+  {
+    "title": "The Token Ceiling — When LLMs Hit Their Limit",
+    "slug": "the-token-ceiling",
+    "section": "ai-beyond-the-demo",
+    "description": "Language models process tokens — fragments of text. This token-based architecture imposes hard limits on reasoning depth, cross-document coherence, and concept-level abstraction. Understanding these limits is the prerequisite for knowing when LCMs offer a better path.",
+    "href": "/library/books/ai-beyond-the-demo/the-token-ceiling"
+  },
+  {
+    "title": "How Large Concept Models Work",
+    "slug": "how-lcms-work",
+    "section": "ai-beyond-the-demo",
+    "description": "Large Concept Models represent and reason about content at the concept level rather than the token level. Understanding how this works — what concepts are, how they are represented, and how LCMs reason over them — is the foundation for knowing when LCMs are the right tool.",
+    "href": "/library/books/ai-beyond-the-demo/how-lcms-work"
+  },
+  {
+    "title": "LLMs vs. LCMs — The Architectural Comparison",
+    "slug": "llm-vs-lcm",
+    "section": "ai-beyond-the-demo",
+    "description": "LLMs and LCMs make different architectural tradeoffs. Neither is universally superior — each is better suited to specific task types. The architectural comparison reveals when each is the right choice and why hybrid systems often outperform either alone.",
+    "href": "/library/books/ai-beyond-the-demo/llm-vs-lcm"
+  },
+  {
+    "title": "When LCMs Win — Enterprise Use Cases",
+    "slug": "when-lcms-win",
+    "section": "ai-beyond-the-demo",
+    "description": "LCMs are not theoretical constructs — they solve specific enterprise problems that LLMs handle poorly. Knowing the use case patterns where LCMs outperform LLMs is what enables architects to deploy LCMs appropriately rather than speculatively.",
+    "href": "/library/books/ai-beyond-the-demo/when-lcms-win"
+  },
+  {
+    "title": "Hybrid Architectures — LLMs and LCMs Together",
+    "slug": "hybrid-architectures-lcm",
+    "section": "ai-beyond-the-demo",
+    "description": "The most powerful enterprise AI architectures combine LLMs and LCMs, routing each task to the model that handles it best. LCMs provide concept-level understanding of large document corpora; LLMs provide fluent generation and instruction-following. Together, they cover the full range of enterprise AI tasks.",
+    "href": "/library/books/ai-beyond-the-demo/hybrid-architectures-lcm"
+  },
+  {
+    "title": "Capstone: Research Assistant Agent",
+    "slug": "capstone-research-assistant",
+    "section": "ai-beyond-the-demo",
+    "description": "Build a multi-step research assistant agent that accepts a research question, autonomously gathers information from multiple sources, synthesizes the findings, and produces a structured research brief. This capstone integrates RAG, agentic reasoning, and tool use.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-research-assistant"
+  },
+  {
+    "title": "Capstone: Customer Support System",
+    "slug": "capstone-customer-support",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an AI customer support system that handles routine inquiries autonomously, escalates complex cases to human agents with full context, and learns from resolution patterns. This capstone integrates RAG, human-in-the-loop design, and feedback loops.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-customer-support"
+  },
+  {
+    "title": "Capstone: Data Pipeline Orchestrator",
+    "slug": "capstone-data-pipeline",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an agentic data pipeline orchestrator that monitors data quality, diagnoses failures, and orchestrates remediation steps across a multi-stage ETL pipeline. This capstone integrates agentic reasoning, tool use for data operations, and human escalation for critical failures.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-data-pipeline"
+  },
+  {
+    "title": "Capstone: Requirements-to-Test-Cases Pipeline",
+    "slug": "capstone-requirements-pipeline",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an end-to-end pipeline that takes user stories and acceptance criteria as input and produces validated test cases as output. This capstone demonstrates LLM-powered BA/QA workflows and the critical role of human review at each stage.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-requirements-pipeline"
+  },
+  {
+    "title": "Capstone: Automated BRD Analyzer",
+    "slug": "capstone-brd-analyzer",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an LLM-powered Business Requirements Document analyzer that checks for ambiguity, incompleteness, untestable requirements, and inter-requirement conflicts — and produces a prioritized remediation report for the BA team.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-brd-analyzer"
+  },
+  {
+    "title": "Capstone: Compliance Knowledge Graph",
+    "slug": "capstone-compliance-graph",
+    "section": "ai-beyond-the-demo",
+    "description": "Build a compliance knowledge graph from regulatory documents and internal policies, enabling AI-powered queries about which regulations apply to specific business activities, how internal policies satisfy regulatory requirements, and where compliance gaps exist.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-compliance-graph"
+  },
+  {
+    "title": "Capstone: Fraud Investigation Agent",
+    "slug": "capstone-fraud-investigation",
+    "section": "ai-beyond-the-demo",
+    "description": "Build a graph-aware fraud investigation agent that traverses a transaction network to identify fraud rings, assess connection strength between flagged and known-fraudulent entities, and produce investigation reports for fraud analysts.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-fraud-investigation"
+  },
+  {
+    "title": "Capstone: Cross-Document Policy Synthesizer",
+    "slug": "capstone-policy-synthesizer",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an LCM-powered policy synthesizer that reads an entire policy corpus, identifies conflicts and redundancies across documents, and produces a consolidated policy brief — demonstrating LCM's advantage over LLMs for cross-document analysis at corpus scale.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-policy-synthesizer"
+  },
+  {
+    "title": "Capstone: Multilingual Intelligence Brief",
+    "slug": "capstone-multilingual-brief",
+    "section": "ai-beyond-the-demo",
+    "description": "Build an LCM-powered intelligence briefing system that processes source documents in multiple languages, reasons about them at the concept level in a language-independent representation, and produces a unified brief in the analyst's target language.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-multilingual-brief"
+  },
+  {
+    "title": "Capstone: The AI Chatbot Launch",
+    "slug": "capstone-ai-chatbot-launch",
+    "section": "ai-beyond-the-demo",
+    "description": "Plan and execute the product lifecycle for an enterprise AI chatbot — from discovery through launch and iteration. This capstone applies the full PM toolkit: value hypothesis, discovery, build vs. buy decision, evaluation framework, rollout strategy, and post-launch metrics.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-ai-chatbot-launch"
+  },
+  {
+    "title": "Capstone: Writing Your AI Strategy",
+    "slug": "capstone-writing-ai-strategy",
+    "section": "ai-beyond-the-demo",
+    "description": "Produce a one-page AI strategy document for your organization — grounded in the LegacyForward framework, structured around the five strategy questions, and designed to guide investment decisions and organizational alignment rather than sit in a drawer.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-writing-ai-strategy"
+  },
+  {
+    "title": "Capstone: LLM-LCM Hybrid Reasoning Pipeline",
+    "slug": "capstone-hybrid-pipeline",
+    "section": "ai-beyond-the-demo",
+    "description": "Build a hybrid LLM-LCM pipeline that uses LCM concept-level encoding for corpus-scale document reasoning and LLM generation for final output quality — demonstrating the complementary architecture that covers the full enterprise AI task range.",
+    "href": "/library/books/ai-beyond-the-demo/capstone-hybrid-pipeline"
+  },
+  {
     "title": "Preface",
     "slug": "preface",
     "section": "ai-enterprise-architect",
@@ -1734,531 +2259,6 @@
     "section": "large-concept-models",
     "description": "Three phases — Evaluate, Pilot, Scale — converted into a concrete adoption plan. What to do this week, this quarter, and this year. A personally addressed brief for the enterprise practitioner ready to act.",
     "href": "/library/books/large-concept-models/transition-roadmap"
-  },
-  {
-    "title": "The Complete Enterprise AI Practitioner",
-    "slug": "compendium-prologue",
-    "section": "legacyforward-compendium",
-    "description": "How nine practitioner books become one sequenced journey — and how to use this compendium to navigate it.",
-    "href": "/library/books/legacyforward-compendium/compendium-prologue"
-  },
-  {
-    "title": "Why the IT Stack Determines AI Success",
-    "slug": "why-enterprise-it-matters",
-    "section": "legacyforward-compendium",
-    "description": "AI does not arrive in a clean room. It lands on top of forty years of accumulated technology decisions, and those decisions determine what is possible before a single line of AI code is written.",
-    "href": "/library/books/legacyforward-compendium/why-enterprise-it-matters"
-  },
-  {
-    "title": "The Three Layers: Record, Engagement, Intelligence",
-    "slug": "three-layers",
-    "section": "legacyforward-compendium",
-    "description": "Enterprise IT organizes into three functional layers. Understanding which layer a system lives in determines what AI can do with it, how it can access it, and what governance it inherits.",
-    "href": "/library/books/legacyforward-compendium/three-layers"
-  },
-  {
-    "title": "Legacy Systems — What They Are and Why They Stay",
-    "slug": "legacy-systems",
-    "section": "legacyforward-compendium",
-    "description": "Legacy systems are not failures. They are systems that worked well enough to become indispensable. Understanding why they stay is the prerequisite for designing AI that coexists with them.",
-    "href": "/library/books/legacyforward-compendium/legacy-systems"
-  },
-  {
-    "title": "Cloud, SaaS, and the Sprawl Problem",
-    "slug": "cloud-saas-sprawl",
-    "section": "legacyforward-compendium",
-    "description": "The modern enterprise runs on dozens of SaaS tools, multiple cloud environments, and data scattered across all of them. Understanding sprawl is not optional for AI practitioners — it is the map of the problem space.",
-    "href": "/library/books/legacyforward-compendium/cloud-saas-sprawl"
-  },
-  {
-    "title": "Data Readiness — The Prerequisite Nobody Talks About",
-    "slug": "data-readiness",
-    "section": "legacyforward-compendium",
-    "description": "Data readiness is the single most consistently underestimated factor in enterprise AI. The question is not whether you have data — every enterprise has data. The question is whether you have data the AI can use.",
-    "href": "/library/books/legacyforward-compendium/data-readiness"
-  },
-  {
-    "title": "Integration Patterns for AI-Ready Systems",
-    "slug": "integration-patterns",
-    "section": "legacyforward-compendium",
-    "description": "How AI connects to enterprise systems — the four integration patterns, when to use each, and the failure modes that appear when the wrong pattern is chosen.",
-    "href": "/library/books/legacyforward-compendium/integration-patterns"
-  },
-  {
-    "title": "Technical Debt as an AI Blocker",
-    "slug": "technical-debt-ai",
-    "section": "legacyforward-compendium",
-    "description": "Technical debt does not just slow down software development. It directly blocks AI initiatives — through inaccessible data, unreliable integrations, and missing governance infrastructure. Understanding where debt concentrates reveals where AI will struggle.",
-    "href": "/library/books/legacyforward-compendium/technical-debt-ai"
-  },
-  {
-    "title": "AI Doesn't Replace the Stack — It Runs on Top of It",
-    "slug": "ai-on-top-of-the-stack",
-    "section": "legacyforward-compendium",
-    "description": "The mental model that trips up most enterprise AI initiatives is the replacement model. AI does not replace enterprise IT — it runs on top of it, consumes its data, and returns results that flow back through it.",
-    "href": "/library/books/legacyforward-compendium/ai-on-top-of-the-stack"
-  },
-  {
-    "title": "The Coexistence Imperative — Why Rip-and-Replace Fails",
-    "slug": "coexistence-imperative",
-    "section": "legacyforward-compendium",
-    "description": "Rip-and-replace is the most expensive, highest-risk, and least successful strategy in enterprise technology. AI initiatives that require it consistently fail. Understanding why coexistence is not a compromise but an architectural requirement changes how AI is designed.",
-    "href": "/library/books/legacyforward-compendium/coexistence-imperative"
-  },
-  {
-    "title": "Finding the Signal in the Sprawl",
-    "slug": "where-to-start",
-    "section": "legacyforward-compendium",
-    "description": "Given a complex IT landscape with legacy systems, data sprawl, and accumulated technical debt, where does an AI initiative actually begin? The answer is not 'with the most ambitious use case' — it is with the clearest signal.",
-    "href": "/library/books/legacyforward-compendium/where-to-start"
-  },
-  {
-    "title": "What AI Actually Does (and What It Doesn't)",
-    "slug": "what-ai-actually-does",
-    "section": "legacyforward-compendium",
-    "description": "Before strategy, before investment, before governance — a clear-eyed account of what AI systems actually do, where they are genuinely capable, and where vendor claims exceed the technology.",
-    "href": "/library/books/legacyforward-compendium/what-ai-actually-does"
-  },
-  {
-    "title": "Why AI Projects Fail — and What Vendors Won't Tell You",
-    "slug": "why-projects-fail",
-    "section": "legacyforward-compendium",
-    "description": "The failure rate for enterprise AI projects remains stubbornly high. The causes are consistent, the warning signs are visible early, and they have almost nothing to do with the model.",
-    "href": "/library/books/legacyforward-compendium/why-projects-fail"
-  },
-  {
-    "title": "AI Strategy That Actually Works",
-    "slug": "ai-strategy",
-    "section": "legacyforward-compendium",
-    "description": "AI strategy fails when it is a collection of use case ideas. It succeeds when it connects AI capability to business value, organizational readiness, and a realistic delivery model.",
-    "href": "/library/books/legacyforward-compendium/ai-strategy"
-  },
-  {
-    "title": "Making AI Investment Decisions",
-    "slug": "investment-decisions",
-    "section": "legacyforward-compendium",
-    "description": "AI investment decisions are harder than traditional software investment decisions because the outputs are probabilistic, the costs are variable, and the value attribution is non-trivial. Here is how to make them well.",
-    "href": "/library/books/legacyforward-compendium/investment-decisions"
-  },
-  {
-    "title": "Organizational Readiness — the Human Side of AI",
-    "slug": "organizational-readiness",
-    "section": "legacyforward-compendium",
-    "description": "Technology readiness and organizational readiness are not the same thing. Organizations that are technically ready for AI but organizationally unprepared consistently fail to deliver value.",
-    "href": "/library/books/legacyforward-compendium/organizational-readiness"
-  },
-  {
-    "title": "AI Risk, Regulation, and Responsible AI",
-    "slug": "risk-governance",
-    "section": "legacyforward-compendium",
-    "description": "AI risk is not hypothetical. It is operational, reputational, and regulatory. The organizations that manage it well treat responsible AI as architecture, not as policy.",
-    "href": "/library/books/legacyforward-compendium/risk-governance"
-  },
-  {
-    "title": "Is This Worth Building? — Value Hypothesis and Portfolio Prioritization",
-    "slug": "is-this-worth-building",
-    "section": "legacyforward-compendium",
-    "description": "The most important question in AI product management is the first one: is this worth building? Most teams answer it too quickly. Here is the discipline for answering it rigorously.",
-    "href": "/library/books/legacyforward-compendium/is-this-worth-building"
-  },
-  {
-    "title": "Discovery for AI Features — Finding Real Problems",
-    "slug": "discovery-for-ai",
-    "section": "legacyforward-compendium",
-    "description": "AI product discovery is different from traditional product discovery. The questions are different, the failure modes are different, and the artifacts that come out of it are different.",
-    "href": "/library/books/legacyforward-compendium/discovery-for-ai"
-  },
-  {
-    "title": "Measuring AI Success — Metrics That Matter",
-    "slug": "measuring-success",
-    "section": "legacyforward-compendium",
-    "description": "Model metrics and business metrics are not the same thing. The organizations that measure AI success well measure what the AI does for the business, not how well the model performs in isolation.",
-    "href": "/library/books/legacyforward-compendium/measuring-success"
-  },
-  {
-    "title": "Building and Leading AI Teams",
-    "slug": "ai-teams",
-    "section": "legacyforward-compendium",
-    "description": "AI teams fail for organizational reasons more often than technical ones. The roles, the structures, and the leadership behaviors that produce AI teams that ship.",
-    "href": "/library/books/legacyforward-compendium/ai-teams"
-  },
-  {
-    "title": "How LLMs Work — No PhD Required",
-    "slug": "how-llms-work",
-    "section": "legacyforward-compendium",
-    "description": "Large language models are not magic and they are not mysterious. Understanding how they work at a functional level — what they are doing when they generate text — makes you a better practitioner whether you are a PM, BA, or engineer.",
-    "href": "/library/books/legacyforward-compendium/how-llms-work"
-  },
-  {
-    "title": "Prompt Engineering Fundamentals",
-    "slug": "prompt-engineering",
-    "section": "legacyforward-compendium",
-    "description": "Prompt engineering is not a hack or a workaround — it is the primary interface between human intent and model behavior. The practitioners who do it well ship AI that works; the ones who skip it ship AI that surprises them.",
-    "href": "/library/books/legacyforward-compendium/prompt-engineering"
-  },
-  {
-    "title": "LLM Primitives — Tokens, Context, and Temperature",
-    "slug": "llm-primitives",
-    "section": "legacyforward-compendium",
-    "description": "The building blocks that every practitioner must understand before building LLM-powered applications: tokens, context windows, embeddings, completions, and the parameters that control them.",
-    "href": "/library/books/legacyforward-compendium/llm-primitives"
-  },
-  {
-    "title": "RAG Pipelines — Giving Models Access to Your Data",
-    "slug": "rag-pipelines",
-    "section": "legacyforward-compendium",
-    "description": "Retrieval-Augmented Generation is the most impactful enterprise AI pattern available today. It solves the knowledge cutoff problem, the hallucination problem, and the proprietary data problem simultaneously.",
-    "href": "/library/books/legacyforward-compendium/rag-pipelines"
-  },
-  {
-    "title": "LLM-Powered Requirements Elicitation",
-    "slug": "requirements-elicitation",
-    "section": "legacyforward-compendium",
-    "description": "LLMs change requirements elicitation by enabling faster synthesis of stakeholder input, richer scenario exploration, and automated gap analysis. Here is how to use them without outsourcing judgment.",
-    "href": "/library/books/legacyforward-compendium/requirements-elicitation"
-  },
-  {
-    "title": "AI-Powered Test Case Generation",
-    "slug": "test-generation",
-    "section": "legacyforward-compendium",
-    "description": "Generating test cases is one of the highest-ROI applications of LLMs for QA teams. LLMs produce comprehensive test suites faster than manual authoring while surfacing edge cases that human testers miss.",
-    "href": "/library/books/legacyforward-compendium/test-generation"
-  },
-  {
-    "title": "Evaluation-Driven Development",
-    "slug": "evaluation-driven-development",
-    "section": "legacyforward-compendium",
-    "description": "AI features cannot be shipped without evaluation frameworks. Unlike traditional software, LLM outputs are probabilistic — the same code that passes unit tests today may produce different outputs tomorrow. Evaluation-driven development makes this manageable.",
-    "href": "/library/books/legacyforward-compendium/evaluation-driven-development"
-  },
-  {
-    "title": "Working with ML Engineering Teams",
-    "slug": "working-with-ml-teams",
-    "section": "legacyforward-compendium",
-    "description": "ML engineers and product practitioners speak different languages and operate under different constraints. The practitioners who learn to bridge this gap ship AI features faster and with fewer painful rework cycles.",
-    "href": "/library/books/legacyforward-compendium/working-with-ml-teams"
-  },
-  {
-    "title": "Adding AI to Existing Products",
-    "slug": "adding-ai-to-products",
-    "section": "legacyforward-compendium",
-    "description": "Most AI product work is not building new AI-native products — it is adding AI capabilities to products that already exist. The patterns for doing this well are different from greenfield AI development, and the failure modes are distinct.",
-    "href": "/library/books/legacyforward-compendium/adding-ai-to-products"
-  },
-  {
-    "title": "Data Strategy for Product Managers",
-    "slug": "data-strategy-for-pms",
-    "section": "legacyforward-compendium",
-    "description": "AI products are data products. A PM who cannot think clearly about data quality, data pipelines, and data governance cannot effectively manage an AI feature — they will be surprised by problems that were predictable from the data.",
-    "href": "/library/books/legacyforward-compendium/data-strategy-for-pms"
-  },
-  {
-    "title": "Pricing and Packaging AI Features",
-    "slug": "pricing-ai-features",
-    "section": "legacyforward-compendium",
-    "description": "AI features have fundamentally different cost structures than traditional software features — inference costs scale with usage in ways that subscription pricing models were not designed for. Getting pricing wrong can make a successful AI feature economically destructive.",
-    "href": "/library/books/legacyforward-compendium/pricing-ai-features"
-  },
-  {
-    "title": "Operating AI at Scale",
-    "slug": "operating-ai-at-scale",
-    "section": "legacyforward-compendium",
-    "description": "The operational challenges of AI at scale are categorically different from traditional software operations. Drift, degradation, and external dependency failures require monitoring and response strategies that most operations teams have never needed before.",
-    "href": "/library/books/legacyforward-compendium/operating-ai-at-scale"
-  },
-  {
-    "title": "The AI Landscape — An Architect's Map",
-    "slug": "ai-landscape-for-architects",
-    "section": "legacyforward-compendium",
-    "description": "Enterprise architects face an AI landscape that is expanding faster than any previous technology wave. This chapter provides the conceptual map architects need to orient decisions — which AI capabilities exist, how they relate to each other, and where the architectural leverage points are.",
-    "href": "/library/books/legacyforward-compendium/ai-landscape-for-architects"
-  },
-  {
-    "title": "New Building Blocks — AI Components for Your Architecture",
-    "slug": "new-building-blocks",
-    "section": "legacyforward-compendium",
-    "description": "AI-first architecture introduces a new set of components that do not exist in traditional enterprise system design — vector databases, embedding pipelines, prompt registries, evaluation harnesses. Architects who understand these building blocks design systems that work; those who do not design systems that surprise them.",
-    "href": "/library/books/legacyforward-compendium/new-building-blocks"
-  },
-  {
-    "title": "Data Architecture for AI",
-    "slug": "data-architecture-for-ai",
-    "section": "legacyforward-compendium",
-    "description": "AI capability is bounded by data architecture. The organizations that win with AI are not the ones with the most advanced models — they are the ones whose data is accessible, governable, and connected. Data architecture for AI is a strategic investment, not a technical prerequisite.",
-    "href": "/library/books/legacyforward-compendium/data-architecture-for-ai"
-  },
-  {
-    "title": "GenAI Architecture Patterns — From Chat to Enterprise",
-    "slug": "genai-architecture-patterns",
-    "section": "legacyforward-compendium",
-    "description": "Generative AI applications in the enterprise follow a small set of recurring architectural patterns. Understanding these patterns — and their tradeoffs — allows architects to match solutions to problems rather than building bespoke architectures for every use case.",
-    "href": "/library/books/legacyforward-compendium/genai-architecture-patterns"
-  },
-  {
-    "title": "MLOps and AI Governance",
-    "slug": "mlops-and-governance",
-    "section": "legacyforward-compendium",
-    "description": "MLOps is the engineering discipline that makes AI systems operable at enterprise scale. Without it, models live in notebooks and die in staging. With it, AI capabilities become reliable, auditable, and improvable production assets.",
-    "href": "/library/books/legacyforward-compendium/mlops-and-governance"
-  },
-  {
-    "title": "Responsible AI Architecture",
-    "slug": "responsible-ai-architecture",
-    "section": "legacyforward-compendium",
-    "description": "Responsible AI is not a values statement — it is an architectural property that must be designed in. Fairness, explainability, privacy, and safety are technical choices that architects make. Organizations that treat them as add-ons after deployment face remediation costs that dwarf the cost of building them correctly from the start.",
-    "href": "/library/books/legacyforward-compendium/responsible-ai-architecture"
-  },
-  {
-    "title": "Cloud Platforms for AI",
-    "slug": "cloud-platforms-for-ai",
-    "section": "legacyforward-compendium",
-    "description": "AWS, Azure, and GCP each offer distinct AI service portfolios, managed infrastructure, and native integrations. Platform choice is a long-term architectural commitment — architects who understand the tradeoffs make better decisions than those who follow market momentum.",
-    "href": "/library/books/legacyforward-compendium/cloud-platforms-for-ai"
-  },
-  {
-    "title": "Migration Strategies — AI-Enabling Existing Systems",
-    "slug": "migration-strategies",
-    "section": "legacyforward-compendium",
-    "description": "Most enterprise AI value will be extracted not from new systems but from AI-enabled existing systems. The migration strategies that make this possible are different from traditional application migration, and the failure modes are distinct.",
-    "href": "/library/books/legacyforward-compendium/migration-strategies"
-  },
-  {
-    "title": "Cost and Performance Engineering for AI",
-    "slug": "cost-and-performance",
-    "section": "legacyforward-compendium",
-    "description": "AI inference costs are not fixed — they are engineering decisions. Teams that treat cost and performance as afterthoughts discover at scale that they have built capabilities they cannot afford to run. Cost engineering applied early produces AI systems that are both capable and economically sustainable.",
-    "href": "/library/books/legacyforward-compendium/cost-and-performance"
-  },
-  {
-    "title": "Security in Agentic and AI Systems",
-    "slug": "security-for-ai",
-    "section": "legacyforward-compendium",
-    "description": "AI systems introduce new attack surfaces that traditional security frameworks do not cover. Prompt injection, data exfiltration through model outputs, and autonomous agent actions create risks that require AI-specific security architecture alongside conventional security controls.",
-    "href": "/library/books/legacyforward-compendium/security-for-ai"
-  },
-  {
-    "title": "Observability — Seeing Inside the Black Box",
-    "slug": "observability",
-    "section": "legacyforward-compendium",
-    "description": "AI systems fail in ways that traditional monitoring cannot detect — gradual quality degradation, input distribution shift, hallucination clusters. Observability for AI requires instrumentation that surfaces these failures before users are affected.",
-    "href": "/library/books/legacyforward-compendium/observability"
-  },
-  {
-    "title": "Your AI Transition Roadmap — EA to AI EA",
-    "slug": "transition-roadmap",
-    "section": "legacyforward-compendium",
-    "description": "Enterprise architects who want to lead AI programs rather than be displaced by them must actively build an AI-augmented practice. This chapter is the roadmap — what to learn, what to delegate, and how to position existing EA skills as amplified rather than obsoleted by AI.",
-    "href": "/library/books/legacyforward-compendium/transition-roadmap"
-  },
-  {
-    "title": "What Is Agentic AI?",
-    "slug": "what-is-agentic-ai",
-    "section": "legacyforward-compendium",
-    "description": "Agentic AI moves beyond question-answering to goal-directed action. Understanding what agents actually are — and what distinguishes them from chatbots and automation scripts — is the prerequisite for building and evaluating them effectively.",
-    "href": "/library/books/legacyforward-compendium/what-is-agentic-ai"
-  },
-  {
-    "title": "Agent Anatomy — Memory, Tools, Reasoning",
-    "slug": "agent-anatomy",
-    "section": "legacyforward-compendium",
-    "description": "Every agent is built from the same three components: memory systems that give it context, tools that give it capability, and a reasoning loop that connects them. Understanding how these components work and interact is what distinguishes architects who build reliable agents from those who build unpredictable ones.",
-    "href": "/library/books/legacyforward-compendium/agent-anatomy"
-  },
-  {
-    "title": "Reasoning Patterns — ReAct, CoT, Plan-and-Execute",
-    "slug": "reasoning-patterns",
-    "section": "legacyforward-compendium",
-    "description": "The reasoning pattern an agent uses determines how it approaches complex tasks. Different patterns have different strengths, failure modes, and computational costs. Choosing the right reasoning pattern for the task type is as important as choosing the right model.",
-    "href": "/library/books/legacyforward-compendium/reasoning-patterns"
-  },
-  {
-    "title": "Tool Use — Giving Agents Access to the World",
-    "slug": "tool-use",
-    "section": "legacyforward-compendium",
-    "description": "Tools are what separate AI agents from AI chatbots. The design decisions in tool architecture — what tools to expose, how to define them, how to handle failures — determine whether agents are reliable enough to trust with consequential tasks.",
-    "href": "/library/books/legacyforward-compendium/tool-use"
-  },
-  {
-    "title": "Orchestration — Multi-Agent Systems",
-    "slug": "orchestration",
-    "section": "legacyforward-compendium",
-    "description": "Single agents have capability limits. Multi-agent systems — where specialized agents collaborate under orchestration — can accomplish tasks that no single agent can handle reliably. Orchestration is the architectural discipline that makes multi-agent collaboration predictable.",
-    "href": "/library/books/legacyforward-compendium/orchestration"
-  },
-  {
-    "title": "The Supervisor-Worker Pattern",
-    "slug": "supervisor-worker",
-    "section": "legacyforward-compendium",
-    "description": "The supervisor-worker pattern is the most common and most battle-tested multi-agent architecture. A supervisor agent decomposes goals and routes to specialized workers; workers execute within their domain and report back. Understanding this pattern deeply is the prerequisite for building reliable multi-agent systems.",
-    "href": "/library/books/legacyforward-compendium/supervisor-worker"
-  },
-  {
-    "title": "Human-in-the-Loop — When Agents Need Humans",
-    "slug": "human-in-the-loop",
-    "section": "legacyforward-compendium",
-    "description": "The goal of human-in-the-loop design is not to keep humans involved everywhere — it is to keep humans involved in exactly the right places. Getting this wrong in either direction produces either agents that are no better than manual processes or agents that cause harm at the speed of automation.",
-    "href": "/library/books/legacyforward-compendium/human-in-the-loop"
-  },
-  {
-    "title": "Deploying Agents to Production",
-    "slug": "deployment",
-    "section": "legacyforward-compendium",
-    "description": "Deploying an agent to production is qualitatively different from deploying a traditional application. Agents are stateful, long-running, and non-deterministic — production deployment must account for these characteristics with infrastructure patterns that traditional DevOps playbooks do not cover.",
-    "href": "/library/books/legacyforward-compendium/deployment"
-  },
-  {
-    "title": "The JOIN Wall — Why Relational Databases Hit Limits",
-    "slug": "the-join-wall",
-    "section": "legacyforward-compendium",
-    "description": "Relational databases are the backbone of enterprise data architecture — but they hit a wall when the data is highly connected and the queries require traversing many relationships. Understanding where relational databases fail explains why graph databases exist and when to use them.",
-    "href": "/library/books/legacyforward-compendium/the-join-wall"
-  },
-  {
-    "title": "How Graph Databases Actually Work",
-    "slug": "how-graphs-work",
-    "section": "legacyforward-compendium",
-    "description": "Graph databases are not mysterious. They store nodes and edges, query them with graph query languages, and optimize for traversal operations. Practitioners who understand how they work can design with them effectively rather than treating them as black boxes.",
-    "href": "/library/books/legacyforward-compendium/how-graphs-work"
-  },
-  {
-    "title": "Building Knowledge Graphs from Documents",
-    "slug": "knowledge-graphs-from-docs",
-    "section": "legacyforward-compendium",
-    "description": "Enterprise knowledge is locked in documents. Knowledge graph construction — extracting entities and relationships from unstructured text and representing them as a queryable graph — is one of the highest-value applications of LLMs for enterprise data architecture.",
-    "href": "/library/books/legacyforward-compendium/knowledge-graphs-from-docs"
-  },
-  {
-    "title": "GraphRAG — Beyond Vector Search",
-    "slug": "graphrag",
-    "section": "legacyforward-compendium",
-    "description": "Standard RAG retrieves documents by semantic similarity. GraphRAG retrieves knowledge by traversing relationships between concepts. For questions that require understanding how entities relate — not just what individual documents say — GraphRAG is the architecture that delivers where standard RAG fails.",
-    "href": "/library/books/legacyforward-compendium/graphrag"
-  },
-  {
-    "title": "Graph-Aware Agents",
-    "slug": "graph-aware-agents",
-    "section": "legacyforward-compendium",
-    "description": "Agents with access to knowledge graph tools can reason about relationships in ways that document-only agents cannot. Graph-aware agents are the architecture for enterprise AI that must navigate complex organizational, regulatory, and operational networks.",
-    "href": "/library/books/legacyforward-compendium/graph-aware-agents"
-  },
-  {
-    "title": "The Token Ceiling — When LLMs Hit Their Limit",
-    "slug": "the-token-ceiling",
-    "section": "legacyforward-compendium",
-    "description": "Language models process tokens — fragments of text. This token-based architecture imposes hard limits on reasoning depth, cross-document coherence, and concept-level abstraction. Understanding these limits is the prerequisite for knowing when LCMs offer a better path.",
-    "href": "/library/books/legacyforward-compendium/the-token-ceiling"
-  },
-  {
-    "title": "How Large Concept Models Work",
-    "slug": "how-lcms-work",
-    "section": "legacyforward-compendium",
-    "description": "Large Concept Models represent and reason about content at the concept level rather than the token level. Understanding how this works — what concepts are, how they are represented, and how LCMs reason over them — is the foundation for knowing when LCMs are the right tool.",
-    "href": "/library/books/legacyforward-compendium/how-lcms-work"
-  },
-  {
-    "title": "LLMs vs. LCMs — The Architectural Comparison",
-    "slug": "llm-vs-lcm",
-    "section": "legacyforward-compendium",
-    "description": "LLMs and LCMs make different architectural tradeoffs. Neither is universally superior — each is better suited to specific task types. The architectural comparison reveals when each is the right choice and why hybrid systems often outperform either alone.",
-    "href": "/library/books/legacyforward-compendium/llm-vs-lcm"
-  },
-  {
-    "title": "When LCMs Win — Enterprise Use Cases",
-    "slug": "when-lcms-win",
-    "section": "legacyforward-compendium",
-    "description": "LCMs are not theoretical constructs — they solve specific enterprise problems that LLMs handle poorly. Knowing the use case patterns where LCMs outperform LLMs is what enables architects to deploy LCMs appropriately rather than speculatively.",
-    "href": "/library/books/legacyforward-compendium/when-lcms-win"
-  },
-  {
-    "title": "Hybrid Architectures — LLMs and LCMs Together",
-    "slug": "hybrid-architectures-lcm",
-    "section": "legacyforward-compendium",
-    "description": "The most powerful enterprise AI architectures combine LLMs and LCMs, routing each task to the model that handles it best. LCMs provide concept-level understanding of large document corpora; LLMs provide fluent generation and instruction-following. Together, they cover the full range of enterprise AI tasks.",
-    "href": "/library/books/legacyforward-compendium/hybrid-architectures-lcm"
-  },
-  {
-    "title": "Capstone: Research Assistant Agent",
-    "slug": "capstone-research-assistant",
-    "section": "legacyforward-compendium",
-    "description": "Build a multi-step research assistant agent that accepts a research question, autonomously gathers information from multiple sources, synthesizes the findings, and produces a structured research brief. This capstone integrates RAG, agentic reasoning, and tool use.",
-    "href": "/library/books/legacyforward-compendium/capstone-research-assistant"
-  },
-  {
-    "title": "Capstone: Customer Support System",
-    "slug": "capstone-customer-support",
-    "section": "legacyforward-compendium",
-    "description": "Build an AI customer support system that handles routine inquiries autonomously, escalates complex cases to human agents with full context, and learns from resolution patterns. This capstone integrates RAG, human-in-the-loop design, and feedback loops.",
-    "href": "/library/books/legacyforward-compendium/capstone-customer-support"
-  },
-  {
-    "title": "Capstone: Data Pipeline Orchestrator",
-    "slug": "capstone-data-pipeline",
-    "section": "legacyforward-compendium",
-    "description": "Build an agentic data pipeline orchestrator that monitors data quality, diagnoses failures, and orchestrates remediation steps across a multi-stage ETL pipeline. This capstone integrates agentic reasoning, tool use for data operations, and human escalation for critical failures.",
-    "href": "/library/books/legacyforward-compendium/capstone-data-pipeline"
-  },
-  {
-    "title": "Capstone: Requirements-to-Test-Cases Pipeline",
-    "slug": "capstone-requirements-pipeline",
-    "section": "legacyforward-compendium",
-    "description": "Build an end-to-end pipeline that takes user stories and acceptance criteria as input and produces validated test cases as output. This capstone demonstrates LLM-powered BA/QA workflows and the critical role of human review at each stage.",
-    "href": "/library/books/legacyforward-compendium/capstone-requirements-pipeline"
-  },
-  {
-    "title": "Capstone: Automated BRD Analyzer",
-    "slug": "capstone-brd-analyzer",
-    "section": "legacyforward-compendium",
-    "description": "Build an LLM-powered Business Requirements Document analyzer that checks for ambiguity, incompleteness, untestable requirements, and inter-requirement conflicts — and produces a prioritized remediation report for the BA team.",
-    "href": "/library/books/legacyforward-compendium/capstone-brd-analyzer"
-  },
-  {
-    "title": "Capstone: Compliance Knowledge Graph",
-    "slug": "capstone-compliance-graph",
-    "section": "legacyforward-compendium",
-    "description": "Build a compliance knowledge graph from regulatory documents and internal policies, enabling AI-powered queries about which regulations apply to specific business activities, how internal policies satisfy regulatory requirements, and where compliance gaps exist.",
-    "href": "/library/books/legacyforward-compendium/capstone-compliance-graph"
-  },
-  {
-    "title": "Capstone: Fraud Investigation Agent",
-    "slug": "capstone-fraud-investigation",
-    "section": "legacyforward-compendium",
-    "description": "Build a graph-aware fraud investigation agent that traverses a transaction network to identify fraud rings, assess connection strength between flagged and known-fraudulent entities, and produce investigation reports for fraud analysts.",
-    "href": "/library/books/legacyforward-compendium/capstone-fraud-investigation"
-  },
-  {
-    "title": "Capstone: Cross-Document Policy Synthesizer",
-    "slug": "capstone-policy-synthesizer",
-    "section": "legacyforward-compendium",
-    "description": "Build an LCM-powered policy synthesizer that reads an entire policy corpus, identifies conflicts and redundancies across documents, and produces a consolidated policy brief — demonstrating LCM's advantage over LLMs for cross-document analysis at corpus scale.",
-    "href": "/library/books/legacyforward-compendium/capstone-policy-synthesizer"
-  },
-  {
-    "title": "Capstone: Multilingual Intelligence Brief",
-    "slug": "capstone-multilingual-brief",
-    "section": "legacyforward-compendium",
-    "description": "Build an LCM-powered intelligence briefing system that processes source documents in multiple languages, reasons about them at the concept level in a language-independent representation, and produces a unified brief in the analyst's target language.",
-    "href": "/library/books/legacyforward-compendium/capstone-multilingual-brief"
-  },
-  {
-    "title": "Capstone: The AI Chatbot Launch",
-    "slug": "capstone-ai-chatbot-launch",
-    "section": "legacyforward-compendium",
-    "description": "Plan and execute the product lifecycle for an enterprise AI chatbot — from discovery through launch and iteration. This capstone applies the full PM toolkit: value hypothesis, discovery, build vs. buy decision, evaluation framework, rollout strategy, and post-launch metrics.",
-    "href": "/library/books/legacyforward-compendium/capstone-ai-chatbot-launch"
-  },
-  {
-    "title": "Capstone: Writing Your AI Strategy",
-    "slug": "capstone-writing-ai-strategy",
-    "section": "legacyforward-compendium",
-    "description": "Produce a one-page AI strategy document for your organization — grounded in the LegacyForward framework, structured around the five strategy questions, and designed to guide investment decisions and organizational alignment rather than sit in a drawer.",
-    "href": "/library/books/legacyforward-compendium/capstone-writing-ai-strategy"
-  },
-  {
-    "title": "Capstone: LLM-LCM Hybrid Reasoning Pipeline",
-    "slug": "capstone-hybrid-pipeline",
-    "section": "legacyforward-compendium",
-    "description": "Build a hybrid LLM-LCM pipeline that uses LCM concept-level encoding for corpus-scale document reasoning and LLM generation for final output quality — demonstrating the complementary architecture that covers the full enterprise AI task range.",
-    "href": "/library/books/legacyforward-compendium/capstone-hybrid-pipeline"
   },
   {
     "title": "From Chaos to Clarity",

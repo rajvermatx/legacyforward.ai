@@ -35,7 +35,7 @@ const sectionHrefMap = {
   "enterprise-it-101": (slug) => `/library/books/enterprise-it-101/${slug}`,
   "legacyforward-guide": (slug) => `/library/books/legacyforward-guide/${slug}`,
   "large-concept-models": (slug) => `/library/books/large-concept-models/${slug}`,
-  "legacyforward-compendium": (slug) => `/library/books/legacyforward-compendium/${slug}`,
+  "ai-beyond-the-demo": (slug) => `/library/books/ai-beyond-the-demo/${slug}`,
   // Cheatsheets
   cheatsheets: (slug) => `/library/cheatsheets/${slug}`,
   // Static (skipped intentionally — see legacyforward-guide, substack)

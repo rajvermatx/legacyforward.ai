@@ -24,7 +24,7 @@ const sectionHrefMap: Record<string, (slug: string) => string> = {
   "enterprise-it-101": (slug) => `/library/books/enterprise-it-101/${slug}`,
   "legacyforward-guide": (slug) => `/library/books/legacyforward-guide/${slug}`,
   "large-concept-models": (slug) => `/library/books/large-concept-models/${slug}`,
-  "legacyforward-compendium": (slug) => `/library/books/legacyforward-compendium/${slug}`,
+  "ai-beyond-the-demo": (slug) => `/library/books/ai-beyond-the-demo/${slug}`,
   cheatsheets: (slug) => `/library/cheatsheets/${slug}`,
 };
 
@@ -48,7 +48,7 @@ const staticPages = [
   "/library/books/enterprise-it-101",
   "/library/books/legacyforward-guide",
   "/library/books/large-concept-models",
-  "/library/books/legacyforward-compendium",
+  "/library/books/ai-beyond-the-demo",
   "/library/toolkit",
   "/library/toolkit/blueprints",
   "/library/toolkit/agentic-designs",
