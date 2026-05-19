@@ -19,7 +19,7 @@ const bookDefs: Record<string, BookDef> = {
   "the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal", accentColor: "amber" },
   "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework", accentColor: "teal" },
   "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models", accentColor: "violet" },
-  "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "LegacyForward: AI Beyond the Demo", accentColor: "violet" },
+  "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "AI Beyond the Demo", accentColor: "violet" },
 };
 
 export async function generateStaticParams() {

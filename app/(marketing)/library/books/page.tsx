@@ -18,7 +18,7 @@ const bookDefs = [
   { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal", desc: "How enterprise IT actually works — legacy systems, IT sprawl, cloud, APIs, and where AI lands.", href: "/library/books/the-stack-beneath-the-signal", audience: "All Practitioners", color: "bg-amber-500" },
   { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework", desc: "Signal Capture, Grounded Delivery, and Legacy Coexistence — the three-pillar framework for enterprise AI transformation.", href: "/library/books/ai-beyond-the-demo-guide", audience: "All Roles", color: "bg-teal-600" },
   { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models", desc: "Concept-space reasoning and the next generation of enterprise AI — SONAR embeddings, hybrid architectures, and transition roadmap.", href: "/library/books/beyond-llms-large-concept-models", audience: "Architects & Engineers", color: "bg-violet-600" },
-  { section: "ai-beyond-the-demo", title: "LegacyForward: AI Beyond the Demo", desc: "How AI Actually Works in Enterprises — 62 chapters synthesizing all nine practitioner books into a single sequenced journey.", href: "/library/books/ai-beyond-the-demo", audience: "All Practitioners", color: "bg-violet-700" },
+  { section: "ai-beyond-the-demo", title: "AI Beyond the Demo", desc: "How AI Actually Works in Enterprises — 62 chapters synthesizing all nine practitioner books into a single sequenced journey.", href: "/library/books/ai-beyond-the-demo", audience: "All Practitioners", color: "bg-violet-700" },
 ];
 
 function getBookStats() {
