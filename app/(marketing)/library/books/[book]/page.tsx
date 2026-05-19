@@ -10,15 +10,15 @@ interface BookDef {
 }
 
 const bookDefs: Record<string, BookDef> = {
-  "agenticai": { section: "agenticai", title: "Agentic AI: Build, Ship, Portfolio", accentColor: "teal" },
-  "ai-leaders": { section: "ai-leaders", title: "AI for Business Leaders", accentColor: "violet" },
-  "ai-pm": { section: "ai-pm", title: "AI Product Management", accentColor: "blue" },
-  "ai-enterprise-architect": { section: "ai-enterprise-architect", title: "The AI-First Enterprise", accentColor: "purple" },
-  "llm-ba-qa": { section: "llm-ba-qa", title: "The Analyst's AI Toolkit", accentColor: "green" },
-  "graph-ai": { section: "graph-ai", title: "Graph Databases for AI", accentColor: "rose" },
-  "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained", accentColor: "amber" },
-  "legacyforward-guide": { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation", accentColor: "teal" },
-  "large-concept-models": { section: "large-concept-models", title: "Large Concept Models: The Practitioner's Guide to Concept-Level AI for Enterprise Teams", accentColor: "violet" },
+  "building-agentic-ai-systems": { section: "building-agentic-ai-systems", title: "Building Agentic AI Systems", accentColor: "teal" },
+  "leading-ai-real-enterprise": { section: "leading-ai-real-enterprise", title: "Leading AI in the Real Enterprise", accentColor: "violet" },
+  "building-ai-products-that-ship": { section: "building-ai-products-that-ship", title: "Building AI Products That Ship", accentColor: "blue" },
+  "architecting-ai-real-enterprise": { section: "architecting-ai-real-enterprise", title: "Architecting AI in the Real Enterprise", accentColor: "purple" },
+  "ai-for-analysts-and-qa": { section: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams", accentColor: "green" },
+  "knowledge-graphs-enterprise-ai": { section: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI", accentColor: "rose" },
+  "the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal", accentColor: "amber" },
+  "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "AI Beyond the Demo", accentColor: "teal" },
+  "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models", accentColor: "violet" },
   "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "LegacyForward: AI Beyond the Demo", accentColor: "violet" },
 };
 

@@ -119,13 +119,13 @@ export default function LibraryPage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {[
-              { slug: "ai-leaders", title: "AI for Business Leaders", audience: "Executives", color: "border-amber-500" },
-              { slug: "ai-pm", title: "AI Product Management", audience: "Product Managers", color: "border-blue-500" },
-              { slug: "ai-enterprise-architect", title: "The AI-First Enterprise", audience: "Architects", color: "border-purple-500" },
-              { slug: "agenticai", title: "Agentic AI: Build, Ship, Portfolio", audience: "Engineers", color: "border-teal-500" },
-              { slug: "llm-ba-qa", title: "The Analyst's AI Toolkit", audience: "BAs & QAs", color: "border-green-500" },
-              { slug: "graph-ai", title: "Graph Databases for AI", audience: "Data Practitioners", color: "border-rose-500" },
-              { slug: "enterprise-it-101", title: "The Stack Beneath the Signal", audience: "All Practitioners", color: "border-amber-400" },
+              { slug: "leading-ai-real-enterprise", title: "Leading AI in the Real Enterprise", audience: "Executives", color: "border-amber-500" },
+              { slug: "building-ai-products-that-ship", title: "Building AI Products That Ship", audience: "Product Managers", color: "border-blue-500" },
+              { slug: "architecting-ai-real-enterprise", title: "Architecting AI in the Real Enterprise", audience: "Architects", color: "border-purple-500" },
+              { slug: "building-agentic-ai-systems", title: "Building Agentic AI Systems", audience: "Engineers", color: "border-teal-500" },
+              { slug: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams", audience: "BAs & QAs", color: "border-green-500" },
+              { slug: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI", audience: "Data Practitioners", color: "border-rose-500" },
+              { slug: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal", audience: "All Practitioners", color: "border-amber-400" },
             ].map(({ slug, title, audience, color }) => (
               <Link
                 key={slug}

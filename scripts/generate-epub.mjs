@@ -27,7 +27,7 @@ if (!existsSync(CONTENT_DIR)) {
 
 // Books whose H2 headings are already numbered in the markdown (e.g. "## 1.1 Title").
 // For these: suppress --number-sections to avoid double-numbering, and keep TOC at depth 1.
-const PRE_NUMBERED_BOOKS = new Set(['agenticai', 'graph-ai', 'llm-ba-qa', 'ai-enterprise-architect', 'ai-pm']);
+const PRE_NUMBERED_BOOKS = new Set(['building-agentic-ai-systems', 'knowledge-graphs-enterprise-ai', 'ai-for-analysts-and-qa', 'architecting-ai-real-enterprise', 'building-ai-products-that-ship']);
 
 const numberSections = !PRE_NUMBERED_BOOKS.has(section);
 const tocDepth = PRE_NUMBERED_BOOKS.has(section) ? 1 : 2;

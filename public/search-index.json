@@ -70,146 +70,6 @@
     "href": "/library/toolkit/agentic-designs/personal-finance"
   },
   {
-    "title": "Capstone 1: Research Assistant",
-    "slug": "capstone-01",
-    "section": "agenticai",
-    "description": "A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The",
-    "href": "/library/books/agenticai/capstone-01"
-  },
-  {
-    "title": "Capstone 2: Code Review Agent",
-    "slug": "capstone-02",
-    "section": "agenticai",
-    "description": "Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interp",
-    "href": "/library/books/agenticai/capstone-02"
-  },
-  {
-    "title": "Capstone 3: Customer Support System",
-    "slug": "capstone-03",
-    "section": "agenticai",
-    "description": "Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowled",
-    "href": "/library/books/agenticai/capstone-03"
-  },
-  {
-    "title": "Capstone 4: Data Pipeline Orchestrator",
-    "slug": "capstone-04",
-    "section": "agenticai",
-    "description": "Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today — each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that",
-    "href": "/library/books/agenticai/capstone-04"
-  },
-  {
-    "title": "Prologue: The LegacyForward.ai Framework",
-    "slug": "prologue",
-    "section": "agenticai",
-    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/agenticai/prologue"
-  },
-  {
-    "title": "What Is Agentic AI?",
-    "slug": "what-is-agentic-ai",
-    "section": "agenticai",
-    "description": "A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things — and the failure wasn't a bug. It was an architecture that was ",
-    "href": "/library/books/agenticai/what-is-agentic-ai"
-  },
-  {
-    "title": "LLM Primitives",
-    "slug": "llm-primitives",
-    "section": "agenticai",
-    "description": "A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never",
-    "href": "/library/books/agenticai/llm-primitives"
-  },
-  {
-    "title": "Agent Anatomy",
-    "slug": "agent-anatomy",
-    "section": "agenticai",
-    "description": "A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp; the architecture was hollow. This chapter opens the hood.",
-    "href": "/library/books/agenticai/agent-anatomy"
-  },
-  {
-    "title": "Your First Agent",
-    "slug": "first-agent",
-    "section": "agenticai",
-    "description": "An LLM that calls tools without thinking is just a random function caller with good grammar. In this chapter, you build the loop that turns a language model into something that actually reasons.",
-    "href": "/library/books/agenticai/first-agent"
-  },
-  {
-    "title": "Reasoning Patterns",
-    "slug": "reasoning-patterns",
-    "section": "agenticai",
-    "description": "Your agent from Chapter 4 can reason one step at a time. But ask it to plan a weekend trip involving flights, hotels, dietary restrictions, and a budget constraint, and it confidently books a hotel in the wrong city. The problem is not intelligence — it is the absence of structured thinking.",
-    "href": "/library/books/agenticai/reasoning-patterns"
-  },
-  {
-    "title": "Tool Use",
-    "slug": "tool-use",
-    "section": "agenticai",
-    "description": "An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist — all with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.",
-    "href": "/library/books/agenticai/tool-use"
-  },
-  {
-    "title": "Memory",
-    "slug": "memory",
-    "section": "agenticai",
-    "description": "An agent that forgets what you said three messages ago is not an assistant — it is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.",
-    "href": "/library/books/agenticai/memory"
-  },
-  {
-    "title": "RAG Pipelines",
-    "slug": "rag-pipelines",
-    "section": "agenticai",
-    "description": "A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundr",
-    "href": "/library/books/agenticai/rag-pipelines"
-  },
-  {
-    "title": "Orchestration",
-    "slug": "orchestration",
-    "section": "agenticai",
-    "description": "The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit ",
-    "href": "/library/books/agenticai/orchestration"
-  },
-  {
-    "title": "Supervisor-Worker Pattern",
-    "slug": "supervisor-worker",
-    "section": "agenticai",
-    "description": "The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the ",
-    "href": "/library/books/agenticai/supervisor-worker"
-  },
-  {
-    "title": "Human-in-the-Loop",
-    "slug": "human-in-the-loop",
-    "section": "agenticai",
-    "description": "It was 2:47 AM when the automated procurement agent placed a $2.3 million order for industrial solvents. The purchase order had passed the agent’s internal validation: the supplier was in the approved vendor list, the price-per-unit fell within historical ranges, and the requesting department had bu",
-    "href": "/library/books/agenticai/human-in-the-loop"
-  },
-  {
-    "title": "Agent Communication",
-    "slug": "agent-communication",
-    "section": "agenticai",
-    "description": "Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation",
-    "href": "/library/books/agenticai/agent-communication"
-  },
-  {
-    "title": "Observability",
-    "slug": "observability",
-    "section": "agenticai",
-    "description": "Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cit",
-    "href": "/library/books/agenticai/observability"
-  },
-  {
-    "title": "Security",
-    "slug": "security",
-    "section": "agenticai",
-    "description": "At 2:47 AM on a Tuesday, a customer service agent deployed three weeks earlier begins sending internal pricing spreadsheets to anyone who asks. The prompt injection is elegant: a user embeds an instruction inside a fake “customer complaint” that tells the agent to ignore its system prompt and instea",
-    "href": "/library/books/agenticai/security"
-  },
-  {
-    "title": "Deployment",
-    "slug": "deployment",
-    "section": "agenticai",
-    "description": "The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that st",
-    "href": "/library/books/agenticai/deployment"
-  },
-  {
     "title": "AI Beyond the Demo — How AI Actually Works in Enterprises",
     "slug": "compendium-prologue",
     "section": "ai-beyond-the-demo",
@@ -735,354 +595,466 @@
     "href": "/library/books/ai-beyond-the-demo/capstone-hybrid-pipeline"
   },
   {
-    "title": "Preface",
-    "slug": "preface",
-    "section": "ai-enterprise-architect",
-    "description": "If you are reading this, chances are you have spent the better part of your career doing something that most people outside of technology do not fully appreciate: you have been designing the...",
-    "href": "/library/books/ai-enterprise-architect/preface"
+    "title": "From Chaos to Clarity",
+    "slug": "prologue",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "Why most enterprise AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/ai-beyond-the-demo-guide/prologue"
+  },
+  {
+    "title": "Signal Capture: Finding Net New Value",
+    "slug": "signal-capture-value",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "The core question every AI initiative must answer — and the distinction between transformation and automation that most organizations get wrong.",
+    "href": "/library/books/ai-beyond-the-demo-guide/signal-capture-value"
+  },
+  {
+    "title": "Signal Capture: The Value Assessment Framework",
+    "slug": "signal-capture-framework",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "The three-stage framework for evaluating, validating, and tracking value — and the anti-patterns that destroy AI portfolios.",
+    "href": "/library/books/ai-beyond-the-demo-guide/signal-capture-framework"
+  },
+  {
+    "title": "Grounded Delivery: The Five Phases",
+    "slug": "grounded-delivery-phases",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "Why Agile breaks for AI — and the five-phase delivery methodology built for non-deterministic systems.",
+    "href": "/library/books/ai-beyond-the-demo-guide/grounded-delivery-phases"
+  },
+  {
+    "title": "Grounded Delivery: Anti-Patterns",
+    "slug": "grounded-delivery-antipatterns",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "The five delivery anti-patterns that cause AI systems to fail in production — and how to recognize them before it is too late.",
+    "href": "/library/books/ai-beyond-the-demo-guide/grounded-delivery-antipatterns"
+  },
+  {
+    "title": "Legacy Coexistence: The Five Patterns",
+    "slug": "legacy-coexistence-patterns",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "The real enterprise environment — and five architectural patterns for deploying AI alongside the systems that will never be replaced.",
+    "href": "/library/books/ai-beyond-the-demo-guide/legacy-coexistence-patterns"
+  },
+  {
+    "title": "Legacy Coexistence: Data Challenges and Anti-Patterns",
+    "slug": "legacy-coexistence-data",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "Data challenges in legacy environments and the anti-patterns that cause AI integration to fail in production.",
+    "href": "/library/books/ai-beyond-the-demo-guide/legacy-coexistence-data"
+  },
+  {
+    "title": "How the Pillars Connect: Feedback Loop and Core Principles",
+    "slug": "pillars-and-principles",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "How Signal Capture, Grounded Delivery, and Legacy Coexistence form a closed feedback loop — and the six principles that underpin everything.",
+    "href": "/library/books/ai-beyond-the-demo-guide/pillars-and-principles"
+  },
+  {
+    "title": "Quick Reference",
+    "slug": "quick-reference",
+    "section": "ai-beyond-the-demo-guide",
+    "description": "The LegacyForward.ai framework at a glance — summary tables for Signal Capture, Grounded Delivery, Legacy Coexistence, and Core Principles.",
+    "href": "/library/books/ai-beyond-the-demo-guide/quick-reference"
+  },
+  {
+    "title": "Capstone 1: Requirements-to-Test-Cases Pipeline",
+    "slug": "capstone-01",
+    "section": "ai-for-analysts-and-qa",
+    "description": "You have learned how to craft prompts, parse requirements, generate test cases, and evaluate LLM outputs. Now you will wire all of those skills into one end-to-end pipeline that ingests a raw requirements document and produces a prioritized, fully traceable test suite — ready for review and executio",
+    "href": "/library/books/ai-for-analysts-and-qa/capstone-01"
+  },
+  {
+    "title": "Capstone 2: Automated BRD Analyzer",
+    "slug": "capstone-02",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Business Requirements Documents are the foundation of every project, yet they are riddled with ambiguity, missing edge cases, and inconsistencies that only surface months later during UAT. In this capstone, you will build a tool that analyzes a BRD in minutes, producing a structured quality report t",
+    "href": "/library/books/ai-for-analysts-and-qa/capstone-02"
+  },
+  {
+    "title": "Capstone 3: Intelligent Test Suite Generator",
+    "slug": "capstone-03",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Test suites decay. New features get added without corresponding tests, defect patterns repeat in the same modules, and nobody has time to reprioritize the regression suite. In this capstone, you will build a system that generates, prioritizes, and maintains test suites by learning from your applicat",
+    "href": "/library/books/ai-for-analysts-and-qa/capstone-03"
+  },
+  {
+    "title": "Capstone 4: AI-Powered Sprint Assistant",
+    "slug": "capstone-04",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Sprint ceremonies consume hours every week — planning poker drags on, standup notes get lost, retrospective action items go untracked, and cross-team dependencies slip through the cracks. In this capstone, you will build an assistant that automates the tedious parts of sprint management so teams can",
+    "href": "/library/books/ai-for-analysts-and-qa/capstone-04"
   },
   {
     "title": "Prologue: The LegacyForward.ai Framework",
     "slug": "prologue",
-    "section": "ai-enterprise-architect",
+    "section": "ai-for-analysts-and-qa",
     "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/ai-enterprise-architect/prologue"
+    "href": "/library/books/ai-for-analysts-and-qa/prologue"
+  },
+  {
+    "title": "Chapter 1: Why LLMs Matter for BAs and QAs",
+    "slug": "why-llms-matter",
+    "section": "ai-for-analysts-and-qa",
+    "description": "A Business Analyst who can harness Large Language Models doesn't just work faster — they think differently about what's possible. In this opening chapter, we explore why LLMs represent the most significant shift in analyst productivity since the spreadsheet, and why BAs and QAs are uniquely position",
+    "href": "/library/books/ai-for-analysts-and-qa/why-llms-matter"
+  },
+  {
+    "title": "Chapter 2: How LLMs Work (No PhD Required)",
+    "slug": "how-llms-work",
+    "section": "ai-for-analysts-and-qa",
+    "description": "You don't need to understand how an engine works to drive a car — but a driver who understands the basics makes better decisions on the road. This chapter gives you the practical understanding of LLM internals that will make you a more effective prompt engineer, a better judge of model outputs, and ",
+    "href": "/library/books/ai-for-analysts-and-qa/how-llms-work"
+  },
+  {
+    "title": "Chapter 3: Prompt Engineering Fundamentals",
+    "slug": "prompt-engineering",
+    "section": "ai-for-analysts-and-qa",
+    "description": "The difference between a mediocre LLM output and a brilliant one almost never lies in the model — it lies in the prompt. Prompt engineering is the single most important skill for any analyst working with LLMs, and the good news is that it builds directly on skills you already have: clear communicati",
+    "href": "/library/books/ai-for-analysts-and-qa/prompt-engineering"
+  },
+  {
+    "title": "Chapter 4: Your First LLM-Powered Workflow",
+    "slug": "first-llm-workflow",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Theory without practice is empty. In this chapter, you'll move from prompting in a chat window to building a repeatable, automated LLM workflow that you can run with a single command. By the end, you'll have a working Requirements Analyzer that reads a requirements document, evaluates each requireme",
+    "href": "/library/books/ai-for-analysts-and-qa/first-llm-workflow"
+  },
+  {
+    "title": "Chapter 5: Requirements Elicitation and Analysis",
+    "slug": "requirements-elicitation",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Requirements are the foundation of every successful project — and the source of most project failures. In this chapter you will learn how to harness LLMs to extract, classify, validate, and trace requirements at speeds and consistency levels that manual analysis cannot match.",
+    "href": "/library/books/ai-for-analysts-and-qa/requirements-elicitation"
+  },
+  {
+    "title": "User Stories & Process Modeling",
+    "slug": "user-stories-process-modeling",
+    "section": "ai-for-analysts-and-qa",
+    "description": "From translating business requirements into sprint-ready user stories, to extracting and optimising formal BPMN process models — this chapter covers the two core BA deliverables that turn analysis into actionable work. You will build an Agile Story Generator and a Process Discovery Engine.",
+    "href": "/library/books/ai-for-analysts-and-qa/user-stories-process-modeling"
+  },
+  {
+    "title": "Chapter 7: Stakeholder Communication and Reporting",
+    "slug": "stakeholder-communication",
+    "section": "ai-for-analysts-and-qa",
+    "description": "The best analysis in the world is worthless if it cannot be communicated effectively. In this chapter you will learn how to use LLMs to generate executive summaries, translate between technical and business language, automate status reports, extract action items from meetings, draft presentation dec",
+    "href": "/library/books/ai-for-analysts-and-qa/stakeholder-communication"
+  },
+  {
+    "title": "Test Case Generation",
+    "slug": "test-case-generation",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Writing test cases is the most time-consuming activity in the QA lifecycle — yet most test cases follow predictable patterns that an LLM can generate in seconds. In this chapter, you will build a system that reads a requirement and produces comprehensive, categorized test cases automatically.",
+    "href": "/library/books/ai-for-analysts-and-qa/test-case-generation"
+  },
+  {
+    "title": "Test Data and Scenario Design",
+    "slug": "test-data-design",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Good tests are only as good as the data behind them. In this chapter, you will learn how to use LLMs to generate realistic synthetic test data, discover hidden edge cases, build persona-driven test scenarios, and handle the critical challenge of data privacy — all without ever touching production da",
+    "href": "/library/books/ai-for-analysts-and-qa/test-data-design"
+  },
+  {
+    "title": "Defect Analysis & Regression Testing",
+    "slug": "defect-analysis-regression-testing",
+    "section": "ai-for-analysts-and-qa",
+    "description": "From triaging a chaotic defect backlog to generating self-healing regression suites — this chapter covers the full defect lifecycle. You will build a Defect Triage Assistant that classifies, deduplicates, and prioritizes bugs, then a Smart Regression Suite that generates, heals, and maintains tests automatically.",
+    "href": "/library/books/ai-for-analysts-and-qa/defect-analysis-regression-testing"
+  },
+  {
+    "title": "RAG for Enterprise Knowledge",
+    "slug": "rag-enterprise",
+    "section": "ai-for-analysts-and-qa",
+    "description": "Every enterprise sits on a mountain of knowledge locked inside wikis, SharePoint sites, Confluence pages, PDF policies, and Slack threads. Employees spend 20% of their workweek searching for information they know exists somewhere. Retrieval-Augmented Generation (RAG) unlocks that mountain by letting",
+    "href": "/library/books/ai-for-analysts-and-qa/rag-enterprise"
+  },
+  {
+    "title": "Building Custom AI Assistants",
+    "slug": "custom-assistants",
+    "section": "ai-for-analysts-and-qa",
+    "description": "One-off prompts are powerful, but they hit a ceiling. You type a prompt, get a response, copy-paste it somewhere, and start over. A custom AI assistant, by contrast, remembers context, calls external tools, follows multi-step workflows, and integrates into the systems your team already uses. In this",
+    "href": "/library/books/ai-for-analysts-and-qa/custom-assistants"
+  },
+  {
+    "title": "Evaluating and Validating LLM Outputs",
+    "slug": "evaluating-outputs",
+    "section": "ai-for-analysts-and-qa",
+    "description": "An LLM that sounds authoritative is not the same as an LLM that is correct. Every analyst who has used ChatGPT has experienced the unsettling moment when a perfectly fluent, well-structured response turns out to be confidently wrong. In production workflows where LLM outputs feed into business decis",
+    "href": "/library/books/ai-for-analysts-and-qa/evaluating-outputs"
+  },
+  {
+    "title": "Preface",
+    "slug": "preface",
+    "section": "ai-enterprise-architect",
+    "description": "If you are reading this, chances are you have spent the better part of your career doing something that most people outside of technology do not fully appreciate: you have been designing the...",
+    "href": "/library/books/architecting-ai-real-enterprise/preface"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "architecting-ai-real-enterprise",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/architecting-ai-real-enterprise/prologue"
   },
   {
     "title": "Why AI Changes Everything for Enterprise Architecture",
     "slug": "why-ai-changes-everything",
     "section": "ai-enterprise-architect",
     "description": "If you’ve been working in enterprise architecture for any meaningful stretch of time, you’ve lived through several tectonic shifts. You were there when mainframes gave way to client-server models,...",
-    "href": "/library/books/ai-enterprise-architect/why-ai-changes-everything"
+    "href": "/library/books/architecting-ai-real-enterprise/why-ai-changes-everything"
   },
   {
     "title": "The AI Landscape — An Architect’s Map",
     "slug": "ai-landscape-for-architects",
     "section": "ai-enterprise-architect",
     "description": "If you’ve been in enterprise architecture for any length of time, you’ve lived through waves of technology hype before. You saw it with cloud computing, with microservices, with blockchain, and now...",
-    "href": "/library/books/ai-enterprise-architect/ai-landscape-for-architects"
+    "href": "/library/books/architecting-ai-real-enterprise/ai-landscape-for-architects"
   },
   {
     "title": "New Building Blocks — AI Components for Your Architecture",
     "slug": "new-building-blocks",
     "section": "ai-enterprise-architect",
     "description": "Over the course of your career as an enterprise architect, you have built up a mental library of components that you instinctively reach for when designing systems. Databases, message queues, API...",
-    "href": "/library/books/ai-enterprise-architect/new-building-blocks"
+    "href": "/library/books/architecting-ai-real-enterprise/new-building-blocks"
   },
   {
     "title": "Data Architecture for AI",
     "slug": "data-architecture-for-ai",
     "section": "ai-enterprise-architect",
     "description": "If you’ve been working in enterprise architecture for any length of time, you already have a data architecture. You have data warehouses humming along, data lakes that may or may not be...",
-    "href": "/library/books/ai-enterprise-architect/data-architecture-for-ai"
+    "href": "/library/books/architecting-ai-real-enterprise/data-architecture-for-ai"
   },
   {
     "title": "AI Integration Patterns",
     "slug": "ai-integration-patterns",
     "section": "ai-enterprise-architect",
     "description": "Let’s start with a reality check. Your enterprise already has hundreds of systems in production — ERPs, CRMs, data warehouses, customer portals, internal tools, and probably a few legacy monoliths...",
-    "href": "/library/books/ai-enterprise-architect/ai-integration-patterns"
+    "href": "/library/books/architecting-ai-real-enterprise/ai-integration-patterns"
   },
   {
     "title": "MLOps and AI Governance",
     "slug": "mlops-and-governance",
     "section": "ai-enterprise-architect",
     "description": "If you’ve spent any time in enterprise software, you already know the value of CI/CD. You wouldn’t dream of pushing code to production without automated builds, tests, and deployment pipelines. So...",
-    "href": "/library/books/ai-enterprise-architect/mlops-and-governance"
+    "href": "/library/books/architecting-ai-real-enterprise/mlops-and-governance"
   },
   {
     "title": "Responsible AI Architecture",
     "slug": "responsible-ai-architecture",
     "section": "ai-enterprise-architect",
     "description": "Let me be direct about something that too many organizations get wrong: responsible AI is not a compliance checkbox, and it is not a slide deck you dust off when the board asks uncomfortable...",
-    "href": "/library/books/ai-enterprise-architect/responsible-ai-architecture"
+    "href": "/library/books/architecting-ai-real-enterprise/responsible-ai-architecture"
   },
   {
     "title": "Cloud Platforms for AI",
     "slug": "cloud-platforms-for-ai",
     "section": "ai-enterprise-architect",
     "description": "Every enterprise architect eventually faces a question that carries more weight than it might first appear: which cloud platform should we build our AI strategy on? It is a decision that affects...",
-    "href": "/library/books/ai-enterprise-architect/cloud-platforms-for-ai"
+    "href": "/library/books/architecting-ai-real-enterprise/cloud-platforms-for-ai"
   },
   {
     "title": "Migration Strategies — AI-Enabling Your Existing Systems",
     "slug": "migration-strategies",
     "section": "ai-enterprise-architect",
     "description": "Nobody gets to build an AI-native enterprise from a blank slate. You have legacy systems that were architected years ago under entirely different assumptions. You have technical debt that accumulated...",
-    "href": "/library/books/ai-enterprise-architect/migration-strategies"
+    "href": "/library/books/architecting-ai-real-enterprise/migration-strategies"
   },
   {
     "title": "GenAI Architecture Patterns — From Chat to Enterprise",
     "slug": "genai-architectures",
     "section": "ai-enterprise-architect",
     "description": "When you first sit down to build something with a large language model, the sheer number of possible architectures can feel overwhelming. Should you just call an API? Do you need a vector database?...",
-    "href": "/library/books/ai-enterprise-architect/genai-architectures"
+    "href": "/library/books/architecting-ai-real-enterprise/genai-architectures"
   },
   {
     "title": "AI Agents and Orchestration — The Architect’s Guide",
     "slug": "ai-agents-and-orchestration",
     "section": "ai-enterprise-architect",
     "description": "If you spent the last decade designing microservices, wrestling with API gateways, and untangling event-driven architectures, you already have the instincts you need for what comes next. Chapter 3...",
-    "href": "/library/books/ai-enterprise-architect/ai-agents-and-orchestration"
+    "href": "/library/books/architecting-ai-real-enterprise/ai-agents-and-orchestration"
   },
   {
     "title": "Cost and Performance Engineering for AI",
     "slug": "cost-and-performance",
     "section": "ai-enterprise-architect",
     "description": "A fintech company launched a GenAI-powered feature, and it was an instant hit. Users loved the experience, adoption curves looked beautiful, and the product team was celebrating. Then the first...",
-    "href": "/library/books/ai-enterprise-architect/cost-and-performance"
+    "href": "/library/books/architecting-ai-real-enterprise/cost-and-performance"
   },
   {
     "title": "Organizational Change — Leading the AI Transformation",
     "slug": "organizational-change",
     "section": "ai-enterprise-architect",
     "description": "You can design the perfect AI architecture. You can pick the right models, build an elegant RAG pipeline, set up a gateway that routes requests with sub-second latency, and implement monitoring that...",
-    "href": "/library/books/ai-enterprise-architect/organizational-change"
+    "href": "/library/books/architecting-ai-real-enterprise/organizational-change"
   },
   {
     "title": "Case Studies — AI Architecture in the Real World",
     "slug": "case-studies",
     "section": "ai-enterprise-architect",
     "description": "There is no substitute for learning from other people’s mistakes — or their hard-won successes. The case studies in this chapter are composites, drawn from real enterprise AI transformations I have...",
-    "href": "/library/books/ai-enterprise-architect/case-studies"
+    "href": "/library/books/architecting-ai-real-enterprise/case-studies"
   },
   {
     "title": "Your Transition Roadmap — From EA to AI EA",
     "slug": "your-transition-roadmap",
     "section": "ai-enterprise-architect",
     "description": "We have spent fourteen chapters talking about technology, architecture patterns, governance frameworks, and organizational design. All of that was about transforming your enterprise. This final...",
-    "href": "/library/books/ai-enterprise-architect/your-transition-roadmap"
+    "href": "/library/books/architecting-ai-real-enterprise/your-transition-roadmap"
   },
   {
     "title": "Appendix: Reference Architectures",
     "slug": "appendix-reference-architectures",
     "section": "ai-enterprise-architect",
     "description": "This appendix presents ten reference architectures for common enterprise AI use cases. Each diagram shows the key components, data flows, and integration points that an AI Enterprise Architect needs...",
-    "href": "/library/books/ai-enterprise-architect/appendix-reference-architectures"
+    "href": "/library/books/architecting-ai-real-enterprise/appendix-reference-architectures"
+  },
+  {
+    "title": "Capstone 1: Cross-Document Policy Synthesizer",
+    "slug": "capstone-01",
+    "section": "beyond-llms-large-concept-models",
+    "description": "A compliance analyst at a global bank spends three weeks every quarter reconciling capital adequacy requirements across 12 jurisdictions. The requirements use different vocabulary in different languages. Some contradict each other in ways that are not obvious until a regulator points them out. This capstone builds the system that finds the contradictions first.",
+    "href": "/library/books/beyond-llms-large-concept-models/capstone-01"
+  },
+  {
+    "title": "Capstone 2: Multilingual Intelligence Brief",
+    "slug": "capstone-02",
+    "section": "beyond-llms-large-concept-models",
+    "description": "A geopolitical intelligence team monitors developments across six regions in four languages. The current process — translate, summarize, synthesize manually — takes five days. This capstone builds the system that synthesizes from multiple languages directly in concept space and delivers the brief in the analyst's language of choice.",
+    "href": "/library/books/beyond-llms-large-concept-models/capstone-02"
+  },
+  {
+    "title": "Capstone 3: Concept-Level Strategic Planner",
+    "slug": "capstone-03",
+    "section": "beyond-llms-large-concept-models",
+    "description": "A technology strategy team generates five-year transformation roadmaps that are internally inconsistent by the time they reach the executive committee. This capstone builds a planning assistant that detects redundancy and contradiction in concept space before the plan is decoded into prose.",
+    "href": "/library/books/beyond-llms-large-concept-models/capstone-03"
+  },
+  {
+    "title": "Capstone 4: LLM-LCM Hybrid Reasoning Pipeline",
+    "slug": "capstone-04",
+    "section": "beyond-llms-large-concept-models",
+    "description": "The enterprise AI stack of 2026 is not LLMs or LCMs — it is LLMs and LCMs, each handling the task type it is built for. This capstone builds the complete hybrid architecture end-to-end: concept router, LCM execution layer, and LLM formatting layer.",
+    "href": "/library/books/beyond-llms-large-concept-models/capstone-04"
   },
   {
     "title": "Prologue: The LegacyForward.ai Framework",
     "slug": "prologue",
-    "section": "ai-leaders",
-    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/ai-leaders/prologue"
+    "section": "beyond-llms-large-concept-models",
+    "description": "Why the AI stack is about to bifurcate — and the three-pillar framework for knowing which layer to build on.",
+    "href": "/library/books/beyond-llms-large-concept-models/prologue"
   },
   {
-    "title": "What AI Actually Does (and What It Doesn't)",
-    "slug": "what-ai-actually-does",
-    "section": "ai-leaders",
-    "description": "Strip away the vendor hype and understand what AI can genuinely do for your business today — and where it will let you down if you trust it too much.",
-    "href": "/library/books/ai-leaders/what-ai-actually-does"
+    "title": "The Token Ceiling",
+    "slug": "the-token-ceiling",
+    "section": "beyond-llms-large-concept-models",
+    "description": "A large US bank spent eighteen months building an LLM-powered contract review system. It worked beautifully on clauses. It failed on contracts — because a contract is not a clause, and the token is not a concept.",
+    "href": "/library/books/beyond-llms-large-concept-models/the-token-ceiling"
   },
   {
-    "title": "Why AI Projects Fail (and How Vendors Exploit It)",
-    "slug": "why-projects-fail-and-vendor-reality",
-    "section": "ai-leaders",
-    "description": "The six failure patterns that kill AI initiatives before they deliver value — and how to read vendor pitches critically so you stop funding the vendor's next round.",
-    "href": "/library/books/ai-leaders/why-projects-fail-and-vendor-reality"
+    "title": "How Large Concept Models Work",
+    "slug": "how-large-concept-models-work",
+    "section": "beyond-llms-large-concept-models",
+    "description": "The architecture that makes LCMs different is not complicated — it is a pipeline of three components, each with a clear enterprise analogue. The complexity is in knowing what each component does and does not do.",
+    "href": "/library/books/beyond-llms-large-concept-models/how-large-concept-models-work"
   },
   {
-    "title": "AI Strategy That Actually Works",
-    "slug": "ai-strategy-that-works",
-    "section": "ai-leaders",
-    "description": "How to build an AI strategy grounded in business value rather than technology enthusiasm — including a one-page strategy canvas you can complete in a single session.",
-    "href": "/library/books/ai-leaders/ai-strategy-that-works"
+    "title": "The SONAR Embedding System",
+    "slug": "sonar-embeddings",
+    "section": "beyond-llms-large-concept-models",
+    "description": "SONAR is to LCMs what the tokenizer is to LLMs — the foundational interface between raw text and the model's internal representation. Understanding what it encodes, and what it does not, determines what your LCM can and cannot do.",
+    "href": "/library/books/beyond-llms-large-concept-models/sonar-embeddings"
   },
   {
-    "title": "Making AI Investment Decisions",
-    "slug": "investment-decisions",
-    "section": "ai-leaders",
-    "description": "How much to spend, what it really costs, how to calculate ROI without being misled, and how to build an AI investment portfolio that balances quick wins with strategic bets.",
-    "href": "/library/books/ai-leaders/investment-decisions"
+    "title": "Concept Space and Semantic Reasoning",
+    "slug": "concept-space",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Concept space is where LCMs do their reasoning. Understanding its geometry — what closeness means, what distance means, what arithmetic means — is the prerequisite for understanding why LCMs produce different outputs than LLMs on the same tasks.",
+    "href": "/library/books/beyond-llms-large-concept-models/concept-space"
   },
   {
-    "title": "Is Your Organization AI-Ready?",
-    "slug": "organizational-readiness",
-    "section": "ai-leaders",
-    "description": "Assess your organization's readiness across five dimensions — data, talent, culture, governance, and infrastructure — and know where to start even if the score is low.",
-    "href": "/library/books/ai-leaders/organizational-readiness"
+    "title": "LLMs vs. LCMs — An Architectural Comparison",
+    "slug": "llm-vs-lcm-architecture",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Side-by-side architecture: input representation, internal computation, output generation, and context handling. The comparison produces a decision heuristic — the Task Unit Test — that makes tool selection systematic rather than instinctive.",
+    "href": "/library/books/beyond-llms-large-concept-models/llm-vs-lcm-architecture"
   },
   {
-    "title": "AI Risk, Regulation & Responsible AI",
-    "slug": "risk-regulation-responsible-ai",
-    "section": "ai-leaders",
-    "description": "The six AI risks every board must understand, the regulatory landscape in plain English, and a practical responsible AI program — all connected into one governance framework.",
-    "href": "/library/books/ai-leaders/risk-regulation-responsible-ai"
+    "title": "When LLMs Win",
+    "slug": "when-llms-win",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Intellectual honesty requires acknowledging what LLMs do better. For token-sensitive tasks — code, chat, RAG, creative generation — LCMs add overhead without adding capability. This chapter tells you when to stop reading and go back to your LLM stack.",
+    "href": "/library/books/beyond-llms-large-concept-models/when-llms-win"
   },
   {
-    "title": "Building & Leading AI Teams",
-    "slug": "building-and-leading-ai-teams",
-    "section": "ai-leaders",
-    "description": "The AI talent market is misunderstood, and managing AI projects requires a different language than traditional software. Here is how to hire right, upskill effectively, and run AI initiatives without being misled about their progress.",
-    "href": "/library/books/ai-leaders/building-and-leading-ai-teams"
+    "title": "When LCMs Win",
+    "slug": "when-lcms-win",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Five enterprise scenarios where LCMs structurally outperform LLMs: multi-document synthesis, cross-lingual analysis, hierarchical planning, long-form coherence, and semantic contradiction detection. Each maps to the token ceiling from Chapter 1.",
+    "href": "/library/books/beyond-llms-large-concept-models/when-lcms-win"
   },
   {
-    "title": "Measuring AI Success",
-    "slug": "measuring-ai-success",
-    "section": "ai-leaders",
-    "description": "Vanity metrics will make your AI program look good in a slide deck and fail in a budget review. Here is how to track the numbers that actually matter — and how to run a quarterly review that earns continued investment.",
-    "href": "/library/books/ai-leaders/measuring-ai-success"
+    "title": "Performance, Cost, and Maturity Tradeoffs",
+    "slug": "performance-cost-maturity",
+    "section": "beyond-llms-large-concept-models",
+    "description": "LCMs carry a different operational profile than LLMs. This chapter covers what is known about inference cost, ecosystem maturity, benchmark performance, and the signals to watch before committing to production LCM adoption.",
+    "href": "/library/books/beyond-llms-large-concept-models/performance-cost-maturity"
   },
   {
-    "title": "AI Agents & Your Workforce",
-    "slug": "agents-and-workforce",
-    "section": "ai-leaders",
-    "description": "AI agents are already taking autonomous action in your business — and your employees are already asking whether AI is coming for their jobs. Here is how to govern agents before they govern you, and how to lead your workforce through the transition honestly.",
-    "href": "/library/books/ai-leaders/agents-and-workforce"
+    "title": "Long-Document Reasoning at Scale",
+    "slug": "long-document-reasoning",
+    "section": "beyond-llms-large-concept-models",
+    "description": "The flagship enterprise LCM use case: coherent reasoning over documents that exceed what any LLM context window handles well. This chapter covers the architecture, the worked example, and the implementation patterns.",
+    "href": "/library/books/beyond-llms-large-concept-models/long-document-reasoning"
   },
   {
-    "title": "What's Coming Next (and What to Ignore)",
-    "slug": "whats-coming-next",
-    "section": "ai-leaders",
-    "description": "The AI landscape produces a new breathless announcement every two weeks. Here is how to separate the trends that will materially affect your business from the ones that will not — and a 30-minute monthly ritual that keeps you informed without consuming your calendar.",
-    "href": "/library/books/ai-leaders/whats-coming-next"
+    "title": "Multilingual and Cross-Lingual Enterprise Use Cases",
+    "slug": "multilingual-enterprise",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Three enterprise patterns that exploit SONAR's 200-language concept space: cross-lingual retrieval and comparison, multilingual synthesis, and language-agnostic classification. Each with architecture diagram and implementation approach.",
+    "href": "/library/books/beyond-llms-large-concept-models/multilingual-enterprise"
   },
   {
-    "title": "Writing Your AI Strategy",
-    "slug": "capstone-writing-ai-strategy",
-    "section": "ai-leaders",
-    "description": "A complete, step-by-step walkthrough for creating an AI strategy document your board will fund and your organization will actually execute — from situation assessment through investment proposal and risk framework.",
-    "href": "/library/books/ai-leaders/capstone-writing-ai-strategy"
+    "title": "Hierarchical Planning and Structured Reasoning",
+    "slug": "hierarchical-planning",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Strategic roadmaps, project decomposition, and multi-phase planning require maintaining consistency across levels and steps. Concept-space arithmetic enables the operations that planning requires — and that LLMs fail on consistently.",
+    "href": "/library/books/beyond-llms-large-concept-models/hierarchical-planning"
   },
   {
-    "title": "The Board AI Presentation",
-    "slug": "capstone-board-ai-presentation",
-    "section": "ai-leaders",
-    "description": "Build a credible, tight 30-minute board presentation on AI: current state, strategy, investment ask, and risk management — structured to earn the board's confidence and the funding you need.",
-    "href": "/library/books/ai-leaders/capstone-board-ai-presentation"
+    "title": "Hybrid Architectures — LLMs and LCMs Together",
+    "slug": "hybrid-architectures",
+    "section": "beyond-llms-large-concept-models",
+    "description": "The mature enterprise AI stack will not be LLMs or LCMs — it will be LLMs for token-level tasks and LCMs for concept-level tasks, with clean handoff points. Three patterns: the concept router, the concept elevator, and the concept pipeline.",
+    "href": "/library/books/beyond-llms-large-concept-models/hybrid-architectures"
   },
   {
-    "title": "Evaluating an AI Vendor",
-    "slug": "capstone-evaluating-ai-vendor",
-    "section": "ai-leaders",
-    "description": "A structured process for selecting an AI vendor: define your requirements before you enter the market, run a rigorous three-vendor evaluation, conduct reference checks that actually reveal problems, and negotiate the contract terms that matter.",
-    "href": "/library/books/ai-leaders/capstone-evaluating-ai-vendor"
+    "title": "Tooling, APIs, and the LCM Ecosystem",
+    "slug": "tooling-and-ecosystem",
+    "section": "beyond-llms-large-concept-models",
+    "description": "LCM tooling as of mid-2026 is thin compared to the LLM ecosystem. This chapter maps what exists, what must be adapted, and what must be built from scratch — with a build-vs-buy framework calibrated to team size and use-case maturity.",
+    "href": "/library/books/beyond-llms-large-concept-models/tooling-and-ecosystem"
   },
   {
-    "title": "The Kill Decision",
-    "slug": "capstone-the-kill-decision",
-    "section": "ai-leaders",
-    "description": "How to evaluate a struggling AI initiative honestly — separating sunk cost from future value, analyzing three scenarios, recommending a course of action, and communicating it in a way that preserves organizational trust and builds learning.",
-    "href": "/library/books/ai-leaders/capstone-the-kill-decision"
+    "title": "Evaluation and Quality Assurance",
+    "slug": "evaluation-and-qa",
+    "section": "beyond-llms-large-concept-models",
+    "description": "BLEU and ROUGE are wrong for LCM evaluation. This chapter covers the emerging LCM evaluation landscape: semantic similarity metrics, hierarchical consistency checks, cross-lingual equivalence testing, and a harness template you can adapt immediately.",
+    "href": "/library/books/beyond-llms-large-concept-models/evaluation-and-qa"
   },
   {
-    "title": "Capstone: The AI Chatbot Launch",
-    "slug": "capstone-ai-chatbot-launch",
-    "section": "ai-pm",
-    "description": "A complete worked example: you're PM for a B2B SaaS product and the CEO wants an AI-powered support chatbot shipped in 90 days. Walk through every stage of the AI PM framework — from Signal Capture to monitoring — with templates and deliverables at each step.",
-    "href": "/library/books/ai-pm/capstone-ai-chatbot-launch"
+    "title": "Governance, Risk, and Responsible Deployment",
+    "slug": "governance-and-risk",
+    "section": "beyond-llms-large-concept-models",
+    "description": "LCMs introduce governance challenges that LLM risk frameworks do not fully cover. Reasoning in concept space is less interpretable than chain-of-thought. Bias in SONAR embeddings differs from token-level bias. This chapter provides the governance checklist.",
+    "href": "/library/books/beyond-llms-large-concept-models/governance-and-risk"
   },
   {
-    "title": "Capstone: AI Feature Pricing Decision",
-    "slug": "capstone-ai-feature-pricing",
-    "section": "ai-pm",
-    "description": "A worked example in pricing under cost pressure: your AI-powered document analysis feature costs $0.50 per document in API calls. You charge customers $29/month for unlimited use. Walk through the cost analysis, usage modeling, tier design, stakeholder communication, and A/B test design needed to make the right call.",
-    "href": "/library/books/ai-pm/capstone-ai-feature-pricing"
-  },
-  {
-    "title": "Capstone: The Failed AI Pilot",
-    "slug": "capstone-failed-ai-pilot",
-    "section": "ai-pm",
-    "description": "A worked example in kill discipline: a 6-month AI pilot showed 'promising results' but the team wants another 6 months. Walk through the kill framework, sunk cost analysis, upward communication strategy, and how to redirect the team and salvage learnings.",
-    "href": "/library/books/ai-pm/capstone-failed-ai-pilot"
-  },
-  {
-    "title": "Capstone: Board Presentation — AI Strategy",
-    "slug": "capstone-board-ai-strategy",
-    "section": "ai-pm",
-    "description": "A worked example in executive communication: the board wants a 30-minute presentation on your AI product strategy. Walk through narrative structure, the metrics that matter to directors, handling the workforce replacement question, and a one-page AI strategy template.",
-    "href": "/library/books/ai-pm/capstone-board-ai-strategy"
-  },
-  {
-    "title": "Prologue: The LegacyForward.ai Framework",
-    "slug": "prologue",
-    "section": "ai-pm",
-    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/ai-pm/prologue"
-  },
-  {
-    "title": "Is This Worth Building?",
-    "slug": "is-this-worth-building",
-    "section": "ai-pm",
-    "description": "Before writing a single line of code or booking a discovery sprint, every AI feature idea must pass a rigorous first filter. This chapter gives product managers the mental models, decision tables, and Signal Capture tests to separate genuine AI opportunities from expensive distractions — and to ask the most important question in product development: does this actually need AI at all?",
-    "href": "/library/books/ai-pm/is-this-worth-building"
-  },
-  {
-    "title": "Value Hypothesis & Portfolio Prioritization",
-    "slug": "value-and-prioritization",
-    "section": "ai-pm",
-    "description": "A value hypothesis is the most important document you'll write before building an AI feature — and your backlog of AI ideas is only as useful as your ability to prioritize them ruthlessly. This chapter covers the one-sentence hypothesis template, four validation dimensions, the AI prioritization matrix, kill discipline, and a budget allocation model that balances exploration with delivery.",
-    "href": "/library/books/ai-pm/value-and-prioritization"
-  },
-  {
-    "title": "Discovery for AI Features",
-    "slug": "discovery-for-ai",
-    "section": "ai-pm",
-    "description": "Discovery for AI features requires techniques that traditional product research doesn't provide. This chapter covers Wizard-of-Oz testing, non-determinism tolerance research, probabilistic acceptance criteria, the user expectations gap — and how to translate all of that into AI story templates with edge case inventories and kill criteria that give your engineering team a real specification.",
-    "href": "/library/books/ai-pm/discovery-for-ai"
-  },
-  {
-    "title": "AI Competitive Positioning",
-    "slug": "competitive-positioning",
-    "section": "ai-pm",
-    "description": "When every company has access to the same foundation models and APIs, what actually differentiates your AI feature? This chapter walks product managers through the build-vs-buy-vs-integrate decision, how to evaluate vendor AI claims critically, where defensible moats exist in AI products, and why first-mover advantage is more nuanced in AI than in traditional software.",
-    "href": "/library/books/ai-pm/competitive-positioning"
-  },
-  {
-    "title": "Planning AI Development",
-    "slug": "planning-ai-sprints",
-    "section": "ai-pm",
-    "description": "Story points assume predictable effort. AI development is fundamentally exploratory — you often can't know how long an approach will take until you've tried it. This chapter introduces the Grounded Delivery framework as an AI planning model, explains how to time-box research phases, run Go/Pivot/Kill gates, and report honest progress when 'we tried three approaches and none worked yet' is genuinely meaningful information.",
-    "href": "/library/books/ai-pm/planning-ai-sprints"
-  },
-  {
-    "title": "Working with ML Engineering Teams",
-    "slug": "working-with-ml-teams",
-    "section": "ai-pm",
-    "description": "The PM-ML engineer collaboration gap is one of the most common sources of friction and failure in AI feature development. This chapter covers the translation layer between product and ML, what to ask for and how, why 'make it more accurate' is not actionable, how to navigate trade-off conversations, and what data scientists mean when they say 'it depends.'",
-    "href": "/library/books/ai-pm/working-with-ml-teams"
-  },
-  {
-    "title": "Evaluation-Driven Development",
-    "slug": "evaluation-driven-development",
-    "section": "ai-pm",
-    "description": "For AI features, the evaluation dataset is the product spec — it's the concrete, testable artifact that defines what quality means and gates every release. This chapter covers how to build and maintain evaluation sets, the trade-offs between automated evaluation and human judgment, A/B testing AI features in production, and regression testing practices that protect what works as your AI evolves.",
-    "href": "/library/books/ai-pm/evaluation-driven-development"
-  },
-  {
-    "title": "Adding AI to Existing Products",
-    "slug": "adding-ai-to-existing-products",
-    "section": "ai-pm",
-    "description": "Retrofitting AI into an established product is fundamentally different from building AI-native. This chapter gives product managers the patterns, rollout strategies, and integration frameworks to add AI without breaking what already works — including managing the users who don't want it.",
-    "href": "/library/books/ai-pm/adding-ai-to-existing-products"
-  },
-  {
-    "title": "Data Strategy for Product Managers",
-    "slug": "data-strategy-for-product-managers",
-    "section": "ai-pm",
-    "description": "You don't need to be a data engineer to own AI data strategy — but you do need to ask the right questions. This chapter gives product managers the checklists, frameworks, and decision models to evaluate data readiness, navigate privacy constraints, solve the cold start problem, and build a data moat that compounds over time.",
-    "href": "/library/books/ai-pm/data-strategy-for-product-managers"
-  },
-  {
-    "title": "Pricing and Packaging AI Features",
-    "slug": "pricing-and-packaging-ai-features",
-    "section": "ai-pm",
-    "description": "AI features have cost structures unlike anything else in a software product — and the wrong pricing decision can turn a successful feature into a margin disaster. This chapter gives product managers the frameworks to understand AI cost structures, design sustainable pricing models, manage the free tier trap, and run competitor pricing analysis.",
-    "href": "/library/books/ai-pm/pricing-and-packaging-ai-features"
-  },
-  {
-    "title": "Operating AI at Scale",
-    "slug": "operating-ai-at-scale",
-    "section": "ai-pm",
-    "description": "Shipping an AI feature is the beginning, not the end. This chapter gives product managers the monitoring frameworks, feedback loop designs, drift detection approaches, and incident response playbooks to keep AI features working — and the cost scaling models, rate limiting strategies, caching approaches, and international expansion considerations to keep them sustainable as they grow.",
-    "href": "/library/books/ai-pm/operating-ai-at-scale"
-  },
-  {
-    "title": "The AI Product Roadmap",
-    "slug": "the-ai-product-roadmap",
-    "section": "ai-pm",
-    "description": "AI features resist the commitments that traditional roadmaps demand. This chapter gives product managers the frameworks to plan non-deterministic features, communicate uncertainty to stakeholders without losing credibility, balance research with delivery, manage model vendor dependencies, and build a 12-month AI product roadmap that's honest and useful.",
-    "href": "/library/books/ai-pm/the-ai-product-roadmap"
+    "title": "Your LCM Transition Roadmap",
+    "slug": "transition-roadmap",
+    "section": "beyond-llms-large-concept-models",
+    "description": "Three phases — Evaluate, Pilot, Scale — converted into a concrete adoption plan. What to do this week, this quarter, and this year. A personally addressed brief for the enterprise practitioner ready to act.",
+    "href": "/library/books/beyond-llms-large-concept-models/transition-roadmap"
   },
   {
     "title": "AI Gateway & LLM Router",
@@ -1153,6 +1125,265 @@
     "section": "blueprints",
     "description": "A production-grade Retrieval-Augmented Generation architecture with access controls, source citations, freshness guarantees, and end-to-end data lineage — everything a demo RAG leaves out.",
     "href": "/library/toolkit/blueprints/enterprise-rag"
+  },
+  {
+    "title": "Capstone 1: Research Assistant",
+    "slug": "capstone-01",
+    "section": "building-agentic-ai-systems",
+    "description": "A senior analyst at a mid-size consulting firm spends four hours each morning on the same ritual: open twelve browser tabs, skim a handful of reports, copy key figures into a spreadsheet, cross-reference claims across sources, and draft a two-page brief that the partner will read in six minutes. The",
+    "href": "/library/books/building-agentic-ai-systems/capstone-01"
+  },
+  {
+    "title": "Capstone 2: Code Review Agent",
+    "slug": "capstone-02",
+    "section": "building-agentic-ai-systems",
+    "description": "Every engineering team has felt it: a pull request sits in the queue for two days because the only person who knows that subsystem is on vacation. When it finally gets reviewed, the reviewer catches a style violation and a missing null check but misses the SQL injection hiding behind a string interp",
+    "href": "/library/books/building-agentic-ai-systems/capstone-02"
+  },
+  {
+    "title": "Capstone 3: Customer Support System",
+    "slug": "capstone-03",
+    "section": "building-agentic-ai-systems",
+    "description": "Every support team faces the same spiral: ticket volume grows, response times stretch, quality drops, customers churn, and the remaining agents burn out faster. You hire more people, but onboarding takes months and institutional knowledge stays locked in senior agents’ heads. Meanwhile, your knowled",
+    "href": "/library/books/building-agentic-ai-systems/capstone-03"
+  },
+  {
+    "title": "Capstone 4: Data Pipeline Orchestrator",
+    "slug": "capstone-04",
+    "section": "building-agentic-ai-systems",
+    "description": "Data pipelines break silently. A column renamed upstream, a vendor switching date formats, a nullable field that was never null until today — each failure looks trivial in hindsight, yet it propagates through warehouses for hours before anyone notices. This capstone builds an agentic ETL system that",
+    "href": "/library/books/building-agentic-ai-systems/capstone-04"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "building-agentic-ai-systems",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/building-agentic-ai-systems/prologue"
+  },
+  {
+    "title": "What Is Agentic AI?",
+    "slug": "what-is-agentic-ai",
+    "section": "building-agentic-ai-systems",
+    "description": "A Fortune 500 retailer deployed a chatbot that could answer questions about return policies. Within six months they tried to make it process actual returns, modify shipping addresses, and issue refunds. It could do none of those things — and the failure wasn't a bug. It was an architecture that was ",
+    "href": "/library/books/building-agentic-ai-systems/what-is-agentic-ai"
+  },
+  {
+    "title": "LLM Primitives",
+    "slug": "llm-primitives",
+    "section": "building-agentic-ai-systems",
+    "description": "A production order-fulfillment agent silently doubled its cloud bill in seventy-two hours. Nobody changed the prompt. Nobody deployed new code. A single upstream schema change added four extra fields to every tool-call response, ballooning each completion from 800 tokens to 3,200. The team had never",
+    "href": "/library/books/building-agentic-ai-systems/llm-primitives"
+  },
+  {
+    "title": "Agent Anatomy",
+    "slug": "agent-anatomy",
+    "section": "building-agentic-ai-systems",
+    "description": "A customer-service agent goes live on Monday morning. By Tuesday afternoon it has refunded $14,000 to users who never asked for refunds, because nobody gave it a memory of which conversations were already resolved. The LLM was sharp; the architecture was hollow. This chapter opens the hood.",
+    "href": "/library/books/building-agentic-ai-systems/agent-anatomy"
+  },
+  {
+    "title": "Your First Agent",
+    "slug": "first-agent",
+    "section": "building-agentic-ai-systems",
+    "description": "An LLM that calls tools without thinking is just a random function caller with good grammar. In this chapter, you build the loop that turns a language model into something that actually reasons.",
+    "href": "/library/books/building-agentic-ai-systems/first-agent"
+  },
+  {
+    "title": "Reasoning Patterns",
+    "slug": "reasoning-patterns",
+    "section": "building-agentic-ai-systems",
+    "description": "Your agent from Chapter 4 can reason one step at a time. But ask it to plan a weekend trip involving flights, hotels, dietary restrictions, and a budget constraint, and it confidently books a hotel in the wrong city. The problem is not intelligence — it is the absence of structured thinking.",
+    "href": "/library/books/building-agentic-ai-systems/reasoning-patterns"
+  },
+  {
+    "title": "Tool Use",
+    "slug": "tool-use",
+    "section": "building-agentic-ai-systems",
+    "description": "An agent without tools is a confident liar. It will invent API responses, fabricate database rows, and cite papers that do not exist — all with the fluency of someone who has done it a thousand times. This chapter gives your agents hands.",
+    "href": "/library/books/building-agentic-ai-systems/tool-use"
+  },
+  {
+    "title": "Memory",
+    "slug": "memory",
+    "section": "building-agentic-ai-systems",
+    "description": "An agent that forgets what you said three messages ago is not an assistant — it is a stranger you keep re-introducing yourself to. This chapter gives your agents the ability to remember.",
+    "href": "/library/books/building-agentic-ai-systems/memory"
+  },
+  {
+    "title": "RAG Pipelines",
+    "slug": "rag-pipelines",
+    "section": "building-agentic-ai-systems",
+    "description": "A customer asks your agent whether the company’s refund policy covers digital subscriptions. The agent responds with absolute confidence: “Yes, all purchases are eligible for a full refund within 30 days.” The real policy, updated six weeks ago, explicitly excludes digital subscriptions. Three hundr",
+    "href": "/library/books/building-agentic-ai-systems/rag-pipelines"
+  },
+  {
+    "title": "Orchestration",
+    "slug": "orchestration",
+    "section": "building-agentic-ai-systems",
+    "description": "The insurance claim seemed straightforward. A customer uploaded a photo of hail damage, and the agent kicked off three parallel tasks: image analysis, policy lookup, and fraud scoring. The image analyzer finished first and classified the damage as severe. The policy lookup returned a coverage limit ",
+    "href": "/library/books/building-agentic-ai-systems/orchestration"
+  },
+  {
+    "title": "Supervisor-Worker Pattern",
+    "slug": "supervisor-worker",
+    "section": "building-agentic-ai-systems",
+    "description": "The demo looked flawless. A single agent that researched competitors, drafted a market analysis, pulled financial data, and produced a polished report — all in one long chain-of-thought. Then the team deployed it on real queries. The agent would start researching, get distracted by a tangent in the ",
+    "href": "/library/books/building-agentic-ai-systems/supervisor-worker"
+  },
+  {
+    "title": "Human-in-the-Loop",
+    "slug": "human-in-the-loop",
+    "section": "building-agentic-ai-systems",
+    "description": "It was 2:47 AM when the automated procurement agent placed a $2.3 million order for industrial solvents. The purchase order had passed the agent’s internal validation: the supplier was in the approved vendor list, the price-per-unit fell within historical ranges, and the requesting department had bu",
+    "href": "/library/books/building-agentic-ai-systems/human-in-the-loop"
+  },
+  {
+    "title": "Agent Communication",
+    "slug": "agent-communication",
+    "section": "building-agentic-ai-systems",
+    "description": "Two agents are assigned to plan a product launch. The marketing agent writes a press release announcing a feature that engineering has already descoped. The engineering agent drafts a deployment timeline that contradicts the date marketing promised to journalists. Neither agent is wrong in isolation",
+    "href": "/library/books/building-agentic-ai-systems/agent-communication"
+  },
+  {
+    "title": "Observability",
+    "slug": "observability",
+    "section": "building-agentic-ai-systems",
+    "description": "Tuesday, 2:47 AM. A loan-approval agent in production has been silently rejecting every application for the past six hours. No errors in the logs. No alerts firing. The HTTP status codes are all 200. Each applicant receives a polite decline email with a coherent, well-structured explanation that cit",
+    "href": "/library/books/building-agentic-ai-systems/observability"
+  },
+  {
+    "title": "Security",
+    "slug": "security",
+    "section": "building-agentic-ai-systems",
+    "description": "At 2:47 AM on a Tuesday, a customer service agent deployed three weeks earlier begins sending internal pricing spreadsheets to anyone who asks. The prompt injection is elegant: a user embeds an instruction inside a fake “customer complaint” that tells the agent to ignore its system prompt and instea",
+    "href": "/library/books/building-agentic-ai-systems/security"
+  },
+  {
+    "title": "Deployment",
+    "slug": "deployment",
+    "section": "building-agentic-ai-systems",
+    "description": "The agent passed every test on your laptop. You merged the PR on Friday afternoon, pushed to production, and went home. By Saturday morning the on-call engineer had paged you three times: the container was OOM-killed every forty minutes, the API gateway was routing traffic to a stale replica that st",
+    "href": "/library/books/building-agentic-ai-systems/deployment"
+  },
+  {
+    "title": "Capstone: The AI Chatbot Launch",
+    "slug": "capstone-ai-chatbot-launch",
+    "section": "building-ai-products-that-ship",
+    "description": "A complete worked example: you're PM for a B2B SaaS product and the CEO wants an AI-powered support chatbot shipped in 90 days. Walk through every stage of the AI PM framework — from Signal Capture to monitoring — with templates and deliverables at each step.",
+    "href": "/library/books/building-ai-products-that-ship/capstone-ai-chatbot-launch"
+  },
+  {
+    "title": "Capstone: AI Feature Pricing Decision",
+    "slug": "capstone-ai-feature-pricing",
+    "section": "building-ai-products-that-ship",
+    "description": "A worked example in pricing under cost pressure: your AI-powered document analysis feature costs $0.50 per document in API calls. You charge customers $29/month for unlimited use. Walk through the cost analysis, usage modeling, tier design, stakeholder communication, and A/B test design needed to make the right call.",
+    "href": "/library/books/building-ai-products-that-ship/capstone-ai-feature-pricing"
+  },
+  {
+    "title": "Capstone: The Failed AI Pilot",
+    "slug": "capstone-failed-ai-pilot",
+    "section": "building-ai-products-that-ship",
+    "description": "A worked example in kill discipline: a 6-month AI pilot showed 'promising results' but the team wants another 6 months. Walk through the kill framework, sunk cost analysis, upward communication strategy, and how to redirect the team and salvage learnings.",
+    "href": "/library/books/building-ai-products-that-ship/capstone-failed-ai-pilot"
+  },
+  {
+    "title": "Capstone: Board Presentation — AI Strategy",
+    "slug": "capstone-board-ai-strategy",
+    "section": "building-ai-products-that-ship",
+    "description": "A worked example in executive communication: the board wants a 30-minute presentation on your AI product strategy. Walk through narrative structure, the metrics that matter to directors, handling the workforce replacement question, and a one-page AI strategy template.",
+    "href": "/library/books/building-ai-products-that-ship/capstone-board-ai-strategy"
+  },
+  {
+    "title": "Prologue: The LegacyForward.ai Framework",
+    "slug": "prologue",
+    "section": "building-ai-products-that-ship",
+    "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
+    "href": "/library/books/building-ai-products-that-ship/prologue"
+  },
+  {
+    "title": "Is This Worth Building?",
+    "slug": "is-this-worth-building",
+    "section": "building-ai-products-that-ship",
+    "description": "Before writing a single line of code or booking a discovery sprint, every AI feature idea must pass a rigorous first filter. This chapter gives product managers the mental models, decision tables, and Signal Capture tests to separate genuine AI opportunities from expensive distractions — and to ask the most important question in product development: does this actually need AI at all?",
+    "href": "/library/books/building-ai-products-that-ship/is-this-worth-building"
+  },
+  {
+    "title": "Value Hypothesis & Portfolio Prioritization",
+    "slug": "value-and-prioritization",
+    "section": "building-ai-products-that-ship",
+    "description": "A value hypothesis is the most important document you'll write before building an AI feature — and your backlog of AI ideas is only as useful as your ability to prioritize them ruthlessly. This chapter covers the one-sentence hypothesis template, four validation dimensions, the AI prioritization matrix, kill discipline, and a budget allocation model that balances exploration with delivery.",
+    "href": "/library/books/building-ai-products-that-ship/value-and-prioritization"
+  },
+  {
+    "title": "Discovery for AI Features",
+    "slug": "discovery-for-ai",
+    "section": "building-ai-products-that-ship",
+    "description": "Discovery for AI features requires techniques that traditional product research doesn't provide. This chapter covers Wizard-of-Oz testing, non-determinism tolerance research, probabilistic acceptance criteria, the user expectations gap — and how to translate all of that into AI story templates with edge case inventories and kill criteria that give your engineering team a real specification.",
+    "href": "/library/books/building-ai-products-that-ship/discovery-for-ai"
+  },
+  {
+    "title": "AI Competitive Positioning",
+    "slug": "competitive-positioning",
+    "section": "building-ai-products-that-ship",
+    "description": "When every company has access to the same foundation models and APIs, what actually differentiates your AI feature? This chapter walks product managers through the build-vs-buy-vs-integrate decision, how to evaluate vendor AI claims critically, where defensible moats exist in AI products, and why first-mover advantage is more nuanced in AI than in traditional software.",
+    "href": "/library/books/building-ai-products-that-ship/competitive-positioning"
+  },
+  {
+    "title": "Planning AI Development",
+    "slug": "planning-ai-sprints",
+    "section": "building-ai-products-that-ship",
+    "description": "Story points assume predictable effort. AI development is fundamentally exploratory — you often can't know how long an approach will take until you've tried it. This chapter introduces the Grounded Delivery framework as an AI planning model, explains how to time-box research phases, run Go/Pivot/Kill gates, and report honest progress when 'we tried three approaches and none worked yet' is genuinely meaningful information.",
+    "href": "/library/books/building-ai-products-that-ship/planning-ai-sprints"
+  },
+  {
+    "title": "Working with ML Engineering Teams",
+    "slug": "working-with-ml-teams",
+    "section": "building-ai-products-that-ship",
+    "description": "The PM-ML engineer collaboration gap is one of the most common sources of friction and failure in AI feature development. This chapter covers the translation layer between product and ML, what to ask for and how, why 'make it more accurate' is not actionable, how to navigate trade-off conversations, and what data scientists mean when they say 'it depends.'",
+    "href": "/library/books/building-ai-products-that-ship/working-with-ml-teams"
+  },
+  {
+    "title": "Evaluation-Driven Development",
+    "slug": "evaluation-driven-development",
+    "section": "building-ai-products-that-ship",
+    "description": "For AI features, the evaluation dataset is the product spec — it's the concrete, testable artifact that defines what quality means and gates every release. This chapter covers how to build and maintain evaluation sets, the trade-offs between automated evaluation and human judgment, A/B testing AI features in production, and regression testing practices that protect what works as your AI evolves.",
+    "href": "/library/books/building-ai-products-that-ship/evaluation-driven-development"
+  },
+  {
+    "title": "Adding AI to Existing Products",
+    "slug": "adding-ai-to-existing-products",
+    "section": "building-ai-products-that-ship",
+    "description": "Retrofitting AI into an established product is fundamentally different from building AI-native. This chapter gives product managers the patterns, rollout strategies, and integration frameworks to add AI without breaking what already works — including managing the users who don't want it.",
+    "href": "/library/books/building-ai-products-that-ship/adding-ai-to-existing-products"
+  },
+  {
+    "title": "Data Strategy for Product Managers",
+    "slug": "data-strategy-for-product-managers",
+    "section": "building-ai-products-that-ship",
+    "description": "You don't need to be a data engineer to own AI data strategy — but you do need to ask the right questions. This chapter gives product managers the checklists, frameworks, and decision models to evaluate data readiness, navigate privacy constraints, solve the cold start problem, and build a data moat that compounds over time.",
+    "href": "/library/books/building-ai-products-that-ship/data-strategy-for-product-managers"
+  },
+  {
+    "title": "Pricing and Packaging AI Features",
+    "slug": "pricing-and-packaging-ai-features",
+    "section": "building-ai-products-that-ship",
+    "description": "AI features have cost structures unlike anything else in a software product — and the wrong pricing decision can turn a successful feature into a margin disaster. This chapter gives product managers the frameworks to understand AI cost structures, design sustainable pricing models, manage the free tier trap, and run competitor pricing analysis.",
+    "href": "/library/books/building-ai-products-that-ship/pricing-and-packaging-ai-features"
+  },
+  {
+    "title": "Operating AI at Scale",
+    "slug": "operating-ai-at-scale",
+    "section": "building-ai-products-that-ship",
+    "description": "Shipping an AI feature is the beginning, not the end. This chapter gives product managers the monitoring frameworks, feedback loop designs, drift detection approaches, and incident response playbooks to keep AI features working — and the cost scaling models, rate limiting strategies, caching approaches, and international expansion considerations to keep them sustainable as they grow.",
+    "href": "/library/books/building-ai-products-that-ship/operating-ai-at-scale"
+  },
+  {
+    "title": "The AI Product Roadmap",
+    "slug": "the-ai-product-roadmap",
+    "section": "building-ai-products-that-ship",
+    "description": "AI features resist the commitments that traditional roadmaps demand. This chapter gives product managers the frameworks to plan non-deterministic features, communicate uncertainty to stakeholders without losing credibility, balance research with delivery, manage model vendor dependencies, and build a 12-month AI product roadmap that's honest and useful.",
+    "href": "/library/books/building-ai-products-that-ship/the-ai-product-roadmap"
   },
   {
     "title": "Prompt Engineering",
@@ -1258,174 +1489,6 @@
     "section": "cheatsheets",
     "description": "Quick reference for transformer architecture, attention mechanism, positional encoding, tokenization, model sizes, and inference optimization.",
     "href": "/library/cheatsheets/transformer-foundations"
-  },
-  {
-    "title": "Why You Need to Understand IT Before You Touch AI",
-    "slug": "prologue",
-    "section": "enterprise-it-101",
-    "description": "AI doesn't land on a blank slate. It lands on decades of accumulated systems, decisions, and constraints. This book explains what's already there.",
-    "href": "/library/books/enterprise-it-101/prologue"
-  },
-  {
-    "title": "Why Enterprise IT Is Different",
-    "slug": "why-enterprise-it-is-different",
-    "section": "enterprise-it-101",
-    "description": "Scale, risk, regulation, and institutional history make enterprise technology a different discipline from consumer or startup tech. Here's why.",
-    "href": "/library/books/enterprise-it-101/why-enterprise-it-is-different"
-  },
-  {
-    "title": "The Three Layers: Record, Engagement, Intelligence",
-    "slug": "three-layers",
-    "section": "enterprise-it-101",
-    "description": "Enterprise systems are organized in three distinct layers that serve different purposes. Understanding these layers is the foundation of understanding how data moves through an organization.",
-    "href": "/library/books/enterprise-it-101/three-layers"
-  },
-  {
-    "title": "What Is a Legacy System, Really?",
-    "slug": "what-is-legacy",
-    "section": "enterprise-it-101",
-    "description": "Legacy doesn't mean old and broken. It means load-bearing. Understanding what makes a system legacy — and why it stays — is the first step to working with it.",
-    "href": "/library/books/enterprise-it-101/what-is-legacy"
-  },
-  {
-    "title": "The Mainframe Is Still Running Your Money",
-    "slug": "the-mainframe",
-    "section": "enterprise-it-101",
-    "description": "Mainframes process trillions of dollars in transactions every day. Understanding why they still exist — and why they are not going anywhere — is essential context for enterprise AI.",
-    "href": "/library/books/enterprise-it-101/the-mainframe"
-  },
-  {
-    "title": "ERP: The Spine of the Enterprise",
-    "slug": "erp",
-    "section": "enterprise-it-101",
-    "description": "Enterprise Resource Planning systems are the central nervous system of most large organizations. Understanding what they do — and why changing them is so hard — is fundamental to understanding enterprise IT.",
-    "href": "/library/books/enterprise-it-101/erp"
-  },
-  {
-    "title": "Cloud Is Infrastructure, Not Magic",
-    "slug": "cloud-is-infrastructure",
-    "section": "enterprise-it-101",
-    "description": "Cloud computing is a powerful and important shift in how organizations consume technology. It is also widely misunderstood. Here is what cloud actually is — and what it is not.",
-    "href": "/library/books/enterprise-it-101/cloud-is-infrastructure"
-  },
-  {
-    "title": "SaaS Sprawl: When Every Team Bought Their Own Tool",
-    "slug": "saas-sprawl",
-    "section": "enterprise-it-101",
-    "description": "The ease of buying cloud software has created a new problem: organizations now run hundreds of overlapping, disconnected tools. Understanding SaaS sprawl is essential for understanding modern enterprise data complexity.",
-    "href": "/library/books/enterprise-it-101/saas-sprawl"
-  },
-  {
-    "title": "COTS vs. Custom: The Build vs. Buy Decision",
-    "slug": "cots-vs-custom",
-    "section": "enterprise-it-101",
-    "description": "Every enterprise technology decision involves a fundamental choice: buy a commercial product or build something custom. Understanding the trade-offs — and why organizations often get this decision wrong — is essential.",
-    "href": "/library/books/enterprise-it-101/cots-vs-custom"
-  },
-  {
-    "title": "APIs: The Connective Tissue",
-    "slug": "apis",
-    "section": "enterprise-it-101",
-    "description": "APIs are how modern systems talk to each other. Understanding what APIs are, how they work, and why they fail is fundamental to understanding enterprise integration — and enterprise AI.",
-    "href": "/library/books/enterprise-it-101/apis"
-  },
-  {
-    "title": "The Data Warehouse, the Lake, and the Swamp",
-    "slug": "data-warehouse",
-    "section": "enterprise-it-101",
-    "description": "Enterprise data infrastructure has evolved through several generations — warehouses, lakes, lakehouses, and the swamps that happen when governance breaks down. Understanding this landscape is critical for AI.",
-    "href": "/library/books/enterprise-it-101/data-warehouse"
-  },
-  {
-    "title": "How Sprawl Happens: M&A, Shadow IT, and Organic Growth",
-    "slug": "how-sprawl-happens",
-    "section": "enterprise-it-101",
-    "description": "Enterprise IT landscapes grow in ways that nobody planned. Understanding the three main mechanisms — mergers and acquisitions, shadow IT, and organic team-level growth — explains why every organization ends up with more systems than it needs.",
-    "href": "/library/books/enterprise-it-101/how-sprawl-happens"
-  },
-  {
-    "title": "Technical Debt Is a Balance Sheet Item",
-    "slug": "technical-debt",
-    "section": "enterprise-it-101",
-    "description": "Technical debt is not just a software engineering concept. It is a real financial and operational liability that accumulates on every deferred decision. Understanding it helps leaders make better tradeoff choices.",
-    "href": "/library/books/enterprise-it-101/technical-debt"
-  },
-  {
-    "title": "Integration Spaghetti: Point-to-Point vs. Platform",
-    "slug": "integration-spaghetti",
-    "section": "enterprise-it-101",
-    "description": "When systems connect directly to each other without a coherent integration architecture, the result is spaghetti: fragile, expensive to maintain, and nearly impossible to understand. Here's why it happens and what to do about it.",
-    "href": "/library/books/enterprise-it-101/integration-spaghetti"
-  },
-  {
-    "title": "The Governance Gap: Who Actually Owns This System?",
-    "slug": "governance-gap",
-    "section": "enterprise-it-101",
-    "description": "In every enterprise, there is a gap between who is nominally responsible for a system and who actually understands and controls it. The governance gap is one of the most underappreciated sources of risk and friction in enterprise IT.",
-    "href": "/library/books/enterprise-it-101/governance-gap"
-  },
-  {
-    "title": "Vendor Lock-In: When Switching Costs Become Strategic Risk",
-    "slug": "vendor-lock-in",
-    "section": "enterprise-it-101",
-    "description": "Every enterprise technology decision creates some degree of dependency on the vendor. Understanding how lock-in happens — and when it becomes a strategic problem — is essential for making good technology choices.",
-    "href": "/library/books/enterprise-it-101/vendor-lock-in"
-  },
-  {
-    "title": "AI Doesn't Replace the Stack — It Runs on Top of It",
-    "slug": "ai-on-top-of-the-stack",
-    "section": "enterprise-it-101",
-    "description": "The most important thing to understand about enterprise AI is that it does not replace your existing technology landscape. It runs on top of it. Everything else follows from this.",
-    "href": "/library/books/enterprise-it-101/ai-on-top-of-the-stack"
-  },
-  {
-    "title": "What 'Data Readiness' Actually Means",
-    "slug": "data-readiness",
-    "section": "enterprise-it-101",
-    "description": "Every enterprise has data. Very few enterprises have data that is ready for AI. Understanding the gap between 'we have the data' and 'the data is ready' is one of the most important skills in enterprise AI.",
-    "href": "/library/books/enterprise-it-101/data-readiness"
-  },
-  {
-    "title": "Which Systems Are AI-Ready (and Which Are Not)",
-    "slug": "ai-ready-systems",
-    "section": "enterprise-it-101",
-    "description": "Not all enterprise systems are equally suited to AI integration. A practical framework for assessing your landscape and identifying where AI can deliver value without requiring a transformation first.",
-    "href": "/library/books/enterprise-it-101/ai-ready-systems"
-  },
-  {
-    "title": "The Coexistence Imperative: Why You Can't Rip and Replace",
-    "slug": "coexistence-imperative",
-    "section": "enterprise-it-101",
-    "description": "The idea of replacing legacy systems entirely with modern technology is appealing but usually impractical. Understanding why coexistence is the realistic path — and how to make it work — is essential for enterprise AI practitioners.",
-    "href": "/library/books/enterprise-it-101/coexistence-imperative"
-  },
-  {
-    "title": "Where to Start: Finding the Signal in the Sprawl",
-    "slug": "where-to-start",
-    "section": "enterprise-it-101",
-    "description": "With a complex, layered, imperfect enterprise IT landscape, where do you actually start with AI? A practical framework for identifying the seams where AI can deliver real value without requiring a transformation first.",
-    "href": "/library/books/enterprise-it-101/where-to-start"
-  },
-  {
-    "title": "Glossary: 50 Terms Every Non-Technical Leader Should Know",
-    "slug": "glossary",
-    "section": "enterprise-it-101",
-    "description": "A plain-language reference for the most important terms in enterprise technology. No jargon without explanation.",
-    "href": "/library/books/enterprise-it-101/glossary"
-  },
-  {
-    "title": "The IT Landscape Map",
-    "slug": "it-landscape-map",
-    "section": "enterprise-it-101",
-    "description": "A plain-language guide to how the enterprise technology layers connect — from foundation to intelligence — and where AI enters the picture.",
-    "href": "/library/books/enterprise-it-101/it-landscape-map"
-  },
-  {
-    "title": "Questions to Ask Before Any AI Initiative",
-    "slug": "ai-initiative-checklist",
-    "section": "enterprise-it-101",
-    "description": "A practical diagnostic checklist for evaluating enterprise AI initiatives before committing resources. Use these questions to identify hidden risks before they become expensive surprises.",
-    "href": "/library/books/enterprise-it-101/ai-initiative-checklist"
   },
   {
     "title": "Digital Transformation with Google Cloud",
@@ -1976,478 +2039,247 @@
   {
     "title": "Capstone 1: Compliance Knowledge Graph",
     "slug": "capstone-compliance-knowledge-graph",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Build a regulatory compliance knowledge graph from real documents. Covers PDF ingestion, LLM-based entity and relationship extraction, Neo4j graph construction, and a GraphRAG query layer that answers questions like \"Which regulations affect our payment processing system?\"",
-    "href": "/library/books/graph-ai/capstone-compliance-knowledge-graph"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/capstone-compliance-knowledge-graph"
   },
   {
     "title": "Capstone 2: Fraud Investigation Agent",
     "slug": "capstone-fraud-investigation-agent",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Build a graph-powered agent that traces transaction networks to investigate suspicious patterns. Covers graph modeling for financial transactions, agent architecture with Cypher traversal tools, multi-hop money flow tracing, and automated pattern detection for fraud rings, rapid movement, and structuring.",
-    "href": "/library/books/graph-ai/capstone-fraud-investigation-agent"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/capstone-fraud-investigation-agent"
   },
   {
     "title": "Capstone 3: IT Dependency Mapper",
     "slug": "capstone-it-dependency-mapper",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Build an application dependency graph for impact analysis. Covers ingesting CMDB and service catalog data, building a dependency graph, blast radius queries, an impact analysis agent that answers \"If the payment gateway goes down, what else breaks?\", and automated dependency report generation.",
-    "href": "/library/books/graph-ai/capstone-it-dependency-mapper"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/capstone-it-dependency-mapper"
   },
   {
     "title": "Capstone 4: Customer 360 with GraphRAG",
     "slug": "capstone-customer-360-graphrag",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Build a unified customer view combining CRM, support tickets, and product data into a knowledge graph. Covers data modeling for multi-source customer data, ingestion from three systems, graph-based customer journey queries, and a GraphRAG layer that answers \"Tell me everything about this customer's journey.\"",
-    "href": "/library/books/graph-ai/capstone-customer-360-graphrag"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/capstone-customer-360-graphrag"
   },
   {
     "title": "Prologue: The LegacyForward.ai Framework",
     "slug": "prologue",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/graph-ai/prologue"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/prologue"
   },
   {
     "title": "The JOIN Wall",
     "slug": "the-join-wall",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Your compliance query spans 12 tables and takes 4 hours. This chapter explains why deep JOINs hit a performance wall, what graph databases do differently with index-free adjacency, and how to decide whether your workload belongs in a relational database or a graph.",
-    "href": "/library/books/graph-ai/the-join-wall"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/the-join-wall"
   },
   {
     "title": "How Graphs Actually Work",
     "slug": "how-graphs-work",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "A ground-up explanation of graph databases for people who already understand tables, rows, columns, and JOINs. Covers the property graph model, maps every concept to its relational equivalent, and compares Neo4j, Amazon Neptune, and FalkorDB.",
-    "href": "/library/books/graph-ai/how-graphs-work"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/how-graphs-work"
   },
   {
     "title": "The AI Connection",
     "slug": "the-ai-connection",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Why vector search alone cannot answer relationship questions, how knowledge graphs give AI structured memory, and the three patterns for combining graphs with LLMs: graph-enhanced RAG, graph-aware agents, and graph-based memory.",
-    "href": "/library/books/graph-ai/the-ai-connection"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/the-ai-connection"
   },
   {
     "title": "Translating Your Data Model",
     "slug": "translating-data-models",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "A pattern-by-pattern guide to converting ERD structures into graph models. Covers five common relational patterns — self-referencing tables, many-to-many junctions, polymorphic associations, temporal data, and hierarchical categories — with SQL schemas, graph models, and clear guidance on when the graph version is better.",
-    "href": "/library/books/graph-ai/translating-data-models"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/translating-data-models"
   },
   {
     "title": "Cypher for SQL People",
     "slug": "cypher-for-sql",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "A side-by-side translation of 20 common SQL query patterns into Cypher. Covers SELECT, JOIN, WHERE, GROUP BY, subqueries, INSERT, UPDATE, DELETE, and five queries that are painful in SQL but elegant in Cypher. Includes a complete cheatsheet table.",
-    "href": "/library/books/graph-ai/cypher-for-sql"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/cypher-for-sql"
   },
   {
     "title": "When to Use Graphs (and When Not To)",
     "slug": "when-to-use-graphs",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "A decision framework for evaluating whether a graph database belongs in your architecture. Covers six diagnostic questions, five use cases where graphs shine, five where relational is better, hybrid architecture patterns, and a cost comparison of Neo4j Aura, Amazon Neptune, and self-hosted options.",
-    "href": "/library/books/graph-ai/when-to-use-graphs"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/when-to-use-graphs"
   },
   {
     "title": "Knowledge Graphs from Documents",
     "slug": "knowledge-graphs-from-docs",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to turn thousands of unstructured documents into a searchable knowledge graph. Covers the extraction pipeline from document to graph, LLM-based entity and relationship extraction with Pydantic schemas, entity resolution strategies, and quality challenges including hallucinated entities and duplicate nodes.",
-    "href": "/library/books/graph-ai/knowledge-graphs-from-docs"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/knowledge-graphs-from-docs"
   },
   {
     "title": "Ontology Design Without a PhD",
     "slug": "ontology-design",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to design a practical ontology for your knowledge graph without academic overhead. Covers iterative design starting with five node types and five relationship types, common ontology patterns by industry, using LLMs to suggest structure, schema validation, and anti-patterns to avoid.",
-    "href": "/library/books/graph-ai/ontology-design"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/ontology-design"
   },
   {
     "title": "Data Quality for Knowledge Graphs",
     "slug": "data-quality",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to test and validate a knowledge graph. Covers automated quality checks for orphan nodes, duplicate entities, type violations, and missing relationships. Includes consistency validation, coverage metrics, human review workflows, continuous monitoring, and a complete Python validation pipeline with Neo4j queries.",
-    "href": "/library/books/graph-ai/data-quality"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/data-quality"
   },
   {
     "title": "GraphRAG — Beyond Vector Search",
     "slug": "graphrag",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "Why vector-only RAG fails for relationship questions, and how GraphRAG solves it. Covers the architecture of hybrid retrieval combining vector search with graph traversal, Microsoft's community summary approach, a step-by-step implementation with LangChain and Neo4j, and a comparison of vector-only vs GraphRAG across ten question types.",
-    "href": "/library/books/graph-ai/graphrag"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/graphrag"
   },
   {
     "title": "Graph-Aware Agents",
     "slug": "graph-aware-agents",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to build AI agents that reason over knowledge graphs. Covers tool design for Cypher queries, path finding, impact analysis, and subgraph summarization. Includes agent architecture with LangChain and LangGraph, teaching agents to generate Cypher, guardrails for production safety, and three complete use case implementations.",
-    "href": "/library/books/graph-ai/graph-aware-agents"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/graph-aware-agents"
   },
   {
     "title": "Multi-Hop Reasoning",
     "slug": "multi-hop-reasoning",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to answer questions that require traversing multiple relationships in a knowledge graph. Covers question decomposition, chain-of-traversal reasoning, combining graph paths with LLM synthesis, a complete multi-hop reasoning agent with step-by-step trace, and performance strategies for deep traversals.",
-    "href": "/library/books/graph-ai/multi-hop-reasoning"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/multi-hop-reasoning"
   },
   {
     "title": "Migration Strategy",
     "slug": "migration-strategy",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to add a graph database alongside your existing relational systems without ripping anything out. Covers the sidecar pattern, CDC pipelines from PostgreSQL to Neo4j, phased migration timelines, dual-write vs CDC vs batch sync trade-offs, team structure, rollback strategies, and a complete CDC pipeline implementation with Debezium.",
-    "href": "/library/books/graph-ai/migration-strategy"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/migration-strategy"
   },
   {
     "title": "Testing Graph Systems",
     "slug": "testing-graph-systems",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to test graph databases from unit tests through end-to-end validation. Covers the graph test pyramid, Cypher query unit tests with fixtures, integration tests for extraction pipelines, query regression testing, data quality automation in CI/CD, performance benchmarks, and a complete pytest test suite using testcontainers.",
-    "href": "/library/books/graph-ai/testing-graph-systems"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/testing-graph-systems"
   },
   {
     "title": "Monitoring and Operations",
     "slug": "monitoring-ops",
-    "section": "graph-ai",
+    "section": "knowledge-graphs-enterprise-ai",
     "description": "How to keep a graph database running in production. Covers the three things that will break at 3am, key metrics dashboards, alerting rules, backup and disaster recovery, scaling patterns including read replicas and connection pooling, cost management, and a runbook template for common operational issues.",
-    "href": "/library/books/graph-ai/monitoring-ops"
-  },
-  {
-    "title": "Capstone 1: Cross-Document Policy Synthesizer",
-    "slug": "capstone-01",
-    "section": "large-concept-models",
-    "description": "A compliance analyst at a global bank spends three weeks every quarter reconciling capital adequacy requirements across 12 jurisdictions. The requirements use different vocabulary in different languages. Some contradict each other in ways that are not obvious until a regulator points them out. This capstone builds the system that finds the contradictions first.",
-    "href": "/library/books/large-concept-models/capstone-01"
-  },
-  {
-    "title": "Capstone 2: Multilingual Intelligence Brief",
-    "slug": "capstone-02",
-    "section": "large-concept-models",
-    "description": "A geopolitical intelligence team monitors developments across six regions in four languages. The current process — translate, summarize, synthesize manually — takes five days. This capstone builds the system that synthesizes from multiple languages directly in concept space and delivers the brief in the analyst's language of choice.",
-    "href": "/library/books/large-concept-models/capstone-02"
-  },
-  {
-    "title": "Capstone 3: Concept-Level Strategic Planner",
-    "slug": "capstone-03",
-    "section": "large-concept-models",
-    "description": "A technology strategy team generates five-year transformation roadmaps that are internally inconsistent by the time they reach the executive committee. This capstone builds a planning assistant that detects redundancy and contradiction in concept space before the plan is decoded into prose.",
-    "href": "/library/books/large-concept-models/capstone-03"
-  },
-  {
-    "title": "Capstone 4: LLM-LCM Hybrid Reasoning Pipeline",
-    "slug": "capstone-04",
-    "section": "large-concept-models",
-    "description": "The enterprise AI stack of 2026 is not LLMs or LCMs — it is LLMs and LCMs, each handling the task type it is built for. This capstone builds the complete hybrid architecture end-to-end: concept router, LCM execution layer, and LLM formatting layer.",
-    "href": "/library/books/large-concept-models/capstone-04"
+    "href": "/library/books/knowledge-graphs-enterprise-ai/monitoring-ops"
   },
   {
     "title": "Prologue: The LegacyForward.ai Framework",
     "slug": "prologue",
-    "section": "large-concept-models",
-    "description": "Why the AI stack is about to bifurcate — and the three-pillar framework for knowing which layer to build on.",
-    "href": "/library/books/large-concept-models/prologue"
-  },
-  {
-    "title": "The Token Ceiling",
-    "slug": "the-token-ceiling",
-    "section": "large-concept-models",
-    "description": "A large US bank spent eighteen months building an LLM-powered contract review system. It worked beautifully on clauses. It failed on contracts — because a contract is not a clause, and the token is not a concept.",
-    "href": "/library/books/large-concept-models/the-token-ceiling"
-  },
-  {
-    "title": "How Large Concept Models Work",
-    "slug": "how-large-concept-models-work",
-    "section": "large-concept-models",
-    "description": "The architecture that makes LCMs different is not complicated — it is a pipeline of three components, each with a clear enterprise analogue. The complexity is in knowing what each component does and does not do.",
-    "href": "/library/books/large-concept-models/how-large-concept-models-work"
-  },
-  {
-    "title": "The SONAR Embedding System",
-    "slug": "sonar-embeddings",
-    "section": "large-concept-models",
-    "description": "SONAR is to LCMs what the tokenizer is to LLMs — the foundational interface between raw text and the model's internal representation. Understanding what it encodes, and what it does not, determines what your LCM can and cannot do.",
-    "href": "/library/books/large-concept-models/sonar-embeddings"
-  },
-  {
-    "title": "Concept Space and Semantic Reasoning",
-    "slug": "concept-space",
-    "section": "large-concept-models",
-    "description": "Concept space is where LCMs do their reasoning. Understanding its geometry — what closeness means, what distance means, what arithmetic means — is the prerequisite for understanding why LCMs produce different outputs than LLMs on the same tasks.",
-    "href": "/library/books/large-concept-models/concept-space"
-  },
-  {
-    "title": "LLMs vs. LCMs — An Architectural Comparison",
-    "slug": "llm-vs-lcm-architecture",
-    "section": "large-concept-models",
-    "description": "Side-by-side architecture: input representation, internal computation, output generation, and context handling. The comparison produces a decision heuristic — the Task Unit Test — that makes tool selection systematic rather than instinctive.",
-    "href": "/library/books/large-concept-models/llm-vs-lcm-architecture"
-  },
-  {
-    "title": "When LLMs Win",
-    "slug": "when-llms-win",
-    "section": "large-concept-models",
-    "description": "Intellectual honesty requires acknowledging what LLMs do better. For token-sensitive tasks — code, chat, RAG, creative generation — LCMs add overhead without adding capability. This chapter tells you when to stop reading and go back to your LLM stack.",
-    "href": "/library/books/large-concept-models/when-llms-win"
-  },
-  {
-    "title": "When LCMs Win",
-    "slug": "when-lcms-win",
-    "section": "large-concept-models",
-    "description": "Five enterprise scenarios where LCMs structurally outperform LLMs: multi-document synthesis, cross-lingual analysis, hierarchical planning, long-form coherence, and semantic contradiction detection. Each maps to the token ceiling from Chapter 1.",
-    "href": "/library/books/large-concept-models/when-lcms-win"
-  },
-  {
-    "title": "Performance, Cost, and Maturity Tradeoffs",
-    "slug": "performance-cost-maturity",
-    "section": "large-concept-models",
-    "description": "LCMs carry a different operational profile than LLMs. This chapter covers what is known about inference cost, ecosystem maturity, benchmark performance, and the signals to watch before committing to production LCM adoption.",
-    "href": "/library/books/large-concept-models/performance-cost-maturity"
-  },
-  {
-    "title": "Long-Document Reasoning at Scale",
-    "slug": "long-document-reasoning",
-    "section": "large-concept-models",
-    "description": "The flagship enterprise LCM use case: coherent reasoning over documents that exceed what any LLM context window handles well. This chapter covers the architecture, the worked example, and the implementation patterns.",
-    "href": "/library/books/large-concept-models/long-document-reasoning"
-  },
-  {
-    "title": "Multilingual and Cross-Lingual Enterprise Use Cases",
-    "slug": "multilingual-enterprise",
-    "section": "large-concept-models",
-    "description": "Three enterprise patterns that exploit SONAR's 200-language concept space: cross-lingual retrieval and comparison, multilingual synthesis, and language-agnostic classification. Each with architecture diagram and implementation approach.",
-    "href": "/library/books/large-concept-models/multilingual-enterprise"
-  },
-  {
-    "title": "Hierarchical Planning and Structured Reasoning",
-    "slug": "hierarchical-planning",
-    "section": "large-concept-models",
-    "description": "Strategic roadmaps, project decomposition, and multi-phase planning require maintaining consistency across levels and steps. Concept-space arithmetic enables the operations that planning requires — and that LLMs fail on consistently.",
-    "href": "/library/books/large-concept-models/hierarchical-planning"
-  },
-  {
-    "title": "Hybrid Architectures — LLMs and LCMs Together",
-    "slug": "hybrid-architectures",
-    "section": "large-concept-models",
-    "description": "The mature enterprise AI stack will not be LLMs or LCMs — it will be LLMs for token-level tasks and LCMs for concept-level tasks, with clean handoff points. Three patterns: the concept router, the concept elevator, and the concept pipeline.",
-    "href": "/library/books/large-concept-models/hybrid-architectures"
-  },
-  {
-    "title": "Tooling, APIs, and the LCM Ecosystem",
-    "slug": "tooling-and-ecosystem",
-    "section": "large-concept-models",
-    "description": "LCM tooling as of mid-2026 is thin compared to the LLM ecosystem. This chapter maps what exists, what must be adapted, and what must be built from scratch — with a build-vs-buy framework calibrated to team size and use-case maturity.",
-    "href": "/library/books/large-concept-models/tooling-and-ecosystem"
-  },
-  {
-    "title": "Evaluation and Quality Assurance",
-    "slug": "evaluation-and-qa",
-    "section": "large-concept-models",
-    "description": "BLEU and ROUGE are wrong for LCM evaluation. This chapter covers the emerging LCM evaluation landscape: semantic similarity metrics, hierarchical consistency checks, cross-lingual equivalence testing, and a harness template you can adapt immediately.",
-    "href": "/library/books/large-concept-models/evaluation-and-qa"
-  },
-  {
-    "title": "Governance, Risk, and Responsible Deployment",
-    "slug": "governance-and-risk",
-    "section": "large-concept-models",
-    "description": "LCMs introduce governance challenges that LLM risk frameworks do not fully cover. Reasoning in concept space is less interpretable than chain-of-thought. Bias in SONAR embeddings differs from token-level bias. This chapter provides the governance checklist.",
-    "href": "/library/books/large-concept-models/governance-and-risk"
-  },
-  {
-    "title": "Your LCM Transition Roadmap",
-    "slug": "transition-roadmap",
-    "section": "large-concept-models",
-    "description": "Three phases — Evaluate, Pilot, Scale — converted into a concrete adoption plan. What to do this week, this quarter, and this year. A personally addressed brief for the enterprise practitioner ready to act.",
-    "href": "/library/books/large-concept-models/transition-roadmap"
-  },
-  {
-    "title": "From Chaos to Clarity",
-    "slug": "prologue",
-    "section": "legacyforward-guide",
-    "description": "Why most enterprise AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/legacyforward-guide/prologue"
-  },
-  {
-    "title": "Signal Capture: Finding Net New Value",
-    "slug": "signal-capture-value",
-    "section": "legacyforward-guide",
-    "description": "The core question every AI initiative must answer — and the distinction between transformation and automation that most organizations get wrong.",
-    "href": "/library/books/legacyforward-guide/signal-capture-value"
-  },
-  {
-    "title": "Signal Capture: The Value Assessment Framework",
-    "slug": "signal-capture-framework",
-    "section": "legacyforward-guide",
-    "description": "The three-stage framework for evaluating, validating, and tracking value — and the anti-patterns that destroy AI portfolios.",
-    "href": "/library/books/legacyforward-guide/signal-capture-framework"
-  },
-  {
-    "title": "Grounded Delivery: The Five Phases",
-    "slug": "grounded-delivery-phases",
-    "section": "legacyforward-guide",
-    "description": "Why Agile breaks for AI — and the five-phase delivery methodology built for non-deterministic systems.",
-    "href": "/library/books/legacyforward-guide/grounded-delivery-phases"
-  },
-  {
-    "title": "Grounded Delivery: Anti-Patterns",
-    "slug": "grounded-delivery-antipatterns",
-    "section": "legacyforward-guide",
-    "description": "The five delivery anti-patterns that cause AI systems to fail in production — and how to recognize them before it is too late.",
-    "href": "/library/books/legacyforward-guide/grounded-delivery-antipatterns"
-  },
-  {
-    "title": "Legacy Coexistence: The Five Patterns",
-    "slug": "legacy-coexistence-patterns",
-    "section": "legacyforward-guide",
-    "description": "The real enterprise environment — and five architectural patterns for deploying AI alongside the systems that will never be replaced.",
-    "href": "/library/books/legacyforward-guide/legacy-coexistence-patterns"
-  },
-  {
-    "title": "Legacy Coexistence: Data Challenges and Anti-Patterns",
-    "slug": "legacy-coexistence-data",
-    "section": "legacyforward-guide",
-    "description": "Data challenges in legacy environments and the anti-patterns that cause AI integration to fail in production.",
-    "href": "/library/books/legacyforward-guide/legacy-coexistence-data"
-  },
-  {
-    "title": "How the Pillars Connect: Feedback Loop and Core Principles",
-    "slug": "pillars-and-principles",
-    "section": "legacyforward-guide",
-    "description": "How Signal Capture, Grounded Delivery, and Legacy Coexistence form a closed feedback loop — and the six principles that underpin everything.",
-    "href": "/library/books/legacyforward-guide/pillars-and-principles"
-  },
-  {
-    "title": "Quick Reference",
-    "slug": "quick-reference",
-    "section": "legacyforward-guide",
-    "description": "The LegacyForward.ai framework at a glance — summary tables for Signal Capture, Grounded Delivery, Legacy Coexistence, and Core Principles.",
-    "href": "/library/books/legacyforward-guide/quick-reference"
-  },
-  {
-    "title": "Capstone 1: Requirements-to-Test-Cases Pipeline",
-    "slug": "capstone-01",
-    "section": "llm-ba-qa",
-    "description": "You have learned how to craft prompts, parse requirements, generate test cases, and evaluate LLM outputs. Now you will wire all of those skills into one end-to-end pipeline that ingests a raw requirements document and produces a prioritized, fully traceable test suite — ready for review and executio",
-    "href": "/library/books/llm-ba-qa/capstone-01"
-  },
-  {
-    "title": "Capstone 2: Automated BRD Analyzer",
-    "slug": "capstone-02",
-    "section": "llm-ba-qa",
-    "description": "Business Requirements Documents are the foundation of every project, yet they are riddled with ambiguity, missing edge cases, and inconsistencies that only surface months later during UAT. In this capstone, you will build a tool that analyzes a BRD in minutes, producing a structured quality report t",
-    "href": "/library/books/llm-ba-qa/capstone-02"
-  },
-  {
-    "title": "Capstone 3: Intelligent Test Suite Generator",
-    "slug": "capstone-03",
-    "section": "llm-ba-qa",
-    "description": "Test suites decay. New features get added without corresponding tests, defect patterns repeat in the same modules, and nobody has time to reprioritize the regression suite. In this capstone, you will build a system that generates, prioritizes, and maintains test suites by learning from your applicat",
-    "href": "/library/books/llm-ba-qa/capstone-03"
-  },
-  {
-    "title": "Capstone 4: AI-Powered Sprint Assistant",
-    "slug": "capstone-04",
-    "section": "llm-ba-qa",
-    "description": "Sprint ceremonies consume hours every week — planning poker drags on, standup notes get lost, retrospective action items go untracked, and cross-team dependencies slip through the cracks. In this capstone, you will build an assistant that automates the tedious parts of sprint management so teams can",
-    "href": "/library/books/llm-ba-qa/capstone-04"
-  },
-  {
-    "title": "Prologue: The LegacyForward.ai Framework",
-    "slug": "prologue",
-    "section": "llm-ba-qa",
+    "section": "leading-ai-real-enterprise",
     "description": "Why most AI initiatives fail — and the three-pillar framework that changes the outcome.",
-    "href": "/library/books/llm-ba-qa/prologue"
+    "href": "/library/books/leading-ai-real-enterprise/prologue"
   },
   {
-    "title": "Chapter 1: Why LLMs Matter for BAs and QAs",
-    "slug": "why-llms-matter",
-    "section": "llm-ba-qa",
-    "description": "A Business Analyst who can harness Large Language Models doesn't just work faster — they think differently about what's possible. In this opening chapter, we explore why LLMs represent the most significant shift in analyst productivity since the spreadsheet, and why BAs and QAs are uniquely position",
-    "href": "/library/books/llm-ba-qa/why-llms-matter"
+    "title": "What AI Actually Does (and What It Doesn't)",
+    "slug": "what-ai-actually-does",
+    "section": "leading-ai-real-enterprise",
+    "description": "Strip away the vendor hype and understand what AI can genuinely do for your business today — and where it will let you down if you trust it too much.",
+    "href": "/library/books/leading-ai-real-enterprise/what-ai-actually-does"
   },
   {
-    "title": "Chapter 2: How LLMs Work (No PhD Required)",
-    "slug": "how-llms-work",
-    "section": "llm-ba-qa",
-    "description": "You don't need to understand how an engine works to drive a car — but a driver who understands the basics makes better decisions on the road. This chapter gives you the practical understanding of LLM internals that will make you a more effective prompt engineer, a better judge of model outputs, and ",
-    "href": "/library/books/llm-ba-qa/how-llms-work"
+    "title": "Why AI Projects Fail (and How Vendors Exploit It)",
+    "slug": "why-projects-fail-and-vendor-reality",
+    "section": "leading-ai-real-enterprise",
+    "description": "The six failure patterns that kill AI initiatives before they deliver value — and how to read vendor pitches critically so you stop funding the vendor's next round.",
+    "href": "/library/books/leading-ai-real-enterprise/why-projects-fail-and-vendor-reality"
   },
   {
-    "title": "Chapter 3: Prompt Engineering Fundamentals",
-    "slug": "prompt-engineering",
-    "section": "llm-ba-qa",
-    "description": "The difference between a mediocre LLM output and a brilliant one almost never lies in the model — it lies in the prompt. Prompt engineering is the single most important skill for any analyst working with LLMs, and the good news is that it builds directly on skills you already have: clear communicati",
-    "href": "/library/books/llm-ba-qa/prompt-engineering"
+    "title": "AI Strategy That Actually Works",
+    "slug": "ai-strategy-that-works",
+    "section": "leading-ai-real-enterprise",
+    "description": "How to build an AI strategy grounded in business value rather than technology enthusiasm — including a one-page strategy canvas you can complete in a single session.",
+    "href": "/library/books/leading-ai-real-enterprise/ai-strategy-that-works"
   },
   {
-    "title": "Chapter 4: Your First LLM-Powered Workflow",
-    "slug": "first-llm-workflow",
-    "section": "llm-ba-qa",
-    "description": "Theory without practice is empty. In this chapter, you'll move from prompting in a chat window to building a repeatable, automated LLM workflow that you can run with a single command. By the end, you'll have a working Requirements Analyzer that reads a requirements document, evaluates each requireme",
-    "href": "/library/books/llm-ba-qa/first-llm-workflow"
+    "title": "Making AI Investment Decisions",
+    "slug": "investment-decisions",
+    "section": "leading-ai-real-enterprise",
+    "description": "How much to spend, what it really costs, how to calculate ROI without being misled, and how to build an AI investment portfolio that balances quick wins with strategic bets.",
+    "href": "/library/books/leading-ai-real-enterprise/investment-decisions"
   },
   {
-    "title": "Chapter 5: Requirements Elicitation and Analysis",
-    "slug": "requirements-elicitation",
-    "section": "llm-ba-qa",
-    "description": "Requirements are the foundation of every successful project — and the source of most project failures. In this chapter you will learn how to harness LLMs to extract, classify, validate, and trace requirements at speeds and consistency levels that manual analysis cannot match.",
-    "href": "/library/books/llm-ba-qa/requirements-elicitation"
+    "title": "Is Your Organization AI-Ready?",
+    "slug": "organizational-readiness",
+    "section": "leading-ai-real-enterprise",
+    "description": "Assess your organization's readiness across five dimensions — data, talent, culture, governance, and infrastructure — and know where to start even if the score is low.",
+    "href": "/library/books/leading-ai-real-enterprise/organizational-readiness"
   },
   {
-    "title": "User Stories & Process Modeling",
-    "slug": "user-stories-process-modeling",
-    "section": "llm-ba-qa",
-    "description": "From translating business requirements into sprint-ready user stories, to extracting and optimising formal BPMN process models — this chapter covers the two core BA deliverables that turn analysis into actionable work. You will build an Agile Story Generator and a Process Discovery Engine.",
-    "href": "/library/books/llm-ba-qa/user-stories-process-modeling"
+    "title": "AI Risk, Regulation & Responsible AI",
+    "slug": "risk-regulation-responsible-ai",
+    "section": "leading-ai-real-enterprise",
+    "description": "The six AI risks every board must understand, the regulatory landscape in plain English, and a practical responsible AI program — all connected into one governance framework.",
+    "href": "/library/books/leading-ai-real-enterprise/risk-regulation-responsible-ai"
   },
   {
-    "title": "Chapter 7: Stakeholder Communication and Reporting",
-    "slug": "stakeholder-communication",
-    "section": "llm-ba-qa",
-    "description": "The best analysis in the world is worthless if it cannot be communicated effectively. In this chapter you will learn how to use LLMs to generate executive summaries, translate between technical and business language, automate status reports, extract action items from meetings, draft presentation dec",
-    "href": "/library/books/llm-ba-qa/stakeholder-communication"
+    "title": "Building & Leading AI Teams",
+    "slug": "building-and-leading-ai-teams",
+    "section": "leading-ai-real-enterprise",
+    "description": "The AI talent market is misunderstood, and managing AI projects requires a different language than traditional software. Here is how to hire right, upskill effectively, and run AI initiatives without being misled about their progress.",
+    "href": "/library/books/leading-ai-real-enterprise/building-and-leading-ai-teams"
   },
   {
-    "title": "Test Case Generation",
-    "slug": "test-case-generation",
-    "section": "llm-ba-qa",
-    "description": "Writing test cases is the most time-consuming activity in the QA lifecycle — yet most test cases follow predictable patterns that an LLM can generate in seconds. In this chapter, you will build a system that reads a requirement and produces comprehensive, categorized test cases automatically.",
-    "href": "/library/books/llm-ba-qa/test-case-generation"
+    "title": "Measuring AI Success",
+    "slug": "measuring-ai-success",
+    "section": "leading-ai-real-enterprise",
+    "description": "Vanity metrics will make your AI program look good in a slide deck and fail in a budget review. Here is how to track the numbers that actually matter — and how to run a quarterly review that earns continued investment.",
+    "href": "/library/books/leading-ai-real-enterprise/measuring-ai-success"
   },
   {
-    "title": "Test Data and Scenario Design",
-    "slug": "test-data-design",
-    "section": "llm-ba-qa",
-    "description": "Good tests are only as good as the data behind them. In this chapter, you will learn how to use LLMs to generate realistic synthetic test data, discover hidden edge cases, build persona-driven test scenarios, and handle the critical challenge of data privacy — all without ever touching production da",
-    "href": "/library/books/llm-ba-qa/test-data-design"
+    "title": "AI Agents & Your Workforce",
+    "slug": "agents-and-workforce",
+    "section": "leading-ai-real-enterprise",
+    "description": "AI agents are already taking autonomous action in your business — and your employees are already asking whether AI is coming for their jobs. Here is how to govern agents before they govern you, and how to lead your workforce through the transition honestly.",
+    "href": "/library/books/leading-ai-real-enterprise/agents-and-workforce"
   },
   {
-    "title": "Defect Analysis & Regression Testing",
-    "slug": "defect-analysis-regression-testing",
-    "section": "llm-ba-qa",
-    "description": "From triaging a chaotic defect backlog to generating self-healing regression suites — this chapter covers the full defect lifecycle. You will build a Defect Triage Assistant that classifies, deduplicates, and prioritizes bugs, then a Smart Regression Suite that generates, heals, and maintains tests automatically.",
-    "href": "/library/books/llm-ba-qa/defect-analysis-regression-testing"
+    "title": "What's Coming Next (and What to Ignore)",
+    "slug": "whats-coming-next",
+    "section": "leading-ai-real-enterprise",
+    "description": "The AI landscape produces a new breathless announcement every two weeks. Here is how to separate the trends that will materially affect your business from the ones that will not — and a 30-minute monthly ritual that keeps you informed without consuming your calendar.",
+    "href": "/library/books/leading-ai-real-enterprise/whats-coming-next"
   },
   {
-    "title": "RAG for Enterprise Knowledge",
-    "slug": "rag-enterprise",
-    "section": "llm-ba-qa",
-    "description": "Every enterprise sits on a mountain of knowledge locked inside wikis, SharePoint sites, Confluence pages, PDF policies, and Slack threads. Employees spend 20% of their workweek searching for information they know exists somewhere. Retrieval-Augmented Generation (RAG) unlocks that mountain by letting",
-    "href": "/library/books/llm-ba-qa/rag-enterprise"
+    "title": "Writing Your AI Strategy",
+    "slug": "capstone-writing-ai-strategy",
+    "section": "leading-ai-real-enterprise",
+    "description": "A complete, step-by-step walkthrough for creating an AI strategy document your board will fund and your organization will actually execute — from situation assessment through investment proposal and risk framework.",
+    "href": "/library/books/leading-ai-real-enterprise/capstone-writing-ai-strategy"
   },
   {
-    "title": "Building Custom AI Assistants",
-    "slug": "custom-assistants",
-    "section": "llm-ba-qa",
-    "description": "One-off prompts are powerful, but they hit a ceiling. You type a prompt, get a response, copy-paste it somewhere, and start over. A custom AI assistant, by contrast, remembers context, calls external tools, follows multi-step workflows, and integrates into the systems your team already uses. In this",
-    "href": "/library/books/llm-ba-qa/custom-assistants"
+    "title": "The Board AI Presentation",
+    "slug": "capstone-board-ai-presentation",
+    "section": "leading-ai-real-enterprise",
+    "description": "Build a credible, tight 30-minute board presentation on AI: current state, strategy, investment ask, and risk management — structured to earn the board's confidence and the funding you need.",
+    "href": "/library/books/leading-ai-real-enterprise/capstone-board-ai-presentation"
   },
   {
-    "title": "Evaluating and Validating LLM Outputs",
-    "slug": "evaluating-outputs",
-    "section": "llm-ba-qa",
-    "description": "An LLM that sounds authoritative is not the same as an LLM that is correct. Every analyst who has used ChatGPT has experienced the unsettling moment when a perfectly fluent, well-structured response turns out to be confidently wrong. In production workflows where LLM outputs feed into business decis",
-    "href": "/library/books/llm-ba-qa/evaluating-outputs"
+    "title": "Evaluating an AI Vendor",
+    "slug": "capstone-evaluating-ai-vendor",
+    "section": "leading-ai-real-enterprise",
+    "description": "A structured process for selecting an AI vendor: define your requirements before you enter the market, run a rigorous three-vendor evaluation, conduct reference checks that actually reveal problems, and negotiate the contract terms that matter.",
+    "href": "/library/books/leading-ai-real-enterprise/capstone-evaluating-ai-vendor"
+  },
+  {
+    "title": "The Kill Decision",
+    "slug": "capstone-the-kill-decision",
+    "section": "leading-ai-real-enterprise",
+    "description": "How to evaluate a struggling AI initiative honestly — separating sunk cost from future value, analyzing three scenarios, recommending a course of action, and communicating it in a way that preserves organizational trust and builds learning.",
+    "href": "/library/books/leading-ai-real-enterprise/capstone-the-kill-decision"
   },
   {
     "title": "About LegacyForward.ai",
@@ -2469,6 +2301,174 @@
     "section": "static",
     "description": "All content is provided for educational and informational purposes only. It is not professional advice (legal, financial, technical, or otherwise).",
     "href": "/terms"
+  },
+  {
+    "title": "Why You Need to Understand IT Before You Touch AI",
+    "slug": "prologue",
+    "section": "the-stack-beneath-the-signal",
+    "description": "AI doesn't land on a blank slate. It lands on decades of accumulated systems, decisions, and constraints. This book explains what's already there.",
+    "href": "/library/books/the-stack-beneath-the-signal/prologue"
+  },
+  {
+    "title": "Why Enterprise IT Is Different",
+    "slug": "why-enterprise-it-is-different",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Scale, risk, regulation, and institutional history make enterprise technology a different discipline from consumer or startup tech. Here's why.",
+    "href": "/library/books/the-stack-beneath-the-signal/why-enterprise-it-is-different"
+  },
+  {
+    "title": "The Three Layers: Record, Engagement, Intelligence",
+    "slug": "three-layers",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Enterprise systems are organized in three distinct layers that serve different purposes. Understanding these layers is the foundation of understanding how data moves through an organization.",
+    "href": "/library/books/the-stack-beneath-the-signal/three-layers"
+  },
+  {
+    "title": "What Is a Legacy System, Really?",
+    "slug": "what-is-legacy",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Legacy doesn't mean old and broken. It means load-bearing. Understanding what makes a system legacy — and why it stays — is the first step to working with it.",
+    "href": "/library/books/the-stack-beneath-the-signal/what-is-legacy"
+  },
+  {
+    "title": "The Mainframe Is Still Running Your Money",
+    "slug": "the-mainframe",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Mainframes process trillions of dollars in transactions every day. Understanding why they still exist — and why they are not going anywhere — is essential context for enterprise AI.",
+    "href": "/library/books/the-stack-beneath-the-signal/the-mainframe"
+  },
+  {
+    "title": "ERP: The Spine of the Enterprise",
+    "slug": "erp",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Enterprise Resource Planning systems are the central nervous system of most large organizations. Understanding what they do — and why changing them is so hard — is fundamental to understanding enterprise IT.",
+    "href": "/library/books/the-stack-beneath-the-signal/erp"
+  },
+  {
+    "title": "Cloud Is Infrastructure, Not Magic",
+    "slug": "cloud-is-infrastructure",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Cloud computing is a powerful and important shift in how organizations consume technology. It is also widely misunderstood. Here is what cloud actually is — and what it is not.",
+    "href": "/library/books/the-stack-beneath-the-signal/cloud-is-infrastructure"
+  },
+  {
+    "title": "SaaS Sprawl: When Every Team Bought Their Own Tool",
+    "slug": "saas-sprawl",
+    "section": "the-stack-beneath-the-signal",
+    "description": "The ease of buying cloud software has created a new problem: organizations now run hundreds of overlapping, disconnected tools. Understanding SaaS sprawl is essential for understanding modern enterprise data complexity.",
+    "href": "/library/books/the-stack-beneath-the-signal/saas-sprawl"
+  },
+  {
+    "title": "COTS vs. Custom: The Build vs. Buy Decision",
+    "slug": "cots-vs-custom",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Every enterprise technology decision involves a fundamental choice: buy a commercial product or build something custom. Understanding the trade-offs — and why organizations often get this decision wrong — is essential.",
+    "href": "/library/books/the-stack-beneath-the-signal/cots-vs-custom"
+  },
+  {
+    "title": "APIs: The Connective Tissue",
+    "slug": "apis",
+    "section": "the-stack-beneath-the-signal",
+    "description": "APIs are how modern systems talk to each other. Understanding what APIs are, how they work, and why they fail is fundamental to understanding enterprise integration — and enterprise AI.",
+    "href": "/library/books/the-stack-beneath-the-signal/apis"
+  },
+  {
+    "title": "The Data Warehouse, the Lake, and the Swamp",
+    "slug": "data-warehouse",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Enterprise data infrastructure has evolved through several generations — warehouses, lakes, lakehouses, and the swamps that happen when governance breaks down. Understanding this landscape is critical for AI.",
+    "href": "/library/books/the-stack-beneath-the-signal/data-warehouse"
+  },
+  {
+    "title": "How Sprawl Happens: M&A, Shadow IT, and Organic Growth",
+    "slug": "how-sprawl-happens",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Enterprise IT landscapes grow in ways that nobody planned. Understanding the three main mechanisms — mergers and acquisitions, shadow IT, and organic team-level growth — explains why every organization ends up with more systems than it needs.",
+    "href": "/library/books/the-stack-beneath-the-signal/how-sprawl-happens"
+  },
+  {
+    "title": "Technical Debt Is a Balance Sheet Item",
+    "slug": "technical-debt",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Technical debt is not just a software engineering concept. It is a real financial and operational liability that accumulates on every deferred decision. Understanding it helps leaders make better tradeoff choices.",
+    "href": "/library/books/the-stack-beneath-the-signal/technical-debt"
+  },
+  {
+    "title": "Integration Spaghetti: Point-to-Point vs. Platform",
+    "slug": "integration-spaghetti",
+    "section": "the-stack-beneath-the-signal",
+    "description": "When systems connect directly to each other without a coherent integration architecture, the result is spaghetti: fragile, expensive to maintain, and nearly impossible to understand. Here's why it happens and what to do about it.",
+    "href": "/library/books/the-stack-beneath-the-signal/integration-spaghetti"
+  },
+  {
+    "title": "The Governance Gap: Who Actually Owns This System?",
+    "slug": "governance-gap",
+    "section": "the-stack-beneath-the-signal",
+    "description": "In every enterprise, there is a gap between who is nominally responsible for a system and who actually understands and controls it. The governance gap is one of the most underappreciated sources of risk and friction in enterprise IT.",
+    "href": "/library/books/the-stack-beneath-the-signal/governance-gap"
+  },
+  {
+    "title": "Vendor Lock-In: When Switching Costs Become Strategic Risk",
+    "slug": "vendor-lock-in",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Every enterprise technology decision creates some degree of dependency on the vendor. Understanding how lock-in happens — and when it becomes a strategic problem — is essential for making good technology choices.",
+    "href": "/library/books/the-stack-beneath-the-signal/vendor-lock-in"
+  },
+  {
+    "title": "AI Doesn't Replace the Stack — It Runs on Top of It",
+    "slug": "ai-on-top-of-the-stack",
+    "section": "the-stack-beneath-the-signal",
+    "description": "The most important thing to understand about enterprise AI is that it does not replace your existing technology landscape. It runs on top of it. Everything else follows from this.",
+    "href": "/library/books/the-stack-beneath-the-signal/ai-on-top-of-the-stack"
+  },
+  {
+    "title": "What 'Data Readiness' Actually Means",
+    "slug": "data-readiness",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Every enterprise has data. Very few enterprises have data that is ready for AI. Understanding the gap between 'we have the data' and 'the data is ready' is one of the most important skills in enterprise AI.",
+    "href": "/library/books/the-stack-beneath-the-signal/data-readiness"
+  },
+  {
+    "title": "Which Systems Are AI-Ready (and Which Are Not)",
+    "slug": "ai-ready-systems",
+    "section": "the-stack-beneath-the-signal",
+    "description": "Not all enterprise systems are equally suited to AI integration. A practical framework for assessing your landscape and identifying where AI can deliver value without requiring a transformation first.",
+    "href": "/library/books/the-stack-beneath-the-signal/ai-ready-systems"
+  },
+  {
+    "title": "The Coexistence Imperative: Why You Can't Rip and Replace",
+    "slug": "coexistence-imperative",
+    "section": "the-stack-beneath-the-signal",
+    "description": "The idea of replacing legacy systems entirely with modern technology is appealing but usually impractical. Understanding why coexistence is the realistic path — and how to make it work — is essential for enterprise AI practitioners.",
+    "href": "/library/books/the-stack-beneath-the-signal/coexistence-imperative"
+  },
+  {
+    "title": "Where to Start: Finding the Signal in the Sprawl",
+    "slug": "where-to-start",
+    "section": "the-stack-beneath-the-signal",
+    "description": "With a complex, layered, imperfect enterprise IT landscape, where do you actually start with AI? A practical framework for identifying the seams where AI can deliver real value without requiring a transformation first.",
+    "href": "/library/books/the-stack-beneath-the-signal/where-to-start"
+  },
+  {
+    "title": "Glossary: 50 Terms Every Non-Technical Leader Should Know",
+    "slug": "glossary",
+    "section": "the-stack-beneath-the-signal",
+    "description": "A plain-language reference for the most important terms in enterprise technology. No jargon without explanation.",
+    "href": "/library/books/the-stack-beneath-the-signal/glossary"
+  },
+  {
+    "title": "The IT Landscape Map",
+    "slug": "it-landscape-map",
+    "section": "the-stack-beneath-the-signal",
+    "description": "A plain-language guide to how the enterprise technology layers connect — from foundation to intelligence — and where AI enters the picture.",
+    "href": "/library/books/the-stack-beneath-the-signal/it-landscape-map"
+  },
+  {
+    "title": "Questions to Ask Before Any AI Initiative",
+    "slug": "ai-initiative-checklist",
+    "section": "the-stack-beneath-the-signal",
+    "description": "A practical diagnostic checklist for evaluating enterprise AI initiatives before committing resources. Use these questions to identify hidden risks before they become expensive surprises.",
+    "href": "/library/books/the-stack-beneath-the-signal/ai-initiative-checklist"
   },
   {
     "title": "Grounded Delivery",

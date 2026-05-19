@@ -19,15 +19,15 @@ interface BookDef {
 }
 
 const bookDefs: Record<string, BookDef> = {
-  "agenticai": { section: "agenticai", title: "Agentic AI: Build, Ship, Portfolio" },
-  "ai-leaders": { section: "ai-leaders", title: "AI for Business Leaders" },
-  "ai-pm": { section: "ai-pm", title: "AI Product Management" },
-  "ai-enterprise-architect": { section: "ai-enterprise-architect", title: "The AI-First Enterprise" },
-  "llm-ba-qa": { section: "llm-ba-qa", title: "The Analyst's AI Toolkit" },
-  "graph-ai": { section: "graph-ai", title: "Graph Databases for AI" },
-  "enterprise-it-101": { section: "enterprise-it-101", title: "The Stack Beneath the Signal: Enterprise IT Explained" },
-  "legacyforward-guide": { section: "legacyforward-guide", title: "A Practitioner's Guide to Enterprise AI Transformation" },
-  "large-concept-models": { section: "large-concept-models", title: "Large Concept Models: The Practitioner's Guide to Concept-Level AI for Enterprise Teams" },
+  "building-agentic-ai-systems": { section: "building-agentic-ai-systems", title: "Building Agentic AI Systems" },
+  "leading-ai-real-enterprise": { section: "leading-ai-real-enterprise", title: "Leading AI in the Real Enterprise" },
+  "building-ai-products-that-ship": { section: "building-ai-products-that-ship", title: "Building AI Products That Ship" },
+  "architecting-ai-real-enterprise": { section: "architecting-ai-real-enterprise", title: "Architecting AI in the Real Enterprise" },
+  "ai-for-analysts-and-qa": { section: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams" },
+  "knowledge-graphs-enterprise-ai": { section: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI" },
+  "the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal" },
+  "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "AI Beyond the Demo" },
+  "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models" },
   "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "LegacyForward: AI Beyond the Demo" },
 };
 
