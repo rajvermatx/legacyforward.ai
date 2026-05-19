@@ -26,7 +26,7 @@ const bookDefs: Record<string, BookDef> = {
   "ai-for-analysts-and-qa": { section: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams" },
   "knowledge-graphs-enterprise-ai": { section: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI" },
   "the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal" },
-  "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "AI Beyond the Demo" },
+  "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework" },
   "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models" },
   "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "LegacyForward: AI Beyond the Demo" },
 };
