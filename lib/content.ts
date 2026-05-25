@@ -6,6 +6,7 @@ import type { ContentItem, ContentMeta, TocEntry, SectionMeta } from "./types";
 const frameworkDir = path.join(process.cwd(), "framework");
 const blogDir = path.join(process.cwd(), "blog-content");
 const contentBase = path.join(process.cwd(), "content");
+const rewriteBase = path.join(process.cwd(), "content", "rewrite");
 
 // ---------------------------------------------------------------------------
 // Internal helpers
@@ -73,6 +74,17 @@ export function getSectionMeta(section: string): SectionMeta | null {
   const metaPath = path.join(contentBase, section, "_meta.json");
   if (!fs.existsSync(metaPath)) return null;
   return JSON.parse(fs.readFileSync(metaPath, "utf-8")) as SectionMeta;
+}
+
+export function getRewriteSection(section: string): ContentItem[] {
+  const dir = path.join(rewriteBase, section);
+  return getContentFromDir(dir).sort(
+    (a, b) => (a.meta.order ?? 0) - (b.meta.order ?? 0)
+  );
+}
+
+export function getRewriteBySlug(section: string, slug: string): ContentItem | undefined {
+  return getRewriteSection(section).find((item) => item.meta.slug === slug);
 }
 
 export function getAllSections(): string[] {

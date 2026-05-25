@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getSection, getSectionMeta, estimateReadingTime } from "@/lib/content";
+import { getSection, getRewriteSection, getSectionMeta, estimateReadingTime } from "@/lib/content";
 import ContentCard from "@/components/ContentCard";
 
 interface BookDef {
   section: string;
   title: string;
   accentColor: "violet" | "blue" | "purple" | "teal" | "green" | "rose" | "amber";
+  rewrite?: boolean;
 }
 
 const bookDefs: Record<string, BookDef> = {
@@ -20,6 +21,17 @@ const bookDefs: Record<string, BookDef> = {
   "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework", accentColor: "teal" },
   "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models", accentColor: "violet" },
   "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "AI Beyond the Demo", accentColor: "violet" },
+  // Revised editions
+  "r-building-agentic-ai-systems": { section: "building-agentic-ai-systems", title: "Building Agentic AI Systems — Revised", accentColor: "teal", rewrite: true },
+  "r-leading-ai-real-enterprise": { section: "leading-ai-real-enterprise", title: "Leading AI in the Real Enterprise — Revised", accentColor: "violet", rewrite: true },
+  "r-building-ai-products-that-ship": { section: "building-ai-products-that-ship", title: "Building AI Products That Ship — Revised", accentColor: "blue", rewrite: true },
+  "r-architecting-ai-real-enterprise": { section: "architecting-ai-real-enterprise", title: "Architecting AI in the Real Enterprise — Revised", accentColor: "purple", rewrite: true },
+  "r-ai-for-analysts-and-qa": { section: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams — Revised", accentColor: "green", rewrite: true },
+  "r-knowledge-graphs-enterprise-ai": { section: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI — Revised", accentColor: "rose", rewrite: true },
+  "r-the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal — Revised", accentColor: "amber", rewrite: true },
+  "r-ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework — Revised", accentColor: "teal", rewrite: true },
+  "r-beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models — Revised", accentColor: "violet", rewrite: true },
+  "r-ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "AI Beyond the Demo — Revised", accentColor: "violet", rewrite: true },
 };
 
 export async function generateStaticParams() {
@@ -36,7 +48,7 @@ export async function generateMetadata({
   if (!def) return {};
   const meta = getSectionMeta(def.section);
   return {
-    title: `${meta?.title ?? def.title} | LegacyForward.ai`,
+    title: `${def.title} | LegacyForward.ai`,
     description: meta?.description ?? "",
   };
 }
@@ -50,7 +62,7 @@ export default async function BookPage({
   const def = bookDefs[book];
   if (!def) notFound();
 
-  const items = getSection(def.section);
+  const items = def.rewrite ? getRewriteSection(def.section) : getSection(def.section);
   const meta = getSectionMeta(def.section);
 
   // Group by part

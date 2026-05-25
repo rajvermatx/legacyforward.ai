@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getSection, getBySlug, stripLeadingH1, extractHeadings, estimateReadingTime } from "@/lib/content";
+import { getSection, getRewriteSection, getBySlug, getRewriteBySlug, stripLeadingH1, extractHeadings, estimateReadingTime } from "@/lib/content";
 import { getPrevNext } from "@/lib/nav-helpers";
 import { ReadingProgressTracker } from "@/components/ReadingProgress";
 import { ArticleJsonLd } from "@/components/JsonLd";
@@ -16,6 +16,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 interface BookDef {
   section: string;
   title: string;
+  rewrite?: boolean;
 }
 
 const bookDefs: Record<string, BookDef> = {
@@ -29,12 +30,23 @@ const bookDefs: Record<string, BookDef> = {
   "ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework" },
   "beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models" },
   "ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "AI Beyond the Demo" },
+  // Revised editions
+  "r-building-agentic-ai-systems": { section: "building-agentic-ai-systems", title: "Building Agentic AI Systems — Revised", rewrite: true },
+  "r-leading-ai-real-enterprise": { section: "leading-ai-real-enterprise", title: "Leading AI in the Real Enterprise — Revised", rewrite: true },
+  "r-building-ai-products-that-ship": { section: "building-ai-products-that-ship", title: "Building AI Products That Ship — Revised", rewrite: true },
+  "r-architecting-ai-real-enterprise": { section: "architecting-ai-real-enterprise", title: "Architecting AI in the Real Enterprise — Revised", rewrite: true },
+  "r-ai-for-analysts-and-qa": { section: "ai-for-analysts-and-qa", title: "AI for Analysts and QA Teams — Revised", rewrite: true },
+  "r-knowledge-graphs-enterprise-ai": { section: "knowledge-graphs-enterprise-ai", title: "Knowledge Graphs for Enterprise AI — Revised", rewrite: true },
+  "r-the-stack-beneath-the-signal": { section: "the-stack-beneath-the-signal", title: "The Stack Beneath the Signal — Revised", rewrite: true },
+  "r-ai-beyond-the-demo-guide": { section: "ai-beyond-the-demo-guide", title: "The LegacyForward Framework — Revised", rewrite: true },
+  "r-beyond-llms-large-concept-models": { section: "beyond-llms-large-concept-models", title: "Beyond LLMs: Large Concept Models — Revised", rewrite: true },
+  "r-ai-beyond-the-demo": { section: "ai-beyond-the-demo", title: "AI Beyond the Demo — Revised", rewrite: true },
 };
 
 export async function generateStaticParams() {
   const params: { book: string; chapter: string }[] = [];
   for (const [book, def] of Object.entries(bookDefs)) {
-    const items = getSection(def.section);
+    const items = def.rewrite ? getRewriteSection(def.section) : getSection(def.section);
     for (const item of items) {
       params.push({ book, chapter: item.meta.slug });
     }
@@ -50,7 +62,7 @@ export async function generateMetadata({
   const { book, chapter } = await params;
   const def = bookDefs[book];
   if (!def) return {};
-  const item = getBySlug(def.section, chapter);
+  const item = def.rewrite ? getRewriteBySlug(def.section, chapter) : getBySlug(def.section, chapter);
   if (!item) return {};
   return {
     title: `${item.meta.title} | ${def.title} | LegacyForward.ai`,
@@ -68,7 +80,7 @@ export default async function BookChapterPage({
   if (!def) notFound();
 
   const BASE_PATH = `/library/books/${book}`;
-  const items = getSection(def.section);
+  const items = def.rewrite ? getRewriteSection(def.section) : getSection(def.section);
   const item = items.find((i) => i.meta.slug === chapter);
   if (!item) notFound();
 
